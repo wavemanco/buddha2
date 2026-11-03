@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [P3B-LA1 stopped incomplete](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md): launcher repair and focused Windows/contract checks passed, but the empty fixture failed the real snapshot prerequisite before any request or I1 export. All twelve-group/packet/cold acceptance obligations remain unachieved, with no model mock, real provider call or key. Exact owners are stopped. No post-freeze fix or retry is authorized automatically; further work needs a concrete continuation decision.
+Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [P3B-OR1 bounded offline recovery](phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md) is defined and unstarted. It proposes three aggregate focused hours, an initial30-minute compatibility milestone, at least30minutes for closure, at most3frozen candidates,2main-matrix entries and2S13 starts. The empty fixture is an expected negative; both real positives remain mandatory in fresh S13 after genuine reviews/assessments, with all12groups and physical/extracted acceptance. Execution needs a subsequent instruction; no keys or paid transition is authorized. LA1 remains stopped with its accepted-kit goal unachieved and its ledger closed.
 
 ## Research and specifications
 
@@ -107,6 +107,7 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
+- [OR1 bounded offline recovery: defined, unstarted](phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md)
 - [LA1 repaired launcher and required-boundary stop](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md)
 - [LA1 launcher repair and offline acceptance: defined, unstarted](phases/phase-3b/PHASE3B_LAUNCHER_OFFLINE_ACCEPTANCE_DEFINITION.md)
 - [C2 implemented correction and setup stop](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_STOP_REPORT.md)

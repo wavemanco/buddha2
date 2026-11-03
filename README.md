@@ -43,6 +43,8 @@ Fixed won all four prompt comparisons. All four native paths completed normally;
 
 Earlier fixed-strategy and evaluator studies are recorded separately. The MuCE-based creativity evaluator missed its predefined agreement/consistency checks and remains diagnostic-only. Human review and further CrPO work are optional, deferred extensions.
 
+The next [defined OR1 recovery block](docs/phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md) is unstarted; implementation and execution require a subsequent instruction, with no keys or paid activity authorized.
+
 ## How the pieces fit
 
 - **Harness² runs adaptation.** We keep the upstream engine pinned and unchanged.

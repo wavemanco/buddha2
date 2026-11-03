@@ -1,0 +1,59 @@
+{
+  "actual_missing_gate": true,
+  "blocked_status_threshold_not_yet_met": true,
+  "continued_execution_authorized": false,
+  "created_at_utc": "2026-11-03T22:55:19.482872+00:00",
+  "evidence_sha256": {
+    "final-stopped-index-v2.json": "93247aa1ed9c87698e25665cbbabb9021042542a4bceebac08a9be5c1a7d9b68",
+    "independent-stopped-outcome-v1.json": "820627fcd2af6ec87d46db12f33a50e8c30eb0c2216056916b9a684a2495be65",
+    "initial-repair-independent-review-v1.json": "cf98dbd63a73f494c2bd16756202b9e66c6582e36bf5e56af623709e80dc6afd",
+    "prospective-acceptance-v4.json": "99848b8d6ea64168ec2e61e9471b4fba9a3d8c84e48689c285df116a7b429c00"
+  },
+  "frozen_campaign_terminal": true,
+  "goal_achieved": false,
+  "goal_status_retained": "active",
+  "kind": "phase3b-la1-completion-audit-v1",
+  "next_required_input": "Pending user choice: define bounded fixture-compatible offline recovery or retain one-attempt stop policy",
+  "objective": "complete P3B-LA1",
+  "paid_pilot_started": false,
+  "provider_calls": 0,
+  "requirements": [
+    {
+      "evidence": "initial-repair-independent-review-v1.json",
+      "id": "LA1-deliverable-1",
+      "status": "launcher-repair-and-actual-Windows-checks-supported"
+    },
+    {
+      "evidence": "prospective-acceptance-v4.json",
+      "id": "LA1-deliverable-2",
+      "status": "source-study-prospective-commands-supported-for-stopped-boundary"
+    },
+    {
+      "id": "LA1-deliverable-3",
+      "missing_groups": [
+        "static",
+        "matrix",
+        "replay",
+        "tests",
+        "windows-tests",
+        "launcher",
+        "inspect",
+        "preservation",
+        "regression",
+        "native-fixtures",
+        "semantics",
+        "supervision"
+      ],
+      "status": "failed-real-boundary-and-all-twelve-current-source-groups-missing"
+    },
+    {
+      "id": "LA1-deliverable-4",
+      "status": "no-accepted-physical-packet-or-extracted-cold-replay"
+    },
+    {
+      "id": "LA1-deliverable-5",
+      "public_commit": "95f3aaff7dd8d98f1a7889745db1d35e6f761b64",
+      "status": "stop-report-and-publication-verified-final-effort-record-follows"
+    }
+  ]
+}

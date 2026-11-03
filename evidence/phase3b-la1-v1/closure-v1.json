@@ -1,0 +1,70 @@
+{
+  "all_known_owners_settled": true,
+  "created_at_utc": "2026-11-03T22:56:03.621072+00:00",
+  "effective_upper_bound_seconds": 5261.555372,
+  "effort_ledger": {
+    "active_seconds": 4497.555372,
+    "actors": [
+      {
+        "active_seconds": 1579.929415,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "done",
+        "records": 42
+      },
+      {
+        "active_seconds": 367.618593,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 26
+      },
+      {
+        "active_seconds": 170.761547,
+        "actor": "/root/publication_audit",
+        "file": "publisher.jsonl",
+        "mode": "done",
+        "records": 4
+      },
+      {
+        "active_seconds": 579.052264,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 18
+      },
+      {
+        "active_seconds": 1800.193553,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "done",
+        "records": 52
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-03T22:56:03.618106+00:00",
+    "remaining_seconds": 2702.444628,
+    "within_limit": true
+  },
+  "goal_achieved": false,
+  "goal_status": "active-pending-required-user-decision",
+  "kind": "phase3b-la1-parent-closure-v1",
+  "model_mock_calls": 0,
+  "mutable_logs_and_retained_copies_excluded_from_public": true,
+  "navigation_and_stop_report_completed": true,
+  "new_API_cost_usd": 0,
+  "next": "Pending user choice about defining fixture-compatible bounded recovery; current stop rule requires a decision before source repair or another campaign.",
+  "no_postfreeze_fix_or_repeat": true,
+  "permanent_uncertainty_and_terminal_holds_seconds": 764,
+  "public_report": "https://github.com/wavemanco/buddha2/blob/main/docs/phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md",
+  "publication_verification": "runs/publication-la1-stop-v1/helper-source-supplement.json",
+  "published_commit": "95f3aaff7dd8d98f1a7889745db1d35e6f761b64",
+  "real_provider_calls": 0,
+  "remaining_seconds_not_permission_for_another_campaign": 1938.444628,
+  "retained_C2_copies_raw_disk_and_git_blobs_verified": 644,
+  "runtime_kit_or_science_accepted": false,
+  "source_files": 683,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc",
+  "status": "stopped-incomplete",
+  "within_7200_aggregate_limit": true
+}
