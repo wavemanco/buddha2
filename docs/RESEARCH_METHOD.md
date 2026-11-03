@@ -1,6 +1,6 @@
 # Research method and interpretation
 
-This page explains the experiment in ordinary language. Exact active settings and acceptance criteria belong in the [current specification](../CURRENT_SPEC.md) and the applicable frozen study definition.
+This page explains the experiment in ordinary language. Exact active settings and acceptance criteria belong in the [current specification](research/CURRENT_SPEC.md) and the applicable frozen study definition.
 
 ## The contribution we want to measure
 
@@ -48,4 +48,4 @@ Mocks test mechanics with fake provider responses in a network-disabled environm
 
 Inspect is a separate passive projection of saved evidence. Canonical native outputs, provider execution and spending stay on the controlled path. Viewer limitations and failed exports remain explicit; a display repair cannot retroactively change a failed timed checkpoint or a scientific result.
 
-See the [Phase 3B definition](../PHASE3B_DEFINITION.md) for exact models, allowances, completion requirements, exclusions and stop rules, and the [attribution inventory](ATTRIBUTIONS.md) for upstream components and related research.
+See the [Phase 3B definition](phases/phase-3b/PHASE3B_DEFINITION.md) for exact models, allowances, completion requirements, exclusions and stop rules, and the [attribution inventory](ATTRIBUTIONS.md) for upstream components and related research.

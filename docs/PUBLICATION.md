@@ -1,12 +1,10 @@
 # Public source and local experiment records
 
 The publication target is [wavemanco/buddha2](https://github.com/wavemanco/buddha2).
-Only the new research working project is its source. The earlier Buddha2 folder
-is outside the export, audit and publication.
 
 The public snapshot includes original code, tests, setup files, specifications,
 research notes, reports and reviewed ordinary-text evidence. Code and documentation
-authored for this new research project are Apache-2.0 licensed. Copied CrPO reference code remains MIT with its
+authored for this research project are Apache-2.0 licensed. Copied CrPO reference code remains MIT with its
 notice; other third-party terms are recorded in [Attributions](ATTRIBUTIONS.md).
 
 The following remain local:
@@ -33,3 +31,7 @@ ordinary text is checked for credential patterns, and third-party raw captures
 are separated from original reports. No secret scan proves absence; the export
 uses an explicit reviewed allowlist as well. Large unreviewed archives are not
 silently moved to Git LFS or releases.
+
+## Documentation and frozen replay
+
+Use the [documentation index](index.md) for research status, phase reports, specifications and operations. Public Markdown is maintained as a reader reference, with current relative links and editorial cleanup. These files are not promised as byte-exact frozen experiment records. Exact historical replay uses the applicable versioned source/provenance packet and pinned runtime; the current public layout is not an accepted local launch kit.

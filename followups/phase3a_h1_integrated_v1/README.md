@@ -1,6 +1,6 @@
 # P3A-HI bounded integration
 
-This implements the user-authorized `PHASE3A_H1_INTEGRATED_PILOT_DEFINITION.md` unchanged. Its original planning-only statements are historical; `evidence/phase3a-h1-integrated-v1/authorization.json` records the later full-block instruction. All commands run from `C:\Users\arvik\code\research\Buddha2`. The original checkout must never be accessed or mounted.
+This implements the user-authorized `PHASE3A_H1_INTEGRATED_PILOT_DEFINITION.md` unchanged. Its original planning-only statements are historical; `evidence/phase3a-h1-integrated-v1/authorization.json` records the later full-block instruction. All commands run from the project root.
 
 The native H1 image remains `sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800`. Harness², NoveltyBench and closed R3/H1/I1 inputs remain frozen. New glue and artifacts have a fresh `phase3a-h1-integrated-v1` identity. Reused helpers are identified in source and tested separately from current integration.
 

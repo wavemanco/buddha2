@@ -2,7 +2,7 @@
 
 Planning/check map prepared after the user's whole-R2 approval of the block defined in `PHASE3A_RECOVERY_DEFINITION.md` at `fb29ff4`. The definition's proposal-only opening remains historical; the new explicit authority must bind the accepted scope. This file records requirements, not passing results. No R2 source freeze, test, model call or release is asserted here.
 
-Work only in `C:\Users\arvik\code\research\Buddha2`. Do not read the protected original, private credential bindings, lock contents, ambient keys or provider streams. Offline SDK activity uses explicit fake keys, concrete MockTransports and `--network none`. Never dispatch an old uncertain request, clear its hold, retag old outcomes or start provider mode as part of this gate.
+Work only in the project root. Do not read private credential bindings, lock contents, ambient keys or provider streams. Offline SDK activity uses explicit fake keys, concrete MockTransports and `--network none`. Never dispatch an old uncertain request, clear its hold, retag old outcomes or start provider mode as part of this gate.
 
 ## Exact scope and arithmetic
 

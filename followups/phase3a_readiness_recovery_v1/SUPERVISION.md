@@ -52,7 +52,7 @@ The trusted caller immediately constructs this observation from that result:
 ```
 
 Feed that fresh JSON directly on standard input to this keyless host command,
-from `C:\Users\arvik\code\research\Buddha2` with the usual credential-free
+from the project root with the usual credential-free
 environment and an explicit `PYTHONPATH` containing that root and its `src`:
 
 ```text

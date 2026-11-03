@@ -8,7 +8,7 @@ A request to proceed with this definition covers one complete block: implementat
 
 Complete the same four-prompt, actual Harness² native `agg,k=1` versus fixed C-N best-of-six development comparison with coordinated transport/conversation deadlines. Preserve both unresolved historical liabilities and all failed observations. Obtain all eight valid primary scores, the classified duplicate diagnostic, settled new accounting and at least one authentic live native path. A zero or negative effect remains a valid result.
 
-R1's inner timeout is observed; its underlying connect/read/write/pool cause and failed-call duration are unknown. Its normally completed grounded DOM KEEP_BASE supports only that session's format compliance. Neither fact licenses continuing the blocked R1 study. See [the R1 live report](PHASE3A_C1_COMPLETION_R1_LIVE_REPORT.md).
+R1's inner timeout is observed; its underlying connect/read/write/pool cause and failed-call duration are unknown. Its normally completed grounded DOM KEEP_BASE supports only that session's format compliance. Neither fact licenses continuing the blocked R1 study. See [the R1 live report](../../docs/phases/phase-3a/PHASE3A_C1_COMPLETION_R1_LIVE_REPORT.md).
 
 ## Scope and exact intervention
 
@@ -37,7 +37,7 @@ R1's 24 attempts remain closed and unavailable for completion. R2 needs a fresh 
 
 ## Deliverables
 
-1. One corrected, source-bound whole-run kit and usable runbook, preserving the original folder and every closed source/result/claim/packet.
+1. One corrected, source-bound whole-run kit and usable runbook, preserving every closed source/result/claim/packet.
 2. Total-deadline propagation from authoring conversation through relay admission into the actual pinned SDK; unchanged strict authoring/scoring, accounting, all eight primaries and duplicate, review barriers and first-case counted reuse.
 3. Meaningful offline checks using actual SDK mock transports: delayed connection/headers/body, response at/before/after the deadline, queued calls whose post-lock allowance expires, late-turn budget clamping/pre-intent rejection, cancellation suppression and late cleanup/settlement, complete usage captured exactly once, unknown/no-resend/full-reserve behavior, late-known accounting without output forwarding and unchanged actual request bodies.
 4. Complete native/OpenCode mock matrix, affected suite/static checks, Windows host guard coverage, source/history preservation, exact zero-call saved replay and actual host mock/configuration checks. Three independent reviews and an independently verified public packet precede fresh key entry.
@@ -45,7 +45,7 @@ R1's 24 attempts remain closed and unavailable for completion. R2 needs a fresh 
 
 ## Exclusions
 
-No release/reconciliation of either unknown, continuation/resend of R1, paid access probe, replacement judge, automatic repeat, new provider/model/effort, upstream streaming, new creative strategy, parser tolerance, forced edit, larger sample, shared library, held-out evaluation, human/CrPO/MuCE work, Phase 3B, broad plugin framework or unrelated performance change. No changes in or access to the original Buddha2 folder.
+No release/reconciliation of either unknown, continuation/resend of R1, paid access probe, replacement judge, automatic repeat, new provider/model/effort, upstream streaming, new creative strategy, parser tolerance, forced edit, larger sample, shared library, held-out evaluation, human/CrPO/MuCE work, Phase 3B, broad plugin framework or unrelated performance change. 
 
 ## Completion criteria
 

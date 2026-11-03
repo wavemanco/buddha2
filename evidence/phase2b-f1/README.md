@@ -1,6 +1,6 @@
 # P2B-F1 authorized execution
 
-The user goal authorizes **P2B-F1 only**, with the proposed **$20 cumulative first-stage cap**. The unchanged [definition](../../PHASE2B_FIRST_BLOCK_DEFINITION.md) governs the task, procedures, models/settings, at-most-55 slots, failure rules and completion criteria. It supplies no expansion authority.
+The user goal authorizes **P2B-F1 only**, with the proposed **$20 cumulative first-stage cap**. The unchanged [definition](../../docs/phases/phase-2/PHASE2B_FIRST_BLOCK_DEFINITION.md) governs the task, procedures, models/settings, at-most-55 slots, failure rules and completion criteria. It supplies no expansion authority.
 
 `authorization.json` preserves the exact instruction and release/definition/control/launcher identities. `prelaunch-integrity.json` checks the 70 accepted evidence hashes, 26 current/retained source files and launcher. `price-refresh.json` records a public-document refresh; it does not certify the user's accounts.
 

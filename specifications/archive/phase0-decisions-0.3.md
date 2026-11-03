@@ -1,15 +1,15 @@
 # Phase 0 implementation decisions
 
 Revision: 0.3 — 2026-10-24, America/Los_Angeles  
-Authorization: the user has requested **Complete Phase 0**, followed by **Refresh the spec. Make sure original Buddha2 folder remains untouched.** This refresh precedes implementation. Phases 1 onward and all paid/model calls remain unauthorized.
+Authorization: the user has requested **Complete Phase 0**, followed by **Refresh the spec.** This refresh precedes implementation. Phases 1 onward and all paid/model calls remain unauthorized.
 
 ## 1. Folder boundary
 
-The sole project/work-output root is `C:\Users\arvik\code\research\Buddha2`. The protected original is `C:\Users\arvik\code\buddha2`. Canonical path comparison verified that these roots neither coincide nor contain one another.
+The sole project/work-output root is the project root.  
 
-Do not write, move, delete, initialize Git, install dependencies, or run project commands in the original folder. Do not copy its code, dependencies, datasets or results. Public upstream sources will be obtained independently. Do not reuse the existing legacy Buddha runtime images as the new environment.
+Keep all project operations within the project root. Public upstream sources will be obtained independently. Use the declared pinned runtime environment.
 
-Setup/build context must be confined to the new root. Runtime mounts must include only explicitly approved paths beneath the new root; never mount `C:\Users\arvik\code`, the user home, the original folder, the Docker socket, or host credential directories. Resolve and validate mount/output paths before invoking Docker. Reject links/path traversal that escape the new root. Capture the actual runtime mount configuration in acceptance evidence.
+Setup/build context must be confined to the new root. Runtime mounts must include only explicitly approved paths beneath the project root; never mount the user home, Docker socket or host credential directories. Resolve and validate mount/output paths before invoking Docker. Reject links/path traversal that escape the new root. Capture the actual runtime mount configuration in acceptance evidence.
 
 ## 2. One supported environment
 
@@ -32,11 +32,11 @@ Harness²'s core has no required third-party runtime dependencies at this pin. N
 
 The direct NoveltyBench subset is `numpy==2.2.6`, `pandas==2.3.2`, `pydantic==2.11.7`, `tqdm==4.67.1`, `openai==1.107.0`, `anthropic==1.4.0`, `sacrebleu==2.5.1`, `rouge-score==0.1.2`, `transformers==5.20.2`, and official CPU `torch==2.14.1+cpu`. Resolve/pin the transitive closure and inspect its licenses before enabling it. This is a declared CPU-only offline dependency environment, not the full upstream CUDA resolution. Do not install the entire benchmark requirements file or model-serving stack.
 
-Security amendment during implementation: the initial upstream-version subset used Transformers 4.56.1 and CPU Torch 2.7.1. The actual audit found known Transformers vulnerabilities, and a separate underlying-version advisory query found Torch vulnerabilities hidden by the auditor's inability to identify the `+cpu` local version. Preserve [the initial audit](evidence/dependency-audit-initial.json) and [Torch query](evidence/torch-cpu-advisory-initial.json). Upgrade only those runtime dependencies to official stable releases whose current PyPI metadata has no reported vulnerabilities ([Transformers](https://pypi.org/pypi/transformers/5.20.2/json), [Torch](https://pypi.org/pypi/torch/2.14.1/json)). Rebuild the lock, inspect licenses, and rerun native compatibility and audit checks. No upstream algorithm, acceptance threshold or scientific intervention changes.
+Security amendment during implementation: the initial upstream-version subset used Transformers 4.56.1 and CPU Torch 2.7.1. The actual audit found known Transformers vulnerabilities, and a separate underlying-version advisory query found Torch vulnerabilities hidden by the auditor's inability to identify the `+cpu` local version. Preserve [the initial audit](../../evidence/dependency-audit-initial.json) and [Torch query](../../evidence/torch-cpu-advisory-initial.json). Upgrade only those runtime dependencies to official stable releases whose current PyPI metadata has no reported vulnerabilities ([Transformers](https://pypi.org/pypi/transformers/5.20.2/json), [Torch](https://pypi.org/pypi/torch/2.14.1/json)). Rebuild the lock, inspect licenses, and rerun native compatibility and audit checks. No upstream algorithm, acceptance threshold or scientific intervention changes.
 
 License decision before use: `tqdm==4.67.1` contains MPL-2.0-covered contributions alongside MIT code ([exact license](https://github.com/tqdm/tqdm/blob/v4.67.1/LICENCE)). Keep it unmodified and retain notices in this local research environment. The Linux base also includes standard copyleft OS utilities; retain their notices. No distribution/commercial packaging decision is made here. Flag any additional copyleft package discovered before adding it; do not silently substitute a new dependency.
 
-The first transitive resolution additionally identifies `certifi==2026.10.23` and development-only `pathspec==1.1.1` as MPL-2.0 packages. Record the same unmodified/local-use and notice-retention decision before enabling them. The package-metadata inventory is [dependency-license-review.json](evidence/dependency-license-review.json); bundled wheel notices will also be retained/inspected after installation. PyPI metadata did not classify `mypy-extensions==1.1.0`; direct inspection of its hashed wheel confirms MIT, retained in [the wheel-license evidence](evidence/mypy-extensions-license.json). Pinned build-tool requirements are installed first; the complete lock is installed without dependency resolution or build isolation so temporary build environments cannot add unrecorded packages.
+The first transitive resolution additionally identifies `certifi==2026.10.23` and development-only `pathspec==1.1.1` as MPL-2.0 packages. Record the same unmodified/local-use and notice-retention decision before enabling them. The package-metadata inventory is [dependency-license-review.json](../../evidence/dependency-license-review.json); bundled wheel notices will also be retained/inspected after installation. PyPI metadata did not classify `mypy-extensions==1.1.0`; direct inspection of its hashed wheel confirms MIT, retained in [the wheel-license evidence](../../evidence/mypy-extensions-license.json). Pinned build-tool requirements are installed first; the complete lock is installed without dependency resolution or build isolation so temporary build environments cannot add unrecorded packages.
 
 ## 4. Minimal implementation shape
 
@@ -72,6 +72,6 @@ The single recovery checkpoint is after finalizing output/export/identity record
 
 ## 7. Evidence and exit
 
-The implementation must satisfy P0-1 through P0-8 in [PHASE_DEFINITIONS.md](PHASE_DEFINITIONS.md), including exercised setup/demo/inspection/export/import/assessment commands, malformed-input tests, source integrity and OS-level offline containment. Deliver the working kit, sample output/report and requirement-by-requirement evidence.
+The implementation must satisfy P0-1 through P0-8 in [PHASE_DEFINITIONS.md](../../docs/research/PHASE_DEFINITIONS.md), including exercised setup/demo/inspection/export/import/assessment commands, malformed-input tests, source integrity and OS-level offline containment. Deliver the working kit, sample output/report and requirement-by-requirement evidence.
 
 Phase 0 completion cannot be claimed from this refreshed specification, import checks or a copied native demo. Actual execution and acceptance evidence are still required. Live models, official judges, semantic quality, real provider/billing controls and recursive-improvement effectiveness remain unverified. Phase 1 does not begin automatically.

@@ -8,7 +8,7 @@ The central question is:
 
 > For a given model and kind of task, which fixed strategies help, and does recursive adaptation improve further with the same techniques and comparable resource allowances?
 
-This repository contains the new research project. The earlier local Buddha2 folder is separate and is not included.
+
 
 ## What we compare
 
@@ -24,7 +24,7 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 ## Current evidence
 
-Status snapshot: **2 November 2026**. [CURRENT_SPEC.md](CURRENT_SPEC.md) tracks subsequent execution and decisions.
+Status snapshot: **3 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
 
 The first task and assessment protocol is [NoveltyBench](https://github.com/novelty-bench/novelty-bench). It measures answer quality and useful variety using its established model-based assessment procedure. Benchmark scores are not a general measure of creativity or human preference.
 
@@ -37,9 +37,9 @@ The completed **Phase 3A development pilot** compared fixed best-of-six with one
 
 Best-of-six means generating six fresh ten-answer portfolios and selecting one unchanged portfolio. These costs exclude external assessment and earlier attempts.
 
-Fixed won all four prompt comparisons. All four native paths completed normally; the selected strategy changed on two prompts. This is a small development result, not held-out confirmation or evidence that recursive adaptation never helps. See the [full Phase 3A report](PHASE3A_RP2_LIVE_REPORT.md) for exact values, provenance, failures and costs.
+Fixed won all four prompt comparisons. All four native paths completed normally; the selected strategy changed on two prompts. This is a small development result, not held-out confirmation or evidence that recursive adaptation never helps. See the [full Phase 3A report](docs/phases/phase-3a/PHASE3A_RP2_LIVE_REPORT.md) for exact values, provenance, failures and costs.
 
-**Phase 3B is being built and checked offline.** It compares actual two-round native refinement (`seq,k=2`) with fixed best-of-twelve on the same four development prompts. Round two starts from the first composed strategy; native selection may choose either checkpoint. Both checkpoints are assessed after selection is sealed. No Phase 3B paid pilot has started, and fresh keys follow complete independent acceptance.
+**Phase 3B's latest offline verification stopped before acceptance.** The main mock matrix and semantic checks passed with 1,364 mock calls, four normal native paths and fixed-control pools. The 10,800-second outer verifier timed out during saved replay. Replay/preservation, eight remaining required groups and the final gate are absent; independent physical packet review and extracted-only cold replay are unfinished. No kit is accepted and no real calls or keys were used. It compares actual two-round native refinement (`seq,k=2`) with fixed best-of-twelve on the same four development prompts. Round two starts from the first composed strategy; native selection may choose either checkpoint. Both checkpoints are assessed after selection is sealed. No Phase 3B paid pilot has started, and fresh keys follow complete independent acceptance.
 
 Earlier fixed-strategy and evaluator studies are recorded separately. The MuCE-based creativity evaluator missed its predefined agreement/consistency checks and remains diagnostic-only. Human review and further CrPO work are optional, deferred extensions.
 
@@ -55,12 +55,13 @@ Replacing an engine, benchmark, strategy or compatible evaluator requires a new 
 
 ## Start here
 
-- [Current status and decisions](CURRENT_SPEC.md)
+- [Documentation index: research, phases, operations and history](docs/index.md)
+- [Current status and decisions](docs/research/CURRENT_SPEC.md)
 - [Research method and interpretation](docs/RESEARCH_METHOD.md)
-- [Concrete Phase 3B scope, completion criteria, caps and stop rules](PHASE3B_DEFINITION.md)
-- [Completed Phase 3A result](PHASE3A_RP2_LIVE_REPORT.md)
-- [Pinned environment and original implementation decisions](DECISIONS.md)
-- [Historical README, preserved verbatim](README_LEGACY.md)
+- [Concrete Phase 3B scope, completion criteria, caps and stop rules](docs/phases/phase-3b/PHASE3B_DEFINITION.md)
+- [Completed Phase 3A result](docs/phases/phase-3a/PHASE3A_RP2_LIVE_REPORT.md)
+- [Pinned environment and original implementation decisions](docs/phases/phase-0/DECISIONS.md)
+- [Historical README, edited reader reference](docs/archive/README_LEGACY.md)
 
 This is a staged research repository, not an unattended production service. Fixtures and tests are offline by default. Paid runs use a separately accepted, source-bound launcher, an explicit grant and fresh masked key entry. Follow the current runbook when it is accepted; historical launch commands do not authorize another run.
 

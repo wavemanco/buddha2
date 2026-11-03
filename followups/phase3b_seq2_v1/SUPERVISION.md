@@ -52,7 +52,7 @@ The trusted caller immediately constructs this observation from that result:
 ```
 
 Feed that fresh JSON directly on standard input to this keyless host command,
-from `C:\Users\arvik\code\research\Buddha2` with the usual credential-free
+from the project root with the usual credential-free
 environment and an explicit `PYTHONPATH` containing that root and its `src`:
 
 ```text
@@ -151,4 +151,4 @@ tool observation remain trusted, externally retained operator evidence.
 The parent and supervisor must hand off or stop through existing bounded owner
 controls before intentionally leaving a run that can still admit paid work.
 
-P3B-S2 additionally requires both checkpoints c1/c2 and all twelve candidate assessments, four full fixed pools of twelve, normal native selectors on all four prompts, and complete information proofs on every normal author/selector path. First-prompt $55 total/$25 assessment limits remain binding after review; no review reopens them. A missing required candidate or checkpoint stops future admission. The original folder remains outside access and mounts.
+P3B-S2 additionally requires both checkpoints c1/c2 and all twelve candidate assessments, four full fixed pools of twelve, normal native selectors on all four prompts, and complete information proofs on every normal author/selector path. First-prompt $55 total/$25 assessment limits remain binding after review; no review reopens them. A missing required candidate or checkpoint stops future admission. 

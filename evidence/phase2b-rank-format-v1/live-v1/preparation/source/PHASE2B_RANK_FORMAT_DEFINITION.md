@@ -8,7 +8,7 @@ This is one bounded block: implement/test the offline transformation and evidenc
 
 Determine whether a deterministic, score-blind format policy can obtain one valid machine-readable order from each of the **24 saved rank responses**, without inventing IDs or choosing between conflicting orders. Produce a reproducible comparison of **A, B and C-N**, where C-N means the original rank inference followed by this normalization policy.
 
-This is a **post-hoc development fork within the benchmark track**. It is not completion, correction or rescue of the original strict-C experiment. That experiment remains inconclusive with four failures and no seed; its [report](PHASE2B_REPORT.md), decision `6cc0d324f9be864a9747140c4d6bd41a42606f31e38ee772e5c35aac62e381fc` and all recorded scores remain unchanged.
+This is a **post-hoc development fork within the benchmark track**. It is not completion, correction or rescue of the original strict-C experiment. That experiment remains inconclusive with four failures and no seed; its [report](../../../../../docs/phases/phase-2/PHASE2B_REPORT.md), decision `6cc0d324f9be864a9747140c4d6bd41a42606f31e38ee772e5c35aac62e381fc` and all recorded scores remain unchanged.
 
 The offline checkpoint delivers a working normalizer, all-24 input/disposition manifest, exact reuse proofs, four separately derived unscored outputs, negative tests and a mocked judging/reporting path. A completed paid portion adds four native assessments and a separately identified retrospective development decision. Neither establishes prospective format reliability, held-out creativity or recursive improvement.
 
@@ -25,7 +25,7 @@ Use all 24 raw, known, settled rank results and their original B parents. Apply 
 | `curated-29`: twenty-fifth-birthday gift | 1 | Same repeated-order pattern |
 | `curated-29`: same gift task | 2 | Same repeated-order pattern |
 
-The [planning worksheet](evidence/phase2b-rank-format-definition-v1/worksheet.json) binds exact input/parent IDs, hashes and proposed reuse references. No new prompts, responses, plans or rank calls are needed. Do not access the original Buddha2 folder, WildChat, confirmation rows, human forms or new corpora.
+The [planning worksheet](../../../../phase2b-rank-format-definition-v1/worksheet.json) binds exact input/parent IDs, hashes and proposed reuse references. No new prompts, responses, plans or rank calls are needed. Do not access WildChat, confirmation rows, human forms or new corpora.
 
 ## Normalization policy N1 — fixed before implementation
 

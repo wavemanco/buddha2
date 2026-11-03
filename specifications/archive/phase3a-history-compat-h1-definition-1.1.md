@@ -23,7 +23,7 @@ R3 completed four real rollouts and three normal editor sessions, all KEEP_BASE,
 
 ## Exclusions
 
-No paid generation, judging, access probe or token-count call; no credentials. No resumed R3 owner or retrospective repair of its artifacts. No new sample, model, effort, strategy, timeout, retry, scoring rule, parser tolerance or released historical liability. No Harness²/NoveltyBench source changes, package/dependency additions or upgrades, unrelated OpenCode changes, new general plugin framework, platform installation/migration, hosted telemetry, database, queue or new execution engine. CrPO, humans and held-out evaluation remain deferred. The original Buddha2 folder and its parents stay outside all reads, writes and mounts.
+No paid generation, judging, access probe or token-count call; no credentials. No resumed R3 owner or retrospective repair of its artifacts. No new sample, model, effort, strategy, timeout, retry, scoring rule, parser tolerance or released historical liability. No Harness²/NoveltyBench source changes, package/dependency additions or upgrades, unrelated OpenCode changes, new general plugin framework, platform installation/migration, hosted telemetry, database, queue or new execution engine. CrPO, humans and held-out evaluation remain deferred. 
 
 ## Completion criteria
 

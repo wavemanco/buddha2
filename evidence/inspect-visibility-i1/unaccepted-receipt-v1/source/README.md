@@ -8,7 +8,7 @@ which does **not** turn the failed native case into a success.
 
 ## Run
 
-From `C:\Users\arvik\code\research\Buddha2`, using a fresh absolute output path:
+From the project root, using a fresh absolute output path:
 
 ```powershell
 python -B -m followups.inspect_visibility_i1.run --output 'C:\Users\arvik\code\research\Buddha2\runs\inspect-visibility-i1\verification-new'

@@ -118,8 +118,8 @@ def _manifest(lock: dict) -> dict:
             for name in ("requirements.lock", "requirements-build.lock")
         },
         "grading_template_sha256": file_hash(PROJECT / "fixtures/grading.json"),
-        "specification_sha256": file_hash(PROJECT / "PHASE_DEFINITIONS.md"),
-        "decisions_sha256": file_hash(PROJECT / "DECISIONS.md"),
+        "specification_sha256": file_hash(PROJECT / "docs/research/PHASE_DEFINITIONS.md"),
+        "decisions_sha256": file_hash(PROJECT / "docs/phases/phase-0/DECISIONS.md"),
         "upstreams_lock_sha256": file_hash(PROJECT / "upstreams.lock.json"),
         "upstreams": {
             name: {"commit": record["commit"], "files_sha256": digest(record["files"])}

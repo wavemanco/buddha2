@@ -1,6 +1,6 @@
 # P2B-E operator entry
 
-The user's subsequent **“proceed”** authorizes the unchanged [P2B-E definition](../../PHASE2B_REMAINDER_DEFINITION.md) with a **$125 cumulative ceiling**, including F1's $0.210174 accounted upper bound. [authorization.json](authorization.json) records that authority; the historical definition remains unchanged.
+The user's subsequent **“proceed”** authorizes the unchanged [P2B-E definition](../../docs/phases/phase-2/PHASE2B_REMAINDER_DEFINITION.md) with a **$125 cumulative ceiling**, including F1's $0.210174 accounted upper bound. [authorization.json](authorization.json) records that authority; the historical definition remains unchanged.
 
 The new `live-expansion-001` grant was generated offline and passed the unchanged launcher's non-sending preflight. It references the existing first authority and approved first review. The canonical journal still contains only F1's 28 known requests, with zero liability. No new API calls or credential reads were made in preparing this entry.
 

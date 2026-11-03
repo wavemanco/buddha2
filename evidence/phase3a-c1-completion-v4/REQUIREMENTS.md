@@ -1,6 +1,6 @@
 # R3 acceptance checklist
 
-2026-10-30, America/Los_Angeles. Criteria come from the user-approved [definition](../../PHASE3A_C1_COMPLETION_R3_DEFINITION.md); status is evidence bookkeeping, not a relaxation of those criteria. The complete six-group offline gate passed for verification-v3; this is the pre-publication checklist snapshot. External packet receipt and CURRENT_SPEC.md record publication status. No live dispatch is authorized until the complete offline kit and public packet are accepted and fresh masked keys supplied.
+2026-10-30, America/Los_Angeles. Criteria come from the user-approved [definition](../../docs/phases/phase-3a/PHASE3A_C1_COMPLETION_R3_DEFINITION.md); status is evidence bookkeeping, not a relaxation of those criteria. The complete six-group offline gate passed for verification-v3; this is the pre-publication checklist snapshot. External packet receipt and CURRENT_SPEC.md record publication status. No live dispatch is authorized until the complete offline kit and public packet are accepted and fresh masked keys supplied.
 
 | ID | Required evidence | Current status |
 |---|---|---|

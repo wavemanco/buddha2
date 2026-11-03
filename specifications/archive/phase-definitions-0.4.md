@@ -2,9 +2,9 @@
 
 Revision: 0.4 — 2026-10-24, America/Los_Angeles  
 Status: Phase 0 complete under frozen revision 0.3; Phase 1 concretely proposed; later phases provisional and unstarted  
-Authority: the current request authorizes planning/document updates only. No Phase 1 implementation, dataset sampling, model calls or later-phase execution is authorized by this document. The original Buddha2 folder remains protected.
+Authority: the current request authorizes planning/document updates only. No Phase 1 implementation, dataset sampling, model calls or later-phase execution is authorized by this document. 
 
-The [experiment plan](EXPERIMENT_PLAN.md) gives the research rationale. This document specifies work products and completion gates. [DECISIONS.md](DECISIONS.md) remains Phase 0's historical implementation decision record. Phase 0's exact [specification](specifications/archive/phase-definitions-0.3.md) and [decisions](specifications/archive/phase0-decisions-0.3.md) are preserved byte for byte; their hashes match the retained run manifest. Use the [handoff report](PHASE0_REPORT.md) for evidence and navigation. The archives retain links originally authored relative to the project root.
+The [experiment plan](../../docs/research/EXPERIMENT_PLAN.md) gives the research rationale. This document specifies work products and completion gates. [DECISIONS.md](../../docs/phases/phase-0/DECISIONS.md) remains Phase 0's historical implementation decision record. Phase 0's exact [specification](phase-definitions-0.3.md) and [decisions](phase0-decisions-0.3.md) are preserved byte for byte; their hashes match the retained run manifest. Use the [handoff report](../../docs/phases/phase-0/PHASE0_REPORT.md) for evidence and navigation. The archives retain links originally authored relative to the project root.
 
 Refreshing this file changes the effective input identity for a new Phase 0 run. Do not edit old manifests, reports, assessments or the example archive to make them match revision 0.4. Historical completed-run resume belongs to commit `6bafb25` and its frozen inputs; current definitions require a fresh output directory. No historical replay was executed during this planning refresh.
 
@@ -45,7 +45,7 @@ All example responses, proposal decisions and judge inputs are visibly marked as
 - Freeze one synthetic prompt, one ten-response portfolio, one deterministic proposal sequence using a single native parallel `k=1` path, and small malformed/incompatible fixtures. These are development assets, not benchmark evidence or held-out inputs.
 - Agree the minimal adapter/runner/artifact shape and offline checks before implementation. Reuse upstream facilities and ordinary files wherever they suffice.
 
-All project writes, upstream checkouts, dependencies and run artifacts stay under `C:\Users\arvik\code\research\Buddha2` or its dedicated container image. The protected `C:\Users\arvik\code\buddha2` is never written, used as a working directory, copied or mounted. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
+All project writes, upstream checkouts, dependencies and run artifacts stay under the project root or its dedicated container image. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
 
 ### What we will build
 
@@ -68,7 +68,7 @@ Upstream already provides a deterministic proposer pattern that calls the real s
 - Implementing reranking or a Lenny/Lluminate strategy library. The artifact format must preserve response order/identity; the reranker itself belongs in Phase 2.
 - Live provider transport, real agent tool/plugin behavior, or production billing enforcement. Record these as unverified, not implicitly solved by fixture tests.
 - A plugin marketplace, dynamic discovery, universal benchmark language, dashboard, custom model gateway, distributed execution, or a second benchmark implementation.
-- Editing the original Buddha2 folder or either upstream algorithm to make the fixture pass.
+- Editing either upstream algorithm to make the fixture pass.
 
 ### How we know it is done
 
@@ -138,7 +138,7 @@ Recommend the first-party Anthropic Messages API with **`claude-sonnet-5-5`**, o
 
 The initial rubric compares unusual/non-obvious ideas **and** appropriateness to the user's task, avoids rewarding length or ornate language alone, treats quoted response content as untrusted data, and permits tie/abstain when a preference is unjustified. It returns a short reason, not invented numerical truth for novelty, surprise or usefulness. Save its exact text before calls; allow at most one wording revision from calibration evidence. Keep the model/settings fixed.
 
-The Phase 0 network-disabled, credential-free path stays intact. Phase 1 needs a separately declared network-enabled critic launch with one provider endpoint and only its explicitly supplied credential; no host home/original-folder/credential-directory mounts and no agent tools. Record the actual launch configuration. Do not claim OS-level provider-domain egress enforcement unless implemented and checked. Reuse ordinary artifact/hash helpers and installed dependencies where appropriate; leave the native Harness²/NoveltyBench sources unchanged.
+The Phase 0 network-disabled, credential-free path stays intact. Phase 1 needs a separately declared network-enabled critic launch with one provider endpoint and only its explicitly supplied credential; no host home/credential-directory mounts and no agent tools. Record the actual launch configuration. Do not claim OS-level provider-domain egress enforcement unless implemented and checked. Reuse ordinary artifact/hash helpers and installed dependencies where appropriate; leave the native Harness²/NoveltyBench sources unchanged.
 
 Redact provider keys and authorization headers from launch records, requests, logs and errors; use only a non-reversible credential fingerprint if identity is needed. Do not forward the host environment wholesale or weaken the Phase 0 credential-free launcher to enable the critic.
 

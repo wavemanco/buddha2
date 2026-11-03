@@ -54,7 +54,7 @@ No Phase 2B first block, expansion, real generation/scoring/reranking, task repl
 
 | ID | Required evidence |
 |---|---|
-| LR-1: Preserved scope | Parent source/study and selected task/template/profile/policy identities are verified; no scientific input, old evidence or protected original-folder change. |
+| LR-1: Preserved scope | Parent source/study and selected task/template/profile/policy identities are verified; no scientific input or old evidence change. |
 | LR-2: Admission decision | Exact five-role admission argument covering full effective input. Successful branch includes executable boundary checks for Unicode, structured schema, dynamic plan/answer/ranking inputs and over-limit requests. No-go branch supplies the documented limitation and bounded amendment instead of building those tests after Gate 1 has stopped. Fixtures do not turn assumptions into proof. |
 | LR-3: Billing decision | Dated primary-source contract, applicable cache-write accounting and all reservation/settlement categories are explicit. Successful branch has independently checked integer reservation/settlement cases; unexplained or unsupported billable categories fail closed. Historical proposals are not recertified as current budgets. |
 | LR-4: Conditional executable proof | For the successful branch: actual pinned SDK/mock HTTP trace across the first block, complete first-block slot/known-nonhead accounting (remaining study slots stay planned and undispatched), native scoring and a correctly partial/inconclusive decision/status path with no selected seed, plus fault/crash/concurrency/resume tests; zero provider calls, zero real keys and no new attempts on unchanged resume. This gate is explicitly unbuilt if Gate 1 fails, never marked passed by a document alone. |

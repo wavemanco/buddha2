@@ -1,6 +1,6 @@
 # H1 offline compatibility component
 
-Run from `C:\Users\arvik\code\research\Buddha2`, with Docker Desktop running:
+Run from the project root, with Docker Desktop running:
 
 ```powershell
 python -B -m followups.phase3a_history_compat_h1.verify --output runs/phase3a-history-compat-h1/verification-v1

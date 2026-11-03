@@ -1,12 +1,12 @@
 # Phase 3A C1 completion R3 — editor round allocation
 
-Definition **1.0**, 2026-10-30, America/Los_Angeles. **Authorized complete R3 block; implementation active.** The user answered "Approve the complete R3 block (Recommended)" to the complete scope below, including sixteen steps, the unchanged $205.86/$50.86 ceilings, whole offline gate and one fresh four-prompt pilot with counted reviews and closure. The standing completion goal and automatic sub-$250 budget policy remain in force. No further planned method or funding approval is required inside this block. The exact proposal is preserved in [the archive](specifications/archive/phase3a-c1-completion-r3-proposal-1.0.md) and commit `2724639`; substantive method and criteria are unchanged.
+Definition **1.0**, 2026-10-30, America/Los_Angeles. **Authorized complete R3 block; implementation active.** The user answered "Approve the complete R3 block (Recommended)" to the complete scope below, including sixteen steps, the unchanged $205.86/$50.86 ceilings, whole offline gate and one fresh four-prompt pilot with counted reviews and closure. The standing completion goal and automatic sub-$250 budget policy remain in force. No further planned method or funding approval is required inside this block. The exact proposal is preserved in [the archive](phase3a-c1-completion-r3-proposal-1.0.md) and commit `2724639`; substantive method and criteria are unchanged.
 
 ## Objective and evidence
 
 Complete the same four-prompt development comparison: actual pinned Harness² native `agg,k=1` versus fixed C-N best-of-six, with the same declared technique access and comparable total inference resources. Require eight valid primary scores, the classified duplicate diagnostic, settled new accounting and at least one qualifying authentic live native path. A zero or negative effect is a valid scientific result. An incomplete run is an execution failure.
 
-The [closed R2 live report](PHASE3A_C1_COMPLETION_R2_LIVE_REPORT.md) records a grounded temporary INV planning edit, followed by strategy reread and notes write in seven ordinary requests. Notes reread and a normal final response were missing; the existing guard rejected terminal request8 before admission. All19 calls were known, costing $0.869827, without a deadline failure or new held liability. The seven editor calls took approximately173.43 seconds in aggregate; that is not the full conversation's wall time. The efficient scripted fixture proved possible completion in seven requests, not actual-model completion within seven.
+The [closed R2 live report](../../docs/phases/phase-3a/PHASE3A_C1_COMPLETION_R2_LIVE_REPORT.md) records a grounded temporary INV planning edit, followed by strategy reread and notes write in seven ordinary requests. Notes reread and a normal final response were missing; the existing guard rejected terminal request8 before admission. All19 calls were known, costing $0.869827, without a deadline failure or new held liability. The seven editor calls took approximately173.43 seconds in aggregate; that is not the full conversation's wall time. The efficient scripted fixture proved possible completion in seven requests, not actual-model completion within seven.
 
 ## Scope and exact method change
 
@@ -48,7 +48,7 @@ Offline regression must exercise normal completion after the old seven-round bou
 
 ## Exclusions
 
-No extra generation candidate, shape attempt, provider retry, judge replacement, parser tolerance, forced edit, larger sample, timeout increase, new model/effort/creative strategy, upstream/dependency change, shared experience library, held-out material, Phase3B, human collection, CrPO/MuCE work or general plugin platform. No reconciliation/release/resend of either historical unknown. No original Buddha2 folder access or changes. No automatic further paid repeat after this R3 attempt.
+No extra generation candidate, shape attempt, provider retry, judge replacement, parser tolerance, forced edit, larger sample, timeout increase, new model/effort/creative strategy, upstream/dependency change, shared experience library, held-out material, Phase3B, human collection, CrPO/MuCE work or general plugin platform. No reconciliation/release/resend of either historical unknown. No automatic further paid repeat after this R3 attempt.
 
 ## Completion and stop criteria
 

@@ -2,9 +2,9 @@
 
 Revision: 0.3 — 2026-10-24, America/Los_Angeles  
 Status: Phase 0 execution specification; current progress/completion is recorded in README.md and the completion report; later phases unstarted  
-Authority: the user requested Complete Phase 0, then asked to refresh the spec and keep the original folder untouched. Only Phase 0's offline implementation is authorized; no model/provider calls or later phases are authorized.
+Authority: the user requested Complete Phase 0, then asked to refresh the spec. Only Phase 0's offline implementation is authorized; no model/provider calls or later phases are authorized.
 
-The [experiment plan](EXPERIMENT_PLAN.md) gives the research rationale. This document specifies the work products and completion gates. The refreshed [implementation decisions](DECISIONS.md) resolve Phase 0's source pins, Linux environment, folder protection, minimal implementation shape and fixture boundaries. Phases 1–4 are provisional definitions to refine using earlier evidence.
+The [experiment plan](../../docs/research/EXPERIMENT_PLAN.md) gives the research rationale. This document specifies the work products and completion gates. The refreshed [implementation decisions](../../docs/phases/phase-0/DECISIONS.md) resolve Phase 0's source pins, Linux environment, folder protection, minimal implementation shape and fixture boundaries. Phases 1–4 are provisional definitions to refine using earlier evidence.
 
 ## Working rule for every phase
 
@@ -41,7 +41,7 @@ All example responses, proposal decisions and judge inputs are visibly marked as
 - Freeze one synthetic prompt, one ten-response portfolio, one deterministic proposal sequence using a single native parallel `k=1` path, and small malformed/incompatible fixtures. These are development assets, not benchmark evidence or held-out inputs.
 - Agree the minimal adapter/runner/artifact shape and offline checks before implementation. Reuse upstream facilities and ordinary files wherever they suffice.
 
-All project writes, upstream checkouts, dependencies and run artifacts stay under `C:\Users\arvik\code\research\Buddha2` or its dedicated container image. The protected `C:\Users\arvik\code\buddha2` is never written, used as a working directory, copied or mounted. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
+All project writes, upstream checkouts, dependencies and run artifacts stay under the project root or its dedicated container image. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
 
 ### What we will build
 
@@ -64,7 +64,7 @@ Upstream already provides a deterministic proposer pattern that calls the real s
 - Implementing reranking or a Lenny/Lluminate strategy library. The artifact format must preserve response order/identity; the reranker itself belongs in Phase 2.
 - Live provider transport, real agent tool/plugin behavior, or production billing enforcement. Record these as unverified, not implicitly solved by fixture tests.
 - A plugin marketplace, dynamic discovery, universal benchmark language, dashboard, custom model gateway, distributed execution, or a second benchmark implementation.
-- Editing the original Buddha2 folder or either upstream algorithm to make the fixture pass.
+- Editing either upstream algorithm to make the fixture pass.
 
 ### How we know it is done
 

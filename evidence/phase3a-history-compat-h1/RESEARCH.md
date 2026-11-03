@@ -1,6 +1,6 @@
 # H1 research: reliable execution around an agent harness
 
-Research date: **2026-10-30**. Scope: primary documentation, public source, merged changes and issue records. This note supports the [H1 offline checkpoint](../../PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md); it authorizes no installation, platform migration, provider call or new experiment. Recommendations below are engineering judgments, not compatibility results. Actual Harness² remains the experimental engine, NoveltyBench remains a separately executed native assessment, and our intent/result/unknown ledger remains the dispatch authority.
+Research date: **2026-10-30**. Scope: primary documentation, public source, merged changes and issue records. This note supports the [H1 offline checkpoint](../../docs/phases/phase-3a/PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md); it authorizes no installation, platform migration, provider call or new experiment. Recommendations below are engineering judgments, not compatibility results. Actual Harness² remains the experimental engine, NoveltyBench remains a separately executed native assessment, and our intent/result/unknown ledger remains the dispatch authority.
 
 ## Decision
 
@@ -22,7 +22,7 @@ OpenCode's [PR26276](https://github.com/anomalyco/opencode/pull/26276) merged Ma
 
 The first fixed stable release is [v1.14.42, published May 9](https://github.com/anomalyco/opencode/releases/tag/v1.14.42). Its immutable source commit is [23c6b69abf35314781b9a55a6530527094075505](https://github.com/anomalyco/opencode/blob/23c6b69abf35314781b9a55a6530527094075505/packages/opencode/src/provider/transform.ts); [v1.14.41's source](https://github.com/anomalyco/opencode/blob/8ba2a9171597262df9d19516c82a5e14f18f5c63/packages/opencode/src/provider/transform.ts) still drops empty reasoning. These immutable sources avoid relying on a stale search result for a current development path that now returns404.
 
-The H1 source-tree audit counts 2,068 changed blob paths between the older v1.14.18 baseline and v1.14.42, including prompts, lifecycle code and the Bun lockfile. A full upgrade therefore changes much more than this defect. [H1 definition1.1](../../PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md) selects only the published Anthropic filter hunk as a scoped backport into a new isolated image, with no new dependencies, Harness² source changes or scientific intervention. There is no provider-history rehydration: preserve blocks during client conversion, then reject later loss before admission. Actual round-trip compatibility and negative checks remain required; published source alone is not acceptance.
+The H1 source-tree audit counts 2,068 changed blob paths between the older v1.14.18 baseline and v1.14.42, including prompts, lifecycle code and the Bun lockfile. A full upgrade therefore changes much more than this defect. [H1 definition1.1](../../docs/phases/phase-3a/PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md) selects only the published Anthropic filter hunk as a scoped backport into a new isolated image, with no new dependencies, Harness² source changes or scientific intervention. There is no provider-history rehydration: preserve blocks during client conversion, then reject later loss before admission. Actual round-trip compatibility and negative checks remain required; published source alone is not acceptance.
 
 ## Platforms and components
 

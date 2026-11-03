@@ -2,9 +2,9 @@
 
 Revision: 0.13 — 2026-10-26, America/Los_Angeles  
 Status: Phase 2A remains complete under frozen revision 0.10; benchmark-only continuation and optional later human augmentation now defined; offline policy update complete under frozen revision 0.12; live admission unresolved; Phase 2B unstarted and unauthorized; Route H optional/unstarted; CrPO deferred  
-Authority: the user requested a concrete plan and complete implementation of the bounded offline policy update. Revision 0.13 records completion under unchanged frozen revision 0.12. No live experiment, provider/token-count call, human collection or spending occurred or is authorized. Preserve both completed kits and their original definitions; the original Buddha2 folder remains protected.
+Authority: the user requested a concrete plan and complete implementation of the bounded offline policy update. Revision 0.13 records completion under unchanged frozen revision 0.12. No live experiment, provider/token-count call, human collection or spending occurred or is authorized. Preserve both completed kits and their original definitions.
 
-The [experiment plan](EXPERIMENT_PLAN.md) gives the research rationale. This document specifies work products and completion gates. [DECISIONS.md](DECISIONS.md) remains Phase 0's historical implementation decision record. Phase 0's exact [specification](specifications/archive/phase-definitions-0.3.md) and [decisions](specifications/archive/phase0-decisions-0.3.md) are preserved byte for byte; their hashes match the retained run manifest. Use the [handoff report](PHASE0_REPORT.md) for evidence and navigation. The archives retain links originally authored relative to the project root.
+The [experiment plan](../../docs/research/EXPERIMENT_PLAN.md) gives the research rationale. This document specifies work products and completion gates. [DECISIONS.md](../../docs/phases/phase-0/DECISIONS.md) remains Phase 0's historical implementation decision record. Phase 0's exact [specification](phase-definitions-0.3.md) and [decisions](phase0-decisions-0.3.md) are preserved byte for byte; their hashes match the retained run manifest. Use the [handoff report](../../docs/phases/phase-0/PHASE0_REPORT.md) for evidence and navigation. The archives retain links originally authored relative to the project root.
 
 Refreshing this file changes the effective input identity for a new Phase 0 run. Do not edit old manifests, reports, assessments or the example archive to make them match revision 0.13. Historical completed-run resume belongs to commit `6bafb25` and its frozen inputs; current definitions require a fresh output directory. Revisions 0.4 through 0.12 are preserved in specifications/archive. PHASE1_DECISIONS.md records the approved population change; PHASE1_REPORT.md records execution, the readiness exception and final result. Phase 1's closeout manifest binds documentation at commit `35cc481`, including the exact archived revision 0.6. Phase 1A completed under frozen revision 0.7; its report and closeout manifest bind closure documentation at commit `bed3465`, including exact archived revision 0.8. Route H's definition remains archived in revision 0.9. Phase 2A closeout documentation is bound at commit 9ef4024 and exact revision 0.11 is archived. Current policy changes do not rewrite those reports, evidence or hashes; inspect the corresponding historical commit to verify its bound documentation.
 
@@ -50,7 +50,7 @@ A changed method selected after confirmation data have been opened needs fresh u
 
 ### Offline policy update before Phase 2B — complete
 
-The original 0.10 kit retains its historical human gate and identity. The separate `phase2-policy` command now implements revision 0.12: benchmark decisions with zero humans, optional immutable human assessments/supplements and independent human decisions. See the [implementation report](PHASE2_POLICY_UPDATE_REPORT.md), [plan](PHASE2_POLICY_UPDATE_PLAN.md) and [closeout](evidence/phase2-r012/closeout.json). The refreshed study is 84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92; historical execution identities and source bytes remain unchanged. All human decisions reference their verified benchmark root; assessment supplements preserve predecessor links.
+The original 0.10 kit retains its historical human gate and identity. The separate `phase2-policy` command now implements revision 0.12: benchmark decisions with zero humans, optional immutable human assessments/supplements and independent human decisions. See the [implementation report](../../docs/phases/phase-2/PHASE2_POLICY_UPDATE_REPORT.md), [plan](../../docs/phases/phase-2/PHASE2_POLICY_UPDATE_PLAN.md) and [closeout](../../evidence/phase2-r012/closeout.json). The refreshed study is 84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92; historical execution identities and source bytes remain unchanged. All human decisions reference their verified benchmark root; assessment supplements preserve predecessor links.
 
 **Objective/output:** a small offline update producing a benchmark-only decision with no human submissions, and an independent later human-augmented decision on the same saved outputs. **Build:** explicit track/policy identity, separate execution/assessment/decision validation, optional packet/import/supplement handling and parent/reuse checks. Assessment updates must accept compatible historical outputs without editing their recorded generation identity or replaying generation. Ordinary modules and immutable files suffice; no branch manager or platform is needed.
 
@@ -80,7 +80,7 @@ All example responses, proposal decisions and judge inputs are visibly marked as
 - Freeze one synthetic prompt, one ten-response portfolio, one deterministic proposal sequence using a single native parallel `k=1` path, and small malformed/incompatible fixtures. These are development assets, not benchmark evidence or held-out inputs.
 - Agree the minimal adapter/runner/artifact shape and offline checks before implementation. Reuse upstream facilities and ordinary files wherever they suffice.
 
-All project writes, upstream checkouts, dependencies and run artifacts stay under `C:\Users\arvik\code\research\Buddha2` or its dedicated container image. The protected `C:\Users\arvik\code\buddha2` is never written, used as a working directory, copied or mounted. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
+All project writes, upstream checkouts, dependencies and run artifacts stay under the project root or its dedicated container image. Validate canonical output/mount paths before execution and retain the actual mount configuration as evidence.
 
 ### What we will build
 
@@ -103,7 +103,7 @@ Upstream already provides a deterministic proposer pattern that calls the real s
 - Implementing reranking or a Lenny/Lluminate strategy library. The artifact format must preserve response order/identity; the reranker itself belongs in Phase 2.
 - Live provider transport, real agent tool/plugin behavior, or production billing enforcement. Record these as unverified, not implicitly solved by fixture tests.
 - A plugin marketplace, dynamic discovery, universal benchmark language, dashboard, custom model gateway, distributed execution, or a second benchmark implementation.
-- Editing the original Buddha2 folder or either upstream algorithm to make the fixture pass.
+- Editing either upstream algorithm to make the fixture pass.
 
 ### How we know it is done
 
@@ -136,7 +136,7 @@ A Phase 1 MuCE pass is limited to its pairwise comparison contract/population. N
 
 ## Phase 1 — A usable, audited creativity evaluator
 
-**Closed:** all P1-1 through P1-8 are complete under [frozen revision 0.5](specifications/archive/phase-definitions-0.5.md), with the explicit [user-approved operator readiness exception](evidence/phase1-live/readiness-exception-approved.json). All 48 presentations finalized for $0.112696 usage-based API cost, with zero retries or unresolved reservations. Held-out both-orders human agreement was 4/12 (floor 9) and order consistency 8/12 (floor 11): **diagnostic-only**, not a screened-valid critic. The [report](PHASE1_REPORT.md) records the single calibration-only JSON-format revision, prediction commit before label access, byte-identical offline replay and credential cleanup. The scope below retains the completed definition; its estimates and pre-launch statements are historical, not authorization for a repeat. The audit is now consumed for a revised critic.
+**Closed:** all P1-1 through P1-8 are complete under [frozen revision 0.5](phase-definitions-0.5.md), with the explicit [user-approved operator readiness exception](../../evidence/phase1-live/readiness-exception-approved.json). All 48 presentations finalized for $0.112696 usage-based API cost, with zero retries or unresolved reservations. Held-out both-orders human agreement was 4/12 (floor 9) and order consistency 8/12 (floor 11): **diagnostic-only**, not a screened-valid critic. The [report](../../docs/phases/phase-1/PHASE1_REPORT.md) records the single calibration-only JSON-format revision, prediction commit before label access, byte-identical offline replay and credential cleanup. The scope below retains the completed definition; its estimates and pre-launch statements are historical, not authorization for a repeat. The audit is now consumed for a revised critic.
 
 ### Objective and claim
 
@@ -175,7 +175,7 @@ Use the first-party Anthropic Messages API with **`claude-sonnet-5-5`**, the ver
 
 The initial rubric compares unusual/non-obvious ideas **and** appropriateness to the user's task, avoids rewarding length or ornate language alone, treats quoted response content as untrusted data, and permits tie/abstain when a preference is unjustified. It returns a short reason, not invented numerical truth for novelty, surprise or usefulness. Save its exact text before calls; allow at most one wording revision from calibration evidence. Keep the model/settings fixed.
 
-The Phase 0 network-disabled, credential-free path stays intact. Phase 1 needs a separately declared network-enabled critic launch with one provider endpoint and only its explicitly supplied credential; no host home/original-folder/credential-directory mounts and no agent tools. Record the actual launch configuration. Do not claim OS-level provider-domain egress enforcement unless implemented and checked. Reuse ordinary artifact/hash helpers and installed dependencies where appropriate; leave the native Harness²/NoveltyBench sources unchanged.
+The Phase 0 network-disabled, credential-free path stays intact. Phase 1 needs a separately declared network-enabled critic launch with one provider endpoint and only its explicitly supplied credential; no host home/credential-directory mounts and no agent tools. Record the actual launch configuration. Do not claim OS-level provider-domain egress enforcement unless implemented and checked. Reuse ordinary artifact/hash helpers and installed dependencies where appropriate; leave the native Harness²/NoveltyBench sources unchanged.
 
 Redact provider keys and authorization headers from launch records, requests, logs and errors; use only a non-reversible credential fingerprint if identity is needed. Do not forward the host environment wholesale or weaken the Phase 0 credential-free launcher to enable the critic.
 
@@ -241,7 +241,7 @@ The original preparation checkpoint is documented in PHASE1_PREPARATION_REPORT.m
 
 ## Phase 1A — Data readiness for a specified evaluation use
 
-**Closed under frozen revision 0.7:** D1A-1 through D1A-6 are satisfied; see [PHASE1A_DATA_READINESS_REPORT.md](PHASE1A_DATA_READINESS_REPORT.md). All 16,948 cached train rows and 48 historical mappings reconcile. The frozen sampler produced eight pairs and a documented four-pair low-stratum shortfall, without new prompt groups. Experiment spend was $0; no model inference, new human ratings or held-out row contents. Development against published labels is ready for that limited use; CrPO reproduction is conditional; human alignment on new outputs is unvalidated. Its report recommended Route H; that optional route is now defined below and remains unstarted. The following scope is retained as executed, not changed after observation.
+**Closed under frozen revision 0.7:** D1A-1 through D1A-6 are satisfied; see [PHASE1A_DATA_READINESS_REPORT.md](../../docs/phases/phase-1a/PHASE1A_DATA_READINESS_REPORT.md). All 16,948 cached train rows and 48 historical mappings reconcile. The frozen sampler produced eight pairs and a documented four-pair low-stratum shortfall, without new prompt groups. Experiment spend was $0; no model inference, new human ratings or held-out row contents. Development against published labels is ready for that limited use; CrPO reproduction is conditional; human alignment on new outputs is unvalidated. Its report recommended Route H; that optional route is now defined below and remains unstarted. The following scope is retained as executed, not changed after observation.
 
 ### Objective
 
@@ -285,7 +285,7 @@ The report must distinguish three uses: (1) development-only agreement with publ
 
 ### Exclusions
 
-No experiment model/provider inference, including local reward-model or embedding inference; frontier model or reasoning sweeps; model/rubric tuning; weight downloads, training or scorer implementation; dataset repairs/relabeling; new benchmark integration; fresh held-out row/label inspection; paid annotation or recruitment; human validation; new strategy/reranking/adaptation experiments; CrPO replication execution; Bayesian-surprise implementation; or changes to the original Buddha2 folder. Keep these as possible later slices, not hidden prerequisites.
+No experiment model/provider inference, including local reward-model or embedding inference; frontier model or reasoning sweeps; model/rubric tuning; weight downloads, training or scorer implementation; dataset repairs/relabeling; new benchmark integration; fresh held-out row/label inspection; paid annotation or recruitment; human validation; new strategy/reranking/adaptation experiments; CrPO replication execution; or Bayesian-surprise implementation. Keep these as possible later slices, not hidden prerequisites.
 
 ### Completion criteria
 
@@ -331,7 +331,7 @@ Usable output: a short case-by-case report with two independent response sheets,
 - They work separately, with no discussion, web search, LLM assistance or coaching before submission. Independence here means independent judgments under a shared instruction, not independent data acquisition or a representative sample of humans.
 - The user is the coordinator and has seen examples; their observations remain useful as separately labeled informed feedback. Codex, Claude or two subagents cannot serve as the two human readers. Actual reader names are not known to the assistant at definition time.
 
-Use exactly the existing eight pairs in [inspection-packet.json](evidence/phase1a-data-readiness-r07/inspection-packet.json), SHA-256 `88bf5d3e8bfebfecfac77549663638bbc0a8ed89e6dfd05a58136bd8a2ca7f6a`, once per reader: **16 planned pairwise judgments**. No new tasks, pairs or groups; no reopening other row contents. Preserve the released prompt and response spelling exactly. The four-pair sampling shortfall remains; do not fill it for Route H.
+Use exactly the existing eight pairs in [inspection-packet.json](../../evidence/phase1a-data-readiness-r07/inspection-packet.json), SHA-256 `88bf5d3e8bfebfecfac77549663638bbc0a8ed89e6dfd05a58136bd8a2ca7f6a`, once per reader: **16 planned pairwise judgments**. No new tasks, pairs or groups; no reopening other row contents. Preserve the released prompt and response spelling exactly. The four-pair sampling shortfall remains; do not fill it for Route H.
 
 ### What we will prepare and collect
 
@@ -391,7 +391,7 @@ One nomination/availability round; no platform procurement or extended recruitme
 
 ## Phase 2 — A usable fixed-strategy baseline tool
 
-**Status:** **2A remains complete under frozen revision 0.10; 2B is unstarted and unauthorized.** The [preparation report](PHASE2_PREPARATION_REPORT.md), [frozen study](runs/phase2-r010/frozen-study/study.json) and [closeout](evidence/phase2-r010/closeout.json) retain their historical 175 passing project tests, five upstream checks, 72 synthetic assessments/replay and $0 experiment/API spend. The separate offline policy update above implements optional-human decisions without changing those records. Before 2B, resolve live admission/billing assumptions, bind provider access and obtain applicable spending authorization; then stop for review after the first counted check. Readers are optional and do not gate benchmark completion or a benchmark seed. The closed Phase 1 grant does not carry forward. Source, sample, generation conditions, native protocol, accounting, caps and failure rules remain as defined; the prospective human/decision/completion rules below supersede 0.10 before any live observation.
+**Status:** **2A remains complete under frozen revision 0.10; 2B is unstarted and unauthorized.** The [preparation report](../../docs/phases/phase-2/PHASE2_PREPARATION_REPORT.md), [frozen study](../../runs/phase2-r010/frozen-study/study.json) and [closeout](../../evidence/phase2-r010/closeout.json) retain their historical 175 passing project tests, five upstream checks, 72 synthetic assessments/replay and $0 experiment/API spend. The separate offline policy update above implements optional-human decisions without changing those records. Before 2B, resolve live admission/billing assumptions, bind provider access and obtain applicable spending authorization; then stop for review after the first counted check. Readers are optional and do not gate benchmark completion or a benchmark seed. The closed Phase 1 grant does not carry forward. Source, sample, generation conditions, native protocol, accounting, caps and failure rules remain as defined; the prospective human/decision/completion rules below supersede 0.10 before any live observation.
 
 ### Objective and usable output
 
@@ -403,7 +403,7 @@ The comparison concerns these complete procedures, including their additional in
 
 ### Scope: tasks and three fixed conditions
 
-Use the independently obtained, cached public `data/curated.jsonl` at NoveltyBench commit `64a23be6b18ec1dacc298830aab276061b6e143c`. It is development material, potentially previously examined in legacy work, not fresh confirmation. Do not access the original Buddha2 folder to reconstruct its results. Do not open WildChat or future confirmation rows for this phase.
+Use the independently obtained, cached public `data/curated.jsonl` at NoveltyBench commit `64a23be6b18ec1dacc298830aab276061b6e143c`. It is development material, potentially previously examined in legacy work, not fresh confirmation. Do not open WildChat or future confirmation rows for this phase.
 
 Completed 2A used the source hash and inventory of eligible nonempty English text-only records, the existing alias normalization and Phase 0/Phase 1/MuCE exclusion inventory. Ascending SHA-256 over the canonical tuple `(namespace="phase2-development-v1", seed=20261025, source_task_id, normalized_prompt)` accepted one record per normalized prompt until 12. Preserve its selected IDs, exact prompts, source/context hashes and order in the policy refresh. No family quota, semantic cherry-picking, replacement or resampling after results. A source/policy incompatibility is a reported shortfall, not permission to switch source/construct silently.
 
