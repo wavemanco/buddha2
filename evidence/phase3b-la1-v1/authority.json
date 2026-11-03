@@ -1,0 +1,18 @@
+{
+  "aggregate_focused_engineering_limit_seconds": 7200,
+  "authority": "Explicit user-provided active goal in this chat",
+  "closed_prior_ledger_reopened": false,
+  "definition": "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md",
+  "definition_sha256": "55793ee3651465c43be9393a8f55276d67cba274e2d5466dbacac492cba137f6",
+  "initial_repair_limit_seconds": 1800,
+  "kind": "phase3b-la1-direct-authority-v1",
+  "minimum_closure_reserve_seconds": 1200,
+  "new_time_allowance": true,
+  "offline_API_cost_usd": 0,
+  "one_frozen_offline_campaign": true,
+  "paid_calls_authorized": false,
+  "real_keys_authorized": false,
+  "recorded_at_utc": "2026-11-03T22:01:26.296857+00:00",
+  "reply": "complete P3B-LA1",
+  "source_changes_require_new_identity": true
+}

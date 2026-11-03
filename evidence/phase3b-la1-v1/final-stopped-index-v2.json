@@ -1,0 +1,30 @@
+{
+  "I1_containers_started": 0,
+  "controller_runtime_finished": true,
+  "files_sha256": {
+    "bootstrap-hold.json": "fd0be8446946cea181ba5124fd19559f771e8ae0db3f84a7af9c783f4d9c0222",
+    "controller-coordination-hold-v1.json": "37c5f73f1609005ba3706a1c0a13aeae566377202514546f5007db947a182a96",
+    "independent-boundary-stop-raw-v1.json": "b29bbb4ce39718d232a3eeb823bb60ce87e61035d484319313db4727be32f88e",
+    "independent-stopped-outcome-v1.json": "820627fcd2af6ec87d46db12f33a50e8c30eb0c2216056916b9a684a2495be65",
+    "probe-accounting-hold-v1.json": "a44bb460be554a5e9ecccb3c45538ee8f52403d73a202569cf4eaa2baa380ac2",
+    "root-coordination-hold-v1.json": "6f98d5948bf21d2d5214cfb1fa7cdc1aa0d30b22a8e9a859bb83ad8b1a556984",
+    "stopped-dossier-index-v1.json": "3e94cb6f5309e560ee1e1aa55a9d29caee5cb81e877c36cfc158a3ebe2933177",
+    "stopped-outcome-v1.json": "dce73cb5df0db08d6102e3480068f721ae4e8ff740f7da9fc2cb2fd4128e6e61",
+    "stopped-preservation-v1.json": "1da9f70c33f71aa495aa134c6a4b884b1570330c23ce629a65a7d079f763a56a"
+  },
+  "kind": "phase3b-la1-final-stopped-index-v2",
+  "known_H1_owners_all_independently_absent": true,
+  "model_mock_calls": 0,
+  "new_billing_reservations_micro_usd": 0,
+  "next": "Parent closes documentation/publication and reports failure; any further implementation or experiment requires a concrete user decision. No automatic next run.",
+  "no_postfreeze_repair_or_repeat": true,
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "parent_navigation_report_publication_and_final_budget_accounting_pending": true,
+  "permanent_engineering_holds_seconds": 704,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T22:44:10.187079+00:00",
+  "source_files": 683,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc",
+  "status": "stopped-incomplete"
+}

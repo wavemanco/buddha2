@@ -1,0 +1,39 @@
+{
+  "candidate_files_independently_raw_hashed": 81,
+  "candidate_sha256": "9afd0264e3f90bd11632492162c15c3dc1a95fc0f1808c086ed6f217d2d25b87",
+  "created_at_utc": "2026-11-03T22:36:00.400486+00:00",
+  "execution_conditions": [
+    "Controller alone runs runtime commands. Actual boundary and cleanup must pass before main; any required failure after this accepted freeze stops the campaign without source edits/repeat/new candidate.",
+    "Use current helper ledger minus704fixedholds (or later conservatively recorded holds), record active/wait/done prospectively, perform60minute progress review, end work by100minutes with at least20minutes or larger supported closure reserve. Do not start a slice whose supervision/review/cleanup does not fit.",
+    "No keys, paid provider calls or live pilot anywhere in LA1, even after offline acceptance. Exact original protected project remains inaccessible.",
+    "Before archive/cold: all12 actual current-source groups/final gate, final independent source receipt, exact produced archive/manifest, copiedplan/script hashes and parent-reviewed actual commandbindings are required. Actual container inspection/zeroattempt report/rawbytes/absence are still unobserved."
+  ],
+  "findings": [
+    "Actual harmless Windows final probes retain7managed,4auth,2outer-status and2driver-tree cases; managed/auth/env primitiveASTs exactly match this candidate. Actual oldexecve failure mechanism remains qualified; earlier reporting/static/prototype failures remain preserved.",
+    "The current operator captures exceptional managed-child failure, retains partial bytes/trace and independently attempts generic and host-specific exact-owner fallback. Discovery errors stay failures while other known receipts continue. Three real deterministic fault tests exercise these paths with command mocks; they are not real-container evidence.",
+    "Successful create or inspected-launcher receipts bind exact full IDs and known study/input paths; no owner enumeration or arbitrary name cleanup. SpecificNoSuchObject is required, and emergency cleanup never turns failure into success.",
+    "Current strict wire constants and six sites, separately sealed generation-free boundary-only study, real first/closure producer-to-I1-to-core handshakes and declared negatives remain required before the one full matrix. No positive ACK/success return is patched.",
+    "Separate main21600 and guarded saved replay7200 commands preserve original inner native/HTTP/startup/review/export clocks. Actual one S13 actor must be running and consume genuine startup/review/export barriers; static planning cannot substitute.",
+    "Main/replay use real native Harness2 and fixed12 scientific controls, typed-deny saved workflow.run/snapshot/write_report and eight identical reports. All twelve current-source groups, source/history preservation and independent physical/extracted packet acceptance remain mandatory.",
+    "C2before-edit preservation receipt identifies644ordinary copies plus14canonical originals and zeroauxiliary streams, source658ea2e. Full independent preservation audit remains a final acceptance requirement.",
+    "Parent-reviewed physical/cold plan41f36f24 and36275f3d must be copied byte-exact into currentverification before main/replay inventory. Freeze actual source/study/count command bindings later; unchangedd685 coldworker/extractedonly wrapper retain canonical14 authentication before metadata/CRC and only revieweroutput writable."
+  ],
+  "kind": "phase3b-la1-independent-prospective-acceptance-v4",
+  "kit_accepted": false,
+  "limitations": "Bounded independent review rehashed81 ordinary candidate files and the683-entry source-map seal, not every683current source file or historical corpus. Operator must verify full effective source identity before every phase; final acceptance must independently verify actual preserved inputs and artifacts. No runtime/probe/cold execution by reviewer.",
+  "packet_accepted": false,
+  "paid_calls_authorized": false,
+  "passed": true,
+  "primitive_AST_hashes_independently_match_actual_Windows_probes": {
+    "authenticate_candidate": "4c1f72fa0be923f6be3a5365eab20fac22603d08f8a2bfcac7cbd1dc48207660",
+    "clean_environment": "e8000bb4b1a37a37264730aa22b9e1c03aa1b73647dc21ac37e3d3a1a7094287",
+    "run_child": "10c11cf2cfedc65d9673c40f5c2bd223c6792b212dc28c2c77ef51b11063bce8"
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "scientific_complete": false,
+  "scope": "Exact prospective source/command/case review before first frozen LA1 campaign; not source/gate/kit/packet/scientific acceptance.",
+  "source_accepted": false,
+  "source_files": 683,
+  "source_map_seal_independently_recomputed": true,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc"
+}

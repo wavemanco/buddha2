@@ -11,7 +11,7 @@ from pathlib import Path
 from followups.phase3b_seq2_v1 import verify
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "runs/phase3b-seq2-v1/verification-v3"
+OUT = ROOT / "runs/phase3b-seq2-v1/verification-v4"
 
 
 def encoded(value):
@@ -20,13 +20,17 @@ def encoded(value):
 
 def main() -> int:
     parser = argparse.ArgumentParser(__doc__)
-    parser.add_argument("phase", choices=("main", "replay"))
+    parser.add_argument("phase", choices=("main", "replay", "supervised", "seal"))
     phase = parser.parse_args().phase
-    target = "/results/phase3b-seq2-v1/verification-v3"
-    args = verify.container_args(OUT, mode="inside")
+    output = OUT / "operational-rehearsal" if phase == "supervised" else OUT
+    if phase == "supervised":
+        output.mkdir()
+    target = "/results/" + output.relative_to(ROOT / "runs").as_posix()
+    args = verify.container_args(output, mode=phase if phase in ("supervised", "seal") else "inside")
     args[2:2] = ["--log-driver", "none"]
-    args[args.index(verify.IMAGE) + 1:] = ["-B", "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
-                                        "--phase", phase, "--output", target]
+    if phase in ("main", "replay"):
+        args[args.index(verify.IMAGE) + 1:] = ["-B", "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+                                            "--phase", phase, "--output", target]
     owner, passed = None, False
     prefix = "c2-" + phase
 
@@ -54,7 +58,7 @@ def main() -> int:
                 or mounts != verify.expected_mounts(OUT) or host["Privileged"]
                 or host["Memory"] != 4294967296 or host["NanoCpus"] != 2000000000 or host["PidsLimit"] != 256
                 or host["CapDrop"] != ["ALL"] or host["SecurityOpt"] not in (["no-new-privileges"], ["no-new-privileges:true"])
-                or host["Tmpfs"] != {"/tmp": "rw,nosuid,nodev,size=1073741824,mode=1777"}
+                or host["Tmpfs"] != {"/tmp": "rw,nosuid,nodev,size=1073741824,mode=1777"}  # nosec B108
                 or host["LogConfig"]["Type"] != "none" or actual["State"]["Running"]):
             raise ValueError("actual C2 containment differs")
         verify.save(OUT / (prefix + "-inspection.json"), {"owner": owner, "passed": True,
@@ -70,7 +74,7 @@ def main() -> int:
                     "partial_output_base64": encoded(getattr(exc, "stdout", None)),
                     "partial_error_base64": encoded(getattr(exc, "stderr", None))})
     finally:
-        cleanup = {"passed": False, "owner": owner}
+        cleanup: dict = {"passed": False, "owner": owner}
         if owner:
             terminal = execute(["docker", "inspect", "--format", "{{json .State.Running}}", owner], 15)
             cleanup["terminal"] = terminal

@@ -1,0 +1,13 @@
+{
+  "admitted_at_utc": "2026-11-03T22:36:26.100416+00:00",
+  "candidate_sha256": "9afd0264e3f90bd11632492162c15c3dc1a95fc0f1808c086ed6f217d2d25b87",
+  "kind": "phase3b-la1-frozen-campaign-admission-v1",
+  "one_campaign": true,
+  "packet_plan_copied_before_main_replay_inventory": true,
+  "provider_calls": 0,
+  "real_keys": false,
+  "review_sha256": "99848b8d6ea64168ec2e61e9471b4fba9a3d8c84e48689c285df116a7b429c00",
+  "source_files": 683,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc",
+  "verification_root_absent_before_admission": true
+}

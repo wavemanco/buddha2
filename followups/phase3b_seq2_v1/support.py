@@ -156,6 +156,31 @@ SOURCE_INPUTS = (
     "evidence/phase3b-seq2-c2-v1/run_boundary.py",
     "evidence/phase3b-seq2-c2-v1/run_composed.py",
     "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md",
+    "evidence/phase3b-la1-v1/authority.json",
+    "evidence/phase3b-la1-v1/effort.py",
+    "evidence/phase3b-la1-v1/launcher_probe.py",
+    "evidence/phase3b-la1-v1/probe_tree.py",
+    "evidence/phase3b-la1-v1/probe-final-v2/final-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v2/managed/process-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v2/outer/outer-status-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v2/tree/tree-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v3/final-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v3/managed/process-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v3/outer/outer-status-result.json",
+    "evidence/phase3b-la1-v1/probe-final-v3/tree/tree-result.json",
+    "evidence/phase3b-la1-v1/campaign-cases.json",
+    "evidence/phase3b-la1-v1/campaign-cases-v2.json",
+    "evidence/phase3b-la1-v1/test_launcher_cleanup.py",
+    "evidence/phase3b-la1-v1/cleanup-fault-result-v1.json",
+    "evidence/phase3b-la1-v1/cleanup-fault-result-v2.json",
+    "evidence/phase3b-la1-v1/sanitized-cli-readiness-v1.json",
+    "runs/phase3b-la1-v1/packet-plan-v1/plan.json",
+    "runs/phase3b-la1-v1/packet-plan-v1/parent-plan-review-v1.json",
+    "evidence/phase3b-la1-v1/host_acceptance.py",
+    "evidence/phase3b-la1-v1/launcher-probe-milestone-v1.json",
+    "evidence/phase3b-la1-v1/initial-repair-independent-review-v1.json",
+    "evidence/phase3b-la1-v1/prior-source-c2/preservation-receipt.json",
     "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/saved_only_worker_v2.py",
     "PHASE3A_RP2_LIVE_REPORT.md",
     "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.json",
@@ -252,6 +277,19 @@ def source_snapshot_policy(files: dict) -> dict:
 
 
 def source_identity() -> dict:
+    la1_definition = "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md"
+    la1 = read(ROOT / "evidence/phase3b-la1-v1/authority.json")
+    require(la1.get("definition") == la1_definition
+        and la1.get("definition_sha256") == file_hash(ROOT / la1_definition)
+        and la1.get("reply") == "complete P3B-LA1"
+        and la1.get("aggregate_focused_engineering_limit_seconds") == 7200
+        and la1.get("initial_repair_limit_seconds") == 1800
+        and la1.get("minimum_closure_reserve_seconds") == 1200
+        and la1.get("one_frozen_offline_campaign") is True
+        and la1.get("closed_prior_ledger_reopened") is False
+        and la1.get("offline_API_cost_usd") == 0
+        and la1.get("paid_calls_authorized") is False
+        and la1.get("real_keys_authorized") is False, "LA1 offline execution authority differs")
     amendment = "specifications/amendments/phase3b-export-contract-correction-1.0.md"
     authority = read(ROOT / "evidence/phase3b-seq2-c2-v1/authority.json")
     require(authority.get("kind") == "phase3b-s2-c2-direct-authority-v1"

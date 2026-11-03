@@ -1,0 +1,35 @@
+{
+  "actual_auth_negative_cases": 4,
+  "actual_managed_cases": 7,
+  "actual_outer_status_cases": 2,
+  "created_at_utc": "2026-11-03T22:16:15.033900+00:00",
+  "findings": [
+    "The exact authenticated helper AST argument literal equals actual received childJSON after explicitUTF8 receipt decoding. Spaces, quotes, trailing backslash, Unicode and counts are unchanged. Actual child and standalone outer exits0/7 agree.",
+    "Missing executable/script and synthetic-sentinel exclusion explicitly pass. Timeout124 and cancellation130 settle exact child PIDs, with probe-independent GetExitCodeProcess or specific absence87 evidence.",
+    "Four actual file-authentication negative fixtures reject before any child. Harmless probes show zero project workflows, Docker or provider work.",
+    "Legacy os.execve probes access-violate0xC0000005 without childJSON; the historical split mechanism remains unproven.",
+    "The first cp1252 console reporting failure remains preserved. Fresh ASCII-reporting v3 and standalone outer-status receipts pass. No earlier failure is retagged."
+  ],
+  "helper_sha256": "deb3b526ad7d872a3d859ff50ed4642cf6ed723810ad66bbcffac1817cae2e14",
+  "kind": "phase3b-la1-independent-initial-repair-review-v1",
+  "kit_accepted": false,
+  "milestone_sha256": "83f16ba0445bcd0c0a21017927216349f3596678bf37e034bd46fc16f6105561",
+  "next": "Freeze and independently review one source/command candidate, including managed-driver timeout cleanup, before actual boundary and conditional full offline campaign.",
+  "passed": true,
+  "references": {
+    "launcher_probe.py": "deb3b526ad7d872a3d859ff50ed4642cf6ed723810ad66bbcffac1817cae2e14",
+    "probe-accounting-hold-v1.json": "a44bb460be554a5e9ecccb3c45538ee8f52403d73a202569cf4eaa2baa380ac2",
+    "probe-execve-minimal-v1/execve-minimal-result.json": "77c6ffe8d8ff0a009a9b5d8239f569f41044a3b99f21ce27c6d83934c67c82db",
+    "probe-outer-status-v2/outer-status-result.json": "6f42ba20e3e672a105168d4b21469508ab3950d94234d27fe370883c1fb387b0",
+    "probe-results-v1/reporting-failure.json": "20b67e4f34d27f5bd3bb9dd66a92fa95c91c60bb8b2f276dc504fc288571d2f2",
+    "probe-results-v3/process-result.json": "63e683955d5be1d5f18d004b5bf49ea5b8afdb70ed284b73740aa7a4182b9ce0"
+  },
+  "review_limitations": "Bounded peer inspection and rawhash verification only. No repeated probes or broad source/history census.",
+  "reviewer": "/root/s2_a1_source_review",
+  "reviewer_only_correction": "Two read-only argument assertions used Windows defaultcp1252 for UTF8 JSON and failed; no receipt or test was produced. ExplicitUTF8 decoding now confirms exact source literal equality. No runtime probe repeated.",
+  "runtime_campaign_accepted": false,
+  "scientific_complete": false,
+  "scope": "Actual harmless Windows initial-repair milestone only; no integrated campaign/source/kit/scientific acceptance.",
+  "source_accepted": false,
+  "tested_launcher_sha256": "39128339e0f83880448a84cb0956356d53bd0e69b6c756479c24586ef9b1ed22"
+}

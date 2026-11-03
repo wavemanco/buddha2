@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). The [P3B-LA1 definition](phases/phase-3b/PHASE3B_LAUNCHER_OFFLINE_ACCEPTANCE_DEFINITION.md) now describes one launcher-repair and complete offline-acceptance block. It is defined for review; implementation and execution are unstarted and require a subsequent instruction. The proposed two-hour aggregate effort bound includes a 30-minute initial repair limit and at least20 minutes for closure. The API cap is $0: no keys or paid pilot, even if offline acceptance succeeds. C2 remains closed stopped and unaccepted, with its prior effort ledger closed.
+Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [P3B-LA1 stopped incomplete](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md): launcher repair and focused Windows/contract checks passed, but the empty fixture failed the real snapshot prerequisite before any request or I1 export. All twelve-group/packet/cold acceptance obligations remain unachieved, with no model mock, real provider call or key. Exact owners are stopped. No post-freeze fix or retry is authorized automatically; further work needs a concrete continuation decision.
 
 ## Research and specifications
 
@@ -107,6 +107,7 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
+- [LA1 repaired launcher and required-boundary stop](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md)
 - [LA1 launcher repair and offline acceptance: defined, unstarted](phases/phase-3b/PHASE3B_LAUNCHER_OFFLINE_ACCEPTANCE_DEFINITION.md)
 - [C2 implemented correction and setup stop](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_STOP_REPORT.md)
 - [Stopped offline preparation](phases/phase-3b/PHASE3B_OFFLINE_STOP_REPORT.md)

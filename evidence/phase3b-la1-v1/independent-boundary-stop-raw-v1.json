@@ -1,0 +1,49 @@
+{
+  "actual_host_negative_cases_passed": 16,
+  "all12_groups_absent": true,
+  "boundary_study_sha256": "6d5173203dfd7a7a13701197246ecede941fc799483dfeb1ec64a5aefab3d34b",
+  "candidate_files_rawverified": 81,
+  "candidate_sha256": "9afd0264e3f90bd11632492162c15c3dc1a95fc0f1808c086ed6f217d2d25b87",
+  "first_snapshot_failed_before_request": true,
+  "host_negative_command_attempts": 0,
+  "kind": "phase3b-la1-independent-boundary-stop-raw-v1",
+  "known_H1_owners_independently_absent": [
+    {
+      "error": "error: no such object: 7fab7b984f7add7e5b570eda602a796d1c95112bebd6481f3072bac4dd641e5d\n",
+      "exit_code": 1,
+      "owner": "7fab7b984f7add7e5b570eda602a796d1c95112bebd6481f3072bac4dd641e5d"
+    },
+    {
+      "error": "error: no such object: a122c05c16d25858da193b8257b00e5b0e45e3b9b26ee3406376403efdb8c1eb\n",
+      "exit_code": 1,
+      "owner": "a122c05c16d25858da193b8257b00e5b0e45e3b9b26ee3406376403efdb8c1eb"
+    },
+    {
+      "error": "error: no such object: d77cfaaf8e81d7764d3649ee0f1518d9a0241cb325a47d033e9e6162193f59c0\n",
+      "exit_code": 1,
+      "owner": "d77cfaaf8e81d7764d3649ee0f1518d9a0241cb325a47d033e9e6162193f59c0"
+    }
+  ],
+  "new_journal_absent": true,
+  "new_main_release_absent": true,
+  "observed_at_utc": "2026-11-03T22:42:14.096700+00:00",
+  "ordinary_negatives_passed": true,
+  "passed_stop_checks": true,
+  "primary_cause_evidence": "Source trace requires first_assessments_closed and engineering_review at snapshot.py263-265; actual empty fixture has false/null. Exact caught projection exception is absent from retained status, so diagnosis is source-based, not directly logged.",
+  "references": {
+    "boundary-contract/cleanup.json": "34c192804e39543ea1d203101ab493cf6b18bed2067ef419e37866e3fa7785e9",
+    "boundary-contract/core-execution.json": "50b396044473f69b930840e702e875dc60ae5790bcb165d9474ff6e79fec49c1",
+    "boundary-contract/exporter-cleanup.json": "1924afaa457ed3684a8ccb75a50ec4c1c1f74a4b090f81a4da2a36db24925ad7",
+    "boundary-contract/failure.json": "60b74c9603b8547ece0d671b3e6b043f9056bbacaa747eb2d9818e1de8a54a9e",
+    "boundary-contract/fixture/prepared.json": "1c0b25a1114fde2635bd0ba488cd10a92f08944844c50dbe54556548924ae9e1",
+    "boundary-contract/negative-host/negative-result.json": "24425c0f2dd9ccb62607f799ae11999eb843fabd721dbd2749da704adbb848ba",
+    "boundary-contract/negative-tests-execution.json": "5d9bba9660ccb28378cc0b2a2f93a113e1c0a5a8787c8b30e82909ea7d8cec38",
+    "boundary-contract/result.json": "5b05a13e10d501da3e8a1994b350c2371f134a51f8819f7035b27f774d5e8fea",
+    "operator-boundary.json": "3b9f9f8d6ab276f2aced9e4d3051287ae692f6e8d5c7c6d24819d1831267033e",
+    "runs/phase3b-seq2-v1/native/6d5173203dfd7a7a13701197246ecede941fc799483dfeb1ec64a5aefab3d34b/mock/visibility/first-pair/status.json": "4ff1a75216b76b79b8b47a2c07056d4dcaa0cba452b8c4988042a5e6ce397b82"
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_rerun_or_fix": false,
+  "source_kit_packet_science_accepted": false,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc"
+}

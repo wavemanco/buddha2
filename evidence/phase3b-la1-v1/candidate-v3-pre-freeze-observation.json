@@ -1,0 +1,6 @@
+{
+  "candidate_accepted": false,
+  "preserved_candidate_v3_sha256": "40540cc9be55c7274d0bd6957f66e2abd5f19a71949887e844acfd7ee4b9f84d",
+  "reason": "Independent prospective review required retaining exceptional run_child outcomes and always attempting receipt cleanup; malformed discovery records must not skip other known owners. Corrected and all3 counted command-stub fault tests passed, unchanged tested managed primitive ASTs. No campaign attempt occurred.",
+  "runtime_started": false
+}

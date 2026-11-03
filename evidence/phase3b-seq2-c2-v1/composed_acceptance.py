@@ -6,6 +6,7 @@ import importlib.util
 import os
 import stat
 from pathlib import Path
+from typing import Any
 
 from buddha2.artifacts import file_hash
 from followups.phase3b_seq2_v1 import verify, workflow
@@ -59,7 +60,7 @@ def saved_replay(output: Path) -> int:
     module_spec = importlib.util.spec_from_file_location("c2_reviewed_saved_worker", SAVED_WORKER)
     if module_spec is None or module_spec.loader is None:
         raise ValueError("saved worker cannot load")
-    worker = importlib.util.module_from_spec(module_spec)
+    worker: Any = importlib.util.module_from_spec(module_spec)
     module_spec.loader.exec_module(worker)
     # Bind the immutable algorithm to this fresh identity and destination. Its
     # original source/history, physical journal, report and fail-before-call
@@ -98,7 +99,7 @@ def main() -> int:
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     output = verify.output_path(args.output, existing=True)
-    require(output.name == "verification-v3", "C2 requires its fresh verification root")
+    require(output.name == "verification-v4", "C2 requires its fresh verification root")
     if args.phase == "replay":
         return saved_replay(output)
     require(not (output / "source-before.json").exists(), "main acceptance already attempted")

@@ -1,0 +1,60 @@
+{
+  "actual_checks_so_far": "Seven managed, four auth, two outer statuses, two exact driver-tree cases, three exceptional cleanup faults passed; sanitized read-only Docker/H1/I1 available; hostRuff/Mypy/Bandit passed. These are prefreeze checks, not kit acceptance.",
+  "campaign_attempts_started": 0,
+  "capacity_decision": "Continue only while the actual remaining meter supports the next bounded slice plus at least1200 closure. Estimates are planning bounds, not guaranteed completion. Automated runtime waits may last hours; no clocks extend and no paid transition.",
+  "effective_remaining_seconds": 3576.28709,
+  "effective_used_seconds": 3623.71291,
+  "estimate_total_seconds": 3100,
+  "implementation": "Managed launch/auth/env, actual driver-tree cancellation, per-record exact owner emergency cleanup, v4 composed commands and LA1 source authority binding complete. Final source683/b461433c...; candidate-v4 independently under review.",
+  "initial_repair": "Independentlypassed at1768.43<1800 effective seconds; qualified legacy AV, all earlier failures retained.",
+  "kind": "phase3b-la1-one-hour-progress-review-v1",
+  "meter": {
+    "active_seconds": 2919.71291,
+    "actors": [
+      {
+        "active_seconds": 1400.101101,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 29
+      },
+      {
+        "active_seconds": 367.618593,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 26
+      },
+      {
+        "active_seconds": 368.940759,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 13
+      },
+      {
+        "active_seconds": 783.052457,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 38
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-03T22:35:03.682184+00:00",
+    "remaining_seconds": 4280.28709,
+    "within_limit": true
+  },
+  "next": "After prospective review, one real two-point generation-free H1/I1 boundary, then one main/replay/Windows/fullfreshS13/all12 acceptance and physical extractedcold. Any required failure stops.",
+  "observed_at_utc": "2026-11-03T22:35:03.683600+00:00",
+  "permanent_holds_seconds": 704,
+  "provider_calls": 0,
+  "real_keys": false,
+  "remaining_focused_seconds_estimate": {
+    "freshS13_supervision_host_checks": 550,
+    "independent_source_gate_physical_cold_checks": 850,
+    "main_replay_windows_launch_and_review": 250,
+    "prospective_review_and_boundary_admission": 250,
+    "protected_cleanup_reporting_publication": 1200
+  }
+}

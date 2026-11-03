@@ -1,0 +1,32 @@
+{
+  "case": "cancellation",
+  "owners": {
+    "driver_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 20696,
+      "verified": true
+    },
+    "grandchild_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 41524,
+      "verified": true
+    }
+  },
+  "passed": true,
+  "result": {
+    "cancelled": true,
+    "child_returncode": 1,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 130,
+    "output": "{\"driver_pid\": 20696, \"grandchild_pid\": 41524}\r\n",
+    "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogMjA2OTYsICJncmFuZGNoaWxkX3BpZCI6IDQxNTI0fQ0K",
+    "pid": 20696,
+    "settled": true,
+    "started": true,
+    "timed_out": false,
+    "tree_stop_exit_code": 0
+  }
+}

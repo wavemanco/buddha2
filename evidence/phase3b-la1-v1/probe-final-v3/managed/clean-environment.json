@@ -1,0 +1,21 @@
+{
+  "case": "clean-environment",
+  "owned_child": {
+    "classification": "absent",
+    "error": 87,
+    "verified": true
+  },
+  "result": {
+    "cancelled": false,
+    "child_returncode": 0,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 0,
+    "output": "{\"argv\": [\"env\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+    "output_bytes_base64": "eyJhcmd2IjogWyJlbnYiXSwgImZvcmJpZGRlbl9zZW50aW5lbF9wcmVzZW50IjogZmFsc2UsICJyZXF1aXJlZF9lbnYiOiB7IlNZU1RFTVJPT1QiOiB0cnVlLCAiV0lORElSIjogdHJ1ZSwgIlBBVEgiOiB0cnVlfX0NCg==",
+    "pid": 9516,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  }
+}

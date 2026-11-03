@@ -1,0 +1,64 @@
+{
+  "all27_dossier_references_independently_raw_hashed": true,
+  "boundary_study_sha256": "6d5173203dfd7a7a13701197246ecede941fc799483dfeb1ec64a5aefab3d34b",
+  "findings": [
+    "Windows launcher repair and actual primitive/tree/status/auth checks passed. The first frozen real boundary then failed and correctly stopped the whole campaign; no automatic correction or repeat occurred.",
+    "Primary source-based diagnosis: an empty first-pair fixture has first_assessments_closed=false and engineering_review=null, while the strict snapshot precondition requires completed assessment classification and review. Snapshot therefore never became prepared. The exact caught projection exception is absent from saved status; the subsequent missingrequest ContractError is secondary, not the primary diagnosis.",
+    "Canonical/report status is complete, honest attempts0/missingness reports were published and worker stopped; this does not establish snapshot/Inspect handshake completion. No first request, actual I1 export, closure handshake, main journal or main release exists.",
+    "Three pure contract tests and16 actual host negatives passed before the failure, with zero hostnegative Docker attempts. They do not replace any of the twelve required current-source acceptance groups, all of which remain absent.",
+    "Driver and operator exact-owner cleanup both pass; the reviewer independently queried all three known H1 IDs and observed specificNoSuchObject. No I1 create path was reached in this boundary. No global process/account audit is claimed.",
+    "Current candidate81 ordinary files remain rawhash-identical. Existing source_identity/preserve stopped evidence reports all683 source and closed history unchanged,14 canonical originals and zero retained stream copies. This bounded review did not repeat broad fullsource/history hashing.",
+    "No model/mock generation, provider call, new key, new liability or scientific result was produced. Earlier failures, original-source evidence, ledgers and holds remain retained. Final root/publication effort accounting is separately pending."
+  ],
+  "fix_retry_or_new_experiment_by_reviewer": false,
+  "independent_known_owners_absent": [
+    {
+      "error": "error: no such object: 7fab7b984f7add7e5b570eda602a796d1c95112bebd6481f3072bac4dd641e5d\n",
+      "exit_code": 1,
+      "owner": "7fab7b984f7add7e5b570eda602a796d1c95112bebd6481f3072bac4dd641e5d"
+    },
+    {
+      "error": "error: no such object: a122c05c16d25858da193b8257b00e5b0e45e3b9b26ee3406376403efdb8c1eb\n",
+      "exit_code": 1,
+      "owner": "a122c05c16d25858da193b8257b00e5b0e45e3b9b26ee3406376403efdb8c1eb"
+    },
+    {
+      "error": "error: no such object: d77cfaaf8e81d7764d3649ee0f1518d9a0241cb325a47d033e9e6162193f59c0\n",
+      "exit_code": 1,
+      "owner": "d77cfaaf8e81d7764d3649ee0f1518d9a0241cb325a47d033e9e6162193f59c0"
+    }
+  ],
+  "kind": "phase3b-la1-independent-stopped-outcome-v1",
+  "kit_accepted": false,
+  "next": "Close and publish the honest stopped outcome; a later concrete continuation decision is required before changing the fixture/projection compatibility or starting another frozen campaign.",
+  "objective_achieved": false,
+  "observed_at_utc": "2026-11-03T22:43:37.028384+00:00",
+  "packet_accepted": false,
+  "physical_or_extracted_replay_executed": false,
+  "references": {
+    "independent-boundary-stop-raw-v1.json": {
+      "path": "evidence/phase3b-la1-v1/independent-boundary-stop-raw-v1.json",
+      "sha256": "b29bbb4ce39718d232a3eeb823bb60ce87e61035d484319313db4727be32f88e"
+    },
+    "stopped-dossier-index-v1.json": {
+      "path": "evidence/phase3b-la1-v1/stopped-dossier-index-v1.json",
+      "sha256": "3e94cb6f5309e560ee1e1aa55a9d29caee5cb81e877c36cfc158a3ebe2933177"
+    },
+    "stopped-outcome-v1.json": {
+      "path": "evidence/phase3b-la1-v1/stopped-outcome-v1.json",
+      "sha256": "dce73cb5df0db08d6102e3480068f721ae4e8ff740f7da9fc2cb2fd4128e6e61"
+    },
+    "stopped-preservation-v1.json": {
+      "path": "evidence/phase3b-la1-v1/stopped-preservation-v1.json",
+      "sha256": "1da9f70c33f71aa495aa134c6a4b884b1570330c23ce629a65a7d079f763a56a"
+    }
+  },
+  "review_scope": "Stopped-outcome and named-evidence review only. The supported failure dossier is not successful LA1 kit completion or permission to continue.",
+  "reviewer": "/root/s2_a1_source_review",
+  "scientific_complete": false,
+  "source_accepted": false,
+  "source_files": 683,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc",
+  "status": "stopped-incomplete",
+  "stopped_outcome_classification_supported": true
+}

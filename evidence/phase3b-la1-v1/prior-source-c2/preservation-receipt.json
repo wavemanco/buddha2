@@ -1,0 +1,10 @@
+{
+  "auxiliary_stream_copies": 0,
+  "canonical_originals": 14,
+  "history_sha256": "08ac928f0a9570e8eb3b8f15cad5ae99ef014f6e498fc63e467cec942b3a62f9",
+  "history_unchanged": true,
+  "ordinary_copies": 644,
+  "source_files": 658,
+  "source_sha256": "ea2e2ad1d1f8e40ce8e0bf2284feb78b84619b998c5ff2485aaf727f311b751a",
+  "source_unchanged": true
+}

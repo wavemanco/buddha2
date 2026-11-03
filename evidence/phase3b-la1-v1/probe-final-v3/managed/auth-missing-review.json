@@ -1,0 +1,5 @@
+{
+  "case": "auth-missing-review",
+  "child_attempts": 0,
+  "expected_rejection": "FileNotFoundError"
+}

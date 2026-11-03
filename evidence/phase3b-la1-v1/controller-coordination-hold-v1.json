@@ -1,0 +1,10 @@
+{
+  "end_at_utc": "2026-11-03T22:29:44.254527+00:00",
+  "kind": "phase3b-la1-conservative-controller-hold-v1",
+  "ledger_reset": false,
+  "prior_fixed_holds_seconds": 651,
+  "reason": "Whole bounded WAIT interval includes automated source/static runtime plus brief review handoff coordination without a timely ACTIVE transition. Entire interval retained conservatively; no precise-focus or free coordination claim.",
+  "reserved_seconds": 53,
+  "start_at_utc": "2026-11-03T22:28:51.649625+00:00",
+  "total_fixed_holds_seconds": 704
+}

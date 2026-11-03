@@ -1,0 +1,32 @@
+{
+  "case": "timeout",
+  "owners": {
+    "driver_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 57452,
+      "verified": true
+    },
+    "grandchild_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 64592,
+      "verified": true
+    }
+  },
+  "passed": true,
+  "result": {
+    "cancelled": false,
+    "child_returncode": 1,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 124,
+    "output": "{\"driver_pid\": 57452, \"grandchild_pid\": 64592}\r\n",
+    "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogNTc0NTIsICJncmFuZGNoaWxkX3BpZCI6IDY0NTkyfQ0K",
+    "pid": 57452,
+    "settled": true,
+    "started": true,
+    "timed_out": true,
+    "tree_stop_exit_code": 0
+  }
+}

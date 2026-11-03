@@ -1,0 +1,78 @@
+{
+  "created_at_utc": "2026-11-03T22:25:21.547174+00:00",
+  "definition": "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md",
+  "effort": {
+    "fixed_holds": 651,
+    "initial_repair_pass_effective_seconds": 1768.43,
+    "limit": 7200,
+    "minimum_closure_reserve": 1200,
+    "progress_review_effective_seconds": 3600,
+    "work_portion_latest": 6000
+  },
+  "forced_stop": "Managed exact live driver tree is stopped by tested taskkill /PID /T /F; exact receipt-proven H1/I1 owners independently inspected/stopped/removed and NoSuchObject required. Cleanup exceptions preserve childresult and fail. Emergency cleanup never success.",
+  "initial_repair_independent_review_sha256": "cf98dbd63a73f494c2bd16756202b9e66c6582e36bf5e56af623709e80dc6afd",
+  "inner_clocks": {
+    "HTTP": 240,
+    "export": 600,
+    "main": 21600,
+    "native_conversation": 600,
+    "original_mock_lifecycle": 10800,
+    "replay": 7200,
+    "review": 600,
+    "seal": 7200,
+    "startup": 1800,
+    "supervised_prepare": 7200
+  },
+  "kind": "phase3b-la1-frozen-campaign-cases-v1",
+  "one_frozen_campaign": true,
+  "operator_timeout_seconds": {
+    "boundary": 4800,
+    "host": 86400,
+    "main": 22200,
+    "replay": 7800,
+    "seal": 7800,
+    "supervised": 7800,
+    "windows": 7800
+  },
+  "order": [
+    "authenticated actual Windows operator",
+    "generation-free real first/closure boundary + pure negatives +16 actual host negatives",
+    "one complete main matrix/static/Linux suite/capacity/semantics/preservation",
+    "actual typed-deny saved workflow.run and8report byte identity",
+    "actual Windows-only tests",
+    "fresh contained supervised prepare",
+    "fresh actually-running keyless S13 and actual host/launcher/Inspect/native-fixture/regression checks",
+    "contained seal of all12 groups",
+    "independent source/gate review",
+    "physical ZIP CRC/inventory/hash review",
+    "one extracted-only guarded cold replay and exact cleanup",
+    "offline closure and publication; stop"
+  ],
+  "outer_clock_basis": "Operator bounds exceed the existing finite per-phase driver operations/cleanup; every shorter native/HTTP/review/export timer is unchanged. Boundary has separate120/120/600/1800 phase clocks, not an invented1800 overall ceiling.",
+  "output": "runs/phase3b-seq2-v1/verification-v4",
+  "paid_calls": 0,
+  "preserve": "All old C2/0b/A1/R1/failed S13/source/proofs and closed ledgers/holds retained. Fresh source/study required; old passes not retagged.",
+  "privacy": "Lexical private/cache/stdout/stderr exclusions before metadata; only exact14 receipt-authenticated canonical originals, zero auxiliary copies.",
+  "real_keys": false,
+  "required_groups": [
+    "static",
+    "matrix",
+    "replay",
+    "tests",
+    "windows-tests",
+    "launcher",
+    "inspect",
+    "preservation",
+    "regression",
+    "native-fixtures",
+    "semantics",
+    "supervision"
+  ],
+  "science_models_providers_prompts_arms_tasks_caps_unchanged": true,
+  "stops": [
+    "any required postfreeze failure",
+    "source/history/privacy/ownership/deadline/accounting uncertainty",
+    "effort or closure reserve insufficient",
+    "user pause"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_accepted": false,
+  "preserved_candidate_v2_sha256": "767966d313df0b6846c7aee86e542199717409817d46aa78e5eb0a09b2e58fb6",
+  "reason": "Final prefreeze Bandit check still rejected multiline annotation. Same exact-owned argument list named before single-line Popen call, comment accepted by actual scanner; no control/criteria change or runtime repetition.",
+  "runtime_started": false
+}

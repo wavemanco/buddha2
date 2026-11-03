@@ -1,0 +1,89 @@
+{
+  "commands": [
+    [
+      "docker",
+      "version",
+      "--format",
+      "{{.Server.Version}}"
+    ],
+    [
+      "docker",
+      "image",
+      "inspect",
+      "--format",
+      "{{.Id}} {{.Os}} {{.Architecture}}",
+      "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800"
+    ],
+    [
+      "docker",
+      "image",
+      "inspect",
+      "--format",
+      "{{.Id}} {{.Os}} {{.Architecture}}",
+      "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d"
+    ]
+  ],
+  "container_starts": 0,
+  "environment_names": [
+    "BUDDHA2_OUTPUT_ROOT",
+    "COMSPEC",
+    "PATH",
+    "PATHEXT",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "PYTHONNOUSERSITE",
+    "PYTHONPATH",
+    "PYTHONUTF8",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "interpreter": "C:\\Program Files\\Python313\\python.exe",
+  "kind": "phase3b-la1-sanitized-readonly-cli-probe-v1",
+  "operator_sha256": "d09186a6a946d7277c0e8f84cc99cb1a44dc698955f40c405dafc932cecd23ce",
+  "passed": true,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T22:27:22.340652+00:00",
+  "results": [
+    {
+      "cancelled": false,
+      "child_returncode": 0,
+      "error": "",
+      "error_bytes_base64": "",
+      "exit_code": 0,
+      "output": "29.5.3\n",
+      "output_bytes_base64": "MjkuNS4zCg==",
+      "pid": 50464,
+      "settled": true,
+      "started": true,
+      "timed_out": false
+    },
+    {
+      "cancelled": false,
+      "child_returncode": 0,
+      "error": "",
+      "error_bytes_base64": "",
+      "exit_code": 0,
+      "output": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800 linux amd64\n",
+      "output_bytes_base64": "c2hhMjU2OmNlMWQ0YWIyMjQxY2U5ZDE0MWE1NDQ3YzNkYTE1ZmI0NGY2MmU1MjFjM2UyYmJlNDliNzQ2MTFmZjM2ZTM4MDAgbGludXggYW1kNjQK",
+      "pid": 52296,
+      "settled": true,
+      "started": true,
+      "timed_out": false
+    },
+    {
+      "cancelled": false,
+      "child_returncode": 0,
+      "error": "",
+      "error_bytes_base64": "",
+      "exit_code": 0,
+      "output": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d linux amd64\n",
+      "output_bytes_base64": "c2hhMjU2OjI1YjA3ZTUxZWY5YWU5NDhlN2YzZGU1MzE0YjkxYjFlYzRjMTIwMjE5Y2VlYmZkZTRiNDA2NDUyNWM0MGEwM2QgbGludXggYW1kNjQK",
+      "pid": 80360,
+      "settled": true,
+      "started": true,
+      "timed_out": false
+    }
+  ]
+}

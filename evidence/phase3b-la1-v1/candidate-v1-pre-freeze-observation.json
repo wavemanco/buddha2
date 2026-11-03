@@ -1,0 +1,6 @@
+{
+  "candidate_accepted": false,
+  "preserved_candidate_v1_sha256": "88659458f2ee0ed304324c37b08c7fd2eec384241e1fb1266b30b9a272b1e18c",
+  "reason": "Prefreeze static checks found Bandit suppression placement on multiline exact-owned Docker call; v2 fixes comment only, binds sanitized read-only CLI proof, and changes operator candidate/review filename literals. No campaign command repeated.",
+  "runtime_started": false
+}

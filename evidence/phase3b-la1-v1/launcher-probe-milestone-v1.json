@@ -1,0 +1,28 @@
+{
+  "Docker_calls": 0,
+  "actual_outer_status_cases": 2,
+  "additional_effort_hold_seconds": 180,
+  "authentication_negative_cases": 4,
+  "campaign_started": false,
+  "case_outcomes": "Exact argv/count including spaces/quotes/Unicode preserved; child status0/7, missing executable127, missing script2, timeout124 and cancellation130 reported; all managed PIDs independently queried settled. Four authentication negatives rejected before child activity. Actual standalone wrapper exits0 and7 match managed child exits.",
+  "diagnosis": "Actual independent os.execve probes, including minimal historical argument shape, return3221225477 (0xC0000005) after outer-entry marker without observed child JSON. This confirms failure of that process API on this setup; it does not reproduce/prove the historical Program Files argument-splitting mechanism. Managed list-argument subprocess path passes.",
+  "interpreter": "C:\\Program Files\\Python313\\python.exe",
+  "kind": "phase3b-la1-launcher-probe-milestone-v1",
+  "managed_cases": 7,
+  "next": "Independent initial repair review, then candidate freeze and real boundary before any main campaign.",
+  "preserved_reporting_failure": "First helper invocation completed all case artifacts then exited1 while printing Unicode to cp1252. Retained receipt and exact reporting traceback; console-only ASCII correction passed fresh v2/v3.",
+  "probe_evidence_complete": true,
+  "project_workflows": 0,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T22:13:46.529189+00:00",
+  "references": {
+    "launcher_probe.py": "deb3b526ad7d872a3d859ff50ed4642cf6ed723810ad66bbcffac1817cae2e14",
+    "probe-accounting-hold-v1.json": "a44bb460be554a5e9ecccb3c45538ee8f52403d73a202569cf4eaa2baa380ac2",
+    "probe-execve-minimal-v1/execve-minimal-result.json": "77c6ffe8d8ff0a009a9b5d8239f569f41044a3b99f21ce27c6d83934c67c82db",
+    "probe-outer-status-v2/outer-status-result.json": "6f42ba20e3e672a105168d4b21469508ab3950d94234d27fe370883c1fb387b0",
+    "probe-results-v1/reporting-failure.json": "20b67e4f34d27f5bd3bb9dd66a92fa95c91c60bb8b2f276dc504fc288571d2f2",
+    "probe-results-v3/process-result.json": "63e683955d5be1d5f18d004b5bf49ea5b8afdb70ed284b73740aa7a4182b9ce0"
+  },
+  "tested_launcher_sha256": "39128339e0f83880448a84cb0956356d53bd0e69b6c756479c24586ef9b1ed22",
+  "whole_initial_repair_milestone_requires_parent_independent_review": true
+}

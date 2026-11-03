@@ -1,0 +1,8 @@
+{
+  "basis": "Whole bounded root wait interval conservatively reserved because progress coordination/reasoning occurred without separate ACTIVE transitions; includes verified waiting, not an assertion of exact focused time.",
+  "end_at_utc": "2026-11-03T22:08:09.522338+00:00",
+  "held_seconds": 351,
+  "kind": "phase3b-la1-conservative-coordination-hold-v1",
+  "release_authorized": false,
+  "start_at_utc": "2026-11-03T22:02:19.483407+00:00"
+}

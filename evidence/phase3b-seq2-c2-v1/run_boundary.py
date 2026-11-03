@@ -11,7 +11,7 @@ import traceback
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "runs/phase3b-seq2-v1/verification-v3/boundary-contract"
+OUT = ROOT / "runs/phase3b-seq2-v1/verification-v4/boundary-contract"
 IMAGE = "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800"
 
 
@@ -24,7 +24,7 @@ def main() -> int:
     env = {k: os.environ[k] for k in ("PATH", "SYSTEMROOT", "WINDIR", "COMSPEC", "TEMP", "TMP", "PATHEXT") if k in os.environ}
     env.update(PYTHONPATH=os.pathsep.join(str(p) for p in (ROOT, ROOT / "src", ROOT / ".upstream/harness2")),
                BUDDHA2_OUTPUT_ROOT=str(ROOT / "runs"), PYTHONDONTWRITEBYTECODE="1", PYTHONNOUSERSITE="1")
-    target = "/results/phase3b-seq2-v1/verification-v3/boundary-contract/fixture"
+    target = "/results/phase3b-seq2-v1/verification-v4/boundary-contract/fixture"
     owners, processes = [], []
 
     def run(args, timeout=60):
@@ -63,7 +63,7 @@ def main() -> int:
                 or mounts != expected_mounts(OUT) or host["Privileged"] or host["PidsLimit"] != 256
                 or host["Memory"] != 4294967296 or host["NanoCpus"] != 2000000000
                 or host["CapDrop"] != ["ALL"] or host["SecurityOpt"] not in (["no-new-privileges"], ["no-new-privileges:true"])
-                or host["Tmpfs"] != {"/tmp": "rw,nosuid,nodev,size=1073741824,mode=1777"}
+                or host["Tmpfs"] != {"/tmp": "rw,nosuid,nodev,size=1073741824,mode=1777"}  # nosec B108
                 or host["LogConfig"]["Type"] != "none" or actual["State"]["Running"]):
             raise ValueError("boundary owner containment differs")
         save(OUT / (label + "-inspection.json"), {"passed": True, "owner": owner,
@@ -94,8 +94,9 @@ def main() -> int:
         host_process = subprocess.Popen([sys.executable, "-B", "-m", "followups.phase3b_seq2_v1.boundary_contract",  # nosec B603
              "host", "--output", str(OUT / "fixture")], cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         processes.append(host_process)
-        core_process = subprocess.Popen(["docker", "start", "--attach", core], cwd=ROOT, env=env,  # nosec B603,B607: existing inspected Docker CLI; exact owned ID
-             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # Existing inspected Docker CLI, exact created owned ID, no shell.
+        core_command = ["docker", "start", "--attach", core]
+        core_process = subprocess.Popen(core_command, cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)  # nosec B603
         processes.append(core_process)
         deadline = time.monotonic() + 1800
         for label, process in (("core", core_process), ("host", host_process)):
@@ -146,7 +147,7 @@ def main() -> int:
                     create_path = directory / "create.json"
                     if not create_path.is_file():
                         continue
-                    proof = {"checkpoint": checkpoint, "passed": False}
+                    proof: dict = {"checkpoint": checkpoint, "passed": False}
                     try:
                         created = json.loads(create_path.read_text(encoding="utf-8"))
                         owner = created.get("stdout", "").strip()

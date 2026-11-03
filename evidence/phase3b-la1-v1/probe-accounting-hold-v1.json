@@ -1,0 +1,37 @@
+{
+  "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+  "additional_hold_seconds": 180,
+  "bounds": [
+    {
+      "activity": "One coordination message and short boundaries between explicitly logged automatic agent waits; the automatic waits are not focused work.",
+      "from_utc": "2026-11-03T22:05:24.450767+00:00",
+      "to_utc": "2026-11-03T22:09:04.854690+00:00"
+    },
+    {
+      "activity": "Automated probe then post-tool analysis.",
+      "from_utc": "2026-11-03T22:09:18.151078+00:00",
+      "to_utc": "2026-11-03T22:09:30.868289+00:00"
+    },
+    {
+      "activity": "Automated probe then post-tool analysis/coordination.",
+      "from_utc": "2026-11-03T22:09:59.172486+00:00",
+      "to_utc": "2026-11-03T22:10:47.308964+00:00"
+    },
+    {
+      "activity": "Automated outer checks then post-tool analysis.",
+      "from_utc": "2026-11-03T22:10:47.701880+00:00",
+      "to_utc": "2026-11-03T22:11:25.551143+00:00"
+    },
+    {
+      "activity": "Automated minimal probe then post-tool analysis.",
+      "from_utc": "2026-11-03T22:11:25.965803+00:00",
+      "to_utc": "2026-11-03T22:12:01.637610+00:00"
+    }
+  ],
+  "counts_against_initial_repair_limit_seconds": 1800,
+  "counts_against_limit_seconds": 7200,
+  "kind": "phase3b-la1-probe-conservative-hold-v1",
+  "reason": "Missed ACTIVE transitions around short post-tool analysis and coordination. Conservatively reserve 180 seconds across the bounded below intervals; automated waiting within a bound may be charged. This is a liability hold, not reconstructed precise focused time.",
+  "recorded_at_utc": "2026-11-03T22:13:46.523404+00:00",
+  "separate_from_existing_bootstrap_and_root_holds": true
+}

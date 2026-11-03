@@ -1,0 +1,21 @@
+{
+  "case": "timeout",
+  "owned_child": {
+    "classification": "absent",
+    "error": 87,
+    "verified": true
+  },
+  "result": {
+    "cancelled": false,
+    "child_returncode": 1,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 124,
+    "output": "{\"argv\": [\"sleep\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+    "output_bytes_base64": "eyJhcmd2IjogWyJzbGVlcCJdLCAiZm9yYmlkZGVuX3NlbnRpbmVsX3ByZXNlbnQiOiBmYWxzZSwgInJlcXVpcmVkX2VudiI6IHsiU1lTVEVNUk9PVCI6IHRydWUsICJXSU5ESVIiOiB0cnVlLCAiUEFUSCI6IHRydWV9fQ0K",
+    "pid": 16208,
+    "settled": true,
+    "started": true,
+    "timed_out": true
+  }
+}
