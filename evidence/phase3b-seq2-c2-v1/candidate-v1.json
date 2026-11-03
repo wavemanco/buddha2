@@ -1,0 +1,46 @@
+{
+  "boundary_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py"
+  ],
+  "boundary_outer_seconds": 1800,
+  "candidate_sha256": {
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py": "270bd3986d0dea4794220da8f8c48411fc659f72108873ab2a68bff5b5455dde",
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py": "fc91352466b1d193a40f350b9ec8e3d042fd60941710d82482a349ab7482c8cc",
+    "evidence/phase3b-seq2-c2-v1/run_composed.py": "5cdcafbb63cbf91ad6c419002be56a462276872b8d90b007019858620527465d",
+    "followups/phase3b_seq2_v1/boundary_contract.py": "4d34e4beae0b7d0206c774e26605963858fbca0384ce97b1093b8b2bea01fd01",
+    "followups/phase3b_seq2_v1/boundary_contract_cases.json": "1c8e83ee7626926db0a76727961b246abb377fbe874e104390e8bf79d2108554",
+    "followups/phase3b_seq2_v1/inspect_adapter.py": "33db4cb9bf81689edb95ff8d57dc2614ec1f33c535634652b9ed50a9893e8c55",
+    "followups/phase3b_seq2_v1/snapshot.py": "efd1c7cea36f614c7c840993cdfe14e3be975461001e5ba0de4bfce8a9d0e9ab",
+    "followups/phase3b_seq2_v1/support.py": "c370e2ab9586ae4482a750177051c65b1156d808f75b046372306c6948b89b77",
+    "followups/phase3b_seq2_v1/test_inspect_s2.py": "f9f5b5e2fe02ec781bd6754d7cd033e1e86ceea812d17c6180ebdd975074c627",
+    "followups/phase3b_seq2_v1/test_offline_timeouts_s2.py": "9db32015824f6b824aa47a6315051aeeea12ab95dc0e964b511861a4d213acc4",
+    "followups/phase3b_seq2_v1/verify.py": "28165d5656a75bde1207a46f01db607207ef1691a47214dd20b3c87b1da858cf",
+    "followups/phase3b_seq2_v1/workflow.py": "fe236b3a94f090c3a3e7bd322f6fec647443539068110d8c552406a7d4670974"
+  },
+  "created_utc": "2026-11-03T16:57:22.736440+00:00",
+  "full_matrix_attempts": 1,
+  "kind": "phase3b-s2-c2-prospective-command-candidate-v1",
+  "main_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/run_composed.py",
+    "main"
+  ],
+  "main_outer_seconds": 21600,
+  "native_HTTP_review_export_clocks_changed": false,
+  "real_provider_calls": 0,
+  "regression_expectation_change": "C2-authorized snapshot/inspect_adapter wire modules removed from byte-identical-to-A0 set; every unchanged scientific/provider/native/runtime module remainsexact, plus real producer-consumer/strict negative coverage.",
+  "replay_outer_seconds": 7200,
+  "runtime_started": false,
+  "saved_replay_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/run_composed.py",
+    "replay"
+  ],
+  "source_files": 657,
+  "source_sha256": "1fc02d0b14f8aad48542efdc9c36578da29aa99c459cab506ddaa5879460a63b",
+  "subsequent_acceptance": "Original actual verify.windows; fresh contained prepare_supervised; NEW keyless S13 supervisor with unchanged complete_host_checks; containedseal; independent source/physical/extracted cold acceptance. No keys withoutall and supported reserve."
+}

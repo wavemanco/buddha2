@@ -17,6 +17,9 @@ from followups.inspect_visibility_i1.importer import block_execution, decode
 
 from .snapshot import (
     ROOT,
+    VISIBILITY_OWNER_KIND,
+    VISIBILITY_REQUEST_KIND,
+    VISIBILITY_RESULT_KIND,
     ProjectionError,
     canonical,
     checked_path,
@@ -28,7 +31,7 @@ from .snapshot import (
 
 IMAGE = "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d"
 HERE = Path(__file__).resolve().parent
-RESULT_KIND = "p3b-s2-visibility-result-v1"
+RESULT_KIND = VISIBILITY_RESULT_KIND
 
 
 def _require(condition: bool, message: str) -> None:
@@ -274,7 +277,7 @@ def host_export(snapshot_dir: Path, output: Path, *, ack: Path | None = None, ti
         if not isinstance(decoded_request, dict):
             raise ProjectionError("visibility request binding differs")
         request = decoded_request
-        _require(request.get("kind") == "p3b-s2-visibility-request-v1"
+        _require(request.get("kind") == VISIBILITY_REQUEST_KIND
                  and all(request.get(key) == manifest[key] for key in
                          ("study_sha256", "checkpoint", "snapshot_sha256", "fixture"))
                  and request.get("timeout_seconds") == 600 and request.get("cleanup_reserve_seconds") == 15
@@ -318,7 +321,7 @@ def host_export(snapshot_dir: Path, output: Path, *, ack: Path | None = None, ti
     try:
         if request is not None:
             launch_allowed = deadline - time.monotonic() > 15
-            owner = {"kind": "p3b-s2-visibility-owner-v1", "study_sha256": payload["study_sha256"],
+            owner = {"kind": VISIBILITY_OWNER_KIND, "study_sha256": payload["study_sha256"],
                      "checkpoint": payload["checkpoint"], "snapshot_sha256": manifest["snapshot_sha256"],
                      "deadline_at_utc": request["deadline_at_utc"],
                      "exporter_started": launch_allowed,

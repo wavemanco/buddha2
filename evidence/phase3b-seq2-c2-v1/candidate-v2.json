@@ -1,0 +1,91 @@
+{
+  "boundary_cleanup_per_owner_seconds": {
+    "absence": 60,
+    "inspect": 60,
+    "remove": 60,
+    "stop": 30
+  },
+  "boundary_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "boundary"
+  ],
+  "boundary_core_host_phase_seconds": 1800,
+  "boundary_host_negative_phase_seconds": 120,
+  "boundary_preparation_phase_seconds": 600,
+  "boundary_pure_negative_phase_seconds": 120,
+  "candidate_sha256": {
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py": "270bd3986d0dea4794220da8f8c48411fc659f72108873ab2a68bff5b5455dde",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py": "81ac36a625e6d64cce7749cb4a713827c596403c49c8e032e919f7a29dc675f8",
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py": "e7a89c166f79e75936e1d06059c77608ecc21bceb91afb8660d169b089de28ea",
+    "evidence/phase3b-seq2-c2-v1/run_composed.py": "c117888fac44d5ff2fee26038f9e959eb5fc958a0fa6cea658aa4d25a1d0b8fe",
+    "followups/phase3b_seq2_v1/boundary_contract.py": "81b70878a60da5df861e9f175f3a3ff99d6fb02dca386b06b8fad4cbea158613",
+    "followups/phase3b_seq2_v1/boundary_contract_cases.json": "1c8e83ee7626926db0a76727961b246abb377fbe874e104390e8bf79d2108554",
+    "followups/phase3b_seq2_v1/inspect_adapter.py": "33db4cb9bf81689edb95ff8d57dc2614ec1f33c535634652b9ed50a9893e8c55",
+    "followups/phase3b_seq2_v1/snapshot.py": "efd1c7cea36f614c7c840993cdfe14e3be975461001e5ba0de4bfce8a9d0e9ab",
+    "followups/phase3b_seq2_v1/support.py": "75e0e185489b781c6aedb4af8c0261d9ef0301f9c98c620917b7d7dbe30c1bb4",
+    "followups/phase3b_seq2_v1/test_inspect_s2.py": "0cac66859d22a0024bdd9ea5eef9019af3f0d3fe801c58df9f41d5d90ab0f074",
+    "followups/phase3b_seq2_v1/test_offline_timeouts_s2.py": "9db32015824f6b824aa47a6315051aeeea12ab95dc0e964b511861a4d213acc4",
+    "followups/phase3b_seq2_v1/verify.py": "fa24f54c2c15f1e3457bbc80af0421dfedc5c1af88d9609dec0a35594bacd42d",
+    "followups/phase3b_seq2_v1/workflow.py": "fe236b3a94f090c3a3e7bd322f6fec647443539068110d8c552406a7d4670974"
+  },
+  "created_utc": "2026-11-03T17:04:24.942285+00:00",
+  "full_matrix_attempts": 1,
+  "host_environment": {
+    "BUDDHA2_OUTPUT_ROOT": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": [
+      "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "C:\\Users\\arvik\\code\\research\\Buddha2\\src",
+      "C:\\Users\\arvik\\code\\research\\Buddha2\\.upstream\\harness2"
+    ],
+    "inherit_names": [
+      "PATH",
+      "SYSTEMROOT",
+      "WINDIR",
+      "COMSPEC",
+      "TEMP",
+      "TMP",
+      "PATHEXT"
+    ],
+    "other_environment": "cleared before project import/execution"
+  },
+  "kind": "phase3b-s2-c2-prospective-command-candidate-v1",
+  "main_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "main"
+  ],
+  "main_outer_seconds": 21600,
+  "native_HTTP_review_export_clocks_changed": false,
+  "operator_authentication": "launch_candidate.py validates candidate rawSHA against exact independent receipt, allfilemap hashes and source_identity before execve clean revieweddriver",
+  "pre_execution_guard_corrections": [
+    "actual no-such-object proof required",
+    "TimeoutExpired capturedpartialbytes retained",
+    "all exactowners cleanup attempted aftercommanderrors",
+    "actual phase clocks documented withoutfalseoverall1800claim",
+    "exact credential-free operator environment+authenticated candidate/review before firstcreate"
+  ],
+  "pre_freeze_checks": {
+    "AST_parse": "pass",
+    "formal_H1_static_checks": "still required",
+    "host_Ruff_no_cache": "pass after8I001 import-order fixes"
+  },
+  "real_provider_calls": 0,
+  "regression_expectation_change": "C2-authorized snapshot/inspect_adapter wire modules removed from byte-identical-to-A0 set; every unchanged scientific/provider/native/runtime module remainsexact, plus real producer-consumer/strict negative coverage.",
+  "replay_outer_seconds": 7200,
+  "revision": 2,
+  "runtime_started": false,
+  "saved_replay_command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "replay"
+  ],
+  "source_files": 658,
+  "source_sha256": "217518c7a8c040c1992fb4a84be5ee284230dd25e713930acc7ef7efbce83ed8",
+  "subsequent_acceptance": "Original actual verify.windows; fresh contained prepare_supervised; NEW keyless S13 supervisor with unchanged complete_host_checks; containedseal; independent source/physical/extracted cold acceptance. No keys withoutall and supported reserve."
+}

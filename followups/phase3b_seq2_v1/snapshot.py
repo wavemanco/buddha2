@@ -14,6 +14,9 @@ from followups.inspect_visibility_i1.paths import lexical as _base_lexical
 
 KIND = "p3b-s2-public-snapshot-v1"
 MANIFEST = "p3b-s2-public-snapshot-manifest-v1"
+VISIBILITY_REQUEST_KIND = "p3b-s2-visibility-request-v1"
+VISIBILITY_RESULT_KIND = "p3b-s2-visibility-result-v1"
+VISIBILITY_OWNER_KIND = "p3b-s2-visibility-owner-v1"
 CHECKPOINTS = {"first-pair", "closure"}
 PILOTS = tuple(f"p3b-{i:02}" for i in range(1, 5))
 ARMS = ("fixed", "adaptive")

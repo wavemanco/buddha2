@@ -10,6 +10,8 @@ from .inspect_projection import audit_csv
 from .snapshot import (
     PILOTS,
     TARGETS,
+    VISIBILITY_OWNER_KIND,
+    VISIBILITY_RESULT_KIND,
     CanonicalIntegrityError,
     ProjectionError,
     build_snapshot,
@@ -145,6 +147,69 @@ class S2SnapshotTests(unittest.TestCase):
             with self.subTest(path=value), patch.object(Path, "lstat", side_effect=AssertionError("metadata forbidden")):
                 with self.assertRaises(ValueError):
                     lexical(value)
+
+
+class VisibilitySettlementTests(unittest.TestCase):
+    """Pure negative ownership cases; real positive I1 handshakes run separately."""
+
+    def test_boundary_only_study_cannot_receive_live_grant_or_dispatch(self):
+        from types import SimpleNamespace
+
+        from buddha2.artifacts import ContractError
+
+        from . import workflow
+
+        study = {"fixture_boundary_contract": True, "fixture_supervision_rehearsal": True}
+        with patch.object(workflow, "load_study", return_value=study):
+            with self.assertRaises(ContractError):
+                workflow.make_grant(Path("unused"), False)
+            with patch.object(workflow, "grant_for", return_value={}):
+                with self.assertRaises(ContractError):
+                    workflow.preflight(Path("unused"), Path("unused"), True)
+            with patch.object(workflow.accounting, "Ledger", side_effect=AssertionError("no admission")):
+                with self.assertRaises(ContractError):
+                    workflow.run(Path("unused"), Path("unused"), stage="all",
+                                 transport=SimpleNamespace(fixture=True))
+
+    def test_owner_result_identity_and_stop_are_required(self):
+        from buddha2.artifacts import ContractError
+
+        from .workflow import _export_owner_settled
+
+        request = {"study_sha256": "a" * 64, "checkpoint": "first-pair",
+                   "snapshot_sha256": "b" * 64, "deadline_at_utc": "2026-11-03T20:00:00+00:00"}
+        owner = {"kind": VISIBILITY_OWNER_KIND, **request,
+                 "exporter_started": True, "state": "claimed"}
+        ack = {"kind": VISIBILITY_RESULT_KIND, **request,
+               "provider_calls": 0, "exporter_stopped": True}
+        self.assertTrue(_export_owner_settled(request, owner, ack))
+        for field, value in (("kind", "p3b-rp2-visibility-owner-v1"),
+                             ("study_sha256", "c" * 64), ("checkpoint", "closure"),
+                             ("snapshot_sha256", "d" * 64), ("deadline_at_utc", "forged"),
+                             ("state", "unclassified")):
+            with self.subTest(owner_field=field), self.assertRaises(ContractError):
+                _export_owner_settled(request, {**owner, field: value}, ack)
+        for field, value in (("kind", "p3b-rp2-visibility-result-v1"),
+                             ("study_sha256", "c" * 64), ("checkpoint", "closure"),
+                             ("snapshot_sha256", "d" * 64),
+                             ("provider_calls", 1), ("exporter_stopped", False)):
+            with self.subTest(ack_field=field), self.assertRaises(ContractError):
+                _export_owner_settled(request, owner, {**ack, field: value})
+        with self.assertRaises(ContractError):
+            _export_owner_settled(request, owner, None)
+
+    def test_expiry_without_exporter_must_still_match_s2_owner(self):
+        from buddha2.artifacts import ContractError
+
+        from .workflow import _export_owner_settled
+
+        request = {"study_sha256": "a" * 64, "checkpoint": "closure",
+                   "snapshot_sha256": "b" * 64, "deadline_at_utc": "2026-11-03T20:00:00+00:00"}
+        owner = {"kind": VISIBILITY_OWNER_KIND, **request,
+                 "exporter_started": False, "state": "closed_without_export"}
+        self.assertTrue(_export_owner_settled(request, owner, None))
+        with self.assertRaises(ContractError):
+            _export_owner_settled(request, {**owner, "kind": "p3b-rp2-visibility-owner-v1"}, None)
 
 
 if __name__ == "__main__":

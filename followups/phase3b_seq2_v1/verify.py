@@ -153,7 +153,7 @@ def normal_fixture_path(branch: dict, results: dict) -> bool:
         and native._selector_normal(branch.get("editor_evidence", {}), selection, results))
 
 
-def inside(output: Path) -> int:
+def inside(output: Path, *, saved_replay: bool = True) -> int:
     from buddha2.artifacts import file_hash
 
     from . import accounting, workflow
@@ -172,12 +172,18 @@ def inside(output: Path) -> int:
              workflow.make_grant(study_path, fixture))
     commands = [
         [sys.executable, "-B", "-m", "ruff", "check", "--no-cache", "followups/phase3b_seq2_v1",
-         "evidence/phase3b-seq2-v1/package_public.py"],
+         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py"],
         [sys.executable, "-B", "-m", "mypy", "--explicit-package-bases", "--follow-imports", "silent",
          "--ignore-missing-imports", "--no-incremental", "--cache-dir", "/tmp/s2-mypy",  # nosec B108
-         "followups/phase3b_seq2_v1", "evidence/phase3b-seq2-v1/package_public.py"],
+         "followups/phase3b_seq2_v1", "evidence/phase3b-seq2-v1/package_public.py",
+         "evidence/phase3b-seq2-c2-v1/composed_acceptance.py", "evidence/phase3b-seq2-c2-v1/run_boundary.py",
+         "evidence/phase3b-seq2-c2-v1/run_composed.py", "evidence/phase3b-seq2-c2-v1/launch_candidate.py"],
         [sys.executable, "-B", "-m", "bandit", "-q", "-r", "followups/phase3b_seq2_v1",
-         "evidence/phase3b-seq2-v1/package_public.py", "--exclude",
+         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "--exclude",
          ",".join(p.name for p in Path(__file__).parent.glob("test*.py")) + ",deadline_regression.py"],
     ]
     statics = []
@@ -228,6 +234,8 @@ def inside(output: Path) -> int:
             "branch_file_sha256": {f"p3b-{i:02}":file_hash(run / "branches" / (f"p3b-{i:02}-adaptive.json")) for i in range(1, 5)}})
         if not passed:
             return 1
+        if not saved_replay:
+            return 0 if preservation_check(output, study, source, history) else 1
         calls, journal_bytes = mock.http_calls, (journal / "events.jsonl").read_bytes()
         repeated = workflow.run(study_path, grant, stage="all", transport=mock.transport)
         with ExitStack() as blocks:

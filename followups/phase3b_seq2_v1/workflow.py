@@ -22,6 +22,7 @@ from buddha2.phase2_dispatch import writer_lock
 from . import accounting, editor, native, rank_io, strategy, supervision
 from .adapter import CompatibleProposer
 from .deadline import POLICY as DEADLINE_POLICY
+from .snapshot import VISIBILITY_OWNER_KIND, VISIBILITY_REQUEST_KIND, VISIBILITY_RESULT_KIND
 from .support import (
     AUTHORITY,
     DEFINITION,
@@ -275,9 +276,12 @@ def prepare(
     source: dict | None = None,
     runtime: dict | None = None,
     supervised_fixture: bool = False,
+    boundary_fixture: bool = False,
 ) -> dict:
     output = path(output)
     require(type(supervised_fixture) is bool, "supervised fixture flag must be boolean")
+    require(type(boundary_fixture) is bool and (not boundary_fixture or supervised_fixture),
+            "boundary-only fixture requires the supervised, generation-free route")
     authority = validate_authority()
     sources, environment = source or source_identity(), runtime or runtime_identity()
     snapshot_policy = source_snapshot_policy(sources["files"])
@@ -306,6 +310,7 @@ def prepare(
         "rank_io_profile": rank_io.profile(),
         "startup_supervision_profile": supervision.profile(),
         "fixture_supervision_rehearsal": supervised_fixture,
+        "fixture_boundary_contract": boundary_fixture,
         "seed_procedure_sha256": old["seed_procedure_sha256"],
         "authority": authority,
         "prior_live_episode": {
@@ -368,6 +373,8 @@ def load_study(study_path: Path) -> dict:
         and study["rank_io_profile"] == rank_io.profile()
         and study["startup_supervision_profile"] == supervision.profile()
         and type(study["fixture_supervision_rehearsal"]) is bool
+        and type(study["fixture_boundary_contract"]) is bool
+        and (not study["fixture_boundary_contract"] or study["fixture_supervision_rehearsal"])
         and study["editor_tools"] == read(ROOT / "followups/phase3a_v1/editor-tools.json")
         and study["launcher_sha256"] == file_hash(LAUNCHER)
         and study["prior_live_episode"]
@@ -411,7 +418,8 @@ def load_study(study_path: Path) -> dict:
 def make_grant(study_path: Path, fixture: bool) -> dict:
     study = load_study(study_path)
     require(
-        type(fixture) is bool and (fixture or not study["fixture_supervision_rehearsal"]),
+        type(fixture) is bool and (fixture or not study["fixture_supervision_rehearsal"])
+        and (fixture or not study["fixture_boundary_contract"]),
         "supervised fixture study cannot receive a provider grant",
     )
     authority = {
@@ -662,6 +670,7 @@ def preflight(
     require(type(require_offline_gate) is bool, "offline-gate selector must be explicit")
     study = load_study(study_path)
     grant = grant_for(study, grant_path, fixture)
+    require(not study["fixture_boundary_contract"], "boundary-only fixture cannot admit model work")
     run, journal = paths(study, fixture)
     require(
         not path(run / "canonical-stop.json").exists(),
@@ -1365,7 +1374,7 @@ def _export_owner_settled(request: dict, owner: dict | None, ack: dict | None) -
     if not isinstance(owner, dict):
         raise ContractError("visibility ownership window was not atomically closed")
     require(
-        owner.get("kind") == "p3b-rp2-visibility-owner-v1"
+        owner.get("kind") == VISIBILITY_OWNER_KIND
         and all(
             owner.get(key) == request[key]
             for key in ("study_sha256", "checkpoint", "snapshot_sha256", "deadline_at_utc")
@@ -1380,7 +1389,7 @@ def _export_owner_settled(request: dict, owner: dict | None, ack: dict | None) -
     )
     require(
         isinstance(ack, dict)
-        and ack.get("kind") == "p3b-rp2-visibility-result-v1"
+        and ack.get("kind") == VISIBILITY_RESULT_KIND
         and all(
             ack.get(key) == request[key]
             for key in ("study_sha256", "checkpoint", "snapshot_sha256")
@@ -1495,7 +1504,7 @@ def _visibility_checkpoint(study_path, study, grant_path, fixture, checkpoint, *
             manifest = {"snapshot_sha256": built["snapshot_sha256"]}
             result["snapshot_sha256"] = manifest["snapshot_sha256"]
             request = {
-                "kind": "p3b-rp2-visibility-request-v1",
+                "kind": VISIBILITY_REQUEST_KIND,
                 "study_sha256": study["study_sha256"],
                 "checkpoint": checkpoint,
                 "snapshot_sha256": manifest["snapshot_sha256"],
@@ -1517,7 +1526,7 @@ def _visibility_checkpoint(study_path, study, grant_path, fixture, checkpoint, *
                     fixture_ack(request)
                     if fixture_ack
                     else {
-                        "kind": "p3b-rp2-visibility-result-v1",
+                        "kind": VISIBILITY_RESULT_KIND,
                         "study_sha256": study["study_sha256"],
                         "checkpoint": checkpoint,
                         "snapshot_sha256": request["snapshot_sha256"],
@@ -1538,7 +1547,7 @@ def _visibility_checkpoint(study_path, study, grant_path, fixture, checkpoint, *
             if response_path.exists():
                 ack = read(response_path)
                 valid = (
-                    ack.get("kind") == "p3b-rp2-visibility-result-v1"
+                    ack.get("kind") == VISIBILITY_RESULT_KIND
                     and ack.get("study_sha256") == study["study_sha256"]
                     and ack.get("checkpoint") == checkpoint
                     and ack.get("snapshot_sha256") == request["snapshot_sha256"]
@@ -1560,7 +1569,7 @@ def _visibility_checkpoint(study_path, study, grant_path, fixture, checkpoint, *
             owner_path = directory / "ownership.json"
             try:
                 closed = {
-                    "kind": "p3b-rp2-visibility-owner-v1",
+                    "kind": VISIBILITY_OWNER_KIND,
                     **{
                         key: request[key]
                         for key in (
@@ -1638,6 +1647,7 @@ def _run_all(study_path, study, grant_path, grant, transport, run_path):
 
 def run(study_path: Path, grant_path: Path, *, stage: str, transport: Any) -> dict:
     study = load_study(study_path)
+    require(not study["fixture_boundary_contract"], "boundary-only fixture cannot run generation")
     grant = grant_for(study, grant_path, transport.fixture)
     if not transport.fixture or study["fixture_supervision_rehearsal"]:
         supervision.require_attached(study, grant, transport.fixture)

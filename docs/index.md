@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). Phase 3B preparation is closed stopped and incomplete. The original timeout remains failed; a separate zero-call R1 replay passed, leaving seven passed groups and five absent. Fresh S13 stopped at a real export-handshake rejection after 341 fake calls; no kit, packet, cold replay, keys, real calls or paid pilot is accepted or claimed. The [stop report](phases/phase-3b/PHASE3B_OFFLINE_STOP_REPORT.md) and [proposed C2 amendment](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_DEFINITION.md) support the next user decision; C2 is not authorized.
+Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). C2 is implemented but stopped before runtime acceptance: prospective review passed, then Windows setup failed before the candidate operator or driver started. No current-source runtime/gate pass, provider call, keys or paid pilot is claimed. Read the [C2 stop report](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_STOP_REPORT.md). Further correction requires a fresh bounded engineering allowance; the original $180 single-pilot authority remains conditional.
 
 ## Research and specifications
 
@@ -107,6 +107,7 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
+- [C2 implemented correction and setup stop](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_STOP_REPORT.md)
 - [Stopped offline preparation](phases/phase-3b/PHASE3B_OFFLINE_STOP_REPORT.md)
 - [Proposed C2 export-contract correction](phases/phase-3b/PHASE3B_EXPORT_CONTRACT_CORRECTION_DEFINITION.md)
 - [Phase 3B — Native two-round refinement versus a fixed control](phases/phase-3b/PHASE3B_DEFINITION.md)

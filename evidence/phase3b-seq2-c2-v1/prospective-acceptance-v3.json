@@ -1,0 +1,36 @@
+{
+  "candidate_files_independently_hashed": 13,
+  "candidate_sha256": "fea46884c29617d9c254265291dcd0a2d6ec6795c58af36398f1ae083eb0f230",
+  "conditions_before_continuation": [
+    "Only the assigned controller executes. The actual boundary must pass with cleanup before main admission. Any required failure stops the single frozen acceptance attempt; no automatic retry or source change during it.",
+    "Every current-source required group, source/history and independent physical/extracted packet check still needs actual evidence; no prior-source retagging or static inference.",
+    "Shared aggregate effort must remain within existing10800 seconds, with sufficient next-slice and failure-closure reserve. Paid launch requires the separate task-based reserve of at least1800seconds; this receipt does not override the now-tight remaining budget.",
+    "No real credentials/provider calls or paid pilot before complete acceptance and separately satisfied live readiness. Original protected project is never accessed."
+  ],
+  "created_at_utc": "2026-11-03T17:09:50.552294+00:00",
+  "kind": "phase3b-s2-c2-prospective-acceptance-v3",
+  "kit_accepted": false,
+  "limitations": "Full658-file independent rehash and all runtime evidence are deferred to actual final acceptance. The launcher itself must verify effective source identity before each phase; this prospective receipt only binds its exact candidate. No result is inferred from AST/static review.",
+  "new_API_funding_authorized": false,
+  "packet_accepted": false,
+  "passed": true,
+  "reviewed_cases": [
+    "All six core wire sites use the shared exact S2 request/result/owner constants; strict adapter accepted values unchanged, with no RP2 aliases.",
+    "Boundary-only flag is boolean, requires supervised fixture, enters sealed study identity, and is denied by provider grant/preflight/workflow.run; no source namespace collision or artifact move.",
+    "Actual generation-free first-pair and closure call real core canonical collection, production request publication, separate real ACK-bound I1 host_export and real core ACK/atomic owner settlement; no fabricated positive ACK or boundary-success patch.",
+    "Three pure settlement/flag tests plus sixteen actual host negative cases cover legacy/identity/deadline/expired/late/tombstone/unstopped-owner behavior before model activity.",
+    "The stdlib launcher clears inherited non-system environment before project imports, fixes root/src/pinnedH2 path, authenticates exact candidate/reviewer receipt/file map and actual source identity before executing the reviewed driver.",
+    "Actual H1 image/network-none/read-only root/exact mounts/resource/capability/security/tmpfs/log options are inspected before start; exact successful create IDs bind cleanup.",
+    "Timeout/error evidence is retained, command errors cannot skip remaining cleanup; H1 and receipt-proven I1 cleanup use exact owned IDs and independent no-such-object absence. Unknown ownership or failed cleanup cannot establish pass.",
+    "Boundary phase ceilings are truthfully distinct; native/HTTP/review/startup/original600-second export clocks unchanged. Main21600 and guarded saved replay7200 are separate commands, not a restarted3h monolith.",
+    "Saved replay invokes immutable authenticated99b2 worker perform with genuine workflow.run, snapshot/write_report, fail-before-action guards, source/history/journal/all ordinary input preservation and eight byte-identical reports; new capacity root has additional inventory coverage.",
+    "Authorized byte-identity expectation change excludes only the two intentionally changed wire modules; unchanged scientific/provider/native/runtime controls remain required byte-identical."
+  ],
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_executed_by_reviewer": false,
+  "scientific_complete": false,
+  "scope": "Prospective static/source/command review only, before the single actual generation-free boundary attempt and conditional one main matrix/saved replay. This is not source, gate, packet, scientific or live acceptance.",
+  "source_accepted": false,
+  "source_files": 658,
+  "source_sha256": "ea2e2ad1d1f8e40ce8e0bf2284feb78b84619b998c5ff2485aaf727f311b751a"
+}

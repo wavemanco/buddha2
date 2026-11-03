@@ -99,12 +99,15 @@ class OfflineTimeoutCases(unittest.TestCase):
         self.assertEqual(old["source_sha256"], "ba914c1c00376646cd3eaf29f4dd560d36edcfff731e419e5f631d010e6743c9")
         self.assertEqual(digest(old["source"]["files"]), old["source_sha256"])
         modules = ("accounting", "ledger_core", "deadline", "transport", "native", "editor", "adapter",
-                   "contract", "strategy", "rank_io", "supervision", "snapshot", "inspect_adapter",
+                    "contract", "strategy", "rank_io", "supervision",
                    "inspect_projection", "core_view", "evidence", "delivery", "capacity", "mocks",
                    "native_fixture", "report", "history")
         names = ["followups/phase3b_seq2_v1/" + name + ".py" for name in modules]
         names.extend(("phase3b-seq2.ps1", "phase3b-seq2-core.ps1", "PHASE3B_DEFINITION.md",
                       "evidence/phase3b-seq2-v1/authorization.json"))
+        # C2 explicitly changes the snapshot/adapter wire contract. All scientific,
+        # provider, ownership and runtime controls above remain byte-identical;
+        # real two-checkpoint boundary regressions cover the authorized changes.
         for name in names:
             with self.subTest(control=name):
                 self.assertEqual(file_hash(ROOT / name), old["source"]["files"][name])

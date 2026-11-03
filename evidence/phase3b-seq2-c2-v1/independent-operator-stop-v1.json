@@ -1,0 +1,50 @@
+{
+  "candidate_sha256": "fea46884c29617d9c254265291dcd0a2d6ec6795c58af36398f1ae083eb0f230",
+  "created_at_utc": "2026-11-03T17:16:02.352764+00:00",
+  "findings": [
+    "The recorded actual operator error reports the Python interpreter path split at C:\\Program. Windows os.execve argument handling is the source-traced diagnosis; no independent reproduction was executed.",
+    "The recorded wrapper exit0 is correctly not presented as driver or test success. The exact reviewed boundary driver creates its output directory before any test/container activity; that directory is independently absent.",
+    "The named source candidate and all13 reviewed changed/new file hashes remain unchanged. This short closure does not rehash the full658-file source or historical corpus.",
+    "The budget preflight permitted only boundary startup and protected600seconds closure plus515seconds conservative holds; it explicitly prohibited main and paid launch. Setup failed and stopped rather than silently correcting or retrying.",
+    "No H1/I1, unit/boundary test or main matrix began on this recorded path. No fresh keys/provider call/API spend or added paid liability is reported. These statements are scoped to this operator attempt and retained records, not a global process/account audit."
+  ],
+  "independent_checks": {
+    "all13_candidate_file_hashes_unchanged": true,
+    "boundary_output_directory_absent": true,
+    "no_runtime_reproduction_or_retry": true,
+    "prospective_receipt_unchanged": true
+  },
+  "kind": "phase3b-s2-c2-independent-operator-stop-v1",
+  "kit_accepted": false,
+  "next": "Preserve stopped preparation and define any Windows launch correction and remaining execution allowance concretely before further work; this receipt authorizes no correction/retry/keys/paid activity.",
+  "packet_accepted": false,
+  "references": {
+    "STOPPED_PREPARATION.md": {
+      "path": "evidence/phase3b-seq2-c2-v1/STOPPED_PREPARATION.md",
+      "sha256": "c57d0c199986f0e09f07780cfefe1af569a8f5fad520acda57da3a34a2cca11f"
+    },
+    "boundary-launch-budget-v1.json": {
+      "path": "evidence/phase3b-seq2-c2-v1/boundary-launch-budget-v1.json",
+      "sha256": "33b20af8b9a19a4640da71f8b3cf0a0087db1df872586c1701ca465bf407d780"
+    },
+    "candidate-v3.json": {
+      "path": "evidence/phase3b-seq2-c2-v1/candidate-v3.json",
+      "sha256": "fea46884c29617d9c254265291dcd0a2d6ec6795c58af36398f1ae083eb0f230"
+    },
+    "operator-setup-failure-v1.json": {
+      "path": "evidence/phase3b-seq2-c2-v1/operator-setup-failure-v1.json",
+      "sha256": "ca9ce1dff39b830f8096605579771fb3ec086b5fdb751caf8037b7f1617193c9"
+    },
+    "prospective-acceptance-v3.json": {
+      "path": "evidence/phase3b-seq2-c2-v1/prospective-acceptance-v3.json",
+      "sha256": "c1bcc17ec746ab76faee1358a26940d8e42ffb7d7f3e661dc5e34082582dfcad"
+    }
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_accepted": false,
+  "scientific_complete": false,
+  "source_accepted": false,
+  "source_sha256": "ea2e2ad1d1f8e40ce8e0bf2284feb78b84619b998c5ff2485aaf727f311b751a",
+  "status": "stopped_before_candidate_driver_runtime",
+  "stopped_outcome_classification_supported": true
+}

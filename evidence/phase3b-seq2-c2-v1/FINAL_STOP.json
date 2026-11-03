@@ -1,0 +1,47 @@
+{
+  "H1_or_I1_created": false,
+  "authority": {
+    "path": "evidence/phase3b-seq2-c2-v1/authority.json",
+    "reply": "C2 is approved",
+    "sha256": "0ecf31c3f532aa2c1ab67731840cdcd639fbe29f7478a61ddfe408947890e2b9"
+  },
+  "boundary_output_absent": true,
+  "candidate_driver_started": false,
+  "created_utc": "2026-11-03T17:15:54.199605+00:00",
+  "definition": {
+    "path": "specifications/amendments/phase3b-export-contract-correction-1.0.md",
+    "sha256": "6b3a65c022cd4fd0ecbb3e3966482d3a78408e62eeb1992b83e45b6746e81453"
+  },
+  "effort": {
+    "conservative_controller_unmarked_interval_hold_seconds": 425,
+    "conservative_root_coordination_hold_seconds": 90,
+    "effective_remaining_rule": "ledger.remaining_seconds minus515; closure only",
+    "holds_are_not_precisely_measured_focus": true,
+    "never_release_or_reset": true,
+    "same_aggregate_limit_seconds": 10800,
+    "total_fixed_hold_seconds": 515
+  },
+  "independent_stop_verification": "pending separately named receipt, not kit acceptance",
+  "kind": "phase3b-s2-c2-final-stopped-index-v1",
+  "new_full_main_mock_started": false,
+  "new_real_API_spend_usd": 0,
+  "new_real_held_liability_micro_usd": 0,
+  "new_real_provider_calls": 0,
+  "next": "Close and publish honest stopped status. Future launch correction and remaining runtime acceptance require a separately concrete capacity decision; no retry or fix in this stopped preparation.",
+  "real_keys_requested": false,
+  "references": {
+    "STOPPED_PREPARATION.md": "c57d0c199986f0e09f07780cfefe1af569a8f5fad520acda57da3a34a2cca11f",
+    "boundary-launch-budget-v1.json": "33b20af8b9a19a4640da71f8b3cf0a0087db1df872586c1701ca465bf407d780",
+    "candidate-v3.json": "fea46884c29617d9c254265291dcd0a2d6ec6795c58af36398f1ae083eb0f230",
+    "operator-setup-failure-v1.json": "ca9ce1dff39b830f8096605579771fb3ec086b5fdb751caf8037b7f1617193c9",
+    "prospective-acceptance-v3.json": "c1bcc17ec746ab76faee1358a26940d8e42ffb7d7f3e661dc5e34082582dfcad"
+  },
+  "retry_or_postfreeze_source_fix": false,
+  "reviewed_filemap_unchanged": true,
+  "runtime_or_full_kit_accepted": false,
+  "scientific_phase_complete": false,
+  "source_files": 658,
+  "source_sha256": "ea2e2ad1d1f8e40ce8e0bf2284feb78b84619b998c5ff2485aaf727f311b751a",
+  "status": "stopped_implemented_prospectively_reviewed_runtime_unaccepted",
+  "unit_or_boundary_regression_executed": false
+}

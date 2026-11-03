@@ -150,6 +150,13 @@ SOURCE_INPUTS = (
     "evidence/phase3b-seq2-v1/preacceptance-review-v2.json",
     "evidence/phase3b-seq2-v1/preacceptance-review-v3.json",
     "evidence/phase3b-seq2-v1/package_public.py",
+    "specifications/amendments/phase3b-export-contract-correction-1.0.md",
+    "evidence/phase3b-seq2-c2-v1/authority.json",
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py",
+    "evidence/phase3b-seq2-c2-v1/run_composed.py",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/saved_only_worker_v2.py",
     "PHASE3A_RP2_LIVE_REPORT.md",
     "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.json",
     "evidence/phase3a-readiness-recovery-v1/live-independent-review-v1.json",
@@ -245,6 +252,24 @@ def source_snapshot_policy(files: dict) -> dict:
 
 
 def source_identity() -> dict:
+    amendment = "specifications/amendments/phase3b-export-contract-correction-1.0.md"
+    authority = read(ROOT / "evidence/phase3b-seq2-c2-v1/authority.json")
+    require(authority.get("kind") == "phase3b-s2-c2-direct-authority-v1"
+        and authority.get("reply") == "C2 is approved"
+        and authority.get("definition") == amendment
+        and authority.get("definition_sha256") == file_hash(ROOT / amendment)
+        and authority.get("prior_source_sha256") == "0b154f40fd0418b5d86a218abf23050d9b0db26a2195dbad828a6c6a3f4073aa"
+        and authority.get("prior_study_sha256") == "160fa663c793f3ac0878031f3ffaa9d6db57b4349069bc9460756e147b2b68ee"
+        and authority.get("aggregate_focused_engineering_limit_seconds") == 10800
+        and authority.get("effort_limit_reset") is False
+        and authority.get("additional_focused_engineering_seconds") == 0
+        and authority.get("additional_api_funding_usd") == 0
+        and authority.get("existing_live_usd_ceiling") == 180
+        and authority.get("minimum_supported_live_reserve_seconds") == 1800
+        and authority.get("extra_paid_repetition_authorized") is False
+        and authority.get("fresh_keys_only_after_complete_acceptance") is True
+        and authority.get("scientific_protocol_and_stop_rules_unchanged") is True,
+        "C2 amendment or bounded direct authority differs")
     parent, _ = _parent_source()
     aliases = _readme_alias()
     streams = _offline_streams(parent["files"])

@@ -1,0 +1,56 @@
+{
+  "kind": "p3b-s2-c2-boundary-prospective-cases-v1",
+  "status": "prospective-not-executed",
+  "amendment": "specifications/amendments/phase3b-export-contract-correction-1.0.md",
+  "amendment_sha256": "6b3a65c022cd4fd0ecbb3e3966482d3a78408e62eeb1992b83e45b6746e81453",
+  "authority": "evidence/phase3b-seq2-c2-v1/authority.json",
+  "authority_sha256": "0ecf31c3f532aa2c1ab67731840cdcd639fbe29f7478a61ddfe408947890e2b9",
+  "execution": {
+    "module": "followups.phase3b_seq2_v1.boundary_contract",
+    "prepare": "python -B -m followups.phase3b_seq2_v1.boundary_contract prepare --output /results/phase3b-seq2-v1/VERIFICATION/boundary-contract",
+    "core": "python -B -m followups.phase3b_seq2_v1.boundary_contract core --output /results/phase3b-seq2-v1/VERIFICATION/boundary-contract",
+    "host": "python -B -m followups.phase3b_seq2_v1.boundary_contract host --output C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\VERIFICATION\\boundary-contract",
+    "negative": "python -B -m followups.phase3b_seq2_v1.boundary_contract negative --output C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\VERIFICATION\\boundary-negative",
+    "requirements": [
+      "Replace VERIFICATION with one reviewed fresh verification root before execution.",
+      "Prepare/core run only in actual inspected ordinary H1 NETnone/read-only-source runtime; host runs separately credential-free.",
+      "Run core and host concurrently after preparation; retain actual process/container ownership, outputs and cleanup.",
+      "No runtime starts before independent prospective review.",
+      "prepare(boundary_fixture=True, supervised_fixture=True) creates an explicit distinct boundary-only identity, rejected by ordinary preflight/run and provider grants. No namespace moves or reuse.",
+      "Actual original 600-second checkpoint windows and actual I1 ownership/ACK/stop checks remain unchanged."
+    ]
+  },
+  "positive_cases": [
+    "P1: actual fresh workflow.prepare(supervised_fixture=True, boundary_fixture=True), fixture grant and absent canonical journal; no generation or assessment dispatch.",
+    "P2: actual first-pair _visibility_checkpoint spawns real canonical worker, validates empty financial/saved state, publishes reports and immutable twelve-missing-target snapshot, and emits strict S2 request.",
+    "P3: separate real host_export validates actual request/bindings/deadline, atomically claims real owner, executes actual SDK-free network-none I1 exporter, publishes actual ACK only after stop/cleanup.",
+    "P4: actual waiting core consumes real ACK, accepts strict S2 result, settles real claimed owner and publishes complete canonical/visibility status with reports and stopped worker.",
+    "P5: repeat same actual path for closure in its independent original window; neither checkpoint patches producer, consumer, collection, snapshot, ACK, owner or success return.",
+    "P6: journal remains empty, attempts zero, fixture true, scientific_complete false; request bytes unchanged; actual status/request/result/owner hashes retained."
+  ],
+  "negative_coverage_required_from_controller_tests": [
+    "Boundary-only study rejected by ordinary preflight and workflow.run before any transport/provider construction; provider grant forbidden; boundary_fixture=True without supervised_fixture=True rejected.",
+    "Legacy RP2 request rejected by real host pre-container validation.",
+    "Legacy result and owner rejected by real strict core settlement, no alias acceptance.",
+    "Wrong study/checkpoint/snapshot/deadline bindings rejected.",
+    "Expired or <=15-second request creates no exporter; real tombstone blocks late owner claim.",
+    "Claimed exporter with missing or unstopped ACK fails canonical settlement.",
+    "Expired-without-exporter closed owner settles honestly without success or renewed clock."
+  ],
+  "actual_host_negative_mode": {
+    "count": 16,
+    "checkpoints": ["first-pair", "closure"],
+    "cases_per_checkpoint": ["legacy-request", "wrong-study", "wrong-checkpoint", "wrong-snapshot", "invalid-deadline", "expired", "late", "tombstone"],
+    "construction": "Each case uses a unique hash-derived synthetic study ID, actual fixture_records(no_calls=True), recursive identity replacement, real build_snapshot/publish_snapshot and request paths. Existing failures are untouched.",
+    "execution": "Actual host_export; only _host_command is patched fail-before-action/counted. No Docker or I1 command may be attempted. No positive ACK is supplied.",
+    "prevalidation": "Legacy/binding/invalid>600s requests must raise ProjectionError before output and ACK creation.",
+    "expiry": "Expired and <=15s remaining windows must produce actual timeout with closed_without_export owner and actual timeout ACK, zero commands.",
+    "lateclaim": "Existing actual atomic S2 closed_without_export tombstone must remain byte-identical; host reports ownership already claimed/stopped false and produces no ACK.",
+    "preservation": "Every negative's original request bytes remain identical; all command counters zero."
+  },
+  "exclusions": [
+    "No code/test/export/mock runtime executed by preparing this file.",
+    "No generated pairs, hand-written positive ACK, fake successful boundary return, live calls, credentials, dependencies or heavy Inspect import into H1.",
+    "Thin regression does not replace current-source whole matrix, fresh S13, twelve groups, source/history/archive/cold acceptance."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "phase3b-s2-c2-direct-authority-v1",
+  "recorded_at_utc": "2026-11-03T16:38:39+00:00",
+  "authority": "Direct user message in the current chat",
+  "reply": "C2 is approved",
+  "definition": "specifications/amendments/phase3b-export-contract-correction-1.0.md",
+  "definition_sha256": "6b3a65c022cd4fd0ecbb3e3966482d3a78408e62eeb1992b83e45b6746e81453",
+  "prior_source_sha256": "0b154f40fd0418b5d86a218abf23050d9b0db26a2195dbad828a6c6a3f4073aa",
+  "prior_study_sha256": "160fa663c793f3ac0878031f3ffaa9d6db57b4349069bc9460756e147b2b68ee",
+  "scope": "The defined narrow source/test/identity correction and one fresh complete current-source offline acceptance attempt, including a new main mock matrix. The original single paid pilot remains conditional on complete acceptance and supported supervision/closure capacity.",
+  "aggregate_focused_engineering_limit_seconds": 10800,
+  "effort_ledger": "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/effort",
+  "effort_limit_reset": false,
+  "additional_focused_engineering_seconds": 0,
+  "additional_api_funding_usd": 0,
+  "offline_api_cost_usd": 0,
+  "existing_live_usd_ceiling": 180,
+  "minimum_supported_live_reserve_seconds": 1800,
+  "extra_paid_repetition_authorized": false,
+  "fresh_keys_only_after_complete_acceptance": true,
+  "scientific_protocol_and_stop_rules_unchanged": true
+}

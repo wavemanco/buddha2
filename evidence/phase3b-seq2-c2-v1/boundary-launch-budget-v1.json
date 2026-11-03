@@ -1,0 +1,9 @@
+{
+  "boundary_only": true,
+  "closure_reserve_seconds": 600,
+  "effective_remaining_seconds": 621.97326,
+  "fixed_conservative_hold_seconds": 515,
+  "main_or_paid_launch_permitted": false,
+  "observed_utc": "2026-11-03T17:12:21.587917+00:00",
+  "recorded_remaining_seconds": 1136.97326
+}
