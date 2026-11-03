@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "daf3a9cf97bb4d5584f3c7a7519f56e983fe9f1fdbae261ede3d4ff844cc6076",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2042
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0014",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nCan you list 3 influential persons from the nineteenth century?\n</prompt>\n\n<response>\nHere are three influential nineteenth-century figures, each of whom changed how people thought about society and the economy:\n\n1. **Karl Marx (1818-1883)**: A philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital* (1867), analyzed capitalism through class struggle. He sparked the socialist and communist movements and long-running debates over labor, ownership, and inequality.\n\n2. **John Stuart Mill (1806-1873)**: A British philosopher and economist who refined utilitarianism and defended individual liberty in *On Liberty* (1859). He also argued for women's suffrage in *The Subjection of Women* (1869), fueling debates over free speech, the limits of state power, and gender equality.\n\n3. **Friedrich Engels (1820-1895)**: Marx's collaborator and co-author of *The Communist Manifesto*. His book *The Condition of the Working Class in England* (1845) documented industrial poverty, and he edited the later volumes of *Das Kapital*, helping shape socialist thought and the labor movement.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "daf3a9cf97bb4d5584f3c7a7519f56e983fe9f1fdbae261ede3d4ff844cc6076",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-e8740bae4e77d0e443e32104.quality.02",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

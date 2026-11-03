@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "0cfc8e3d54b4c04b7535904bf081448d463e1ed4a48cc34649f6890a645e9937",
+  "portfolio_id": "portfolio-6100deabe7767af17f851e2d84bf333fd33e06a22b38ecdcbbbdcf2fd2244cf6",
+  "portfolio_sha256": "ed22404ad53e082816c725b272318708e640ff76d741c761287f4989a8d3741e",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-3e69502c36a8f49c102f64ed.plan",
+      "p2-3e69502c36a8f49c102f64ed.answer.00",
+      "p2-3e69502c36a8f49c102f64ed.answer.01",
+      "p2-3e69502c36a8f49c102f64ed.answer.02",
+      "p2-3e69502c36a8f49c102f64ed.answer.03",
+      "p2-3e69502c36a8f49c102f64ed.answer.04",
+      "p2-3e69502c36a8f49c102f64ed.answer.05",
+      "p2-3e69502c36a8f49c102f64ed.answer.06",
+      "p2-3e69502c36a8f49c102f64ed.answer.07",
+      "p2-3e69502c36a8f49c102f64ed.answer.08",
+      "p2-3e69502c36a8f49c102f64ed.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-392d51f5bd32e784634ac3aa",
+      "index": 0,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.00",
+      "status": "ok",
+      "text_sha256": "d0fcecdb4347062d26202ccf842832d13b7eac3063532fd7010284b632137c73"
+    },
+    {
+      "id": "response-42a2ab0bdc6b32c83fc8c2d1",
+      "index": 1,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.01",
+      "status": "ok",
+      "text_sha256": "0bdf3cc7060603b7f41cc800239746220db37120af9280e2650ab56cec5d4a7a"
+    },
+    {
+      "id": "response-c6a37857f40cdcb58e2cf5a8",
+      "index": 2,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.02",
+      "status": "ok",
+      "text_sha256": "87fc481e58942c2db0f112848bd825fd3a4c1df42c86fb721396d84a91e1ca44"
+    },
+    {
+      "id": "response-87c8c7249d875d89717b402e",
+      "index": 3,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.03",
+      "status": "ok",
+      "text_sha256": "1fd8f9731b9ef21199e5659917974e78d782a94f362f27fbb38d72d347455daf"
+    },
+    {
+      "id": "response-3da2a65d46911fc79eb6b0c8",
+      "index": 4,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.04",
+      "status": "ok",
+      "text_sha256": "7c066f6e8c4d79e222302e138b8e1946172c4f5bca9984e973f13a5d919b99a0"
+    },
+    {
+      "id": "response-33f1ab814193c11065824365",
+      "index": 5,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.05",
+      "status": "ok",
+      "text_sha256": "a68cb086c25cdfd2fe82580a1b6017d90e85c066ac78f01293d64c6741dc8fb2"
+    },
+    {
+      "id": "response-a6ed23cb7bbc54e01bf5af92",
+      "index": 6,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.06",
+      "status": "ok",
+      "text_sha256": "3dd38cb7ef0d0d20e18e6d13c8318703f29a29e8058e2e795c23d40332729887"
+    },
+    {
+      "id": "response-3e811ab35aef6abb1f57b82e",
+      "index": 7,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.07",
+      "status": "ok",
+      "text_sha256": "9f985eaf3446d3c5e00ddece542ebbff2b1a5746e1077d386c7995e951e9cae9"
+    },
+    {
+      "id": "response-e36ae471d1b5326cfb4cbaf6",
+      "index": 8,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.08",
+      "status": "ok",
+      "text_sha256": "e931ac49f106d5ac9f6976a04eb99c5f140b858e9a4e9a6b67d7e2fdcd2f2082"
+    },
+    {
+      "id": "response-7d07f81e464b6d54dfc58f49",
+      "index": 9,
+      "request_id": "p2-3e69502c36a8f49c102f64ed.answer.09",
+      "status": "ok",
+      "text_sha256": "9b693f2e396f1a58c0b5a0dde6d1d5879e41a2fd4a0e7af10fa660a013e72170"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-6584de30a11a0e08ca32",
+    "prompt": "Suggest a strong 4 character password.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-96"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "phase3b-s2-packet-json-cases-v1",
+  "scope": "S2-4 file trust boundary; no experiment/model/budget change",
+  "frozen_before_product_edit": true,
+  "cases": [
+    {"id": "PJ01", "input": "duplicate object key", "expected": "reject"},
+    {"id": "PJ02", "input": "NaN or Infinity", "expected": "reject"},
+    {"id": "PJ03", "input": "non-object top level", "expected": "reject"},
+    {"id": "PJ04", "input": "ordinary finite object", "expected": "read unchanged"}
+  ],
+  "provider_calls": 0
+}

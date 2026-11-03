@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "d8a20462f6f7b4e7eaacb175caf6636ec7cafd11951e23b13b68d9678ef69d8a",
+  "portfolio_id": "portfolio-bb95858a6339dd8067f6370d0b216ff188140bec4b4d624ea43d72369628b33b",
+  "portfolio_sha256": "825919a6eacf2316f1316587bfa3aad439ba116283962a760bc0be0c09ba01d1",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-b506a38daed7edcd4fb09715.answer.00",
+      "p2-b506a38daed7edcd4fb09715.answer.01",
+      "p2-b506a38daed7edcd4fb09715.answer.02",
+      "p2-b506a38daed7edcd4fb09715.answer.03",
+      "p2-b506a38daed7edcd4fb09715.answer.04",
+      "p2-b506a38daed7edcd4fb09715.answer.05",
+      "p2-b506a38daed7edcd4fb09715.answer.06",
+      "p2-b506a38daed7edcd4fb09715.answer.07",
+      "p2-b506a38daed7edcd4fb09715.answer.08",
+      "p2-b506a38daed7edcd4fb09715.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f9e599fa0fc0a0fdedb7b5cd",
+      "index": 0,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.00",
+      "status": "ok",
+      "text_sha256": "ea48a25aac9b6e78a0c6eb9a8dc04f09bf452d12621ce6a3ccc2bbb0bde9a585"
+    },
+    {
+      "id": "response-ed317421abc68585b3889d0b",
+      "index": 1,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.01",
+      "status": "ok",
+      "text_sha256": "776c0430320eeb24924eac999e714167a552cbd9d7e46d60c8209ff3211f5aed"
+    },
+    {
+      "id": "response-14ea1c1448d81ba95bf3ff05",
+      "index": 2,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.02",
+      "status": "ok",
+      "text_sha256": "e92080424eae889e1bdf13d7fc4652b70f830cc9e792cef6cc557ce97408c0f2"
+    },
+    {
+      "id": "response-3b2869a1e272f699e312b6f1",
+      "index": 3,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.03",
+      "status": "ok",
+      "text_sha256": "9495195c027b6c20ccb406d719e3a158dc3eae907afd4606d73de1676a9db384"
+    },
+    {
+      "id": "response-01e1588847393eabaa33b9c9",
+      "index": 4,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.04",
+      "status": "ok",
+      "text_sha256": "a5864ca9bf786f937cf2fdef02fdfd94deeeaa938411fa419714244e86cec931"
+    },
+    {
+      "id": "response-bccf83f44c428562a7797f37",
+      "index": 5,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.05",
+      "status": "ok",
+      "text_sha256": "ce4260890006ee1c72ad37f13fc09e43b9f023a827a20aca0ade43a020f34d31"
+    },
+    {
+      "id": "response-884300853cbcd753ac781dcb",
+      "index": 6,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.06",
+      "status": "ok",
+      "text_sha256": "ba3810d86604e1b18e47736765895073d116dc7ad28f45494ce260d8bda52cda"
+    },
+    {
+      "id": "response-ef86ffe5d0c17428c7cf6e74",
+      "index": 7,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.07",
+      "status": "ok",
+      "text_sha256": "bcd19cc660b04b8c527a5b8db0e642e5cca787de7111b92ed1d812f50fa38f86"
+    },
+    {
+      "id": "response-026ac89db91f7ebcbfa6677e",
+      "index": 8,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.08",
+      "status": "ok",
+      "text_sha256": "4e2dc03d0d63b438ea7e9a52f121a1b4e6572a2be96ac6cc43d97ba04587a77a"
+    },
+    {
+      "id": "response-7c0bbc4a1901fc5a801ebbcf",
+      "index": 9,
+      "request_id": "p2-b506a38daed7edcd4fb09715.answer.09",
+      "status": "ok",
+      "text_sha256": "01b11147597d9ba87ae63b3f034354c38e105ba91dccb5c27403d4f902218fba"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-055c45e37c6c14cca664",
+    "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-17"
+    }
+  }
+}

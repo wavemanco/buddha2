@@ -1,0 +1,80 @@
+{
+  "kind": "am1-offline-follow-up-closeout",
+  "execution_specification": "0.16",
+  "closure_specification": "0.17",
+  "parent_commit": "b149953",
+  "status": "complete-offline-candidate",
+  "evidence_gate": "pass-for-declared-public-payg-profile",
+  "evidence_seconds": 358,
+  "candidate_study_sha256": "d4287971e712a15a08ffba0e8e1de3b1bcd89e8f5c7e049c860fde02e1910475",
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "candidate_source_files": 22,
+  "verification": {
+    "project_tests": 230,
+    "project_test_seconds": 698.445,
+    "project_suite": "runtime/full-suite.json",
+    "focused_tests": 34,
+    "focused_seconds": 97.021,
+    "upstream_tests": 5,
+    "static_checks": "runtime/final-checks.json",
+    "ruff": "pass",
+    "mypy": "pass-22-source-files",
+    "bandit": "pass-configured-medium-high-check",
+    "dependency_compatibility": "pass",
+    "historical_source_replay": "pass",
+    "missing_credential_cases": 4
+  },
+  "retained_mock_examples": {
+    "distinct": {
+      "http_attempts": 55,
+      "assessments": 3,
+      "snapshot_sha256": "ecfbd5d0fe9fe7f19ea312efb412d8b69732a18fbc406ca8262ea830abc738c3",
+      "unchanged_resume_new_http_attempts": 0,
+      "synthetic_cost_micro_usd": 42873
+    },
+    "pairs": {
+      "http_attempts": 40,
+      "assessments": 3,
+      "snapshot_sha256": "a6e8bf13a7b2e83ef4932bead8233e860c3e8d238383e94bf414b2986393f26f",
+      "not_needed_nonheads": 15,
+      "synthetic_cost_micro_usd": 26373
+    },
+    "each_remaining_request_slots": 1265,
+    "each_missing_study_assessments": 69,
+    "decision": "inconclusive",
+    "selected_seed": null,
+    "outstanding_reservations_micro_usd": 0
+  },
+  "offline_candidate_ready": true,
+  "public_cli_offline_only": true,
+  "provider_enabled_host_launcher_built": false,
+  "live_launch_ready": false,
+  "live_account_or_model_access_verified": false,
+  "account_billing_profile_verified": false,
+  "live_invoice_or_effectiveness_verified": false,
+  "provider_requests": 0,
+  "token_count_requests": 0,
+  "model_list_or_auth_probes": 0,
+  "real_credential_access": false,
+  "actual_human_ratings": 0,
+  "api_spend_micro_usd": 0,
+  "phase2b_started": false,
+  "phase2b_authorized": false,
+  "paid_grant": null,
+  "route_h_started": false,
+  "crpo_deferred": true,
+  "original_folder_accessed": false,
+  "historical_014_no_go_preserved": true,
+  "preservation_exception": "The mutable working runs/checks/bandit.json was overwritten by the early standard check. Before/after hashes and its absence from frozen historical manifests are disclosed in acceptance-review.json. Frozen prior evidence/results/upstreams/locks remain unchanged.",
+  "remaining_before_paid_execution": [
+    "Separately define and verify the provider-enabled host launcher against the frozen candidate, including actual immutable image and physical mount inspection, explicit keys and canonical journal.",
+    "Confirm current public PAYG model/pricing/profile/account prerequisites and obtain a separate study/control/billing-bound grant with an explicit ceiling.",
+    "Run only the counted first task/repeat-1 block, preserving failures/liabilities, then review before any expansion."
+  ],
+  "handoff_hashes": {
+    "evidence/phase2-am1-r016/acceptance-review.json": "10bae0c394c6d10abf3ffdb059325c0a5f5b24d7c04ccaefabec69e9e1f00f50",
+    "evidence/phase2-am1-r016/final-billing-code-review.json": "35fc8b25e9e466628554cc55f5a999fb3b744dffb874b608c59ea25de82f70e3",
+    "PHASE2_AM1_REPORT.md": "b01be6a3869075ab937d9d59597c8930aa2874b40b268026a9efaddbe0fc7150",
+    "specifications/archive/phase-definitions-0.16.md": "0fd3c67a6d891910492ab91ab26200a1ed3707434b51f28a0ea082113f30af5c"
+  }
+}

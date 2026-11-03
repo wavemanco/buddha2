@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "865861db8b6ea9bf63288a1a621119646f084297ecf97a797dc0948e28155461",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 2.0165224492830083
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        9
+      ],
+      "utility": 2.0165224492830083
+    },
+    "generation_row": {
+      "generations": [
+        "When big-city event planner Maggie Doyle inherits her late grandmother's failing farm in Clover Creek, Kansas, she plans to sell it quickly, but the sale is contingent on her running the town's beloved Easter egg festival one last time. Her only help comes from Wyatt Brennan, the stubborn neighboring farmer and festival volunteer coordinator, who thinks she's a flighty outsider with no respect for tradition. As they clash over everything from egg-hunt logistics to a runaway flock of goats, the two begin to bond over late-night baking sessions and Maggie's growing appreciation for the close-knit community. Just as sparks fly, Wyatt discovers that Maggie's buyer is a developer planning to turn the land into a distribution center, and he angrily calls off their budding romance right before the festival. On Easter morning, Maggie tears up the sale contract in front of the whole town, saves the festival, and wins Wyatt back with a heartfelt apology and a golden egg hidden just for him.",
+        "When big-city event planner Maddie Collins is sent to tiny Pickett Creek, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork. Instead, she collides with Cal Hutchins, the stubborn local vet and neighbor, who is determined to keep the farm alive and the town's beloved Easter egg hunt going. When the church committee learns Maddie's planning background, they rope her into saving the hunt after a storm wrecks the town's decorations, and she and Cal reluctantly team up. Between runaway lambs, a disastrous pie contest, and late-night repairs in the barn, their bickering turns to real chemistry, until Cal discovers Maddie's real task was to sell the land to a developer. Heartbroken, Cal pulls away, but on Easter morning Maddie tears up the sale papers in front of the whole town, and the two reunite amid a field of pastel eggs and a very confused goat.",
+        "**Title: \"Hop to It\"**\n\nWhen big-city event planner Maggie Doyle is sent to the tiny town of Pleasant Prairie, Kansas, to shut down its struggling Easter festival for her company's new development deal, she expects a quick weekend trip. Instead, she's paired with Cal Hutchins, a stubborn local farmer and the festival's volunteer chairman, who's determined to save the 75-year-old tradition, including its legendary egg hunt across his family's wheat fields. As a freak spring storm strands Maggie in town, she gets pulled into a chaotic mix of runaway lambs, a feuding church-bake-sale rivalry, and a costume mishap that leaves her stuck in the Easter Bunny suit. Between muddy tractor rides and late-night pie-making, Maggie and Cal fall for each other, just as Cal discovers her real reason for being there. Heartbroken, Maggie returns to the city but ultimately defies her boss, rallies the town to save the festival, and reunites with Cal amid a field of pastel eggs on Easter morning.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's struggling farm in Pickett, Kansas, she plans to sell it quickly, but the will requires her to host the town's beloved Easter egg hunt first. She clashes immediately with Cal Whitaker, the stubborn, soft-hearted neighbor and local veterinarian who has run the hunt for years and doesn't trust her to respect the tradition. Forced to work together, they weather mishaps like a runaway flock of lambs, a rained-out egg-dyeing party, and a mix-up involving 3,000 plastic eggs and one very determined goat. As Maggie rediscovers her grandmother's recipes and old friendships, she realizes she's falling for both the town and Cal, just as a developer offers her a deal that would erase the farm forever. On Easter morning, she tears up the contract in front of the whole community, and she and Cal share a kiss among the pastel-covered fields as the children's laughter fills the air.",
+        "When big-city event planner Nora Bell is sent to tiny Plum Hollow, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork. Instead, she finds herself roped into the town's beloved Easter egg festival by Cal Hutchins, the charming but stubborn local veterinarian who is determined to keep the farm, and the festival, alive. As the two clash over everything from marketing ideas to a runaway flock of Easter-dyed chicks, their bickering slowly turns into late-night barn-decorating sessions and unexpected flirtation. Just as sparks fly, Nora discovers that her boss plans to sell the land to developers, and Cal learns of it before she can explain, leaving him feeling betrayed. On Easter morning, Nora defies her company, rallies the town to save the festival, and races across a field of pastel eggs to find Cal, where a muddy, heartfelt apology leads to a kiss and her decision to stay in Plum Hollow.",
+        "**Title: \"Hop to It\"**\n\nWhen big-city event planner Nora Bell is sent to tiny Pleasant Creek, Kansas, to sell her late grandmother's farmhouse, she discovers the property is promised to the town's beloved Easter egg hunt, a 100-year tradition. Her grandmother's neighbor, Wade Mercer, a stubborn, sweet-natured farmer and this year's hunt organizer, begs her to delay the sale until after the holiday. Nora reluctantly agrees, but she quickly finds herself roped into dyeing hundreds of eggs, wrangling a runaway lamb, and rescuing the failing church potluck with her surprisingly good pie crust. As sparks fly between the two amid muddy fields and blooming prairie wildflowers, Nora learns that a secret clause in her grandmother's will could save the farm, but only if she stays. On Easter morning, with a buyer waiting and the whole town watching, Nora tears up the contract, hides one last golden egg for Wade to find, and chooses a life of love and community in Kansas.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's rundown farmhouse in Cottonwood Falls, Kansas, she plans to sell it quickly, until she learns the town's beloved Easter egg festival will be canceled without her grandmother's leadership. Reluctantly, she teams up with Wes Calloway, a stubborn local veterinarian and the festival's last volunteer, who clashes with her modern ideas at every turn. As they wrangle runaway lambs, a temperamental Easter Bunny costume, and a surprise prairie thunderstorm, their bickering slowly turns to flirtation. Just as sparks fly, Maggie discovers that Wes has been secretly turning down a buyer for the farmhouse, and a misunderstanding sends her storming back to Chicago the night before the festival. After finding a hidden recipe card and a heartfelt letter from her grandmother, Maggie races home on Easter morning, saves the festival, and wins Wes's heart with a kiss beneath the blooming redbuds.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's failing farm in Pleasant Hollow, Kansas, she plans to sell it quickly, but she learns the property is tied to the town's beloved annual Easter egg hunt and sunrise service. Local veterinarian and reluctant hunt organizer Cole Whitaker, who has been quietly helping keep the farm running, clashes with Maggie when he discovers she's already talked to a developer. To save face and win the town's trust, Maggie agrees to help Cole revive the festival, leading to a chaotic string of mishaps involving escaped lambs, a sabotaged pie contest, and a very persistent rooster. As they work side by side, their bickering turns into real affection, until the developer's offer resurfaces and Cole discovers Maggie hasn't turned it down yet. On Easter morning, Maggie rejects the deal in front of the whole town, and the film ends with her and Cole sharing a kiss in the sunrise-lit field as the children scramble for eggs.",
+        "When big-city pastry chef Maddie Reyes inherits her late grandmother's struggling bakery in tiny Pleasant Grove, Kansas, she plans to sell it quickly and return to Chicago before Easter. Her plans collide with Jake Holloway, a stubborn local farmer and head of the town's Easter festival committee, who needs the bakery's famous hot cross buns and sugar-lamb cakes to save the beloved annual egg hunt from cancellation. Reluctantly, Maddie agrees to stay through the holiday, and the two clash over everything from recipes to runaway chickens while slowly discovering a spark between them. As Maddie rediscovers her grandmother's handwritten recipes and the warmth of the community, she starts to question whether the life she left behind was ever truly hers. Just as Jake works up the courage to confess his feelings, Maddie's dream job offer arrives, but on Easter morning, with the whole town gathered in the sunrise-lit field, she chooses to stay and share a kiss with Jake among a flurry of pastel eggs.",
+        "**Title: *Hop to It***\n\nWhen big-city event planner Maddie Cole is sent to tiny Pickering, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork and goodbyes. Instead, she's roped into running the town's legendary Easter egg hunt by Sam Whitaker, the charming, flannel-wearing veterinarian who has organized it for years and refuses to let tradition die. As the two clash over everything from budgets to a runaway flock of rented bunnies, their bickering slowly turns into late-night barn repairs, shared pie, and a growing spark neither wants to admit. Just when Maddie begins to feel at home, her boss arrives with a lucrative buyout offer, and Sam discovers she has been hiding that the sale is almost final. After a heartfelt confession in the middle of the Easter sunrise service, Maddie tears up the contract, rallies the town to save the farm, and shares a sweet kiss with Sam among a field of scattered pastel eggs."
+      ],
+      "id": "nb-curated-0ac59a48456661d0d8d5",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter."
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "When big-city event planner Maggie Doyle inherits her late grandmother's failing farm in Clover Creek, Kansas, she plans to sell it quickly, but the sale is contingent on her running the town's beloved Easter egg festival one last time. Her only help comes from Wyatt Brennan, the stubborn neighboring farmer and festival volunteer coordinator, who thinks she's a flighty outsider with no respect for tradition. As they clash over everything from egg-hunt logistics to a runaway flock of goats, the two begin to bond over late-night baking sessions and Maggie's growing appreciation for the close-knit community. Just as sparks fly, Wyatt discovers that Maggie's buyer is a developer planning to turn the land into a distribution center, and he angrily calls off their budding romance right before the festival. On Easter morning, Maggie tears up the sale contract in front of the whole town, saves the festival, and wins Wyatt back with a heartfelt apology and a golden egg hidden just for him.",
+        "When big-city event planner Maddie Collins is sent to tiny Pickett Creek, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork. Instead, she collides with Cal Hutchins, the stubborn local vet and neighbor, who is determined to keep the farm alive and the town's beloved Easter egg hunt going. When the church committee learns Maddie's planning background, they rope her into saving the hunt after a storm wrecks the town's decorations, and she and Cal reluctantly team up. Between runaway lambs, a disastrous pie contest, and late-night repairs in the barn, their bickering turns to real chemistry, until Cal discovers Maddie's real task was to sell the land to a developer. Heartbroken, Cal pulls away, but on Easter morning Maddie tears up the sale papers in front of the whole town, and the two reunite amid a field of pastel eggs and a very confused goat.",
+        "**Title: \"Hop to It\"**\n\nWhen big-city event planner Maggie Doyle is sent to the tiny town of Pleasant Prairie, Kansas, to shut down its struggling Easter festival for her company's new development deal, she expects a quick weekend trip. Instead, she's paired with Cal Hutchins, a stubborn local farmer and the festival's volunteer chairman, who's determined to save the 75-year-old tradition, including its legendary egg hunt across his family's wheat fields. As a freak spring storm strands Maggie in town, she gets pulled into a chaotic mix of runaway lambs, a feuding church-bake-sale rivalry, and a costume mishap that leaves her stuck in the Easter Bunny suit. Between muddy tractor rides and late-night pie-making, Maggie and Cal fall for each other, just as Cal discovers her real reason for being there. Heartbroken, Maggie returns to the city but ultimately defies her boss, rallies the town to save the festival, and reunites with Cal amid a field of pastel eggs on Easter morning.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's struggling farm in Pickett, Kansas, she plans to sell it quickly, but the will requires her to host the town's beloved Easter egg hunt first. She clashes immediately with Cal Whitaker, the stubborn, soft-hearted neighbor and local veterinarian who has run the hunt for years and doesn't trust her to respect the tradition. Forced to work together, they weather mishaps like a runaway flock of lambs, a rained-out egg-dyeing party, and a mix-up involving 3,000 plastic eggs and one very determined goat. As Maggie rediscovers her grandmother's recipes and old friendships, she realizes she's falling for both the town and Cal, just as a developer offers her a deal that would erase the farm forever. On Easter morning, she tears up the contract in front of the whole community, and she and Cal share a kiss among the pastel-covered fields as the children's laughter fills the air.",
+        "When big-city event planner Nora Bell is sent to tiny Plum Hollow, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork. Instead, she finds herself roped into the town's beloved Easter egg festival by Cal Hutchins, the charming but stubborn local veterinarian who is determined to keep the farm, and the festival, alive. As the two clash over everything from marketing ideas to a runaway flock of Easter-dyed chicks, their bickering slowly turns into late-night barn-decorating sessions and unexpected flirtation. Just as sparks fly, Nora discovers that her boss plans to sell the land to developers, and Cal learns of it before she can explain, leaving him feeling betrayed. On Easter morning, Nora defies her company, rallies the town to save the festival, and races across a field of pastel eggs to find Cal, where a muddy, heartfelt apology leads to a kiss and her decision to stay in Plum Hollow.",
+        "**Title: \"Hop to It\"**\n\nWhen big-city event planner Nora Bell is sent to tiny Pleasant Creek, Kansas, to sell her late grandmother's farmhouse, she discovers the property is promised to the town's beloved Easter egg hunt, a 100-year tradition. Her grandmother's neighbor, Wade Mercer, a stubborn, sweet-natured farmer and this year's hunt organizer, begs her to delay the sale until after the holiday. Nora reluctantly agrees, but she quickly finds herself roped into dyeing hundreds of eggs, wrangling a runaway lamb, and rescuing the failing church potluck with her surprisingly good pie crust. As sparks fly between the two amid muddy fields and blooming prairie wildflowers, Nora learns that a secret clause in her grandmother's will could save the farm, but only if she stays. On Easter morning, with a buyer waiting and the whole town watching, Nora tears up the contract, hides one last golden egg for Wade to find, and chooses a life of love and community in Kansas.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's rundown farmhouse in Cottonwood Falls, Kansas, she plans to sell it quickly, until she learns the town's beloved Easter egg festival will be canceled without her grandmother's leadership. Reluctantly, she teams up with Wes Calloway, a stubborn local veterinarian and the festival's last volunteer, who clashes with her modern ideas at every turn. As they wrangle runaway lambs, a temperamental Easter Bunny costume, and a surprise prairie thunderstorm, their bickering slowly turns to flirtation. Just as sparks fly, Maggie discovers that Wes has been secretly turning down a buyer for the farmhouse, and a misunderstanding sends her storming back to Chicago the night before the festival. After finding a hidden recipe card and a heartfelt letter from her grandmother, Maggie races home on Easter morning, saves the festival, and wins Wes's heart with a kiss beneath the blooming redbuds.",
+        "When big-city event planner Maggie Doyle inherits her late grandmother's failing farm in Pleasant Hollow, Kansas, she plans to sell it quickly, but she learns the property is tied to the town's beloved annual Easter egg hunt and sunrise service. Local veterinarian and reluctant hunt organizer Cole Whitaker, who has been quietly helping keep the farm running, clashes with Maggie when he discovers she's already talked to a developer. To save face and win the town's trust, Maggie agrees to help Cole revive the festival, leading to a chaotic string of mishaps involving escaped lambs, a sabotaged pie contest, and a very persistent rooster. As they work side by side, their bickering turns into real affection, until the developer's offer resurfaces and Cole discovers Maggie hasn't turned it down yet. On Easter morning, Maggie rejects the deal in front of the whole town, and the film ends with her and Cole sharing a kiss in the sunrise-lit field as the children scramble for eggs.",
+        "When big-city pastry chef Maddie Reyes inherits her late grandmother's struggling bakery in tiny Pleasant Grove, Kansas, she plans to sell it quickly and return to Chicago before Easter. Her plans collide with Jake Holloway, a stubborn local farmer and head of the town's Easter festival committee, who needs the bakery's famous hot cross buns and sugar-lamb cakes to save the beloved annual egg hunt from cancellation. Reluctantly, Maddie agrees to stay through the holiday, and the two clash over everything from recipes to runaway chickens while slowly discovering a spark between them. As Maddie rediscovers her grandmother's handwritten recipes and the warmth of the community, she starts to question whether the life she left behind was ever truly hers. Just as Jake works up the courage to confess his feelings, Maddie's dream job offer arrives, but on Easter morning, with the whole town gathered in the sunrise-lit field, she chooses to stay and share a kiss with Jake among a flurry of pastel eggs.",
+        "**Title: *Hop to It***\n\nWhen big-city event planner Maddie Cole is sent to tiny Pickering, Kansas, to shut down her late grandmother's struggling farm before Easter, she expects a quick weekend of paperwork and goodbyes. Instead, she's roped into running the town's legendary Easter egg hunt by Sam Whitaker, the charming, flannel-wearing veterinarian who has organized it for years and refuses to let tradition die. As the two clash over everything from budgets to a runaway flock of rented bunnies, their bickering slowly turns into late-night barn repairs, shared pie, and a growing spark neither wants to admit. Just when Maddie begins to feel at home, her boss arrives with a lucrative buyout offer, and Sam discovers she has been hiding that the sale is almost final. After a heartfelt confession in the middle of the Easter sunrise service, Maddie tears up the contract, rallies the town to save the farm, and shares a sweet kiss with Sam among a field of scattered pastel eggs."
+      ],
+      "id": "nb-curated-0ac59a48456661d0d8d5",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "850cf0d9735b2b7667a76c8db90f6f30d36ab6c0e6b4b14c1682260f779a690a",
+      "partition_scores": [
+        9
+      ],
+      "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "561829621d343b1793066a6ab6afc783e6551388624f483806d05954edeaeed6",
+      "utility": 2.0165224492830083
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 2.0165224492830083,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "ec301a510826b577debc13119ef62c3f94371e01f49cf2e0f188d2b919ea4504",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0079",
+      "fixture": false,
+      "intent_sha256": "b11c31fe018bcc24524acee9e203c5281c602e0e6a0cf856cb689a413a1e064c",
+      "request_sha256": "408c18fbd64062ffeee3626a7abf733726577f20437acac1adfd625d5ccdff35",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 7.484320158997434,
+        "message_id": "chatcmpl-EdvnG5W21YylqlAPlp1nNZngqVn51",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 549,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 512,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2240,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2237,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2789
+        },
+        "refusal": null,
+        "request_id": "req_8ee76568bfbe4fe5ae50df8b25a1d341",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2237,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2237,
+            "cached_tokens": 0
+          },
+          "output_tokens": 549,
+          "output_tokens_details": {
+            "reasoning_tokens": 512
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-167f3c31d05a5f0091faed4d.group",
+      "spent_micro_usd": 1341,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0080",
+      "fixture": false,
+      "intent_sha256": "f594c7b63f01a0bcef572427ae6eafffb8fd6cc8af8955ac20cea2679e291328",
+      "request_sha256": "e154126f34d3bace1f5c06f16b4cc990d2661b8c5817e43999b3a57e99bafb66",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.191924109996762,
+        "message_id": "msg_011CgUXeJMkh6curxr4R2akN",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXeHzviKgPHqaVN5KCK",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 785,
+          "output_tokens": 138,
+          "output_tokens_details": {
+            "thinking_tokens": 129
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-167f3c31d05a5f0091faed4d.quality.00",
+      "spent_micro_usd": 8113,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-0ac59a48456661d0d8d5"
+}

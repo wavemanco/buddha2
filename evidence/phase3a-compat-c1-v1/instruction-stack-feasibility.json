@@ -1,0 +1,23 @@
+{
+  "decision": "supported narrow configuration seam; same declared authoring-policy correction",
+  "findings": [
+    "OpenCode default system mandated unavailable TodoWrite and Task tools.",
+    "Scripted route did not deliver MISSION.md before deciding."
+  ],
+  "kind": "phase3a-c1-instruction-stack-feasibility-v1",
+  "prior_mechanical_verification": "v6 passed its tests/demo but failed full C1 instruction-stack acceptance on later actual-transcript inspection; not a C1 completion",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "recorded_utc": "2026-10-29T17:17:46.545407+00:00",
+  "requires_fresh_frozen_verification": true,
+  "selected_correction": "Configure the same coherent role mission and factual index as the supported agent prompt. Read MISSION.md alone first; then batch indexed complete evidence; preserve7/6/7 ordinary rounds. Record original/configured/runtime system identities.",
+  "supported_seam": "agent.build.prompt replaces provider default at session/llm.ts102-107; agent/agent.ts merges prompt separately from steps and permissions",
+  "supported_source_evidence": {
+    "agent/agent.ts": "210323495e9bc2be5f200ed9ed747a90c6336b77d2abc1b030f3dc11f18b5195",
+    "session/llm.ts": "c55d98991e8eb18f5cfeb1126934a825b3a5d046500e6ce9e59628ab4728301c",
+    "session/prompt/anthropic.txt": "88b202adbeb683e942e6cb45a7d24ed453c71cc48648eff8f170e7bd21f8b4c7",
+    "session/system.ts": "0f8374707f7de40c1910af0aa83fc894184ce59c2fae30b6c38cadbc0d10fb1a"
+  },
+  "tools_or_action_allowance_expanded": false,
+  "upstream_code_changed": false
+}

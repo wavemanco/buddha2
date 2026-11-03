@@ -1,0 +1,52 @@
+{
+  "configuration": "full_agreement",
+  "converted_bytes": 13059213,
+  "converted_name": "muce-full_agreement-train.canonical.jsonl",
+  "converted_rows": 16948,
+  "converted_sha256": "45c90e6a49b59b2cb6d5a48fb7818dac5cbfea2f6cb9c81b3dad9a85f91b0bde",
+  "converter_name": "muce_source.py",
+  "converter_sha256": "b816bb0de4b8f199fbe33f17e4a330c3d858f26cc18092b24e6d12550dbdfd1c",
+  "dataset": "CNCL-Penn-State/MuCE",
+  "environment": {
+    "additional_installs": 0,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pyarrow": "24.0.0",
+    "python": "3.13.12"
+  },
+  "identity": {
+    "original_ID_preserved": true,
+    "same_textual_source_identity_conflicting_score_count": 0,
+    "source_ordinal": "Zero-based JSONL ordinal equals original Parquet row ordinal.",
+    "unique_canonical_full_rows": 16948,
+    "unique_textual_source_rows_excluding_score": 16948
+  },
+  "method": "PyArrow read_table.to_pylist; all original fields and row order; UTF-8 canonical sorted compact JSON per row plus LF; no normalization, filtering, rescaling, pairing or selection.",
+  "model_requests": 0,
+  "opened_data_splits": [
+    "train"
+  ],
+  "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+  "roundtrip_all_original_records_equal": true,
+  "schema_version": 1,
+  "selected_pairs": 0,
+  "source_bytes": 935313,
+  "source_rows": 16948,
+  "source_schema": {
+    "Dataset": "string",
+    "DatasetsSplit": "string",
+    "FullPrompt": "string",
+    "ID": "string",
+    "Language": "string",
+    "Prompt": "string",
+    "RatingLabel": "string",
+    "Response": "string",
+    "Set": "string",
+    "TaskType": "string",
+    "TasksNamesFull": "string",
+    "facsco_grm_scaled": "double"
+  },
+  "source_sha256": "701ea8d6c0eeb20625d2809a96b5b377e2be22f28f0a22d1dfcafa820aa173ec",
+  "source_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/resolve/a02181e394c41602a95d0678b0ce9d880e994289/full_agreement/train-00000-of-00001.parquet",
+  "split": "train",
+  "status": "conversion_only_no_selection"
+}

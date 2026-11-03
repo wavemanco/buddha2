@@ -1,0 +1,49 @@
+{
+  "correction": "Cooperative test-fixture multiple inheritance: original SDK MockTransport knobs pass through the current RP2 Transport guard. No global rebinding or weaker production type guard; assertions and financial expectations unchanged.",
+  "created_utc": "2026-11-01T17:58:01.744821+00:00",
+  "current_test_source": {
+    "path": "followups/phase3a_readiness_recovery_v1/tests_accounting.py",
+    "sha256": "3f0a90c4ea05cce6f654f1a9e688a8d90c05c901d1561d6f807789723a80e309"
+  },
+  "full_kit_accepted": false,
+  "independent_mro_review": {
+    "path": "runs/phase3a-readiness-recovery-v1/reviewer/accounting-fixture-mro-review-v1.json",
+    "sha256": "12396b484f69b171913b39f45e2648d4c2492c287cbe526ef365dc1ef9d3754f"
+  },
+  "kind": "phase3a-rp2-financial-fixture-compatibility-review-v2",
+  "parent_provider_review_sha256": "90393294f79f3d83e98df5077585cc0b6add8b95deed69540661f0cd941d7631",
+  "prior_test_source_sha256": "f07bcaa1a4ea3fbf5d7774a2b525ec48e1c938c12797634eccb2b6390ff4777d",
+  "provider_calls": 0,
+  "public_document_retrieval_repeated": false,
+  "public_models_prices_reservations_and_production_controls_unchanged": true,
+  "public_provider_dossier_sha256": "5fce99ead0536e2b32a8ccedfca3fd6ba002b1338cf1e3daef2510f66528fa31",
+  "real_credentials_accessed": false,
+  "scientific_complete": false,
+  "scope": "Append-only test-source compatibility correction, not a change to public models/prices/accounting/admission/deadlines. Supersedes only the old tests_accounting.py source pin for current qualification.",
+  "unchanged_production_control_sha256": {
+    "followups/phase3a_rc1_pilot_v1/accounting.py": "748e4ca973c606a8d4a456f9ad9bc02c4b41f0c7fb603b11150c0202420bc5c4",
+    "followups/phase3a_readiness_recovery_v1/accounting.py": "9667c80bac61c5abda86594d2f1339e436864ffa0bf99f714b25dab830d26e02",
+    "followups/phase3a_v1/accounting.py": "436438a6e7bddc79c668e6aa668238ddd228529f750451c445bc9af46e4fb2bd",
+    "followups/phase3a_v1/transport.py": "921223c9b4ed55cbee93e5a76d7e60e87aa8ee3adb03995ed3ac727fa3d3108d",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593"
+  },
+  "verification": {
+    "cleanup_exit_code": 0,
+    "includes_actual_SDK_96_admission_case": true,
+    "network": "none",
+    "record_sha256": {
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/actual-container.json": "18058162f9259d287101d033cbeec98ffb7f95d382884d6c3818159ae4a45aea",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/checks.json": "ca212b9cec302113aed5be83bf5636380dc21ab29f964a9a01338258b6d4047e",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/create.json": "86ef5e27a9a3b5a2056cc6f559ed2b3f01948c70a69c797d2468fa4f27ef3810",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/driver.py": "3a65632e330e3331864ee1874a63f95c1190102f2d6d638a5cabef1304d04d18",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/execution.json": "92ef443fdfc3f2963fb322074b4b585d56f4660a52354259b293e6b1588b4aa1",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/remove.json": "03e32280fae581915e49a439a76e64115031fcee71809b470d5d67488906b4f0",
+      "runs/phase3a-readiness-recovery-v1/financial-fixture-v2/terminal.json": "db36f0fcf6bd651835d28e6d49ab4dd07fb40c24729db642ec8541431f1efb89"
+    },
+    "rootfs_readonly": true,
+    "ruff_mypy_bandit_passed": true,
+    "tests": 17,
+    "tests_passed": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "buddha2-inspect-i1-verification-v7-2"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "Creating view bundle in '/out/replay-2/viewer'\n\nView bundle '/out/replay-2/viewer' created\n{\"output\": \"/out/replay-2\", \"semantic_sha256\": \"ec8e3459ed585231afe1891cc841841b91564dc3f5c63fde5c89a52a0d99c5ec\", \"provider_calls\": 0}\n"
+}

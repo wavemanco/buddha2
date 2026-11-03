@@ -1,0 +1,22 @@
+{
+  "SDK_mocks_inject_direct_caller_into_editor_tool_responses": true,
+  "candidate_applied_only_in_isolated_test_process": true,
+  "candidate_function_sha256": "d2d363ef61c58156381420724a025da001b79a1e882c19784bf22b42fbc703da",
+  "errors": 0,
+  "failures": 0,
+  "fixture": true,
+  "frozen_production_source_142_unchanged": true,
+  "kind": "phase3a-isolated-candidate-regression-suite-v1",
+  "limitation": "Validator and editor regressions only; not a frozen R1 release gate or live effectiveness test.",
+  "modules": [
+    "followups.phase3a_v1.tests.test_accounting",
+    "followups.phase3a_v1.tests.test_editor",
+    "followups.phase3a_v1.tests.test_editor_attacks",
+    "followups.phase3a_v1.tests.test_editor_shape"
+  ],
+  "passed": true,
+  "real_credentials_read": false,
+  "real_provider_calls": 0,
+  "skipped": 0,
+  "tests_run": 24
+}

@@ -1,0 +1,37 @@
+{
+  "archive_sha256": "999bb2157027e49928fc0dab2aecb36c281541de8aaf04e7fc2b75640d1b9246",
+  "archived_revision": "0.11",
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "current_documents": {
+    "AGENTS.md": "5864341f56cbeb455c7f90fbc9d42a1f4ba67786dd2774d64b1887acf8d9980b",
+    "EXPERIMENT_PLAN.md": "14a5f1bdd5ee7d59ab33b56e4ba2b83cb247da5444c1caaa6d24ce508f3d1e1d",
+    "PHASE_DEFINITIONS.md": "34fd3c127b612b1e996b2432a3449032303957ae9a757994f1c0211f2edaca94",
+    "README.md": "4c9cbe861d970988a2b84c65351530e6086ae0de6ea27e72f169dcbd5132d630"
+  },
+  "experiment_api_spend_usd": 0,
+  "experiments_started": false,
+  "historical_documents_verified_against_commit": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "human_collection_started": false,
+  "implementation_updated": false,
+  "kind": "specification-refresh",
+  "missing_local_links": [],
+  "new_specification_sha256": "34fd3c127b612b1e996b2432a3449032303957ae9a757994f1c0211f2edaca94",
+  "original_folder_accessed": false,
+  "previous_handoff_files_verified": 2314,
+  "previous_report_evidence_code_data_unchanged": true,
+  "provider_calls": 0,
+  "revision": "0.12",
+  "scope": "documentation only; benchmark and optional human-augmented research tracks",
+  "source_commit": "9ef4024ed2a2a87133ed7b1991c44acc5a98086a",
+  "unchanged_preexisting_files": 324
+}

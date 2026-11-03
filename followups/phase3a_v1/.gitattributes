@@ -1,0 +1,2 @@
+# Preserve the frozen OpenCode tool schema's original bytes.
+editor-tools.json -text

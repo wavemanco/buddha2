@@ -1,0 +1,73 @@
+{
+  "SchemaVersion": 1,
+  "Action": "offline",
+  "ExplicitLiveSwitch": false,
+  "ContainerId": "8e6bfa37e293eda865ac28ca7e2ec091a002a1937d5e547a7f3dc78c5eb9f89e",
+  "Image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "NetworkMode": "none",
+  "ReadonlyRootfs": true,
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+      "Destination": "/results",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Destination": "/workspace",
+      "RW": false
+    }
+  ],
+  "EnvironmentNames": [
+    "BUDDHA2_IMAGE_ID",
+    "PATH",
+    "LANG",
+    "GPG_KEY",
+    "PYTHON_VERSION",
+    "PYTHON_SHA256",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONUNBUFFERED",
+    "PYTHONNOUSERSITE",
+    "HF_HUB_OFFLINE",
+    "HF_DATASETS_OFFLINE",
+    "TRANSFORMERS_OFFLINE",
+    "TOKENIZERS_PARALLELISM",
+    "OMP_NUM_THREADS",
+    "PYTHONPATH",
+    "NOVELTYBENCH_ROOT",
+    "BUDDHA2_NB_UPSTREAM",
+    "HARNESS2_ROOT",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "BUDDHA2_OFFLINE",
+    "TMPDIR"
+  ],
+  "CapDrop": [
+    "ALL"
+  ],
+  "SecurityOpt": [
+    "no-new-privileges"
+  ],
+  "PidsLimit": 256,
+  "Memory": 4294967296,
+  "NanoCpus": 2000000000,
+  "Tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=536870912"
+  },
+  "LoggingDriver": "none",
+  "State": "exited",
+  "ExitCode": 0,
+  "ValidationPassed": true,
+  "OOMKilled": false,
+  "Streams": {
+    "StdoutSha256": "753cfa39a81b9a4b55339d18bcb8cf2b3c80c3b6c88940b37028c2b665b73ce9",
+    "StderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "StdoutUtf8Bytes": 189,
+    "StderrUtf8Bytes": 0,
+    "ContentRetained": true,
+    "StdoutFile": "596f3de6ccf745e8baa6dd911f079c99.stdout.log",
+    "StderrFile": "596f3de6ccf745e8baa6dd911f079c99.stderr.log"
+  }
+}

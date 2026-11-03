@@ -1,0 +1,587 @@
+{
+  "actual_credentials_read": false,
+  "details": {
+    "actual_inspections": [
+      {
+        "container": {
+          "cap_drop": [
+            "ALL"
+          ],
+          "command": [
+            "-B",
+            "-m",
+            "followups.rank_format_v1.launch",
+            "--command",
+            "execute",
+            "--study",
+            "/results/phase2b-rank-format-v1/release-r2/study.json",
+            "--grant",
+            "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+            "--mode",
+            "mock",
+            "--inspection",
+            "/results/phase2b-rank-format-v1/launcher/21f453a1a64e403fafeae4036194c7f2.inspection.json"
+          ],
+          "container_id": "86f370c28c333bbab09174dd083a01dc8073695c2a53d73ac2ca51c4e72d1cbe",
+          "entrypoint": [
+            "python"
+          ],
+          "environment_names": [
+            "BUDDHA2_IMAGE_ID",
+            "BUDDHA2_NB_UPSTREAM",
+            "BUDDHA2_OFFLINE",
+            "BUDDHA2_OUTPUT_ROOT",
+            "BUDDHA2_RELEASE_LAUNCH_MODE",
+            "BUDDHA2_TEST_OUTPUT_ROOT",
+            "GPG_KEY",
+            "HARNESS2_ROOT",
+            "HF_DATASETS_OFFLINE",
+            "HF_HUB_OFFLINE",
+            "LANG",
+            "NOVELTYBENCH_ROOT",
+            "OMP_NUM_THREADS",
+            "PATH",
+            "PYTHON_SHA256",
+            "PYTHON_VERSION",
+            "PYTHONDONTWRITEBYTECODE",
+            "PYTHONNOUSERSITE",
+            "PYTHONPATH",
+            "PYTHONUNBUFFERED",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE"
+          ],
+          "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+          "image_architecture": "amd64",
+          "image_os": "linux",
+          "log_driver": "none",
+          "memory": 4294967296,
+          "mounts": [
+            {
+              "destination": "/workspace",
+              "rw": false,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+              "type": "bind"
+            },
+            {
+              "destination": "/results",
+              "rw": true,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+              "type": "bind"
+            }
+          ],
+          "nano_cpus": 2000000000,
+          "network_mode": "none",
+          "open_stdin": true,
+          "pids_limit": 256,
+          "port_bindings": {},
+          "privileged": false,
+          "publish_all_ports": false,
+          "read_only_rootfs": true,
+          "security_opt": [
+            "no-new-privileges"
+          ],
+          "state_at_inspection": "created",
+          "tmpfs": {
+            "/tmp": "rw,nosuid,nodev,size=536870912"
+          },
+          "tty": false,
+          "working_dir": "/workspace"
+        },
+        "inspection_sha256": "e28b29f28eee10c4484233923249f95283f4bc1dbba9fd789e9b5f08cf78e771",
+        "kind": "rank-format-host-inspection-v1",
+        "preflight": {
+          "billing_profile": "public-payg-envelope-v1",
+          "cap_micro_usd": 30000000,
+          "configuration_only": false,
+          "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+          "credential_access": false,
+          "credentials_read": false,
+          "fixture": true,
+          "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+          "grant_sha256": "9eecfe3d83a5d17f7aea262934eef98298a884b426127c6ffe58722700c8d286",
+          "journal": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock/journal",
+          "journal_id": "e066656d6b3749e24cf0f88ab4f81cae637fd7a2bc03b4a8ee228214047d0af0",
+          "kind": "p2bn-nonsending-preflight-v1",
+          "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+          "mode": "mock",
+          "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+          "provider_calls": 0,
+          "provider_requests": 0,
+          "role_counts": {
+            "group": 4,
+            "quality": 40
+          },
+          "run": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock",
+          "slot_count": 44,
+          "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+          "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+          "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+        }
+      },
+      {
+        "container": {
+          "cap_drop": [
+            "ALL"
+          ],
+          "command": [
+            "-B",
+            "-m",
+            "followups.rank_format_v1.launch",
+            "--command",
+            "execute",
+            "--study",
+            "/results/phase2b-rank-format-v1/release-r2/study.json",
+            "--grant",
+            "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+            "--mode",
+            "provider-config",
+            "--inspection",
+            "/results/phase2b-rank-format-v1/launcher/d77f525e6b6848ffb5f5b568bb6d8289.inspection.json"
+          ],
+          "container_id": "31811169c8c79e4d597e8da85f3b4c79094a4285acfb76ca8869c52dff277dca",
+          "entrypoint": [
+            "python"
+          ],
+          "environment_names": [
+            "BUDDHA2_IMAGE_ID",
+            "BUDDHA2_NB_UPSTREAM",
+            "BUDDHA2_OFFLINE",
+            "BUDDHA2_OUTPUT_ROOT",
+            "BUDDHA2_RELEASE_LAUNCH_MODE",
+            "BUDDHA2_TEST_OUTPUT_ROOT",
+            "GPG_KEY",
+            "HARNESS2_ROOT",
+            "HF_DATASETS_OFFLINE",
+            "HF_HUB_OFFLINE",
+            "LANG",
+            "NOVELTYBENCH_ROOT",
+            "OMP_NUM_THREADS",
+            "PATH",
+            "PYTHON_SHA256",
+            "PYTHON_VERSION",
+            "PYTHONDONTWRITEBYTECODE",
+            "PYTHONNOUSERSITE",
+            "PYTHONPATH",
+            "PYTHONUNBUFFERED",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE"
+          ],
+          "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+          "image_architecture": "amd64",
+          "image_os": "linux",
+          "log_driver": "none",
+          "memory": 4294967296,
+          "mounts": [
+            {
+              "destination": "/workspace",
+              "rw": false,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+              "type": "bind"
+            },
+            {
+              "destination": "/results",
+              "rw": true,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+              "type": "bind"
+            }
+          ],
+          "nano_cpus": 2000000000,
+          "network_mode": "bridge",
+          "open_stdin": true,
+          "pids_limit": 256,
+          "port_bindings": {},
+          "privileged": false,
+          "publish_all_ports": false,
+          "read_only_rootfs": true,
+          "security_opt": [
+            "no-new-privileges"
+          ],
+          "state_at_inspection": "created",
+          "tmpfs": {
+            "/tmp": "rw,nosuid,nodev,size=536870912"
+          },
+          "tty": false,
+          "working_dir": "/workspace"
+        },
+        "inspection_sha256": "18bc6289a59c2a8566c86067ea96c2f8455748ef98bb7feee39be2fffc36e092",
+        "kind": "rank-format-host-inspection-v1",
+        "preflight": {
+          "billing_profile": "public-payg-envelope-v1",
+          "cap_micro_usd": 30000000,
+          "configuration_only": true,
+          "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+          "credential_access": false,
+          "credentials_read": false,
+          "fixture": true,
+          "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+          "grant_sha256": "9eecfe3d83a5d17f7aea262934eef98298a884b426127c6ffe58722700c8d286",
+          "journal": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock/journal",
+          "journal_id": "e066656d6b3749e24cf0f88ab4f81cae637fd7a2bc03b4a8ee228214047d0af0",
+          "kind": "p2bn-nonsending-preflight-v1",
+          "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+          "mode": "provider-config",
+          "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+          "provider_calls": 0,
+          "provider_requests": 0,
+          "role_counts": {
+            "group": 4,
+            "quality": 40
+          },
+          "run": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock",
+          "slot_count": 44,
+          "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+          "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+          "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+        }
+      },
+      {
+        "container": {
+          "cap_drop": [
+            "ALL"
+          ],
+          "command": [
+            "-B",
+            "-m",
+            "followups.rank_format_v1.launch",
+            "--command",
+            "execute",
+            "--study",
+            "/results/phase2b-rank-format-v1/release-r2/study.json",
+            "--grant",
+            "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+            "--mode",
+            "mock",
+            "--inspection",
+            "/results/phase2b-rank-format-v1/launcher/fc06707ad505479cbe2d0c85c17d27b8.inspection.json"
+          ],
+          "container_id": "38031f4e8065d135c91690b09c5c5cbdf91b5bf0320e550130d3facdf9018956",
+          "entrypoint": [
+            "python"
+          ],
+          "environment_names": [
+            "BUDDHA2_IMAGE_ID",
+            "BUDDHA2_NB_UPSTREAM",
+            "BUDDHA2_OFFLINE",
+            "BUDDHA2_OUTPUT_ROOT",
+            "BUDDHA2_RELEASE_LAUNCH_MODE",
+            "BUDDHA2_TEST_OUTPUT_ROOT",
+            "GPG_KEY",
+            "HARNESS2_ROOT",
+            "HF_DATASETS_OFFLINE",
+            "HF_HUB_OFFLINE",
+            "LANG",
+            "NOVELTYBENCH_ROOT",
+            "OMP_NUM_THREADS",
+            "PATH",
+            "PYTHON_SHA256",
+            "PYTHON_VERSION",
+            "PYTHONDONTWRITEBYTECODE",
+            "PYTHONNOUSERSITE",
+            "PYTHONPATH",
+            "PYTHONUNBUFFERED",
+            "TMPDIR",
+            "TOKENIZERS_PARALLELISM",
+            "TRANSFORMERS_OFFLINE"
+          ],
+          "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+          "image_architecture": "amd64",
+          "image_os": "linux",
+          "log_driver": "none",
+          "memory": 4294967296,
+          "mounts": [
+            {
+              "destination": "/workspace",
+              "rw": false,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+              "type": "bind"
+            },
+            {
+              "destination": "/results",
+              "rw": true,
+              "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+              "type": "bind"
+            }
+          ],
+          "nano_cpus": 2000000000,
+          "network_mode": "none",
+          "open_stdin": true,
+          "pids_limit": 256,
+          "port_bindings": {},
+          "privileged": false,
+          "publish_all_ports": false,
+          "read_only_rootfs": true,
+          "security_opt": [
+            "no-new-privileges"
+          ],
+          "state_at_inspection": "created",
+          "tmpfs": {
+            "/tmp": "rw,nosuid,nodev,size=536870912"
+          },
+          "tty": false,
+          "working_dir": "/workspace"
+        },
+        "inspection_sha256": "b13324117f882814164044c32ca6cc7f9f6b9080b373f3ea4ba19e8ae1ca8b1d",
+        "kind": "rank-format-host-inspection-v1",
+        "preflight": {
+          "billing_profile": "public-payg-envelope-v1",
+          "cap_micro_usd": 30000000,
+          "configuration_only": false,
+          "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+          "credential_access": false,
+          "credentials_read": false,
+          "fixture": true,
+          "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+          "grant_sha256": "9eecfe3d83a5d17f7aea262934eef98298a884b426127c6ffe58722700c8d286",
+          "journal": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock/journal",
+          "journal_id": "e066656d6b3749e24cf0f88ab4f81cae637fd7a2bc03b4a8ee228214047d0af0",
+          "kind": "p2bn-nonsending-preflight-v1",
+          "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+          "mode": "mock",
+          "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+          "provider_calls": 0,
+          "provider_requests": 0,
+          "role_counts": {
+            "group": 4,
+            "quality": 40
+          },
+          "run": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock",
+          "slot_count": 44,
+          "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+          "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+          "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+        }
+      }
+    ],
+    "actual_mock_results": [
+      {
+        "execution": {
+          "attempts": 44,
+          "combined_micro_usd": 6027732,
+          "cutoff": "2026-10-28T17:12:15Z",
+          "decision_status": "complete-development",
+          "evidence_sha256": "a2538e1818f8bd53e0ec7e71ce063399951a96537a1d0fa09cf0b4c45ffd0bff",
+          "fixture": true,
+          "historical_shared_micro_usd": 5983504,
+          "journal_status": "ready",
+          "new_assessments": 4,
+          "new_mock_http_calls": 44,
+          "new_spent_micro_usd": 44228,
+          "provider_calls": 0,
+          "reserved_micro_usd": 0,
+          "retries": 0,
+          "reused_assessments": 68,
+          "scored_new_assessments": 4,
+          "selected_method": null,
+          "status": "mock-complete",
+          "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+          "synthetic_selected_method": "B"
+        },
+        "host_result": {
+          "action": "mock",
+          "actual_credentials_supplied": false,
+          "exit_code": 0,
+          "inspection_file": "21f453a1a64e403fafeae4036194c7f2.inspection.json",
+          "kind": "rank-format-host-result-v1",
+          "preflight": {
+            "billing_profile": "public-payg-envelope-v1",
+            "cap_micro_usd": 30000000,
+            "configuration_only": false,
+            "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+            "credential_access": false,
+            "credentials_read": false,
+            "fixture": true,
+            "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+            "grant_sha256": "9eecfe3d83a5d17f7aea262934eef98298a884b426127c6ffe58722700c8d286",
+            "journal": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock/journal",
+            "journal_id": "e066656d6b3749e24cf0f88ab4f81cae637fd7a2bc03b4a8ee228214047d0af0",
+            "kind": "p2bn-nonsending-preflight-v1",
+            "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+            "mode": "mock",
+            "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+            "provider_calls": 0,
+            "provider_requests": 0,
+            "role_counts": {
+              "group": 4,
+              "quality": 40
+            },
+            "run": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock",
+            "slot_count": 44,
+            "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+            "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+            "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+          },
+          "state": "exited",
+          "stderr_bytes": 0,
+          "stdout_bytes": 955,
+          "stream_content_retained": true
+        }
+      },
+      {
+        "execution": {
+          "attempts": 44,
+          "combined_micro_usd": 6027732,
+          "cutoff": "2026-10-28T17:12:15Z",
+          "decision_status": "complete-development",
+          "evidence_sha256": "a2538e1818f8bd53e0ec7e71ce063399951a96537a1d0fa09cf0b4c45ffd0bff",
+          "fixture": true,
+          "historical_shared_micro_usd": 5983504,
+          "journal_status": "ready",
+          "new_assessments": 4,
+          "new_mock_http_calls": 0,
+          "new_spent_micro_usd": 44228,
+          "provider_calls": 0,
+          "reserved_micro_usd": 0,
+          "retries": 0,
+          "reused_assessments": 68,
+          "scored_new_assessments": 4,
+          "selected_method": null,
+          "status": "mock-complete",
+          "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+          "synthetic_selected_method": "B"
+        },
+        "host_result": {
+          "action": "mock",
+          "actual_credentials_supplied": false,
+          "exit_code": 0,
+          "inspection_file": "fc06707ad505479cbe2d0c85c17d27b8.inspection.json",
+          "kind": "rank-format-host-result-v1",
+          "preflight": {
+            "billing_profile": "public-payg-envelope-v1",
+            "cap_micro_usd": 30000000,
+            "configuration_only": false,
+            "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+            "credential_access": false,
+            "credentials_read": false,
+            "fixture": true,
+            "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-fixture.json",
+            "grant_sha256": "9eecfe3d83a5d17f7aea262934eef98298a884b426127c6ffe58722700c8d286",
+            "journal": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock/journal",
+            "journal_id": "e066656d6b3749e24cf0f88ab4f81cae637fd7a2bc03b4a8ee228214047d0af0",
+            "kind": "p2bn-nonsending-preflight-v1",
+            "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+            "mode": "mock",
+            "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+            "provider_calls": 0,
+            "provider_requests": 0,
+            "role_counts": {
+              "group": 4,
+              "quality": 40
+            },
+            "run": "/results/phase2b-rank-format-v1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/mock",
+            "slot_count": 44,
+            "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+            "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+            "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+          },
+          "state": "exited",
+          "stderr_bytes": 0,
+          "stdout_bytes": 954,
+          "stream_content_retained": true
+        }
+      }
+    ],
+    "before_gate_rejection": {
+      "actual_keys_read": false,
+      "exit_code": 1,
+      "expected_rejection": true,
+      "kind": "p2bn-live-before-gate-negative-v1",
+      "provider_calls": 0
+    },
+    "independent_review": {
+      "added_since_predecessor": [
+        "followups/rank_format_v1/tests/test_cli.py"
+      ],
+      "changed_since_predecessor": [
+        "followups/rank_format_v1/cli.py"
+      ],
+      "handoff_path_clarification": {
+        "correct_study_argument": "phase2b-rank-format-v1/release-r2/study.json",
+        "incorrect_prefix": "runs/ must not be added to that launcher argument",
+        "reason": "Get-RunPath joins Study/Grant relative arguments beneath the fixed new project runs directory.",
+        "verdict": "confirmed"
+      },
+      "identity_handling": {
+        "earlier_review_not_overwritten": true,
+        "new_final_preparation_namespace": "phase2b-rank-format-v1/release-r2",
+        "new_identity_required": true,
+        "prior_candidate": "root-reported abandoned offline preparation c6fc...; preserve it without rebinding"
+      },
+      "kind": "p2bn-independent-review-supplement-v1",
+      "narrow_correction": {
+        "fix": "cli.main now passes Path(\"/workspace/evidence/phase2b-rank-format-v1/authorization.json\") to the unchanged reader.",
+        "problem": "The retained artifact read_json helper requires pathlib.Path; the offline CLI grant branch supplied a str and failed before grant construction.",
+        "regression_test": {
+          "execution": "Not independently rerun in this read-only supplement; root final test run remains required.",
+          "path": "followups/rank_format_v1/tests/test_cli.py",
+          "source_review": "Reads the actual retained authority through the CLI, mocks only workflow.grant_template, writes a fixture grant in a temporary RESULTS directory, and verifies expected arguments and saved bytes. No real client or provider call."
+        },
+        "verdict": "pass-source-review; correct shared helper argument type with no authority, policy, model, scope, budget or provider change"
+      },
+      "parent_preservation": {
+        "frozen_launcher_hash_match": true,
+        "frozen_package_files_checked": 26
+      },
+      "predecessor": {
+        "file_sha256": "f768376d7443b8e32cc54edbffb212d468aca654268046b3ad2a23fbb9c53ade",
+        "path": "evidence/phase2b-rank-format-v1/independent-review.json",
+        "preserved_unchanged": true,
+        "review_sha256": "bd9bd752402d229a8917e434ed80a5c793c2f39e2ecbe945f23075f42c6a9dce"
+      },
+      "prior_review_applicability": "All eleven unchanged previously reviewed owned files match predecessor hashes; its source/boundary findings and limitations continue to apply. Both changed/new files are explicitly reviewed here.",
+      "remaining_limitations": [
+        "Full actual PowerShell fixture mock/resume/config lifecycle and measured handshake timing remain pending.",
+        "Final static/full test evidence must bind the new source identity, including the new CLI regression test.",
+        "This supplement is not the completed whole offline gate and establishes no provider readiness or scientific result."
+      ],
+      "review_actions": {
+        "application_source_edits": 0,
+        "credential_binding_or_ambient_environment_reads": 0,
+        "only_write": "evidence/phase2b-rank-format-v1/independent-review-r2.json",
+        "original_folder_access": false,
+        "provider_calls": 0,
+        "real_credential_reads": 0,
+        "sdk_constructions": 0,
+        "whole_gate_claimed_passed": false
+      },
+      "review_sha256": "ea43b7781e0765382d31e1f7403a13c07cb7608ba02a16c84f447eac4d159b63",
+      "reviewed_at_utc": "2026-10-28T17:06:39Z",
+      "reviewed_owned_files": {
+        "followups/rank_format_v1/cli.py": "52bdfe291a6fb7c064eb4c36e89756e376bd6aac8dcf2a9db780c7cd53524dcf",
+        "followups/rank_format_v1/launch.py": "6ef81a687c54a54f162d7bf5fd44d05b0d55e37c1c72a1a432f281d77e3aeb5b",
+        "followups/rank_format_v1/normalizer.py": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+        "followups/rank_format_v1/support.py": "a89a89979f97aac0dfc35c27c616b812bd98721fe0a81ecd795ee51baa52381f",
+        "followups/rank_format_v1/tests/fixtures.json": "e4acded332abb48de58f92cdfaaa728027ae0d0e1dd0b0dca15ddadc97e91d2c",
+        "followups/rank_format_v1/tests/test_cli.py": "40f41744a906efdef603709caf5da2f42485d7e186a37ae06fe985d76b31b3c9",
+        "followups/rank_format_v1/tests/test_launcher.ps1": "3fa7445c2e7f701004cd3758a18e42bea78ebf68698777e93104f41eb9c77f53",
+        "followups/rank_format_v1/tests/test_launcher.py": "8b0accdb203b2ff5cbb7dcc32172d55a2a086d069f8c4b05d00debd1bb7e89c1",
+        "followups/rank_format_v1/tests/test_normalizer.py": "2fd18dd6ffa1a789fe3bf4e4486e6d54f917dfdfd571dfe062d1c2e1cacefdd3",
+        "followups/rank_format_v1/tests/test_support.py": "c78a274f39a9abe1b0a279f08de2cae3cbd42c708be2caa19973f07ac83d2699",
+        "followups/rank_format_v1/tests/test_workflow.py": "37bbfb1bb251065b2a80be01a6e44d09189bc58491e0d1a3324c6d087ca0b42c",
+        "followups/rank_format_v1/workflow.py": "ec0f444283746ff778b32bbfa6784405beffb026e3c7286b0df253248d74fc2b",
+        "rank-format.ps1": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76"
+      },
+      "reviewer": "/root/release_launcher",
+      "status": "source-review-pass-final-host-integration-pending"
+    },
+    "powershell": {
+      "actual_keys_read": false,
+      "elapsed_seconds": 400.9156949,
+      "exit_code": 0,
+      "grant_argument": "phase2b-rank-format-v1/release-r2/grant-fixture.json",
+      "kind": "p2bn-powershell-integration-v1",
+      "provider_calls": 0,
+      "study_argument": "phase2b-rank-format-v1/release-r2/study.json"
+    },
+    "powershell_transcript": "Actual launcher image/mounts, fake-stdin mock/resume, create-only configuration and fixture-before-key rejection PASS\n",
+    "unit_transcript": "test_fixture_grant_reads_authority_and_writes_an_immutable_record (test_cli.CLITests.test_fixture_grant_reads_authority_and_writes_an_immutable_record) ... ok\ntest_actual_owner_lock_rejects_concurrency_before_readiness (test_launcher.LauncherTests.test_actual_owner_lock_rejects_concurrency_before_readiness) ... ok\ntest_config_and_wrong_runtime_cannot_reach_key_read (test_launcher.LauncherTests.test_config_and_wrong_runtime_cannot_reach_key_read) ... ok\ntest_entrypoint_suppresses_unknown_exception_text (test_launcher.LauncherTests.test_entrypoint_suppresses_unknown_exception_text) ... ok\ntest_fake_stdin_pipe_exercises_actual_pinned_sdk_mock_without_sockets (test_launcher.LauncherTests.test_fake_stdin_pipe_exercises_actual_pinned_sdk_mock_without_sockets) ... ok\ntest_preflight_rejects_wrong_scope_source_cap_and_journal_before_clients (test_launcher.LauncherTests.test_preflight_rejects_wrong_scope_source_cap_and_journal_before_clients) ... ok\ntest_provider_handshake_and_key_binding_precede_client (test_launcher.LauncherTests.test_provider_handshake_and_key_binding_precede_client) ... ok\ntest_resealed_unsafe_inspections_fail_before_stdin (test_launcher.LauncherTests.test_resealed_unsafe_inspections_fail_before_stdin) ... ok\ntest_source_change_during_key_entry_fails_before_binding_or_client (test_launcher.LauncherTests.test_source_change_during_key_entry_fails_before_binding_or_client) ... ok\ntest_encoding_size_and_depth_guards_precede_json_parsing (test_normalizer.NormalizerTests.test_encoding_size_and_depth_guards_precede_json_parsing) ... ok\ntest_normalization_performs_no_file_network_or_environment_lookup (test_normalizer.NormalizerTests.test_normalization_performs_no_file_network_or_environment_lookup) ... ok\ntest_parent_order_cannot_choose_or_sort_the_proposed_order (test_normalizer.NormalizerTests.test_parent_order_cannot_choose_or_sort_the_proposed_order) ... ok\ntest_prefrozen_acceptance_and_rejection_cases (test_normalizer.NormalizerTests.test_prefrozen_acceptance_and_rejection_cases) ... ok\ntest_returned_lists_do_not_alias_parent_or_each_other (test_normalizer.NormalizerTests.test_returned_lists_do_not_alias_parent_or_each_other) ... ok\ntest_seventeenth_candidate_is_not_parsed_or_selected (test_normalizer.NormalizerTests.test_seventeenth_candidate_is_not_parsed_or_selected) ... ok\ntest_paths_cannot_escape_or_follow_links (test_support.SupportTests.test_paths_cannot_escape_or_follow_links) ... ok\ntest_readiness_requires_exact_booleans_binding_and_evidence (test_support.SupportTests.test_readiness_requires_exact_booleans_binding_and_evidence) ... ok\ntest_actual_sdk_one_five_ten_heads_and_zero_call_resume (test_workflow.WorkflowTests.test_actual_sdk_one_five_ten_heads_and_zero_call_resume) ... ok\ntest_concurrent_owner_rejects_before_http (test_workflow.WorkflowTests.test_concurrent_owner_rejects_before_http) ... ok\ntest_derived_text_tamper_and_numeric_alias_preparation_reject (test_workflow.WorkflowTests.test_derived_text_tamper_and_numeric_alias_preparation_reject) ... ok\ntest_frozen_corpus_reuse_derivation_and_no_call_initial_report (test_workflow.WorkflowTests.test_frozen_corpus_reuse_derivation_and_no_call_initial_report) ... ok\ntest_interrupt_leaves_durable_intent_without_retry (test_workflow.WorkflowTests.test_interrupt_leaves_durable_intent_without_retry) ... ok\ntest_known_invalid_or_refused_native_results_are_preserved_and_continue (test_workflow.WorkflowTests.test_known_invalid_or_refused_native_results_are_preserved_and_continue) ... ok\ntest_parent_native_semantically_equal_byte_tamper_rejects (test_workflow.WorkflowTests.test_parent_native_semantically_equal_byte_tamper_rejects) ... ok\ntest_partial_journal_foreign_request_rejected_before_earlier_missing_order (test_workflow.WorkflowTests.test_partial_journal_foreign_request_rejected_before_earlier_missing_order) ... ok\ntest_reservation_stop_does_not_reset_spend_or_skip_to_cheaper_order (test_workflow.WorkflowTests.test_reservation_stop_does_not_reset_spend_or_skip_to_cheaper_order) ... ok\ntest_unknown_usage_keeps_liability_and_blocks_all_new_calls (test_workflow.WorkflowTests.test_unknown_usage_keeps_liability_and_blocks_all_new_calls) ... ok\ntest_wrong_grant_and_invalid_cutoff_fail_before_http (test_workflow.WorkflowTests.test_wrong_grant_and_invalid_cutoff_fail_before_http) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 173.627s\n\nOK\n"
+  },
+  "group": "launcher",
+  "kind": "p2bn-offline-check-v1",
+  "passed": true,
+  "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+  "provider_calls": 0,
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

@@ -1,0 +1,333 @@
+{
+  "INV_delivery_observations": {
+    "MISSION_first": true,
+    "actual_SYSTEM_starts_with_configured_contract_all_seven_calls": true,
+    "all_originals_losslessly_reconstructed_and_hash_verified": true,
+    "attempted_strategy_text_sha256": "dc5fb9bda2f13e9c2b07bac24d6ea530dd461257dab54bf38b376d047f818866",
+    "attempted_strategy_valid_three_nonempty_strings": true,
+    "changed_fields": [
+      "plan_system"
+    ],
+    "complete_required_files_delivered_before_first_edit": 24,
+    "first_strategy_decision_turn": 5,
+    "lossless_evidence_views": 20,
+    "normal_final_observed": false,
+    "notes_reread_observed": false,
+    "notes_write_request_text_sha256": "050f1bb1e20aa95b4cc38aef755f4cf65824c67e457929ba02f8d2e465e05175",
+    "notes_write_requested_turn": 7,
+    "required_original_sources": 5,
+    "strategy_reread_visible_before_notes_write": true
+  },
+  "INV_operation_sequence": [
+    {
+      "calls": [
+        {
+          "name": "read",
+          "path": "MISSION.md"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t01",
+      "stop_reason": "tool_use",
+      "turn": 1
+    },
+    {
+      "calls": [
+        {
+          "name": "read",
+          "path": "context/C1_MANIFEST.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_INDEX.md"
+        },
+        {
+          "name": "read",
+          "path": "context/harness/systemprompt.md"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/00-000.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/01-000.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/04-000.json"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t02",
+      "stop_reason": "tool_use",
+      "turn": 2
+    },
+    {
+      "calls": [
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-000.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-001.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-002.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-003.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-004.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-005.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-006.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-007.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/02-008.json"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t03",
+      "stop_reason": "tool_use",
+      "turn": 3
+    },
+    {
+      "calls": [
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-000.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-001.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-002.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-003.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-004.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-005.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-006.json"
+        },
+        {
+          "name": "read",
+          "path": "context/C1_EVIDENCE/03-007.json"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t04",
+      "stop_reason": "tool_use",
+      "turn": 4
+    },
+    {
+      "calls": [
+        {
+          "name": "edit",
+          "path": "context/harness/systemprompt.md"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t05",
+      "stop_reason": "tool_use",
+      "turn": 5
+    },
+    {
+      "calls": [
+        {
+          "name": "read",
+          "path": "context/harness/systemprompt.md"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t06",
+      "stop_reason": "tool_use",
+      "turn": 6
+    },
+    {
+      "calls": [
+        {
+          "name": "write",
+          "path": "output/answer.md"
+        }
+      ],
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t07",
+      "stop_reason": "tool_use",
+      "turn": 7
+    }
+  ],
+  "accounting": {
+    "cost_basis": "usage-based public-price upper-bound accounting, not invoice",
+    "cumulative_known_micro_usd": 13101271,
+    "cumulative_maximum_exposure_micro_usd": 35981271,
+    "historical_holds_released": false,
+    "historical_known_micro_usd": 12231444,
+    "historical_reserved_micro_usd": 22880000,
+    "new_known_micro_usd": 869827,
+    "new_reserved_micro_usd": 0
+  },
+  "actual_partial_path": {
+    "AGG_provider_calls": 0,
+    "DOM_provider_calls": 0,
+    "INV_ordinary_calls": 7,
+    "base_answers": 10,
+    "base_strategy_calls": 12,
+    "completed_base_rollouts": 1,
+    "eligible_complete_editor_stages_observed": 0,
+    "fixed_calls": 0,
+    "judge_calls": 0,
+    "native_INV_harvest_equals_base": true,
+    "primary_scores_observed": 0,
+    "probe_rollouts_completed": 0,
+    "temporary_edit_was_not_accepted_or_consumed_as_candidate": true
+  },
+  "adaptation_efficacy_established": false,
+  "barrier_readiness_present": false,
+  "causal_scope": {
+    "directly_observed": "Four rounds were spent reading, then one editing, one rereading the strategy, and one requesting the notes write. Insufficient rounds remained for required notes reread and normal final. SYSTEM/MISSION explicitly permit batched reads and require normal completion before terminal control.",
+    "not_established": [
+      "That the contract cannot be completed within seven ordinary rounds.",
+      "That transport latency caused this stop.",
+      "That a different prompt, context layout, model or larger allowance would solve it.",
+      "That the attempted edit improves creativity, distinctness, utility or generalization."
+    ]
+  },
+  "continuation_unlocked_by_this_review": false,
+  "evidence_file_sha256": {
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/0316fe5148dc94a4ea5d0d17803cf84cf6e41fb60904fd23a2340f97fe746a18.json": "04408ed2f366098182abbe8412ad3bf60ac9486447e3fb34461e19a344b68614",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/03ec74d318e50b763b6eb1202045585bd4862c14d2b942fe337b3296e515b136.json": "6f69a6df566a8afa3f34e97e9604f11be7b1fe75defbcd6b15fc61999fefb8cc",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/0c2424f18294122d36d7ad0c5e72d7d7c9f81772b57fa2f439f6d71d3d89f41a.json": "ec8398cd7744a6fcbde0d643d04e94a48d8f8cf06ab0c13c3f6e5fdb33ebc8c5",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/1225a5b9890a74f6a57158653ab6d94bb89bec49d16437ff1d38ea18b63332e4.json": "e0272a8e99b47838973c66bb2069d6a7e26084686109071270033ac4d41d5abd",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/1de4218d50992a593aeb6795fac6d1e3a9bd61c5f49073b5ca2d222aca0faa77.json": "161f161ff28bf9782c32ccb06a59d0f0919b40ebf598ae03f88ef77d48f1685d",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/3dfdbcad0062df37e2224ce0c4c6ae43088edfcac7983bb078eb1b9f9032ad45.json": "2bc0e16b05cc528cb358362cfc013f2b93535c1064678a972fb1374207d0eb7e",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/4deabb5ad0efb929e681680f24137254c7518902d77b45282819d4703e33d049.json": "9a9801342cee055a4e214172a2c122fe6b436a13c55bb09dd3410859c80a4932",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/60b87344ad496285493c7260a80894abe584dfa05bb9595facf0fd1246901fc5.json": "37d6b787bd55b64a3967a702dbe282f8808aecb63f6f944534a9e0ca375ee34a",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/647507a9d62e393ca2037ecc166bfeeee1fe3dd64f874cb7ed45c595c979d559.json": "aa7fd77f5c5f4fad52e25a6d5218951a36b67bef552d24169b3cfdec6d45ab7a",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/64eee524bff667b6f76507b1d11131dd684d6cea61df20c0f5c2e39b56948466.json": "171a8e5a5e2c63819f24a51a258646d76daef10ab06e44c77b500995edbe785f",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/781ab5b172230af912b1dd534d1ebd59241230f1f29a5d385dd9fdd5abe16858.json": "63a16091624e0cf0ab6f82ea4bef1af29468a7311d335559b1c90f0c4f7e40f7",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/80a94a459150efeedaa24f0005f509d2a6d764459d3eeb83fc50d00c6dfb3fd6.json": "40adc82ad33a5e4d38582d893ce83ce72cd3d9fcbf978f2d8b8154dc4107bef2",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/866832e987522df858b640a42583b692ab0527b7753a68cc66207088c49987f4.json": "be18775bfd77e9c624fb099a1fe27074405c6218a55733ac6152d596eec456ba",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/86dc56ba879c5f53de1a1e899ea0d8d748388b786f588ce3487ab3c5abc4a4fb.json": "306c2d6e1dd57155661141a34199e5202d840567f23c86bf1e6074e302b002c3",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/89fa771d612f67c2d5f46b57a0b153f57f62a65b876e77e369f8f1fc158bff01.json": "dadd46cd7958f7928951c6fe9528dab0a919e2225912a00feb7c204fad7015ec",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/949a61a5d1e2766f4cb75299c8a0bc67127a3360781ca1218631aa82f429248f.json": "b5c30a9df692d6649a6a5dcc845ad5ba2a2e61ca83032b23c146705a76361d4f",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/ae3ecf9b0ed2d2c21ba0e8053372dff22c8d72ccbe43068a2d21f7b6e97852c0.json": "9f633ba4cf39ced378cfe25765c58da47dbc7eda5b986163e79c2ca39edd0f0f",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/c9c4a6670e2e80a07ae7703d36feeb9159c1c664a298bacb79c01bb3ca4df220.json": "a316514cd093bb2b1ca4580e25d9f558d0c829310a8e31e525f8ad56821ede50",
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/transport-audit/e9f2861e193ffeae8f56d94f1d465278a73b45f214130b2b34e1416c390f6659.json": "e1ad35de8d3da9d678c18141c7120307dd81fa70707e4812282874a0b8f61ca0",
+    "runs/phase3a-c1-completion-v3/verification-v3/release/study.json": "d3720887e5d2df885b5c49ac136a727c9b0dd1ad0e754b6579063562e9b75c2b",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/readiness-failure.json": "367517819748ef9e1c8f6b56bec6aaf0020caf9c6dc38d34c91d4d06f8c16eed",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "4afdf8d77b76ddd55eea8a62b54875e31df6f1add8e004c823456a606afd4bea",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/00-000.json": "95bd5273cc28bc49467ea85c8f50aa12c571c8183c72becbb853002c8ed08f15",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/01-000.json": "cd8575b1076cb9dbce55cba2100ebe0dd61a0c7ccb2987cef134b453a879f0c4",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-000.json": "92db138523f00e35c62e217d98898b6221937219c190d0da5d7f1fa67c9a6a52",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-001.json": "0ed251c8836886b46a05abbaa61c5adf5432073c59f4199196ee60898e61eaf1",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-002.json": "a675a358b9bb78d2dd12efb941f97f3ca9f35e413dbd2da3754e63842a7d34a0",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-003.json": "3069bd5c38fec69aa0c86033fe0a3c092449963e104c3f144724cffbad93a96f",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-004.json": "1f1b094f0307bb7ad574ffcc150e81d5aa391d6c45884030f44203f99eaa3923",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-005.json": "b670996177311f0f50b6df2d962a4b60f006691716327c530858f5a893e08f62",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-006.json": "3b321fee21f95a6c74eeaeaa1acce691e8de76bcb1e7a1c2913868dcd2295ab5",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-007.json": "3e72d34e132cac77ac35f71cd94b1f8e04f77604c336ebb83cafc31e7dfedf96",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-008.json": "ff89407b658e136d73d69a5968907eca2937971603869c3b81a5bf0294336be7",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-000.json": "f4b7247fa61ee0c21f6025a425bc1f751443397fec878d87e18abd54d04637a1",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-001.json": "d0e125e7ebeacfe8ab91a9a599bf3373ee230072701adbc94c5a4e02588741d8",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-002.json": "494cec8fb2d9e4927860610280952ec6bd065988f9b6b6b2184dfa17d00dfce5",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-003.json": "6e19534f71d3451711843fd909eb20a31ee2b6c03fb0d4ca1943a1877146a081",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-004.json": "f4022b15d788caaa7d46a6bb47ffc96634c65e9e4539664764875f2248e623c0",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-005.json": "f7982ab9578de860d1472e77dabf8d406547c301408a1d7c2eec0c5b593f8490",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-006.json": "b94589e59d9567a3bc76217a32629f8090ea837cb4086df2ebc6ac3afa0d9f71",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-007.json": "0b2d535e0dabeac355913e682848e140aec6c8b797eabeb66ef4d3b88e7cb16d",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/04-000.json": "3934f7993c9c83b445e194b59fb0bb1f11829341e1408537c7e4127507d5fa65",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_INDEX.md": "87390434e5b3fbbe0beba5b131f53c51e640d12514fa50bad76b184f03c7d46e",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_MANIFEST.json": "39935f78fc2af9a921882d3addfd93e549c5aa9b16b402e9f1ccc8ebefc21571",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "39935f78fc2af9a921882d3addfd93e549c5aa9b16b402e9f1ccc8ebefc21571",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/result.json": "bde207beb9d8f04c9496fbd0ac2d70f1b3d4a5bae279474121eb208e3c68b9ac",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/editor-audit/conversation-deadlines/inv1.a1.json": "7cb4ea1bc875b4207dda8c151ebae045df88588d04c2a9297839fe16235a4852",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/rollouts/base1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/rollouts/base1/rollout.json": "d5116e77e404b426892ad92c631c82a290ef658103e37fbf6cfbb780ae2e8f8f",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/search/p3a-01/adaptive/rollouts/inv1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/journal/events.jsonl": "8f3ae147ba8440cd7d72836f892680a4efabc68ffe1d8abc31efa08c58fe34db"
+  },
+  "formal_inspection_written": false,
+  "full_live_readiness_established": false,
+  "kind": "phase3a-c1-completion-r2-actual-live-readiness-review-v1",
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "limits": [
+    "No unseen benchmark assessments, private bindings, writer locks, credentials, original folder or provider streams were read.",
+    "No test, provider call, restart, resend, new experiment or source change was performed.",
+    "Readiness criteria remain frozen; genuine normal grounded KEEP_BASE remains eligible.",
+    "This review supplies neither formal inspection-readiness.json nor continuation or repeat authority."
+  ],
+  "offline_gate_seal_sha256": "ee07b930b4461a0571564fb1955524bbfab56b39a26f32809a6521739c6d3e83",
+  "passed": false,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "readiness_failure_sha256": "7c8cc637ed329f5d7dc003aa067c929d23d35963f399f43f16cf86274831d702",
+  "reason": "INV used seven ordinary tool rounds, last requesting a notes write. Required notes reread and normal final end_turn did not occur before terminal control. The frozen t08 pre-dispatch stop was triggered; there is no t08 intent or provider result.",
+  "reviewed_at_utc": "2026-10-30T07:41:46.672406+00:00",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "semantic_grounding_review": {
+    "attempted_plan_edit_has_specific_evidence_support": true,
+    "notes_accuracy_limitations": [
+      "The notes prematurely claim a notes-file reread. No such event occurred in the seven ordinary rounds; it is not credited as verification.",
+      "The notes refer to eight single-invention answers. The raw plan has nine specific invention slots followed by the comparative tenth; the count is inexact and does not establish official duplicate grouping."
+    ],
+    "observed_support": [
+      {
+        "assessment": "The cited inventions and thematic overlaps are present. They support the stated motivation to separate angle subjects; they are not an official duplicate-group judgment or evidence that the edit improves the benchmark.",
+        "claim": "The comparative angle-10 output reuses subjects addressed by other invention slots.",
+        "sources": [
+          "base plan angle-10",
+          "base answer.09 Candidate 2",
+          "base answer.04 Palimpsest",
+          "base answer.09 Candidate 3",
+          "base answer.00 Living Surfaces"
+        ]
+      },
+      {
+        "assessment": "Only plan_system changed in the temporary context; the notes acknowledge these evidential limitations. No quality or ranking benefit was established.",
+        "claim": "Answer and rank fields were kept with single-rollout/no-probe/no-judge limitations."
+      }
+    ],
+    "scope": "Rationale for attempted temporary edit only, not an eligible native adaptation or measured improvement."
+  },
+  "sha256": "f4b472f7948829097aef0363a78a3e798c42fee770edff2261eb94ba5fd71bd2",
+  "source_sha256": "b17f977af8c893989870216aa8e92e09a4538f7d63555cceae73095998b37e9d",
+  "status": "readiness-failed-known-authoring-stop-partial-semantic-review",
+  "study_sha256": "544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4",
+  "transport_observations": {
+    "INV_clock_seconds": 600,
+    "admitted_attempts": 19,
+    "all_editor_budgets_use_same_absolute_clock": true,
+    "all_parent_captures_within_absolute_window": true,
+    "all_workers_stopped": true,
+    "audited_SDK_invocations": 19,
+    "known_settled_results": 19,
+    "maximum_elapsed_seconds": 100.3029571849911,
+    "new_deadline_or_cleanup_failure": false,
+    "new_unknown_results": 0,
+    "observed_wire_call_count": null,
+    "pending_intents": 0,
+    "t08_intent_present": false,
+    "wire_count_limitation": "Audits mark wire_egress unknown; SDK invocation count is not independently observed HTTP egress."
+  }
+}

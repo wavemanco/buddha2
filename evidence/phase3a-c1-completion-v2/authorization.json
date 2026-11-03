@@ -1,0 +1,21 @@
+{
+  "authorized": true,
+  "calls_require_offline_gate_and_fresh_masked_keys": true,
+  "cumulative_max_attempts": 1636,
+  "cumulative_max_exposure_micro_usd": 228579643,
+  "definition_sha256": "e7c64cbbe3c84e2285d15b63d2d40ac636788534fd67737ae905c311a2be7f52",
+  "first_assessment_sublimit_micro_usd": 23700000,
+  "first_cap_micro_usd": 50860000,
+  "historical_known_micro_usd": 11279643,
+  "historical_liability_release_authorized": false,
+  "historical_reserved_micro_usd": 11440000,
+  "kind": "phase3a-c1-completion-r1-authority-v1",
+  "models_and_billing_profile_unchanged": true,
+  "new_cap_micro_usd": 205860000,
+  "new_max_attempts": 775,
+  "no_separate_readiness_study_or_spend": true,
+  "objective": "complete Phase 3A. All proposed caps below $250 are hereby auto-approved",
+  "old_results_reused": false,
+  "readiness_included_micro_usd": 20000000,
+  "scope": "One fresh C1 completion R1 four-prompt pilot with prospective final-verbatim instructions; preserve closed19-request attempt; unchanged strict checks and declared native method."
+}

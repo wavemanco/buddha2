@@ -1,0 +1,17 @@
+{
+  "schema": "phase3a-user-authority-v1",
+  "authorization_id": "phase3a-whole-phase-2026-10-28",
+  "authorized": true,
+  "objective": "Complete Phase 3A; document and commit previous phases and runs",
+  "user_instruction": "Complete Phase 3A. The proposed $220 cap and included $65 first-pair checkpoint are approved. (Make sure results of previous phases and runs are all documented and committed).",
+  "scope": "Frozen Phase 3A definition 1.0 four-prompt pilot including offline implementation, internal acceptance, counted first-pair engineering review, remaining three pairs, reporting and committed evidence",
+  "cap_micro_usd": 220000000,
+  "canary_cap_micro_usd": 65000000,
+  "first_pair_cap_is_included": true,
+  "expansion_requires": "documented engineering review under this same whole-phase authority",
+  "credential_policy": "fresh masked operator entry into an inspected, source-bound launcher; no ambient credential discovery or retained real keys",
+  "parent_head": "a2eed26",
+  "definition_sha256": "e66ef31ec7841285d07cfdb452ff863ec68be8e5a70af42ac9baab047d01629a",
+  "planning_worksheet_sha256": "d3a45d249f6fdf8a596ae82e096d0fb5c77406896447fbc10f22de9d237239ed",
+  "original_folder_access": false
+}

@@ -1,0 +1,21 @@
+{
+  "accepted_definition_commit": "b501f24",
+  "additional_paid_repetition_authorized": false,
+  "amendment_scope": "RP1 faithful negative and exactly one authenticated HI readiness-prefix positive under current strict checker; complete unchanged approved RP2 conditional block",
+  "authorization_source": "Explicit user reply call_1b586e3182d4452ab59e32fdfdbfc7b6",
+  "authorized": true,
+  "created_utc": "2026-11-01T17:24:20.817098+00:00",
+  "cumulative_max_attempts": 2091,
+  "cumulative_max_exposure_micro_usd": 242754161,
+  "definition": "PHASE3A_RP2_AM1_DEFINITION.md",
+  "definition_sha256": "f85323d63b04a2a4409766007041e0dfd8ce98bd795b762333ab762220b5b6f8",
+  "fresh_cap_micro_usd": 190000000,
+  "fresh_keys_after_independent_acceptance": true,
+  "kind": "phase3a-rp2-am1-authority-v1",
+  "mandatory_reads_unchanged": true,
+  "new_max_attempts": 775,
+  "original_folder_access_authorized": false,
+  "parent_authority_sha256": "08912c34559990e0b70763de5b1feac37746a86db93301394b4ac7be71525fe3",
+  "scientific_criteria_unchanged": true,
+  "user_request": "Approve AM1 and continue the full RP2 block (Recommended)"
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "phase3b-seq2-workflow-admission-correction-expectations-v1",
+  "definition": "PHASE3B_DEFINITION.md",
+  "sections": [
+    "S2-3",
+    "S2-6",
+    "section7completion"
+  ],
+  "frozen_before_correction_edits": true,
+  "changes_method_models_caps": false,
+  "cases": [
+    {
+      "id": "AC01",
+      "case": "first fixed candidate known failure yieldsfailed+11notattempted; noselector,nolatercandidate"
+    },
+    {
+      "id": "AC02",
+      "case": "later fixed candidate7failure yields6complete+1failed+5notattempted; noselector,nolatercandidate"
+    },
+    {
+      "id": "AC03",
+      "case": "fixed candidate budgetstop remainsfailedpool, unattempted candidatesclassified, noselection"
+    },
+    {
+      "id": "AC04",
+      "case": "saved partial replay rejects anylatercandidate/selectorrequest afterfirstknowncandidatefailure"
+    },
+    {
+      "id": "AC05",
+      "case": "workflowfixedfailurefirstprompt orlaterfixed-firstprompt publishesmandatorycoverageeconomystop beforeotherbranch/judging"
+    },
+    {
+      "id": "AC06",
+      "case": "reportcomplete requiresfour full12candidate fixedpools andfour normalnative selections withactualcompleteevidence"
+    },
+    {
+      "id": "AC07",
+      "case": "terminal/fallback/empty/invalid/missing native selector cannotcomplete despite12scores8aliases"
+    },
+    {
+      "id": "AC08",
+      "case": "firstprompt55USD andfirstassessment25USD alwaysbind beforeandafterengineeringreview; exactthresholdadmit +1reject"
+    },
+    {
+      "id": "AC09",
+      "case": "firstassessment CheckpointStop is irrecoverablecoverage stop; noreview-drivenresume/caprelease"
+    },
+    {
+      "id": "AC10",
+      "case": "latestcurrentproductionmodels/pricing/caps/normalKEEP/c1selectionunchanged; noadditionalpaidrepeat"
+    }
+  ]
+}

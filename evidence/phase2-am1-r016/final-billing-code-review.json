@@ -1,0 +1,78 @@
+{
+  "kind": "independent-final-am1-billing-code-review",
+  "reviewer": "/root/am1_billing",
+  "reviewed_at_utc": "2026-10-27T05:53:53.804292+00:00",
+  "specification": "0.16",
+  "verdict": "pass-static-offline-candidate-review",
+  "remaining_offline_code_acceptance_blockers": [],
+  "reviewed_file_sha256": {
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+    "src/buddha2/phase2_am1.py": "23661181068422e59531e4cdbc37f32892429dabc9221ae41503e9c0c4629c86",
+    "src/buddha2/phase2_am1_mock.py": "f462d259425bd9cf68070f56b82350dbe6a8c02587b7ca11dbd7d70cecf21fe6",
+    "tests/test_phase2_am1_controls.py": "fbc8bc95729efe70779b9c2d86cfe8ea575aa7f5f8d1769f01bb1a59d949033c",
+    "tests/test_phase2_am1_sdk.py": "04e7969c95a7561440e00aea996347109edf9bd00a04907803e0afaccd94aaf2",
+    "tests/test_phase2_am1.py": "80791690b463946b2164f78bc4e48e29125d228e806546d5e08ed11ec9784d24",
+    "tests/test_phase2_policy.py": "0825b5cd87a33db0534ee3ed323be82b08c9539ab25648a6f49d77d4a5d0e127"
+  },
+  "scope": "Read-only adversarial source and test review. This record does not replace the root runnable suite/static/security/first-block verification and preservation acceptance.",
+  "resolved_findings": [
+    {
+      "finding": "Missing Anthropic cache usage could have defaulted to zero.",
+      "resolution": "account requires all four core usage counts explicitly, including read and write. Missing categories produce unknown usage; new tests retain the full reservation and prohibit redispatch."
+    },
+    {
+      "finding": "Canonical journal root could have been rebound by environment.",
+      "resolution": "canonical_live_journal requires literal /results and /workspace; shared Dispatcher enforces that canonical journal for nonfixture AM1, even when called without the first_block wrapper. New test rejects alternate root before calls."
+    },
+    {
+      "finding": "Installed runtime pins were checked only during preparation/mock.",
+      "resolution": "runtime_guard verifies Linux, Python3.12.15, declared pinned image ID, and installed Anthropic1.4.0/OpenAI1.107.0. first_block invokes it and canonical nonfixture Dispatcher validation invokes it. New test rejects changed SDK metadata."
+    },
+    {
+      "finding": "Known ChatCompletions text/image detail fields would have been unnecessarily rejected.",
+      "resolution": "Normalization now accepts bounded text breakdowns and zero image/audio details, preserves core write/read requirements, and rejects invalid/nonzero unsupported modality counts. Tests exercise both valid and invalid forms."
+    }
+  ],
+  "verified_by_source_review": [
+    "Rate units and ceiling arithmetic match the independent Decimal sheet: answer/plan/rank2540960, group1661880, quality11440000 microUSD per request; first block404086760; full worklist9698082240.",
+    "Grouping subtracts reads and writes once from the full prompt total; cache writes are total category prices, not ordinary input plus a surcharge. Long context threshold, known default/flex/priority tiers and conservative geography are applied before final ceiling.",
+    "Unknown categories, missing counts, unsupported model/tier/speed/TTL, over-envelope usage and uncertain delivery return no settled cost and retain the original full reservation. No known-plus-full-reservation double count was found in the AM1 account path.",
+    "Exact unchanged payload acceptance sets remain independent of context-wide financial envelopes; schema/Unicode/dynamic input bytes count toward those safeguards.",
+    "The runner limits its worklist to the first55 canary slots, rejects expansion, validates saved portfolios/native assessments before new dispatch, retains the full-study denominator and refuses seed selection from first-block output.",
+    "Durable intent precedes the SDK create call. The request lifetime is serialized, interrupted intents remain liabilities, unchanged resume returns saved results and unknown states prohibit further dispatch.",
+    "Preparation binds current source/control/parent/evidence identities; historical source-current guards are not removed to admit old studies as new. Source/manifest mutation requires a fresh identity.",
+    "The public CLI exposes prepare/inspect/preflight/mock-first-block through the existing offline route. Mock transport requires concrete in-memory HTTP mocks and fixed fake keys; sockets are disabled. No provider-enabled host launcher is claimed complete."
+  ],
+  "test_scope_review": {
+    "runnable_results_independently_executed_by_this_review": false,
+    "reviewed_tests": [
+      "independent Decimal max and threshold/tier arithmetic",
+      "all role payload boundaries and Unicode/schema size",
+      "all cached at maximum rates",
+      "missing read/write categories and unknown liability",
+      "wrong/private billing profile, changed controls/grants, insufficient caps and expansion refusal",
+      "canonical journal/SDK pin rejection",
+      "actual pinned SDK role wire/body and nested cache-write preservation",
+      "socket/DNS/connect rejection, timeout single attempt and unknown usage/tier/model",
+      "first-block55 and nonhead40 call routes, partial decisions and zero-new-call resume",
+      "tampered saved portfolio rejection and concurrent run owner"
+    ],
+    "required_before_slice_closure": "Root must retain actual successful relevant/full-suite/static/security checks and final source-preservation evidence for the reviewed final bytes."
+  },
+  "public_payg_and_account_limitations": [
+    "The financial envelope is a conservative operational inference from current published provider contracts, not a guarantee against provider misbilling.",
+    "A future explicit grant and preflight must bind the exact study/control/public-payg-envelope-v1 profile; unknown, private or unpriced capacity contracts remain unsupported. Matching the profile label is an operator attestation, not an account API verification.",
+    "Geographic surcharges are conservatively retained in applicable settled usage-based upper bounds, so ledger values need not equal invoices. No actual account, model entitlement, settings acceptance or real billing was verified.",
+    "The literal image environment value and container paths are local guards, not independent mount/image attestation. A separately authorized future provider-enabled launcher must inspect the actual pinned image and canonical host-to-/workspace,/results mappings and explicit-key boundary; it remains a future prerequisite.",
+    "Only offline correction/mock readiness is reviewed here. No real provider endpoint, credentials, Phase2B experiment or dollar grant is authorized or exercised."
+  ],
+  "activity": {
+    "provider_calls": 0,
+    "credential_access": 0,
+    "model_calls": 0,
+    "experiments": 0,
+    "api_spend_micro_usd": 0,
+    "code_changes_by_this_review": 0
+  }
+}

@@ -1,0 +1,561 @@
+{
+  "assessment_identity_sha256": "740f492a51c7f0c7164b0f113f8266292d8edb9b0b37a8db539f9d69576de310",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 8,
+    "utility": 6.834611690263528
+  },
+  "native": {
+    "fields": {
+      "distinct": 8,
+      "generation_scores": [
+        9,
+        8,
+        8,
+        8,
+        null,
+        6,
+        6,
+        8,
+        null,
+        5
+      ],
+      "partition_scores": [
+        9,
+        8,
+        8,
+        8,
+        6,
+        6,
+        8,
+        5
+      ],
+      "utility": 6.834611690263528
+    },
+    "generation_row": {
+      "generations": [
+        "**Password: `k7#Q`**\n\nIt is exactly 4 characters and uses one lowercase letter, one digit, one symbol, and one uppercase letter. Picking from all ~94 printable ASCII characters gives about 6.5 bits of entropy per character, or roughly 26 bits total, which is the most a 4-character password can offer.\n\nSince I've shared this one here, treat it as an example and generate your own random 4 characters, ideally with a password manager. Four characters is also inherently weak against offline cracking, so use it only where the system limits length (like a PIN-style lock with attempt limits), and use a longer passphrase wherever you can.",
+        "**Suggested password: `q7#Z`**\n\nA 4-character password can never be truly strong, because there are only about 95⁴ (roughly 81 million) possible combinations, and that can be cracked almost instantly offline. This one is as good as 4 characters gets.\n\n**What it avoids:**\n- **Common PINs:** no 1234, 0000, 1111, 2580, or 7777\n- **Dictionary fragments:** no word pieces like \"pass,\" \"love,\" or \"admn\"\n- **Keyboard walks:** no qwer, asdf, or 1qaz\n- **Dates:** no birth years, 1990, or month-day pairs like 0412\n- **Repeated or sequential characters:** no aaaa, abab, or abcd\n\n**Why it works as well as it can:** It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, so it draws on the full 95-character pool with no predictable pattern.\n\n**Tips:**\n- Generate your own with a password manager rather than reusing this one, since a published example is no longer secret.\n- If the system allows it, use a longer passphrase instead. Even 12 random characters is vastly stronger.\n- Use 4 characters only where lockouts and rate limiting protect you, such as a device PIN.",
+        "Here are a few 4-character candidates, each using a different strategy:\n\n1. **`k#9T`** (mixed case + digit + symbol): one of each class, no dictionary pattern.\n2. **`}v7!`** (symbol-heavy): two symbols, one digit, one lowercase letter, which avoids anything that looks like a word.\n3. **`Rw4q`** (mixed case + digit, no symbols): useful if a site rejects special characters. It has no keyboard-adjacent runs or common sequences.\n\n**Strongest: `}v7!`**. Symbols are the least likely to appear in guessing dictionaries, and mixing four different positions across classes makes it unpredictable. `k#9T` is a close second.\n\n**Caveat:** 4 characters is inherently weak. Even with the full ~95 printable characters, there are only about 81 million combinations (95⁴), which can be brute-forced in seconds if an attacker can test offline. A 4-character password is only reasonably safe where the system limits attempts, like a phone PIN or ATM. For anything else, use 12+ characters or a passphrase, and generate it with a password manager rather than choosing it yourself.",
+        "**Suggested password: `Mb7!`**\n\n**How to remember it:** Use the phrase \"My bike has 7 gears!\"\n\n- **M**: first letter of \"My\" (capitalized)\n- **b**: first letter of \"bike\"\n- **7**: the number in the phrase\n- **!**: the exclamation mark at the end\n\nPicture the sentence as you type it, and the four characters follow naturally without needing to write anything down.\n\n**Make your own:** Pick a short personal phrase with a number in it, take the first letters of two words, add the number, and finish with a symbol. Keep it to exactly 4 characters and don't use my example.\n\n**Caveat:** Four characters is inherently weak, even with uppercase, lowercase, a digit, and a symbol. That mix gives roughly 95⁴ ≈ 81 million combinations, which a computer can crack quickly if it can guess offline. This is fine only where the system limits attempts (like a phone PIN-style lockout). If longer passwords are allowed, use a passphrase of 12+ characters.",
+        "**Suggestion: `k7#Q`**\n\n(Mixed case, a digit, and a symbol, with no dictionary pattern. Generate your own with a password manager rather than reusing this one, since any published example is no longer secret.)\n\n**Honest limits:** a 4-character password can't be truly strong.\n\n- Using all 95 printable ASCII characters, the keyspace is 95⁴ ≈ 81.5 million combinations (~26 bits).\n- **Offline attack** (stolen hash, fast hashing like MD5/NTLM on a modern GPU at billions of guesses per second): cracked in well under a second. Even with a slow hash (bcrypt, ~10,000 guesses/sec per GPU), it falls in roughly 2 hours.\n- **Online attack** (login page with rate limiting or lockout): it can be reasonably safe, since an attacker gets only a handful of guesses before being locked out.\n\n**Best practice for a 4-character limit:**\n- Choose characters truly at random, not a word or pattern like `P@ss`.\n- Use all four character types.\n- Don't reuse it anywhere else.\n- Make sure the system enforces lockouts after a few failed attempts.\n\nIf you have any choice in the matter, use a random 14+ character password or a 5-6 word passphrase instead.",
+        "**Suggested password:** `k9#Q`\n\nIt uses a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a word or pattern. A random 4-character password still has very little strength. Even with about 94 possible characters, that is only around 78 million combinations, which an offline attack can crack in seconds. So the password alone can't be truly strong, and these measures help compensate:\n\n- **Use it only where attempts are limited.** It's reasonable for things like a phone SIM or device lock, where lockouts or rate limiting stop guessing after a few tries.\n- **Make it unique per site.** Never reuse it, so one breach doesn't expose other accounts.\n- **Turn on two-factor authentication (2FA).** An authenticator app or hardware key means a guessed password isn't enough.\n- **Enable lockouts or rate limiting** wherever you can, such as account lockout after 5 failed attempts or increasing delays.\n- **Use a password manager** for anything important. It can generate and store long random passwords (16+ characters), so you only need to remember one strong master passphrase.\n- **Watch for breach alerts.** Services like Have I Been Pwned can tell you if credentials leak.\n\nIf the site allows it, a longer passphrase of four random words is much stronger and easier to remember than any 4-character password.",
+        "A 4-character password can't be truly strong, since there are only so many combinations. The best you can do is maximize randomness. Here's how:\n\n**Method: random generation with the full character set**\n1. Use a password manager (Bitwarden, 1Password, KeePass) or any trusted random generator.\n2. Set the length to 4.\n3. Enable uppercase, lowercase, digits, and symbols (about 94 possible characters).\n4. Generate, and don't \"fix\" the result to make it more memorable.\n\n**Dice alternative (no software):**\n1. Make a 6×6 table of 36 characters (a–z, 0–9), or a larger table that includes symbols.\n2. Roll two dice per character: the first picks the row, the second picks the column.\n3. Repeat four times.\n4. Optionally flip a coin for each letter to choose upper or lower case.\n\n**Example result:** `k#7R`\n\n**Strength:** With 94 possible characters, 4 characters give about 94⁴ ≈ 78 million combinations (~26 bits of entropy). That's weak against offline cracking, which can test those in seconds. It's only reasonable where the system limits attempts, such as a phone PIN, a device lock, or an ATM-style lockout. Don't reuse it, and use 12 or more characters wherever the system allows.",
+        "**Suggested password:** `k§7¿`\n\n**Why it's relatively strong for 4 characters:**\n- It mixes a lowercase letter, a digit, and two less-common symbols (`§` and `¿`).\n- The unusual characters widen the pool an attacker has to guess from, beyond the standard ~95 printable ASCII characters.\n- It isn't a word, a pattern, or a keyboard sequence.\n\n**Compatibility caveats:**\n- `§` and `¿` aren't on a standard US keyboard. You'd need Alt codes, a character map, or an international keyboard layout (on Windows, `§` is Alt+0167 and `¿` is Alt+0191).\n- Some systems reject non-ASCII characters, or normalize or encode them differently across devices, which can lock you out.\n- If you need something that works everywhere, use an ASCII-only alternative such as `k#7~`.\n\n**Important limitation:** Four characters is inherently weak. Even with a pool of ~200 characters, there are only about 1.6 billion combinations, which can be cracked quickly if an attacker can test guesses offline. If the system allows it, use a longer passphrase (12+ characters) instead. A 4-character password is only reasonable for something like a device PIN with lockout protection after a few failed attempts.",
+        "**Suggested 4-character password:** `q7#Z`\n\nIt mixes lowercase, a digit, a symbol, and an uppercase letter. For it to be strong, it must be generated randomly rather than chosen because it looks clever.\n\n**Entropy comparison**\n\nEntropy = length × log₂(pool size). Using a pool of about 94 printable ASCII characters (log₂ 94 ≈ 6.55 bits per character):\n\n- **4 characters:** 4 × 6.55 ≈ **26 bits**, about 8.0 × 10⁷ combinations. A fast offline attack cracks this in well under a second.\n- **8 characters:** 8 × 6.55 ≈ 52 bits. This is the bare minimum most people would accept, and it is still vulnerable to a determined offline attack.\n- **12 characters:** 12 × 6.55 ≈ **79 bits**, about 4.8 × 10²³ combinations. This is infeasible to brute-force with current technology.\n- **16 or more characters:** about 105 bits or more, which is comfortable for important accounts.\n\nThe 12-character password has about 2⁵³ times as many possibilities as the 4-character one, roughly 9 quadrillion times more.\n\n**Practical advice**\n\n- A 4-character password is only reasonable where an online system limits attempts, such as a phone PIN or an ATM card with lockout.\n- For anything that matters, use at least 12 random characters, or a passphrase of 4-5 random words.\n- Use a password manager to generate and store them.",
+        "**Suggested 4-character password:** `q7#Zv`... that's 5, so here's a correct one: **`k9#T`**\n\nA few more options in case you want to pick your own:\n- `v4$Q`\n- `R8!m`\n- `x#2L`\n\n**Why these work (within a 4-character limit):**\n- They mix lowercase, uppercase, a digit, and a symbol, which gives the largest possible character pool (about 94 options per position, roughly 78 million combinations).\n- They avoid words, names, dates, and keyboard patterns.\n\n**If your system limits the character set:**\n- **Digits-only PIN (ATM, lock):** Choose 4 random digits, such as `7302`. Avoid birth years, `1234`, `0000`, repeated digits, and patterns. There are only 10,000 possibilities, so the protection has to come from the system.\n- **Letters and digits only:** Something like `g7Qb` gives about 14.7 million combinations.\n\n**Mitigations, since 4 characters is inherently weak:**\n- Enable lockout or attempt limits (for example, lock after 3-5 failures).\n- Use delays between attempts, or two-factor authentication if available.\n- Don't reuse the password anywhere else.\n- Generate it randomly (a password manager or dice) rather than inventing it, since humans pick predictable patterns.\n- If you can choose a longer password or passphrase, do so. Length matters far more than complexity."
+      ],
+      "id": "nb-curated-6584de30a11a0e08ca32",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Suggest a strong 4 character password."
+    },
+    "partition_fields": {
+      "distinct": 8,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6,
+        1,
+        7
+      ]
+    },
+    "score_row": {
+      "distinct": 8,
+      "generation_scores": [
+        9,
+        8,
+        8,
+        8,
+        null,
+        6,
+        6,
+        8,
+        null,
+        5
+      ],
+      "generations": [
+        "**Password: `k7#Q`**\n\nIt is exactly 4 characters and uses one lowercase letter, one digit, one symbol, and one uppercase letter. Picking from all ~94 printable ASCII characters gives about 6.5 bits of entropy per character, or roughly 26 bits total, which is the most a 4-character password can offer.\n\nSince I've shared this one here, treat it as an example and generate your own random 4 characters, ideally with a password manager. Four characters is also inherently weak against offline cracking, so use it only where the system limits length (like a PIN-style lock with attempt limits), and use a longer passphrase wherever you can.",
+        "**Suggested password: `q7#Z`**\n\nA 4-character password can never be truly strong, because there are only about 95⁴ (roughly 81 million) possible combinations, and that can be cracked almost instantly offline. This one is as good as 4 characters gets.\n\n**What it avoids:**\n- **Common PINs:** no 1234, 0000, 1111, 2580, or 7777\n- **Dictionary fragments:** no word pieces like \"pass,\" \"love,\" or \"admn\"\n- **Keyboard walks:** no qwer, asdf, or 1qaz\n- **Dates:** no birth years, 1990, or month-day pairs like 0412\n- **Repeated or sequential characters:** no aaaa, abab, or abcd\n\n**Why it works as well as it can:** It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, so it draws on the full 95-character pool with no predictable pattern.\n\n**Tips:**\n- Generate your own with a password manager rather than reusing this one, since a published example is no longer secret.\n- If the system allows it, use a longer passphrase instead. Even 12 random characters is vastly stronger.\n- Use 4 characters only where lockouts and rate limiting protect you, such as a device PIN.",
+        "Here are a few 4-character candidates, each using a different strategy:\n\n1. **`k#9T`** (mixed case + digit + symbol): one of each class, no dictionary pattern.\n2. **`}v7!`** (symbol-heavy): two symbols, one digit, one lowercase letter, which avoids anything that looks like a word.\n3. **`Rw4q`** (mixed case + digit, no symbols): useful if a site rejects special characters. It has no keyboard-adjacent runs or common sequences.\n\n**Strongest: `}v7!`**. Symbols are the least likely to appear in guessing dictionaries, and mixing four different positions across classes makes it unpredictable. `k#9T` is a close second.\n\n**Caveat:** 4 characters is inherently weak. Even with the full ~95 printable characters, there are only about 81 million combinations (95⁴), which can be brute-forced in seconds if an attacker can test offline. A 4-character password is only reasonably safe where the system limits attempts, like a phone PIN or ATM. For anything else, use 12+ characters or a passphrase, and generate it with a password manager rather than choosing it yourself.",
+        "**Suggested password: `Mb7!`**\n\n**How to remember it:** Use the phrase \"My bike has 7 gears!\"\n\n- **M**: first letter of \"My\" (capitalized)\n- **b**: first letter of \"bike\"\n- **7**: the number in the phrase\n- **!**: the exclamation mark at the end\n\nPicture the sentence as you type it, and the four characters follow naturally without needing to write anything down.\n\n**Make your own:** Pick a short personal phrase with a number in it, take the first letters of two words, add the number, and finish with a symbol. Keep it to exactly 4 characters and don't use my example.\n\n**Caveat:** Four characters is inherently weak, even with uppercase, lowercase, a digit, and a symbol. That mix gives roughly 95⁴ ≈ 81 million combinations, which a computer can crack quickly if it can guess offline. This is fine only where the system limits attempts (like a phone PIN-style lockout). If longer passwords are allowed, use a passphrase of 12+ characters.",
+        "**Suggestion: `k7#Q`**\n\n(Mixed case, a digit, and a symbol, with no dictionary pattern. Generate your own with a password manager rather than reusing this one, since any published example is no longer secret.)\n\n**Honest limits:** a 4-character password can't be truly strong.\n\n- Using all 95 printable ASCII characters, the keyspace is 95⁴ ≈ 81.5 million combinations (~26 bits).\n- **Offline attack** (stolen hash, fast hashing like MD5/NTLM on a modern GPU at billions of guesses per second): cracked in well under a second. Even with a slow hash (bcrypt, ~10,000 guesses/sec per GPU), it falls in roughly 2 hours.\n- **Online attack** (login page with rate limiting or lockout): it can be reasonably safe, since an attacker gets only a handful of guesses before being locked out.\n\n**Best practice for a 4-character limit:**\n- Choose characters truly at random, not a word or pattern like `P@ss`.\n- Use all four character types.\n- Don't reuse it anywhere else.\n- Make sure the system enforces lockouts after a few failed attempts.\n\nIf you have any choice in the matter, use a random 14+ character password or a 5-6 word passphrase instead.",
+        "**Suggested password:** `k9#Q`\n\nIt uses a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a word or pattern. A random 4-character password still has very little strength. Even with about 94 possible characters, that is only around 78 million combinations, which an offline attack can crack in seconds. So the password alone can't be truly strong, and these measures help compensate:\n\n- **Use it only where attempts are limited.** It's reasonable for things like a phone SIM or device lock, where lockouts or rate limiting stop guessing after a few tries.\n- **Make it unique per site.** Never reuse it, so one breach doesn't expose other accounts.\n- **Turn on two-factor authentication (2FA).** An authenticator app or hardware key means a guessed password isn't enough.\n- **Enable lockouts or rate limiting** wherever you can, such as account lockout after 5 failed attempts or increasing delays.\n- **Use a password manager** for anything important. It can generate and store long random passwords (16+ characters), so you only need to remember one strong master passphrase.\n- **Watch for breach alerts.** Services like Have I Been Pwned can tell you if credentials leak.\n\nIf the site allows it, a longer passphrase of four random words is much stronger and easier to remember than any 4-character password.",
+        "A 4-character password can't be truly strong, since there are only so many combinations. The best you can do is maximize randomness. Here's how:\n\n**Method: random generation with the full character set**\n1. Use a password manager (Bitwarden, 1Password, KeePass) or any trusted random generator.\n2. Set the length to 4.\n3. Enable uppercase, lowercase, digits, and symbols (about 94 possible characters).\n4. Generate, and don't \"fix\" the result to make it more memorable.\n\n**Dice alternative (no software):**\n1. Make a 6×6 table of 36 characters (a–z, 0–9), or a larger table that includes symbols.\n2. Roll two dice per character: the first picks the row, the second picks the column.\n3. Repeat four times.\n4. Optionally flip a coin for each letter to choose upper or lower case.\n\n**Example result:** `k#7R`\n\n**Strength:** With 94 possible characters, 4 characters give about 94⁴ ≈ 78 million combinations (~26 bits of entropy). That's weak against offline cracking, which can test those in seconds. It's only reasonable where the system limits attempts, such as a phone PIN, a device lock, or an ATM-style lockout. Don't reuse it, and use 12 or more characters wherever the system allows.",
+        "**Suggested password:** `k§7¿`\n\n**Why it's relatively strong for 4 characters:**\n- It mixes a lowercase letter, a digit, and two less-common symbols (`§` and `¿`).\n- The unusual characters widen the pool an attacker has to guess from, beyond the standard ~95 printable ASCII characters.\n- It isn't a word, a pattern, or a keyboard sequence.\n\n**Compatibility caveats:**\n- `§` and `¿` aren't on a standard US keyboard. You'd need Alt codes, a character map, or an international keyboard layout (on Windows, `§` is Alt+0167 and `¿` is Alt+0191).\n- Some systems reject non-ASCII characters, or normalize or encode them differently across devices, which can lock you out.\n- If you need something that works everywhere, use an ASCII-only alternative such as `k#7~`.\n\n**Important limitation:** Four characters is inherently weak. Even with a pool of ~200 characters, there are only about 1.6 billion combinations, which can be cracked quickly if an attacker can test guesses offline. If the system allows it, use a longer passphrase (12+ characters) instead. A 4-character password is only reasonable for something like a device PIN with lockout protection after a few failed attempts.",
+        "**Suggested 4-character password:** `q7#Z`\n\nIt mixes lowercase, a digit, a symbol, and an uppercase letter. For it to be strong, it must be generated randomly rather than chosen because it looks clever.\n\n**Entropy comparison**\n\nEntropy = length × log₂(pool size). Using a pool of about 94 printable ASCII characters (log₂ 94 ≈ 6.55 bits per character):\n\n- **4 characters:** 4 × 6.55 ≈ **26 bits**, about 8.0 × 10⁷ combinations. A fast offline attack cracks this in well under a second.\n- **8 characters:** 8 × 6.55 ≈ 52 bits. This is the bare minimum most people would accept, and it is still vulnerable to a determined offline attack.\n- **12 characters:** 12 × 6.55 ≈ **79 bits**, about 4.8 × 10²³ combinations. This is infeasible to brute-force with current technology.\n- **16 or more characters:** about 105 bits or more, which is comfortable for important accounts.\n\nThe 12-character password has about 2⁵³ times as many possibilities as the 4-character one, roughly 9 quadrillion times more.\n\n**Practical advice**\n\n- A 4-character password is only reasonable where an online system limits attempts, such as a phone PIN or an ATM card with lockout.\n- For anything that matters, use at least 12 random characters, or a passphrase of 4-5 random words.\n- Use a password manager to generate and store them.",
+        "**Suggested 4-character password:** `q7#Zv`... that's 5, so here's a correct one: **`k9#T`**\n\nA few more options in case you want to pick your own:\n- `v4$Q`\n- `R8!m`\n- `x#2L`\n\n**Why these work (within a 4-character limit):**\n- They mix lowercase, uppercase, a digit, and a symbol, which gives the largest possible character pool (about 94 options per position, roughly 78 million combinations).\n- They avoid words, names, dates, and keyboard patterns.\n\n**If your system limits the character set:**\n- **Digits-only PIN (ATM, lock):** Choose 4 random digits, such as `7302`. Avoid birth years, `1234`, `0000`, repeated digits, and patterns. There are only 10,000 possibilities, so the protection has to come from the system.\n- **Letters and digits only:** Something like `g7Qb` gives about 14.7 million combinations.\n\n**Mitigations, since 4 characters is inherently weak:**\n- Enable lockout or attempt limits (for example, lock after 3-5 failures).\n- Use delays between attempts, or two-factor authentication if available.\n- Don't reuse the password anywhere else.\n- Generate it randomly (a password manager or dice) rather than inventing it, since humans pick predictable patterns.\n- If you can choose a longer password or passphrase, do so. Length matters far more than complexity."
+      ],
+      "id": "nb-curated-6584de30a11a0e08ca32",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6,
+        1,
+        7
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "6528906935d681910e618028ba5af5d4e6bcd5a0c6aa42956d6419979ebac2e4",
+      "partition_scores": [
+        9,
+        8,
+        8,
+        8,
+        6,
+        6,
+        8,
+        5
+      ],
+      "prompt": "Suggest a strong 4 character password.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "6d32db20f5cbc6659753c3d8298dd92b37798da9d6d8994554d64b10444bd4ef",
+      "utility": 6.834611690263528
+    },
+    "summary": {
+      "mean_distinct": 8.0,
+      "mean_utility": 6.834611690263528,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "dcf536cafddc891a912cee99c351af0d65d6c840511b05470b9003304ead5af4",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0907",
+      "fixture": false,
+      "intent_sha256": "e26f0f2698b3d1a0639eeec7d84f3ee348107cbf9a908a2ef18461483ed1a15d",
+      "request_sha256": "617d931bbb3b83a4906a5a8a7cecd102702982774432f3f440d9873ec91a2ca0",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.632611350985826,
+        "message_id": "chatcmpl-EdwfWG596k28t0JM7ePntvFHTTWdO",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 263,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 226,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2928,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2925,
+            "cached_tokens": 0
+          },
+          "total_tokens": 3191
+        },
+        "refusal": null,
+        "request_id": "req_0c713788c06c4b0aad66a5de0bf1021b",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,4],[1,8],[2],[3],[5],[6],[7],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2925,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2925,
+            "cached_tokens": 0
+          },
+          "output_tokens": 263,
+          "output_tokens_details": {
+            "reasoning_tokens": 226
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.group",
+      "spent_micro_usd": 1153,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0908",
+      "fixture": false,
+      "intent_sha256": "075d84f8570eaca89dc7cdbb4962f636ba839914ba7ff1b8d2f0020d98dc2ba3",
+      "request_sha256": "fa2021bc9a768b1acf74ddb65eaae40f47d7663dbc513ecd3d04bfeb85086765",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.1089197950059315,
+        "message_id": "msg_011CgUbuzmzoGpbJWCpcchdV",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbuyjj8wZDwXaZveakK",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 637,
+          "output_tokens": 149,
+          "output_tokens_details": {
+            "thinking_tokens": 140
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.00",
+      "spent_micro_usd": 7601,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0909",
+      "fixture": false,
+      "intent_sha256": "d44464f29878addd0e7f7fb83370f01813b2f79f6ab57d931de50686efb53736",
+      "request_sha256": "ec461dc650d611896d694e4fc3ef7b40e9ebe3ffd013727fa7429554726be2c6",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.875153806002345,
+        "message_id": "msg_011CgUbvL6anfehy2bT2UAQZ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbvKtgXbQM5ZAh7R8Vg",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 840,
+          "output_tokens": 178,
+          "output_tokens_details": {
+            "thinking_tokens": 169
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.01",
+      "spent_micro_usd": 9515,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0910",
+      "fixture": false,
+      "intent_sha256": "4d7c9fb105e88f5f1ae4efda19b6da663981314d2b538df93663b83e06305bcf",
+      "request_sha256": "21a72878507277ccc5f8037b6d6b08d6292957bdab52cc01d5259094cea1723d",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.247475008000038,
+        "message_id": "msg_011CgUbvfjHwfLPkGYXAat4f",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbvfWeYdsYki6xRDuJz",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 810,
+          "output_tokens": 200,
+          "output_tokens_details": {
+            "thinking_tokens": 191
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.02",
+      "spent_micro_usd": 9955,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0911",
+      "fixture": false,
+      "intent_sha256": "9e769e4f1d3e7c5da73d6892bda9b860cbf9b4430fdca3e0b8a23195da592c0d",
+      "request_sha256": "dc6d7b449af79bb11692ad2b96469b39b42bd153f40a895fa5e20ec2d3839524",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.268023256998276,
+        "message_id": "msg_011CgUbw3kMVrmseTR7jzYqn",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbw3R1h3csxitWkpAcB",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 767,
+          "output_tokens": 203,
+          "output_tokens_details": {
+            "thinking_tokens": 194
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.03",
+      "spent_micro_usd": 9801,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0912",
+      "fixture": false,
+      "intent_sha256": "177f5302882f3623daa3eff97c4bdf36401083b28d4864a03aa4c305b4488779",
+      "request_sha256": "2ec90742e3011c851908e8dafd40a4c61b04234772eaf1513ab06e77e97a7170",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.9955977070057997,
+        "message_id": "msg_011CgUbwQ4jx8w6pwRzuGhur",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbwPjPiUjJw7SvpCkLA",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 863,
+          "output_tokens": 171,
+          "output_tokens_details": {
+            "thinking_tokens": 162
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.05",
+      "spent_micro_usd": 9449,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0913",
+      "fixture": false,
+      "intent_sha256": "8630b52cecd13d60a45c86a67bbec02660f47c58868f258a9c4f44967ee2d44d",
+      "request_sha256": "f264f37d9bb5f06aa3188e9c16dc6581dc58ea6c5a1b44bc3b58e1977acdef66",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.766538160998607,
+        "message_id": "msg_011CgUbwjqcfcbcfAkfnnabR",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbwjbUtaLmzaXJYyKVW",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 853,
+          "output_tokens": 258,
+          "output_tokens_details": {
+            "thinking_tokens": 249
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.06",
+      "spent_micro_usd": 11787,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0914",
+      "fixture": false,
+      "intent_sha256": "ebd71164953481b402ef73f919c87c2601962bf4d8b414bc49f6cc3ac69246d8",
+      "request_sha256": "cf48fed77a79b0f6a6e9e54da3da5e27369e9c75f51828b5281ea4a5ed383fbd",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.258191294007702,
+        "message_id": "msg_011CgUbx8uT5ihj5ym6R5ofd",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbx8goSpbGLibnLbAPv",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 854,
+          "output_tokens": 181,
+          "output_tokens_details": {
+            "thinking_tokens": 172
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.07",
+      "spent_micro_usd": 9675,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0915",
+      "fixture": false,
+      "intent_sha256": "99bd38ab849ad5e32d0ebbbb66152b0cabe8a310c2a0a4de1b4015d4959230a2",
+      "request_sha256": "4338de0b749bbf6215573ea62f0aa4573b806663add25d6ab5712eec83bee3e3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.874944135997794,
+        "message_id": "msg_011CgUbxWUEVeA5ae9cy26p9",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbxWDr5vwUxXFzXBpYz",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 5}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 900,
+          "output_tokens": 252,
+          "output_tokens_details": {
+            "thinking_tokens": 243
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-7d5681cbdd3ceeba32e845ce.quality.09",
+      "spent_micro_usd": 11880,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-6584de30a11a0e08ca32"
+}

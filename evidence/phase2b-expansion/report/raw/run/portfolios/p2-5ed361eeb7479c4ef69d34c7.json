@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-2bd684cc95c63263feb48a770958bf46cd56c7564f48ddcdf6f0d362502eec1a",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-5ed361eeb7479c4ef69d34c7.answer.00",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.01",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.02",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.03",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.04",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.05",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.06",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.07",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.08",
+      "p2-5ed361eeb7479c4ef69d34c7.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-78b3f783817665c215e147e4",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.00",
+      "status": "ok",
+      "text": "Here are three influential persons from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859), which transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. president, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher, economist, and political theorist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements."
+    },
+    {
+      "id": "response-39e3d186d112abd36cc17f1f",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.01",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859), which transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired social and political movements worldwide."
+    },
+    {
+      "id": "response-0f03b7d60f578bef74c02993",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.02",
+      "status": "ok",
+      "text": "Here are three influential persons from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. president, who led the nation through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired social and political movements worldwide."
+    },
+    {
+      "id": "response-e374e1fa6f1c1b69d3807402",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.03",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the United States through the Civil War, preserved the Union, and issued the Emancipation Proclamation, paving the way for the abolition of slavery.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political thought and inspired socialist and communist movements worldwide."
+    },
+    {
+      "id": "response-7c912b77a1b9cfbe5d3cf15e",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.04",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide."
+    },
+    {
+      "id": "response-151fc3889227ba7d983288c6",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.05",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859). His work transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose writings, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped political thought, economics, and social movements worldwide."
+    },
+    {
+      "id": "response-0e219d65a00ceed379fc972d",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.06",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The English naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide."
+    },
+    {
+      "id": "response-2b7bba91e50571b8e4b076bc",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.07",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the nation through the Civil War, preserved the Union, and issued the Emancipation Proclamation, paving the way for the abolition of slavery.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide."
+    },
+    {
+      "id": "response-08ca0afc8651ca9683794cb9",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.08",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, preserved the Union, and issued the Emancipation Proclamation, helping bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide."
+    },
+    {
+      "id": "response-54cb0dba695533cd8af7a2ba",
+      "request_id": "p2-5ed361eeb7479c4ef69d34c7.answer.09",
+      "status": "ok",
+      "text": "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859), which transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the nation through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired social and political movements worldwide."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+    "prompt": "Can you list 3 influential persons from the nineteenth century?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-63"
+    }
+  }
+}

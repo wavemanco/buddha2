@@ -1,0 +1,117 @@
+{
+  "archive": "evidence/phase3a-c1-completion-v3/offline-kit-v1.zip",
+  "archive_bytes": 10144575,
+  "archive_sha256": "076749622f4f421fb447a1055bd51220fca536775537ad855a58e5377eb1c11d",
+  "checks": {
+    "ZIP_CRC_all_member_SHA_inventory_and_sizes": true,
+    "all2226_working_member_bytes_identical": true,
+    "all254_current_and_retained_source_bytes_match": true,
+    "all663_intent_result_audit_bindings_and_known_outcomes": true,
+    "archived_checklist_prepublication_cutoff_preserved": true,
+    "complete_required_public_native_journal_audit_and_verification_trees": true,
+    "exact_two_host_handles_mock_zero_calls_config_unstarted": true,
+    "external_acceptance_not_circular_inside_ZIP": true,
+    "lexical_private_exclusion_before_metadata": true,
+    "no_known_provider_key_or_private_key_pattern_detected": true,
+    "no_live_claim_or_journal_before_publication": true,
+    "no_raw_HTML_member_names": true,
+    "original12_criteria_unchanged": true,
+    "parent_R1_archive_manifest_acceptance_references_verified": true,
+    "publications_match_source_gate_caps_and_limitations": true,
+    "separate_non_author_admission_and_launch_reviews": true,
+    "six_groups_and_five_bound_reviews": true
+  },
+  "closed_parent_references": {
+    "evidence/phase3a-c1-completion-v2/live-outcome-v1.manifest.json": {
+      "bytes": 432775,
+      "sha256": "2681b60e90ff1fe1638429687f8f125f090aab29a6d2d395b7660306c8c0b271"
+    },
+    "evidence/phase3a-c1-completion-v2/live-outcome-v1.zip": {
+      "bytes": 8801462,
+      "sha256": "baf5b8413e5f45305c6e1df306542e04a314039312de3ed66b138284b2798527"
+    },
+    "evidence/phase3a-c1-completion-v2/live-packet-acceptance.json": {
+      "bytes": 2879,
+      "sha256": "26774f595761211862830b0763af0383785bb1e80c8b348055e8694c5d5b9777"
+    }
+  },
+  "external_manifest": "evidence/phase3a-c1-completion-v3/offline-kit-v1.manifest.json",
+  "external_manifest_sha256": "d620609be3c74696c413e672d2f899a7f56ae73abfb4396d4436dfb7baa1bb05",
+  "kind": "phase3a-c1-completion-r2-independent-offline-packet-acceptance-v1",
+  "known_limits": {
+    "cumulative_max_micro_usd": 240971444,
+    "historical_known_micro_usd": 12231444,
+    "historical_reserved_micro_usd": 22880000,
+    "included_first_cap_micro_usd": 50860000,
+    "included_readiness_micro_usd": 20000000,
+    "new_cap_micro_usd": 205860000,
+    "new_max_attempts": 775,
+    "old_unknown_released": false
+  },
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "limitations": [
+    "No detector proves absence of arbitrary unknown secret strings; this audit excluded declared private names before metadata and checked known provider/private-key patterns without reading any actual credentials.",
+    "Physical file-symlink creation was unavailable; junction and ancestor rejection passed, but that specific file-link case is not claimed tested.",
+    "The archived requirements snapshot predates this publication verdict; this external record closes the offline packet gate without rewriting the snapshot. R2-11/R2-12 actual live readiness/results remain pending.",
+    "Mock accounting is not real spending. Historical22.88USD unknown liability is not released. No provider/account access or effectiveness is established by this packet."
+  ],
+  "member_count": 2227,
+  "mock_counts": {
+    "absolute_editor_conversation_clocks": 12,
+    "branches": 8,
+    "intents": 663,
+    "known_results": 663,
+    "native_adaptations": 4,
+    "native_assessments": 9,
+    "pair_seals": 4,
+    "roles": {
+      "answer": 400,
+      "editor": 80,
+      "fixed_selector": 4,
+      "group": 9,
+      "plan": 40,
+      "quality": 90,
+      "rank": 40
+    },
+    "transport_audits": 663
+  },
+  "mode": "offline",
+  "new_provider_calls": 0,
+  "new_real_credentials_used": false,
+  "new_real_spent_micro_usd": 0,
+  "offline_gate_file_sha256": "508042415b29e69a18f53b79aac1bb407f27ee2ebe2947443ebd35684413be2a",
+  "offline_gate_internal_seal_sha256": "ee07b930b4461a0571564fb1955524bbfab56b39a26f32809a6521739c6d3e83",
+  "original_folder_accessed": false,
+  "original_requirement_criteria_sha256": "27bdfb16756973e54cfef8a355d9f91010294c7883ee3e77cdaf1fb40d1d64cf",
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "private_credentials_or_writer_locks_read": false,
+  "private_names_skipped_without_metadata": [
+    "runs/phase3a-c1-completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/mock/journal/.writer.lock",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/mock/launch-owner/.writer.lock",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/mock/owner/.writer.lock"
+  ],
+  "publication_cutoff_utc": "2026-10-30T07:02:05.451291+00:00",
+  "publication_file_sha256": {
+    "PHASE3A_C1_COMPLETION_R2_REPORT.md": "a626c765111dd4fff371bf5f40f22c66c3a2eb61bdbe3f26b4e285455be26b81",
+    "PHASE3A_C1_COMPLETION_R2_RUNBOOK.md": "4d859dcdf495f3a81d6d291eea41c805e7cf78f05ac4a272700f53ab8e2661e3",
+    "evidence/phase3a-c1-completion-v3/REQUIREMENTS.md": "d383086e210b0e75f517eb637f4f92d46701b7be7dc3e55a7bea9936a11fa25d"
+  },
+  "required_public_files_independently_enumerated": 1919,
+  "review_certificate_file_sha256": {
+    "admission-acceptance.json": "90e885c0b89c683250789458f83bf19c3bb3b1daa7e841444eaf4fcfa0a63252",
+    "independent-admission-review.json": "e9d654546bba7709ac07558f30c4267cfd963df1b627d1d52d7ce0ec8a34c5b9",
+    "independent-launch-review.json": "fc46a124469a6ec5239ad38e03ea634070bd95a943b77171b1527aa0f281ca5d",
+    "launch-acceptance.json": "9af27dc66a3488cdc2f256114bc540953684bb7389633a61ee887d2198c5f789",
+    "scientific-acceptance.json": "c1959ea27db248cdff7c2d11ffd99b9314dc5d3f3c3c0e86218d7391d7318e1b"
+  },
+  "reviewed_at_utc": "2026-10-30T07:11:11.848373+00:00",
+  "reviewer_disclosure": "Reviewer contributed R2 integration/launcher and the launch scope certificate, plus an ancestor public-packager helper. This separately verifies the root-built immutable ZIP with independent standard-library counters/arithmetic; it is not a non-author efficacy or full-source review. Separate non-author scope cross-checks are included.",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scientific_or_actual_model_readiness_claim": false,
+  "sha256": "f317c9496c278b57a7fa77649630d1a8a97f0ab06e0223d34e905aeb120a674d",
+  "source_sha256": "b17f977af8c893989870216aa8e92e09a4538f7d63555cceae73095998b37e9d",
+  "study_sha256": "544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4",
+  "supplies_no_new_authority": true,
+  "verdict": "offline-publication-accepted; live readiness and scientific outcome remain unestablished"
+}

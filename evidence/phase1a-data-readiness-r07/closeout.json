@@ -1,0 +1,442 @@
+{
+  "access": {
+    "basis": "Tool/activity review, reference scopes, audit hook, network-disabled relevant checks and unchanged old evidence. Protected original was not inspected to hash it.",
+    "original_folder_accessed": false,
+    "original_folder_used_as_workdir_or_mounted": false,
+    "published_heldout_row_contents_opened": false
+  },
+  "candidate_inventory_contexts": 221,
+  "checks": {
+    "bandit_medium_high": "passed; low-severity assertion notes retained",
+    "deterministic_outputs_replayed": 7,
+    "mypy": "passed",
+    "relevant_tests_passed": 29,
+    "replay_record": "replay-final.json",
+    "ruff": "passed",
+    "runtime_record": "checks-final.json"
+  },
+  "completed_at_utc": "2026-10-25T10:13:24.208076+00:00",
+  "completion_criteria": {
+    "D1A-1": "satisfied_with_use_specific_limits",
+    "D1A-2": "satisfied_with_use_specific_limits",
+    "D1A-3": "satisfied_with_use_specific_limits",
+    "D1A-4": "satisfied_with_use_specific_limits",
+    "D1A-5": "satisfied_with_use_specific_limits",
+    "D1A-6": "satisfied_with_use_specific_limits"
+  },
+  "current_status_specification": "0.8",
+  "elapsed_wall_seconds": 1721.208,
+  "experiment": {
+    "author_messages": 0,
+    "dependency_installs": 0,
+    "human_ratings": 0,
+    "local_model_or_embedding_inference": 0,
+    "model_calls": 0,
+    "new_images": 0,
+    "new_row_corpora": 0,
+    "provider_token_count_requests": 0,
+    "spend_usd": 0,
+    "weight_downloads": 0
+  },
+  "historical_snapshot_links": "Excluded frozen specification snapshot/archive links authored relative to project root; originals preserved byte-identical",
+  "kind": "phase1a-data-readiness-closeout",
+  "local_file_links_checked": [
+    {
+      "from": "README.md",
+      "to": "PHASE1_REPORT.md"
+    },
+    {
+      "from": "README.md",
+      "to": "PHASE0_REPORT.md"
+    },
+    {
+      "from": "README.md",
+      "to": "PHASE1A_DATA_READINESS_REPORT.md"
+    },
+    {
+      "from": "README.md",
+      "to": "evidence/phase1a-data-readiness-r07/inspection-packet.md"
+    },
+    {
+      "from": "README.md",
+      "to": "EXPERIMENT_PLAN.md"
+    },
+    {
+      "from": "README.md",
+      "to": "PHASE_DEFINITIONS.md"
+    },
+    {
+      "from": "README.md",
+      "to": "DECISIONS.md"
+    },
+    {
+      "from": "README.md",
+      "to": "AGENTS.md"
+    },
+    {
+      "from": "README.md",
+      "to": "specifications/archive/phase-definitions-0.6.md"
+    },
+    {
+      "from": "README.md",
+      "to": "PHASE1_DECISIONS.md"
+    },
+    {
+      "from": "README.md",
+      "to": "configs/phase1/rubric.md"
+    },
+    {
+      "from": "README.md",
+      "to": "configs/phase1/rubric-audit.md"
+    },
+    {
+      "from": "README.md",
+      "to": "configs/phase1/profile.json"
+    },
+    {
+      "from": "README.md",
+      "to": "references/surprise-conversation.md"
+    },
+    {
+      "from": "README.md",
+      "to": "specifications/archive/phase-definitions-0.3.md"
+    },
+    {
+      "from": "README.md",
+      "to": "evidence/phase0-example.zip"
+    },
+    {
+      "from": "README.md",
+      "to": "PHASE1_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE_DEFINITIONS.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "specifications/archive/phase-definitions-0.3.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "DECISIONS.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "specifications/archive/phase-definitions-0.5.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE1_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "specifications/archive/phase-definitions-0.6.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE1A_DATA_READINESS_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "specifications/archive/phase-definitions-0.7.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE1A_DATA_READINESS_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "references/surprise-conversation.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "specifications/archive/phase-definitions-0.3.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE0_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE1_REPORT.md"
+    },
+    {
+      "from": "EXPERIMENT_PLAN.md",
+      "to": "PHASE1A_DATA_READINESS_REPORT.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "EXPERIMENT_PLAN.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "DECISIONS.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "specifications/archive/phase-definitions-0.3.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "specifications/archive/phase0-decisions-0.3.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "PHASE0_REPORT.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "specifications/archive/phase-definitions-0.5.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "evidence/phase1-live/readiness-exception-approved.json"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "PHASE1_REPORT.md"
+    },
+    {
+      "from": "PHASE_DEFINITIONS.md",
+      "to": "PHASE1A_DATA_READINESS_REPORT.md"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/decisions.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/references/source-semantics.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/source-audit.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/candidate-inventory.jsonl"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/exposure-ledger.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/sampling-policy.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/inspection-packet.md"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "runs/phase1a-data-readiness-r07/private/inspection-key.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/inspection-notes.pre-key.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/historical-disagreements.md"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/references/asset-metadata.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/checks-final.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/closeout.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/manifest.json"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "specifications/archive/phase-definitions-0.7.md"
+    },
+    {
+      "from": "PHASE1A_DATA_READINESS_REPORT.md",
+      "to": "evidence/phase1a-data-readiness-r07/specification-0.7.md"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/plan.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0025.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0026.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0027.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0028.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0033.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0034.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0037.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0038.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0039.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0040.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0043.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0044.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0045.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0046.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0047.result.json"
+    },
+    {
+      "from": "evidence/phase1a-data-readiness-r07/historical-disagreements.md",
+      "to": "runs/phase1-live-r05/execution/attempts/0048.result.json"
+    }
+  ],
+  "manifest_excludes_self_to_avoid_circular_hash": true,
+  "next_route": {
+    "recommendation": "H",
+    "requires_concrete_definition": true,
+    "started": false
+  },
+  "preservation": {
+    "archived_specification_sha256": "4fc5cbf9fec60d96b0b9ee6ff41758c18624e2373c982b3e16b3241e859b7619",
+    "planned_status_changes_only": {
+      "AGENTS.md": {
+        "after": "26e85d1dadfe4d40d790e33654b66b884923c1cfdb46c382e32eeff43e26c35a",
+        "before": "11da93c6baf39334b885feb6ce43bc4e4222b54356dfdf6801fd501924d4355f"
+      },
+      "EXPERIMENT_PLAN.md": {
+        "after": "2f9592ed8711c7d8da394eccebe5bd75069497c6b86ebc1a571b76cc518b22e8",
+        "before": "ccd419123169b9b9ef830283ee531af7a0d9c4f1fa36755928b61984d130ee55"
+      },
+      "PHASE_DEFINITIONS.md": {
+        "after": "b34786aed5dcff89db3f24265a0b67ab079343ee6aa36caef1a84133f90d028b",
+        "before": "4fc5cbf9fec60d96b0b9ee6ff41758c18624e2373c982b3e16b3241e859b7619"
+      },
+      "README.md": {
+        "after": "37e52f80ceb09cdd9db0128c4898319142907092c741944e758e74c13bda3436",
+        "before": "76b6d22a4579cd5379c34f5b9dfcf6ffe9f697cafa4074ef1ae6f084a606de19"
+      }
+    },
+    "unchanged_prior_source_and_run_files": 250,
+    "unchanged_prior_tracked_files": 191,
+    "upstream": {
+      "harness2": {
+        "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+        "git_status_clean": true,
+        "tracked_files_unchanged": 114
+      },
+      "novelty-bench": {
+        "commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+        "git_status_clean": true,
+        "tracked_files_unchanged": 169
+      }
+    }
+  },
+  "private_key": {
+    "path": "runs/phase1a-data-readiness-r07/private/inspection-key.json",
+    "sha256": "4deda3ec24f3df5a4aaeeb89cdc04aeadd5eb0cf88d9a5027624a43b69301202",
+    "tracked": false
+  },
+  "reference_files_hash_verified": {
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-LICENSE.txt": "eaf549be0c1a9882302fc8e090f09cb732cad49b8606a2eff5ab07ea0fa81222",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-commit.json": "b1f77d6fa101db8c64c78b5485cc5a235d46392658dbaa7b8d45a730b17f9e3e",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-data.py": "641483b24e6191387b78bec6cb7de700db510507214b1e593bc01218d9c98d98",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-evaluate-lm-by-rm.py": "107648b1e7489a2251def87c3e599326cd50f46e6875fb6004147be89a8b8b5c",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-evaluate-lm-by-rm.sh": "69959e852c7fa115f107f5f7973212365833df5cf58c7480299dbb32b0737a4d",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-evaluate-lm.py": "ded7e1063c09b708fb9e50ed93aa388a8a8a12added557f1da02b4867d87c8cb",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-evaluate-lm.sh": "88d2c2f4a3d5405cfac158505f9e825a15f2e3db8a7ef20a3ff2de2cb018cac2",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-lm-eval-config.json": "913933e92bd50d64deae89aa0bbf55b9c77af6aa7f9bc598c995ec0dda97dff7",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-main-ref.json": "1b9f9a9f2399ad4e9efbdb237a88055630e93ddefac7ad979d60b9c9bf7ccd44",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-metrics.py": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-paper-v2.html": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-crpo-data.py": "df4ef9139c4c2c3c6f887e2f3ce9eedce55359e71d04515d36c222c843295e4b",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-crpo-data.sh": "667925eec3dc5345dd873e819e478f2a8fac3258fc4c5a1d7a62829f91c7dd4d",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-raw-data.py": "448ee6a3b35f625fcc582339cc392674ca7d6518bb8af2c9f4ca95632a425b80",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-raw-data.sh": "cc39721c2be9e7e095916c6fdd5f919396e7517597fd98231d9cc08385d61411",
+    "evidence/phase1a-data-readiness-r07/references/assets/crpo-utils.py": "060db1796c820debbf3d0a28f2e5a2c05286ab9cfc81ac5341822b6866e77539",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-embedding-reference-README.md": "e573f7395798fe3d78d2e3e92da64814a6ec130494280f7b91ea8b0acb0284ed",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-embedding-reference-config.json": "556941599709401b3dc94acf775526f1c4670abe5e123cb53cca8eb5250b0cb5",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-embedding-reference-metadata.json": "58a4af0667d02708d3f453916bd341b1b4487d362d21dc3f30a0ac8532b47dd7",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-original-pinned-README.md": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-original-pinned-metadata.json": "8f07f66f048a3e81b9588da931a340d11abe99a9161a0289f17769423b9484a7",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-pref-README.md": "c90cb59ccee8fdfb27c4ab75109722e390c098afff756ebe33ab3e0f01ca89b3",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-pref-metadata.json": "ff8bb519f717bff01f6ed9c7520513eb006f0c9da77c0e65ad411cda087d0cba",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-sft-README.md": "27422f1706575daa38bfd88fb9d390d1866d3845d440e081c58d6d3dc5fa720e",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-sft-metadata.json": "d335edd7c70c9b2ddbcd447b6130fb0772b18147e226a158ebe1f9ef73d53a42",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-adapter-README.md": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-adapter-adapter_config.json": "6da61a8a923a12ea8420d82cccb535736868b8b8132441653727036358dbbb9a",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-adapter-all_results.json": "82badf9061b009083b3f45292023ba44fb86d6c29d87bc9fb7587dc5ca86c025",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-adapter-eval_results.json": "82badf9061b009083b3f45292023ba44fb86d6c29d87bc9fb7587dc5ca86c025",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-adapter-metadata.json": "18f89d9528772533fc45cc0cdcc7051d64dc75b7d3b287c0c55a9928339f50ff",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-base-metadata.json": "b36790ac2eeed0e602d89b771113af7d8da439e64cfd8645bf6b5c0f585d9e7b",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-injection-reference-README.md": "9e9eeda09d1da9f78b2bd45a05a4436ad2d5f779170efb4478cb997dcd32f5b3",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-injection-reference-config.json": "d73ab618623c7df30a5528d537ff034b5e65c11e21c08d47a01c98578fb0acd9",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-quality-injection-reference-metadata.json": "7bce497ed2ea4c774a5c76263f47765353417c1844552711a875533ca06190a6",
+    "evidence/phase1a-data-readiness-r07/references/assets/hf-surprise-reference-metadata.json": "d549b23974ff61130fb9ba8803e2dfb8e199a20ab3e4ab96970a47b4f6539455",
+    "evidence/phase1a-data-readiness-r07/references/semantics/crpo-arxiv-v2.html": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+    "evidence/phase1a-data-readiness-r07/references/semantics/crpo-published.pdf": "ae43e11b0ca006d82480d2c945aad22cc498340b366c2ed4e0fd3a7c1fa9be0c",
+    "evidence/phase1a-data-readiness-r07/references/semantics/distefano-crossref.json": "0fea25a98ef599ad0e3ccc3be49c6108975e5541a65df0e1400203cd2a2ab7f5",
+    "evidence/phase1a-data-readiness-r07/references/semantics/distefano-osf-project.json": "94a86750a0046cf81d44709fd41dcb26ffde91e1d8396791e6121a2094cd8bfc",
+    "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-card.md": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+    "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-revision.json": "8f07f66f048a3e81b9588da931a340d11abe99a9161a0289f17769423b9484a7"
+  },
+  "sample": {
+    "low_stratum_shortfall": 4,
+    "new_prompt_groups": 0,
+    "pairs": 8
+  },
+  "schema_version": 1,
+  "source_commit": "d1721a2e7de1574504e71e0163b52e29083f7aa6",
+  "specification_executed": "0.7",
+  "started_at_utc": "2026-10-25T09:44:43+00:00",
+  "status": "complete",
+  "use_specific_outcomes": {
+    "CrPO_measurement_reproduction": "conditional",
+    "human_alignment_on_new_outputs": "not_currently_suitable_as_sole_reference",
+    "published_label_development": "ready_for_specified_limited_use"
+  },
+  "within_three_hour_cap": true
+}

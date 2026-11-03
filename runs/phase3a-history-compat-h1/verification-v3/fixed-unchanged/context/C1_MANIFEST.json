@@ -1,0 +1,167 @@
+{
+  "base_contract_source_sha256": "d45e16bc6ad94c92f7864682ff3e7d8550409d1b90540fde331b9a514174137d",
+  "base_policy_id": "portfolio-authoring-c1-v1",
+  "context_inventory": {
+    "deliverables/base1/INDEX.md": {
+      "bytes": 76,
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    "deliverables/base1/answers.json.txt": {
+      "bytes": 76,
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    "harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rollouts/base1.md": {
+      "bytes": 76,
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    "task.md": {
+      "bytes": 76,
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    }
+  },
+  "context_inventory_sha256": "71a12e4e4fca64e5e0296ae5d78cbbc763847439dbee96dc2e089fccc05ad4e3",
+  "contract_source_sha256": "63f7abaeafa4c52ef42b2153829fdb0616634aed4e51191beb546854931fa90f",
+  "editor_profile_sha256": "5e6f853489bcc71e1113277e6cf3405b1bdbe199c54c7d2c094c6bf921c22170",
+  "effective_mission_sha256": "4f3f3f80afc18766d3c92f74c399e092079df8ae3c15b1dc058fa158cc01e30d",
+  "final_response_rule_sha256": "52c463309af8863352184ca534688b71c78ecaa1f80b4ea4706f3298fad72263",
+  "input_effective_strategy_sha256": "de42f86a2517f53ee14fd5ce87002e9dd1018c7508597a2663437cdff80f8ee6",
+  "input_strategy_valid": true,
+  "kind": "phase3a-c1-evidence-v1",
+  "label": "dom1.a1",
+  "native_repair_diagnostic": null,
+  "policy_id": "portfolio-authoring-c1-completion-r3-v1",
+  "prior_contract_source_sha256": "5de49c3e5f76f9970eb9498bf5946b3a7d14083de7dbb8265b759445faa4c49a",
+  "prior_policy_id": "portfolio-authoring-c1-completion-r1-v1",
+  "raw_mission_sha256": "ff0e1d76e9696cf730b1c639bc8a65eae6f44134c3b81d06162052391cdb2144",
+  "required_evidence": [
+    {
+      "bytes": 76,
+      "chunks": [
+        {
+          "bytes": 256,
+          "char_end": 76,
+          "char_start": 0,
+          "limit": 9,
+          "offset": 1,
+          "path": "C1_EVIDENCE/00-000.json",
+          "sha256": "6294ef0c5e8a2103b9bfb0514bce29ba9fe83e4aa07f0b80a25fe7efb631f3e1"
+        }
+      ],
+      "kind": "task_contract",
+      "path": "task.md",
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    {
+      "bytes": 1211,
+      "chunks": [
+        {
+          "bytes": 1497,
+          "char_end": 1211,
+          "char_start": 0,
+          "limit": 18,
+          "offset": 1,
+          "path": "C1_EVIDENCE/01-000.json",
+          "sha256": "cd8575b1076cb9dbce55cba2100ebe0dd61a0c7ccb2987cef134b453a879f0c4"
+        }
+      ],
+      "kind": "current_strategy",
+      "path": "harness/systemprompt.md",
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    {
+      "bytes": 76,
+      "chunks": [
+        {
+          "bytes": 266,
+          "char_end": 76,
+          "char_start": 0,
+          "limit": 9,
+          "offset": 1,
+          "path": "C1_EVIDENCE/02-000.json",
+          "sha256": "64c13c5213172b31b889e29efc89ef210a266d6f1aee634abd0f23693a7fecd7"
+        }
+      ],
+      "kind": "base_trajectory",
+      "path": "rollouts/base1.md",
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    {
+      "bytes": 76,
+      "chunks": [
+        {
+          "bytes": 284,
+          "char_end": 76,
+          "char_start": 0,
+          "limit": 9,
+          "offset": 1,
+          "path": "C1_EVIDENCE/03-000.json",
+          "sha256": "290e4bac5fc7d93dfe921e0cf3a6f59307a4e54852fc4a7ed988aee2177c845d"
+        }
+      ],
+      "kind": "base_answers",
+      "path": "deliverables/base1/answers.json.txt",
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    },
+    {
+      "bytes": 76,
+      "chunks": [
+        {
+          "bytes": 276,
+          "char_end": 76,
+          "char_start": 0,
+          "limit": 9,
+          "offset": 1,
+          "path": "C1_EVIDENCE/04-000.json",
+          "sha256": "4db525ec03a3de1e6501ffeb2956656236752e374512b5b1e4e70b7b4cb038aa"
+        }
+      ],
+      "kind": "routing_index",
+      "path": "deliverables/base1/INDEX.md",
+      "sha256": "b3ec768e0c784dfd89c097c9b28c91f7e7019caa8f1333a23ed14f94365c43bc"
+    }
+  ],
+  "role": "DOM",
+  "sha256": "a29db2948969bfb251c5bfd6ec00b2f2d6881f33164c335034d98cb9060c8276",
+  "upstream_commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+  "upstream_files": {
+    ".upstream/harness2/harness2/core/context.py": "63dd482e5d9467d7e659d186a11289fc7861d08c8aed603244ff0cee92de91f3",
+    ".upstream/harness2/harness2/core/prompts.py": "d1f4f8db4ab4cb4addcbca175b548db2270375499fda727ac95d271c63cc2504",
+    ".upstream/harness2/harness2/core/proposer.py": "475ef49d72228e249d7172d793f8362913774412402dfd259ae6e01c6586e175",
+    ".upstream/harness2/harness2/core/recursion.py": "b299813b5334f2c0f89024a7f14162f0fdd5418ebd4413be93920b5334a204c1",
+    ".upstream/harness2/harness2/core/schedule.py": "6e46c5ab1e4ac111818ff3acd6b636e39d650898189ac0c21802a8233ad4cd38",
+    ".upstream/harness2/harness2/core/spec.py": "f245ec9e314778e2a1a51594b906584255b9eed8340c073b864a8a6f2c8dc400",
+    ".upstream/harness2/harness2/core/tree.py": "c2a15690b1b6b02156e922c5e0b1a215c5065d7bea5a3bae2e56b47309197552"
+  }
+}

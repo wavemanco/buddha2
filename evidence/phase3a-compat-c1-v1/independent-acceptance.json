@@ -1,0 +1,195 @@
+{
+  "audit_sha256": "a04f3d3b19cace7aa3d32c79744941cbe28f4f38f3eed682c25d464727c57124",
+  "audited_at_utc": "2026-10-29T17:32:47.772953+00:00",
+  "closure_commit_before_supplement": "55ae004392b0a555a4cb6bec2cfc1f6e5eb6c99b",
+  "evidence": [
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/result.json",
+      "sha256": "10cc30f344641142bcfa194747b3ab6b44621c921571cf38588e18159d1e20d2"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/tests.json",
+      "sha256": "adbd84df8df11e6e6586db13e36aa6bafe7508194f366a978f400ca712a2a933"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/tests.log",
+      "sha256": "10468e2ce92810023e6db3c87afacc00e8156147fce3c864f817a703904d801f"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/static.json",
+      "sha256": "de49fc61c08a493767b0241f6cb299c81df370ea779ff9ffdd512071b49ad584"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/host-execution.json",
+      "sha256": "be793e40a96ed8650fafd2f7718eb523c9dcfc5059ed90316aa1cbd14d5ae57f"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/docker-command.json",
+      "sha256": "2fb9a5f94541dd33d70d7943c5f069dba06034207ac9ed1a2fbb3aed7922eae3"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/conformance.json",
+      "sha256": "d2f7529e1810a599e4b6cf5d7f2c4162c73756cb716ec07e52b04378df8c1040"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/source-before.json",
+      "sha256": "17993531a8014b3effcbf2aa4cf8e5e607bd43e4d491a5ba9dfd59f1795e8d77"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/source-after.json",
+      "sha256": "17993531a8014b3effcbf2aa4cf8e5e607bd43e4d491a5ba9dfd59f1795e8d77"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/preservation-before.json",
+      "sha256": "987ac3d764ce986fd3d816a4f035a3162aa33bdac2b98735b1eb477f6e54b990"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/preservation-after.json",
+      "sha256": "987ac3d764ce986fd3d816a4f035a3162aa33bdac2b98735b1eb477f6e54b990"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/report.json",
+      "sha256": "bbe3d5ba1e49b31ddfc99f4950cae55000a2ca8212d1240aaa435ae5602cb728"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/native-result.json",
+      "sha256": "31d8a1a48bdad8626c53c2c95d33a68bd02d337735de91735f164b98afa7b937"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/model-visible-proof.json",
+      "sha256": "5d4ddee94ed98f6b310746da6b2bafda8af8fed54f178bdb842f77d4597ce4be"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/contract-proof.json",
+      "sha256": "281b8c187ab2eda2ff37da767145d3aecb528bafb0bba09439c5e9e667371348"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/mock-http-records.json",
+      "sha256": "1e25d548488659a58f3975a902c6038a9bff2702076c37aba584b8a66115621c"
+    },
+    {
+      "path": "runs/phase3a-compat-c1-v1/verification-v7/demo/ledger-replay.json",
+      "sha256": "b4afbc2410c7df62528b799cad41a85bcce77df425b43dd98d9ff8f3b7f43f32"
+    },
+    {
+      "path": "PHASE3A_COMPATIBILITY_CHECKPOINT_DEFINITION.md",
+      "sha256": "d3e3844a161d3d4262adcbb69e30c22e3dfdbd1870eb8b4ae24d68178ea56462"
+    },
+    {
+      "path": "PHASE3A_C1_REPORT.md",
+      "sha256": "681f63ea0780ae4766afb419b4419c2661f1095f66b6b6291b0907503b82aa3e"
+    },
+    {
+      "path": "C1_OFFLINE_RUNBOOK.md",
+      "sha256": "7072a624d4abf62a2a2947d64980f6bb84c8dcb3ecd37119374c901f225ffdb5"
+    },
+    {
+      "path": "CURRENT_SPEC.md",
+      "sha256": "72251a776294a94e5037891f3ecfaf392adf927fe8a68ec96ce4017fb46d5f1e"
+    },
+    {
+      "path": "PHASE3A_POST_C1_LIVE_READINESS_DEFINITION.md",
+      "sha256": "2fec4bb420efd6c72f76eec688a1265cc72a5db0d32c9e090870bc1dde8c23fb"
+    },
+    {
+      "path": "evidence/phase3a-compat-c1-v1/git-preservation.json",
+      "sha256": "fbe038e6d44b542203099c927b775b6a7da40a715307809d2789b5d0efbe9999"
+    },
+    {
+      "path": "evidence/phase3a-compat-c1-v1/manifest.json",
+      "sha256": "ef2a6979bb8b7d05295deec1043cf1d62202c6029fa75500095deefacb93a0d4"
+    },
+    {
+      "path": "evidence/phase3a-compat-c1-v1/closeout.json",
+      "sha256": "401945d1d98eaef6772a02514219032bf25a874c2e156489cb6f59456782b1b7"
+    },
+    {
+      "path": "evidence/phase3a-compat-c1-v1/offline-kit-v1.zip",
+      "sha256": "d8ee68dff5aa4870f04af23f19b3c411b6e1317011718c0308ba74b7748f26d5"
+    }
+  ],
+  "kind": "phase3a-c1-independent-acceptance-v1",
+  "limitations": [
+    "Scripted API responses establish mechanical compatibility, not real-model attention, behavior, creative quality or completion probability.",
+    "The25-view composite is explicitly synthetic; full-size historical contexts are separate static conformance inputs, not measured full-size runtime performance.",
+    "The unmodified native algorithm is retained, but SYSTEM/MISSION/index replacement is an explicit authoring-policy intervention.",
+    "Historical R2 scientific completion remains unmet and its11.44USD liability remains unresolved; this checkpoint supplies no new paid grant, automatic repeat or Phase3B authority.",
+    "This post-packet supplemental record is not embedded in or a mutation of the committed packet; its own local commit is the remaining root handoff action."
+  ],
+  "observed": {
+    "archive_members_CRC_and_SHA256_verified": 962,
+    "errors": 0,
+    "failures": 0,
+    "fixture_live_authenticity": false,
+    "historical_contexts": 12,
+    "lossless_views_independently_checked": 25,
+    "normal_editor_rounds": {
+      "agg1.a1": 7,
+      "dom1.a1": 6,
+      "inv1.a1": 7
+    },
+    "public_files_current_hash_verified": 3981,
+    "real_provider_calls": 0,
+    "real_spend_micro_usd": 0,
+    "required_originals_independently_reconstructed": 25,
+    "skips": 0,
+    "static_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "synthetic_demo_http_calls": 68,
+    "tests": 108
+  },
+  "parent_R2_source_sha256": "a3b9403d6bc0a144d0bb74e74a330ccf057850da0d23dcb2d9059d94a20883e3",
+  "passed": true,
+  "report_commit": "a04e077",
+  "requirements": {
+    "C1-1": {
+      "evidence_and_limit": "Twelve historical contexts conform. Actual per-stage SYSTEM contains the supported coherent role profile/index and only environment metadata afterward; inactive conditional tool guidance does not override the explicit three-tool scope.",
+      "status": "pass"
+    },
+    "C1-2": {
+      "evidence_and_limit": "Independent reconstruction matched25 required original objects and25 lossless views to actual model-visible tool results before decisions; no mere issued-read or summary substitute.",
+      "status": "pass"
+    },
+    "C1-3": {
+      "evidence_and_limit": "All three actual fixture transcripts first read and receive MISSION, then complete required evidence delivery, decision, verification and normal finalization in7/6/7 ordinary rounds. SYSTEM supplies the factual index before batching.",
+      "status": "pass"
+    },
+    "C1-4": {
+      "evidence_and_limit": "Normal unchanged DOM is eligible; edits are consumed in native solver requests. Passing frozen strategy regression covers every consumed field; terminal eligibility behavior remains separately tested.",
+      "status": "pass"
+    },
+    "C1-5": {
+      "evidence_and_limit": "One actual pinned native/OpenCode composite completed four fresh synthetic C-N rollouts, INV edit, normal DOM KEEP_BASE, AGG composition/probes and trivial final selection; fixture authenticity remains false.",
+      "status": "pass"
+    },
+    "C1-6": {
+      "evidence_and_limit": "Final108 affected tests have no failures/errors/skips; Ruff/mypy/Bandit pass. Private/foreign pre-probe guards, malformed input, source/layout drift, partial delivery, metadata, native repair, ninth dispatch and unknown holds are covered.",
+      "status": "pass"
+    },
+    "C1-7": {
+      "evidence_and_limit": "Current171-file source matches before/after and frozen identity;3981 public files match preserved hashes. Network is denied, fake-key transports are used, real provider/credential activity is zero, and private historical worktree paths were not inspected.",
+      "status": "pass"
+    },
+    "C1-8": {
+      "evidence_and_limit": "Exercised command/runbook, honest report/navigation, prospective unimplemented/unfunded live definition, verified962-member packet and closeout are locally committed at the recorded closure commit. This acceptance is a separate post-packet supplement.",
+      "status": "pass"
+    }
+  },
+  "review_activity": {
+    "only_new_write": "evidence/phase3a-compat-c1-v1/independent-acceptance.json",
+    "private_bindings_or_writer_locks_accessed": false,
+    "protected_original_accessed": false,
+    "provider_or_SDK_calls": 0,
+    "source_or_historical_edits": false,
+    "tests_or_experiments_rerun": false
+  },
+  "reviewer": "/root/gate_acceptance",
+  "scope": "Independent read-only review of the committed C1 packet and final saved verification; this newly written supplement is outside the packet and will be committed separately.",
+  "source_files_checked": 171,
+  "source_sha256": "e138a2eb07e537bfbf047dd451f487f96424abfdce9080968e3e8ad7637570d4",
+  "status": "offline-compatible",
+  "study_sha256": "e714db239f395ce0e4fa155fbd943c2fe3e1f99af820c2f7c979e788a58664b9"
+}

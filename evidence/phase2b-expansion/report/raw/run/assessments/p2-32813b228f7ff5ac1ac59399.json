@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "80ff09568aa1fde4410a8d1ce8a16a7daf7d072feadc0cc38d9d264ff0ce16cb",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 2.0165224492830083
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        9
+      ],
+      "utility": 2.0165224492830083
+    },
+    "generation_row": {
+      "generations": [
+        "**To Kill a Mockingbird** by Harper Lee is a well-received classic that appears frequently on top book lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists.",
+        "***To Kill a Mockingbird*** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that frequently appears on lists of the best books of all time.",
+        "*To Kill a Mockingbird* by Harper Lee is a well-received book that often appears on top book lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the greatest books. Published in 1960, it explores racial injustice and moral growth in the American South through the eyes of young Scout Finch.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that frequently appears on lists of the best books ever written."
+      ],
+      "id": "nb-curated-7a77e85421d12bca8653",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Name one well received book that often appears in top book lists."
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "**To Kill a Mockingbird** by Harper Lee is a well-received classic that appears frequently on top book lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists.",
+        "***To Kill a Mockingbird*** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the best books of all time.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that frequently appears on lists of the best books of all time.",
+        "*To Kill a Mockingbird* by Harper Lee is a well-received book that often appears on top book lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a widely acclaimed novel that regularly appears on lists of the greatest books. Published in 1960, it explores racial injustice and moral growth in the American South through the eyes of young Scout Finch.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that frequently appears on lists of the best books ever written."
+      ],
+      "id": "nb-curated-7a77e85421d12bca8653",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "e451e59d311491990c59027fa8405d744bc7ddeedc4b7879aee42d7abe5927e4",
+      "partition_scores": [
+        9
+      ],
+      "prompt": "Name one well received book that often appears in top book lists.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "89fbe2537538a56b6c2d082c11fee1635ee1e00206284bc8e9d44acd0b13c309",
+      "utility": 2.0165224492830083
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 2.0165224492830083,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "ebb7128bd33c5c428e8123cb9bfe801b916d1d35a9b817b7aadf5a4e122fb67a",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0200",
+      "fixture": false,
+      "intent_sha256": "aef85ab27007e1382475c82ed4f6a5d5f2c3911f58b888b69b8f0acf60e1dbcc",
+      "request_sha256": "48d72dc29e4d74eff3e0b091e27215e93054fec5de57f48ec72cb9c60a48fe13",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.7732385470008012,
+        "message_id": "chatcmpl-Edvtz9CQdFQXLfFlzK50GrI3sMFil",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 58,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 21,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 561,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 619
+        },
+        "refusal": null,
+        "request_id": "req_eaa269f93fb44cdeacc5a8d00d0c5ae4",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 561,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 58,
+          "output_tokens_details": {
+            "reasoning_tokens": 21
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-32813b228f7ff5ac1ac59399.group",
+      "spent_micro_usd": 200,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0201",
+      "fixture": false,
+      "intent_sha256": "ce4abf9fb70cfbbc34844c41e6d6db0533edd5f91cd6c79bcce84f957f04930d",
+      "request_sha256": "d4630f3aaeccafefd5f380a0e0ebd761ff211499755e41645bf9da71387d8dbd",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.660632930987049,
+        "message_id": "msg_011CgUYAbWxNPz5V6tMbngAu",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYAbL3vLuLV6v5WdJxg",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 470,
+          "output_tokens": 184,
+          "output_tokens_details": {
+            "thinking_tokens": 175
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-32813b228f7ff5ac1ac59399.quality.00",
+      "spent_micro_usd": 7645,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-7a77e85421d12bca8653"
+}

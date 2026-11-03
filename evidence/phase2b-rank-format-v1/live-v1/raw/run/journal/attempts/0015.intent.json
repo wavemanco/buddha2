@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "f4cd073c91c9582c7d23df32e4cf4214073bfaaedb662ce52b7a2d262aa05741",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2058
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0015",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nCan you list 3 influential persons from the nineteenth century?\n</prompt>\n\n<response>\nHere are three influential figures from the nineteenth century, each of whom shaped culture in a lasting way:\n\n1. **Charles Dickens (1812-1870)**: The English novelist, author of *Oliver Twist*, *A Christmas Carol*, and *Great Expectations*, brought the harsh realities of poverty, child labor, and social inequality to a mass readership. His serialized storytelling helped shape public conscience in Victorian Britain and set a template for popular fiction.\n\n2. **Leo Tolstoy (1828-1910)**: The Russian writer of *War and Peace* and *Anna Karenina* helped define the realist novel with his psychological depth and sweeping historical vision. His later writings on nonviolence and moral philosophy influenced figures such as Gandhi and Martin Luther King Jr.\n\n3. **Claude Monet (1840-1926)**: The French painter was a founder of Impressionism, and his work *Impression, Sunrise* gave the movement its name. By emphasizing light, color, and fleeting moments over precise detail, he changed how artists approached painting and paved the way for modern art.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "f4cd073c91c9582c7d23df32e4cf4214073bfaaedb662ce52b7a2d262aa05741",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-e8740bae4e77d0e443e32104.quality.03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

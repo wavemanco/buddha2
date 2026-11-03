@@ -1,0 +1,88 @@
+{
+  "actual_credentials_read": false,
+  "details": {
+    "commands": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "ruff",
+          "check",
+          "--no-cache",
+          "followups/rank_format_v1"
+        ],
+        "elapsed_seconds": 0.265,
+        "exit_code": 0,
+        "stderr": "check-0.stderr.txt",
+        "stderr_text": "",
+        "stdout": "check-0.stdout.txt",
+        "stdout_text": "All checks passed!\n"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "mypy",
+          "--explicit-package-bases",
+          "--cache-dir",
+          "/tmp/mypy-rank-format",
+          "followups/rank_format_v1"
+        ],
+        "elapsed_seconds": 1.711,
+        "exit_code": 0,
+        "stderr": "check-1.stderr.txt",
+        "stderr_text": "",
+        "stdout": "check-1.stdout.txt",
+        "stdout_text": "Success: no issues found in 10 source files\n"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "bandit",
+          "-r",
+          "followups/rank_format_v1",
+          "-x",
+          "followups/rank_format_v1/tests",
+          "-ll",
+          "-ii",
+          "-f",
+          "json"
+        ],
+        "elapsed_seconds": 0.853,
+        "exit_code": 0,
+        "stderr": "check-2.stderr.txt",
+        "stderr_text": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:86\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:86\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:86\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:87\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:88\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:88\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:88\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:89\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:89\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:89\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:91\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:91\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:92\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:92\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:92\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:93\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:93\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:93\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:94\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:86\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:86\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:91\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:91\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:92\n[tester]\tWARNING\tnosec encountered (B108), but no failed test on file followups/rank_format_v1/launch.py:93\n",
+        "stdout": "check-2.stdout.txt",
+        "stdout_text": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-10-28T17:07:53Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 975,\n      \"nosec\": 0,\n      \"skipped_tests\": 1\n    },\n    \"followups/rank_format_v1/cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 50,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"followups/rank_format_v1/launch.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 170,\n      \"nosec\": 0,\n      \"skipped_tests\": 1\n    },\n    \"followups/rank_format_v1/normalizer.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 113,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"followups/rank_format_v1/support.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 74,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"followups/rank_format_v1/workflow.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 568,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "elapsed_seconds": 0.815,
+        "exit_code": 0,
+        "stderr": "check-3.stderr.txt",
+        "stderr_text": "",
+        "stdout": "check-3.stdout.txt",
+        "stdout_text": "No broken requirements found.\n"
+      }
+    ],
+    "dependency_changes": false,
+    "implementation_commit": "8b76fd2"
+  },
+  "group": "static",
+  "kind": "p2bn-offline-check-v1",
+  "passed": true,
+  "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+  "provider_calls": 0,
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

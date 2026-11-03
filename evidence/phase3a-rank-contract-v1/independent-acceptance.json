@@ -1,0 +1,112 @@
+{
+  "api_spend": 0,
+  "authorization_sha256": "5890fc0fb0c91dd8e3395953d72ff60af3429ae83c2dbb09877f1e1e166cf057",
+  "case_result_sha256": "5d00c6800026cf25c974fc2c53f79c20474dc53981722824def61518f2de0675",
+  "checkpoint_complete_offline": true,
+  "created_utc": "2026-10-31T21:51:29.035094+00:00",
+  "definition_sha256": "d317a6b60adc5d2b36b89c278080124955c1efbbd3548520e0c8199f4aa9da79",
+  "fixture_inventory_sha256": "c4ccc6f2830f7122f604febfdf33028a0902e307e371aa9ad1bf75ad976dc878",
+  "frozen_source_files_unchanged": 356,
+  "historical_controls": 1,
+  "historical_reference_files_unchanged": 34,
+  "independent_execution_sha256": "6531e4937a066127f5480e41ced919a156d407dbc71163a391b9f51314055e20",
+  "independent_replay_sha256": "7d04b7d8419c46aaeaa4ffdd1c685d46085dd7c27db7a395d8b83a8c9f28d32b",
+  "kind": "p3a-rc1-independent-acceptance-v1",
+  "limitations": [
+    "Fixture integrity is not provider authenticity or measured live rank adherence.",
+    "Mechanical acceptance establishes no creative-quality or adaptation-effect conclusion.",
+    "New shared execution/admission/replay/identity integration and one separately defined counted pilot remain."
+  ],
+  "live_execution_ready": false,
+  "native_topologies_executed": 0,
+  "new_frozen_cases": 76,
+  "new_scientific_claims": false,
+  "new_source_sha256": {
+    "adapter.py": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+    "test_adapter.py": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+    "verify.py": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935"
+  },
+  "original_folder_accessed": false,
+  "owned_containers_closed": [
+    {
+      "absent": true,
+      "cleanup_exit_code": 0,
+      "container_id": "11432b7a54b826fc175bd7dba4a4381a90d8fff766086b6c3f92fbb8e31e5ee4"
+    },
+    {
+      "absent": true,
+      "cleanup_exit_code": 0,
+      "container_id": "e92ff231d31a5e28258d26a444f8da54a2c02c246346660eea5a0a045d8b7e05"
+    }
+  ],
+  "paid_repeat_authorized": false,
+  "passed": true,
+  "phase3a_scientific_complete": false,
+  "pinned_public_harness2_python_files_unchanged": 39,
+  "provider_calls": 0,
+  "report_links_verified": [
+    "PHASE3A_RANKING_CONTRACT_DEFINITION.md",
+    "evidence/phase3a-rank-contract-v1/authorization.json",
+    "followups/phase3a_rank_contract_v1/adapter.py",
+    "followups/phase3a_rank_contract_v1/verify.py"
+  ],
+  "report_runbook_handoff_sha256": "cada390053c69480a765283dd67ece7aa72248ff07157a0578cb1fab5db60d2f",
+  "requirements": {
+    "RC1-1": {
+      "basis": "H01 exact invalid_ids rejection; frozen356, pinned39 and34 historical refs unchanged",
+      "passed": true
+    },
+    "RC1-2": {
+      "basis": "A01-A12,D01-D18: deterministic map and stale parent/map/profile/strategy/context/request/result rejection before N1",
+      "passed": true
+    },
+    "RC1-3": {
+      "basis": "A01-A12,E06: synthetic/saved parents, both caller shapes, three orders, exact complete response records",
+      "passed": true
+    },
+    "RC1-4": {
+      "basis": "B01-B12,C01-C26: unchanged N1 acceptance, veto and resource bounds",
+      "passed": true
+    },
+    "RC1-5": {
+      "basis": "E01-E05,E08: one helper, only input ID values change, exact seed/settings and editable rank_system",
+      "passed": true
+    },
+    "RC1-6": {
+      "basis": "E07,D cases, actual contained demo/replay, independent saved replay and exact project static checks",
+      "passed": true
+    },
+    "RC1-7": {
+      "basis": "Reviewed reusable synthetic-only API/runbook, all remaining integration handoff, source-bound29 retained artifacts",
+      "passed": true
+    }
+  },
+  "retained_artifacts_manifest": {
+    "file_sha256": "1ea477ecf6e88c709c212a1aa3e3e715a9e81e2491a2c974c8b4a75393716b24",
+    "path": "evidence/phase3a-rank-contract-v1/retained-artifacts.json"
+  },
+  "retained_files_verified": 29,
+  "reviewer_preparation_notes": [
+    "v1 replay command-suffix assertion failed before Docker creation; exact error retained.",
+    "Final receipt assembly stopped before writing on a byte-hash helper type mismatch and then a case-sensitive Docker absence-message check. Both were corrected without changing source, artifacts, test expectations or acceptance requirements."
+  ],
+  "static_checks": {
+    "bandit": {
+      "exit_code": 0,
+      "file_sha256": "17e9da5638c71e40f32c86da06e610d12da2ee139fb6f8461c113b593d0b571b",
+      "path": "runs/phase3a-rank-contract-v1/static-v1/bandit.json"
+    },
+    "mypy": {
+      "exit_code": 0,
+      "file_sha256": "ad7eb5ff945c7c7815c270517eb249caffa73af496f878937a0080d7f2b1d356",
+      "path": "runs/phase3a-rank-contract-v1/static-v1/mypy.json"
+    },
+    "ruff": {
+      "exit_code": 0,
+      "file_sha256": "f0972a0e63c866ef15fbd8955b2cadf2980edb15c9f70b69b356a49a6a431c01",
+      "path": "runs/phase3a-rank-contract-v1/static-v1/ruff.json"
+    }
+  },
+  "support_sources_verified": 15,
+  "verification_sha256": "a61824d90fc55df65e40959f68e019f5cdb89af3b7d97539cfde43fe7bb26d25"
+}

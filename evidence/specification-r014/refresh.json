@@ -1,0 +1,58 @@
+{
+  "kind": "specification-refresh",
+  "revision": "0.14",
+  "source_commit": "c71b0c8f60e109435635627ce858f80fe0403de6",
+  "checkpoint_status": "defined-unstarted",
+  "documentation_only": true,
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "unchanged_preexisting_files": 368,
+  "documents_sha256": {
+    "AGENTS.md": "c016850b5c672046497aca930a80d45f24b8083a8d39105226d2783093d414fd",
+    "EXPERIMENT_PLAN.md": "3f3c9c7e491d323987866608e349ce49e0faaa1c7eee36d6126c058dab63ad8f",
+    "PHASE_DEFINITIONS.md": "fe4b730714dfd8b619c6f0e07104c8dd5a0e86443ec230414a69458785f09a3d",
+    "README.md": "6da91144baaed9be2bc5aeef21aa9e4a0c053c9ef9a5d932db816605cdc28199"
+  },
+  "archive_0_13_sha256": "48962dd7c721b251b965eef4b2cddc03162055228c48ff6bf599353838b91b9b",
+  "checkpoint_definition_sha256": "16767195bc0214400fadaf9a6663066559aef8caa086e5cdf1e866006ac5b008",
+  "historical_manifest_entries_verified": 2380,
+  "historical_documents_verified_at_commit": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "implementation_started": false,
+  "project_runtime_executed": false,
+  "tests_rerun": false,
+  "reason_no_tests": "Documentation-only; all source, tests, locks and preserved runtime evidence unchanged. Static links, Unicode, requirements and hashes checked.",
+  "provider_requests": 0,
+  "token_count_requests": 0,
+  "paid_calls": 0,
+  "phase2b_started": false,
+  "human_collection_started": false,
+  "credential_checks_performed": false,
+  "experiment_api_spend_usd": 0,
+  "original_folder_accessed": false,
+  "validation": {
+    "scope_changed_only_four_documents": true,
+    "all_required_sections_and_LR1_through_LR6_present": true,
+    "current_definition_matches_specification": true,
+    "utf8_and_links": "pass",
+    "historical_manifest_unchanged": true,
+    "old_record_references_not_rebound": true,
+    "independent_reviews": 2
+  },
+  "primary_sources_checked_on": "2026-10-26 America/Los_Angeles",
+  "primary_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "https://developers.openai.com/api/docs/guides/token-counting",
+    "https://platform.claude.com/docs/en/build-with-claude/token-counting",
+    "https://platform.claude.com/docs/en/about-claude/pricing"
+  ]
+}

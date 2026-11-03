@@ -1,0 +1,341 @@
+{
+  "cache_files": {
+    "dataset-card.md": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+    "dataset-metadata.json": "c84d21678c51985783aa07a13feb9e555d1a368177e227583b5a8d64bced42e8",
+    "muce-full_agreement-train.parquet": "701ea8d6c0eeb20625d2809a96b5b377e2be22f28f0a22d1dfcafa820aa173ec"
+  },
+  "conclusion": "The proposed overall-creativity four-family6-per-family population is impossible: AUT0,Design0,CPS1eligiblegroup. Metaphorsonly has46groupsafterconservativeexampleexclusion and can support24 if explicitlyapproved. Originalityonly hasenough6perfourfamily butisadifferentconstructrequiringrevision. No groups,pairs,splits,preferredpositions or auditlabelsselected.",
+  "configuration": "full_agreement",
+  "context_fields": [
+    "Dataset",
+    "Set",
+    "DatasetsSplit",
+    "Language",
+    "TasksNamesFull",
+    "TaskType",
+    "RatingLabel",
+    "normalized Prompt",
+    "normalized effective FullPrompt"
+  ],
+  "dataset": "CNCL-Penn-State/MuCE",
+  "effective_prompt_rule": "FullPrompt if nonempty, otherwise Prompt (fallback considered only for aggregate feasibility; product must freeze its own rule before selection)",
+  "eligibility": "English Text; originalcreativity label kept separatefromoriginality; finite10-50 scores; nonempty distinct normalized responses; same strictcontext; scoregap>=5; no largestgap/easiestpair selectionperformed",
+  "exposure_matching": "Conservative literal normalized substring match on both Prompt and FullPrompt, within declared family; source paper tables10-14 and table5; SentenceCompletion excludedbyfamily; no answersorhumanlabels reproducedinthisreport",
+  "families": {
+    "Alternate Uses of Objects Task": {
+      "creativity": {
+        "context_groups": 0,
+        "eligible_context_groups": 0,
+        "eligible_normalized_prompt_groups": 0,
+        "exposed_eligible_context_groups": 0,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": null,
+        "remaining_context_groups": 0,
+        "remaining_context_groups_by_dataset": {},
+        "remaining_normalized_effective_prompt_groups": 0,
+        "remaining_normalized_prompt_groups": 0
+      },
+      "originality": {
+        "context_groups": 11,
+        "eligible_context_groups": 11,
+        "eligible_normalized_prompt_groups": 11,
+        "exposed_eligible_context_groups": 1,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          10.0,
+          50.0
+        ],
+        "remaining_context_groups": 10,
+        "remaining_context_groups_by_dataset": {
+          "englishAllDFs": 2,
+          "motesf_0": 8
+        },
+        "remaining_normalized_effective_prompt_groups": 10,
+        "remaining_normalized_prompt_groups": 10
+      },
+      "rating_labels": {
+        "originality": 2408
+      },
+      "rows": 2408
+    },
+    "Design Solutions": {
+      "creativity": {
+        "context_groups": 0,
+        "eligible_context_groups": 0,
+        "eligible_normalized_prompt_groups": 0,
+        "exposed_eligible_context_groups": 0,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": null,
+        "remaining_context_groups": 0,
+        "remaining_context_groups_by_dataset": {},
+        "remaining_normalized_effective_prompt_groups": 0,
+        "remaining_normalized_prompt_groups": 0
+      },
+      "originality": {
+        "context_groups": 18,
+        "eligible_context_groups": 15,
+        "eligible_normalized_prompt_groups": 15,
+        "exposed_eligible_context_groups": 0,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          10.0,
+          50.0
+        ],
+        "remaining_context_groups": 15,
+        "remaining_context_groups_by_dataset": {
+          "Environment_topic_Idea_ratings_unpub_data_M_Baas": 1,
+          "OE_ratings_scored": 11,
+          "Rater_Sheets_RL_MASTER": 3
+        },
+        "remaining_normalized_effective_prompt_groups": 15,
+        "remaining_normalized_prompt_groups": 15
+      },
+      "rating_labels": {
+        "originality": 1376
+      },
+      "rows": 1376
+    },
+    "Metaphors": {
+      "creativity": {
+        "context_groups": 54,
+        "eligible_context_groups": 47,
+        "eligible_normalized_prompt_groups": 47,
+        "exposed_eligible_context_groups": 1,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          10.0,
+          50.0
+        ],
+        "remaining_context_groups": 46,
+        "remaining_context_groups_by_dataset": {
+          "DiStefano2024crj_Meta": 6,
+          "MersealDissertation": 40
+        },
+        "remaining_normalized_effective_prompt_groups": 46,
+        "remaining_normalized_prompt_groups": 46
+      },
+      "originality": {
+        "context_groups": 23,
+        "eligible_context_groups": 10,
+        "eligible_normalized_prompt_groups": 10,
+        "exposed_eligible_context_groups": 0,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          17.0,
+          50.0
+        ],
+        "remaining_context_groups": 10,
+        "remaining_context_groups_by_dataset": {
+          "yuhua2024cogsci_meta": 10
+        },
+        "remaining_normalized_effective_prompt_groups": 10,
+        "remaining_normalized_prompt_groups": 10
+      },
+      "rating_labels": {
+        "creativity": 978,
+        "originality": 39
+      },
+      "rows": 1017
+    },
+    "Real-Life Creative Problem Solving": {
+      "creativity": {
+        "context_groups": 1,
+        "eligible_context_groups": 1,
+        "eligible_normalized_prompt_groups": 1,
+        "exposed_eligible_context_groups": 0,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          10.0,
+          50.0
+        ],
+        "remaining_context_groups": 1,
+        "remaining_context_groups_by_dataset": {
+          "EE_kapoor": 1
+        },
+        "remaining_normalized_effective_prompt_groups": 1,
+        "remaining_normalized_prompt_groups": 1
+      },
+      "originality": {
+        "context_groups": 14,
+        "eligible_context_groups": 14,
+        "eligible_normalized_prompt_groups": 10,
+        "exposed_eligible_context_groups": 4,
+        "observed_noninteger_scores": 0,
+        "observed_score_range": [
+          10.0,
+          50.0
+        ],
+        "remaining_context_groups": 10,
+        "remaining_context_groups_by_dataset": {
+          "2.ACME.csv": 1,
+          "4.ACME.csv": 1,
+          "5b.Mike.csv": 1,
+          "6.Ralph.csv": 1,
+          "7b.Joan.csv": 1,
+          "7c.Acme.csv": 1,
+          "AverieThesis2024cpst": 1,
+          "averie2024mrwilson": 1,
+          "averie2024thesis": 2
+        },
+        "remaining_normalized_effective_prompt_groups": 8,
+        "remaining_normalized_prompt_groups": 8
+      },
+      "rating_labels": {
+        "creativity": 789,
+        "originality": 2317
+      },
+      "rows": 3106
+    }
+  },
+  "fields": {
+    "Dataset": "string",
+    "DatasetsSplit": "string",
+    "FullPrompt": "string",
+    "ID": "string",
+    "Language": "string",
+    "Prompt": "string",
+    "RatingLabel": "string",
+    "Response": "string",
+    "Set": "string",
+    "TaskType": "string",
+    "TasksNamesFull": "string",
+    "facsco_grm_scaled": "double"
+  },
+  "identity_constraint": "Original ID is not globally unique nor unique within source/task/prompt. Preserve it as source metadata; derive responseidentity from complete canonicalsource row/content context. Full textual row identity shown has no conflicts at this pin.",
+  "identity_evidence": {
+    "full_textual_row_identity": {
+      "conflicting_groups": 0,
+      "duplicate_groups": 0,
+      "fields": [
+        "Dataset",
+        "Set",
+        "DatasetsSplit",
+        "ID",
+        "TasksNamesFull",
+        "TaskType",
+        "Language",
+        "RatingLabel",
+        "Prompt",
+        "FullPrompt",
+        "Response"
+      ],
+      "max_multiplicity": 1,
+      "unique_keys": 16948
+    },
+    "source_id": {
+      "conflicting_groups": 3625,
+      "duplicate_groups": 3625,
+      "fields": [
+        "Dataset",
+        "Set",
+        "DatasetsSplit",
+        "ID"
+      ],
+      "max_multiplicity": 164,
+      "unique_keys": 9514
+    },
+    "source_id_task_prompt": {
+      "conflicting_groups": 2975,
+      "duplicate_groups": 2975,
+      "fields": [
+        "Dataset",
+        "Set",
+        "DatasetsSplit",
+        "ID",
+        "TasksNamesFull",
+        "Language",
+        "RatingLabel",
+        "Prompt"
+      ],
+      "max_multiplicity": 44,
+      "unique_keys": 12296
+    }
+  },
+  "licensing": {
+    "dataset_card_license": "MIT",
+    "dataset_card_sha256": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+    "dataset_card_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+    "source_datasets": "Cardrefersreaderstothepaper; AppendixA statescrowdsourceddatasharerswereaskedtoagreeopen-sourceandOSFdatacamefrompeer-reviewedstudies. Individualsource-specificlicenses/consentswerenotindependentlyre-audited. Thiscacheislocalresearch; nosourcedataredistributionordistributionlicenseclaimmade. PreserveMuCEattribution/papercitation.",
+    "upstream_license_file": "No separate LICENSE filelistedinthepinnedmetadata"
+  },
+  "model_requests": 0,
+  "normalization": "Unicode NFKC,casefold,collapsed whitespace; grouping only; original text preserved",
+  "null_counts": {
+    "Dataset": 0,
+    "DatasetsSplit": 0,
+    "FullPrompt": 647,
+    "ID": 0,
+    "Language": 0,
+    "Prompt": 0,
+    "RatingLabel": 0,
+    "Response": 0,
+    "Set": 0,
+    "TaskType": 0,
+    "TasksNamesFull": 0,
+    "facsco_grm_scaled": 0
+  },
+  "observed_field_values": {
+    "Language": {
+      "english": 16948
+    },
+    "RatingLabel": {
+      "creativity": 7532,
+      "originality": 9416
+    },
+    "Set": {
+      "Training": 16948
+    },
+    "TaskType": {
+      "Text": 16948
+    }
+  },
+  "observed_score_range": [
+    10.0,
+    50.0
+  ],
+  "opened_splits": [
+    "train"
+  ],
+  "paper_exposure_patterns": {
+    "Alternate Uses of Objects Task": [
+      "knife",
+      "rope"
+    ],
+    "Design Solutions": [
+      "reduce air pollution in cities",
+      "reduce the amount of litter in public spaces"
+    ],
+    "Metaphors": [
+      "the hot tea is",
+      "stomata are tiny"
+    ],
+    "Real-Life Creative Problem Solving": [
+      "becky is a college student",
+      "clara, a junior pre-med"
+    ]
+  },
+  "reader": {
+    "dependency_installations": 0,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pyarrow": "24.0.0",
+    "python": "3.13.12"
+  },
+  "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+  "row_count": 16948,
+  "schema_version": 1,
+  "selections": 0,
+  "source_bytes": 935313,
+  "source_semantics": {
+    "paper": "https://arxiv.org/html/2505.14442v2",
+    "rating_method": "AppendixA: GRM factor scores computed independently per sub-dataset, then min-max integer rescaling10-50; Section5.1 sameprompt higherhumancreativityscorepreferences; AppendixB fivepointpreference margin. Do notcompare absolute scoresacrosssources or relabeloriginalityasoverallcreativity. Public full_agreementcarddoesnotexpose per-rater labels,rawscales or individualagreementcounts, so those cannotbe independentlyreconstructed here."
+  },
+  "source_sha256": "701ea8d6c0eeb20625d2809a96b5b377e2be22f28f0a22d1dfcafa820aa173ec",
+  "source_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/resolve/a02181e394c41602a95d0678b0ce9d880e994289/full_agreement/train-00000-of-00001.parquet",
+  "status": "original_population_shortfall_no_selection",
+  "unopened_data_splits": [
+    "val",
+    "test",
+    "heldout_item",
+    "heldout_task"
+  ]
+}

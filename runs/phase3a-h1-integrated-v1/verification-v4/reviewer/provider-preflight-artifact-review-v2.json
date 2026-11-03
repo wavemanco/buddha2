@@ -1,0 +1,35 @@
+{
+  "actual_Windows_host_container_argv_verified": [
+    "-B",
+    "/workspace/runs/phase3a-h1-integrated-v1/verification-v4/provider-preflight-v2/provider_preflight.py",
+    "--inside"
+  ],
+  "bundle_check_sha256": "5cdab687001d2aca81e1b416a6887551f9dc3ed3613822b3ad53326707e7aea3",
+  "created_utc": "2026-10-31T14:45:56.343928+00:00",
+  "guard_proof_sha256": "85e1ca2a6709bda5d908c93c7229c4a82da314715704c66a7e00bde584895870",
+  "helper_sha256": "ea490b0318d301c6be87c2f64ff0c32eeed2d475681f06b7ba8b1d2c5e691a5f",
+  "kind": "p3a-hi-independent-keyless-preflight-artifact-review-v2",
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "packet_acceptance_sha256": "31fdee4427f4e4609b82209d9d312201004fba019e32d13c68d27a235b47e32c",
+  "passed": true,
+  "planned_command_sha256": "672069ba33ead6e688b8ad700c33c465aafecf173ba15c628763f029ede25a3f",
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "previous_failure": {
+    "before_Python_load": true,
+    "cleanup_exit_code": 0,
+    "execution_sha256": "733d9fc61eeeb55bfec351a13ba0c8a6e5ebeb4c454d7aa2374208a4077442d1",
+    "exit_code": 2,
+    "remove_sha256": "9eba575a0f160a747bc5596625fa111806eb1ecfbd817148e008089a1e8aad86",
+    "review_gap": "V1 review missed Windows Path separators in Linux argv; v2 literal POSIX argv independently exercised on Windows."
+  },
+  "production_edits": false,
+  "provider_calls": 0,
+  "reviewer": "hi_final_acceptance: nonauthor",
+  "runbook_sha256": "476f0b7459cbf83cef0705dfbfbfee6dfa487b6def92d32ec315a141b3a2185d",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "source_files_verified": 356,
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "static_proof_sha256": "72a8c0656a7859b24a0408ca3dfc1b34b9ba81fed7d85c0f70a6d448d874abd2",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
+  "supported_execution": "One --host invocation into unused provider-preflight-v2/actual-v1: accepted H1/network-none, SDK/socket/subprocess-blocked unchanged provider preflight, no keys/Transport/run/global claim publication; actual result/cleanup still requires review."
+}

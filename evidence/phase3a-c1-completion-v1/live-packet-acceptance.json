@@ -1,0 +1,84 @@
+{
+  "accounting": {
+    "cumulative_calls": 861,
+    "cumulative_known_micro_usd": 11279643,
+    "cumulative_max_exposure_micro_usd": 22719643,
+    "cumulative_reserved_micro_usd": 11440000,
+    "new_calls": 19,
+    "new_known_micro_usd": 791758,
+    "new_reserved_micro_usd": 0,
+    "new_unknown": 0,
+    "pending": 0,
+    "role_calls": {
+      "answer": 10,
+      "editor": 7,
+      "plan": 1,
+      "rank": 1
+    },
+    "role_micro_usd": {
+      "answer": 98290,
+      "editor": 661034,
+      "plan": 9680,
+      "rank": 22754
+    }
+  },
+  "activity": {
+    "SDK_calls": 0,
+    "journal_changes": 0,
+    "private_file_reads": 0,
+    "provider_calls": 0,
+    "source_changes": 0
+  },
+  "archive": "evidence/phase3a-c1-completion-v1/live-outcome-v2.zip",
+  "archive_bytes": 8084088,
+  "archive_sha256": "7b6ecc1192d902b0d14fc63ea9e53e69e0f24f5e306eba42003db6d92136bea6",
+  "checks": {
+    "all37_live_outcome_bound_artifacts_included_and_exact": true,
+    "all_member_SHA256": true,
+    "all_public_working_bytes_exact": true,
+    "closed_parent_references_exact": true,
+    "eight_report_replay_files_exact": true,
+    "exact_inventory_no_duplicate_or_link_entries": true,
+    "five_public_native_empty_summary_markers_only": true,
+    "guarded_replay_recipe_and_403input_proof_included": true,
+    "historical_reservation_preserved_once": true,
+    "human_report_exact": true,
+    "independent_Decimal_actual_usage_cost": true,
+    "journal_provenance_38_events_19_known": true,
+    "old_sealed_packet_helper_unchanged": true,
+    "private_names_excluded_before_stat_read": true,
+    "recognizable_credential_token_patterns_absent": true,
+    "science_incomplete_nullmean": true,
+    "zip_CRC_all_members": true
+  },
+  "corrected_helper_sha256": "14af32ecfe591caddb8b3057445b86d8dff0b55c37f88ffd5a44ed583eccaabf",
+  "kind": "phase3a-c1-completion-live-packet-acceptance-v1",
+  "limitations": [
+    "A bounded recognizable-token scan is not proof that arbitrary unknown secret formats are absent. No private bindings or writer locks were inspected.",
+    "Archive acceptance preserves a controlled readiness failure, not successful adaptation or a comparison. Historical $11.44 remains unresolved."
+  ],
+  "manifest_sha256": "6fd02cdfae24954bf9d881ecb23e81b6437d72c57e31e38d7602696f0972df66",
+  "members": 1639,
+  "passed": true,
+  "retained_prior_packet": {
+    "archive_sha256": "4dd8cd9ea050ef1115ea726e0bcbea44a6c165f8454687e3fa571bdf6a0156cc",
+    "full_closure_accepted": false,
+    "path": "evidence/phase3a-c1-completion-v1/live-outcome-v1.zip",
+    "reason": "The first sealed packet omitted18 explicitly bound replay/recipe/proof/diagnostic artifacts. It and its manifest remain unchanged; corrected v2 adds the public closure subtree."
+  },
+  "reviewed_at_utc": "2026-10-29T21:37:43.301969+00:00",
+  "reviewer": "independent release_launcher stdlib archive audit",
+  "scientific_status": {
+    "DOM_native_valid_KEEP_BASE_distinct_from_strict_final_envelope_failure": true,
+    "complete": false,
+    "mean": null,
+    "readiness_passed": false,
+    "scores": 0
+  },
+  "scope": "closed failed readiness attempt only; no scientific completion or repetition authorization",
+  "sha256": "5df651e2ec2bb68e393bd6b7636854bcea175d70c7b43b06db2ae19c37256a4e",
+  "source_members_current_and_retained": 192,
+  "source_sha256": "e2471ad9e38171cabc2d32615bac797739f378c3f6c7ebc64f8b95f8632d9d26",
+  "study_sha256": "1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57",
+  "working_inputs_hashed": 1638
+}

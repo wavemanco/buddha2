@@ -1,0 +1,54 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "followups/phase3a_c1_completion_v3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "mypy",
+        "--explicit-package-bases",
+        "--follow-imports",
+        "silent",
+        "--no-incremental",
+        "--cache-dir",
+        "/tmp/c1-completion-mypy",
+        "followups/phase3a_c1_completion_v3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "bandit",
+        "-q",
+        "-r",
+        "followups/phase3a_c1_completion_v3",
+        "-x",
+        "followups/phase3a_c1_completion_v3/tests"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "group": "static",
+  "kind": "phase3a-c1-completion-offline-check-v1",
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89",
+  "study_sha256": "8889603f3720753e0543b0c8dd714c384fc173822d0d3899d8131506121c20bc"
+}

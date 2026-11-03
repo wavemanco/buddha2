@@ -1,0 +1,222 @@
+{
+  "kind": "independent-am1-billing-review",
+  "specification": "0.16",
+  "reviewed_at_utc": "2026-10-27T05:36:36.254726+00:00",
+  "status": "documented-public-payg-envelope-supported-with-future-profile-precondition",
+  "independent_reviewer": "/root/am1_billing",
+  "scope": {
+    "files_written": [
+      "evidence/phase2-am1-r016/billing-review.json"
+    ],
+    "provider_requests": 0,
+    "credential_access": 0,
+    "model_calls": 0,
+    "sdk_clients_constructed": 0,
+    "account_or_project_settings_read": false,
+    "sdk_source_inspection_only": true
+  },
+  "units": {
+    "rate_integer": "thousandths of one micro-USD per token",
+    "monetary_integer": "micro-USD",
+    "equivalence": "USD per million tokens equals micro-USD per token; divide rate integers by 1000"
+  },
+  "formula": "ceil((maximum_billable_input * maximum_input_rate_integer + reserved_total_output * output_rate_integer) / 1000)",
+  "maximum_input_status": "Operational inference from the documented full-context definition, all ordinary/cache input categories counting toward that context, and rejection of over-context requests. Not a contractual indemnity or account billing certification.",
+  "roles": {
+    "answer": {
+      "maximum_billable_input": 1000000,
+      "reserved_total_output": 4096,
+      "maximum_input_rate_integer": 2500,
+      "output_rate_integer": 10000,
+      "reservation_micro_usd": 2540960
+    },
+    "plan": {
+      "maximum_billable_input": 1000000,
+      "reserved_total_output": 4096,
+      "maximum_input_rate_integer": 2500,
+      "output_rate_integer": 10000,
+      "reservation_micro_usd": 2540960
+    },
+    "rank": {
+      "maximum_billable_input": 1000000,
+      "reserved_total_output": 4096,
+      "maximum_input_rate_integer": 2500,
+      "output_rate_integer": 10000,
+      "reservation_micro_usd": 2540960
+    },
+    "group": {
+      "maximum_billable_input": 1050000,
+      "reserved_total_output": 128000,
+      "maximum_input_rate_integer": 1100,
+      "output_rate_integer": 3960,
+      "reservation_micro_usd": 1661880
+    },
+    "quality": {
+      "maximum_billable_input": 1000000,
+      "reserved_total_output": 16000,
+      "maximum_input_rate_integer": 11000,
+      "output_rate_integer": 27500,
+      "reservation_micro_usd": 11440000
+    }
+  },
+  "rate_tables_integer": {
+    "sonnet": {
+      "ordinary": 2000,
+      "cache_write_5m": 2500,
+      "cache_read": 100,
+      "output": 10000
+    },
+    "quality_geographic_envelope": {
+      "ordinary": 5500,
+      "cache_write_5m": 6875,
+      "cache_write_1h": 11000,
+      "cache_read": 550,
+      "output": 27500
+    },
+    "group_fast_long_geographic_envelope": {
+      "ordinary": 880,
+      "cache_write_30m": 1100,
+      "cache_read": 88,
+      "output": 3960
+    }
+  },
+  "first_block": {
+    "counts": {
+      "answer": 20,
+      "plan": 1,
+      "rank": 1,
+      "group": 3,
+      "quality": 30
+    },
+    "maximum_requests": 55,
+    "sum_maximum_reservations_micro_usd": 404086760,
+    "usd": "404.08676"
+  },
+  "full_study": {
+    "counts": {
+      "answer": 480,
+      "plan": 24,
+      "rank": 24,
+      "group": 72,
+      "quality": 720
+    },
+    "maximum_requests": 1320,
+    "sum_maximum_reservations_micro_usd": 9698082240,
+    "usd": "9698.08224"
+  },
+  "projection_limits": [
+    "These sums are conservative per-request envelopes, not expected spend or a grant. Serial settlement normally releases most reservations. No live output/usage has been observed.",
+    "Unknown delivery retains its full unpaid liability and halts; no retries, alternative routes or repair calls.",
+    "Quality deliberately reserves every known cache TTL, including 1h, although its scientific request omits cache_control. That is additional financial conservatism, not permission to add caching controls."
+  ],
+  "profile_prerequisite": {
+    "required_before_live": "Bind an explicit current public pay-as-you-go billing profile for the exact direct endpoints/model IDs to the new study, future grant and preflight. Unknown/private/Scale/Reserved/negotiated contracts are unsupported and block before dispatch; do not infer the profile from an API key.",
+    "account_verified": false,
+    "calls_authorized": false,
+    "group": "Preserve omitted service_tier, reasoning_effort and output cap. Omitted tier means auto, hence reserve Fast/priority as maximum public PAYG tier. Reserve documented long-context rates and 10 percent geography uplift. Default/flex/priority are supported settlement tiers; unknown/auto/unpriced scale are not settleable.",
+    "sonnet": "Explicit standard_only and global are already in its body. Existing accepted cache controls allow only 5m, so max applicable input rate is USD2.50/M. A returned 1h write remains unsupported.",
+    "quality": "Priority capacity excludes Opus5. Fast requires speed=fast and a beta header, both absent. Omitted inference_geo follows workspace default; only global/us are available, so reserve 1.1 geographic premium across all categories. Use conservative geographic settlement surcharge unless the applicable profile is attested; do not assume global from omission."
+  },
+  "usage_normalization_requirements": [
+    "ChatCompletions prompt_tokens includes reads and writes. base = prompt_tokens - cached_tokens - cache_write_tokens; require nonnegative exact integers and read+write <= prompt.",
+    "Require explicit cache_write_tokens and cached_tokens for the GPT5.6 implicit-cache profile; missing optional fields are unresolved evidence, not proof of zero charge.",
+    "Require total_tokens = prompt_tokens + completion_tokens. Reasoning/text detail counts are breakdowns, not extra charges; validate their bounds. Reject unsupported nonzero modalities/prediction details or unknown nonzero fields.",
+    "Use returned known service tier and actual prompt length for exact public rate table settlement, or a documented conservative maximum where geography/profile is unattested; never assume missing tier means standard.",
+    "Preserve raw provider usage and unknown fields. Unknown usage/tier/contract leaves the reservation outstanding and stops; an SDK enum annotation is not a validator."
+  ],
+  "sdk_source_evidence": {
+    "image_id": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "sdk": "openai==1.107.0",
+    "inspection_environment": "docker --network none --read-only --cap-drop ALL --security-opt no-new-privileges, no mounts or keys; stdlib-only file reads",
+    "files": {
+      "/usr/local/lib/python3.12/site-packages/openai/types/completion_usage.py": "PromptTokensDetails declares cached_tokens/audio_tokens but not cache_write_tokens.",
+      "/usr/local/lib/python3.12/site-packages/openai/_models.py": "BaseModel allows extra fields in Pydantic v1 and v2; construct_type returns unmatched values unchanged, including unrecognized Literal values.",
+      "/usr/local/lib/python3.12/site-packages/openai/types/chat/chat_completion.py": "service_tier annotation is Optional Literal auto/default/flex/scale/priority. It does not include fast, so normalization must validate values itself."
+    },
+    "limit": "Source inspection only. Parent must exercise actual pinned SDK/mock HTTP parsing/model_dump to prove nested write fields and unknown tier strings survive the real SDK response path."
+  },
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+      "observations": [
+        "prompt_tokens_details.cache_write_tokens is explicitly part of the exact ChatCompletions usage schema.",
+        "Request cache TTL defaults to 30m, currently its only supported request-level value.",
+        "Omitted service_tier defaults to auto and uses project-configured tier; default explicitly selects standard pricing.",
+        "Returned service tier can differ from requested tier."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "observations": [
+        "Context 1,050,000; output maximum128,000.",
+        "Standard ordinary/read/output USD0.20/0.02/1.20 per million; cache-write1.25x ordinary.",
+        "Above272K input, full-request input prices double and output1.5x."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "observations": [
+        "English HTML full-table Astro props contain Luna Standard0.20/0.02/0.25/1.20 and Fast0.40/0.04/0.50/2.40 (ordinary/read/write/output), independently fetched during review. Visible initial rendered table omits older models.",
+        "Geographic/FedRAMP endpoints carry10 percent uplift for eligible newer models. Highest declared publicPAYG envelope applies Fast, long-context and geographic multipliers."
+      ],
+      "extraction": "stdlib urllib.request fetch official HTML, html.unescape, inspect gpt-5.6-luna entries and enclosing standard/fast table labels; no provider endpoint used"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "observations": [
+        "Cache writes are total rates rather than an extra ordinary-input surcharge.",
+        "OpenAI caches full rendered context including its hidden instructions.",
+        "Reads and writes are distinct billed categories."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "observations": [
+        "Project settings can opt requests into Fast mode.",
+        "GPT5.6 and earlier return priority for Fast processing.",
+        "Scale Tier is separate; custom capacity arrangements are not proven bounded by this publicPAYG sheet."
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "observations": [
+        "Sonnet5.5 ordinary/output/5mwrite/1hwrite/read USD2/10/2.50/4/0.10 per million.",
+        "Opus5 ordinary/output/5mwrite/1hwrite/read USD5/25/6.25/10/0.50 per million.",
+        "US inference applies1.1 across token categories; standard pricing covers full1M context."
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/api/service-tiers",
+      "observations": [
+        "Auto can use Priority when available.",
+        "Supported-model exception list excludes Sonnet5.5 and Opus5, so that capacity premium is not applicable to these exact profiles."
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode",
+      "observations": [
+        "Fast requires speed=fast opt-in.",
+        "Opus5 requires fast-mode-2026-02-01 beta header; both request speed and header are absent in this transport."
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency",
+      "observations": [
+        "Omitted inference_geo uses workspace default_inference_geo.",
+        "Only global and us are currently available; us adds1.1 across categories."
+      ]
+    }
+  ],
+  "independent_arithmetic": {
+    "implementation": "Python stdlib Decimal and integer assertions; no project code imported",
+    "assertions_passed": true,
+    "per_request_sum_usd": {
+      "answer": "2.54096",
+      "plan": "2.54096",
+      "rank": "2.54096",
+      "group": "1.66188",
+      "quality": "11.44"
+    }
+  },
+  "conclusion": "Billing evidence supports an offline candidate under the declared publicPAYG profile and conservative modifier envelope. It does not verify an account, grant, live schema acceptance or invoice. Actual pinnedSDK mock proof and first-block integration remain required."
+}

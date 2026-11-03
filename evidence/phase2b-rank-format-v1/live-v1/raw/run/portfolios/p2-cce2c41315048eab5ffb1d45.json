@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-e9ba4402eb215f22caac050e134a065cce80b166be612e73bb068227c73ea1bb",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "345415c1a2f0ed666dc730aa40072d977840d474150af3b4b284c0e1b5bec589",
+    "procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+    "repeat": 1,
+    "request_ids": [
+      "p2-f667b5ddf7e4c7ca4b58244c.plan",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.00",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.01",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.02",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.03",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.04",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.05",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.06",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.07",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.08",
+      "p2-f667b5ddf7e4c7ca4b58244c.answer.09",
+      "p2-cce2c41315048eab5ffb1d45.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+  },
+  "responses": [
+    {
+      "id": "response-b6d7a8f107315f9534a4d4a1",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.00",
+      "status": "ok",
+      "text": "When big-city event planner Josie Hartman returns to Pleasant Prairie, Kansas, to sell her late grandfather's wheat farm, she discovers the sale hinges on one condition: she must co-chair the town's legendary Easter egg hunt and church potluck contest with Cal Brenner, heir to the rival farm family her grandfather feuded with for forty years. The two clash immediately, sabotaging each other's plans with swapped casserole labels, rerouted hay wagons, and a disastrous incident involving 3,000 plastic eggs and an escaped goat. As they work late nights in the dusty church basement, their bickering softens into banter, and a stolen kiss beneath the blooming redbud trees leaves both of them rattled. Just as Josie begins to imagine staying, Cal discovers the buyer for her farm is a developer who plans to bulldoze both families' land, and she must confess she knew all along. After a heartbroken Easter-morning standoff, Josie tears up the contract in front of the entire town, and the two families unite for the biggest egg hunt in Kansas history, ending with Josie and Cal sharing a pie, a promise, and a very happy goat."
+    },
+    {
+      "id": "response-352cff5f8f8d164d4b105dda",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.03",
+      "status": "ok",
+      "text": "When shy farmhand Wyatt Briggs is guilted into playing the Easter Bunny for the tiny town of Mulberry Creek, Kansas, he figures the only hard part will be surviving the heat inside the costume. Then he keeps running into Josie Hartman, the bright, newly arrived schoolteacher, who confides in the oversized bunny about her homesickness, her doubts about staying, and her growing curiosity about the quiet farmhand who fixed her truck. Wyatt, too tongue-tied to speak as himself, finds that he can only be honest while wearing the ears, and he soon falls for her while she unknowingly falls for both versions of him. Their secret-sharing gets complicated when a rival suitor, the slick county fair promoter, tries to charm Josie and convince her to leave for a job in Kansas City. On Easter morning at the sunrise service, a fumbled costume, a runaway egg basket, and a heartfelt confession in front of the whole congregation finally reveal Wyatt's identity, and Josie, laughing through happy tears, chooses to stay in Mulberry Creek and kiss him as the sun rises over the wheat fields."
+    },
+    {
+      "id": "response-f1964fc492d9e6b601dc8e55",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.02",
+      "status": "ok",
+      "text": "When overachieving Chicago transplant Josie Miller returns to her tiny hometown of Larkspur, Kansas, for Easter, she's cornered by her meddling mother and the entire church congregation, who have lined up every single bachelor in the county for a \"casual\" Easter dinner. In a panic, she blurts out that she's engaged to a man named Daniel, only to realize that her whole family expects to meet him by Sunday. Desperate, she hires Ben Hollis, the sarcastic new large-animal vet who just moved to town, to play her fiancé in exchange for helping him win over the skeptical local ranchers. As the two fake their way through egg-dyeing contests, a disastrous church potluck, and a midnight chase after an escaped Easter-parade lamb, their pretend banter starts to feel uncomfortably real. When the lie unravels in front of the whole town on Easter morning, Josie must decide whether to run back to Chicago or confess her feelings to the one man who never needed her to be anyone but herself."
+    },
+    {
+      "id": "response-8869f4e4120ab9bdfee32a86",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.04",
+      "status": "ok",
+      "text": "**Title: \"Shelter in Place\"**\n\nWhen big-city journalist Maggie Doyle is sent to the tiny town of Plum Hollow, Kansas, to write a fluff piece on its legendary Easter egg hunt, she expects a boring weekend, not a run-in with Cole Brennan, a former storm chaser turned reluctant wheat farmer who thinks her story is a waste of ink. When a surprise spring tornado warning sends them and a dozen quirky townspeople scrambling into the First Methodist church basement on Holy Saturday, Maggie finds herself trapped with a hundred dyed eggs, a rogue ham, and Cole, who keeps predicting the storm's path with annoying accuracy. As the sirens wail overhead, the forced togetherness leads to bickering over board games, a chaotic impromptu choir rehearsal, and a quiet late-night confession about why Cole gave up chasing storms and why Maggie never stays anywhere long. By Easter morning the storm has passed, the town's church and egg hunt are in shambles, and Maggie, with a job-saving exposé on a rival story waiting in her inbox, must choose between her career and the community that rebuilt her heart. She ultimately tosses the big story, helps stage a sunrise egg hunt in the debris, and shares a kiss with Cole under a rainbow as the whole town cheers."
+    },
+    {
+      "id": "response-5b4a1645ec544f5f2b0958da",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.01",
+      "status": "ok",
+      "text": "Burned-out Chicago pastry chef Josie Miller returns to her tiny wheat-farming hometown of Buttercup, Kansas, just before Easter after learning her grandmother's beloved bakery is days from foreclosure. Within an hour of arriving, she's pulled over by the new sheriff, Cal Hendricks, her high-school crush, who has grown from a gangly kid who once tripped over her locker into a broad-shouldered lawman with a lopsided grin. To save the bakery, Josie reluctantly agrees to enter the town's legendary Easter Sunday bake-off, with Cal as her unlikely sous-chef after a prank-gone-wrong leaves the bakery's oven broken and half the town's egg shipment missing. Between flour-dusted kitchen flirtations, a runaway lamb at the church egg hunt, and a rival baker's sabotage, Josie and Cal rediscover the spark they never quite let go of, until a lucrative Chicago job offer forces her to question whether she's running toward her dream or away from her heart. On Easter morning, Josie wins the bake-off with her grandmother's secret hot cross bun recipe, turns down the offer, and kisses Cal in the middle of the sunlit wheat field as the whole town cheers."
+    },
+    {
+      "id": "response-3a534ea02b004b4623759145",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.07",
+      "status": "ok",
+      "text": "When recently divorced Marlene Briggs and Cal Hutchins are forced to co-host their small Kansas town's annual Easter egg hunt and farm festival, they discover the event's star attraction is Biscuit, the pet lamb they've been awkwardly sharing custody of since the split. Marlene, a type-A event planner who fled to Kansas City, and Cal, a stubborn fourth-generation farmer, bicker over everything from egg placement to the lily arrangements their meddling grandmothers insist on. When a freak spring storm floods the festival grounds the night before the big day, the two spend hours rescuing lambs, rebuilding the pavilion, and trading the kind of honest, laugh-out-loud confessions they never managed during their marriage. Just as sparks reignite, Marlene gets a job offer in Chicago that forces her to choose between her career and the life she once left behind. On Easter morning, with the whole town watching and Biscuit wandering through the crowd, Cal asks her to stay, Marlene finally says yes, and the lamb gets the best joint custody arrangement of all."
+    },
+    {
+      "id": "response-fb26f59109b553980e1effa8",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.05",
+      "status": "ok",
+      "text": "When widowed innkeeper Walt Hollis learns that Dr. Nora Beck, a big-city egg-dye chemist, is arriving in tiny Pottersville, Kansas, to test her new \"unfadeable\" Easter colors at the town's legendary egg hunt, the entire town secretly decides he's been lonely long enough. The meddling begins with the church ladies \"accidentally\" double-booking Nora into the only room at Walt's inn, and escalates when the diner owner rigs a fake power outage so the two must share a candlelit dinner of casserole and awkward small talk. Meanwhile, the volunteer fire chief stages a bogus chicken-coop emergency, and a runaway flock of hens, a vat of neon-purple dye, and Walt's very confused mule leave both of them drenched, stained, and laughing for the first time in years. Just as sparks fly, Nora discovers the conspiracy and, feeling like a pawn in the town's scheme, packs her bags the night before Easter, while a guilt-ridden Walt realizes his feelings are real and have nothing to do with the meddling. On Easter morning, the whole town confesses in a chaotic, pastel-soaked egg hunt, and Nora, finding a golden egg containing Walt's heartfelt note, decides to stay, turning the inn into her new lab and a fresh start for them both."
+    },
+    {
+      "id": "response-87217190f317515a14b754d9",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.08",
+      "status": "ok",
+      "text": "When big-city appraiser Nora Wells returns to her late grandmother's farm in Larkspur, Kansas, to sell it before Easter, she discovers a cryptic clue tucked inside an old hymnal that points to the legendary Golden Egg, a trinket hidden decades ago in a county barn and rumored to bring true love to whoever finds it. Her search is complicated by Cal Dreiser, a stubborn local veterinarian and fourth-generation farmer who is convinced the egg belongs to his family's heritage and who has been collecting clues of his own for years. Each rival is forced to share half of a mismatched clue set, so they race across the county together, from a wind-battered church to a dusty feed store to the town's overpacked Easter egg hunt, bickering, outwitting each other, and slowly falling for one another. Just when they crack the final riddle in the rafters of a forgotten red barn, Nora learns that Cal could lose his land unless the egg's rumored collector's value saves it, while Cal discovers she planned to sell the farm to a developer. On Easter morning, after a heartfelt confrontation and a tearful apology in the middle of the community egg hunt, they find the golden egg was never valuable at all, but inside is a note from Nora's grandmother that reads \"Love was the treasure,\" and Nora decides to stay, keep the farm, and begin a new chapter with Cal."
+    },
+    {
+      "id": "response-e05be56f983c5830592dcf10",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.06",
+      "status": "ok",
+      "text": "When Dana Whitaker, a stubborn third-generation organizer, prepares for the 100th annual Egg-Stravaganza in tiny Plumb Creek, Kansas, she learns that the festival grounds her family has tended for decades are about to be sold. Slick agribusiness rep Miles Hartley arrives in town with a polished briefcase and a mandate to buy the land for a soybean processing facility by Easter Sunday. Forced to share a rickety farmhouse B&B, the two spar over everything from pie recipes to property lines, until Miles gets roped into judging the egg hunt and discovers he's enjoying himself far more than he expected. As Dana's wit and warmth win him over, Miles secretly rewrites his company's proposal, but Dana finds the original paperwork on the eve of the festival and publicly confronts him in front of the whole town. On Easter morning, Miles returns with a heartfelt compromise that places the facility on neighboring land and preserves the festival grounds forever, and he seals the deal and the romance with a kiss beneath a sky full of pastel balloons."
+    },
+    {
+      "id": "response-d920d67a741a13efada289e4",
+      "request_id": "p2-f667b5ddf7e4c7ca4b58244c.answer.09",
+      "status": "ok",
+      "text": "**Hop to It** is a warm, quirky romcom in the spirit of *Hallmark meets Napoleon Dynamite* with a dash of *Sweet Home Alabama*. When big-city event planner Josie Marlowe is sent to tiny Plum Creek, Kansas, to shut down her late grandmother's struggling egg farm before Easter, she expects a quick sale and a faster exit. Her meet-cute happens when she's chased through a muddy field by a runaway flock of hens, only to be rescued by Wyatt Brandt, the gruff, dimple-cheeked veterinarian who's also running the town's beloved Easter egg hunt. As the two team up to save the festival, sparks fly, but Josie's boss pressures her to finalize the sale to a corporate developer, and Wyatt discovers her secret just days before the big event. Heartbroken, Wyatt shuts her out, and Josie sits alone in her grandmother's farmhouse on Holy Saturday, ready to drive away for good. On Easter morning, she tears up the contract, shows up at the hunt in muddy boots, and wins Wyatt back with a golden egg containing a handwritten promise to stay."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-0ac59a48456661d0d8d5",
+    "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-2"
+    }
+  }
+}

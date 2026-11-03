@@ -1,0 +1,522 @@
+{
+  "assessment_identity_sha256": "54cf7305dd21bba6847628d47f205566877e3972cefff9d61952ee0da81c1745",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 7,
+    "utility": 7.8763610253882925
+  },
+  "native": {
+    "fields": {
+      "distinct": 7,
+      "generation_scores": [
+        9,
+        9,
+        9,
+        9,
+        8,
+        9,
+        9,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        9,
+        9,
+        9,
+        9,
+        8,
+        9,
+        9
+      ],
+      "utility": 7.8763610253882925
+    },
+    "generation_row": {
+      "generations": [
+        "**To Kill a Mockingbird** by Harper Lee. It's widely praised for its humane, clear-eyed look at racial injustice and moral courage in the American South, told through the memorable voice of young Scout Finch.",
+        "**Pride and Prejudice** by Jane Austen (1813) is a well-received classic that regularly appears on best-of lists, including the BBC's \"Big Read\" and many \"greatest novels\" rankings.",
+        "**1984** by George Orwell is a well-received novel that regularly appears on top book lists. Critics and readers rank it highly for its chilling portrayal of totalitarian control, surveillance, and propaganda. It also introduced enduring concepts like \"Big Brother,\" \"doublethink,\" and \"Newspeak\" into everyday language, and it remains relevant to discussions about truth and power.",
+        "**The Lord of the Rings** by J.R.R. Tolkien is a well-received book that appears often on top book lists. It regularly ranks highly in reader-voted polls, including the BBC's \"The Big Read\" (where it placed first in 2003) and Goodreads' lists of best fantasy and best books of all time.",
+        "**One Hundred Years of Solitude** by Gabriel García Márquez is a well-received book that often appears on top book lists. He wrote it in Spanish, and it was first published in 1967. It is a landmark of magical realism and tells the multigenerational story of the Buendía family in the fictional town of Macondo. It regularly appears on global \"best of\" lists, including those of the 20th century's most important novels, and it helped bring Latin American literature to a worldwide readership. Gregory Rabassa's English translation is widely praised.",
+        "**War and Peace** by Leo Tolstoy (1869) is a well-received book that often appears on top book lists.\n\nIt regularly ranks high on lists of the greatest novels ever written, including those compiled by critics, scholars, and writers. Examples include the Norwegian Book Clubs' \"Top 100 Books of All Time\" and various \"greatest novels\" polls. It is also a staple of university literature courses and remains popular with general readers. It is admired for its sweeping portrait of Russian society during the Napoleonic Wars and its deep psychological insight into its characters.",
+        "**The Little Prince** by Antoine de Saint-Exupéry is a well-received book that often appears on top book lists. Though it is framed as a children's story, it has been celebrated across generations for its poetic reflections on love, loss, and human nature. It is one of the best-selling and most translated books ever published.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears in top book lists. It won the Pulitzer Prize for Fiction in 1961 and is frequently included because of its compelling portrayal of racial injustice and moral growth in the American South, told through the eyes of a young narrator, Scout Finch.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that appears often on both reader and critic top lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists.\n\nThe planning note suggests a nonfiction title, but your request only asked for one well-received book. If you'd prefer nonfiction, *The Diary of a Young Girl* by Anne Frank is a good example. It is widely praised for its honest, personal account of life in hiding during the Holocaust."
+      ],
+      "id": "nb-curated-7a77e85421d12bca8653",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Name one well received book that often appears in top book lists."
+    },
+    "partition_fields": {
+      "distinct": 7,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 7,
+      "generation_scores": [
+        9,
+        9,
+        9,
+        9,
+        8,
+        9,
+        9,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "**To Kill a Mockingbird** by Harper Lee. It's widely praised for its humane, clear-eyed look at racial injustice and moral courage in the American South, told through the memorable voice of young Scout Finch.",
+        "**Pride and Prejudice** by Jane Austen (1813) is a well-received classic that regularly appears on best-of lists, including the BBC's \"Big Read\" and many \"greatest novels\" rankings.",
+        "**1984** by George Orwell is a well-received novel that regularly appears on top book lists. Critics and readers rank it highly for its chilling portrayal of totalitarian control, surveillance, and propaganda. It also introduced enduring concepts like \"Big Brother,\" \"doublethink,\" and \"Newspeak\" into everyday language, and it remains relevant to discussions about truth and power.",
+        "**The Lord of the Rings** by J.R.R. Tolkien is a well-received book that appears often on top book lists. It regularly ranks highly in reader-voted polls, including the BBC's \"The Big Read\" (where it placed first in 2003) and Goodreads' lists of best fantasy and best books of all time.",
+        "**One Hundred Years of Solitude** by Gabriel García Márquez is a well-received book that often appears on top book lists. He wrote it in Spanish, and it was first published in 1967. It is a landmark of magical realism and tells the multigenerational story of the Buendía family in the fictional town of Macondo. It regularly appears on global \"best of\" lists, including those of the 20th century's most important novels, and it helped bring Latin American literature to a worldwide readership. Gregory Rabassa's English translation is widely praised.",
+        "**War and Peace** by Leo Tolstoy (1869) is a well-received book that often appears on top book lists.\n\nIt regularly ranks high on lists of the greatest novels ever written, including those compiled by critics, scholars, and writers. Examples include the Norwegian Book Clubs' \"Top 100 Books of All Time\" and various \"greatest novels\" polls. It is also a staple of university literature courses and remains popular with general readers. It is admired for its sweeping portrait of Russian society during the Napoleonic Wars and its deep psychological insight into its characters.",
+        "**The Little Prince** by Antoine de Saint-Exupéry is a well-received book that often appears on top book lists. Though it is framed as a children's story, it has been celebrated across generations for its poetic reflections on love, loss, and human nature. It is one of the best-selling and most translated books ever published.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears in top book lists. It won the Pulitzer Prize for Fiction in 1961 and is frequently included because of its compelling portrayal of racial injustice and moral growth in the American South, told through the eyes of a young narrator, Scout Finch.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that appears often on both reader and critic top lists.",
+        "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists.\n\nThe planning note suggests a nonfiction title, but your request only asked for one well-received book. If you'd prefer nonfiction, *The Diary of a Young Girl* by Anne Frank is a good example. It is widely praised for its honest, personal account of life in hiding during the Holocaust."
+      ],
+      "id": "nb-curated-7a77e85421d12bca8653",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "2f667f783b0669fc73817f97271e418951ffcfd751c27bf2aa50665b932c4f26",
+      "partition_scores": [
+        9,
+        9,
+        9,
+        9,
+        8,
+        9,
+        9
+      ],
+      "prompt": "Name one well received book that often appears in top book lists.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "df85290f7dfa9dcdad6111b273780e16c7a7c5cc2b876f4e9c2e5995c4e5253e",
+      "utility": 7.8763610253882925
+    },
+    "summary": {
+      "mean_distinct": 7.0,
+      "mean_utility": 7.8763610253882925,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "beee392dc9ec3e1a5b647a639489505b631da6eb52e70d929573e19bd709b2cc",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0170",
+      "fixture": false,
+      "intent_sha256": "49df38578fa5b35066911875af0a24ff64696eb541870840ed7a7c18ce02cd14",
+      "request_sha256": "3587a737fd2c0e5d9dcedc344dfcbaef6c59eb27639c5ce9e681b06b8a7fe8c7",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.1484176219964866,
+        "message_id": "chatcmpl-Edvsi84LCbEhuQfon0nEvzcotPaNV",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 128,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 91,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 978,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1106
+        },
+        "refusal": null,
+        "request_id": "req_d20af1d9841a4cd781762136b870177f",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,7,8,9],[1],[2],[3],[4],[5],[6]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 978,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 128,
+          "output_tokens_details": {
+            "reasoning_tokens": 91
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-421a0084b30648d87fb21663.group",
+      "spent_micro_usd": 385,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0171",
+      "fixture": false,
+      "intent_sha256": "dc48367860bbecebd6690409f8b4889cf6e79907931b2f6461d7a8545f37b126",
+      "request_sha256": "d75d4aeb06f67be8f5f9742480881995c1e7b7acf5d605f6b477c825e465e78d",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.7218773319909815,
+        "message_id": "msg_011CgUY4nrR8CSRmsx1HRX9X",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY4ncnZaPatDcxGLVNu",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 503,
+          "output_tokens": 114,
+          "output_tokens_details": {
+            "thinking_tokens": 105
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.00",
+      "spent_micro_usd": 5902,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0172",
+      "fixture": false,
+      "intent_sha256": "1c26a658d9f84515450dbb0ac2ad691e64dbf252dff88a3d77e0bd7d4ee615e2",
+      "request_sha256": "d15662c1e11c97d01f98a8826d715b94b3f2a2a77d34c564160743ecc6762453",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.626079291003407,
+        "message_id": "msg_011CgUY52qYTF1L7YDUKXNrc",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY52d9GQ761zLB9n8na",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 498,
+          "output_tokens": 116,
+          "output_tokens_details": {
+            "thinking_tokens": 107
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.01",
+      "spent_micro_usd": 5929,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0173",
+      "fixture": false,
+      "intent_sha256": "94c454c386df6e92cc8577f21078f205afdd1f028cf6967f93342886b2f12b28",
+      "request_sha256": "d4de70ed71f430bb2e781869e3f831cb84af766cdd3eb50281b5da966d1721df",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.087520918008522,
+        "message_id": "msg_011CgUY5FUJtDFCbAip1Sj3t",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY5FERq6B1YqE3UkG62",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 555,
+          "output_tokens": 71,
+          "output_tokens_details": {
+            "thinking_tokens": 62
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.02",
+      "spent_micro_usd": 5005,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0174",
+      "fixture": false,
+      "intent_sha256": "5386d9d5808054bb2e003d4fc333ff1a436f1a40edb20f1ca0b06a157ca87aa3",
+      "request_sha256": "87aa0e923e4fc3184a17f8c53fdf0b3e4aed89491202726ea2e15861b71f362c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.2872153930075,
+        "message_id": "msg_011CgUY5SCEXNLFyw7MbH3iK",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY5RuNTjY7q4CLMNoTJ",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 534,
+          "output_tokens": 114,
+          "output_tokens_details": {
+            "thinking_tokens": 105
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.03",
+      "spent_micro_usd": 6072,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0175",
+      "fixture": false,
+      "intent_sha256": "ce584751ea5eee8bd4fafb8a0a9a07e9dcc330bd1418076f1ec44968a5ec0682",
+      "request_sha256": "a0eb31e66b4e4fcc6da43d680395944b87f325f37c5a502b31c9ba74fc589bb0",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.8255230089998804,
+        "message_id": "msg_011CgUY5dJigSGKVH8AJD2Vt",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY5d7KN8AJM1LJein84",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 602,
+          "output_tokens": 144,
+          "output_tokens_details": {
+            "thinking_tokens": 135
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.04",
+      "spent_micro_usd": 7271,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0176",
+      "fixture": false,
+      "intent_sha256": "87b05dcc8791905ae5e63c2abfb9dee3339263d66e75f8cb5e9fa34f3cb6b665",
+      "request_sha256": "225e3b31976bf2e513fd159a579a21f0db3700c2331d1ca6e23fe6379cb0afbe",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.909204088995466,
+        "message_id": "msg_011CgUY5s2xzP31qr5PvnGrD",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY5roprp4Y9ah2itdby",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 615,
+          "output_tokens": 79,
+          "output_tokens_details": {
+            "thinking_tokens": 70
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.05",
+      "spent_micro_usd": 5555,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0177",
+      "fixture": false,
+      "intent_sha256": "4e98342ced19e9f1f82950d0c4a07679a9cbb9698d5ad6d844dd8535601d8580",
+      "request_sha256": "38a052922918fca40bb3520d188b521525b8da299ae0abdbfe7f55321a5860f9",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.0574656180106103,
+        "message_id": "msg_011CgUY631FPcLCg7ESHY6Rn",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUY62nMpbxTD1t46gptP",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 529,
+          "output_tokens": 81,
+          "output_tokens_details": {
+            "thinking_tokens": 72
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-421a0084b30648d87fb21663.quality.06",
+      "spent_micro_usd": 5137,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-7a77e85421d12bca8653"
+}

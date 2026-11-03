@@ -1,0 +1,67 @@
+{
+  "actual_request_counts": {
+    "answer": 480,
+    "group": 68,
+    "plan": 24,
+    "quality": 395,
+    "rank": 24
+  },
+  "cutoff": "2026-10-28T12:12:19Z",
+  "fixture": false,
+  "kind": "phase2b-full-pilot-evidence-index-v1",
+  "limitations": [
+    "Saved visible canonical records are not full SDK objects or thinking blocks.",
+    "Missing C outcomes stay missing; no repair, replacement, replay inference or new calls.",
+    "Whole-study decision remains inconclusive; package creates no new scientific selection.",
+    "Conservative public-price accounting is not independent invoice reconciliation.",
+    "Frozen summary.status is first-block-complete; full-run coverage is indexed explicitly."
+  ],
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "order_coverage": {
+    "invalid_rank": 4,
+    "scored": 68
+  },
+  "orders": "orders.json",
+  "public_report": "public-report/",
+  "raw_journal": "raw/run/journal/events.jsonl",
+  "settings": "settings.json",
+  "slot_coverage": {
+    "invalid_rank": 4,
+    "not_needed_nonhead": 285,
+    "ok": 987,
+    "skipped_invalid_rank": 44
+  },
+  "slots": "slot-outcomes.json",
+  "snapshot_sha256": "89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "summary": {
+    "attempts": 991,
+    "cutoff": "2026-10-28T12:12:19Z",
+    "decision_status": "inconclusive",
+    "experiment_api_spend_micro_usd": null,
+    "first_block_ready_for_review": true,
+    "fixture": false,
+    "missing_assessments": 4,
+    "orders": 68,
+    "portfolios": 68,
+    "provider_calls": 991,
+    "recoverable_export_orders": 0,
+    "reserved_micro_usd": 0,
+    "selected_method": null,
+    "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec",
+    "snapshot_sha256": "89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec",
+    "spent_micro_usd": 5983504,
+    "status": "first-block-complete",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+    "synthetic_selected_method": null
+  },
+  "unique_cost_micro_usd_by_role": {
+    "answer": 1755108,
+    "group": 66448,
+    "plan": 200598,
+    "quality": 3660324,
+    "rank": 301026
+  }
+}

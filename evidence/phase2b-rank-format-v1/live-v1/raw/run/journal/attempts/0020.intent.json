@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "1f582f69e9aff8df8c69c4d9a11075c848eda413dcaa6aaccf00e78dff11f9c0",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2413
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0020",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nCan you list 3 influential persons from the nineteenth century?\n</prompt>\n\n<response>\nHere are three influential figures of the nineteenth century, chosen from philosophy and intellectual leadership:\n\n1. **Friedrich Nietzsche (1844-1900)**: The German philosopher declared that \"God is dead,\" meaning that traditional religious and moral foundations were losing their hold on European culture. His ideas about the \"will to power,\" the \"Übermensch,\" and the revaluation of values shaped existentialism, psychology, postmodern thought, and literature throughout the twentieth century.\n\n2. **Søren Kierkegaard (1813-1855)**: The Danish thinker is often called the father of existentialism. He emphasized individual choice, subjective experience, anxiety, and the \"leap of faith,\" in opposition to abstract systems like Hegel's. His work influenced later theologians, such as Karl Barth, and philosophers, including Heidegger and Sartre, and it continues to inform discussions of authenticity and personal responsibility.\n\n3. **Herbert Spencer (1820-1903)**: The English philosopher and sociologist applied evolutionary ideas to society, ethics, and psychology, and he coined the phrase \"survival of the fittest.\" His thinking helped found modern sociology and influenced debates over individualism and laissez-faire economics. His \"Social Darwinism\" was later widely criticized, and it serves as a cautionary example of how scientific ideas can be misapplied to justify social policy.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "1f582f69e9aff8df8c69c4d9a11075c848eda413dcaa6aaccf00e78dff11f9c0",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-e8740bae4e77d0e443e32104.quality.08",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

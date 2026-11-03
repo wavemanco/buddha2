@@ -1,0 +1,20 @@
+{
+  "case_id": "H01",
+  "normalization": {
+    "candidates": [
+      {
+        "end": 370,
+        "order": null,
+        "start": 0
+      }
+    ],
+    "order": null,
+    "policy_id": "rank-format-N1",
+    "reason": "invalid_ids",
+    "status": "rejected"
+  },
+  "original_failed_result_changed": false,
+  "passed": true,
+  "provider_calls": 0,
+  "source_input_sha256": "e19d5b5c16f327ee1146b46ac00e326553baf4f1fc9ecb560d71ac5232994a90"
+}

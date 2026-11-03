@@ -1,0 +1,41 @@
+{
+  "kind": "am1-offline-package-review",
+  "reviewer": "/root/am1_acceptance",
+  "reviewed_at_utc": "2026-10-27T06:09:13.515764+00:00",
+  "status": "pass",
+  "archive_entries_verified": 477,
+  "manifest_member_hashes_verified": 476,
+  "archive_bytes": 1564017,
+  "archive_sha256": "af66d22c26c7498c0f98bfb0b584aae1ca65c205c9b6543ad52bb37631df08a6",
+  "manifest_sha256": "836f1da29527aed983ac3a8c51db86b46b668b62945022359738ad0f08aff983",
+  "crc_verified": true,
+  "all_archive_members_equal_current_files": true,
+  "source_files_verified": 22,
+  "candidate_study_sha256": "d4287971e712a15a08ffba0e8e1de3b1bcd89e8f5c7e049c860fde02e1910475",
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "closeout_handoff_hashes_verified": 4,
+  "local_crosslinks_verified": 93,
+  "baseline_files_verified": 10553,
+  "missing_baseline_files": 0,
+  "changed_baseline_files": [
+    "src/buddha2/phase2_dispatch.py",
+    "src/buddha2/__main__.py",
+    "tests/test_phase2_policy.py",
+    "runs/checks/bandit.json",
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "known_mutable_working_report_exception": "runs/checks/bandit.json; disclosed before/after hashes remain in acceptance-review.json; frozen evidence unchanged",
+  "upstreams_clean": true,
+  "financial_claims": "Per-request and aggregate amounts are conservative operational liability bounds, not expected spending, invoices or grants; future public-PAYG profile/operator preconditions remain explicit.",
+  "launch_claims": "Usable offline candidate; provider-enabled host launcher excluded and unbuilt; no account/billing/access certification or paid authorization.",
+  "archive_scope": "Continuation snapshot requiring retained parent records, pinned upstreams and runtime; not a standalone installation or provider-enabled launcher.",
+  "provider_calls": 0,
+  "real_credential_access": false,
+  "original_folder_accessed": false,
+  "files_changed_by_this_review": [
+    "evidence/phase2-am1-r016/package-review.json"
+  ]
+}

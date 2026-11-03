@@ -1,0 +1,20 @@
+{
+  "kind": "p3b-s2-native-acceptance-cases-v1",
+  "frozen_before_product_edits": true,
+  "definition": "PHASE3B_DEFINITION.md",
+  "cases": [
+    "Actual pinned run_task(k=2,modes=seq,pool_policy=finals,no library) executes two agg2 bases and six seq2 stages plus native selector.",
+    "Mixed namespace run IDs remain exact and no historical k1 outputs are reused.",
+    "Round2 current harness equals c1 and full native cumulative pool, two reference rollouts and notes are preserved.",
+    "Round2 KEEP preserves changed c1 and does not reset to the original seed.",
+    "Every authoring mission authenticates its exact pinned round-aware native input and repairs remain bounded to two shape attempts.",
+    "The native selector sees both complete anonymous checkpoint deliverables, uses no strategy/judge/fixed evidence and accepts only an existing native ID.",
+    "Native selector outer attempts=1, per-session24 turns and explicit invalid-choice/fallback status remain enforced.",
+    "All six authoring stages and selector persist complete signed thinking/tool history, exact required reads, notes/rereads and source-owned proofs.",
+    "Unchanged current strategies and choosing c1 are valid; no forced edit or positive score is required.",
+    "Fixed control generates12 fresh C-N portfolios and selects one unchanged whole portfolio from its complete blind packet.",
+    "Full serialized evidence either fits 2MiB unchanged or rejects before intent; it is never summarized or silently truncated.",
+    "Native checkpoint and selected-output aliases reconstruct exactly from saved native artifacts and authoritative requests without provider calls.",
+    "Private names, streams, caches, symlink/path escapes and protected original are rejected before metadata access."
+  ]
+}

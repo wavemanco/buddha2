@@ -1,0 +1,45 @@
+{
+  "author": "Codex-assisted qualitative analyst observations",
+  "independent_human_ratings": 0,
+  "key_generated_by_selector_but_not_displayed_to_root_analyst_before_these_notes": true,
+  "kind": "qualitative-inspection-before-key-display",
+  "new_experiment_model_calls": 0,
+  "observations": [
+    {
+      "case_id": "inspection-01",
+      "note": "Both can be understood as comparisons in the disgusting-drink context. The poison phrase may be conventional hyperbole; the single word may be a compressed feces metaphor. Original participant instructions and whether responses complete a remembered experience matter. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-02",
+      "note": "Both contain interpretable imagery. The sports analogy is unusual and elaborated but its relation to gross taste is indirect; slime is direct but familiar. Originality versus aptness weighting could lead to different preferences. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-03",
+      "note": "Pointless is a literal evaluation of a meeting. Shark suggests predation, danger or aggressive participants, but leaves the connection implicit. Deciding whether terse words count as developed metaphors is a criterion choice. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-04",
+      "note": "Both answers describe literal clothing fit and offer little figurative comparison. A numeric difference may ask the judge to distinguish two low-quality answers that a tie-permitting rubric treats as equivalent. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-05",
+      "note": "Lonesome supplies mood but no explicit comparison; cloak of shadows supplies a familiar metaphor. The response already starts with is, producing duplicated wording if mechanically appended; retain it unchanged and distinguish source elicitation from task rewriting. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-06",
+      "note": "Outer space supplies an intelligible vastness comparison. Stretching a room appears to confuse scales and may trade meaningfulness for oddness. Grammar alone should not determine creativity. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-07",
+      "note": "One answer invokes a national-origin stereotype; the other is a near-tautological cheap-toy simile. Distinguish a creativity label from endorsement or safety, and investigate original scoring criteria instead of introducing a new exclusion after inspection. No preference or numerical rating assigned."
+    },
+    {
+      "case_id": "inspection-08",
+      "note": "Gold can imply value or desirability through a terse metaphor; delish is a literal positive description. The intended amount of elaboration and allowance for implicit comparisons matter. No preference or numerical rating assigned."
+    }
+  ],
+  "packet_sha256": "88bf5d3e8bfebfecfac77549663638bbc0a8ed89e6dfd05a58136bd8a2ca7f6a",
+  "prior_familiarity": "Analyst previously saw Phase1 prompts, published methods, and several disagreements. This is not a blind or independent human evaluation.",
+  "recorded_at_utc": "2026-10-25T09:54:00.845668+00:00",
+  "schema_version": 1
+}

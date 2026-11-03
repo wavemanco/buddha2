@@ -1,0 +1,21 @@
+{
+  "attempts": 28,
+  "cutoff": "2026-10-28T10:16:14Z",
+  "decision_status": "inconclusive",
+  "experiment_api_spend_micro_usd": null,
+  "first_block_ready_for_review": true,
+  "fixture": false,
+  "missing_assessments": 69,
+  "orders": 3,
+  "portfolios": 3,
+  "provider_calls": 28,
+  "recoverable_export_orders": 0,
+  "reserved_micro_usd": 0,
+  "selected_method": null,
+  "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/a6a24afb83cb4baff8860f225796228db45fd5e804b96a250ad96f517079d5d9",
+  "snapshot_sha256": "a6a24afb83cb4baff8860f225796228db45fd5e804b96a250ad96f517079d5d9",
+  "spent_micro_usd": 210174,
+  "status": "first-block-complete",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "synthetic_selected_method": null
+}

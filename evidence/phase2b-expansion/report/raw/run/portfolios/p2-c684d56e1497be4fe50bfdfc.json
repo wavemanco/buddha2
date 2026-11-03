@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-ea2c438df1b18a7f439efb7a1516570885926f7708e6fa4d0c7c8be5236cb068",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "9d5444233fc6548dc0a678b3d89d59401b3672ca947e382498cd3a7a1d49dc14",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 1,
+    "request_ids": [
+      "p2-cc241901bfeb7426ad87b00c.plan",
+      "p2-cc241901bfeb7426ad87b00c.answer.00",
+      "p2-cc241901bfeb7426ad87b00c.answer.01",
+      "p2-cc241901bfeb7426ad87b00c.answer.02",
+      "p2-cc241901bfeb7426ad87b00c.answer.03",
+      "p2-cc241901bfeb7426ad87b00c.answer.04",
+      "p2-cc241901bfeb7426ad87b00c.answer.05",
+      "p2-cc241901bfeb7426ad87b00c.answer.06",
+      "p2-cc241901bfeb7426ad87b00c.answer.07",
+      "p2-cc241901bfeb7426ad87b00c.answer.08",
+      "p2-cc241901bfeb7426ad87b00c.answer.09",
+      "p2-c684d56e1497be4fe50bfdfc.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-ceae6f7f3259f841bc9ca7e4",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.01",
+      "status": "ok",
+      "text": "**Science** is a reputed publication in science. Published by the American Association for the Advancement of Science (AAAS), it is a top-tier multidisciplinary journal known for its rigorous peer review and for publishing landmark discoveries across many scientific fields."
+    },
+    {
+      "id": "response-3c8cba64d805f96f24d57251",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.00",
+      "status": "ok",
+      "text": "**Nature** is a flagship multidisciplinary weekly journal. Founded in 1869, it has published landmark discoveries across the sciences, from the structure of DNA to the sequencing of the human genome, and it covers fields ranging from physics and chemistry to biology and earth science."
+    },
+    {
+      "id": "response-4ccb9b8815bf0e563e5d0b66",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.02",
+      "status": "ok",
+      "text": "**Cell** is a reputed science publication. It is a leading life-sciences journal with a strong standing in molecular and cell biology, and it has published influential papers, including landmark work on stem cells."
+    },
+    {
+      "id": "response-d6b708c2cf00ef4b6d2d14fe",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.08",
+      "status": "ok",
+      "text": "**Philosophical Transactions of the Royal Society** is a reputed scientific publication. Founded in 1665, it is the oldest continuously published scientific journal in the world. It helped establish key practices of modern science, such as peer review and the public record of discoveries, and it has published landmark work by figures like Isaac Newton, Benjamin Franklin, and Michael Faraday."
+    },
+    {
+      "id": "response-b27d544f004f0c3f5b6fb85e",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.03",
+      "status": "ok",
+      "text": "**The Lancet** is a reputed science publication. It is one of the world's oldest and most respected peer-reviewed general medical journals, founded in 1823. It is known for its influential clinical research and its major role in shaping global health policy and practice."
+    },
+    {
+      "id": "response-17bae9fbc5b300c68491b24b",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.06",
+      "status": "ok",
+      "text": "**Scientific American** is a reputed science publication. Founded in 1845, it is one of the longest-running popular science magazines in the United States. It is known for accessible articles, often written by experts and researchers, that explain scientific developments to general readers."
+    },
+    {
+      "id": "response-4903bcef714df20708dc14d8",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.05",
+      "status": "ok",
+      "text": "**Physical Review Letters** is a leading physics journal published by the American Physical Society. It is known for rapidly communicating major results, including the first detection of gravitational waves by LIGO in 2016."
+    },
+    {
+      "id": "response-7393ac93ea00239ff84ecdff",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.04",
+      "status": "ok",
+      "text": "**Proceedings of the National Academy of Sciences (PNAS)** is a respected, broad-scope journal published under the auspices of the US National Academy of Sciences. Its academy-linked editorial model sets it apart. It has long drawn on the expertise of Academy members, and its review process combines that oversight with peer review. It publishes research across the biological, physical, and social sciences."
+    },
+    {
+      "id": "response-734c27c8194139650f25a028",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.09",
+      "status": "ok",
+      "text": "**Journal of the American Chemical Society (JACS)** is a reputed science publication. Published by the American Chemical Society, it is a central venue for chemical research and covers areas from organic and inorganic chemistry to biochemistry and materials science."
+    },
+    {
+      "id": "response-a8541f368ade2b7c1d3f52a1",
+      "request_id": "p2-cc241901bfeb7426ad87b00c.answer.07",
+      "status": "ok",
+      "text": "**Nature** is a reputed publication in science. It is a leading multidisciplinary journal that has published peer-reviewed research since 1869."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-510dc2800c595827238e",
+    "prompt": "Name one reputed publication in science.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-62"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "docker",
+    "rm",
+    "6662d109510d5f4444a7c498772a703689bc130fb09c492e31ee8d1146c4e354"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "6662d109510d5f4444a7c498772a703689bc130fb09c492e31ee8d1146c4e354\n"
+}

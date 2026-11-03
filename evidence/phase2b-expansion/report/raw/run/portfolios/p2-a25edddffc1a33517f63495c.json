@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-77b2e793c09394ca990ab1f9fe2a546a9be0b33c9fc4b1c8a4aa8eabdd3f5e7f",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-a25edddffc1a33517f63495c.answer.00",
+      "p2-a25edddffc1a33517f63495c.answer.01",
+      "p2-a25edddffc1a33517f63495c.answer.02",
+      "p2-a25edddffc1a33517f63495c.answer.03",
+      "p2-a25edddffc1a33517f63495c.answer.04",
+      "p2-a25edddffc1a33517f63495c.answer.05",
+      "p2-a25edddffc1a33517f63495c.answer.06",
+      "p2-a25edddffc1a33517f63495c.answer.07",
+      "p2-a25edddffc1a33517f63495c.answer.08",
+      "p2-a25edddffc1a33517f63495c.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-26f486ed35480204ffade4bd",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.00",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whatever fruit is at its peak right now)**\n\nPeak-season produce turns an ordinary shopping trip into something memorable. It's the one item that reliably delivers a burst of flavor, smells incredible at the store, and encourages you to try something new. Pick the ripest, most fragrant ones you can find, and eat one on the way home."
+    },
+    {
+      "id": "response-4ad77e1fec2a1e01eb9833fe",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.01",
+      "status": "ok",
+      "text": "**Fresh, in-season produce you've never cooked with before**, like a rare fruit, an heirloom vegetable, or a specialty mushroom.\n\nIt turns an ordinary errand into a small adventure. You get to explore the store, ask questions, and discover new flavors. It also gives you a reason to try a new recipe afterward, which makes the whole experience stick in your memory."
+    },
+    {
+      "id": "response-e73d63fc7230f778a82bc293",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.02",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whichever fruit is at its seasonal peak).**\n\nHere's why this works for a memorable shopping experience:\n\n- **Sensory payoff:** Ripe, fragrant fruit makes the produce aisle feel like a discovery rather than a chore.\n- **Instant reward:** You can taste the difference the same day, which makes the trip feel worthwhile.\n- **Flexibility:** It invites you to browse, smell, and pick the best-looking ones, turning a routine errand into a small ritual.\n- **Easy to elevate:** Pair it with good cream, dark chocolate, or fresh basil for a simple, memorable treat at home.\n\nIf you'd rather go beyond produce, a close runner-up is a **local specialty item**, such as artisanal cheese or fresh bread from a nearby bakery, which adds a sense of place to the trip."
+    },
+    {
+      "id": "response-14c6963812d172ac6f12b988",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.03",
+      "status": "ok",
+      "text": "Fresh, in-season **strawberries** (or whatever fruit is at peak ripeness at your local market).\n\nWhy it works for a memorable shopping experience:\n\n- **It engages your senses.** You can smell ripeness, see the color, and often sample before you buy.\n- **It pushes you to browse differently.** Hunting for the best-looking batch gets you talking to produce staff or farmers and noticing what's actually in season.\n- **It pays off at home.** Peak-season fruit tastes noticeably better than off-season, so the experience carries into eating it.\n\nIf you prefer something savory, a wedge of a cheese you've never tried, picked with help from the cheesemonger, gives a similar discovery-driven result."
+    },
+    {
+      "id": "response-a8c3e2a3e71a0246d0578feb",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.04",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whatever fruit is at peak ripeness).**\n\nWhy it works: Peak-season produce delivers a big sensory payoff, with its aroma, color, and flavor, for very little cost or effort. Picking something truly ripe turns a routine shopping trip into a small moment of discovery, and it can be eaten on its own or used in a dessert, salad, or breakfast.\n\nTip: Smell the fruit at the stem end. A strong, sweet fragrance signals ripeness and flavor."
+    },
+    {
+      "id": "response-3cb833c9998492f4c8b26ffd",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.05",
+      "status": "ok",
+      "text": "**Fresh, in-season fruit from a local farmers' market**, such as ripe peaches in summer or crisp apples in fall.\n\nWhy it stands out:\n- **Sensory payoff:** Truly ripe fruit has a smell, texture, and sweetness that supermarket produce rarely matches.\n- **Discovery:** Sampling and talking with growers often turns up varieties you've never tried.\n- **Versatility:** It works as a snack, in a dessert, or on a cheese board, so the experience extends beyond the shopping trip.\n\nIf you want a pantry option instead, a bottle of high-quality extra virgin olive oil is a close second."
+    },
+    {
+      "id": "response-57aea791717f457a77f09cce",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.06",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whatever fruit is at its peak right now).**\n\nPeak-season produce is the easiest way to turn an ordinary grocery run into something memorable. A perfectly ripe strawberry, peach, or mango delivers flavor that's far beyond the supermarket default, and it takes no cooking to enjoy. Pick them by smell and color: they should be fragrant and fully ripe, not pale or hard.\n\nBonus tip: pair them with a good ingredient you don't usually buy, like quality aged balsamic, fresh cream, or a really good dark chocolate, to make the whole trip feel like a small treat."
+    },
+    {
+      "id": "response-ec59f74e38f46d3fac7f33ca",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.07",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whatever fruit is at its seasonal peak).**\n\nHere's why it tops the list: peak-season produce delivers a flavor payoff that's far beyond what you'd expect from a simple grocery item. A perfectly ripe strawberry smells incredible in the aisle, tastes vibrant at home, and turns an ordinary snack, dessert, or breakfast into something special. It's also inexpensive, so the experience feels like an affordable treat rather than a splurge.\n\n**Tip:** Pick them by smell and color. Look for fully red berries with bright green caps and a sweet fragrance, and skip any with white shoulders or moisture pooling in the container."
+    },
+    {
+      "id": "response-10d0b7f31d4568b9a532e6f2",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.08",
+      "status": "ok",
+      "text": "**Fresh, in-season produce you've never tried before**, such as a blood orange, a pomelo, or a rainbow heirloom tomato.\n\nPicking up something unfamiliar turns a routine errand into a small discovery. It encourages you to explore the store, ask questions, and experiment with a new recipe at home, and the vivid colors, scents, and flavors make the whole trip more memorable than restocking staples."
+    },
+    {
+      "id": "response-468ab49a59208b12b617b369",
+      "request_id": "p2-a25edddffc1a33517f63495c.answer.09",
+      "status": "ok",
+      "text": "**Fresh, in-season strawberries (or whichever fruit is peak-ripe at the moment).**\n\nWhy this is my top pick:\n\n- **Sensory payoff:** A truly ripe piece of fruit, with its aroma, color, and sweetness, makes an ordinary trip feel special.\n- **Built-in discovery:** Choosing the best one means smelling, inspecting, and sometimes chatting with a produce worker or farmer, which turns a chore into an experience.\n- **Instant reward:** You can eat it right away, so the memory forms the same day.\n\n**Tip:** Shop at a farmers market if you can, and ask the seller what's best that day. Let that answer override your list."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-055c45e37c6c14cca664",
+    "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-17"
+    }
+  }
+}

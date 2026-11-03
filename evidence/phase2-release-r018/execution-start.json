@@ -1,0 +1,11 @@
+{
+  "kind": "p2r-execution-start",
+  "specification": "0.18",
+  "authorization": "User goal: complete P2-R",
+  "source_commit": "e3a02c8272976f4f24b13109b4805359a104d574",
+  "started_at_utc": "2026-10-27T06:32:04Z",
+  "provider_requests_authorized": 0,
+  "real_credential_access_authorized": false,
+  "api_spend_ceiling_micro_usd": 0,
+  "original_folder_accessed": false
+}

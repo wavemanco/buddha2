@@ -1,0 +1,78 @@
+{
+  "AM1_implementation_performed": false,
+  "additional_document_review": {
+    "CURRENT_SPEC.md": "current navigation/status lines1-20 only; historical sections not requalified",
+    "checkpoint_report": "full document",
+    "composite_33_of_35_case_evidence_limit_accurate": true,
+    "historical_RP1_portability_not_requalified": true,
+    "new_cold_dependency_inventory_not_misrepresented_as_portability_proof": true,
+    "no_full_gate_or_keys_or_calls_accurate": true,
+    "nonacceptance_status_accurate": true,
+    "pending_S14_execution_and_actual_agent_rehearsal_explicit": true,
+    "proposed_AM1_unapproved_and_unapplied_accurate": true
+  },
+  "amendment_is_narrow_and_faithful": true,
+  "amendment_is_necessary": true,
+  "blocking_scope_findings": [],
+  "checker_or_replay_executed": false,
+  "checkpoint_integrity": {
+    "AM1_definition_inside_prior_checkpoint_zip": false,
+    "all_member_SHA256_and_CRC_verified": true,
+    "archive_bytes": 182479,
+    "archive_sha256": "4b9ebf14a3ddcead37b90156c1028a4e6b9e743e85559717fe47e09e579b6e3d",
+    "candidate_code_count": 48,
+    "candidate_code_hashes_match_current_bytes": true,
+    "complete_kit_or_cold_replay_acceptance": false,
+    "manifest_sha256": "3c90acb7edfcb6288cde739fb6745f375b41b121c788e0996d2e058037dd80c6",
+    "member_count": 109,
+    "release_accepted": false,
+    "unique_relative_public_nonsymlink_members": true
+  },
+  "input_file_sha256": {
+    "CURRENT_SPEC.md": "13cbbdeeda2ad6e719a831c7792bee28fd1a91019a69c38b23e987eff5df4c9b",
+    "P3A_RP2_OFFLINE_CHECKPOINT_REPORT.md": "2f8bf1142554a672981db70b9fc9081fcbefb16583fd099554bcb8b47a030e3e",
+    "PHASE3A_RP2_AM1_DEFINITION.md": "f85323d63b04a2a4409766007041e0dfd8ce98bd795b762333ab762220b5b6f8",
+    "PHASE3A_RP2_RECOVERY_DEFINITION.md": "65be2f2dbb592ec625823bebdd8786640f49b1f8bc07c38bb58e1caec68d77cd",
+    "evidence/phase3a-readiness-recovery-v1/offline-checkpoint-v1.manifest.json": "3c90acb7edfcb6288cde739fb6745f375b41b121c788e0996d2e058037dd80c6",
+    "evidence/phase3a-readiness-recovery-v1/offline-checkpoint-v1.zip": "4b9ebf14a3ddcead37b90156c1028a4e6b9e743e85559717fe47e09e579b6e3d",
+    "runs/phase3a-readiness-recovery-v1/reviewer/hi-positive-candidate-review-v1.json": "40771c74b8a6f9e5c948325801b26fba5490c6da00403be889a64cb07c99c91c",
+    "runs/phase3a-readiness-recovery-v1/reviewer/readiness-change-required-v1.json": "18ce1715b6bea08d57e972c501e59bb1a1b26034bbe2aa027e74c62876a1ff55",
+    "runs/phase3a-readiness-recovery-v1/reviewer/saved-agg-required-view-diagnostic-v1.json": "ecb6931c8355e3ad1560553708213304d39e9601aa930fc279d89bee953cbc61"
+  },
+  "keys_requested_or_read": false,
+  "kind": "phase3a-rp2-am1-independent-scope-and-checkpoint-review-v1",
+  "necessary_reason": "Approved definition sections3A/5 require the saved RP1 case to pass every remaining strict readiness predicate; authenticated AGG history omitted eight mandatory DOM answer views, so that expectation cannot pass without an explicit versioned acceptance-data amendment.",
+  "notes": [
+    "Commit the proposed AM1 definition separately; the earlier checkpoint ZIP accurately does not claim to contain it.",
+    "Fresh HI qualification could expose a genuine defect; the amendment requires change-required rather than silent case replacement or relaxation."
+  ],
+  "original_folder_accessed": false,
+  "prior_scope_review": {
+    "left_unchanged": true,
+    "path": "runs/phase3a-readiness-recovery-v1/reviewer/rp2-am1-scope-review-v1.json",
+    "sha256": "a7f7d610b0098935418639070a085dcd01bd4c3ea305a58f4df0fe7331924a86"
+  },
+  "product_source_edits": 0,
+  "provider_calls": 0,
+  "retained_requirements": [
+    "RP1 remains negative and unscored; original failure reproducible",
+    "all mandatory views/content/caller ownership/timing/history remain required",
+    "exact original-strategy route does not supply missing DOM answer views",
+    "only named HI76-request prefix can be qualified as real positive",
+    "HI candidate must pass current invariants; historical pass not substituted",
+    "full fresh SDK mock must cover actual strategy edits and raw rereads",
+    "old case inventory/authority/outcomes preserved with a versioned supplement",
+    "remaining full kit/rehearsal/independent source and packet acceptance precede keys",
+    "only one previously approved conditional RP2 paid pilot/reviews/Inspect/closure"
+  ],
+  "review_scope": "Proposed AM1 against original definition and retained named evidence; full checkpoint report and CURRENT_SPEC current status; named unaccepted ZIP SHA/CRC/inventory plus candidate-code hash integrity. No checker/replay, source implementation, user approval or release acceptance.",
+  "source_or_packet_release_accepted": false,
+  "unchanged_caps": {
+    "fresh_micro_usd": 190000000,
+    "max_cumulative_attempts": 2091,
+    "max_cumulative_micro_usd": 242754161,
+    "new_attempts": 775
+  },
+  "user_approval_granted_by_this_review": false,
+  "whole_gate_accepted": false
+}

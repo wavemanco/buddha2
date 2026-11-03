@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "4b9ebf14a3ddcead37b90156c1028a4e6b9e743e85559717fe47e09e579b6e3d",
+  "candidate_code_current_hashes_equal": true,
+  "candidate_code_files": 48,
+  "created_utc": "2026-11-01T08:33:18.968779+00:00",
+  "exact_member_inventory": true,
+  "full_kit_or_cold_replay_acceptance": false,
+  "kind": "phase3a-rp2-unaccepted-offline-checkpoint-validation-v1",
+  "manifest_sha256": "3c90acb7edfcb6288cde739fb6745f375b41b121c788e0996d2e058037dd80c6",
+  "member_count": 109,
+  "member_hashes_and_current_bytes_equal": true,
+  "passed": true,
+  "private_stream_link_paths_excluded": true,
+  "provider_calls": 0,
+  "release_accepted": false,
+  "zip_crc_passed": true
+}

@@ -1,0 +1,289 @@
+{
+  "assessment": {
+    "attempts": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "reserved_input_tokens": 0,
+    "reserved_micro_usd": 0,
+    "reserved_output_tokens": 0,
+    "spent_micro_usd": 0
+  },
+  "assessment_stopped": false,
+  "attempts": 91,
+  "cells": {
+    "p3a-01:adaptive": {
+      "attempts": 18,
+      "input_tokens": 62007,
+      "output_tokens": 12461,
+      "reserved_input_tokens": 1000000,
+      "reserved_micro_usd": 11440000,
+      "reserved_output_tokens": 16000,
+      "spent_micro_usd": 273795
+    },
+    "p3a-01:fixed": {
+      "attempts": 73,
+      "input_tokens": 135051,
+      "output_tokens": 64517,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 1128065
+    },
+    "p3a-02:adaptive": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    },
+    "p3a-02:fixed": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    },
+    "p3a-03:adaptive": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    },
+    "p3a-03:fixed": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    },
+    "p3a-04:adaptive": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    },
+    "p3a-04:fixed": {
+      "attempts": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reserved_input_tokens": 0,
+      "reserved_micro_usd": 0,
+      "reserved_output_tokens": 0,
+      "spent_micro_usd": 0
+    }
+  },
+  "checkpoint_stopped": false,
+  "engineering_review": null,
+  "first_assessment": {
+    "attempts": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "reserved_input_tokens": 0,
+    "reserved_micro_usd": 0,
+    "reserved_output_tokens": 0,
+    "spent_micro_usd": 0
+  },
+  "first_assessments_closed": false,
+  "first_pair": {
+    "attempts": 91,
+    "input_tokens": 197058,
+    "output_tokens": 76978,
+    "reserved_input_tokens": 1000000,
+    "reserved_micro_usd": 11440000,
+    "reserved_output_tokens": 16000,
+    "spent_micro_usd": 1401860
+  },
+  "fixture": false,
+  "input_tokens": 197058,
+  "output_tokens": 76978,
+  "provider_calls": 91,
+  "reserved_input_tokens": 1000000,
+  "reserved_micro_usd": 11440000,
+  "reserved_output_tokens": 16000,
+  "resource_report": {
+    "assessment_allowance_micro_usd": 58700000,
+    "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+    "cumulative_real_phase3a_provider_calls": 177,
+    "cumulative_real_phase3a_spent_micro_usd": 2695297,
+    "current_study_cap_micro_usd": 218700000,
+    "fixture": false,
+    "inference_allowance_micro_usd_per_cell": 20000000,
+    "inference_allowance_utilization": {
+      "p3a-01:adaptive": {
+        "http_fraction": 0.1875,
+        "input_fraction": 0.01550175,
+        "output_fraction": 0.015844980875651043,
+        "spent_fraction": 0.01368975
+      },
+      "p3a-01:fixed": {
+        "http_fraction": 0.7604166666666666,
+        "input_fraction": 0.03376275,
+        "output_fraction": 0.08203760782877605,
+        "spent_fraction": 0.05640325
+      },
+      "p3a-02:adaptive": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      },
+      "p3a-02:fixed": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      },
+      "p3a-03:adaptive": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      },
+      "p3a-03:fixed": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      },
+      "p3a-04:adaptive": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      },
+      "p3a-04:fixed": {
+        "http_fraction": 0.0,
+        "input_fraction": 0.0,
+        "output_fraction": 0.0,
+        "spent_fraction": 0.0
+      }
+    },
+    "original_phase3a_cap_micro_usd": 220000000,
+    "prior_real_phase3a_provider_calls": 86,
+    "prior_real_phase3a_spent_micro_usd": 1293437,
+    "profiles": [
+      {
+        "attempts": 7,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "effort": "low",
+        "known": 7,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_tokens": 6835,
+        "reasoning_usage_reported_calls": 7,
+        "reported_reasoning_tokens": 0,
+        "reserved_micro_usd": 0,
+        "role": "plan",
+        "spent_micro_usd": 71010,
+        "thinking": {
+          "type": "adaptive"
+        },
+        "uncached_input_tokens": 1330,
+        "unknown": 0
+      },
+      {
+        "attempts": 1,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "effort": "high",
+        "known": 1,
+        "max_tokens": 16000,
+        "model": "claude-opus-5",
+        "output_tokens": 18,
+        "reasoning_usage_reported_calls": 1,
+        "reported_reasoning_tokens": 0,
+        "reserved_micro_usd": 0,
+        "role": "fixed_selector",
+        "spent_micro_usd": 334389,
+        "thinking": {
+          "type": "adaptive"
+        },
+        "uncached_input_tokens": 60708,
+        "unknown": 0
+      },
+      {
+        "attempts": 7,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "effort": "low",
+        "known": 7,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_tokens": 1387,
+        "reasoning_usage_reported_calls": 7,
+        "reported_reasoning_tokens": 0,
+        "reserved_micro_usd": 0,
+        "role": "rank",
+        "spent_micro_usd": 162088,
+        "thinking": {
+          "type": "adaptive"
+        },
+        "uncached_input_tokens": 74109,
+        "unknown": 0
+      },
+      {
+        "attempts": 6,
+        "cache_creation_input_tokens": 12031,
+        "cache_read_input_tokens": 36995,
+        "effort": "high",
+        "known": 5,
+        "max_tokens": 16000,
+        "model": "claude-opus-5",
+        "output_tokens": 1150,
+        "reasoning_usage_reported_calls": 5,
+        "reported_reasoning_tokens": 201,
+        "reserved_micro_usd": 11440000,
+        "role": "editor",
+        "spent_micro_usd": 134743,
+        "thinking": {
+          "type": "adaptive"
+        },
+        "uncached_input_tokens": 10,
+        "unknown": 1
+      },
+      {
+        "attempts": 70,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "effort": "low",
+        "known": 70,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_tokens": 67588,
+        "reasoning_usage_reported_calls": 70,
+        "reported_reasoning_tokens": 0,
+        "reserved_micro_usd": 0,
+        "role": "answer",
+        "spent_micro_usd": 699630,
+        "thinking": {
+          "type": "adaptive"
+        },
+        "uncached_input_tokens": 11875,
+        "unknown": 0
+      }
+    ],
+    "study_sha256": "44d12d6ff196a9481bd6106541ad62d8161fff50fa7a1fd6eef899df4f627012",
+    "thinking_usage_note": "Reported reasoning is a subset of output, not an extra charge. Unreported thinking is not inferred as zero.",
+    "wall_time_basis": "Retain actual host launch/runtime records separately; not measured by the request journal.",
+    "wall_time_seconds": null
+  },
+  "retries": 0,
+  "run_id": "a10952dd459cdf70743f77c0c8d758f534801e0fdbb37d9fb357db486736a04e",
+  "spent_micro_usd": 1401860,
+  "status": "blocked-unknown",
+  "stopped_cells": [],
+  "study_sha256": "44d12d6ff196a9481bd6106541ad62d8161fff50fa7a1fd6eef899df4f627012"
+}

@@ -1,0 +1,81 @@
+{
+  "counts": {
+    "Metaphors": {
+      "construct_rows": 978,
+      "eligible_context_groups": 46,
+      "eligible_prompt_groups": 46,
+      "exposed_prompt_groups": 1,
+      "required_prompt_groups": 24,
+      "shortfall": 0
+    }
+  },
+  "files": {
+    "labels.audit.json": {
+      "access": "separate-human-labels",
+      "sha256": "870a6cb43268b0ed9cfc1288957ce6bb1e254f782845b516d60c73b8b4ae6375"
+    },
+    "labels.calibration.json": {
+      "access": "separate-human-labels",
+      "sha256": "3b3d30c9bdfde4d5a52899cae55a16d071b9f1fb2f028e4d19ec1920f8540b10"
+    },
+    "pairs.json": {
+      "access": "critic-input",
+      "sha256": "3137768e71936f75b091064b88d2068484c2bfd5d247ff8ee900c40c85bfa908"
+    },
+    "selection.private.json": {
+      "access": "private-preparation",
+      "sha256": "c169099b550ecd8ef8a9a2402b73d40b9f0bf18400763cd39535d5f0e77f086a"
+    },
+    "worklists.json": {
+      "access": "critic-input",
+      "sha256": "ba82f50d7964318b63a1bbdc891cc6fc39e525a12536632f07f75c70d45e536e"
+    }
+  },
+  "kind": "muce-preparation",
+  "label_access": "Preparation read source ratings to construct eligible pairs; audit labels are separate and must not be mounted into critic execution.",
+  "limitations": [
+    "Public data; model-pretraining contamination cannot be excluded.",
+    "Scale semantics follow the paper; individual rater scores are unavailable.",
+    "Source IDs repeat; complete source context and content are retained privately."
+  ],
+  "model_requests": 0,
+  "policy": {
+    "aliases": {},
+    "configuration": "full_agreement",
+    "construct": "creativity",
+    "dataset": "CNCL-Penn-State/MuCE",
+    "effective_prompt": "FullPrompt-or-Prompt",
+    "exposure_patterns": {
+      "Metaphors": [
+        "the hot tea is",
+        "stomata are tiny"
+      ]
+    },
+    "families": {
+      "Metaphors": {
+        "audit": 12,
+        "calibration": 12
+      }
+    },
+    "min_margin": 5,
+    "population_authorization": "user-selected-metaphors-overall-creativity-24",
+    "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "schema_version": 1,
+    "seed": 20261024,
+    "selection_revision": "phase1-muce-v1",
+    "split": "train"
+  },
+  "policy_sha256": "f6b375a8104c5ecaf07d8511b415d137d67663d09caea3fef3fcaeef2e909d98",
+  "schema_version": 1,
+  "selected_pairs": 24,
+  "source": {
+    "configuration": "full_agreement",
+    "dataset": "CNCL-Penn-State/MuCE",
+    "jsonl_sha256": "45c90e6a49b59b2cb6d5a48fb7818dac5cbfea2f6cb9c81b3dad9a85f91b0bde",
+    "parquet_sha256": "701ea8d6c0eeb20625d2809a96b5b377e2be22f28f0a22d1dfcafa820aa173ec",
+    "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "rows": 16948,
+    "split": "train"
+  },
+  "status": "prepared"
+}

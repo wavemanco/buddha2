@@ -1,0 +1,86 @@
+{
+  "container_id": "134ceff3bf96259058ed16268c66ddaf7a5cd022d0ccdc9dc0a347394efdcb74",
+  "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "image_os": "linux",
+  "image_architecture": "amd64",
+  "network_mode": "none",
+  "read_only_rootfs": true,
+  "privileged": false,
+  "publish_all_ports": false,
+  "cap_drop": [
+    "ALL"
+  ],
+  "security_opt": [
+    "no-new-privileges"
+  ],
+  "pids_limit": 256,
+  "memory": 4294967296,
+  "nano_cpus": 2000000000,
+  "tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=536870912"
+  },
+  "log_driver": "none",
+  "working_dir": "/workspace",
+  "entrypoint": [
+    "python"
+  ],
+  "open_stdin": false,
+  "tty": false,
+  "command": [
+    "-B",
+    "-m",
+    "buddha2.phase2_release_launch",
+    "check",
+    "--study",
+    "/results/phase2-release-r018/release/study.json",
+    "--grant",
+    "/results/phase2-release-r018/grants/live-expansion-001/grant.json",
+    "--stage",
+    "expansion",
+    "--mode",
+    "preflight",
+    "--record",
+    "/results/phase2-release-r018/launcher/60412a6e12684dc1b6a28eff58442354.preflight.json"
+  ],
+  "state_at_inspection": "created",
+  "port_bindings": {},
+  "environment_names": [
+    "BUDDHA2_IMAGE_ID",
+    "BUDDHA2_NB_UPSTREAM",
+    "BUDDHA2_OFFLINE",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_RELEASE_LAUNCH_MODE",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "GPG_KEY",
+    "HARNESS2_ROOT",
+    "HF_DATASETS_OFFLINE",
+    "HF_HUB_OFFLINE",
+    "LANG",
+    "NOVELTYBENCH_ROOT",
+    "OMP_NUM_THREADS",
+    "PATH",
+    "PYTHON_SHA256",
+    "PYTHON_VERSION",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "PYTHONPATH",
+    "PYTHONUNBUFFERED",
+    "TMPDIR",
+    "TOKENIZERS_PARALLELISM",
+    "TRANSFORMERS_OFFLINE"
+  ],
+  "mounts": [
+    {
+      "destination": "/workspace",
+      "rw": false,
+      "type": "bind",
+      "source": "C:\\Users\\arvik\\code\\research\\Buddha2"
+    },
+    {
+      "destination": "/results",
+      "rw": true,
+      "type": "bind",
+      "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs"
+    }
+  ]
+}

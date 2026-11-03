@@ -1,0 +1,25 @@
+{
+  "kind": "phase2-preservation-preclose",
+  "tracked_baseline_files": 264,
+  "changed_baseline_files": [
+    "src/buddha2/__main__.py"
+  ],
+  "unexpected_changes": [],
+  "old_source_and_run_files_checked": 250,
+  "old_source_and_run_mismatches": [],
+  "upstream": {
+    "harness2": {
+      "tracked_files": 114,
+      "mismatches": [],
+      "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+      "pin_matches": true
+    },
+    "novelty-bench": {
+      "tracked_files": 169,
+      "mismatches": [],
+      "commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "pin_matches": true
+    }
+  },
+  "original_folder_accessed": false
+}

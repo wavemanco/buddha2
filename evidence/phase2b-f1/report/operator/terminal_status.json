@@ -1,0 +1,16 @@
+{
+  "kind": "p2bf1-terminal-observation-v1",
+  "observed_at_utc": "2026-10-28T10:18:27Z",
+  "source": "saved sanitized host result; matching live container no longer running",
+  "host_result_path": "runs/phase2-release-r018/launcher/093de703a38b4ebeb35f8fc850e5a4df.result.json",
+  "host_result_sha256": "b0580f557a3bfbac67dcda94a66688f8c5c060ab6eaa6317434f8e8bb6991182",
+  "container_id": "a44a09db36595e278e043d9d9a9f4e9db761fc043524cc4b83b56007778b1293",
+  "state": "exited",
+  "exit_code": 0,
+  "actual_credentials_supplied": true,
+  "stdout_bytes": 1094,
+  "stderr_bytes": 0,
+  "stream_content_retained": false,
+  "credential_material_included": false,
+  "new_provider_calls": 0
+}

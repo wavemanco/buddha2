@@ -1,0 +1,14 @@
+{
+  "candidate_inventory_scope": "Metadata only; no independent human validation or reward-training separation implied",
+  "inspection_low_stratum_candidate_groups": 2,
+  "inspection_low_stratum_unfilled": 4,
+  "inspection_packet_count": 8,
+  "metaphors_creativity_rows_by_source": {
+    "DiStefano2024crj_Meta": 647,
+    "MersealDissertation": 331
+  },
+  "metaphors_gap5_groups_after_known_example_exclusion": 46,
+  "metaphors_gap5_min20_groups_after_known_example_exclusion": 40,
+  "remaining_metaphors_candidates_under_both_policies": 22,
+  "schema_version": 1
+}

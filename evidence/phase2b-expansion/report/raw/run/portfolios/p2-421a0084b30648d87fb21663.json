@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-cf8d83d06b2c331a692439f2e75d2725210fcd9b120d8428bf4253ab733f34f7",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "555c5ec4862bf9f61a9922a310de3b6c244b2dd41f07e5362daca2324a3b4673",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 1,
+    "request_ids": [
+      "p2-4d7fadf13219ec60dfd33e26.plan",
+      "p2-4d7fadf13219ec60dfd33e26.answer.00",
+      "p2-4d7fadf13219ec60dfd33e26.answer.01",
+      "p2-4d7fadf13219ec60dfd33e26.answer.02",
+      "p2-4d7fadf13219ec60dfd33e26.answer.03",
+      "p2-4d7fadf13219ec60dfd33e26.answer.04",
+      "p2-4d7fadf13219ec60dfd33e26.answer.05",
+      "p2-4d7fadf13219ec60dfd33e26.answer.06",
+      "p2-4d7fadf13219ec60dfd33e26.answer.07",
+      "p2-4d7fadf13219ec60dfd33e26.answer.08",
+      "p2-4d7fadf13219ec60dfd33e26.answer.09",
+      "p2-421a0084b30648d87fb21663.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f74b530b444b1604e494cca2",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.00",
+      "status": "ok",
+      "text": "**To Kill a Mockingbird** by Harper Lee. It's widely praised for its humane, clear-eyed look at racial injustice and moral courage in the American South, told through the memorable voice of young Scout Finch."
+    },
+    {
+      "id": "response-8ff6ea3da81bf01eb980bc1c",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.01",
+      "status": "ok",
+      "text": "**Pride and Prejudice** by Jane Austen (1813) is a well-received classic that regularly appears on best-of lists, including the BBC's \"Big Read\" and many \"greatest novels\" rankings."
+    },
+    {
+      "id": "response-45f3af7ad37608ce9bedabec",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.02",
+      "status": "ok",
+      "text": "**1984** by George Orwell is a well-received novel that regularly appears on top book lists. Critics and readers rank it highly for its chilling portrayal of totalitarian control, surveillance, and propaganda. It also introduced enduring concepts like \"Big Brother,\" \"doublethink,\" and \"Newspeak\" into everyday language, and it remains relevant to discussions about truth and power."
+    },
+    {
+      "id": "response-f8101511e54ceaa9892a4337",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.04",
+      "status": "ok",
+      "text": "**The Lord of the Rings** by J.R.R. Tolkien is a well-received book that appears often on top book lists. It regularly ranks highly in reader-voted polls, including the BBC's \"The Big Read\" (where it placed first in 2003) and Goodreads' lists of best fantasy and best books of all time."
+    },
+    {
+      "id": "response-f2341bb4e16bddcb550ce65b",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.03",
+      "status": "ok",
+      "text": "**One Hundred Years of Solitude** by Gabriel García Márquez is a well-received book that often appears on top book lists. He wrote it in Spanish, and it was first published in 1967. It is a landmark of magical realism and tells the multigenerational story of the Buendía family in the fictional town of Macondo. It regularly appears on global \"best of\" lists, including those of the 20th century's most important novels, and it helped bring Latin American literature to a worldwide readership. Gregory Rabassa's English translation is widely praised."
+    },
+    {
+      "id": "response-aca934dd5cd7686798603581",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.08",
+      "status": "ok",
+      "text": "**War and Peace** by Leo Tolstoy (1869) is a well-received book that often appears on top book lists.\n\nIt regularly ranks high on lists of the greatest novels ever written, including those compiled by critics, scholars, and writers. Examples include the Norwegian Book Clubs' \"Top 100 Books of All Time\" and various \"greatest novels\" polls. It is also a staple of university literature courses and remains popular with general readers. It is admired for its sweeping portrait of Russian society during the Napoleonic Wars and its deep psychological insight into its characters."
+    },
+    {
+      "id": "response-025b6924d4934b83a074f081",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.07",
+      "status": "ok",
+      "text": "**The Little Prince** by Antoine de Saint-Exupéry is a well-received book that often appears on top book lists. Though it is framed as a children's story, it has been celebrated across generations for its poetic reflections on love, loss, and human nature. It is one of the best-selling and most translated books ever published."
+    },
+    {
+      "id": "response-04c3e7de5ea922aa3dfcbb0a",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.05",
+      "status": "ok",
+      "text": "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears in top book lists. It won the Pulitzer Prize for Fiction in 1961 and is frequently included because of its compelling portrayal of racial injustice and moral growth in the American South, told through the eyes of a young narrator, Scout Finch."
+    },
+    {
+      "id": "response-57ee2df793081b2144850807",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.09",
+      "status": "ok",
+      "text": "**To Kill a Mockingbird** by Harper Lee is a well-received book that appears often on both reader and critic top lists."
+    },
+    {
+      "id": "response-d4cde5194be670349d3d3732",
+      "request_id": "p2-4d7fadf13219ec60dfd33e26.answer.06",
+      "status": "ok",
+      "text": "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists.\n\nThe planning note suggests a nonfiction title, but your request only asked for one well-received book. If you'd prefer nonfiction, *The Diary of a Young Girl* by Anne Frank is a good example. It is widely praised for its honest, personal account of life in hiding during the Holocaust."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-7a77e85421d12bca8653",
+    "prompt": "Name one well received book that often appears in top book lists.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-80"
+    }
+  }
+}

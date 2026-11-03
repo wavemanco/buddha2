@@ -1,0 +1,11 @@
+{
+  "label": "inv1.a1",
+  "ok": false,
+  "channel": "opencode",
+  "model": "anthropic/claude-opus-5",
+  "effort": "high",
+  "attempts": 1,
+  "wall_s": 7.8,
+  "cost_usd": 0.0,
+  "error": "rc=0: Phase3A boundary stopped this conversation"
+}

@@ -1,0 +1,107 @@
+{
+  "definition": {
+    "path": "PHASE2B_RANK_FORMAT_DEFINITION.md",
+    "sha256": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517"
+  },
+  "fixes_verified": [
+    "Ordinary CLI now reuses the existing offline network/interface guard.",
+    "Readiness requires one explicit bound passed-evidence record per each of six groups; rehashed unrelated content rejects.",
+    "A source/authority change during key-entry pause rejects before credential binding or SDK construction.",
+    "Parent native generations.jsonl and identities.json now verify their fixed manifest byte hashes before semantic reuse.",
+    "Canonical parent run paths use RESULTS rather than the read-only workspace/runs alias.",
+    "Preparation and assessment comparisons require exact canonical bytes, rejecting numeric/representation aliases.",
+    "Every saved partial request is validated against the derived native request before earlier missing work can dispatch.",
+    "Fixture real selected_method and selected_procedure_sha256 remain null; synthetic fields carry fixture decisions."
+  ],
+  "kind": "p2bn-independent-source-and-boundary-review-v1",
+  "remaining_limitations": [
+    "Actual complete host fixture/mock/resume/config lifecycle and measured preflight handshake timing remain pending; this record is not the final offline gate.",
+    "No live provider access, billing invoice, current account profile or new scientific effectiveness is established by source/mock review.",
+    "N1 is a consumed-corpus post-hoc development policy, not prospective format reliability, held-out validation or recursive improvement.",
+    "Actual image/inspection checks trust the cooperative host and Docker administration; no malicious-host attestation or OS provider-domain egress firewall is claimed.",
+    "Forced host/process death can bypass finally; preserved intent and inspected handles require reconciliation without automatic retry."
+  ],
+  "requirements_verdicts": {
+    "N1_policy": "pass-source-review: bounded UTF-8/object/depth scanning, decoded duplicate-key rejection, exact parent IDs, every-object agreement and explicit rejection diagnostics; no score input",
+    "consumed_corpus_and_reuse": "pass-source-review: exactly 24 dispositions, 20 unchanged original C objects, 68 original-object native replay proofs, four separately identified derived outputs; no new rank generation",
+    "cross_study_provenance": "pass-source-review: parent packet journal/portfolio/assessment/native file hashes, exact task/text/order/status/evaluator/settings compatibility, new study/source/policy identities and explicit derivation validator",
+    "decisions_and_reporting": "pass-source-review: 72-row post-hoc A/B/C-N view, twelve equally weighted paired prompt means, complete-coverage requirement, fixed cost tie break, synthetic-only fixture method/procedure fields, protocol.json settings/usage/provenance index and replay",
+    "narrow_scope_and_authority": "pass-source-review: only four group plus forty possible quality slots, new canonical AM-1 journal, $30 marginal authority, historical spending retained separately; no original journal allowance reset",
+    "native_and_accounting": "pass-source-review: existing NativeAssessment/Dispatcher/AM-1 profiles and controls; all partial request identities validated before new calls, durable intent, zero retries, unknown reservation halt, explicit malformed/refusal preservation",
+    "parent_preservation": "pass-current-hash-check: all 26 frozen parent package files and retained PowerShell launcher match; no original-project access or edits",
+    "readiness": "pass-source-review: provider preflight requires exact six check groups with true flags, hash-checked group records and exact study/source/policy identities; offline CLI enforces network-none runtime",
+    "runtime_and_credentials": "component-checks-pass: exact-SHA helper whitelist, actual inspection contract, source/grant-bound handshake, separate launch owner, bounded explicit stdin credentials and revalidation after key entry before binding/client; full host integration pending"
+  },
+  "review_actions": {
+    "ambient_environment_or_credential_binding_reads": 0,
+    "application_source_edits": 0,
+    "new_provider_calls": 0,
+    "only_write": "evidence/phase2b-rank-format-v1/independent-review.json",
+    "original_folder_access": false,
+    "real_credential_reads": 0,
+    "sdk_constructions_during_this_read_only_review": 0,
+    "whole_offline_gate_claimed_passed": false
+  },
+  "review_sha256": "bd9bd752402d229a8917e434ed80a5c793c2f39e2ecbe945f23075f42c6a9dce",
+  "reviewed_at_utc": "2026-10-28T17:05:12Z",
+  "reviewed_owned_files": {
+    "followups/rank_format_v1/cli.py": "fbedf3068cd4139a2a1c66189d3a55ccd2e057f96c16af261e4a6ab67e0439eb",
+    "followups/rank_format_v1/launch.py": "6ef81a687c54a54f162d7bf5fd44d05b0d55e37c1c72a1a432f281d77e3aeb5b",
+    "followups/rank_format_v1/normalizer.py": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+    "followups/rank_format_v1/support.py": "a89a89979f97aac0dfc35c27c616b812bd98721fe0a81ecd795ee51baa52381f",
+    "followups/rank_format_v1/tests/fixtures.json": "e4acded332abb48de58f92cdfaaa728027ae0d0e1dd0b0dca15ddadc97e91d2c",
+    "followups/rank_format_v1/tests/test_launcher.ps1": "3fa7445c2e7f701004cd3758a18e42bea78ebf68698777e93104f41eb9c77f53",
+    "followups/rank_format_v1/tests/test_launcher.py": "8b0accdb203b2ff5cbb7dcc32172d55a2a086d069f8c4b05d00debd1bb7e89c1",
+    "followups/rank_format_v1/tests/test_normalizer.py": "2fd18dd6ffa1a789fe3bf4e4486e6d54f917dfdfd571dfe062d1c2e1cacefdd3",
+    "followups/rank_format_v1/tests/test_support.py": "c78a274f39a9abe1b0a279f08de2cae3cbd42c708be2caa19973f07ac83d2699",
+    "followups/rank_format_v1/tests/test_workflow.py": "37bbfb1bb251065b2a80be01a6e44d09189bc58491e0d1a3324c6d087ca0b42c",
+    "followups/rank_format_v1/workflow.py": "ec0f444283746ff778b32bbfa6784405beffb026e3c7286b0df253248d74fc2b",
+    "rank-format.ps1": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76"
+  },
+  "reviewer": "/root/release_launcher",
+  "status": "source-and-component-review-pass-full-host-integration-pending",
+  "verification_evidence": {
+    "launcher_powershell": {
+      "checks": [
+        "parser",
+        "exact frozen helper hash",
+        "only 13 top-level function definitions; main excluded",
+        "unowned cleanup refusal",
+        "unsafe arguments before credential entry"
+      ],
+      "command": "pwsh -NoProfile -File followups/rank_format_v1/tests/test_launcher.ps1",
+      "full_fixture_host_test": "pending",
+      "status": "independently-ran-pass"
+    },
+    "launcher_python": {
+      "command": "python -B -m unittest discover -s followups/rank_format_v1/tests -p test_launcher.py -v",
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "includes_actual_pinned_sdk_mock_fake_stdin": true,
+      "includes_source_change_during_input_and_concurrent_owner": true,
+      "network": "none",
+      "status": "independently-ran-pass",
+      "tests": 8
+    },
+    "static": {
+      "bandit": "independently-ran-pass-before-guard-only-final-edit; narrow reviewed B108 declarative tmpfs annotation; root final scan pending",
+      "mypy": "independently-ran-pass-after-final-launcher-edit",
+      "ruff": "independently-ran-pass-after-final-launcher-edit"
+    },
+    "workflow_tests": {
+      "covers": [
+        "actual SDK 1/5/10 heads: 8/24/44 calls",
+        "zero-call settled resume and exact report replay",
+        "known malformed/refused outcomes",
+        "unknown usage and interrupted intent",
+        "budget reservation halt",
+        "concurrent owner",
+        "partial foreign-request rejection",
+        "canonical-byte aliases and derivation tampering",
+        "semantically equal native-export byte tampering",
+        "wrong grant and invalid cutoff"
+      ],
+      "source": "followups/rank_format_v1/tests/test_workflow.py",
+      "status": "root-reported-11-pass; current test implementations independently read, not rerun in this read-only review"
+    }
+  }
+}

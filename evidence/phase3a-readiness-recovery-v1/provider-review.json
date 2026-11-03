@@ -1,0 +1,260 @@
+{
+  "account_accesses": 0,
+  "api_spend_micro_usd": 0,
+  "control_source_files": [
+    {
+      "path": "src/buddha2/phase2_am1_controls.py",
+      "sha256": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346"
+    },
+    {
+      "path": "src/buddha2/phase2_dispatch.py",
+      "sha256": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593"
+    },
+    {
+      "path": "followups/phase3a_v1/accounting.py",
+      "sha256": "436438a6e7bddc79c668e6aa668238ddd228529f750451c445bc9af46e4fb2bd"
+    },
+    {
+      "path": "followups/phase3a_v1/transport.py",
+      "sha256": "921223c9b4ed55cbee93e5a76d7e60e87aa8ee3adb03995ed3ac727fa3d3108d"
+    },
+    {
+      "path": "followups/phase3a_rc1_pilot_v1/accounting.py",
+      "sha256": "748e4ca973c606a8d4a456f9ad9bc02c4b41f0c7fb603b11150c0202420bc5c4"
+    },
+    {
+      "path": "followups/phase3a_readiness_recovery_v1/accounting.py",
+      "sha256": "9667c80bac61c5abda86594d2f1339e436864ffa0bf99f714b25dab830d26e02"
+    },
+    {
+      "path": "followups/phase3a_readiness_recovery_v1/tests_accounting.py",
+      "sha256": "f07bcaa1a4ea3fbf5d7774a2b525ec48e1c938c12797634eccb2b6390ff4777d"
+    }
+  ],
+  "credentials_accessed": false,
+  "financial_migration": {
+    "cell_http": 96,
+    "cell_input": 4000000,
+    "cell_output": 786432,
+    "historical_attempts": 1316,
+    "historical_held_micro_usd": 22880000,
+    "historical_hold_release_authorized": false,
+    "historical_known_micro_usd": 29874161,
+    "historical_known_responses": 1314,
+    "historical_unknown_responses": 2,
+    "local_caps_micro_usd": {
+      "assessment_pool": 45860000,
+      "first_assessment": 23700000,
+      "first_checkpoint": 50860000,
+      "inference_cell": 20000000
+    },
+    "local_pools_do_not_add_authority": true,
+    "maximum_cumulative_attempts": 2091,
+    "maximum_cumulative_exposure_micro_usd": 242754161,
+    "maximum_new_attempts": 775,
+    "new_cap_micro_usd": 190000000,
+    "potential_slots": 967
+  },
+  "focused_implementation_validation": {
+    "path": "runs/phase3a-readiness-recovery-v1/financial-checks-v2/host-validation.json",
+    "scope": "ActualH1/networknone/ROsource:4purefinancial tests plus Ruff,mypy2files,Bandit allpassed. No SDK construction. v1Ruff importformat failure retained. v2actualterminal0/removed/absent; originalsummaryfalse from case-sensitive Dockerdiagnostic match explicitly explained in fresh host-validation without rerun.",
+    "sha256": "7254af2c0e286451fe41593dbd745805804ba2ca1d0a7749ba3eb37b3646afef"
+  },
+  "fresh_opened_official_pages": [
+    {
+      "bytes_retained": false,
+      "facts": "Exactclaude-sonnet-5-5;1M context/128K max output;2 input/10 output USD/M;adaptive supported.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Exactclaude-opus-5 remains available;1M context/128K max output;5 input/25 output USD/M;adaptive supported.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Sonnet5mwrite2.50/1hwrite4/read0.10;Opus5mwrite6.25/1hwrite10/read0.50 USD/M;USgeo1.1x;full1M standard pertoken rates for these models.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Exactmodels support low/high adaptive effort;thinking consumesmax_tokens;effort is guidance, not a promised cost.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Adaptive is accepted on both exact models; thinking is billed as output and shares max_tokens with response text.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "standard_only forces standard;exactSonnet5.5 andOpus5 excluded from Priority.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/api/service-tiers"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Uncached input, cache reads and cache writes all consume the documented context window.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Messages caching requires cache_control;ephemeral defaults5m;1h requires explicit TTL1h.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Exact Luna:1050000 context,128000 max output,0.20 input/0.02 cache read/1.20 output USD/M;input>272000 doubles input and multiplies output1.5;30m write1.25x;Chat supported;omitted effort defaults medium.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Public Standard/Fast Luna embedded price rows and 10-percent regional-processing allowance.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Omitted service_tier defaults to auto/project setting; usage exposes unadjusted cache_write_tokens and actual returned tier.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "GPT5.6+ default30m writes1.25x;12h2.5x is Responses-only;native Chat cannot enable12h.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "GPT5.6 and earlier responses return priority for Fast;omitted request tier may inherit project Fast;check actual returned tier.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Single-request context accounting includes input/output and reasoning; reserving the full context as input is conservative.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://developers.openai.com/api/docs/guides/conversation-state"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "ExactOpus5 andSonnet5.5 remain active in lifecycle table, with earliest retirementJuly24/September28,2027 respectively; no model upgrade.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Explicitglobal standard rates;omitted inference_geo follows workspace default and canUS;no workspace/account query made.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency"
+    },
+    {
+      "bytes_retained": false,
+      "facts": "Opus5 Fast requires speed:fast plus beta header. Frozen request controls omit/reject that opt-in; unknown usage.speed retains liability.",
+      "opened_at_review_utc": "2026-11-01T07:43:34.211558+00:00",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+    }
+  ],
+  "fresh_retained_source": {
+    "bytes": 23508,
+    "content_type": "text/markdown; charset=utf-8",
+    "file": "evidence/phase3a-readiness-recovery-v1/openai-pricing.md",
+    "file_sha256": "56e3da9bb29246cad60003e01f3fdc6b536149a09f5effe5e79af020a4922cfc",
+    "hash_basis": "Exact unauthenticated HTTP response bytes; no text transformation. Public docs only, explicit empty proxy handler, no account/token-count/credential/inference endpoint.",
+    "http_status": 200,
+    "luna_rows": [
+      {
+        "exact_markdown_row": "| gpt-5.6-luna | $0.20 | $1.20 | $0.02 | $0.25 | $0.50 | $0.40 | $1.80 | $0.04 | $0.50 | $1.00 |",
+        "header": "| Model | Short context input | Short context output | Short context cached input | Short context 30m write | Short context 12h write | Long context input | Long context output | Long context cached input | Long context 30m write | Long context 12h write |",
+        "section": "Standard"
+      },
+      {
+        "exact_markdown_row": "| gpt-5.6-luna | $0.10 | $0.60 | $0.01 | $0.125 | $0.25 | $0.20 | $0.90 | $0.02 | $0.25 | $0.50 |",
+        "header": "| Model | Short context input | Short context output | Short context cached input | Short context 30m write | Short context 12h write | Long context input | Long context output | Long context cached input | Long context 30m write | Long context 12h write |",
+        "section": "Batch"
+      },
+      {
+        "exact_markdown_row": "| gpt-5.6-luna | $0.10 | $0.60 | $0.01 | $0.125 | $0.25 | $0.20 | $0.90 | $0.02 | $0.25 | $0.50 |",
+        "header": "| Model | Short context input | Short context output | Short context cached input | Short context 30m write | Short context 12h write | Long context input | Long context output | Long context cached input | Long context 30m write | Long context 12h write |",
+        "section": "Flex"
+      },
+      {
+        "exact_markdown_row": "| gpt-5.6-luna | $0.40 | $2.40 | $0.04 | $0.50 | $1.00 | $0.80 | $3.60 | $0.08 | $1.00 | $2.00 |",
+        "header": "| Model | Short context input | Short context output | Short context cached input | Short context 30m write | Short context 12h write | Long context input | Long context output | Long context cached input | Long context 30m write | Long context 12h write |",
+        "section": "Fast"
+      }
+    ],
+    "retrieved_at_utc": "2026-11-01T07:38:37.568207+00:00",
+    "url": "https://developers.openai.com/api/docs/pricing.md"
+  },
+  "independent_decimal_arithmetic": {
+    "luna": "1.661880",
+    "opus": "11.440000",
+    "sonnet": "2.540960"
+  },
+  "kind": "phase3a-rp2-public-provider-review-v1",
+  "limitations": [
+    "Reservations are conservative pre-admission caps, not expected spend, guaranteed charges, invoice certification or provider-token estimates.",
+    "Public standard/Flex/Fast PAYG only;no private contracts,Scale/Ultrafast,resellers,paidservertools or unknown billing categories.",
+    "Pricing source notes Nov1 FedRAMP10percent;review doesnot authorize changed endpoint/account/FedRAMP or cumulative unknown contractual uplifts.",
+    "Public docs do not establish model access, parameter acceptance, account/project continuity or credentials.",
+    "No scientific model/effort/control changes;all other live gates,global/cell/checkpoint caps and unresolved holds remain necessary.",
+    "RP2 financial implementation author is not an independent final reviewer of this change.",
+    "No new expected-cost forecast; historical one-branch cost is not a prediction of full-pilot cost."
+  ],
+  "original_folder_accessed": false,
+  "provider_inference_calls": 0,
+  "request_control_proof": {
+    "luna": "Frozen group body retains gpt-5.6-luna/nativeChat;maximum/effort/temperature/seed/tier/cacheTTL omitted. phase2_dispatch._validate_request rejects foreign top-level cache controls and content fields. Entire128000 output capability reserved;12hResponsesTTL cannot be admitted. AM1 requires total ordinary+cache input<=1050000 andoutput<=128000;unknownmodel/tier/usage/servertool/category retains held reservation.",
+    "opus": "phase3a_v1.accounting._editor_request freezes Opus5/max16000/adaptive/high/standard_only/global;cache controls onlydefault5m/explicit5m.11.44 deliberately covers more expensive1hwrite plus1.1geo. Native quality preserves tier/geography omissions, so cannot be described as explicitlyglobal.",
+    "sonnet": "phase2_dispatch._validate_request admits frozen Sonnet/max4096/adaptive/low/standard_only/global plus messages/system/native schema. No top-level cache_control. _text_content admits only ephemeral(default5m) or explicit5m;1h rejected. C-N presently adds no cache_control. AM1 holds any returned Sonnet1h writes.",
+    "transport": "RP2 directly aliases unchanged core.validate_request; owned-worker transport retains its exact request validation. Unsupported model,tier,usage,geo,speed or fee category yields an unknown result/full hold. No changed scientific parameters or paid server tools."
+  },
+  "reservations": {
+    "luna": {
+      "basis": "Fresh Fastlongcontext30mwrite1.00/output3.60 USD/M plus1.1geo;wholeinput plusmaxoutput separately over-reserves sharedcontext.",
+      "formula": "input .20*1.25*2*2*1.1=1.10 USD/M;output1.20*1.5*2*1.1=3.96 USD/M;(1050000*1.10+128000*3.96)/1000000=1.661880 USD",
+      "micro_usd": 1661880
+    },
+    "opus": {
+      "basis": "Wholecontext1hwrite plus1.1geo allowance;not an actual surcharge for explicitglobal.",
+      "formula": "(1000000*10*1.1 +16000*25*1.1)/1000000 =11.44 USD",
+      "micro_usd": 11440000
+    },
+    "sonnet": {
+      "basis": "Wholecontext at admitted5mwrite;explicitglobal/standard;thinking insideoutput ceiling.",
+      "formula": "(1000000*2.50 +4096*10)/1000000 =2.540960 USD",
+      "micro_usd": 2540960
+    }
+  },
+  "retained_dossiers": [
+    {
+      "evidence_status": "Exact prior RP1 dossier; historical reference, not a new retrieval",
+      "path": "evidence/phase3a-rc1-pilot-v1/provider-documentation.json",
+      "sha256": "008e389339511bcb28276533a0faabcee60d763dd29fbb82f424177177b3d7a2"
+    },
+    {
+      "evidence_status": "Exact prior RP1 dossier; historical reference, not a new retrieval",
+      "path": "evidence/phase3a-rc1-pilot-v1/provider-review.json",
+      "sha256": "da1c370a35dbf12ee8eb520042ea563873ae9983ddc71dc29f48516de9d8cf87"
+    },
+    {
+      "evidence_status": "Exact prior RP1 dossier; historical reference, not a new retrieval",
+      "path": "evidence/phase3a-rc1-pilot-v1/openai-pricing.md",
+      "sha256": "56e3da9bb29246cad60003e01f3fdc6b536149a09f5effe5e79af020a4922cfc"
+    }
+  ],
+  "reviewed_at_utc": "2026-11-01T07:43:34.211558+00:00",
+  "scope": "Public documentation and local financial/control-source review only. RP2 changes history/global cap/identity, not models,reservations or scientific controls.",
+  "sdk_constructions": 0,
+  "status": "Unchanged reservations supported by current official public prices and admitted controls; no account or launch readiness certified"
+}

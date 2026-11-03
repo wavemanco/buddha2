@@ -1,0 +1,64 @@
+{
+  "PowerShell_path": "C:\\Users\\arvik\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "actual_junction_and_missing_descendant_rejection_verified": true,
+  "case_names": [
+    "test_powershell_inputs_reject_private_and_old_scope_before_path_inspection",
+    "test_powershell_private_names_are_skipped_before_inspection",
+    "test_powershell_native_guard_preserves_real_reparse_ancestor_and_link_rejection"
+  ],
+  "created_utc": "2026-10-30T04:35:55.430210+00:00",
+  "credentials_read": false,
+  "elapsed_seconds": 1.1790530001744628,
+  "errors": 0,
+  "failures": 0,
+  "file_symlink_creation_unavailable": true,
+  "file_symlink_limit": "The host could not create a file symbolic link; that specific rejection case is not claimed passed.",
+  "file_symlink_rejection_verified": false,
+  "host_runtime": "Windows Python 3.13.12; exact installed absolute PowerShell7 on child PATH",
+  "kind": "phase3a-c1-completion-r2-Windows-checks-v1",
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "log_sha256": "8fed5669d9052b4722ec91955f3f3d7335ea07234be79b5bf4772d5ecccdfb57",
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "provider_calls": 0,
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "skipped": 0,
+  "source_files_after": {
+    "followups/phase3a_c1_completion_v3/tests/test_launch.py": "b67f46166d87d9608d19ccf2dfba8551cd4bcd2f7db5a37407e071290a508111",
+    "phase3a-c1-completion-r2.ps1": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a"
+  },
+  "source_files_before": {
+    "followups/phase3a_c1_completion_v3/tests/test_launch.py": "b67f46166d87d9608d19ccf2dfba8551cd4bcd2f7db5a37407e071290a508111",
+    "phase3a-c1-completion-r2.ps1": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a"
+  },
+  "source_files_before_and_after": {
+    "followups/phase3a_c1_completion_v3/tests/test_launch.py": "b67f46166d87d9608d19ccf2dfba8551cd4bcd2f7db5a37407e071290a508111",
+    "phase3a-c1-completion-r2.ps1": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a"
+  },
+  "source_files_unchanged": true,
+  "source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89",
+  "stdout_markers_captured_in_log": true,
+  "study_file_sha256": "8500bfbc9a318e209c567c92fe8e125c6af0b4ea79fcaca9f8d2025f1bc57990",
+  "study_sha256": "8889603f3720753e0543b0c8dd714c384fc173822d0d3899d8131506121c20bc",
+  "subprocesses": [
+    {
+      "executable": "C:\\Users\\arvik\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.EXE",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "executable": "C:\\Users\\arvik\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.EXE",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "executable": "C:\\Users\\arvik\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.EXE",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "FILE_LINK_UNAVAILABLE\nJUNCTION_ANCESTOR_REJECTED\n"
+    }
+  ],
+  "tests": 3
+}

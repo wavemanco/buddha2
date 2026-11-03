@@ -1,0 +1,172 @@
+{
+  "C_N_minus_B": 0.139065449022179,
+  "accounted_micro_usd": 367448,
+  "changed_shared_heads": 12,
+  "decision_sha256": "5c2ddcbd434f53209f4245c519f9479229c6b06e6dec2b9043669c5a4f338dea",
+  "fresh_order_checks": [
+    {
+      "changed_head_scores": [
+        {
+          "B_score": 9,
+          "C_N_score": 8,
+          "response_id": "response-87217190f317515a14b754d9"
+        }
+      ],
+      "distinct_C_N": 9,
+      "first_score_B": 9,
+      "first_score_C_N": 9,
+      "order_id": "p2-cce2c41315048eab5ffb1d45",
+      "repeat": 1,
+      "same_first_response": true,
+      "same_semantic_partition": true,
+      "shared_head_count": 9,
+      "task_id": "nb-curated-0ac59a48456661d0d8d5",
+      "utility_B": 8.729346938396239,
+      "utility_C_N": 8.682358559645586
+    },
+    {
+      "changed_head_scores": [
+        {
+          "B_score": 7,
+          "C_N_score": 8,
+          "response_id": "response-58253f3daf52daf1f5224d1e"
+        },
+        {
+          "B_score": 8,
+          "C_N_score": 7,
+          "response_id": "response-6f0975f7180e38d03cc171f2"
+        },
+        {
+          "B_score": 8,
+          "C_N_score": 9,
+          "response_id": "response-cd119fe3569c71585051e7c2"
+        },
+        {
+          "B_score": 9,
+          "C_N_score": 8,
+          "response_id": "response-fc5b45db8f1db8141d232a46"
+        }
+      ],
+      "distinct_C_N": 10,
+      "first_score_B": 8,
+      "first_score_C_N": 9,
+      "order_id": "p2-e8740bae4e77d0e443e32104",
+      "repeat": 1,
+      "same_first_response": true,
+      "same_semantic_partition": true,
+      "shared_head_count": 10,
+      "task_id": "nb-curated-8e36a11f5d71bf4e3dc6",
+      "utility_B": 7.907820180889197,
+      "utility_C_N": 8.097576714321555
+    },
+    {
+      "changed_head_scores": [
+        {
+          "B_score": 6,
+          "C_N_score": 7,
+          "response_id": "response-7c47934f9f17cd82ef7d797c"
+        },
+        {
+          "B_score": 6,
+          "C_N_score": 5,
+          "response_id": "response-a6cb75c553f0bbf456b8d725"
+        }
+      ],
+      "distinct_C_N": 10,
+      "first_score_B": 8,
+      "first_score_C_N": 8,
+      "order_id": "p2-718a1781795dd29b5ebe57e4",
+      "repeat": 1,
+      "same_first_response": true,
+      "same_semantic_partition": true,
+      "shared_head_count": 10,
+      "task_id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "utility_B": 6.808591301941747,
+      "utility_C_N": 7.134934769782756
+    },
+    {
+      "changed_head_scores": [
+        {
+          "B_score": 7,
+          "C_N_score": 8,
+          "response_id": "response-44f4226b03a63e93a7430b64"
+        },
+        {
+          "B_score": 7,
+          "C_N_score": 8,
+          "response_id": "response-c5376d4817ae56f5a44bd032"
+        },
+        {
+          "B_score": 8,
+          "C_N_score": 7,
+          "response_id": "response-c67d0eb51cd5dd2c2efd67f7"
+        },
+        {
+          "B_score": 7,
+          "C_N_score": 6,
+          "response_id": "response-c9b6f0f6a74e79615ed9c95c"
+        },
+        {
+          "B_score": 5,
+          "C_N_score": 6,
+          "response_id": "response-de6a53242de4ecb4e4a09b9b"
+        }
+      ],
+      "distinct_C_N": 10,
+      "first_score_B": 7,
+      "first_score_C_N": 8,
+      "order_id": "p2-ee9c05c3f5ed94c379d9249d",
+      "repeat": 2,
+      "same_first_response": true,
+      "same_semantic_partition": true,
+      "shared_head_count": 10,
+      "task_id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "utility_B": 6.653756219564671,
+      "utility_C_N": 7.1134458461802845
+    }
+  ],
+  "independent_prompt_units": 12,
+  "kind": "p2bn-live-independent-arithmetic-v1",
+  "largest_prompt_contribution": {
+    "contribution_to_mean": 0.09188277669044494,
+    "delta": 1.1025933202853393,
+    "fraction_of_net_mean_gain": 0.6607160681284028,
+    "task_id": "nb-curated-6584de30a11a0e08ca32"
+  },
+  "mean_distinct": {
+    "A": 2.0833333333333335,
+    "B": 7.916666666666667,
+    "C-N": 8.083333333333334
+  },
+  "mean_utility": {
+    "A": 2.747011259200218,
+    "B": 6.658121902836613,
+    "C-N": 6.797187351858792
+  },
+  "new_provider_calls_for_review": 0,
+  "prompt_counts": {
+    "negative": 5,
+    "positive": 6,
+    "tied": 1
+  },
+  "repeats": 2,
+  "returned_models": {
+    "claude-opus-5": 39,
+    "gpt-5.6-luna": 4
+  },
+  "role_accounted_micro_usd": {
+    "group": 3516,
+    "quality": 363932
+  },
+  "role_counts": {
+    "group": 4,
+    "quality": 39
+  },
+  "selected_method": "C-N",
+  "shared_heads": 39,
+  "stop_reasons": {
+    "end_turn": 39,
+    "stop": 4
+  },
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

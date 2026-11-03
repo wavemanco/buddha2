@@ -1,0 +1,289 @@
+{
+  "AGG": {
+    "normal_completion_established": false,
+    "not_observed": true
+  },
+  "DOM": {
+    "C1_call_status": "returned",
+    "actual_SYSTEM_starts_with_configured_R1_profile": true,
+    "complete_delivery_observed_in_request": "p3a-01.adaptive.editor.dom1.a1.t05",
+    "complete_expected_payloads": 21,
+    "consumed_three_strings_unchanged": true,
+    "decision": "KEEP_BASE",
+    "final_matches_saved_reread_notes": true,
+    "final_notes_sha256": "477cc06fe2a8b142c99270a2889c185ebc05e44632df1fac21949c17324e097c",
+    "final_rule_visible_in_SYSTEM_and_MISSION": true,
+    "known_turns": [
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t01",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t02",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t03",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t04",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t05",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "write"
+        ],
+        "write_or_edit": true
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t06",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.dom1.a1.t07",
+        "stop_reason": "end_turn",
+        "tool_names": [],
+        "write_or_edit": false
+      }
+    ],
+    "label": "dom1.a1",
+    "lossless_views": 17,
+    "native_authentic_eligible": true,
+    "normal_calls": 7,
+    "normal_strict_final": true,
+    "semantic_review": {
+      "assessment_limit": "This checks consistency of the stated KEEP_BASE reasons with actual evidence. It is not a creativity/utility rating, proof of optimality, human agreement or causal attribution to the instruction change.",
+      "evidence_consistent": true,
+      "supported_facts": [
+        "Exact open invention request has no added format/length rule.",
+        "The baseline contains ten complete nonempty invention answers and the ten named inventions cited in the notes.",
+        "The plan contains the contracted ordered angle-01 through angle-10 entries; rank has ten distinct IDs.",
+        "The notes explicitly limit conclusions to one base rollout and distinguish structural rank conformance from unverified ID-to-answer/ranking quality.",
+        "No candidate/probe/judge evidence was claimed available to DOM."
+      ]
+    },
+    "source_files": 5
+  },
+  "INV": {
+    "C1_call_status": "failed",
+    "actual_SYSTEM_starts_with_configured_R1_profile": true,
+    "complete_delivery_observed_in_request": "p3a-01.adaptive.editor.inv1.a1.t05",
+    "complete_expected_payloads": 21,
+    "complete_final_response_available": false,
+    "final_rule_visible_in_SYSTEM_and_MISSION": true,
+    "interpretation": "All required evidence is present in the admitted fifth request after four successful read rounds. No response to that request is available; do not infer whether the remote model generated a decision, completed or incurred a charge.",
+    "known_read_rounds": 4,
+    "known_turns": [
+      {
+        "slot_id": "p3a-01.adaptive.editor.inv1.a1.t01",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.inv1.a1.t02",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.inv1.a1.t03",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      },
+      {
+        "slot_id": "p3a-01.adaptive.editor.inv1.a1.t04",
+        "stop_reason": "tool_use",
+        "tool_names": [
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read",
+          "read"
+        ],
+        "write_or_edit": false
+      }
+    ],
+    "label": "inv1.a1",
+    "lossless_views": 17,
+    "observed_write_or_edit": false,
+    "request_five": "durable provider-call timeout, unknown delivery/usage",
+    "semantic_edit_or_KEEP_BASE_decision_established": false,
+    "source_files": 5
+  },
+  "creative_utility_used_as_gate": false,
+  "durable_accounting": {
+    "cost_basis": "usage-based public-price accounting, not invoice",
+    "known_results": 23,
+    "known_spent_micro_usd": 951801,
+    "pending_intents": 0,
+    "requests": 24,
+    "reserved_micro_usd": 11440000,
+    "unknown_failure": {
+      "category": "timeout",
+      "provider_request_id": null,
+      "stage": "provider_call",
+      "status_code": null
+    },
+    "unknown_reservation_retained_in_full": true,
+    "unknown_results": 1,
+    "unknown_slot": "p3a-01.adaptive.editor.inv1.a1.t05",
+    "unknown_spent_or_tokens_inferred_zero": false
+  },
+  "evidence_file_sha256": {
+    "runs/phase3a-c1-completion-v2/verification-v2/release/study.json": "b41a87f6326971dd0bfe89662c35e34adbfc1dddf4d3a3ae69752b069cf91c29",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "8c2aea006fd06fd8a5a04d45714135a00eb991aef31caf73aa7996304c790ae1",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/00-000.json": "95bd5273cc28bc49467ea85c8f50aa12c571c8183c72becbb853002c8ed08f15",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/01-000.json": "cd8575b1076cb9dbce55cba2100ebe0dd61a0c7ccb2987cef134b453a879f0c4",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-000.json": "ea341759603260a546b280af31a377cf94b0a10978985587871779ccd2d07909",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-001.json": "d2183af82cf47f10dd67e4f68504c1172014e97beaf8da16c572558dc1b5e275",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-002.json": "1abfc6f829412c9fd0267641a43ca90a74c9cb16b654323ed85d560e832a1dc1",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-003.json": "c433c04c4101ef32057c4dece6d66086f697d69cfa3d09946f5f9581e55f2e3c",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-004.json": "91a7a7c1e0676729c746ba8e2006064289a2b462f105b97a310eea6267b19338",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-005.json": "c448c71225692c901780a527ae5c2e6431acd586ec9b0f10443bf36cfbfbf031",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/02-006.json": "5dfcbc86ca256043f10344a81707465b187e8c5974b498a337c99379a7634fea",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-000.json": "bc21893d17399a88a5e5c0420d94aac3ee8810ecf30233a5ecc216f92b36a65b",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-001.json": "6cdc9e5d87c49f68b59b971126ed9e1beb27ddf9ee24b356bd1f98a6091d5fda",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-002.json": "97fbb926ed4c43e103b62488a025f4e32d3eb3e0dc3bc919c7ed29cedd0fcd44",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-003.json": "34c67a1b7b5dfbbdad1b38de6d42900d2664320f43082ac949229a01c4197924",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-004.json": "5919f855afa07978e93f95b64027ef91d2fb11fc4e9540914d8c6e14e6fad23e",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-005.json": "5b1218739b2a7457a1600f6fa6fa5d03d6a8a999b006d278ee5a2764a2dc29ff",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/03-006.json": "88d8027285df2a39a02ccb46d5acc57c3075e7cb2b7d16d2d24bc884489d4997",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_EVIDENCE/04-000.json": "881c5bdaff03e49cf74fc8ecc03a0baff36a9a1d00f314b322ee33fd8a5291eb",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_INDEX.md": "f12e8fc94f7af45f86e7b719d85ffc491090c10f6f13ab0d0e1302a2e77062c4",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/context-view/C1_MANIFEST.json": "85490a3a732cf088ad855ce3581cf580e848961d13d63e66b61125445af79728",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "85490a3a732cf088ad855ce3581cf580e848961d13d63e66b61125445af79728",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/result.json": "08b51940910ab38229b879ceb7c60e849d0749a1a592dcc9a1919c013d5e42cc",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "47a83dc0529508096db3fcff5c07bf1f18b5eccf51af638c062e62be21a82db8",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "d918fe1199bae0f8728dedd3f6c8483643641111637e86208e24c21d88c211ab",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/00-000.json": "95bd5273cc28bc49467ea85c8f50aa12c571c8183c72becbb853002c8ed08f15",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/01-000.json": "cd8575b1076cb9dbce55cba2100ebe0dd61a0c7ccb2987cef134b453a879f0c4",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-000.json": "ea341759603260a546b280af31a377cf94b0a10978985587871779ccd2d07909",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-001.json": "d2183af82cf47f10dd67e4f68504c1172014e97beaf8da16c572558dc1b5e275",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-002.json": "1abfc6f829412c9fd0267641a43ca90a74c9cb16b654323ed85d560e832a1dc1",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-003.json": "c433c04c4101ef32057c4dece6d66086f697d69cfa3d09946f5f9581e55f2e3c",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-004.json": "91a7a7c1e0676729c746ba8e2006064289a2b462f105b97a310eea6267b19338",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-005.json": "c448c71225692c901780a527ae5c2e6431acd586ec9b0f10443bf36cfbfbf031",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/02-006.json": "5dfcbc86ca256043f10344a81707465b187e8c5974b498a337c99379a7634fea",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-000.json": "bc21893d17399a88a5e5c0420d94aac3ee8810ecf30233a5ecc216f92b36a65b",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-001.json": "6cdc9e5d87c49f68b59b971126ed9e1beb27ddf9ee24b356bd1f98a6091d5fda",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-002.json": "97fbb926ed4c43e103b62488a025f4e32d3eb3e0dc3bc919c7ed29cedd0fcd44",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-003.json": "34c67a1b7b5dfbbdad1b38de6d42900d2664320f43082ac949229a01c4197924",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-004.json": "5919f855afa07978e93f95b64027ef91d2fb11fc4e9540914d8c6e14e6fad23e",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-005.json": "5b1218739b2a7457a1600f6fa6fa5d03d6a8a999b006d278ee5a2764a2dc29ff",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/03-006.json": "88d8027285df2a39a02ccb46d5acc57c3075e7cb2b7d16d2d24bc884489d4997",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_EVIDENCE/04-000.json": "881c5bdaff03e49cf74fc8ecc03a0baff36a9a1d00f314b322ee33fd8a5291eb",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_INDEX.md": "1c1c2213a144e82634d497136adce571888d41ce7d07f209013b63ef92449632",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/context-view/C1_MANIFEST.json": "d9349c43d97f46aad45c321479caffc3555c50b480c294c8dbd9db521b48d8ce",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "d9349c43d97f46aad45c321479caffc3555c50b480c294c8dbd9db521b48d8ce",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/result.json": "0ec2ac0c1a4e4ab843b081921064f5c6754b1f07aadee428a10504546bfa9039",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "09fba1b43dfe9b6bcd9039ec516e6e09f8d4ea83d182357450cfbcc51ffe70d9",
+    "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/dom1.a1.settled.json": "b36ffaf88c374610d16dfef8675f01766467d4dd0dd621bc4389ddd7b634e29e",
+    "runs/phase3a-r2-v1/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/live/journal/events.jsonl": "371f1437187c11dc79bc04cae3622fc4be240cac0c6825b48d9f45250514f3b9"
+  },
+  "formal_readiness_inspection_written": false,
+  "full_adaptive_branch_available": false,
+  "full_native_path_established": false,
+  "historical_and_current": {
+    "cumulative_attempts": 885,
+    "cumulative_known_micro_usd": 12231444,
+    "cumulative_reserved_micro_usd": 22880000,
+    "current_known_plus_unresolved_exposure_micro_usd": 35111444,
+    "historical_attempts": 861,
+    "historical_known_micro_usd": 11279643,
+    "historical_reserved_micro_usd": 11440000,
+    "historical_unknown_released": false
+  },
+  "interpretation": [
+    "R1 met the previously failed strict final-output requirement in one actual normal DOM KEEP_BASE session without relaxing the screen.",
+    "This observation is consistent with the operational correction, but one before/after case does not establish robust compliance or its causal effect.",
+    "INV failure is an unavailable timed-out provider response after complete context delivery, not an observed bad edit, refusal or final-envelope violation.",
+    "DOM validity does not establish all-stage readiness; no completed INV/AGG path or scored fixed/adaptive comparison exists.",
+    "Intermediate read acknowledgements in tool-use turns are not final responses and are not judged as final-envelope violations."
+  ],
+  "kind": "phase3a-c1-completion-r1-partial-authoring-review-v1",
+  "launcher_sha256": "b990c174ae442e9873e1a8b2d3ce1e0b2eaf87030b3cbe7a78e97315e0f58743",
+  "limits_and_action": [
+    "No readiness certification or root inspection attestation is issued.",
+    "Retain the unknown full reservation and stopped state; do not restart, resend, rescue or relabel this result.",
+    "The timeout record does not establish remote completion, actual charge, backend cause or that a longer deadline would solve it.",
+    "No provider calls, source/old-record writes, private metadata/content, tests or network access by this reviewer."
+  ],
+  "new_primary_scored": 0,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "readiness_barrier_available": false,
+  "readiness_passed": false,
+  "review_complete": true,
+  "reviewed_at_utc": "2026-10-30T02:29:01.662591+00:00",
+  "reviewer": "Independent AI read-only source/artifact review; not a human rating",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scientific_comparison_complete": false,
+  "sha256": "53d46a3c03392e1ff26cb1a9f86843ebecc0f21f881cc84871ce400e6393072b",
+  "source_sha256": "33cc36cb56fa75b6b427add09934a943515dd40e57cccfb4d4cfcb92a8b4bc1c",
+  "status": "partial-authoring-reviewed-full-readiness-unestablished",
+  "study_sha256": "28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62"
+}

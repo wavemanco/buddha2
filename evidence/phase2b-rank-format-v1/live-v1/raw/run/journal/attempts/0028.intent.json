@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "240e820ede8fc21f7f748a555eb8dc943fe0751eba4969031ad154e5a105ecbc",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2137
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0028",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**A \"25 Moments\" memory jar**\n\nSince 25 is a milestone, this gift gives your friend one memory or note for each year. It costs very little, but it shows a lot of thought.\n\n**What you'll need:**\n- A large glass jar with a lid\n- 25 small slips of paper (colored or kraft paper looks nice)\n- A pen\n- Ribbon or twine, plus a tag\n\n**How to make it:**\n1. **Write 25 notes.** Each one can be a favorite memory you share, an inside joke, something you admire about them, or a wish for their next year. Mix funny and heartfelt ones.\n2. **Add a few extras.** Slip in a couple of printed photos, a ticket stub, or a \"redeemable for one coffee/dinner on me\" coupon.\n3. **Number or label the slips** if you'd like them read in order, or leave them unmarked so they can pull one at random.\n4. **Fill the jar,** then tie the ribbon around the lid and attach a tag such as \"Open one when you need a smile.\"\n\n**Tip:** Start writing a week or two ahead so you aren't rushing. If you're stuck, ask a few mutual friends to contribute a note or two.\n\nThey can read it all at once or save it and open one note a day, whichever suits them.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "240e820ede8fc21f7f748a555eb8dc943fe0751eba4969031ad154e5a105ecbc",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-718a1781795dd29b5ebe57e4.quality.05",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

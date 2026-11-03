@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp:rw,nosuid,nodev,size=268435456",
+    "--mount",
+    "type=bind,source=C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1,target=/i1,readonly",
+    "--workdir",
+    "/i1",
+    "--entrypoint",
+    "python",
+    "buddha2-h1:scoped-backport",
+    "-B",
+    "-m",
+    "ruff",
+    "check",
+    "--select",
+    "E4,E7,E9,F,I",
+    "--no-cache",
+    "/i1"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "All checks passed!\n"
+}

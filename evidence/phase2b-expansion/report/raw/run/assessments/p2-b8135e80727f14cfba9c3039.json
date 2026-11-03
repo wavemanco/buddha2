@@ -1,0 +1,600 @@
+{
+  "assessment_identity_sha256": "52aa6884dd717d05636bf3ef6acd95e613b3bd3860690809f8ffd7ab834641c9",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 9,
+    "utility": 6.087856567056122
+  },
+  "native": {
+    "fields": {
+      "distinct": 9,
+      "generation_scores": [
+        8,
+        6,
+        7,
+        6,
+        null,
+        6,
+        6,
+        7,
+        6,
+        6
+      ],
+      "partition_scores": [
+        8,
+        6,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6
+      ],
+      "utility": 6.087856567056122
+    },
+    "generation_row": {
+      "generations": [
+        "**Biscuit**\n\nIt's a warm, humble name that suits a dog whose defining trait is steadfast loyalty, something comforting and dependable that stays by your side through everything.",
+        "Here are names for your loyal dog, each rooted in a word for loyalty or devotion:\n\n**Top pick: Fidel** (Latin *fidelis*, \"faithful\")\nThis is the root of the English words \"fidelity\" and \"Fido.\" It has a classic, grounded feel and suits a dog whose defining trait is steadfastness.\n\n**Other options:**\n\n- **Chūken** (Japanese, 忠犬, \"loyal dog\"): The word comes from the tradition of Hachikō, the Akita who waited at Shibuya Station for his owner for nearly ten years. It's a strong choice if your story has a theme of waiting or enduring devotion.\n\n- **Ffyddlon** (Welsh, \"faithful\"): Pronounced roughly *FUTH-lon*. It has a lyrical, earthy sound, good for a pastoral or folkloric setting. \"Ffydd\" means faith, so the name literally carries trust within it.\n\n- **Wafa** (Arabic, وفاء, \"loyalty, fidelity\"): Short and warm, and it carries a sense of keeping one's promises. It works well as a call-name.\n\n- **Pistis** (Greek, πίστις, \"faith, trust\"): Gives a mythic, ancient tone. A nickname like \"Pis\" could soften it.\n\n- **Sadiq** (Arabic, \"truthful, faithful friend\"): Fits a dog who is more companion than pet.\n\n- **Vernost** (Russian, верность, \"faithfulness\"): Heavy and dignified, ideal for a large, serious dog in a wintry setting.\n\n- **Fedele** (Italian, \"faithful\"): Softer and more melodic than Fidel, with a gentle sound for a tender story.\n\n**My recommendation:** If you want something readers will instantly connect to loyalty, choose **Fidel** or **Fedele**. If you want a name with deeper cultural weight, choose **Chūken**. If you want something distinctive and memorable, choose **Ffyddlon**, perhaps shortened to \"Ffydd\" in dialogue.",
+        "Here are names for your loyal dog, drawn from history's most devoted dogs and adapted into fresh variants:\n\n**From Hachikō (the Akita who waited nine years at Shibuya Station)**\n- **Hachi**: a simple, warm shortening that still carries the legacy\n- **Hatchet**: a scrappier, more playful twist\n- **Kōji**: a Japanese-sounding name that echoes the original without copying it\n\n**From Greyfriars Bobby (the Skye Terrier who guarded his master's grave in Edinburgh)**\n- **Greyfriar**: the cemetery name, used as a dog's name\n- **Bram**: a Scottish-flavored nod to \"Bobby\"\n- **Robbie Gray**: a gentle blend of \"Bobby\" and \"Greyfriars\"\n\n**From Argos (Odysseus's dog, who waited twenty years and recognized him on his return)**\n- **Argo**: a clean, memorable variant\n- **Argus**: the Latinized form, which suggests watchfulness\n- **Ajax**: a heroic-sounding name with a similar Greek feel\n\n**My pick: Argo.** It's short, easy to call out in dialogue, and has an epic undertone that suits a story about faithfulness. If your story is set somewhere like Japan or Scotland, **Hachi** or **Bram** would fit the setting better.\n\nIf you tell me the dog's breed, the setting, and the story's tone, I can narrow it to one name.",
+        "Since I don't know your setting, here are names matched to different worlds. Pick the one closest to yours:\n\n**Farm / countryside:** Biscuit, Clover, or **Gus**\n**Frontier / Old West:** Dusty, Remington, or **Tumbleweed**\n**Seaside / fishing village:** Barnacle, Skipper, or **Marlow**\n**Wartime (1940s):** Victor, Sergeant, or **Tommy**\n**Fantasy kingdom:** Aldric, Bramble, or **Thorn**\n\nIf you want just one answer: **Gus**. It's short, warm, and sounds like a dog who'd wait at the gate for years.\n\nIf you tell me the setting and era, I can narrow it to a single name that fits.",
+        "Name your dog **Biscuit**.\n\nIt's a humble, everyday name with a warm, golden feel, and it suits a loyal dog who is always at someone's heel. A dog named Biscuit might be a medium-sized, tawny-coated mutt with one ear that never stays up, who waits by the door at the same time every day.\n\nIf you'd like other options, here are a few built around coat, size, and quirks:\n\n- **Pickle**: a small, wiry terrier mix with a green-gray brindle coat and a stubborn streak.\n- **Toast**: a golden-brown lab with a habit of leaning his whole weight against your legs.\n- **Mop**: a shaggy, oversized sheepdog type who follows his person from room to room.\n- **Pepper**: a black-and-white border collie with a speckled muzzle and watchful eyes.\n- **Waffle**: a stocky, square-faced dog with a patterned coat and a lopsided, hopeful grin.\n\nEach of these names is plain and a little funny, which makes the dog's steadfast loyalty stand out more. If you tell me the breed, setting, or tone of your story, I can narrow it down to one.",
+        "**Juniper**\n\nHere's why it fits: the owner, a widow, once planted a juniper tree beside the porch of the house she shared with her husband. After he died, she adopted a scruffy stray who kept curling up beneath that tree. She called the dog Juniper because it felt like the one living thing that had stayed rooted when everything else had shifted.\n\nIf Juniper doesn't suit your story, here are a few other names with backstories your owner character might plausibly have:\n\n- **Marlow**: named after the lakeside town where the owner spent childhood summers with a grandfather who has since passed.\n- **Biscuit**: the nickname the owner's late sister gave her as a kid, passed on to the dog as a quiet tribute.\n- **Cass**: short for Cassiopeia, the constellation a father once pointed out on camping trips.\n- **Ferris**: after the old Ferris wheel at the pier where the owner had a first date with a spouse now gone.\n\nIf you tell me the owner's age, setting, and the kind of loss or memory at the heart of the story, I can tailor a name more closely.",
+        "Here are dog names grouped by tone, so you can pick the one that fits your story's mood:\n\n**Heartwarming**\n- **Biscuit**: soft, cozy, and instantly lovable\n- **Willow**: gentle and faithful\n- **Clover**: a small name for a big-hearted companion\n\n**Epic**\n- **Ranger**: suggests a steadfast protector on a long journey\n- **Atlas**: a dog who carries the weight of the world for those he loves\n- **Valor**: a name that announces courage\n\n**Humorous**\n- **Sir Barksalot**: pure comic charm\n- **Noodle**: a goofy name for a dog with unwavering devotion\n- **Meatball**: undignified name, deeply dignified loyalty\n\n**Melancholic**\n- **Ash**: quiet, weathered, and wistful\n- **Juniper**: tender with a hint of loss\n- **Hollis**: an old-soul name for a dog who waits\n\nIf I had to choose one: **Biscuit** for a warm, classic loyal-dog tale, or **Ash** if your story leans toward bittersweet. Tell me the setting and tone, and I can narrow it to one name.",
+        "Here are some names for your loyal dog, chosen to be short, easy to say, and a pleasure to repeat in dialogue:\n\n1. **Bo**: One syllable with a round, open \"o.\" It's easy for young readers to sound out and sits well in lines like \"Come, Bo!\"\n\n2. **Moxie**: The bouncy two-beat rhythm suggests spirit and pluck, and the \"x\" gives it a memorable snap.\n\n3. **Waffles**: The soft, playful sound is fun to say aloud and gives you a warm, cozy tone.\n\n4. **Tuck**: Short and sturdy, with a hard \"k\" ending that makes it feel dependable. It also hints at staying close by.\n\n5. **Juniper (June)**: A longer name with a short nickname, so you can use whichever fits the moment.\n\n6. **Otis**: Strong vowels, a gentle rhythm, and a friendly, old-soul feel that suits a faithful companion.\n\n7. **Pip**: Tiny and quick, ideal for a small dog. The repeated \"p\" is fun in read-aloud passages (\"Pip, Pip, hooray!\").\n\n8. **Moose**: A big, warm \"oo\" sound that is great for a large, gentle dog, and easy to call out across a field.\n\n**My top pick:** **Otis**. It's easy to say, has a steady rhythm for repeated lines (\"Otis waited. Otis always waited.\"), and sounds loyal without being obvious.\n\nIf you tell me the dog's size, breed, or the story's tone, I can narrow these down.",
+        "**Name: Anchor**\n\nAnchor suits a loyal dog because the word already means steadfastness: something that holds fast when everything else drifts. It also gives you a motif you can reuse throughout the story.\n\n**How the motif can recur:**\n- **Early on:** Someone remarks that the dog \"stays put like an anchor\" when a storm, a crowd, or a hard moment would send others running.\n- **Middle:** The owner is adrift, whether through grief, a move, or a lost job. The dog's presence is the one fixed point. You can echo this with sea imagery: tides, ropes, harbors, a worn rope toy.\n- **Turning point:** The dog refuses to leave a spot, a person, or a doorway, and that stubbornness becomes what saves or steadies someone.\n- **Ending:** The owner says the name differently, no longer as a joke or a label but as a statement of what the dog has been to them.\n\n**Alternates, if you want a different feel:**\n- **North** (or **Compass**): guidance rather than staying power. The dog leads the character home or toward a decision.\n- **Ember:** quiet, lasting warmth. It works well for a story set in cold or loss, with recurring images of hearths and glowing coals.\n- **Oak:** rootedness and shelter. It suits a rural or generational story, perhaps with an actual oak tree on the property.\n\nMy pick is **Anchor**, with \"Anch\" or \"Annie\" as a possible nickname if you want something softer for dialogue.",
+        "Provisional name: **Barley**. It's warm, friendly, and suits a steady, devoted dog.\n\nA few quick questions so I can refine it:\n\n1. **Breed and size:** Is your dog a sturdy shepherd, a scrappy terrier, a big retriever, or something else? The name can echo that.\n2. **Setting and era:** Is it a farm, a small town, wartime, a fantasy world, or somewhere else? A 1940s countryside story might suit \"Biscuit\" or \"Jip,\" while a fantasy one might suit something like \"Orrin.\"\n3. **Tone:** Is the story gentle and heartwarming, bittersweet, or adventurous? A tearjerker might call for a soft, simple name, while an adventure might want something bolder, like \"Ranger\" or \"Scout.\"\n\nTell me even one or two of these and I'll offer a tailored shortlist."
+      ],
+      "id": "nb-curated-b1b0aa2062fdabf30542",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Name the dog character in my story about a loyal dog."
+    },
+    "partition_fields": {
+      "distinct": 9,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "score_row": {
+      "distinct": 9,
+      "generation_scores": [
+        8,
+        6,
+        7,
+        6,
+        null,
+        6,
+        6,
+        7,
+        6,
+        6
+      ],
+      "generations": [
+        "**Biscuit**\n\nIt's a warm, humble name that suits a dog whose defining trait is steadfast loyalty, something comforting and dependable that stays by your side through everything.",
+        "Here are names for your loyal dog, each rooted in a word for loyalty or devotion:\n\n**Top pick: Fidel** (Latin *fidelis*, \"faithful\")\nThis is the root of the English words \"fidelity\" and \"Fido.\" It has a classic, grounded feel and suits a dog whose defining trait is steadfastness.\n\n**Other options:**\n\n- **Chūken** (Japanese, 忠犬, \"loyal dog\"): The word comes from the tradition of Hachikō, the Akita who waited at Shibuya Station for his owner for nearly ten years. It's a strong choice if your story has a theme of waiting or enduring devotion.\n\n- **Ffyddlon** (Welsh, \"faithful\"): Pronounced roughly *FUTH-lon*. It has a lyrical, earthy sound, good for a pastoral or folkloric setting. \"Ffydd\" means faith, so the name literally carries trust within it.\n\n- **Wafa** (Arabic, وفاء, \"loyalty, fidelity\"): Short and warm, and it carries a sense of keeping one's promises. It works well as a call-name.\n\n- **Pistis** (Greek, πίστις, \"faith, trust\"): Gives a mythic, ancient tone. A nickname like \"Pis\" could soften it.\n\n- **Sadiq** (Arabic, \"truthful, faithful friend\"): Fits a dog who is more companion than pet.\n\n- **Vernost** (Russian, верность, \"faithfulness\"): Heavy and dignified, ideal for a large, serious dog in a wintry setting.\n\n- **Fedele** (Italian, \"faithful\"): Softer and more melodic than Fidel, with a gentle sound for a tender story.\n\n**My recommendation:** If you want something readers will instantly connect to loyalty, choose **Fidel** or **Fedele**. If you want a name with deeper cultural weight, choose **Chūken**. If you want something distinctive and memorable, choose **Ffyddlon**, perhaps shortened to \"Ffydd\" in dialogue.",
+        "Here are names for your loyal dog, drawn from history's most devoted dogs and adapted into fresh variants:\n\n**From Hachikō (the Akita who waited nine years at Shibuya Station)**\n- **Hachi**: a simple, warm shortening that still carries the legacy\n- **Hatchet**: a scrappier, more playful twist\n- **Kōji**: a Japanese-sounding name that echoes the original without copying it\n\n**From Greyfriars Bobby (the Skye Terrier who guarded his master's grave in Edinburgh)**\n- **Greyfriar**: the cemetery name, used as a dog's name\n- **Bram**: a Scottish-flavored nod to \"Bobby\"\n- **Robbie Gray**: a gentle blend of \"Bobby\" and \"Greyfriars\"\n\n**From Argos (Odysseus's dog, who waited twenty years and recognized him on his return)**\n- **Argo**: a clean, memorable variant\n- **Argus**: the Latinized form, which suggests watchfulness\n- **Ajax**: a heroic-sounding name with a similar Greek feel\n\n**My pick: Argo.** It's short, easy to call out in dialogue, and has an epic undertone that suits a story about faithfulness. If your story is set somewhere like Japan or Scotland, **Hachi** or **Bram** would fit the setting better.\n\nIf you tell me the dog's breed, the setting, and the story's tone, I can narrow it to one name.",
+        "Since I don't know your setting, here are names matched to different worlds. Pick the one closest to yours:\n\n**Farm / countryside:** Biscuit, Clover, or **Gus**\n**Frontier / Old West:** Dusty, Remington, or **Tumbleweed**\n**Seaside / fishing village:** Barnacle, Skipper, or **Marlow**\n**Wartime (1940s):** Victor, Sergeant, or **Tommy**\n**Fantasy kingdom:** Aldric, Bramble, or **Thorn**\n\nIf you want just one answer: **Gus**. It's short, warm, and sounds like a dog who'd wait at the gate for years.\n\nIf you tell me the setting and era, I can narrow it to a single name that fits.",
+        "Name your dog **Biscuit**.\n\nIt's a humble, everyday name with a warm, golden feel, and it suits a loyal dog who is always at someone's heel. A dog named Biscuit might be a medium-sized, tawny-coated mutt with one ear that never stays up, who waits by the door at the same time every day.\n\nIf you'd like other options, here are a few built around coat, size, and quirks:\n\n- **Pickle**: a small, wiry terrier mix with a green-gray brindle coat and a stubborn streak.\n- **Toast**: a golden-brown lab with a habit of leaning his whole weight against your legs.\n- **Mop**: a shaggy, oversized sheepdog type who follows his person from room to room.\n- **Pepper**: a black-and-white border collie with a speckled muzzle and watchful eyes.\n- **Waffle**: a stocky, square-faced dog with a patterned coat and a lopsided, hopeful grin.\n\nEach of these names is plain and a little funny, which makes the dog's steadfast loyalty stand out more. If you tell me the breed, setting, or tone of your story, I can narrow it down to one.",
+        "**Juniper**\n\nHere's why it fits: the owner, a widow, once planted a juniper tree beside the porch of the house she shared with her husband. After he died, she adopted a scruffy stray who kept curling up beneath that tree. She called the dog Juniper because it felt like the one living thing that had stayed rooted when everything else had shifted.\n\nIf Juniper doesn't suit your story, here are a few other names with backstories your owner character might plausibly have:\n\n- **Marlow**: named after the lakeside town where the owner spent childhood summers with a grandfather who has since passed.\n- **Biscuit**: the nickname the owner's late sister gave her as a kid, passed on to the dog as a quiet tribute.\n- **Cass**: short for Cassiopeia, the constellation a father once pointed out on camping trips.\n- **Ferris**: after the old Ferris wheel at the pier where the owner had a first date with a spouse now gone.\n\nIf you tell me the owner's age, setting, and the kind of loss or memory at the heart of the story, I can tailor a name more closely.",
+        "Here are dog names grouped by tone, so you can pick the one that fits your story's mood:\n\n**Heartwarming**\n- **Biscuit**: soft, cozy, and instantly lovable\n- **Willow**: gentle and faithful\n- **Clover**: a small name for a big-hearted companion\n\n**Epic**\n- **Ranger**: suggests a steadfast protector on a long journey\n- **Atlas**: a dog who carries the weight of the world for those he loves\n- **Valor**: a name that announces courage\n\n**Humorous**\n- **Sir Barksalot**: pure comic charm\n- **Noodle**: a goofy name for a dog with unwavering devotion\n- **Meatball**: undignified name, deeply dignified loyalty\n\n**Melancholic**\n- **Ash**: quiet, weathered, and wistful\n- **Juniper**: tender with a hint of loss\n- **Hollis**: an old-soul name for a dog who waits\n\nIf I had to choose one: **Biscuit** for a warm, classic loyal-dog tale, or **Ash** if your story leans toward bittersweet. Tell me the setting and tone, and I can narrow it to one name.",
+        "Here are some names for your loyal dog, chosen to be short, easy to say, and a pleasure to repeat in dialogue:\n\n1. **Bo**: One syllable with a round, open \"o.\" It's easy for young readers to sound out and sits well in lines like \"Come, Bo!\"\n\n2. **Moxie**: The bouncy two-beat rhythm suggests spirit and pluck, and the \"x\" gives it a memorable snap.\n\n3. **Waffles**: The soft, playful sound is fun to say aloud and gives you a warm, cozy tone.\n\n4. **Tuck**: Short and sturdy, with a hard \"k\" ending that makes it feel dependable. It also hints at staying close by.\n\n5. **Juniper (June)**: A longer name with a short nickname, so you can use whichever fits the moment.\n\n6. **Otis**: Strong vowels, a gentle rhythm, and a friendly, old-soul feel that suits a faithful companion.\n\n7. **Pip**: Tiny and quick, ideal for a small dog. The repeated \"p\" is fun in read-aloud passages (\"Pip, Pip, hooray!\").\n\n8. **Moose**: A big, warm \"oo\" sound that is great for a large, gentle dog, and easy to call out across a field.\n\n**My top pick:** **Otis**. It's easy to say, has a steady rhythm for repeated lines (\"Otis waited. Otis always waited.\"), and sounds loyal without being obvious.\n\nIf you tell me the dog's size, breed, or the story's tone, I can narrow these down.",
+        "**Name: Anchor**\n\nAnchor suits a loyal dog because the word already means steadfastness: something that holds fast when everything else drifts. It also gives you a motif you can reuse throughout the story.\n\n**How the motif can recur:**\n- **Early on:** Someone remarks that the dog \"stays put like an anchor\" when a storm, a crowd, or a hard moment would send others running.\n- **Middle:** The owner is adrift, whether through grief, a move, or a lost job. The dog's presence is the one fixed point. You can echo this with sea imagery: tides, ropes, harbors, a worn rope toy.\n- **Turning point:** The dog refuses to leave a spot, a person, or a doorway, and that stubbornness becomes what saves or steadies someone.\n- **Ending:** The owner says the name differently, no longer as a joke or a label but as a statement of what the dog has been to them.\n\n**Alternates, if you want a different feel:**\n- **North** (or **Compass**): guidance rather than staying power. The dog leads the character home or toward a decision.\n- **Ember:** quiet, lasting warmth. It works well for a story set in cold or loss, with recurring images of hearths and glowing coals.\n- **Oak:** rootedness and shelter. It suits a rural or generational story, perhaps with an actual oak tree on the property.\n\nMy pick is **Anchor**, with \"Anch\" or \"Annie\" as a possible nickname if you want something softer for dialogue.",
+        "Provisional name: **Barley**. It's warm, friendly, and suits a steady, devoted dog.\n\nA few quick questions so I can refine it:\n\n1. **Breed and size:** Is your dog a sturdy shepherd, a scrappy terrier, a big retriever, or something else? The name can echo that.\n2. **Setting and era:** Is it a farm, a small town, wartime, a fantasy world, or somewhere else? A 1940s countryside story might suit \"Biscuit\" or \"Jip,\" while a fantasy one might suit something like \"Orrin.\"\n3. **Tone:** Is the story gentle and heartwarming, bittersweet, or adventurous? A tearjerker might call for a soft, simple name, while an adventure might want something bolder, like \"Ranger\" or \"Scout.\"\n\nTell me even one or two of these and I'll offer a tailored shortlist."
+      ],
+      "id": "nb-curated-b1b0aa2062fdabf30542",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "a22d63a66ba14eb56549c37a9c016e99605ac88a8a20fbe3d5f278f302e4ce20",
+      "partition_scores": [
+        8,
+        6,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6
+      ],
+      "prompt": "Name the dog character in my story about a loyal dog.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "2e8ea3954891c218c95a789ea5beed3c8b0bc2bbc5de32c99d7605f16324e466",
+      "utility": 6.087856567056122
+    },
+    "summary": {
+      "mean_distinct": 9.0,
+      "mean_utility": 6.087856567056122,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "b28bc548db2f259dc59e3daaf049ec01b206a8cfc207780134110b44cb3fd0be",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0301",
+      "fixture": false,
+      "intent_sha256": "76e33b9fa367cb6f822cb8375127756b81339152594ac8fb186fe580edbf37ca",
+      "request_sha256": "4360ab671b4366927e0effa385f28aff85da0234d4e6833c90651c47f999728e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.258019257002161,
+        "message_id": "chatcmpl-Edw09t4jmj7wPVQNoF00r8Zy54vGU",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 430,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 393,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2819,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2816,
+            "cached_tokens": 0
+          },
+          "total_tokens": 3249
+        },
+        "refusal": null,
+        "request_id": "req_54f620315b104586b49d6db92626641b",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,4],[1],[2],[3],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2816,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2816,
+            "cached_tokens": 0
+          },
+          "output_tokens": 430,
+          "output_tokens_details": {
+            "reasoning_tokens": 393
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.group",
+      "spent_micro_usd": 1343,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0302",
+      "fixture": false,
+      "intent_sha256": "9ac85f42b997389640723974453621bcaaf9cb3d91f0cf1838a861ad298c85e6",
+      "request_sha256": "35d25cb27dc81e80265668967e4b57b3784ec86f92875e383364b709c4f61f27",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.502544640999986,
+        "message_id": "msg_011CgUYf1A3SxsrU8qM6irki",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYezb4vAMSp5Kn1bR1W",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 489,
+          "output_tokens": 157,
+          "output_tokens_details": {
+            "thinking_tokens": 148
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.00",
+      "spent_micro_usd": 7007,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0303",
+      "fixture": false,
+      "intent_sha256": "40dbe8c76948497374b80dd5e3cf0c134cad7634bb0ba102fd4b93e713a87f2f",
+      "request_sha256": "175d62ef4e6121252fa7b2c06eff24515c03dd0b651fe93041ec2b4fb346129c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.171517382012098,
+        "message_id": "msg_011CgUYfHPcEwZXYmY5eu5A4",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYfH7UwX4pQt1SQyvG3",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1107,
+          "output_tokens": 285,
+          "output_tokens_details": {
+            "thinking_tokens": 276
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.01",
+      "spent_micro_usd": 13926,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0304",
+      "fixture": false,
+      "intent_sha256": "627ddff0cef55eff144c6e20aa5ea4253482b2cc2bd4dbf6e2c8f11e1206d651",
+      "request_sha256": "f632b0bdce853f8c7ad510342d82ed151dbaa17162367cf5b923935f817b5671",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.947830097997212,
+        "message_id": "msg_011CgUYfhKWoo5ABhRWYN4Fw",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYfgrysX396tgqtsJCi",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 918,
+          "output_tokens": 266,
+          "output_tokens_details": {
+            "thinking_tokens": 257
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.02",
+      "spent_micro_usd": 12364,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0305",
+      "fixture": false,
+      "intent_sha256": "1050a24df4f0fabc46d45d43071127b3f0f1bf14b8d2ba0332f2b9c7743d55a9",
+      "request_sha256": "d25c6ee63e8ff99f645ee0a95c419b2ce5b63be7885cfdda94a456301520237e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.5757929800020065,
+        "message_id": "msg_011CgUYg6NMFKijdWdhHwm9b",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYg69x21hGujmMRcV4S",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 680,
+          "output_tokens": 251,
+          "output_tokens_details": {
+            "thinking_tokens": 242
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.03",
+      "spent_micro_usd": 10643,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0306",
+      "fixture": false,
+      "intent_sha256": "7f88eecd0a4eadd2fba519f51c887aebc709d36fc478b4a71435500a721c8a17",
+      "request_sha256": "1a1a7b51cfec5325f59021022d1f994076a4b7cfce4c11132efe0d11f2aba1a6",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.632539494996308,
+        "message_id": "msg_011CgUYgThkQiSBSRdc6H1xU",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYgTVqeHfDrvYBozgQF",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 784,
+          "output_tokens": 267,
+          "output_tokens_details": {
+            "thinking_tokens": 258
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.05",
+      "spent_micro_usd": 11655,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0307",
+      "fixture": false,
+      "intent_sha256": "86c44c1f5210ceb62dc85a99cf8a90aac12d0547d322b43f67c5c2f98a676482",
+      "request_sha256": "1b1165a557b3de7e62e3147b370055aa0b845ed6c616243eb824986a06569993",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.443422216005274,
+        "message_id": "msg_011CgUYgqPEDx8sjqTLXexWk",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYgqAq6mHPeF6aiENax",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 817,
+          "output_tokens": 212,
+          "output_tokens_details": {
+            "thinking_tokens": 203
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.06",
+      "spent_micro_usd": 10324,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0308",
+      "fixture": false,
+      "intent_sha256": "7b6b401d8ec123d2d04f487b20fce38b3d53885624dac0ecabd03f8cd1163070",
+      "request_sha256": "9b906ee5fa588cd607c9cf285690b7ac39d03bfa8dff6f0e557f9dd62868d2ab",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.9255752969911555,
+        "message_id": "msg_011CgUYhCLom7aaV13KDep5k",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYhC995k4tLAhkJZUQN",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 939,
+          "output_tokens": 200,
+          "output_tokens_details": {
+            "thinking_tokens": 191
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.07",
+      "spent_micro_usd": 10665,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0309",
+      "fixture": false,
+      "intent_sha256": "800448f91934d0398b9a84230228413e2d53eae9ad3918dcf50ea890c82482a9",
+      "request_sha256": "42bd26a427c9d4e14b61972658a49661311cbd4460e9ef7e51f1248a538d20a3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.941709733000607,
+        "message_id": "msg_011CgUYhX6AMqEE9iYA7gmMA",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYhWtGFHePdqQ8tjwK3",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 917,
+          "output_tokens": 262,
+          "output_tokens_details": {
+            "thinking_tokens": 253
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.08",
+      "spent_micro_usd": 12249,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0310",
+      "fixture": false,
+      "intent_sha256": "5e0767eaf37d2f6f6277966d93c963023eb69619776ae289bec84310d616f054",
+      "request_sha256": "73d4c2e51a44700667ca60375fe38b10e99220f6174c66b1f403195f176bfea1",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.0368813639943255,
+        "message_id": "msg_011CgUYhv3YLM4GCPghFrGu2",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYhukwD6saxhiuec7MV",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 718,
+          "output_tokens": 203,
+          "output_tokens_details": {
+            "thinking_tokens": 194
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-b8135e80727f14cfba9c3039.quality.09",
+      "spent_micro_usd": 9532,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-b1b0aa2062fdabf30542"
+}

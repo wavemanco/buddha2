@@ -1,0 +1,327 @@
+{
+  "assessment_identity_sha256": "701e78060df8dfa06cd3e1765d8eb1417df9ddb14f66791c65e6a35f18d2a7ec",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 2,
+    "utility": 3.2264359188528133
+  },
+  "native": {
+    "fields": {
+      "distinct": 2,
+      "generation_scores": [
+        8,
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        8,
+        8
+      ],
+      "utility": 3.2264359188528133
+    },
+    "generation_row": {
+      "generations": [
+        "**Fresh, in-season strawberries (or whatever fruit is at its peak right now)**\n\nPeak-season produce turns an ordinary shopping trip into something memorable. It's the one item that reliably delivers a burst of flavor, smells incredible at the store, and encourages you to try something new. Pick the ripest, most fragrant ones you can find, and eat one on the way home.",
+        "**Fresh, in-season produce you've never cooked with before**, like a rare fruit, an heirloom vegetable, or a specialty mushroom.\n\nIt turns an ordinary errand into a small adventure. You get to explore the store, ask questions, and discover new flavors. It also gives you a reason to try a new recipe afterward, which makes the whole experience stick in your memory.",
+        "**Fresh, in-season strawberries (or whichever fruit is at its seasonal peak).**\n\nHere's why this works for a memorable shopping experience:\n\n- **Sensory payoff:** Ripe, fragrant fruit makes the produce aisle feel like a discovery rather than a chore.\n- **Instant reward:** You can taste the difference the same day, which makes the trip feel worthwhile.\n- **Flexibility:** It invites you to browse, smell, and pick the best-looking ones, turning a routine errand into a small ritual.\n- **Easy to elevate:** Pair it with good cream, dark chocolate, or fresh basil for a simple, memorable treat at home.\n\nIf you'd rather go beyond produce, a close runner-up is a **local specialty item**, such as artisanal cheese or fresh bread from a nearby bakery, which adds a sense of place to the trip.",
+        "Fresh, in-season **strawberries** (or whatever fruit is at peak ripeness at your local market).\n\nWhy it works for a memorable shopping experience:\n\n- **It engages your senses.** You can smell ripeness, see the color, and often sample before you buy.\n- **It pushes you to browse differently.** Hunting for the best-looking batch gets you talking to produce staff or farmers and noticing what's actually in season.\n- **It pays off at home.** Peak-season fruit tastes noticeably better than off-season, so the experience carries into eating it.\n\nIf you prefer something savory, a wedge of a cheese you've never tried, picked with help from the cheesemonger, gives a similar discovery-driven result.",
+        "**Fresh, in-season strawberries (or whatever fruit is at peak ripeness).**\n\nWhy it works: Peak-season produce delivers a big sensory payoff, with its aroma, color, and flavor, for very little cost or effort. Picking something truly ripe turns a routine shopping trip into a small moment of discovery, and it can be eaten on its own or used in a dessert, salad, or breakfast.\n\nTip: Smell the fruit at the stem end. A strong, sweet fragrance signals ripeness and flavor.",
+        "**Fresh, in-season fruit from a local farmers' market**, such as ripe peaches in summer or crisp apples in fall.\n\nWhy it stands out:\n- **Sensory payoff:** Truly ripe fruit has a smell, texture, and sweetness that supermarket produce rarely matches.\n- **Discovery:** Sampling and talking with growers often turns up varieties you've never tried.\n- **Versatility:** It works as a snack, in a dessert, or on a cheese board, so the experience extends beyond the shopping trip.\n\nIf you want a pantry option instead, a bottle of high-quality extra virgin olive oil is a close second.",
+        "**Fresh, in-season strawberries (or whatever fruit is at its peak right now).**\n\nPeak-season produce is the easiest way to turn an ordinary grocery run into something memorable. A perfectly ripe strawberry, peach, or mango delivers flavor that's far beyond the supermarket default, and it takes no cooking to enjoy. Pick them by smell and color: they should be fragrant and fully ripe, not pale or hard.\n\nBonus tip: pair them with a good ingredient you don't usually buy, like quality aged balsamic, fresh cream, or a really good dark chocolate, to make the whole trip feel like a small treat.",
+        "**Fresh, in-season strawberries (or whatever fruit is at its seasonal peak).**\n\nHere's why it tops the list: peak-season produce delivers a flavor payoff that's far beyond what you'd expect from a simple grocery item. A perfectly ripe strawberry smells incredible in the aisle, tastes vibrant at home, and turns an ordinary snack, dessert, or breakfast into something special. It's also inexpensive, so the experience feels like an affordable treat rather than a splurge.\n\n**Tip:** Pick them by smell and color. Look for fully red berries with bright green caps and a sweet fragrance, and skip any with white shoulders or moisture pooling in the container.",
+        "**Fresh, in-season produce you've never tried before**, such as a blood orange, a pomelo, or a rainbow heirloom tomato.\n\nPicking up something unfamiliar turns a routine errand into a small discovery. It encourages you to explore the store, ask questions, and experiment with a new recipe at home, and the vivid colors, scents, and flavors make the whole trip more memorable than restocking staples.",
+        "**Fresh, in-season strawberries (or whichever fruit is peak-ripe at the moment).**\n\nWhy this is my top pick:\n\n- **Sensory payoff:** A truly ripe piece of fruit, with its aroma, color, and sweetness, makes an ordinary trip feel special.\n- **Built-in discovery:** Choosing the best one means smelling, inspecting, and sometimes chatting with a produce worker or farmer, which turns a chore into an experience.\n- **Instant reward:** You can eat it right away, so the memory forms the same day.\n\n**Tip:** Shop at a farmers market if you can, and ask the seller what's best that day. Let that answer override your list."
+      ],
+      "id": "nb-curated-055c45e37c6c14cca664",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?"
+    },
+    "partition_fields": {
+      "distinct": 2,
+      "partition": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 2,
+      "generation_scores": [
+        8,
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "**Fresh, in-season strawberries (or whatever fruit is at its peak right now)**\n\nPeak-season produce turns an ordinary shopping trip into something memorable. It's the one item that reliably delivers a burst of flavor, smells incredible at the store, and encourages you to try something new. Pick the ripest, most fragrant ones you can find, and eat one on the way home.",
+        "**Fresh, in-season produce you've never cooked with before**, like a rare fruit, an heirloom vegetable, or a specialty mushroom.\n\nIt turns an ordinary errand into a small adventure. You get to explore the store, ask questions, and discover new flavors. It also gives you a reason to try a new recipe afterward, which makes the whole experience stick in your memory.",
+        "**Fresh, in-season strawberries (or whichever fruit is at its seasonal peak).**\n\nHere's why this works for a memorable shopping experience:\n\n- **Sensory payoff:** Ripe, fragrant fruit makes the produce aisle feel like a discovery rather than a chore.\n- **Instant reward:** You can taste the difference the same day, which makes the trip feel worthwhile.\n- **Flexibility:** It invites you to browse, smell, and pick the best-looking ones, turning a routine errand into a small ritual.\n- **Easy to elevate:** Pair it with good cream, dark chocolate, or fresh basil for a simple, memorable treat at home.\n\nIf you'd rather go beyond produce, a close runner-up is a **local specialty item**, such as artisanal cheese or fresh bread from a nearby bakery, which adds a sense of place to the trip.",
+        "Fresh, in-season **strawberries** (or whatever fruit is at peak ripeness at your local market).\n\nWhy it works for a memorable shopping experience:\n\n- **It engages your senses.** You can smell ripeness, see the color, and often sample before you buy.\n- **It pushes you to browse differently.** Hunting for the best-looking batch gets you talking to produce staff or farmers and noticing what's actually in season.\n- **It pays off at home.** Peak-season fruit tastes noticeably better than off-season, so the experience carries into eating it.\n\nIf you prefer something savory, a wedge of a cheese you've never tried, picked with help from the cheesemonger, gives a similar discovery-driven result.",
+        "**Fresh, in-season strawberries (or whatever fruit is at peak ripeness).**\n\nWhy it works: Peak-season produce delivers a big sensory payoff, with its aroma, color, and flavor, for very little cost or effort. Picking something truly ripe turns a routine shopping trip into a small moment of discovery, and it can be eaten on its own or used in a dessert, salad, or breakfast.\n\nTip: Smell the fruit at the stem end. A strong, sweet fragrance signals ripeness and flavor.",
+        "**Fresh, in-season fruit from a local farmers' market**, such as ripe peaches in summer or crisp apples in fall.\n\nWhy it stands out:\n- **Sensory payoff:** Truly ripe fruit has a smell, texture, and sweetness that supermarket produce rarely matches.\n- **Discovery:** Sampling and talking with growers often turns up varieties you've never tried.\n- **Versatility:** It works as a snack, in a dessert, or on a cheese board, so the experience extends beyond the shopping trip.\n\nIf you want a pantry option instead, a bottle of high-quality extra virgin olive oil is a close second.",
+        "**Fresh, in-season strawberries (or whatever fruit is at its peak right now).**\n\nPeak-season produce is the easiest way to turn an ordinary grocery run into something memorable. A perfectly ripe strawberry, peach, or mango delivers flavor that's far beyond the supermarket default, and it takes no cooking to enjoy. Pick them by smell and color: they should be fragrant and fully ripe, not pale or hard.\n\nBonus tip: pair them with a good ingredient you don't usually buy, like quality aged balsamic, fresh cream, or a really good dark chocolate, to make the whole trip feel like a small treat.",
+        "**Fresh, in-season strawberries (or whatever fruit is at its seasonal peak).**\n\nHere's why it tops the list: peak-season produce delivers a flavor payoff that's far beyond what you'd expect from a simple grocery item. A perfectly ripe strawberry smells incredible in the aisle, tastes vibrant at home, and turns an ordinary snack, dessert, or breakfast into something special. It's also inexpensive, so the experience feels like an affordable treat rather than a splurge.\n\n**Tip:** Pick them by smell and color. Look for fully red berries with bright green caps and a sweet fragrance, and skip any with white shoulders or moisture pooling in the container.",
+        "**Fresh, in-season produce you've never tried before**, such as a blood orange, a pomelo, or a rainbow heirloom tomato.\n\nPicking up something unfamiliar turns a routine errand into a small discovery. It encourages you to explore the store, ask questions, and experiment with a new recipe at home, and the vivid colors, scents, and flavors make the whole trip more memorable than restocking staples.",
+        "**Fresh, in-season strawberries (or whichever fruit is peak-ripe at the moment).**\n\nWhy this is my top pick:\n\n- **Sensory payoff:** A truly ripe piece of fruit, with its aroma, color, and sweetness, makes an ordinary trip feel special.\n- **Built-in discovery:** Choosing the best one means smelling, inspecting, and sometimes chatting with a produce worker or farmer, which turns a chore into an experience.\n- **Instant reward:** You can eat it right away, so the memory forms the same day.\n\n**Tip:** Shop at a farmers market if you can, and ask the seller what's best that day. Let that answer override your list."
+      ],
+      "id": "nb-curated-055c45e37c6c14cca664",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "f94230603f0c95ce9a6295f4a6841b505825668433908f8eb5413a0b7178d390",
+      "partition_scores": [
+        8,
+        8
+      ],
+      "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "5c61dfddb1ad431b0d91597458480c2dee4a3cf460f7641604f9c14d56696113",
+      "utility": 3.2264359188528133
+    },
+    "summary": {
+      "mean_distinct": 2.0,
+      "mean_utility": 3.2264359188528133,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "b0fefdaa658eaf1b8e6f8cd23493bfec0fdd880b562ad73600adb9be782808c0",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0514",
+      "fixture": false,
+      "intent_sha256": "87ac26986316427b41c0aca8bebc6c1780d2615a5eecfbf6e898dfc8a57bef59",
+      "request_sha256": "69a0c5f4fad5b2e840b663e3df4f1862d2ac1a9981faba6320c6062a679fd873",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.8005850999907125,
+        "message_id": "chatcmpl-EdwBrVnA8Cl4DPA1YVLE0S0Lx4pGQ",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 200,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 163,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 1425,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 1422,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1625
+        },
+        "refusal": null,
+        "request_id": "req_7bfdaee5a6174d4c8d273f7662d48b95",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,2,3,4,5,6,7,9],[1,8]]}",
+        "usage": {
+          "cache_creation_input_tokens": 1422,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 1422,
+            "cached_tokens": 0
+          },
+          "output_tokens": 200,
+          "output_tokens_details": {
+            "reasoning_tokens": 163
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-a25edddffc1a33517f63495c.group",
+      "spent_micro_usd": 656,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0515",
+      "fixture": false,
+      "intent_sha256": "eae5395606f0f7f6cc4fa16d6ae275ea5d493feb642d7cd0636be8928cf615e1",
+      "request_sha256": "100687fd5a9f313be0273e54963a05fa55d65d5f94555370c3478aad005bf8dc",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.6001592940010596,
+        "message_id": "msg_011CgUZaPfN78KSTYfVVgAj7",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZaPShzKAwBnYWna37E",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 563,
+          "output_tokens": 107,
+          "output_tokens_details": {
+            "thinking_tokens": 98
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-a25edddffc1a33517f63495c.quality.00",
+      "spent_micro_usd": 6039,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0516",
+      "fixture": false,
+      "intent_sha256": "f12f5936d8ab336714f169640981263010f05b4429e4427b8a9afc85aa0a02fe",
+      "request_sha256": "ffee7b25509d294db917414f1fc4c43c9b21ddcf6bde28fefe7c9ae58011f7c3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.498200353991706,
+        "message_id": "msg_011CgUZad2HbeMVMDdpbupWc",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZacqrmwav4EtQdebYi",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 562,
+          "output_tokens": 181,
+          "output_tokens_details": {
+            "thinking_tokens": 172
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-a25edddffc1a33517f63495c.quality.01",
+      "spent_micro_usd": 8069,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-055c45e37c6c14cca664"
+}

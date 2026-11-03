@@ -1,0 +1,132 @@
+{
+  "kind": "independent-am1-admission-evidence-review",
+  "specification": "0.16",
+  "reviewer": "/root/am1_admission",
+  "observed_at_utc": "2026-10-27T05:34:45Z",
+  "observed_local_date": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "verdict": "conditional-public-contract-pass",
+  "conclusion": "The full documented context window can support a conservative billable-input reservation envelope for these bounded, text-only, single-request roles. This is a source-supported inference combining window, usage-category and billing documentation, not a live billing certification or provider indemnity.",
+  "maximum_billable_input_tokens": {
+    "answer": 1000000,
+    "plan": 1000000,
+    "rank": 1000000,
+    "group": 1050000,
+    "quality": 1000000
+  },
+  "output_reservation_tokens": {
+    "answer": 4096,
+    "plan": 4096,
+    "rank": 4096,
+    "group": 128000,
+    "quality": 16000
+  },
+  "sources": [
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "title": "Claude context windows",
+      "retrieved": true,
+      "line_references": ["76-98", "160-164"],
+      "direct_documented_facts": [
+        "The context window includes the request and its generated response.",
+        "Ordinary input, cache-read input and cache-creation input all count toward the window.",
+        "Claude Sonnet 5.5 and Claude Opus 5 have a default 1M-token window.",
+        "Input alone above the model window is rejected as an invalid request.",
+        "Current-turn thinking is output within max_tokens; reaching the window can stop generation."
+      ],
+      "inference": "For the exact single-turn Messages routes without compaction or server tools, use 1,000,000 as the conservative combined ordinary/read/write input envelope, reserving the transmitted output cap separately without subtracting it from the input envelope."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "title": "Claude structured outputs",
+      "retrieved": true,
+      "line_references": ["377-383"],
+      "direct_documented_facts": [
+        "Structured output formatting injects additional system instructions and bills their tokens as input."
+      ],
+      "inference": "The injected instructions belong to the documented input/context relationship; reserving the entire context window avoids guessing a per-schema expansion allowance."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "title": "Claude prompt caching",
+      "retrieved": true,
+      "line_references": ["355-384", "936-955"],
+      "direct_documented_facts": [
+        "Total input is the sum of input_tokens, cache_read_input_tokens and cache_creation_input_tokens; input_tokens alone excludes cache categories."
+      ],
+      "inference": "Validate and reserve against the combined input categories, not input_tokens alone."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/conversation-state",
+      "title": "OpenAI conversation state",
+      "retrieved": true,
+      "line_references": ["2675-2688"],
+      "direct_documented_facts": [
+        "The context window is the maximum total tokens used in a single request, including input, output and reasoning.",
+        "The explanation explicitly includes Chat Completions input, output and reasoning."
+      ],
+      "inference": "A full-window input envelope bounds prompt input conservatively for the exact single-turn text-only Chat Completions role, with its output maximum reserved separately."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "title": "GPT-5.6 Luna model",
+      "retrieved": true,
+      "line_references": ["971-973", "1018-1019", "1045-1047"],
+      "direct_documented_facts": [
+        "The model supports Chat Completions, a 1,050,000-token context window and 128,000 maximum output tokens.",
+        "Input above 272,000 tokens incurs higher full-request input/output prices; cache writes have a premium."
+      ],
+      "inference": "Use M=1,050,000 and O=128,000 for grouping; a reservation using this envelope must include the documented higher context rates rather than assuming short-context rates from visible payload size."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "title": "OpenAI prompt caching",
+      "retrieved": true,
+      "line_references": ["1049-1057", "1529-1533", "1763-1794"],
+      "direct_documented_facts": [
+        "The rendered prefix includes provider-hidden system content and schemas.",
+        "Reported cached input excludes hidden tokens.",
+        "The cost examples distinguish ordinary input, cache reads and writes; the detailed dual-lifetime example is explicitly Responses-specific."
+      ],
+      "inference": "Hidden formatting cannot justify a local byte-to-token promise. Its existence does not enlarge a documented total-window envelope. Do not transplant Responses-only dual-lifetime usage fields into Chat settlement by assumption."
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+      "title": "Create chat completion",
+      "retrieved": true,
+      "line_references": ["1609-1623", "1725-1732", "2433-2484"],
+      "direct_documented_facts": [
+        "The exact Chat route documents prompt_tokens_details.cache_write_tokens as a count of prompt tokens written to cache.",
+        "Implicit caching is the default; the current request-level TTL default and only supported value is 30m.",
+        "Omitted service_tier defaults to auto and follows project configuration, which is default unless otherwise configured.",
+        "The returned service tier reports the processing mode actually used."
+      ],
+      "inference": "The previous Responses-only cache-write documentation gap has a direct Chat reference. Usage normalization must preserve this possibly-extra pinned-SDK field, validate category consistency and retain liabilities on unknowns. Omitted service tier cannot itself certify standard pricing."
+    }
+  ],
+  "required_preflight_and_review": [
+    "Independent billing review must establish applicable public pay-as-you-go rates, tiers, cache writes, region and context modifiers for every exact role.",
+    "Bind the exact public-PAYG/profile and future launch conditions; unknown custom contracts or unsupported profiles remain blocked.",
+    "Preserve the existing payload-byte acceptance sets and scientific request bodies, role models, schemas, reasoning settings, native endpoints and output caps.",
+    "Actual pinned SDK/mock HTTP tests must preserve and validate ordinary/read/write usage, total output including reasoning, service tier and extra usage fields.",
+    "Invalid category sums, unknown categories, missing usage, ambiguous delivery or over-envelope usage retain the reservation and halt; they do not permit retries.",
+    "Do not enable a live launch or use old unapproved dollar caps on this review alone."
+  ],
+  "limitations": [
+    "The M values are conservative documented-contract inferences, not exact request token predictions, proof of an 8k/64k provider-input limit, invoice verification or account/model access checks.",
+    "No provider invoice, authenticated endpoint, account configuration, returned model profile or actual usage was inspected.",
+    "The documented over-limit rejection is not an independently observed test and does not establish an unconditional invoice guarantee for arbitrary provider errors.",
+    "Unknown or failed delivery must remain a reserved liability under the documented operating envelope until reconciled; no failed request is assumed free.",
+    "Provider behavior outside its documented contract cannot be certified by offline software. Any such observation invalidates the relevant control profile and halts further dispatch.",
+    "No context compaction, server tools, provider fallback, extra completions, new endpoint or model upgrade is covered."
+  ],
+  "activity": {
+    "public_documentation_read": true,
+    "project_files_read_only_except_this_review": true,
+    "provider_calls": 0,
+    "sdk_clients_invoked": 0,
+    "credential_accesses": 0,
+    "experiments": 0,
+    "api_spend_usd": "0.00"
+  }
+}

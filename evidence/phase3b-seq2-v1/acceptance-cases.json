@@ -1,0 +1,47 @@
+{
+  "all_twelve_assessment_targets_required": true,
+  "authorization_sha256": "40847db84f9312e69c0fa3679d6d6bb12da35f3dccf3b183fd140b6b8cbfe284",
+  "cases": [
+    {
+      "expected": "real native modes seq/k2; two agg2 bases, six seq2 stages, two checkpoints; upstream unchanged",
+      "id": "S2-1"
+    },
+    {
+      "expected": "exact current c1 carry, full cumulative pool/notes/two references; changed c1 then KEEP preserves c1",
+      "id": "S2-2"
+    },
+    {
+      "expected": "anonymous c1/c2-only native tool selector, full reads, attempts1, both choices valid; missing/invalid/fallback cannot satisfy full phase; fixed blind twelve choice",
+      "id": "S2-3"
+    },
+    {
+      "expected": "grader/other-arm/identity exclusion, private/path/symlink/tamper/foreign proof containment before intent",
+      "id": "S2-4"
+    },
+    {
+      "expected": "signed history complete; realistic cumulative contexts;2MiB payload, independent full-model-context liability; oversize rejects before intent",
+      "id": "S2-5"
+    },
+    {
+      "expected": "all role costs and actual SDK invocation exactlyonce; all overlapping caps,24turns/two native shape attempts,unknown no resend,known failure preservation,deadlines/cancellation/owner",
+      "id": "S2-6"
+    },
+    {
+      "expected": "four-prompt actual engine/OpenCode/SDK mock;12targets->8aliases;real host launcher;separate actual-keyless operational rehearsal;zero-call cold saved replay",
+      "id": "S2-7"
+    },
+    {
+      "expected": "first/closure actual passive SDK-free exports within original600s,real dates/config/audits/CSV,c1/c2selected views,operator evidence from start,source/archive integrity independent",
+      "id": "S2-8"
+    }
+  ],
+  "created_at_utc": "2026-11-02T23:59:40.769119+00:00",
+  "definition_sha256": "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e",
+  "first_counted_native_all_six_normal_and_normal_selector_required": true,
+  "frozen_before_product_implementation": true,
+  "kind": "phase3b-s2-acceptance-cases-v1",
+  "normal_KEEP_allowed": true,
+  "offline_provider_calls_and_spend": 0,
+  "original_folder_access_authorized": false,
+  "positive_gain_required": false
+}

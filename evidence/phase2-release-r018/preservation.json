@@ -1,0 +1,37 @@
+{
+  "kind": "p2r-historical-preservation-check",
+  "baseline_sha256": "b2b37aa7d5681479344d59f843d4177f5f5be855ab04b2d0f12099bdc37ace1b",
+  "baseline_files": 11794,
+  "unchanged_files": 11788,
+  "intentional_current_changes": {
+    "src/buddha2/__main__.py": {
+      "before": "2ac36f721f4a6b2d5e87db0e62eda9d72088e1104f3cadac6ce48ff6bb34219a",
+      "after": "2714bf3a2444998203ff6e148caa6903d835684b010c8bd8b977bf545bceaea4"
+    },
+    "AGENTS.md": {
+      "before": "2a5a0619ec26a61a415b41ff5a62a9a371791f18812c4b05dd1b1596456354ad",
+      "after": "c02ce76018beb2b5cd7ea0b0a33443f807f6e0465ce843d828b07baeef96eb29"
+    },
+    "EXPERIMENT_PLAN.md": {
+      "before": "677a7b93d4406ad2c537d0d54f71c21dd76a207fb3164d6b394f7039ff5b2930",
+      "after": "83fa660458926c46b054aede7e0ccfac1d9b147798d00d861ae10d9ce44eac2c"
+    },
+    "PHASE_DEFINITIONS.md": {
+      "before": "8a30fedda1f4af983eb43df5ab161345d01284604916e8a6e99aa4e7e413d798",
+      "after": "82b819dfde3585012e8e44b5ec45bc76c4b7e45a9347c6ccb32a3c0c04cfb13d"
+    },
+    "PRE_PHASE2B_BLOCK.md": {
+      "before": "7e472d13e3ebc1e75ceed3f59ef116851fe346356ed07391f658d42e1f7af804",
+      "after": "29b75b854e61cdd0058d3fc18953008eb74f028bfef2b06216771153a3ee357a"
+    },
+    "README.md": {
+      "before": "2741b3b3b4fd97fd86eab6fea6d6bb7023551729223d5955fbf0ffbf65e90261",
+      "after": "59f21b6a7071aeaaf61a9760282621bc3aaa956677139e72fc49b698d9b40ae2"
+    }
+  },
+  "missing": [],
+  "unexpected_changes": {},
+  "original_folder_accessed": false,
+  "original_boundary_basis": "No enumeration/hash/read of protected original. All task commands and mounts confined to new project.",
+  "status": "pass"
+}

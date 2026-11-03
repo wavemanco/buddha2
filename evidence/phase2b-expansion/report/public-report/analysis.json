@@ -1,0 +1,317 @@
+{
+  "accounted_total_micro_usd": 5983504,
+  "assessment_records": 68,
+  "contrasts": {
+    "B_minus_A": null,
+    "C_minus_B": null
+  },
+  "distinct_range": {
+    "A": {
+      "maximum": 7.5,
+      "minimum": 1.0
+    },
+    "B": {
+      "maximum": 10.0,
+      "minimum": 1.0
+    },
+    "C": {
+      "maximum": 10.0,
+      "minimum": 1.0
+    }
+  },
+  "distinct_scored_order_coverage": {
+    "A": 24,
+    "B": 24,
+    "C": 20
+  },
+  "first_answer_quality": {
+    "mean_of_prompt_means": {
+      "A": 8.25,
+      "B": 8.208333333333334,
+      "C": null
+    },
+    "prompt_mean_range": {
+      "A": {
+        "maximum": 9.0,
+        "minimum": 7.5
+      },
+      "B": {
+        "maximum": 9.0,
+        "minimum": 7.0
+      },
+      "C": {
+        "maximum": 9.0,
+        "minimum": 7.0
+      }
+    },
+    "scored_order_coverage": {
+      "A": 24,
+      "B": 24,
+      "C": 20
+    }
+  },
+  "fixture": false,
+  "generation_ranking_cost_micro_usd_by_candidate": {
+    "A": 635220,
+    "B": 1320486,
+    "C": null
+  },
+  "head_quality": {
+    "mean_of_prompt_means": {
+      "A": 8.259970238095239,
+      "B": 7.78844246031746,
+      "C": null
+    },
+    "orders_with_head_scores": {
+      "A": 24,
+      "B": 24,
+      "C": 20
+    },
+    "prompt_mean_range": {
+      "A": {
+        "maximum": 9.0,
+        "minimum": 7.5
+      },
+      "B": {
+        "maximum": 8.9,
+        "minimum": 6.472222222222222
+      },
+      "C": {
+        "maximum": 8.778571428571428,
+        "minimum": 6.727777777777778
+      }
+    }
+  },
+  "independent_prompts": 12,
+  "kind": "phase2-native-descriptive-analysis-v1",
+  "latency_seconds_by_role": {
+    "answer": {
+      "maximum": 15.703435102986987,
+      "measured_requests": 480,
+      "minimum": 0.7433293089998187,
+      "total": 1937.0789717091393
+    },
+    "group": {
+      "maximum": 9.221932608998031,
+      "measured_requests": 68,
+      "minimum": 1.5452554910007166,
+      "total": 220.38499482886982
+    },
+    "plan": {
+      "maximum": 16.57215819999692,
+      "measured_requests": 24,
+      "minimum": 4.6124553170084255,
+      "total": 187.76282880202052
+    },
+    "quality": {
+      "maximum": 10.101769718006835,
+      "measured_requests": 395,
+      "minimum": 1.5400265350035625,
+      "total": 1434.6639811308269
+    },
+    "rank": {
+      "maximum": 6.185913448003703,
+      "measured_requests": 24,
+      "minimum": 2.161062301005586,
+      "total": 75.69414717200561
+    }
+  },
+  "limitations": [
+    "Development only; fixtures never establish model effectiveness or select a real seed.",
+    "Ranges describe the twelve within-prompt repeat means; missing metrics stay missing.",
+    "C includes its B parent generation cost for candidate comparison; total ledger cost counts every request once.",
+    "B/C presentations share texts; counts are not independent tasks or additional generated answers.",
+    "Head-quality averages weight orders/prompts, not pooled heads; first answer is the first native group head."
+  ],
+  "mean_distinct": {
+    "A": 2.0833333333333335,
+    "B": 7.916666666666667,
+    "C": null
+  },
+  "mean_utility": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "missing_orders": 4,
+  "order_statuses": {
+    "scored": 68
+  },
+  "paired_prompt_means": [
+    {
+      "B_minus_A": 0.11202902496016698,
+      "C_minus_B": 0.0,
+      "means": {
+        "A": 1.680435374402507,
+        "B": 1.7924643993626739,
+        "C": 1.7924643993626739
+      },
+      "task_id": "nb-curated-9c418f063bc433264d29"
+    },
+    {
+      "B_minus_A": 6.3507496631027305,
+      "C_minus_B": null,
+      "means": {
+        "A": 2.4753933355198527,
+        "B": 8.826142998622583,
+        "C": null
+      },
+      "task_id": "nb-curated-0ac59a48456661d0d8d5"
+    },
+    {
+      "B_minus_A": 6.026753549280268,
+      "C_minus_B": 0.34603660023019067,
+      "means": {
+        "A": 2.0165224492830083,
+        "B": 8.043275998563276,
+        "C": 8.389312598793467
+      },
+      "task_id": "nb-curated-7a77e85421d12bca8653"
+    },
+    {
+      "B_minus_A": 1.6451508991173496,
+      "C_minus_B": 0.42300525097426966,
+      "means": {
+        "A": 4.775458701677598,
+        "B": 6.420609600794948,
+        "C": 6.8436148517692175
+      },
+      "task_id": "nb-curated-b1b0aa2062fdabf30542"
+    },
+    {
+      "B_minus_A": 6.429278073347988,
+      "C_minus_B": -0.18545106262451938,
+      "means": {
+        "A": 2.0165224492830083,
+        "B": 8.445800522630996,
+        "C": 8.260349460006477
+      },
+      "task_id": "nb-curated-510dc2800c595827238e"
+    },
+    {
+      "B_minus_A": 5.885700424535872,
+      "C_minus_B": null,
+      "means": {
+        "A": 2.0165224492830083,
+        "B": 7.9022228738188804,
+        "C": null
+      },
+      "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+    },
+    {
+      "B_minus_A": 5.289904243970638,
+      "C_minus_B": -0.054486615826067286,
+      "means": {
+        "A": 2.691098501339157,
+        "B": 7.981002745309795,
+        "C": 7.926516129483728
+      },
+      "task_id": "nb-curated-055c45e37c6c14cca664"
+    },
+    {
+      "B_minus_A": 4.938709361390535,
+      "C_minus_B": null,
+      "means": {
+        "A": 1.792464399362674,
+        "B": 6.731173760753209,
+        "C": null
+      },
+      "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+    },
+    {
+      "B_minus_A": 5.263886322079869,
+      "C_minus_B": -0.04481447792710558,
+      "means": {
+        "A": 1.792464399362674,
+        "B": 7.056350721442543,
+        "C": 7.011536243515438
+      },
+      "task_id": "nb-curated-4b5afc9736f082c708eb"
+    },
+    {
+      "B_minus_A": 4.497413746326309,
+      "C_minus_B": 0.1094063484098804,
+      "means": {
+        "A": 3.203262939097853,
+        "B": 7.7006766854241615,
+        "C": 7.810083033834042
+      },
+      "task_id": "nb-curated-0589e47205e5256cc5b3"
+    },
+    {
+      "B_minus_A": -3.500580987900837,
+      "C_minus_B": 1.1025933202853393,
+      "means": {
+        "A": 6.711525712428599,
+        "B": 3.210944724527762,
+        "C": 4.313538044813101
+      },
+      "task_id": "nb-curated-6584de30a11a0e08ca32"
+    },
+    {
+      "B_minus_A": 3.994333403425861,
+      "C_minus_B": -0.30826946137391165,
+      "means": {
+        "A": 1.792464399362674,
+        "B": 5.786797802788535,
+        "C": 5.4785283414146235
+      },
+      "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+    }
+  ],
+  "response_presentations": {
+    "A": {
+      "missing": 0,
+      "recorded": 240,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 240
+      }
+    },
+    "B": {
+      "missing": 0,
+      "recorded": 240,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 240
+      }
+    },
+    "C": {
+      "missing": 40,
+      "recorded": 200,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 200
+      }
+    }
+  },
+  "scheduled_order_assessments": 72,
+  "scored_orders": 68,
+  "unique_request_cost_micro_usd_by_role": {
+    "answer": 1755108,
+    "group": 66448,
+    "plan": 200598,
+    "quality": 3660324,
+    "rank": 301026
+  },
+  "unresolved_reservation_micro_usd": 0,
+  "utility_range": {
+    "A": {
+      "maximum": 6.711525712428599,
+      "minimum": 1.680435374402507
+    },
+    "B": {
+      "maximum": 8.826142998622583,
+      "minimum": 1.7924643993626739
+    },
+    "C": {
+      "maximum": 8.389312598793467,
+      "minimum": 1.7924643993626739
+    }
+  },
+  "utility_scored_order_coverage": {
+    "A": 24,
+    "B": 24,
+    "C": 20
+  }
+}

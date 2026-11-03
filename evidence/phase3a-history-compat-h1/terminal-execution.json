@@ -1,0 +1,42 @@
+{
+  "api_spend": 0,
+  "author": "/root/r3_live_semantics",
+  "executions": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "followups.phase3a_history_compat_h1.verify",
+        "--output",
+        "runs/phase3a-history-compat-h1/verification-v3"
+      ],
+      "session_id": 43887,
+      "source_map_sha256": "9657015c38d4b6101bef2b1ece6ca39d9a30ebf70a7cd2fb9b4c14f624c166d6",
+      "summary_sha256": "f7b24da3daeeb0da645e94483035447d658f8a747a5c4d0204919f5fe275aca8",
+      "terminal_exit_code": 0,
+      "tool": "exec_command then write_stdin",
+      "version": "verification-v3",
+      "workdir": "C:\\Users\\arvik\\code\\research\\Buddha2"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "runs/phase3a-history-compat-h1/verification-v4/preservation-amendment.py"
+      ],
+      "session_id": 91764,
+      "source_map_sha256": "0ab7775b63193b5de354f33ffa46ad8086e6a080bae6bd757090d0003769f813",
+      "summary_sha256": "d67a8a09e6df89d3863e84f0c53b43225a3d7e64023ed316db625a8289df41d9",
+      "terminal_exit_code": 0,
+      "tool": "exec_command then write_stdin",
+      "version": "verification-v4",
+      "workdir": "C:\\Users\\arvik\\code\\research\\Buddha2"
+    }
+  ],
+  "independent_review": false,
+  "kind": "author terminal-execution attestation",
+  "provider_calls": 0,
+  "source": "actual tool session terminal results; durable author attestation, not a new execution",
+  "v3_results_or_v4_proof_files_modified": false
+}

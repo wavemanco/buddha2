@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "fixture": true,
+  "task_id": "phase0-reading-room",
+  "task_sha256": "89fb4dc6c62553694510d4dc0e4f99258ed023bb1a6653c92da87406f7556fd1",
+  "response_texts_sha256": "7920319ad1c5272ee9bc9475860666d5a933b2c12413a79ce235236398b8cd7c",
+  "version": "1.1",
+  "patience": 0.8,
+  "partition": [0, 0, 1, 1, 2, 2, 3, 3, 4, 4],
+  "head_scores": [9, null, 8, null, 7, null, 6, null, 5, null],
+  "expected": {"distinct": 5, "utility": 4.346485261239209}
+}

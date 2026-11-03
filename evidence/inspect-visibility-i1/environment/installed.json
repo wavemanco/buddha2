@@ -1,0 +1,16 @@
+{
+  "args": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "buddha2-inspect-i1:0.3.286",
+    "cat",
+    "/installed.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "agent-client-protocol==0.12.1\naiobotocore==3.10.0\naiohappyeyeballs==2.7.1\naiohttp==3.14.5\naioitertools==0.13.0\naiosignal==1.4.0\nannotated-doc==0.0.5\nannotated-types==0.8.0\nanyio==4.15.1\nattrs==26.1.0\nbeautifulsoup4==4.15.0\nboto3==1.43.117\nbotocore==1.43.117\ncertifi==2026.10.23\ncharset-normalizer==3.5.2\nclick==8.5.0\ndebugpy==1.8.22\ndocstring_parser==0.18.0\nfastapi==0.162.0\nfrozenlist==1.8.0\nfsspec==2026.6.0\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nidna==3.20\nijson==3.6.0\ninspect_ai==0.3.286\njmespath==1.1.0\njsonlines==4.0.0\njsonpatch==1.38\njsonpath-ng==1.15.0\njsonpointer==3.6\njsonref==1.1.0\njsonschema==4.26.0\njsonschema-specifications==2025.9.1\nlinkify-it-py==2.2.0\nmarkdown-it-py==4.2.0\nmdit-py-plugins==0.6.1\nmdurl==0.1.2\nmmh3==5.3.1\nmultidict==7.2.1\nnest-asyncio2==1.7.4\nnumpy==2.5.4\nopentelemetry-api==1.45.2\npathlib_abc==0.5.2\npip==25.0.1\nplatformdirs==4.14.0\npropcache==0.5.4\npsutil==7.2.2\npydantic==2.14.2\npydantic_core==2.50.2\nPygments==2.21.0\npython-dateutil==2.9.0.post0\npython-dotenv==1.2.4\nPyYAML==6.0.3\nreferencing==0.37.0\nregex==2026.9.29\nrequests==2.34.2\nrich==15.0.0\nrpds-py==2026.9.1\ns3fs==2026.6.0\ns3transfer==0.19.3\nsemver==3.1.0\nshortuuid==1.0.13\nsix==1.17.0\nsniffio==1.3.1\nsoupsieve==3.0.4\nstarlette==1.10.0\ntenacity==9.2.1\ntextual==8.2.8\ntiktoken==0.14.0\ntyping-inspection==0.4.4\ntyping_extensions==4.16.0\nuniversal_pathlib==0.3.10\nurllib3==2.8.0\nuvicorn==0.54.0\nwrapt==2.5.2\nyarl==1.25.1\nzipfile-zstd==0.0.4\nzipp==4.1.2\nzstandard==0.25.0\n"
+}

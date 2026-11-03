@@ -1,0 +1,88 @@
+{
+  "SDK_constructions": 0,
+  "attempts": 91,
+  "cell_accounting": {
+    "p3a-01:adaptive": {
+      "attempts": 18,
+      "known": 17,
+      "reserved_micro_usd": 11440000,
+      "spent_micro_usd": 273795,
+      "unknown": 1
+    },
+    "p3a-01:fixed": {
+      "attempts": 73,
+      "known": 73,
+      "reserved_micro_usd": 0,
+      "spent_micro_usd": 1128065,
+      "unknown": 0
+    }
+  },
+  "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+  "cost_method": "Independent Decimal per-request recomputation using frozen category rates, rounded upward to micro-USD. Opus rates include the 1.1 geography envelope; output charged once.",
+  "credential_binding_or_lock_contents_read": false,
+  "cumulative_attempts": 177,
+  "cumulative_known_micro_usd": 2695297,
+  "cumulative_known_plus_liability_micro_usd": 14135297,
+  "event_count": 182,
+  "fixture": false,
+  "journal_sha256": "86f4af3164aed3c09e20c0f21695f9515318d1d24eb2cc6f284b27e29251c6e5",
+  "kind": "phase3a-r1-live-stop-cost-audit-v1",
+  "known_requests": 90,
+  "last_event_sha256": "0409bd41e05888a51978ba3eadc727e8ba73bc8dbec414209fc6af28d847b992",
+  "native_assessments": 0,
+  "new_provider_calls": 0,
+  "original_folder_accessed": false,
+  "passed": true,
+  "pending": 0,
+  "primary_scores": 0,
+  "prior_known_requests": 86,
+  "prior_spent_micro_usd": 1293437,
+  "reserved_micro_usd": 11440000,
+  "returned_editor_direct_tool_blocks": 13,
+  "role_accounting": {
+    "answer": {
+      "attempts": 70,
+      "known": 70,
+      "reserved_micro_usd": 0,
+      "spent_micro_usd": 699630,
+      "unknown": 0
+    },
+    "editor": {
+      "attempts": 6,
+      "known": 5,
+      "reserved_micro_usd": 11440000,
+      "spent_micro_usd": 134743,
+      "unknown": 1
+    },
+    "fixed_selector": {
+      "attempts": 1,
+      "known": 1,
+      "reserved_micro_usd": 0,
+      "spent_micro_usd": 334389,
+      "unknown": 0
+    },
+    "plan": {
+      "attempts": 7,
+      "known": 7,
+      "reserved_micro_usd": 0,
+      "spent_micro_usd": 71010,
+      "unknown": 0
+    },
+    "rank": {
+      "attempts": 7,
+      "known": 7,
+      "reserved_micro_usd": 0,
+      "spent_micro_usd": 162088,
+      "unknown": 0
+    }
+  },
+  "scientific_complete": false,
+  "source_files_verified": 149,
+  "source_sha256": "16d70628c1f3bc1c18281b0ba2f0739724932132825297b29bb3b2996d1bba2e",
+  "spent_micro_usd": 1401860,
+  "study_sha256": "44d12d6ff196a9481bd6106541ad62d8161fff50fa7a1fd6eef899df4f627012",
+  "unknown": 1,
+  "unknown_cause": "No retained response or typed exception; cause and actual charge unestablished.",
+  "unknown_reservation_is_confirmed_spend": false,
+  "unknown_slot": "p3a-01.adaptive.editor.dom1.a1.t06"
+}

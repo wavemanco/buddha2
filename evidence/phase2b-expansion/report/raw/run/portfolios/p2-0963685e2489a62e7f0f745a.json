@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-37e868b94ab9a66ddeb537fc8749f3b4a746632345f74107215979764785214b",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-0963685e2489a62e7f0f745a.answer.00",
+      "p2-0963685e2489a62e7f0f745a.answer.01",
+      "p2-0963685e2489a62e7f0f745a.answer.02",
+      "p2-0963685e2489a62e7f0f745a.answer.03",
+      "p2-0963685e2489a62e7f0f745a.answer.04",
+      "p2-0963685e2489a62e7f0f745a.answer.05",
+      "p2-0963685e2489a62e7f0f745a.answer.06",
+      "p2-0963685e2489a62e7f0f745a.answer.07",
+      "p2-0963685e2489a62e7f0f745a.answer.08",
+      "p2-0963685e2489a62e7f0f745a.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-542e2b94fad0406f5ea1b38d",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.00",
+      "status": "ok",
+      "text": "There's no single agreed-upon answer, since \"quality of life\" depends on what you measure and what you value. But some cities regularly score poorly in rankings that weigh crime, economic conditions, health, education, housing, and infrastructure:\n\n- **Memphis, TN**: High violent crime rates and high poverty.\n- **St. Louis, MO**: Very high violent crime and population decline.\n- **Detroit, MI**: Improving in many ways, but still struggles with poverty, blight, and crime.\n- **Cleveland, OH**: High poverty and weak economic mobility.\n- **Birmingham, AL**: High crime and poor health outcomes.\n- **Baltimore, MD**: High homicide rates and entrenched inequality.\n- **Jackson, MS**: Chronic water system failures and high poverty.\n- **Stockton and Fresno, CA**: Poor air quality, high poverty, and unaffordable housing relative to wages.\n\nOther factors can drag down quality of life even in wealthy cities, such as extreme housing costs (San Francisco, Los Angeles), homelessness, or traffic and long commutes.\n\nRankings differ by source (U.S. News, Niche, WalletHub, etc.), and averages hide big differences between neighborhoods. A city that ranks poorly overall may still have excellent areas, and the people who live there often have strong attachments to it. If you tell me which factors matter most to you, such as cost of living, safety, climate, or jobs, I can narrow it down."
+    },
+    {
+      "id": "response-1d783cecfa6f1e9216fb0c50",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.01",
+      "status": "ok",
+      "text": "Quality of life is subjective and depends on what you measure, so no single city is objectively \"the worst.\" But some cities regularly rank poorly in major surveys (such as U.S. News, WalletHub, and Numbeo) because of high crime, poverty, weak public services, or other factors.\n\n**Cities that often rank near the bottom:**\n- **Detroit, MI:** High poverty, population loss, and strained city services, though downtown and midtown have seen revitalization.\n- **Memphis, TN:** Very high violent crime rates and high poverty.\n- **St. Louis, MO:** One of the highest homicide rates in the country, plus population decline.\n- **Cleveland, OH:** High poverty and economic struggles.\n- **Baltimore, MD:** High violent crime and wide disparities between neighborhoods.\n- **Birmingham, AL:** High crime and poverty.\n- **Jackson, MS:** Persistent water infrastructure problems and high crime.\n- **Stockton and Bakersfield, CA:** Pollution, unemployment, and high crime relative to cost of living.\n\n**Caveats:**\n- Rankings vary by methodology. Some weight crime, others housing costs, commute times, or climate.\n- City-limit statistics can mislead. Many of these cities have safe, pleasant neighborhoods and thriving areas.\n- Expensive cities like San Francisco, Los Angeles, and New York often score poorly on affordability and homelessness, even though they have strong job markets and amenities.\n\nIf you tell me what matters to you (safety, affordability, weather, jobs), I can point to cities that fit or ones to avoid."
+    },
+    {
+      "id": "response-af75201cdf66c91b2f455353",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.02",
+      "status": "ok",
+      "text": "Quality of life is subjective and depends on what you value, so no city is objectively \"terrible.\" But some cities consistently score poorly on common metrics like crime, cost of living relative to income, poverty, health outcomes, and school quality.\n\n**Cities that often rank near the bottom in quality-of-life studies:**\n\n- **Memphis, TN**: High violent crime rates, high poverty, and weak school outcomes.\n- **St. Louis, MO**: Very high violent crime, population decline, and concentrated poverty in parts of the city.\n- **Detroit, MI**: Improving in some areas, but still faces high poverty, blight, and crime.\n- **Cleveland, OH**: High poverty rates and economic struggles.\n- **Baltimore, MD**: High violent crime and stark neighborhood inequality.\n- **Birmingham, AL**: Poverty, crime, and health disparities.\n- **Jackson, MS**: Infrastructure problems, including water system failures, along with high crime and poverty.\n\n**Cities that rank poorly for different reasons:**\n\n- **San Francisco, Los Angeles, and New York**: Extremely high housing costs, homelessness, and congestion, even though they offer strong job markets and amenities.\n- **Bakersfield and Fresno, CA**: Poor air quality and lower incomes.\n\n**Caveats:**\n- Rankings vary by source (U.S. News, Niche, WalletHub, etc.) and the weight they give to each factor.\n- City-level data can hide big differences between neighborhoods. Many people in these cities have a high quality of life.\n- Metro areas, suburbs, and the city proper often differ sharply.\n\nIf you tell me what matters most to you (affordability, safety, climate, jobs, culture), I can help narrow down which places to avoid or consider."
+    },
+    {
+      "id": "response-c4e1c6b433b887dda1621a43",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.03",
+      "status": "ok",
+      "text": "Quality of life is subjective and rankings vary by methodology, but a few cities regularly score poorly on common measures like crime, cost of living, housing, health outcomes, education, and economic opportunity.\n\n**Cities that often rank near the bottom:**\n\n- **Memphis, TN**: Consistently high violent crime rates, high poverty, and weak public school outcomes.\n- **Detroit, MI**: Has improved in some areas, but still faces high poverty, blight, and elevated crime.\n- **St. Louis, MO**: Very high violent crime per capita, population decline, and deep economic segregation.\n- **Cleveland, OH**: High poverty and health disparities.\n- **Baltimore, MD**: High violent crime and drug-related deaths, plus entrenched inequality.\n- **Birmingham, AL**: High crime and poverty, with weak health outcomes.\n- **San Bernardino, CA**: High poverty, crime, and housing costs relative to local wages.\n\n**Caveats:**\n- City-limits rankings can be misleading. Metro areas often include wealthy suburbs, and conditions differ greatly by neighborhood.\n- Different studies weigh factors differently. A city can score poorly on crime but well on arts, universities, or job growth.\n- Some high-cost cities (like San Francisco or Los Angeles) have excellent amenities but poor affordability, homelessness, and property crime, so they rank badly on some lists and well on others.\n\nIf you tell me what matters most to you (safety, affordability, climate, jobs, schools), I can point to more relevant comparisons."
+    },
+    {
+      "id": "response-60987d4546cee93e970e8765",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.04",
+      "status": "ok",
+      "text": "Quality of life is subjective and depends on what you value, but based on commonly cited metrics (crime, cost of living, healthcare access, education, pollution, infrastructure, economic opportunity), several cities regularly rank poorly:\n\n- **Memphis, TN**: High violent crime rates, high poverty, and struggling public services.\n- **St. Louis, MO**: Persistently high violent crime, population decline, and economic challenges.\n- **Detroit, MI**: Has improved recently, but still faces high poverty, blight, and crime.\n- **Baltimore, MD**: High homicide rate, drug addiction, and concentrated poverty.\n- **Cleveland, OH**: High poverty rates and economic stagnation.\n- **Jackson, MS**: Water infrastructure failures, high crime, and limited economic opportunity.\n- **Birmingham, AL**: High crime and poverty relative to its size.\n- **Bakersfield and Fresno, CA**: Among the worst air pollution in the country, plus high poverty.\n\nIf I had to pick one that shows up most often at the bottom of rankings, it would be **Memphis** or **St. Louis**, mainly because of crime. Jackson, MS, is a strong candidate if you weigh basic infrastructure heavily.\n\nCaveats: rankings vary by source and methodology. City-limit statistics can also misrepresent a metro area, since many of these places have safe, pleasant neighborhoods alongside struggling ones. High-cost cities like San Francisco or Los Angeles may also score poorly for others because of housing costs and homelessness, even though they offer strong job markets and amenities.\n\nIf you tell me what matters most to you (safety, affordability, climate, jobs), I can give a more tailored answer."
+    },
+    {
+      "id": "response-abfc88e7a80468f4c59927d9",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.05",
+      "status": "ok",
+      "text": "No US city is objectively \"the worst\" for quality of life, because it depends on what you measure and who you ask. Still, some cities regularly score poorly in rankings that weigh crime, cost of living, housing, healthcare, education, and economic opportunity.\n\n**Cities that often rank low in composite lists (such as U.S. News, WalletHub, and similar):**\n\n- **Detroit, MI**: High poverty, population decline, and a history of underfunded services, though downtown and midtown have seen real revitalization.\n- **Memphis, TN**: High violent crime rates and high poverty.\n- **St. Louis, MO**: Very high violent crime rates and population loss.\n- **Cleveland, OH**: Persistent poverty and economic struggles.\n- **Baltimore, MD**: High violent crime, though it has strong institutions and distinct neighborhoods.\n- **Birmingham, AL**: Poverty and crime challenges.\n- **Jackson, MS**: Severe infrastructure problems, including water system failures.\n- **Albuquerque, NM**: High property crime and poverty.\n\n**Cities with different problems (high cost rather than low opportunity):**\n\n- **San Francisco and Los Angeles, CA**: Extreme housing costs, homelessness, and property crime.\n- **New York, NY**: High costs and crowding, though it offers great amenities and transit.\n\n**Caveats:**\n- City-level rankings hide big differences between neighborhoods and suburbs.\n- Rankings weight factors differently. A city can be poor on safety yet strong on culture or jobs.\n- Your own priorities (career, family, climate, budget) matter more than any list.\n\nIf you tell me what matters most to you, such as safety, cost, jobs, or climate, I can narrow this down or suggest places to consider or avoid."
+    },
+    {
+      "id": "response-34f90fde2565c2c440e90955",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.06",
+      "status": "ok",
+      "text": "There's no single agreed-upon answer, since \"quality of life\" depends on what you measure and what you value. But some cities regularly rank near the bottom in major studies, such as U.S. News & World Report's Best Places to Live, WalletHub's rankings, and similar lists.\n\n**Cities that often score poorly:**\n- **Memphis, TN**: high violent crime and poverty rates\n- **Detroit, MI**: persistent poverty, population loss, and strained city services, though downtown and midtown have seen real revitalization\n- **St. Louis, MO**: very high violent crime rates and population decline\n- **Baltimore, MD**: high violent crime and sharp inequality between neighborhoods\n- **Cleveland, OH**: high poverty and aging infrastructure\n- **Jackson, MS**: water system failures and high crime\n- **Birmingham, AL**: crime and economic challenges\n- **Shreveport, LA** and **Flint, MI**: high poverty and infrastructure problems\n\n**Caveats:**\n- Rankings usually weigh crime, poverty, housing, job markets, education, health care, and commute times. Different weights produce different results.\n- City-limit statistics can mislead. Conditions vary hugely between neighborhoods, and metro areas often differ from the city proper.\n- Some places with poor rankings have strengths such as low cost of living, culture, or strong community.\n- Expensive cities like San Francisco, Los Angeles, or New York can also rate poorly on affordability, homelessness, or commute time, despite high incomes and amenities.\n\nIf you tell me which factors matter most to you, such as safety, cost, weather, or jobs, I can narrow this down."
+    },
+    {
+      "id": "response-6f54be31535c9382e3afe21e",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.07",
+      "status": "ok",
+      "text": "There's no single agreed-upon answer, since \"quality of life\" depends on what you measure and what you value. But some cities regularly score poorly in rankings (U.S. News, WalletHub, Numbeo, and similar sources), usually because of high crime, poverty, weak public services, or a mix of these.\n\n**Cities that often rank low on composite measures:**\n- **Memphis, TN**: high violent crime and poverty rates\n- **Detroit, MI**: improving downtown, but still struggles with poverty, blight, and city services\n- **St. Louis, MO**: very high violent crime rates and population decline\n- **Cleveland, OH**: high poverty and weak economic indicators\n- **Baltimore, MD**: high violent crime and drug-related problems\n- **Birmingham, AL**: high crime and poverty\n- **Jackson, MS**: infrastructure problems, including water system failures\n- **Albuquerque, NM**: high property and violent crime and substance abuse issues\n\n**Caveats:**\n- Rankings differ a lot depending on which factors are weighted (crime, cost of living, healthcare, schools, weather, commute, job market).\n- City-limit statistics can misrepresent the larger metro area. Many people live happily in neighborhoods or suburbs of these cities.\n- Some high-cost cities, like San Francisco, Los Angeles, and New York, score poorly on affordability and homelessness despite strong job markets and amenities.\n\nIf you tell me what matters most to you (safety, affordability, climate, job opportunities, etc.), I can give a more tailored comparison."
+    },
+    {
+      "id": "response-4f7cb78b2e5bb1d39e9398c9",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.08",
+      "status": "ok",
+      "text": "\"Terrible\" depends on what you measure, but a few cities regularly rank near the bottom on quality-of-life indexes (which weigh crime, housing costs, health, education, infrastructure, and economic conditions):\n\n**Cities that often score poorly**\n- **Memphis, TN**: very high violent crime, high poverty, and weak public school outcomes.\n- **Detroit, MI**: has improved downtown, but it still has high poverty, blight, and a high crime rate.\n- **St. Louis, MO**: one of the highest homicide rates in the country, along with population loss and segregation-related disparities.\n- **Baltimore, MD**: high violent crime, drug overdose deaths, and concentrated poverty.\n- **Cleveland, OH**: persistently high poverty and weak school and health outcomes.\n- **Birmingham, AL**: crime and poverty problems, plus health disparities.\n\n**Expensive cities with different problems**\n- **San Francisco and Los Angeles, CA**: extreme housing costs, homelessness, and property crime, despite strong job markets and weather.\n\n**Caveats**\n- Rankings differ depending on the source (U.S. News, Niche, WalletHub, etc.) and what they weight.\n- City-limit statistics can hide big differences between neighborhoods and surrounding suburbs.\n- What's terrible for one person (climate, cost, culture) may be fine for another.\n\nIf you tell me what matters most to you, such as safety, cost, jobs, or weather, I can narrow it down or suggest cities to avoid or consider."
+    },
+    {
+      "id": "response-2a942c8dc86a68318881faf8",
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.09",
+      "status": "ok",
+      "text": "\"Terrible quality of life\" is subjective and depends on what you value, but cities that frequently rank near the bottom in national quality-of-life or livability studies include:\n\n- **Memphis, TN**: High violent crime and poverty rates, and a struggling school system.\n- **St. Louis, MO**: Consistently high violent crime, population decline, and disinvestment in many neighborhoods.\n- **Detroit, MI**: Improving in some areas, but still faces high poverty, blight, and public service challenges.\n- **Cleveland, OH**: High poverty and weak economic indicators in many rankings.\n- **Baltimore, MD**: High violent crime, entrenched poverty, and sharp inequality between neighborhoods.\n- **Jackson, MS**: Chronic infrastructure failures, especially water system problems, plus high crime and poverty.\n- **Birmingham, AL**: High crime and health and economic disparities.\n- **Albuquerque, NM**: High property and violent crime, and poor education rankings.\n\n**Caveats:**\n- Rankings weigh different factors (crime, cost of living, schools, health, climate, commute, amenities), so results vary by source.\n- City-level numbers hide big differences between neighborhoods. Many of these cities have vibrant, safe, affordable areas.\n- Some places with poor rankings have strong culture, low housing costs, or improving trends that matter more to certain residents.\n- Conversely, high-ranking cities can have severe housing costs, congestion, or homelessness that lower quality of life for many.\n\nIf you tell me what matters most to you (safety, cost, jobs, weather, schools), I can point to better-fitting or worse-fitting places."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-fb55f67d0ac2a857ec0f",
+    "prompt": "Which US city has terrible quality of life?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-41"
+    }
+  }
+}

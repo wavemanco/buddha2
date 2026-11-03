@@ -1,0 +1,3006 @@
+{
+  "C_measurement_diagnostics": {
+    "all_C_parent_response_mappings_preserved": true,
+    "changed_group_memberships_by_response_id": 1,
+    "changed_shared_head_scores": [
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-479e74228eb29604f06dde02",
+        "source_task_id": "curated-2",
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-cee2a9d0e16ac556e60bbce9",
+        "source_task_id": "curated-2",
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "B_score": 8,
+        "C_score": 9,
+        "repeat": 1,
+        "response_id": "response-aca934dd5cd7686798603581",
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 2,
+        "response_id": "response-e14c3b8a7ba3531d46aa9d23",
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "B_score": 8,
+        "C_score": 9,
+        "repeat": 2,
+        "response_id": "response-f0a7735242b07b030200e69d",
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "B_score": 6,
+        "C_score": 7,
+        "repeat": 1,
+        "response_id": "response-01140eab422f9fa767f3bf31",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 5,
+        "C_score": 6,
+        "repeat": 1,
+        "response_id": "response-638cc2ab0e9a56d5caff2b22",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 1,
+        "response_id": "response-7de982da1f2d0a27a7dcb814",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 1,
+        "response_id": "response-8ac979cb61a157a0d606ede1",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 1,
+        "response_id": "response-90d2578939a9d75419ce3220",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 5,
+        "C_score": 6,
+        "repeat": 1,
+        "response_id": "response-ec6cae37332431f633dac25c",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 7,
+        "C_score": 6,
+        "repeat": 2,
+        "response_id": "response-42c3069a61adc521209f76e4",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 6,
+        "C_score": 7,
+        "repeat": 2,
+        "response_id": "response-6109140635c1767470c07494",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 6,
+        "C_score": 7,
+        "repeat": 2,
+        "response_id": "response-7117c78a78cac4fcb9f26d8d",
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 1,
+        "response_id": "response-3c8cba64d805f96f24d57251",
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_score": 8,
+        "C_score": 9,
+        "repeat": 1,
+        "response_id": "response-734c27c8194139650f25a028",
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 1,
+        "response_id": "response-7393ac93ea00239ff84ecdff",
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-51cece9967140818745138ef",
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-8a2cfa2135308c4c8e949092",
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_score": 5,
+        "C_score": 6,
+        "repeat": 2,
+        "response_id": "response-79d7bbb444b31822dd63df85",
+        "source_task_id": "curated-63",
+        "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+      },
+      {
+        "B_score": 8,
+        "C_score": 9,
+        "repeat": 1,
+        "response_id": "response-e6f90b04e9f1797166479b2e",
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-983ce10e8090b74b79b51dce",
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 2,
+        "response_id": "response-c94d03608aa7261c969ef2e9",
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-f704e1aab867faec500aafc5",
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_score": 6,
+        "C_score": 7,
+        "repeat": 1,
+        "response_id": "response-3a90924582dcc92512826b55",
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_score": 7,
+        "C_score": 6,
+        "repeat": 1,
+        "response_id": "response-f762663721aa99d35edb906c",
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_score": 7,
+        "C_score": 6,
+        "repeat": 2,
+        "response_id": "response-b0ed6313b2edb897b795a6ef",
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-e49b341cb1d542d82e9429ce",
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 1,
+        "response_id": "response-240f7886aa6a50e621145f96",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 1,
+        "response_id": "response-48b927d24f8429ab87d56fee",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 1,
+        "response_id": "response-adb69475b77d7ea6dd650a84",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-08c8c4fb76361159e5c558fa",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 8,
+        "C_score": 9,
+        "repeat": 2,
+        "response_id": "response-51ba4a7876a8f8bd935a2092",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 9,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-8d7d5c1a3686090ebb836aa7",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-adebf5e578e9d86b91413ee9",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 8,
+        "C_score": 7,
+        "repeat": 2,
+        "response_id": "response-e616a335874c32f6fc2b0b8f",
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_score": 7,
+        "C_score": 8,
+        "repeat": 2,
+        "response_id": "response-87c8c7249d875d89717b402e",
+        "source_task_id": "curated-96",
+        "task_id": "nb-curated-6584de30a11a0e08ca32"
+      },
+      {
+        "B_score": 7,
+        "C_score": 6,
+        "repeat": 2,
+        "response_id": "response-96228e81f94257d8bc9e02f0",
+        "source_task_id": "curated-41",
+        "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+      }
+    ],
+    "identity_permutations": 0,
+    "interpretation": "Fresh native grouping and quality calls are part of the declared C procedure. Observed C-B differences combine ordering, changed representatives and judge variability; they cannot be treated as a noise-free ordering effect. No C performance aggregate or complete-case winner is computed.",
+    "observed_valid_permutation_pairs": 20,
+    "pair_details": [
+      {
+        "B_distinct": 1,
+        "B_utility": 1.5684063494423397,
+        "C_distinct": 1,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          5,
+          9,
+          6,
+          3,
+          10,
+          4,
+          7,
+          8
+        ],
+        "C_utility": 1.5684063494423397,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-95",
+        "task_id": "nb-curated-9c418f063bc433264d29"
+      },
+      {
+        "B_distinct": 1,
+        "B_utility": 2.0165224492830083,
+        "C_distinct": 1,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          6,
+          3,
+          10,
+          9,
+          4,
+          7,
+          8,
+          5
+        ],
+        "C_utility": 2.0165224492830083,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-95",
+        "task_id": "nb-curated-9c418f063bc433264d29"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 8.922939058848929,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          3,
+          2,
+          1,
+          7,
+          8,
+          4,
+          5,
+          6,
+          9,
+          10
+        ],
+        "C_utility": 8.474848770495612,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-2",
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "B_distinct": 7,
+        "B_utility": 7.387645176710604,
+        "C_distinct": 7,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          3,
+          5,
+          4,
+          9,
+          8,
+          6,
+          10,
+          7
+        ],
+        "C_utility": 7.8763610253882925,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 8.698906820415948,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          1,
+          3,
+          4,
+          6,
+          5,
+          8,
+          7,
+          9,
+          10,
+          2
+        ],
+        "C_utility": 8.902264172198642,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 6.753362634533773,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          3,
+          1,
+          8,
+          4,
+          10,
+          9,
+          5,
+          6,
+          2,
+          7
+        ],
+        "C_utility": 7.1119581867671045,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_distinct": 9,
+        "B_utility": 6.087856567056122,
+        "C_distinct": 9,
+        "C_order_in_B_positions_1_based": [
+          1,
+          9,
+          2,
+          8,
+          6,
+          3,
+          4,
+          7,
+          5,
+          10
+        ],
+        "C_utility": 6.57527151677133,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "B_distinct": 9,
+        "B_utility": 8.100816801649273,
+        "C_distinct": 9,
+        "C_order_in_B_positions_1_based": [
+          2,
+          1,
+          3,
+          9,
+          4,
+          7,
+          6,
+          5,
+          10,
+          8
+        ],
+        "C_utility": 8.032815348405176,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 8.790784243612718,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          5,
+          3,
+          8,
+          10,
+          6,
+          9,
+          4,
+          7
+        ],
+        "C_utility": 8.487883571607776,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 7.896625566748565,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          10,
+          2,
+          1,
+          4,
+          3,
+          5,
+          7,
+          6,
+          9,
+          8
+        ],
+        "C_utility": 7.977445578199687,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-63",
+        "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 7.953011621249347,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          8,
+          2,
+          3,
+          4,
+          1,
+          5,
+          7,
+          10,
+          6,
+          9
+        ],
+        "C_utility": 7.867716127327036,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 8.008993869370244,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          7,
+          1,
+          3,
+          2,
+          6,
+          5,
+          4,
+          8,
+          9,
+          10
+        ],
+        "C_utility": 7.98531613164042,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 7.2419043417101365,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          5,
+          3,
+          9,
+          6,
+          4,
+          7,
+          8,
+          10
+        ],
+        "C_utility": 7.367377996842739,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_distinct": 8,
+        "B_utility": 6.870797101174951,
+        "C_distinct": 8,
+        "C_order_in_B_positions_1_based": [
+          1,
+          3,
+          2,
+          5,
+          4,
+          6,
+          9,
+          7,
+          8,
+          10
+        ],
+        "C_utility": 6.655694490188136,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "B_distinct": 9,
+        "B_utility": 7.729363457748144,
+        "C_distinct": 9,
+        "C_order_in_B_positions_1_based": [
+          1,
+          3,
+          2,
+          5,
+          7,
+          4,
+          8,
+          9,
+          6,
+          10
+        ],
+        "C_utility": 7.665903908536021,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_distinct": 10,
+        "B_utility": 7.671989913100179,
+        "C_distinct": 10,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          3,
+          6,
+          4,
+          5,
+          10,
+          7,
+          9,
+          8
+        ],
+        "C_utility": 7.954262159132064,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "B_distinct": 1,
+        "B_utility": 1.792464399362674,
+        "C_distinct": 1,
+        "C_order_in_B_positions_1_based": [
+          1,
+          3,
+          2,
+          7,
+          6,
+          9,
+          8,
+          10,
+          5,
+          4
+        ],
+        "C_utility": 1.792464399362674,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-96",
+        "task_id": "nb-curated-6584de30a11a0e08ca32"
+      },
+      {
+        "B_distinct": 4,
+        "B_utility": 4.629425049692849,
+        "C_distinct": 8,
+        "C_order_in_B_positions_1_based": [
+          1,
+          6,
+          4,
+          2,
+          3,
+          9,
+          5,
+          8,
+          10,
+          7
+        ],
+        "C_utility": 6.834611690263528,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": true,
+        "same_partition_by_response_id": false,
+        "source_task_id": "curated-96",
+        "task_id": "nb-curated-6584de30a11a0e08ca32"
+      },
+      {
+        "B_distinct": 6,
+        "B_utility": 5.1928812147321874,
+        "C_distinct": 6,
+        "C_order_in_B_positions_1_based": [
+          1,
+          2,
+          6,
+          4,
+          8,
+          5,
+          3,
+          7,
+          9,
+          10
+        ],
+        "C_utility": 4.573589066666942,
+        "all_contents_preserved": true,
+        "repeat": 1,
+        "same_first_answer": true,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-41",
+        "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+      },
+      {
+        "B_distinct": 6,
+        "B_utility": 6.380714390844883,
+        "C_distinct": 6,
+        "C_order_in_B_positions_1_based": [
+          7,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          10,
+          8,
+          9
+        ],
+        "C_utility": 6.383467616162305,
+        "all_contents_preserved": true,
+        "repeat": 2,
+        "same_first_answer": false,
+        "same_partition_by_response_id": true,
+        "source_task_id": "curated-41",
+        "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+      }
+    ],
+    "same_first_answers": 13,
+    "shared_head_score_changes": 38,
+    "shared_head_score_comparisons": 151
+  },
+  "accounting": {
+    "A_attributed_generation_cost_micro_usd": 635220,
+    "B_attributed_generation_cost_micro_usd": 1320486,
+    "B_to_A_generation_cost_ratio": 2.078785302729763,
+    "C_attributed_complete_candidate_cost_micro_usd": null,
+    "all_rank_attempt_cost_micro_usd": 301026,
+    "cost_basis": "usage-based public-price upper bound, not independently verified invoice",
+    "first_block_micro_usd": 210174,
+    "marginal_expansion_micro_usd": 5773330,
+    "total_micro_usd": 5983504,
+    "unique_cost_micro_usd_by_role": {
+      "answer": 1755108,
+      "group": 66448,
+      "plan": 200598,
+      "quality": 3660324,
+      "rank": 301026
+    },
+    "unique_ledger_double_counts_parent_B": false
+  },
+  "actual_settings_by_role": {
+    "answer": {
+      "omitted_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "provider_output_schema_enforced": false,
+      "reported_geographies": {
+        "global": 480
+      },
+      "reported_service_tiers": {
+        "standard": 480
+      },
+      "requested_controls_excluding_system_and_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "requests": 480,
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": {
+        "end_turn": 480
+      }
+    },
+    "group": {
+      "omitted_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_tokens",
+        "max_completion_tokens",
+        "service_tier",
+        "inference_geo",
+        "thinking",
+        "output_config"
+      ],
+      "provider_output_schema_enforced": true,
+      "reported_geographies": {
+        "not-reported": 68
+      },
+      "reported_service_tiers": {
+        "default": 68
+      },
+      "requested_controls_excluding_system_and_messages": {
+        "model": "gpt-5.6-luna",
+        "response_format": {
+          "json_schema": {
+            "name": "Partition",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "groups": {
+                  "items": {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "title": "Groups",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "groups"
+              ],
+              "title": "Partition",
+              "type": "object"
+            },
+            "strict": true
+          },
+          "type": "json_schema"
+        }
+      },
+      "requests": 68,
+      "returned_models": [
+        "gpt-5.6-luna"
+      ],
+      "returned_stop_reasons": {
+        "stop": 68
+      }
+    },
+    "plan": {
+      "omitted_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "provider_output_schema_enforced": false,
+      "reported_geographies": {
+        "global": 24
+      },
+      "reported_service_tiers": {
+        "standard": 24
+      },
+      "requested_controls_excluding_system_and_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "requests": 24,
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": {
+        "end_turn": 24
+      }
+    },
+    "quality": {
+      "omitted_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens",
+        "service_tier",
+        "inference_geo"
+      ],
+      "provider_output_schema_enforced": true,
+      "reported_geographies": {
+        "global": 395
+      },
+      "reported_service_tiers": {
+        "standard": 395
+      },
+      "requested_controls_excluding_system_and_messages": {
+        "max_tokens": 16000,
+        "model": "claude-opus-5",
+        "output_config": {
+          "effort": "high",
+          "format": {
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "score": {
+                  "title": "Score",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "score"
+              ],
+              "title": "Score",
+              "type": "object"
+            },
+            "type": "json_schema"
+          }
+        },
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "requests": 395,
+      "returned_models": [
+        "claude-opus-5"
+      ],
+      "returned_stop_reasons": {
+        "end_turn": 395
+      }
+    },
+    "rank": {
+      "omitted_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "provider_output_schema_enforced": false,
+      "reported_geographies": {
+        "global": 24
+      },
+      "reported_service_tiers": {
+        "standard": 24
+      },
+      "requested_controls_excluding_system_and_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "requests": 24,
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": {
+        "end_turn": 24
+      }
+    }
+  },
+  "case_examples": [
+    {
+      "case": "Repeated book versus genre-guided alternatives",
+      "observation": "A repeatedly names To Kill a Mockingbird; B also produces Pride and Prejudice,1984,One Hundred Years of Solitude and The Lord of the Rings. Published two-repeat utilities: A2.0165224492830083,B8.043275998563276,C8.389312598793467. Repeat1 grouping membership is stable between B/C; C moves distinct book heads earlier, while one shared head is also regraded8 to9.",
+      "source_task_id": "curated-80"
+    },
+    {
+      "case": "Science publication diversification",
+      "observation": "A repeatedly names Nature. B includes Science,Cell,The Lancet and other publications. Published two-repeat utilities: A2.0165224492830083,B8.445800522630996,C8.260349460006477. These are model outputs and native judgments, not externally verified publication claims.",
+      "source_task_id": "curated-62"
+    },
+    {
+      "case": "Password counterexample and grouping sensitivity",
+      "observation": "Published two-repeat utility is A6.711525712428599,B3.210944724527762,C4.313538044813101. For repeat2, the same ten B/C response texts receive four groups in B and eight in C, despite the same first answer and first quality9; utility changes4.629425049692849 to6.834611690263528. This is the only observed B/C partition-membership change and cautions against attributing this C gain solely to better ordering.",
+      "source_task_id": "curated-96"
+    }
+  ],
+  "frozen_official_result": {
+    "contrasts": {
+      "B_minus_A": null,
+      "C_minus_B": null
+    },
+    "eligible_field_interpretation": "Methods are policy-eligible candidates, not selected or scientifically complete; native_complete=false prevents all selection.",
+    "human_status": "not-required",
+    "mean_utility": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "missing_order_definitions": [
+      {
+        "assessment_path": "assessments/p2-cce2c41315048eab5ffb1d45.json",
+        "checkpoint": "expansion",
+        "method": "C",
+        "order_id": "p2-cce2c41315048eab5ffb1d45",
+        "portfolio_path": "portfolios/p2-cce2c41315048eab5ffb1d45.json",
+        "repeat": 1,
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "assessment_path": "assessments/p2-e8740bae4e77d0e443e32104.json",
+        "checkpoint": "expansion",
+        "method": "C",
+        "order_id": "p2-e8740bae4e77d0e443e32104",
+        "portfolio_path": "portfolios/p2-e8740bae4e77d0e443e32104.json",
+        "repeat": 1,
+        "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+      },
+      {
+        "assessment_path": "assessments/p2-718a1781795dd29b5ebe57e4.json",
+        "checkpoint": "expansion",
+        "method": "C",
+        "order_id": "p2-718a1781795dd29b5ebe57e4",
+        "portfolio_path": "portfolios/p2-718a1781795dd29b5ebe57e4.json",
+        "repeat": 1,
+        "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+      },
+      {
+        "assessment_path": "assessments/p2-ee9c05c3f5ed94c379d9249d.json",
+        "checkpoint": "expansion",
+        "method": "C",
+        "order_id": "p2-ee9c05c3f5ed94c379d9249d",
+        "portfolio_path": "portfolios/p2-ee9c05c3f5ed94c379d9249d.json",
+        "repeat": 2,
+        "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+      }
+    ],
+    "missing_orders": 4,
+    "native_complete": false,
+    "policy_eligible_methods_field": [
+      "A",
+      "B",
+      "C"
+    ],
+    "selected_method": null,
+    "selected_procedure_sha256": null,
+    "status": "inconclusive"
+  },
+  "input_file_sha256": {
+    "evidence/phase2b-f1/report/raw/run/journal/events.jsonl": "d4795ae8f6b52dc17b843dd5968e896c39d1ff69563a866d5e605640a3db1656",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-074bfbbbcc085c32599ae7fe.json": "1ac3b8c372fc19526bf4df99a9017719ec37e011674f3a00a590cbd768b9a663",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-0963685e2489a62e7f0f745a.json": "f17fa22866e86f4e0b82915f381e81cf807ddd53c8de32682e91ed70842e77b5",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-0ea9dc7bdab95db843a72535.json": "3609d9998876c9c498828fccecb757d3c4d41b7119061725e88b3012d22d83cb",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-15a79ee7cc52faa2cb7b9649.json": "4e56fc1295ccfef9690059f23920b44544516f724519b5317f3dcc5976959ccc",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-167f3c31d05a5f0091faed4d.json": "ad3ccdc7a427e77ed56e32d19fe970b18ae87c39947c1fc781b271591e3f9229",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-1a0dd3cbdf32fb05e189a5d9.json": "67c6c648b8196755d28577d7397e1ec1881068bfff5fbc7a22afbd895fc395a7",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-1b84a86aa2187851542c950f.json": "2770058571d81a183439332b33036e1ddaffe8204e1bc8d18211275940e2587d",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-1d2612ebdb54a0286c94c6b5.json": "f0dd1b2b2492762f1ad16d942682b3def0d730bfd0c5f80c7099298055bfad71",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-1ddea95ff6718061f217cd36.json": "98c933df76b8c5ed90b3994ee17472631e665d8e4c3d8dc09fd41432feff6c9e",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-1e9306e352b2e87e116969cb.json": "688a7dc9d1e528e8b1a452c834eeac8da1a266d8cace9a60ee3e44e2b40ddbdd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-2050adf6a3ab0f16b721f722.json": "30e7c776461a1b0da3eda7489b5658888a17e11f37a5acf1967ced8a0cc16505",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-225925e518d890279cc53c43.json": "a42d667229d99e94d8468067fbd5829072b968ae880327e8c998ffba97434394",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-327b26c47d6cf4ad043d9c70.json": "81617a142f4d4cfeeca5a56943918d02f8bd73fc84311e933ec9491e2973c5c2",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-32813b228f7ff5ac1ac59399.json": "d0ab59a1c7ad3b69674b171c8e1c5d9f8b47e1c038789cc9a37dcb40ae269be7",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-3a024c1febb26cec05ace2f6.json": "7018c7211a3ee2a501a07bd757a77f139b64bfed0b49033b130bd262496a6e54",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-3dd7eea7afbf5f030a63bfbd.json": "4faf90292a13e2d47d0ce35bbbb8d14334c29669dea934b9ffee0032496b2ff5",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-3e69502c36a8f49c102f64ed.json": "e9b792019b31c6b70c6e73b8615fc89d7aebc0d61b3fde4e8d190893a17fd8e4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-415e1c8b14605dd16564d17f.json": "d8b43472b0143dbb4a71c6ed8e1678ec277194828166e042db28881e85ef1e8f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-421a0084b30648d87fb21663.json": "81b2dca4cae95777da5e2b4729c31bea65d660b8d37a1ccd5c5fe351b4bd9f81",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-49de65db99446de405a3eef7.json": "504411a604c372ec90c22bec77144133b32127bdc72b37226f4ef96670109897",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-4d7fadf13219ec60dfd33e26.json": "513054151aa5c154a1cbb3abee7e66c58550020f2e3e4534b821bf47f58b83ea",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-5265ec58afdb03aeee6333d0.json": "2cc5e398505030fbbf43a6ffe260f23082952b7af24e00a0f9696e5766851451",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-53ad46ccd0b80441a8a013b0.json": "54f3948a7f96ab58cba7b21cabb31a4de12e616d9f36087e50b1eee20ea01e8a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-55aa768bfce64b40af8373e0.json": "c71b7f5cf0de30ebc0341efb0d586a511f9d265131a726216d835d8fa72d0a72",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-5aee953e2eb0c2f0ec72ff41.json": "0a7ecac6dfc161749121ef33715edd84e120ab098ab2bdf5b6dee1784fbd95d7",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-5cafd16f908efdebb047a14f.json": "1e0a7be82f296979dcf35d781175c1c43534668acf137b45519f0427743d39d4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-5ed361eeb7479c4ef69d34c7.json": "8c75e92a290bd2d82f13b17e99b02b01ca8dffbb30d8e05d1cbffb28669404ee",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-5f85b6fc1d9f0b3c4f00d95e.json": "6b6ff49c0d85388de5323338cc276297208194b1c4e196efd2bd84a28d474ad4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-622a1c96988afc57b210b7a1.json": "430a627eb027830f2cca236d96b4ae870319fac9ff700f63d25b2803830d8e94",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-64802cbe92f5fc880170a0fc.json": "08656bb0dc67ed04088e9188dfe097288b1f8e9ae9f7b3ae8d2977aecde2cf29",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-649004efbc6869bbaaf7ad26.json": "13e85e58dab7d0e3581e279a792ffbb9593804546f5cc3aef4c1c38cfa0de60b",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-66a2d4cb8703e6fa273999dd.json": "f2d4bc9cbcdd22825098dcf9d5e3cddeef494ece66bb76f29df09c9952cabc63",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-71e1816d0f7c45de734c48fa.json": "37a91322b9093bbb663946881a36126b1aefca2f14f58e62ec1409b69740942d",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-724dbfbb0d0be9e5e39dcbc3.json": "9473ee1f5b7e122230f6ee08968558b04f16e661493677ed674f806faa8c4e4f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-734f16c8deef87af7c0a1cac.json": "fd9c0321a550dc34b196b32d3c01b0f91a65132b40de0883f5ee505ace0a13af",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-7cf1dcc20c5acfa143902af9.json": "6851e04c5f7d29bb2aeaf80fb16818da2c2be93341373dd5f454e4676ceb0eee",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-7d5681cbdd3ceeba32e845ce.json": "19436d7b68f5f5b8a02d85e44e8ec0059883ba8ebf63bcb67532fffbe200c636",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-82276b972aa39c5491c83143.json": "b05a86ffb71f57a9f2e3df5916a1efe1e0cb85061afa141e4344e7457b5d8577",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-859539046126626ffb2ace28.json": "59be7ac32f81120ec55b2594e19580b64ba9998c91fac0599842ab2570a0474a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-85bd10cb49b2f7c8b5f10946.json": "8b47e8fff0180095f15a2e7b0e8b20a11856d50c54b1d04451ee8bfd23c9763c",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-8cdb74f765c0c6a857a261bb.json": "ac20cd839ed59a321094b6eeed95641a951d7a785d5dea1fefbf5a5236518cbd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-991cad38fd82dcd7b1541b00.json": "18a3521e0d8f90e2b5fc1de4f730b07c41e4ea53671133b158fb37148fb7c806",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-a25edddffc1a33517f63495c.json": "40081db63a39cf0639d55a5d78ba651a9a1d6d5aae04467026476258af203202",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-b2e38402a57e01c92d7e0389.json": "a8f3d0b0455bf0e2d84ea7dab3635d477ef95d90ae1e9d98042941d3ca199142",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-b506a38daed7edcd4fb09715.json": "83d2e2a3bc07bb29f7432bf5243fc5e9931f0b930cbd8f200fa50a3ae23a5177",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-b8135e80727f14cfba9c3039.json": "dce01e732de716838db51611765c30d2204fd433e902b02ce2832f827ccd9a97",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-bb4114325fac6e0f738f14ca.json": "e3891fe337426b812f0f4febcd2b0838e1c0da49c422475bea6cb13c22101e21",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-c3461f03eda02c9087e2ca8a.json": "fcf4b6352f002b3bcf4eb3fda0366208049cf4a07ea11a72e876acbb12e1020e",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-c684d56e1497be4fe50bfdfc.json": "38972691f1e3d4ed4b6909d23efb7be7c4535885ce6fe11bb3356b926b3afae3",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-cc241901bfeb7426ad87b00c.json": "79557750739ffff85552c12cfdb9e7714437ada08b8a9e4c2adab8913f58ce6f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-d49a032b1036010a116551e1.json": "4a7e70ff946c3497338173f79926c2c4f8b2c48bd89828bc7d258ffd9af0c309",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-d50f52e26d608692f3b3fd56.json": "cde444e6e591627594bc7ef416d2be41175bd60386ebb2cbdf15f57c05863ffa",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-d60f3abfc8b373b80d0c37fe.json": "35180f183229991aa8bdaa75e25da3cbd4b2d09991b7074f3c89fc7d5a77bdfc",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-d6b235d21f1367439fdf534c.json": "13b73aaff405f41dc9d0ebac88426ef0ffcdccdd84afb3a17425d52b32603332",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-d8e673f3e914d38a27b7183d.json": "ec3d3a4cf2e280c2ad96a9664bff09cb721304eea553ecb509dec9e8b20a03ed",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-e0ec5eba54d161710d99d53f.json": "75de1bdbe036e2817168ad2a47d8353d94afe584ea7d577171d31afa136d272e",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-e3d1278efdba90cc87e87a19.json": "1ac7f09967aa83cba7c4e530c96fe7305357230390312afc04849202142dba03",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-e4e5110b87ac3861c46a3fb2.json": "9ab08eed71a75bdd820e6639c6e503ede14adbb5327ab4327a8f5f828b9820c7",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-e81fbabfa699d8ee3c9ec860.json": "50d5d614061e2cc79a8498bd5ab62ce699c10c2c5dc99113540d2db31168aafa",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-ef086a74ab504310902f581e.json": "1716e8021a0a67d77abd42b52ecd82512544f75abc3b11757b7c5c84fb5308af",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f18f62263bd3b79f79e17ead.json": "6ada677bccacf3324e78a079126262158d7c0fca05aed4214151604e6266e9b9",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f2499c2a8327dcbb58c664f4.json": "da76daaa6e1d65c04124a0e03fa30bb829f914442e00362f2fe1cf8a20042ad6",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f667b5ddf7e4c7ca4b58244c.json": "4586ace14780c0c97283d3d11b1240865b8705d058ef27f04fd63355796e84b8",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f69949a49e138fb3e089073f.json": "04058a622ac6196a44d7edfa855422d1c8281421260a3a07566e71bf10caa1bf",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f6e327cfd1f9d8d5d56ba0da.json": "55ae7af657e30c456bbb5672a3ddf536c5c7a4c78b66858f231b5dd7a645435b",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f81a8b09bb3849cfa6980e07.json": "5ea09066cbf5109d5ad4a67c194341ac2992a1ced97032adfcfce28c18c734a2",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-f8d9f2dd85c409c3cfa2491b.json": "c7cdc31476230b0cf0c2f0ef8c6d0f0cd1dc2a244047483814c4d123dc7b6ca1",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-fc09ddad1e22721ddbf28b09.json": "5a1fff7f4472babd651b81fb5efbe17928f08e8372217a0ea3703d6c1c1c035c",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/events.jsonl": "f3de07a6ad7a0ebbd2561bec671ea5c361ccf778ea49f90856c65ec9388d5ea6",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-074bfbbbcc085c32599ae7fe.json": "c933af1eca21321779c08d0335e5c1ead90beadedd12f7456d4e6951f636b683",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-0963685e2489a62e7f0f745a.json": "935ccce3034025201fe76316877583ca1478998380318156cc793c0b69905d01",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-0ea9dc7bdab95db843a72535.json": "9fc386c35ba631482456a3d61e91043d5026c0b492849cc9896b4525cf3b57ac",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-15a79ee7cc52faa2cb7b9649.json": "52573f6b7f98c10369fdc3579ec2525777b43ae8fd3bc770ad3fc05fe25bf20f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-167f3c31d05a5f0091faed4d.json": "a0d34e705fe5ff16a9fe3a78d49d43fe55bf966964a37281121517ab687490ec",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-1a0dd3cbdf32fb05e189a5d9.json": "5a00eac9047cef5cc4fa5536e98eff1705dec44f42171fc267860cc6017d305a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-1b84a86aa2187851542c950f.json": "fc91a1a5e5208807455c4c969dcff3b884e917fa6cce04f20ccca40eded814f2",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-1d2612ebdb54a0286c94c6b5.json": "c06b6e5472d37b3790324445294eb525804b06e5e31f0c54bda871c3db2008ec",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-1ddea95ff6718061f217cd36.json": "8f43dcbae9299ab30b662cbfa76ce271e120d578fd3d84e57285b3d335fc6ca4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-1e9306e352b2e87e116969cb.json": "fef55548734a136a8b82c3f6151a6b9528af7db2bb398dbbe7dfd6c9548f3778",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-2050adf6a3ab0f16b721f722.json": "94f5835e4d6eff2243282b66e77008df3e1f01635e273f4869ba5effba7957ed",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-225925e518d890279cc53c43.json": "657762ed3f350fce22cf34ed6934140d74d44e59a05f6825a64657437f9250ad",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-327b26c47d6cf4ad043d9c70.json": "7e9d2c69457a408ce1a54c09f8c9c2f83f4081121ce9ac8e8d80020512a8c969",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-32813b228f7ff5ac1ac59399.json": "a250eb69af1c762cf0b042226ab4254efa48650d7db79caf246ef4640d284931",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-3a024c1febb26cec05ace2f6.json": "78aea857aa768afc61f7ff2a1e0af37b9c98d7148654120e32674dda62fcce3d",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-3dd7eea7afbf5f030a63bfbd.json": "a4c9e8996bda84499d410f2a14d3f7de272669ad0b05516af048a0dcf458cff6",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-3e69502c36a8f49c102f64ed.json": "6cc0a9a0efd2fbd408ccd42167a382ee50c80b803cc7b31e90f2da03f8c484e7",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-415e1c8b14605dd16564d17f.json": "f51b7e9d300a3939edc614cae2888b6c671666aa42208c57562876ac3575c369",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-421a0084b30648d87fb21663.json": "6f13a38c1e27776a0de5fea028fc9160a6320315f7d62894d85c7c1602cbb5be",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-49de65db99446de405a3eef7.json": "61b5b02e37a1979dd4ab208e99a884189df574a632334244a00dc306bc064359",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-4d7fadf13219ec60dfd33e26.json": "748ee04f1a30dae634085e356ea342baa00dba19c7a6fbc73f3c3a46460afc4a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-5265ec58afdb03aeee6333d0.json": "db908f124a546b403bad9112f49d91c7b6b69dc4402847b9a9b47b836d88d3fd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-53ad46ccd0b80441a8a013b0.json": "c7947362e252e7722b6cf87e8a5e6e8da2206ec4e95fd6928df6bad254046f48",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-55aa768bfce64b40af8373e0.json": "4274185a46a890dfe1d191466bf3263f05d02f895f3e1aff30496cf48806e97f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-5aee953e2eb0c2f0ec72ff41.json": "1acfa6039fbbc8f673ab0ad4cc53d8f774d009981e6136e60f0ae62469dac9a5",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-5cafd16f908efdebb047a14f.json": "c5ebd1d0786bd8a18a574a5f95d78b04953d68eb2a58c1864b7a1ee6e1e082d9",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-5ed361eeb7479c4ef69d34c7.json": "d5fbfa4692ada802fe4a213bab6ea82fd8bd76080e0d36c0dee3bf130ceb123a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-5f85b6fc1d9f0b3c4f00d95e.json": "57c4eec6ce01faea21872ae761199edf8b20671e2f3f772c414408c889d08f26",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-622a1c96988afc57b210b7a1.json": "b74156f0cf21d1be95a2db499d919d84a3f27318437994811017ba3b23b161a6",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-64802cbe92f5fc880170a0fc.json": "89836ddeca853ab50a359f23547bd372cab17a93a86af756b7d8678c3d67cbfd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-649004efbc6869bbaaf7ad26.json": "ee0c59bdc6fb167706d58f98eeb6aac8668c5d59932f1084f3601231290669be",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-66a2d4cb8703e6fa273999dd.json": "908a147cc3d924f880538138bf5eb1ec83a8cd5f621a1be22a8780277681af83",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-71e1816d0f7c45de734c48fa.json": "981a9118dfdcbede6dcc876936c74e93271adaa4f5913c92ddfdf02132806214",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-724dbfbb0d0be9e5e39dcbc3.json": "82de757e5c843fd2cc9eacab1b0c772e04efa7bb9668cf094600a873abe0945e",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-734f16c8deef87af7c0a1cac.json": "3cb91387401cdf5c42e30e56c7875ac50b90e529d30f74816a316f023291b732",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-7cf1dcc20c5acfa143902af9.json": "8b99ad8bab7f7423c7bf47d6eba5912765bc2140fc76cbd33792d511d8b6f0eb",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-7d5681cbdd3ceeba32e845ce.json": "9961140886563cfef37e81759e1999dbcd6924e5a7d4aa4bd9a03bcabb8b6388",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-82276b972aa39c5491c83143.json": "adad8cd56aa06d70ea7b33e936a3a0cdd3e4a1ebcd257a362afdcab0f5b874fd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-859539046126626ffb2ace28.json": "d480a063d5fcb683845052b8e546e8bb07eebaaf43906c1175dcb2fb24794451",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-85bd10cb49b2f7c8b5f10946.json": "cb4c4a8f6552697844d764e8fd37c48ae9644e0778529c0d2811b5236c07b9f0",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-8cdb74f765c0c6a857a261bb.json": "21e29c0c6d37a14c2e7b68040cd3074247e2e5c4bafa1493fb7be167f7708ff9",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-991cad38fd82dcd7b1541b00.json": "41a30203dda4a5660ad4f3df3e54a62f037fc3be9de3fb5c101c0cbc261aca13",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-a25edddffc1a33517f63495c.json": "98cd9773baabf6b718cbc0540c4b8c3df5d9ff8c0c609633dc5449c355e81bd3",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-b2e38402a57e01c92d7e0389.json": "86819264cf4fd1032f4e4ef819538fb478a42fccdd280e41cfed1eef2539bded",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-b506a38daed7edcd4fb09715.json": "6698d8b49fc63ae164e2dfc6632325ecd85fcc6b39a8f09735a9b5cca9278ac4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-b8135e80727f14cfba9c3039.json": "b52d54b080bacf85f02309dc702c404b68ddb12f78388f9fa3ed979c017b40e9",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-bb4114325fac6e0f738f14ca.json": "7feeedcbf52691228f04c3afb2d928d59f138ab6c8f4a6867f0aece5c691b5f0",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-c3461f03eda02c9087e2ca8a.json": "6d7570e2c5158824e91374d3957dc9568b36c1a3563713ce818e59b6ad0c8faf",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-c684d56e1497be4fe50bfdfc.json": "96e26cc30b5975aba83a3d14d6cf89cc650b68481b846e57af3eeb1f422cd4b1",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-cc241901bfeb7426ad87b00c.json": "b7692c43c3db91d547d5acfef9d0606c1b3ab27bfa7792a74f4ab0b3cea6f6cf",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-d49a032b1036010a116551e1.json": "061de4a6c8c4cf8ffce7e73f412097695bdac07c3b545b8f54d1f50f1f267e80",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-d50f52e26d608692f3b3fd56.json": "7d11ede97661f6decf582018835de0afc7d7583b039a23ecd02bf78119dc0590",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-d60f3abfc8b373b80d0c37fe.json": "ed733dcff1d0ae009df80512a1cb1c695bfec46be62c271d8c375cd0ea529577",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-d6b235d21f1367439fdf534c.json": "a60d4d2aabbfaa8b4abe1c0a3e43668eb4e5cf946549259c7f859045257b56c8",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-d8e673f3e914d38a27b7183d.json": "62de4ef0d1a853e3acb986ded0b3b717c28036d25b7b6296b3c898caba55fdeb",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-e0ec5eba54d161710d99d53f.json": "381c22af79df5d934c302c4829d010b2de79f216334bdd8779b5b478ca8c93d4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-e3d1278efdba90cc87e87a19.json": "29acc69aff129ef2f970fd06f67e72e83cdb9d7e02d1d409f67b3ca8592162fe",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-e4e5110b87ac3861c46a3fb2.json": "2e423edbcbb94892d1fc476f02d7753a56ad8fd445ddd519870cfb94fa301ca6",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-e81fbabfa699d8ee3c9ec860.json": "9f613914de598b831fce1489a7da6aab6f444c7b07a9fb7bbe151403b824b6ec",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-ef086a74ab504310902f581e.json": "f34dc2e9f5cedc1792a0ca6831c82fde786be76dc06f6ff9e9caaccbec4207be",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f18f62263bd3b79f79e17ead.json": "699f379713e45568cdf1b7b5613c57535b7ca7c1d434bf894b32c81a67120563",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f2499c2a8327dcbb58c664f4.json": "941882ef6c42bb307b46283e78588a093047e5c2f74cad6dd1870aae5375cf0f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f667b5ddf7e4c7ca4b58244c.json": "e09e1c7b44363aa9338efa197cece91d17e9c606e62bcdd560caf44d56257f20",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f69949a49e138fb3e089073f.json": "861fc5e4c65700368cad2cbc06a6ac17004a66a4e141271237f07b4cb6094361",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f6e327cfd1f9d8d5d56ba0da.json": "46139a51c2fe47f2d5d6f8e3390c31eabeb6cbe80a953150936f79ecf2d8e793",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f81a8b09bb3849cfa6980e07.json": "1cc2043efcd2e4ebb82f26248f38782d4b547a38f42011dabd875cdc4f8ee5b9",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-f8d9f2dd85c409c3cfa2491b.json": "95634672907296e39a456cb86ed0de067f54a4dca3ee44ae26e2f60232020e9a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-fc09ddad1e22721ddbf28b09.json": "c808a078a289a764b47135823701ab9f269087fb40c8c8434be8a77fcba8cdf4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/analysis.json": "d22cbed19f2fa3d5c1e624e03ccc8fedd3f96c46217e7391f762dda9a22e448a",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/complete.json": "1cba83fbb1be679d732ee5a54d83d3af0e1484cd8f3fd7a9d629b2cfa9fa2acc",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/coverage.json": "ba5298e8c17b1ff3180f50dbe4efe6b075c763c9507ae8bf2bb4884314ab38fa",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/decision.json": "bf02fc8165dbddbff1d486d1ea26b99d02481ed4ab5b51089296ba86a00eef4f",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/failures.json": "a79a7abc8ef73a6a0013e99d25accaf8e326fb3cc69d55bb1d3f53e76117b349",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/snapshots/89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec/summary.json": "3d79d8b5654d2a3251b904d42ba7f09952c369ec324449caaac6ed7d6ca71e9f",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514"
+  },
+  "kind": "phase2b-expansion-independent-live-outcome-review-v1",
+  "limitations": [
+    "Twelve selected development prompts with two repeats, not fresh held-out confirmation; answers and B/C presentations are not independent task samples.",
+    "Four format failures cause missing C outcomes and block the predeclared complete three-method decision. No retry, repair, replacement or retroactive acceptance is applied.",
+    "Missing C is concentrated in three tasks, so a complete-case C aggregate would change the task mix. None is produced.",
+    "Judge outputs are saved score/group JSON only. Thinking token counts are metadata; no hidden judge thinking text or explanation was retained.",
+    "Generation procedures have unequal inference costs; the descriptive planning gain is not compute-controlled attribution.",
+    "No human-alignment conclusion, recursive-adaptation result, broad model superiority or generalized creativity claim follows."
+  ],
+  "next_defect_decision": {
+    "comparison_policy": "Decide a separately declared prospective control/continuation design before new observations. The existing all72 selection policy cannot silently become an A/B-only or complete-case C selector.",
+    "current_run_closure": "Preserve as a fully accounted limited/inconclusive execution with68 scored orders and four consumed rank-contract failures.",
+    "measurement_question": "Decide how a future design should diagnose grouping/regrading variability while retaining clear separation from native benchmark scores; do not rewrite current native assessments.",
+    "new_calls_authorized_by_review": false,
+    "no_automatic_adaptation_or_model_sweep": true,
+    "recommended_focus": "A future producer-side rank output-contract amendment should be prospectively defined and verified under a new effective identity, retaining exact ID validation. Do not weaken whole-response parsing or rescue the old failures after observation.",
+    "source_change_authorized_by_review": false
+  },
+  "observed_execution": {
+    "C_permutation_portfolios": 20,
+    "expansion_requests": 963,
+    "first_block_event_prefix_preserved": true,
+    "generated_A_B_portfolios": 48,
+    "native_assessments_expected": 72,
+    "native_assessments_scored": 68,
+    "not_attempted_slots": 0,
+    "order_coverage": {
+      "invalid_rank": 4,
+      "scored": 68
+    },
+    "pending_intents": 0,
+    "portfolio_records": 68,
+    "provider_requests": 991,
+    "quality_head_calls_by_method": {
+      "A": 50,
+      "B": 190,
+      "C": 155
+    },
+    "request_counts_by_role": {
+      "answer": 480,
+      "group": 68,
+      "plan": 24,
+      "quality": 395,
+      "rank": 24
+    },
+    "response_statuses": {
+      "A": {
+        "missing": 0,
+        "recorded": 240,
+        "scheduled_presentations": 240,
+        "statuses": {
+          "ok": 240
+        }
+      },
+      "B": {
+        "missing": 0,
+        "recorded": 240,
+        "scheduled_presentations": 240,
+        "statuses": {
+          "ok": 240
+        }
+      },
+      "C": {
+        "missing": 40,
+        "recorded": 200,
+        "scheduled_presentations": 240,
+        "statuses": {
+          "ok": 200
+        }
+      }
+    },
+    "scored_orders_by_method": {
+      "A": 24,
+      "B": 24,
+      "C": 20
+    },
+    "slot_coverage": {
+      "invalid_rank": 4,
+      "not_needed_nonhead": 285,
+      "ok": 987,
+      "skipped_invalid_rank": 44
+    },
+    "summary_status_label_caution": "The summary says first-block-complete because F1 stays valid. It does not establish full-pilot native completeness.",
+    "unknown_results": 0,
+    "unresolved_reservation_micro_usd": 0
+  },
+  "observed_usage_totals": {
+    "answer": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_token_range": [
+        25,
+        1529
+      ],
+      "reasoning_detail_records_present": 480,
+      "reported_reasoning_or_thinking_tokens": 0,
+      "total_input_tokens_all_billing_categories": 48069,
+      "total_output_tokens": 165897
+    },
+    "group": {
+      "cache_creation_input_tokens": 166950,
+      "cache_read_input_tokens": 0,
+      "output_token_range": [
+        50,
+        850
+      ],
+      "reasoning_detail_records_present": 68,
+      "reported_reasoning_or_thinking_tokens": 10445,
+      "total_input_tokens_all_billing_categories": 182333,
+      "total_output_tokens": 12967
+    },
+    "plan": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_token_range": [
+        571,
+        992
+      ],
+      "reasoning_detail_records_present": 24,
+      "reported_reasoning_or_thinking_tokens": 0,
+      "total_input_tokens_all_billing_categories": 4554,
+      "total_output_tokens": 19149
+    },
+    "quality": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_token_range": [
+        9,
+        537
+      ],
+      "reasoning_detail_records_present": 395,
+      "reported_reasoning_or_thinking_tokens": 65496,
+      "total_input_tokens_all_billing_categories": 320240,
+      "total_output_tokens": 69051
+    },
+    "rank": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_token_range": [
+        184,
+        853
+      ],
+      "reasoning_detail_records_present": 24,
+      "reported_reasoning_or_thinking_tokens": 0,
+      "total_input_tokens_all_billing_categories": 120413,
+      "total_output_tokens": 6020
+    }
+  },
+  "per_prompt_outcomes": [
+    {
+      "prompt": "Which 4-digit lock combination is the safest?",
+      "published_B_minus_A": 0.11202902496016698,
+      "published_C_minus_B": 0.0,
+      "published_two_repeat_prompt_means": {
+        "A": 1.680435374402507,
+        "B": 1.7924643993626739,
+        "C": 1.7924643993626739
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-82276b972aa39c5491c83143",
+          "utility": 1.792464399362674
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7
+          ],
+          "order_id": "p2-5265ec58afdb03aeee6333d0",
+          "utility": 1.5684063494423397
+        },
+        "B1": {
+          "distinct": 1,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7
+          ],
+          "order_id": "p2-85bd10cb49b2f7c8b5f10946",
+          "utility": 1.5684063494423397
+        },
+        "B2": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-ef086a74ab504310902f581e",
+          "utility": 2.0165224492830083
+        },
+        "C1": {
+          "distinct": 1,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7
+          ],
+          "order_id": "p2-66a2d4cb8703e6fa273999dd",
+          "utility": 1.5684063494423397
+        },
+        "C2": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-d6b235d21f1367439fdf534c",
+          "utility": 2.0165224492830083
+        }
+      },
+      "source_task_id": "curated-95",
+      "task_id": "nb-curated-9c418f063bc433264d29"
+    },
+    {
+      "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+      "published_B_minus_A": 6.3507496631027305,
+      "published_C_minus_B": null,
+      "published_two_repeat_prompt_means": {
+        "A": 2.4753933355198527,
+        "B": 8.826142998622583,
+        "C": null
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-167f3c31d05a5f0091faed4d",
+          "utility": 2.0165224492830083
+        },
+        "A2": {
+          "distinct": 2,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8
+          ],
+          "order_id": "p2-1d2612ebdb54a0286c94c6b5",
+          "utility": 2.934264221756697
+        },
+        "B1": {
+          "distinct": 9,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "order_id": "p2-f667b5ddf7e4c7ca4b58244c",
+          "utility": 8.729346938396239
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            8,
+            9,
+            8
+          ],
+          "order_id": "p2-d8e673f3e914d38a27b7183d",
+          "utility": 8.922939058848929
+        },
+        "C1": null,
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            9,
+            9,
+            8,
+            9,
+            9,
+            9,
+            9,
+            8
+          ],
+          "order_id": "p2-e0ec5eba54d161710d99d53f",
+          "utility": 8.474848770495612
+        }
+      },
+      "source_task_id": "curated-2",
+      "task_id": "nb-curated-0ac59a48456661d0d8d5"
+    },
+    {
+      "prompt": "Name one well received book that often appears in top book lists.",
+      "published_B_minus_A": 6.026753549280268,
+      "published_C_minus_B": 0.34603660023019067,
+      "published_two_repeat_prompt_means": {
+        "A": 2.0165224492830083,
+        "B": 8.043275998563276,
+        "C": 8.389312598793467
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-415e1c8b14605dd16564d17f",
+          "utility": 2.0165224492830083
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-32813b228f7ff5ac1ac59399",
+          "utility": 2.0165224492830083
+        },
+        "B1": {
+          "distinct": 7,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            8,
+            9,
+            9,
+            8
+          ],
+          "order_id": "p2-4d7fadf13219ec60dfd33e26",
+          "utility": 7.387645176710604
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            9,
+            9,
+            8,
+            9,
+            9,
+            9,
+            9,
+            8
+          ],
+          "order_id": "p2-859539046126626ffb2ace28",
+          "utility": 8.698906820415948
+        },
+        "C1": {
+          "distinct": 7,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            9,
+            8,
+            9,
+            9
+          ],
+          "order_id": "p2-421a0084b30648d87fb21663",
+          "utility": 7.8763610253882925
+        },
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            8,
+            7
+          ],
+          "order_id": "p2-2050adf6a3ab0f16b721f722",
+          "utility": 8.902264172198642
+        }
+      },
+      "source_task_id": "curated-80",
+      "task_id": "nb-curated-7a77e85421d12bca8653"
+    },
+    {
+      "prompt": "Name the dog character in my story about a loyal dog.",
+      "published_B_minus_A": 1.6451508991173496,
+      "published_C_minus_B": 0.42300525097426966,
+      "published_two_repeat_prompt_means": {
+        "A": 4.775458701677598,
+        "B": 6.420609600794948,
+        "C": 6.8436148517692175
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 4,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            7,
+            8
+          ],
+          "order_id": "p2-c3461f03eda02c9087e2ca8a",
+          "utility": 4.043391289873442
+        },
+        "A2": {
+          "distinct": 5,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            7,
+            8,
+            7,
+            8
+          ],
+          "order_id": "p2-3dd7eea7afbf5f030a63bfbd",
+          "utility": 5.507526113481753
+        },
+        "B1": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            5,
+            7,
+            7,
+            5,
+            7,
+            6,
+            5,
+            7,
+            7
+          ],
+          "order_id": "p2-f69949a49e138fb3e089073f",
+          "utility": 6.753362634533773
+        },
+        "B2": {
+          "distinct": 9,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            6,
+            7,
+            6,
+            6,
+            6,
+            7,
+            6,
+            6
+          ],
+          "order_id": "p2-b8135e80727f14cfba9c3039",
+          "utility": 6.087856567056122
+        },
+        "C1": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            5,
+            7,
+            8,
+            7,
+            6,
+            7,
+            6,
+            7
+          ],
+          "order_id": "p2-55aa768bfce64b40af8373e0",
+          "utility": 7.1119581867671045
+        },
+        "C2": {
+          "distinct": 9,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            7,
+            6,
+            7,
+            6,
+            6,
+            7,
+            6,
+            6
+          ],
+          "order_id": "p2-5aee953e2eb0c2f0ec72ff41",
+          "utility": 6.57527151677133
+        }
+      },
+      "source_task_id": "curated-21",
+      "task_id": "nb-curated-b1b0aa2062fdabf30542"
+    },
+    {
+      "prompt": "Name one reputed publication in science.",
+      "published_B_minus_A": 6.429278073347988,
+      "published_C_minus_B": -0.18545106262451938,
+      "published_two_repeat_prompt_means": {
+        "A": 2.0165224492830083,
+        "B": 8.445800522630996,
+        "C": 8.260349460006477
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-7cf1dcc20c5acfa143902af9",
+          "utility": 2.0165224492830083
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-49de65db99446de405a3eef7",
+          "utility": 2.0165224492830083
+        },
+        "B1": {
+          "distinct": 9,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            8,
+            8,
+            8,
+            9,
+            8,
+            8,
+            8
+          ],
+          "order_id": "p2-cc241901bfeb7426ad87b00c",
+          "utility": 8.100816801649273
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            8,
+            8,
+            8,
+            9,
+            8
+          ],
+          "order_id": "p2-f81a8b09bb3849cfa6980e07",
+          "utility": 8.790784243612718
+        },
+        "C1": {
+          "distinct": 9,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            8,
+            9,
+            7,
+            9
+          ],
+          "order_id": "p2-c684d56e1497be4fe50bfdfc",
+          "utility": 8.032815348405176
+        },
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            9,
+            8,
+            8,
+            8,
+            8,
+            8,
+            9,
+            9,
+            8
+          ],
+          "order_id": "p2-71e1816d0f7c45de734c48fa",
+          "utility": 8.487883571607776
+        }
+      },
+      "source_task_id": "curated-62",
+      "task_id": "nb-curated-510dc2800c595827238e"
+    },
+    {
+      "prompt": "Can you list 3 influential persons from the nineteenth century?",
+      "published_B_minus_A": 5.885700424535872,
+      "published_C_minus_B": null,
+      "published_two_repeat_prompt_means": {
+        "A": 2.0165224492830083,
+        "B": 7.9022228738188804,
+        "C": null
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-991cad38fd82dcd7b1541b00",
+          "utility": 2.0165224492830083
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9
+          ],
+          "order_id": "p2-5ed361eeb7479c4ef69d34c7",
+          "utility": 2.0165224492830083
+        },
+        "B1": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            7,
+            8,
+            8,
+            8,
+            9,
+            8,
+            7,
+            9
+          ],
+          "order_id": "p2-e3d1278efdba90cc87e87a19",
+          "utility": 7.907820180889197
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            5,
+            9,
+            8
+          ],
+          "order_id": "p2-327b26c47d6cf4ad043d9c70",
+          "utility": 7.896625566748565
+        },
+        "C1": null,
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            9,
+            6
+          ],
+          "order_id": "p2-1a0dd3cbdf32fb05e189a5d9",
+          "utility": 7.977445578199687
+        }
+      },
+      "source_task_id": "curated-63",
+      "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+    },
+    {
+      "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+      "published_B_minus_A": 5.289904243970638,
+      "published_C_minus_B": -0.054486615826067286,
+      "published_two_repeat_prompt_means": {
+        "A": 2.691098501339157,
+        "B": 7.981002745309795,
+        "C": 7.926516129483728
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 2,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8
+          ],
+          "order_id": "p2-a25edddffc1a33517f63495c",
+          "utility": 3.2264359188528133
+        },
+        "A2": {
+          "distinct": 2,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            8
+          ],
+          "order_id": "p2-b506a38daed7edcd4fb09715",
+          "utility": 2.155761083825501
+        },
+        "B1": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            7,
+            8,
+            8
+          ],
+          "order_id": "p2-64802cbe92f5fc880170a0fc",
+          "utility": 7.953011621249347
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            9,
+            8,
+            8,
+            7,
+            7,
+            8,
+            8
+          ],
+          "order_id": "p2-3a024c1febb26cec05ace2f6",
+          "utility": 8.008993869370244
+        },
+        "C1": {
+          "distinct": 10,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            8,
+            8,
+            8,
+            9,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "order_id": "p2-e4e5110b87ac3861c46a3fb2",
+          "utility": 7.867716127327036
+        },
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            7,
+            9,
+            8,
+            8,
+            8
+          ],
+          "order_id": "p2-f8d9f2dd85c409c3cfa2491b",
+          "utility": 7.98531613164042
+        }
+      },
+      "source_task_id": "curated-17",
+      "task_id": "nb-curated-055c45e37c6c14cca664"
+    },
+    {
+      "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+      "published_B_minus_A": 4.938709361390535,
+      "published_C_minus_B": null,
+      "published_two_repeat_prompt_means": {
+        "A": 1.792464399362674,
+        "B": 6.731173760753209,
+        "C": null
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-649004efbc6869bbaaf7ad26",
+          "utility": 1.792464399362674
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-d49a032b1036010a116551e1",
+          "utility": 1.792464399362674
+        },
+        "B1": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            6,
+            4,
+            6,
+            8,
+            6,
+            7,
+            7,
+            6
+          ],
+          "order_id": "p2-5f85b6fc1d9f0b3c4f00d95e",
+          "utility": 6.808591301941747
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            7,
+            8,
+            4,
+            5,
+            7,
+            8,
+            8,
+            6,
+            6
+          ],
+          "order_id": "p2-15a79ee7cc52faa2cb7b9649",
+          "utility": 6.653756219564671
+        },
+        "C1": null,
+        "C2": null
+      },
+      "source_task_id": "curated-29",
+      "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+    },
+    {
+      "prompt": "What's the one best thing about going on a vacation?",
+      "published_B_minus_A": 5.263886322079869,
+      "published_C_minus_B": -0.04481447792710558,
+      "published_two_repeat_prompt_means": {
+        "A": 1.792464399362674,
+        "B": 7.056350721442543,
+        "C": 7.011536243515438
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-1b84a86aa2187851542c950f",
+          "utility": 1.792464399362674
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-734f16c8deef87af7c0a1cac",
+          "utility": 1.792464399362674
+        },
+        "B1": {
+          "distinct": 10,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            8,
+            8,
+            6,
+            8,
+            7,
+            8,
+            5,
+            8,
+            5
+          ],
+          "order_id": "p2-1e9306e352b2e87e116969cb",
+          "utility": 7.2419043417101365
+        },
+        "B2": {
+          "distinct": 8,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            8,
+            7,
+            7,
+            8,
+            8,
+            7,
+            7
+          ],
+          "order_id": "p2-724dbfbb0d0be9e5e39dcbc3",
+          "utility": 6.870797101174951
+        },
+        "C1": {
+          "distinct": 10,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            8,
+            8,
+            8,
+            8,
+            6,
+            7,
+            8,
+            5,
+            5
+          ],
+          "order_id": "p2-53ad46ccd0b80441a8a013b0",
+          "utility": 7.367377996842739
+        },
+        "C2": {
+          "distinct": 8,
+          "first_answer_quality": 7,
+          "head_scores": [
+            7,
+            7,
+            8,
+            8,
+            6,
+            8,
+            7,
+            8
+          ],
+          "order_id": "p2-074bfbbbcc085c32599ae7fe",
+          "utility": 6.655694490188136
+        }
+      },
+      "source_task_id": "curated-36",
+      "task_id": "nb-curated-4b5afc9736f082c708eb"
+    },
+    {
+      "prompt": "What would you invent to make the world a more interesting place to live in?",
+      "published_B_minus_A": 4.497413746326309,
+      "published_C_minus_B": 0.1094063484098804,
+      "published_two_repeat_prompt_means": {
+        "A": 3.203262939097853,
+        "B": 7.7006766854241615,
+        "C": 7.810083033834042
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 2,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8
+          ],
+          "order_id": "p2-d50f52e26d608692f3b3fd56",
+          "utility": 2.262348186869203
+        },
+        "A2": {
+          "distinct": 3,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8
+          ],
+          "order_id": "p2-622a1c96988afc57b210b7a1",
+          "utility": 4.144177691326503
+        },
+        "B1": {
+          "distinct": 9,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            9,
+            7,
+            8,
+            8,
+            7,
+            8,
+            8
+          ],
+          "order_id": "p2-e81fbabfa699d8ee3c9ec860",
+          "utility": 7.729363457748144
+        },
+        "B2": {
+          "distinct": 10,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            7,
+            7,
+            8,
+            9,
+            7,
+            7,
+            7,
+            8
+          ],
+          "order_id": "p2-1ddea95ff6718061f217cd36",
+          "utility": 7.671989913100179
+        },
+        "C1": {
+          "distinct": 9,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            9,
+            7,
+            8,
+            7,
+            8,
+            8,
+            8,
+            7
+          ],
+          "order_id": "p2-d60f3abfc8b373b80d0c37fe",
+          "utility": 7.665903908536021
+        },
+        "C2": {
+          "distinct": 10,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            7,
+            8,
+            8,
+            8,
+            7,
+            8,
+            7,
+            7
+          ],
+          "order_id": "p2-5cafd16f908efdebb047a14f",
+          "utility": 7.954262159132064
+        }
+      },
+      "source_task_id": "curated-15",
+      "task_id": "nb-curated-0589e47205e5256cc5b3"
+    },
+    {
+      "prompt": "Suggest a strong 4 character password.",
+      "published_B_minus_A": -3.500580987900837,
+      "published_C_minus_B": 1.1025933202853393,
+      "published_two_repeat_prompt_means": {
+        "A": 6.711525712428599,
+        "B": 3.210944724527762,
+        "C": 4.313538044813101
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 7,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            9,
+            9,
+            9,
+            8,
+            9
+          ],
+          "order_id": "p2-8cdb74f765c0c6a857a261bb",
+          "utility": 6.408919004585153
+        },
+        "A2": {
+          "distinct": 8,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            9,
+            9,
+            8,
+            8,
+            9
+          ],
+          "order_id": "p2-fc09ddad1e22721ddbf28b09",
+          "utility": 7.014132420272045
+        },
+        "B1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-bb4114325fac6e0f738f14ca",
+          "utility": 1.792464399362674
+        },
+        "B2": {
+          "distinct": 4,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            7,
+            8
+          ],
+          "order_id": "p2-3e69502c36a8f49c102f64ed",
+          "utility": 4.629425049692849
+        },
+        "C1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-f2499c2a8327dcbb58c664f4",
+          "utility": 1.792464399362674
+        },
+        "C2": {
+          "distinct": 8,
+          "first_answer_quality": 9,
+          "head_scores": [
+            9,
+            8,
+            8,
+            8,
+            6,
+            6,
+            8,
+            5
+          ],
+          "order_id": "p2-7d5681cbdd3ceeba32e845ce",
+          "utility": 6.834611690263528
+        }
+      },
+      "source_task_id": "curated-96",
+      "task_id": "nb-curated-6584de30a11a0e08ca32"
+    },
+    {
+      "prompt": "Which US city has terrible quality of life?",
+      "published_B_minus_A": 3.994333403425861,
+      "published_C_minus_B": -0.30826946137391165,
+      "published_two_repeat_prompt_means": {
+        "A": 1.792464399362674,
+        "B": 5.786797802788535,
+        "C": 5.4785283414146235
+      },
+      "repeat_outcomes": {
+        "A1": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-b2e38402a57e01c92d7e0389",
+          "utility": 1.792464399362674
+        },
+        "A2": {
+          "distinct": 1,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8
+          ],
+          "order_id": "p2-0963685e2489a62e7f0f745a",
+          "utility": 1.792464399362674
+        },
+        "B1": {
+          "distinct": 6,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            7,
+            7,
+            6
+          ],
+          "order_id": "p2-f6e327cfd1f9d8d5d56ba0da",
+          "utility": 5.1928812147321874
+        },
+        "B2": {
+          "distinct": 6,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            7,
+            8,
+            8
+          ],
+          "order_id": "p2-f18f62263bd3b79f79e17ead",
+          "utility": 6.380714390844883
+        },
+        "C1": {
+          "distinct": 6,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            6,
+            7,
+            8,
+            7
+          ],
+          "order_id": "p2-0ea9dc7bdab95db843a72535",
+          "utility": 4.573589066666942
+        },
+        "C2": {
+          "distinct": 6,
+          "first_answer_quality": 8,
+          "head_scores": [
+            8,
+            8,
+            8,
+            6,
+            8,
+            8
+          ],
+          "order_id": "p2-225925e518d890279cc53c43",
+          "utility": 6.383467616162305
+        }
+      },
+      "source_task_id": "curated-41",
+      "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+    }
+  ],
+  "post_hoc_all12_A_B_descriptive_supplement": {
+    "A_orders": 24,
+    "B_orders": 24,
+    "C_aggregate_computed": false,
+    "independent_prompts": 12,
+    "inference_limit": "All twelve A/B prompt pairs are present. This supplement does not exclude failed C tasks, replace null official values, rescue the three-condition comparison or establish held-out/human-aligned/compute-controlled effectiveness.",
+    "mean_A_utility": 2.747011259200218,
+    "mean_B_utility": 6.658121902836613,
+    "mean_paired_B_minus_A": 3.911110643636396,
+    "prompt_effect_signs": {
+      "negative": 1,
+      "positive": 11,
+      "zero": 0
+    },
+    "sample_exclusions": 0,
+    "seed_selected": false,
+    "selection_policy_changed": false,
+    "status": "Separately labelled post-hoc descriptive arithmetic; not the frozen selection result."
+  },
+  "published_auxiliary_descriptives": {
+    "first_answer_quality": {
+      "mean_of_prompt_means": {
+        "A": 8.25,
+        "B": 8.208333333333334,
+        "C": null
+      },
+      "prompt_mean_range": {
+        "A": {
+          "maximum": 9.0,
+          "minimum": 7.5
+        },
+        "B": {
+          "maximum": 9.0,
+          "minimum": 7.0
+        },
+        "C": {
+          "maximum": 9.0,
+          "minimum": 7.0
+        }
+      },
+      "scored_order_coverage": {
+        "A": 24,
+        "B": 24,
+        "C": 20
+      }
+    },
+    "head_quality": {
+      "mean_of_prompt_means": {
+        "A": 8.259970238095239,
+        "B": 7.78844246031746,
+        "C": null
+      },
+      "orders_with_head_scores": {
+        "A": 24,
+        "B": 24,
+        "C": 20
+      },
+      "prompt_mean_range": {
+        "A": {
+          "maximum": 9.0,
+          "minimum": 7.5
+        },
+        "B": {
+          "maximum": 8.9,
+          "minimum": 6.472222222222222
+        },
+        "C": {
+          "maximum": 8.778571428571428,
+          "minimum": 6.727777777777778
+        }
+      }
+    },
+    "interpretation": "A/B show more native semantic breadth under planning, with lower mean head quality and nearly unchanged first-answer quality. This is a descriptive quality/diversity tradeoff, not isolated attribution at equal inference cost.",
+    "mean_distinct": {
+      "A": 2.0833333333333335,
+      "B": 7.916666666666667,
+      "C": null
+    }
+  },
+  "rank_contract_failures": {
+    "attempted_rank_calls": 24,
+    "diagnostic_conclusion": "All four whole responses violate the one-JSON-object contract despite end_turn. Seven embedded JSON objects are exact valid parent-ID permutations; all three self-correction pairs repeat identical order lists. There is no observed uncorrected ID typo in these fragments. Extraction is offline structural diagnosis only; original failures and missing C outcomes remain unchanged.",
+    "failed_rank_calls": 4,
+    "failed_rank_cost_micro_usd": 51352,
+    "failed_rank_fraction": 0.16666666666666666,
+    "native_scoring_failures": 0,
+    "records": [
+      {
+        "failure_cause": "prose before the JSON object",
+        "failure_record": {
+          "attempts": 78,
+          "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+          "error": "strategy response is not a complete JSON object",
+          "failed_slot": "p2-cce2c41315048eab5ffb1d45.rank",
+          "kind": "phase2-release-failure-v2",
+          "prefix_sha256": "6891df0c751ccfbab9d4105cd80a85ee19efeb193337a2bd385e9d4cebdde162",
+          "repeat": 1,
+          "stage": "rank",
+          "task_id": "nb-curated-0ac59a48456661d0d8d5"
+        },
+        "missing_C_definition": {
+          "assessment_path": "assessments/p2-cce2c41315048eab5ffb1d45.json",
+          "checkpoint": "expansion",
+          "method": "C",
+          "order_id": "p2-cce2c41315048eab5ffb1d45",
+          "portfolio_path": "portfolios/p2-cce2c41315048eab5ffb1d45.json",
+          "repeat": 1,
+          "task_id": "nb-curated-0ac59a48456661d0d8d5"
+        },
+        "offline_structural_fragment_inspection": {
+          "diagnostic_only": true,
+          "fragments": [
+            {
+              "character_offset": 1204,
+              "duplicate_ids": [],
+              "fragment_sha256": "59486077e5718238334559ad90f0bfd1d64376245a28efac42fae7bf1b719988",
+              "missing_ids": [],
+              "order": [
+                "response-b6d7a8f107315f9534a4d4a1",
+                "response-352cff5f8f8d164d4b105dda",
+                "response-f1964fc492d9e6b601dc8e55",
+                "response-8869f4e4120ab9bdfee32a86",
+                "response-5b4a1645ec544f5f2b0958da",
+                "response-3a534ea02b004b4623759145",
+                "response-fb26f59109b553980e1effa8",
+                "response-87217190f317515a14b754d9",
+                "response-e05be56f983c5830592dcf10",
+                "response-d920d67a741a13efada289e4"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            }
+          ],
+          "multiple_order_lists_identical": false,
+          "no_output_repair_rescoring_or_acceptance": true,
+          "original_failure_preserved": true
+        },
+        "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+        "returned_model": "claude-sonnet-5-5",
+        "settled_micro_usd": 17586,
+        "source_task_id": "curated-2",
+        "stop_reason": "end_turn",
+        "visible_output": "Constraint: exactly 5 sentences. Let me count each.\n\nb6d7: sentence 1 (When... years.), 2 (The two clash...), 3 (As they work...), 4 (Just as Josie...), 5 (After...). 5 sentences. Good.\n\n5b4a: 1, 2 (Within an hour), 3 (To save), 4 (Between), 5 (On Easter). 5. Good.\n\nf196: 1, 2 (In a panic), 3 (Desperate), 4 (As the two), 5 (When). 5. Good.\n\n352c: 1, 2 (Then he keeps), 3 (Wyatt, too), 4 (Their secret), 5 (On Easter). 5. Good.\n\n8869: Title, then 1, 2 (When a surprise), 3 (As the sirens), 4 (By Easter), 5 (She ultimately). 5 plus title. Good.\n\nfb26: 1, 2 (The meddling), 3 (Meanwhile), 4 (Just as), 5 (On Easter). 5. Good.\n\ne05b: 1, 2 (Slick), 3 (Forced), 4 (As Dana's), 5 (On Easter). 5. Good.\n\n3a53: 1, 2 (Marlene), 3 (When a freak), 4 (Just as), 5 (On Easter). 5. Good.\n\n8721: 1, 2 (Her search), 3 (Each rival), 4 (Just when), 5 (On Easter). 5. Good.\n\nd920: intro sentence, then 1 (When), 2 (Her meet-cute), 3 (As), 4 (Heartbroken), 5 (On Easter): 6 sentences total. Violates; rank last.\n\nRanking by quality and variety: b6d7 first (strong, rural), then the fake-fiancé f196, the Easter Bunny 352c, the tornado 8869, bakery 5b4a, meddling town fb26, divorced lamb 3a53, treasure hunt 8721, e05b.\n\n\n{\"order\":[\"response-b6d7a8f107315f9534a4d4a1\",\"response-352cff5f8f8d164d4b105dda\",\"response-f1964fc492d9e6b601dc8e55\",\"response-8869f4e4120ab9bdfee32a86\",\"response-5b4a1645ec544f5f2b0958da\",\"response-3a534ea02b004b4623759145\",\"response-fb26f59109b553980e1effa8\",\"response-87217190f317515a14b754d9\",\"response-e05be56f983c5830592dcf10\",\"response-d920d67a741a13efada289e4\"]}",
+        "whole_response_contract_accepted": false
+      },
+      {
+        "failure_cause": "multiple JSON objects separated by self-correction prose",
+        "failure_record": {
+          "attempts": 432,
+          "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+          "error": "strategy response is not a complete JSON object",
+          "failed_slot": "p2-e8740bae4e77d0e443e32104.rank",
+          "kind": "phase2-release-failure-v2",
+          "prefix_sha256": "3433084713cc1d85d770cea7567f3a35c45485563ff36057d75e375b77e1cfdb",
+          "repeat": 1,
+          "stage": "rank",
+          "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+        },
+        "missing_C_definition": {
+          "assessment_path": "assessments/p2-e8740bae4e77d0e443e32104.json",
+          "checkpoint": "expansion",
+          "method": "C",
+          "order_id": "p2-e8740bae4e77d0e443e32104",
+          "portfolio_path": "portfolios/p2-e8740bae4e77d0e443e32104.json",
+          "repeat": 1,
+          "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+        },
+        "offline_structural_fragment_inspection": {
+          "diagnostic_only": true,
+          "fragments": [
+            {
+              "character_offset": 0,
+              "duplicate_ids": [],
+              "fragment_sha256": "12ff7ba36b8e86465057cf4099f48c3469739ae36976d5c63aee63c04b690248",
+              "missing_ids": [],
+              "order": [
+                "response-cd119fe3569c71585051e7c2",
+                "response-388084faa64f323d2f1cbdb3",
+                "response-9619d55a629844005e822839",
+                "response-2bcf8a3d801e4cc505f000aa",
+                "response-fd3afa27f8926752132a2c6a",
+                "response-87b74743d2fb3aa254cb8443",
+                "response-fc5b45db8f1db8141d232a46",
+                "response-9862bf0a401e60092fe25b7f",
+                "response-58253f3daf52daf1f5224d1e",
+                "response-6f0975f7180e38d03cc171f2"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            },
+            {
+              "character_offset": 419,
+              "duplicate_ids": [],
+              "fragment_sha256": "12ff7ba36b8e86465057cf4099f48c3469739ae36976d5c63aee63c04b690248",
+              "missing_ids": [],
+              "order": [
+                "response-cd119fe3569c71585051e7c2",
+                "response-388084faa64f323d2f1cbdb3",
+                "response-9619d55a629844005e822839",
+                "response-2bcf8a3d801e4cc505f000aa",
+                "response-fd3afa27f8926752132a2c6a",
+                "response-87b74743d2fb3aa254cb8443",
+                "response-fc5b45db8f1db8141d232a46",
+                "response-9862bf0a401e60092fe25b7f",
+                "response-58253f3daf52daf1f5224d1e",
+                "response-6f0975f7180e38d03cc171f2"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            }
+          ],
+          "multiple_order_lists_identical": true,
+          "no_output_repair_rescoring_or_acceptance": true,
+          "original_failure_preserved": true
+        },
+        "prompt": "Can you list 3 influential persons from the nineteenth century?",
+        "returned_model": "claude-sonnet-5-5",
+        "settled_micro_usd": 11408,
+        "source_task_id": "curated-63",
+        "stop_reason": "end_turn",
+        "visible_output": "{\"order\":[\"response-cd119fe3569c71585051e7c2\",\"response-388084faa64f323d2f1cbdb3\",\"response-9619d55a629844005e822839\",\"response-2bcf8a3d801e4cc505f000aa\",\"response-fd3afa27f8926752132a2c6a\",\"response-87b74743d2fb3aa254cb8443\",\"response-fc5b45db8f1db8141d232a46\",\"response-9862bf0a401e60092fe25b7f\",\"response-58253f3daf52daf1f5224d1e\",\"response-6f0975f7180e38d03cc171f2\"]}\n\nWait—I must ensure IDs are exact. Corrected:\n\n{\"order\":[\"response-cd119fe3569c71585051e7c2\",\"response-388084faa64f323d2f1cbdb3\",\"response-9619d55a629844005e822839\",\"response-2bcf8a3d801e4cc505f000aa\",\"response-fd3afa27f8926752132a2c6a\",\"response-87b74743d2fb3aa254cb8443\",\"response-fc5b45db8f1db8141d232a46\",\"response-9862bf0a401e60092fe25b7f\",\"response-58253f3daf52daf1f5224d1e\",\"response-6f0975f7180e38d03cc171f2\"]}",
+        "whole_response_contract_accepted": false
+      },
+      {
+        "failure_cause": "multiple JSON objects separated by self-correction prose",
+        "failure_record": {
+          "attempts": 607,
+          "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+          "error": "strategy response is not a complete JSON object",
+          "failed_slot": "p2-718a1781795dd29b5ebe57e4.rank",
+          "kind": "phase2-release-failure-v2",
+          "prefix_sha256": "51be48168c94664affec69e424ff3c8e503429cc16ceb073f60be12d1a708cc6",
+          "repeat": 1,
+          "stage": "rank",
+          "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+        },
+        "missing_C_definition": {
+          "assessment_path": "assessments/p2-718a1781795dd29b5ebe57e4.json",
+          "checkpoint": "expansion",
+          "method": "C",
+          "order_id": "p2-718a1781795dd29b5ebe57e4",
+          "portfolio_path": "portfolios/p2-718a1781795dd29b5ebe57e4.json",
+          "repeat": 1,
+          "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+        },
+        "offline_structural_fragment_inspection": {
+          "diagnostic_only": true,
+          "fragments": [
+            {
+              "character_offset": 0,
+              "duplicate_ids": [],
+              "fragment_sha256": "ed083ea9d10d7c76888adad2c22230835520a5fac8215b021aa55ee1e31e2302",
+              "missing_ids": [],
+              "order": [
+                "response-5e54eb2c38be60c793574441",
+                "response-296397ecf9e0fee2de336430",
+                "response-8602c062fb5c4b24c11a933e",
+                "response-df5527ff87140faf8b787bde",
+                "response-0099769c08afa3bd54ecb20f",
+                "response-7c47934f9f17cd82ef7d797c",
+                "response-df9a28efac461c88a260b260",
+                "response-da8debb07a2e38e792650588",
+                "response-a6cb75c553f0bbf456b8d725",
+                "response-0b6d036f4eeae23ec8bcc549"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            },
+            {
+              "character_offset": 447,
+              "duplicate_ids": [],
+              "fragment_sha256": "ed083ea9d10d7c76888adad2c22230835520a5fac8215b021aa55ee1e31e2302",
+              "missing_ids": [],
+              "order": [
+                "response-5e54eb2c38be60c793574441",
+                "response-296397ecf9e0fee2de336430",
+                "response-8602c062fb5c4b24c11a933e",
+                "response-df5527ff87140faf8b787bde",
+                "response-0099769c08afa3bd54ecb20f",
+                "response-7c47934f9f17cd82ef7d797c",
+                "response-df9a28efac461c88a260b260",
+                "response-da8debb07a2e38e792650588",
+                "response-a6cb75c553f0bbf456b8d725",
+                "response-0b6d036f4eeae23ec8bcc549"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            }
+          ],
+          "multiple_order_lists_identical": true,
+          "no_output_repair_rescoring_or_acceptance": true,
+          "original_failure_preserved": true
+        },
+        "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+        "returned_model": "claude-sonnet-5-5",
+        "settled_micro_usd": 11638,
+        "source_task_id": "curated-29",
+        "stop_reason": "end_turn",
+        "visible_output": "{\"order\":[\"response-5e54eb2c38be60c793574441\",\"response-296397ecf9e0fee2de336430\",\"response-8602c062fb5c4b24c11a933e\",\"response-df5527ff87140faf8b787bde\",\"response-0099769c08afa3bd54ecb20f\",\"response-7c47934f9f17cd82ef7d797c\",\"response-df9a28efac461c88a260b260\",\"response-da8debb07a2e38e792650588\",\"response-a6cb75c553f0bbf456b8d725\",\"response-0b6d036f4eeae23ec8bcc549\"]}\n\nCorrection: I made a typo in one ID. Here is the corrected final answer:\n\n{\"order\":[\"response-5e54eb2c38be60c793574441\",\"response-296397ecf9e0fee2de336430\",\"response-8602c062fb5c4b24c11a933e\",\"response-df5527ff87140faf8b787bde\",\"response-0099769c08afa3bd54ecb20f\",\"response-7c47934f9f17cd82ef7d797c\",\"response-df9a28efac461c88a260b260\",\"response-da8debb07a2e38e792650588\",\"response-a6cb75c553f0bbf456b8d725\",\"response-0b6d036f4eeae23ec8bcc549\"]}",
+        "whole_response_contract_accepted": false
+      },
+      {
+        "failure_cause": "multiple JSON objects separated by self-correction prose",
+        "failure_record": {
+          "attempts": 642,
+          "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+          "error": "strategy response is not a complete JSON object",
+          "failed_slot": "p2-ee9c05c3f5ed94c379d9249d.rank",
+          "kind": "phase2-release-failure-v2",
+          "prefix_sha256": "b7468ad532a09f7e7c8b36f5535b7ac569b98a0ffbdc56ae545531b52e8fa9cf",
+          "repeat": 2,
+          "stage": "rank",
+          "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+        },
+        "missing_C_definition": {
+          "assessment_path": "assessments/p2-ee9c05c3f5ed94c379d9249d.json",
+          "checkpoint": "expansion",
+          "method": "C",
+          "order_id": "p2-ee9c05c3f5ed94c379d9249d",
+          "portfolio_path": "portfolios/p2-ee9c05c3f5ed94c379d9249d.json",
+          "repeat": 2,
+          "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+        },
+        "offline_structural_fragment_inspection": {
+          "diagnostic_only": true,
+          "fragments": [
+            {
+              "character_offset": 0,
+              "duplicate_ids": [],
+              "fragment_sha256": "8fe88ce623d339307fdeeded93886feeebc22fae57d03d42706ed95dbd90e2f9",
+              "missing_ids": [],
+              "order": [
+                "response-44f4226b03a63e93a7430b64",
+                "response-c9b6f0f6a74e79615ed9c95c",
+                "response-f637602b08d13677e48b57e5",
+                "response-2c9f8bca66d7865930aa908f",
+                "response-c67d0eb51cd5dd2c2efd67f7",
+                "response-de6a53242de4ecb4e4a09b9b",
+                "response-c5376d4817ae56f5a44bd032",
+                "response-58a4e624944eea8e4413fa3e",
+                "response-f913d377abd750cf39edfeb0",
+                "response-b75c14d567d8d90b2efa577b"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            },
+            {
+              "character_offset": 407,
+              "duplicate_ids": [],
+              "fragment_sha256": "8fe88ce623d339307fdeeded93886feeebc22fae57d03d42706ed95dbd90e2f9",
+              "missing_ids": [],
+              "order": [
+                "response-44f4226b03a63e93a7430b64",
+                "response-c9b6f0f6a74e79615ed9c95c",
+                "response-f637602b08d13677e48b57e5",
+                "response-2c9f8bca66d7865930aa908f",
+                "response-c67d0eb51cd5dd2c2efd67f7",
+                "response-de6a53242de4ecb4e4a09b9b",
+                "response-c5376d4817ae56f5a44bd032",
+                "response-58a4e624944eea8e4413fa3e",
+                "response-f913d377abd750cf39edfeb0",
+                "response-b75c14d567d8d90b2efa577b"
+              ],
+              "suffix_hex_lengths": [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "unexpected_ids": [],
+              "valid_exact_parent_permutation": true
+            }
+          ],
+          "multiple_order_lists_identical": true,
+          "no_output_repair_rescoring_or_acceptance": true,
+          "original_failure_preserved": true
+        },
+        "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+        "returned_model": "claude-sonnet-5-5",
+        "settled_micro_usd": 10720,
+        "source_task_id": "curated-29",
+        "stop_reason": "end_turn",
+        "visible_output": "{\"order\":[\"response-44f4226b03a63e93a7430b64\",\"response-c9b6f0f6a74e79615ed9c95c\",\"response-f637602b08d13677e48b57e5\",\"response-2c9f8bca66d7865930aa908f\",\"response-c67d0eb51cd5dd2c2efd67f7\",\"response-de6a53242de4ecb4e4a09b9b\",\"response-c5376d4817ae56f5a44bd032\",\"response-58a4e624944eea8e4413fa3e\",\"response-f913d377abd750cf39edfeb0\",\"response-b75c14d567d8d90b2efa577b\"]}\n\nWait, I must correct an ID typo.\n\n{\"order\":[\"response-44f4226b03a63e93a7430b64\",\"response-c9b6f0f6a74e79615ed9c95c\",\"response-f637602b08d13677e48b57e5\",\"response-2c9f8bca66d7865930aa908f\",\"response-c67d0eb51cd5dd2c2efd67f7\",\"response-de6a53242de4ecb4e4a09b9b\",\"response-c5376d4817ae56f5a44bd032\",\"response-58a4e624944eea8e4413fa3e\",\"response-f913d377abd750cf39edfeb0\",\"response-b75c14d567d8d90b2efa577b\"]}",
+        "whole_response_contract_accepted": false
+      }
+    ]
+  },
+  "review_actions": {
+    "api_spend_micro_usd": 0,
+    "existing_files_modified": false,
+    "new_credential_reads": 0,
+    "new_provider_calls": 0,
+    "new_sdk_constructions": 0,
+    "only_write": "evidence/phase2b-expansion/live-outcome-review.json",
+    "original_folder_accessed": false
+  },
+  "reviewed_at_utc": "2026-10-28T13:34:15Z",
+  "reviewer": "/root/release_runner",
+  "snapshot_sha256": "89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec",
+  "status": "reviewed-limited-inconclusive-run",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

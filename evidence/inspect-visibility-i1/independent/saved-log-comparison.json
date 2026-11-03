@@ -1,0 +1,82 @@
+{
+  "api_spend": 0,
+  "comparisons": [
+    {
+      "case": "fixed-changed",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "author-1"
+    },
+    {
+      "case": "fixed-changed",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "author-2"
+    },
+    {
+      "case": "fixed-changed",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "review-1"
+    },
+    {
+      "case": "fixed-changed",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "review-2"
+    },
+    {
+      "case": "baseline-loss",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "author-1"
+    },
+    {
+      "case": "baseline-loss",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "author-2"
+    },
+    {
+      "case": "baseline-loss",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "review-1"
+    },
+    {
+      "case": "baseline-loss",
+      "exact_native_payload": true,
+      "exact_source_attachments": true,
+      "native_status_and_missingness": true,
+      "no_invented_model_events_or_scores": true,
+      "run": "review-2"
+    }
+  ],
+  "passed": true,
+  "scope": "independent saved-log semantic/byte comparison only; not live or scientific evidence",
+  "source_sha256": {
+    "baseline-loss": {
+      "result.json": "5f8386074c8841179a9c56282cf7ff1e1eb15920b369885e55b6ab9ec6ab47d7",
+      "synthetic-wire.json": "de748c8de154f463bbd3e866e619617daef033f4edb85c85b78896ccb75ef342"
+    },
+    "fixed-changed": {
+      "result.json": "e8fe7baeea34943fccd1e45c3a57b13f527f128c0cda705ef4250453f6401b6f",
+      "synthetic-wire.json": "b296dd8a889c8560ea215d0b36192e39adc3dd3028455625cdf1e7659125e91f"
+    }
+  },
+  "zero_model_or_network_attempts": true
+}

@@ -1,0 +1,1 @@
+{"deliberate_expected_probes": {"external_socket_attempts": ["socket.connect", "socket.getaddrinfo"], "model_constructor_attempts": ["Model/ModelAPI", "Model/ModelAPI"]}, "all_blocked_before_execution": true, "not_actual_import_attempt_counts": true}

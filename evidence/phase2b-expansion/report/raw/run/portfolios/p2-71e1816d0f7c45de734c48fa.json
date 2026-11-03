@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-4af64004b4fc2ea22a2e95db63b5877ee72fabf8842e93c8a66029b6f53c1304",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "fbf3300953ebc60944db6bbf804edfeb50dd2a6331c06538f819f59dfc59ac4a",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 2,
+    "request_ids": [
+      "p2-f81a8b09bb3849cfa6980e07.plan",
+      "p2-f81a8b09bb3849cfa6980e07.answer.00",
+      "p2-f81a8b09bb3849cfa6980e07.answer.01",
+      "p2-f81a8b09bb3849cfa6980e07.answer.02",
+      "p2-f81a8b09bb3849cfa6980e07.answer.03",
+      "p2-f81a8b09bb3849cfa6980e07.answer.04",
+      "p2-f81a8b09bb3849cfa6980e07.answer.05",
+      "p2-f81a8b09bb3849cfa6980e07.answer.06",
+      "p2-f81a8b09bb3849cfa6980e07.answer.07",
+      "p2-f81a8b09bb3849cfa6980e07.answer.08",
+      "p2-f81a8b09bb3849cfa6980e07.answer.09",
+      "p2-71e1816d0f7c45de734c48fa.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f69149ce173e25ff06455fe5",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.00",
+      "status": "ok",
+      "text": "**Nature** is a flagship multidisciplinary weekly journal, first published in 1869. It is known for its rigorous peer review and has a long history of publishing landmark discoveries across the sciences."
+    },
+    {
+      "id": "response-75154c42a41e950d98accad9",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.01",
+      "status": "ok",
+      "text": "**Science**, the flagship journal of the American Association for the Advancement of Science (AAAS), is a leading multidisciplinary publication known for peer-reviewed research across the natural and social sciences."
+    },
+    {
+      "id": "response-8a2cfa2135308c4c8e949092",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.04",
+      "status": "ok",
+      "text": "**Proceedings of the National Academy of Sciences (PNAS)** is a reputed science publication. It covers a broad range of fields, including biology, physics, chemistry, and the social sciences. Its credibility comes from its backing by the U.S. National Academy of Sciences and its rigorous peer review."
+    },
+    {
+      "id": "response-51cece9967140818745138ef",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.02",
+      "status": "ok",
+      "text": "**Cell** is a leading peer-reviewed journal in biology, especially molecular and cellular research. It is known for its rigorous editorial standards and for publishing influential findings in areas such as genetics, cell biology, and molecular biology."
+    },
+    {
+      "id": "response-22360765770539192bf8a2d9",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.07",
+      "status": "ok",
+      "text": "**The New England Journal of Medicine (NEJM)** is a highly reputed scientific publication. It is a peer-reviewed medical journal that has published influential clinical trials and research for over 200 years, and it plays a central role in evidence-based medicine by shaping how clinicians diagnose and treat disease."
+    },
+    {
+      "id": "response-fd6afc61b3761d44779e13e6",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.09",
+      "status": "ok",
+      "text": "**Journal of the American Chemical Society (JACS)** is a highly reputed scientific publication. Published by the American Chemical Society since 1879, it is one of the most authoritative and influential journals in chemistry. It covers a wide range of areas, including organic, inorganic, physical, and biological chemistry, and it is among the most cited journals in the field."
+    },
+    {
+      "id": "response-15696341483df41ce11aea3a",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.05",
+      "status": "ok",
+      "text": "**Physical Review Letters** is a highly reputed science publication. Published by the American Physical Society, it is known for rapidly publishing high-impact physics findings, and many landmark discoveries have appeared in its pages, including work on gravitational waves and fundamental particle physics."
+    },
+    {
+      "id": "response-4555008464af66fd64d71ce8",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.08",
+      "status": "ok",
+      "text": "**Philosophical Transactions of the Royal Society** is one of the oldest continuously published scientific journals in the world. It was first issued in 1665 and has been published ever since."
+    },
+    {
+      "id": "response-b8d18dacf62df1b679662172",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.03",
+      "status": "ok",
+      "text": "**The Lancet** is a highly reputed publication in science, particularly in medical science and clinical research."
+    },
+    {
+      "id": "response-bec3e5a3a9a80e50604876f3",
+      "request_id": "p2-f81a8b09bb3849cfa6980e07.answer.06",
+      "status": "ok",
+      "text": "**Scientific American** is a reputed science publication. Founded in 1845, it is one of the oldest continuously published magazines in the United States. It is written for general audiences rather than as a research journal, and it covers developments in science and technology in an accessible way."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-510dc2800c595827238e",
+    "prompt": "Name one reputed publication in science.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-62"
+    }
+  }
+}

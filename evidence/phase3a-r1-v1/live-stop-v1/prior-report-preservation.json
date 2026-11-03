@@ -1,0 +1,89 @@
+{
+  "comparison": "Git canonical blob identity after repository clean filters; worktree byte SHA recorded separately.",
+  "kind": "phase3a-r1-live-stop-prior-report-preservation-v1",
+  "original_folder_accessed": false,
+  "provider_calls": 0,
+  "reports_unchanged": [
+    {
+      "git_blob": "bd02eabccd43698cd9b989287b7720d31f8b945b",
+      "path": "PHASE0_REPORT.md",
+      "worktree_sha256": "7c44bac052b17f392ab66bba289b835c8dcb14dc6350a64bb202fbad5536f862"
+    },
+    {
+      "git_blob": "cdfa75bfb1606e562da109572f15393616ce04b9",
+      "path": "PHASE1A_DATA_READINESS_REPORT.md",
+      "worktree_sha256": "eec54bde7100da7520fbfd2e7269dab7c8dd83e8c738c7c38f55c21892034ce0"
+    },
+    {
+      "git_blob": "72ffa42a596e5a76fd06c92d486e1994dec782f6",
+      "path": "PHASE1_PREPARATION_REPORT.md",
+      "worktree_sha256": "9e628665f640df6df4935b51f227050f16382c5ad7bfb38d9a05d6bddc877940"
+    },
+    {
+      "git_blob": "dbe2bab849529ff1aa5044bf9345675ce845e5a0",
+      "path": "PHASE1_REPORT.md",
+      "worktree_sha256": "39442b82bf72da2839ec72ae59152d7bd90f3bd9787cc84feac511a70474bf21"
+    },
+    {
+      "git_blob": "e952785f6e809b7e271d9106467b5a403ed68224",
+      "path": "PHASE2B_EXECUTION_KIT_REPORT.md",
+      "worktree_sha256": "a82da95529e2354c12aaf158417edab9e934b88f9658a103eee4debaa026c8a4"
+    },
+    {
+      "git_blob": "ebf10253b02ea91c9c3122f391948e803cccb8b4",
+      "path": "PHASE2B_F1_REPORT.md",
+      "worktree_sha256": "9d49e7327a5d5f8343c7096e6f2df35d7bebd5438934706c3df8c0fe0c2b6d38"
+    },
+    {
+      "git_blob": "aaf9f57117327ff5b65699232b7123c4aac948b8",
+      "path": "PHASE2B_RANK_FORMAT_LIVE_REPORT.md",
+      "worktree_sha256": "49717d0139ab69e6cf774d14090bd096aadf4a00b7819943bc2374490088ed0b"
+    },
+    {
+      "git_blob": "bb5416d693f120898e83a0991379193039be7639",
+      "path": "PHASE2B_RANK_FORMAT_REPORT.md",
+      "worktree_sha256": "98487a7c40bcc40f5c099d8b8ce1e96d3e16d4923158b77cd7908ebd8d933f38"
+    },
+    {
+      "git_blob": "75c7384b798a6784090278e7a0a3581d03e613e0",
+      "path": "PHASE2B_REPORT.md",
+      "worktree_sha256": "cef642b23b5b846c3cf40877a162469eb98b6f775aa8fa36f67b51b6a53c02f8"
+    },
+    {
+      "git_blob": "3f42f66b17094dbe85127f7dedcce08d649c7469",
+      "path": "PHASE2_AM1_REPORT.md",
+      "worktree_sha256": "b01be6a3869075ab937d9d59597c8930aa2874b40b268026a9efaddbe0fc7150"
+    },
+    {
+      "git_blob": "cf70aae27c5cfb785d3c2fae19e457149452116d",
+      "path": "PHASE2_LIVE_READINESS_REPORT.md",
+      "worktree_sha256": "b14298965ccbfe8971acf4f064f80ae1f1c4d42538c7fea613817d01b3a4bbd6"
+    },
+    {
+      "git_blob": "08136c2b3efc2ccfd60e7e85a13ea0c017056273",
+      "path": "PHASE2_POLICY_UPDATE_REPORT.md",
+      "worktree_sha256": "66b3286f00b2f1889c3f8db9b1f2f982340358a3688dfa114ec5e7a0639196cc"
+    },
+    {
+      "git_blob": "3b9fd3f058b2c19a10bf0608c202c939a5dd4b8d",
+      "path": "PHASE2_PREPARATION_REPORT.md",
+      "worktree_sha256": "aa19ef03b38c7f20a0bc745d82350aab2d264866672c15be00b8a9a2caf97a6b"
+    },
+    {
+      "git_blob": "946273979c05d186430d52147465e45bfbdf8db0",
+      "path": "PHASE3A_IMPLEMENTATION_REPORT.md",
+      "worktree_sha256": "6384df532b1ad314b4ab89aa35349bdf120e398b2e2c96c44cbacd5d30d9111b"
+    },
+    {
+      "git_blob": "4e056315c24c203a2324d52c9f4bf522ebe884cd",
+      "path": "PHASE3A_LIVE_INTERRUPTION_REPORT.md",
+      "worktree_sha256": "fd33962befda7b4b7a4f0eb6dd56fa70f1024488379f084a3e42519640e7245a"
+    },
+    {
+      "git_blob": "33756a723e0228eb3b3f926703bcef125090afef",
+      "path": "PHASE3A_R1_IMPLEMENTATION_REPORT.md",
+      "worktree_sha256": "ea4ff2f3543ce94723184e511d7e5bded6f54498b8b4471afa316f471172b5a6"
+    }
+  ],
+  "reports_verified_against_commit": "35651b7"
+}

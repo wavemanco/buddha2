@@ -1,0 +1,513 @@
+{
+  "freeze_sha256": "311f0c744214a1b7d406c5c17a6a5d809cec3c2b6959d4bd0f90568df5dfd13e",
+  "judgments": [
+    {
+      "choice": "A",
+      "cost_usd": 0.002068,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "0c67e7b245091e6ea25d7b6ccd898786a9f6ba292fa58a429441c91ff2ebe7a1",
+      "presentation_id": "presentation-9e4e5fda2271ad3732d300c187c93a4e5e27c0daa0c9302a2ab26347634f7a4a",
+      "presentation_sha256": "e46cc77206f500815351fc7184f5262104e1e5a392b946106046dc23bd340e7e",
+      "reason": "Neither response offers a real metaphor. A is a tautological simile, so it is uncreative, but it is coherent and completes the sentence. B, \"a raceca\", is an incomplete or garbled word with no meaning or imagery. A is marginally more appropriate, though both are very weak.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 494,
+        "output_tokens": 108
+      }
+    },
+    {
+      "choice": "abstain",
+      "cost_usd": 0.002128,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "0c67e7b245091e6ea25d7b6ccd898786a9f6ba292fa58a429441c91ff2ebe7a1",
+      "presentation_id": "presentation-4470621b868ef7c5b809d3de9e159f1ddd1af2945952c7b007d30edb1eb8812c",
+      "presentation_sha256": "72033be97589ae04b4f06783018504779430e0cc61afe2dead5ca98e2b59e02c",
+      "reason": "Neither response offers a meaningful metaphor. A is a truncated, incomplete word fragment ('a raceca'). B is a tautological simile ('as fast as a car') that is not a metaphor and has no originality. Neither shows a real idea, so a meaningful creativity comparison is not possible.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 494,
+        "output_tokens": 114
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.002154,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "399ada26f0d1725dbec34f8e349a8ef7ca6d49397524eb2352d1ef9bbfba75bc",
+      "presentation_id": "presentation-1878e4d604828cb8c0b9c5e7acd03e1745e2990c0d0a41a64e40aaf5e32ed32b",
+      "presentation_sha256": "42aba5cf3ef4eba5386227f3d6d4fa2ffafe7da85df488d7a5f523c023170334",
+      "reason": "Response A is a single word, not a metaphor, and offers no imaginative idea. Response B is a simple, somewhat clichéd comparison, and it is a simile that targets dark chocolate rather than disgusting food generally. Still, it is a real attempt at a comparison and fits the prompt better than A does.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 507,
+        "output_tokens": 114
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.002034,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "399ada26f0d1725dbec34f8e349a8ef7ca6d49397524eb2352d1ef9bbfba75bc",
+      "presentation_id": "presentation-a1c67cece8ad2d5d7ed1867bc95d881baaa38c88a8de6965c452d79342b26b7d",
+      "presentation_sha256": "c041aba6b9ed8d081ed4a195cd55ae1c6e1e23056ff363ed63f9a02f2c73950e",
+      "reason": "Response A offers an actual metaphor (simile) comparing a food to mud. It is fairly conventional and arguably inapt for dark chocolate, but it fits the task. Response B is just the single word \"disgusting\" and offers no metaphor or imaginative idea.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 507,
+        "output_tokens": 102
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.00218,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "9acfede5e3456d49496d6f8977d05c66d56288e7df557575c75974b773f6de0a",
+      "presentation_id": "presentation-940ffb0035abef02b3c087b34c1fe35001f38b58fd0869a6b8e5867fffce46f0",
+      "presentation_sha256": "787d01f54dbeef6548353b7e8322d37101a98f5c30fcaadb4eedc3eff1d19a6e",
+      "reason": "Response A, \"lonesome\", is a single adjective, not a metaphor, so it does not meet the task. Response B gives an actual image: night as a blank canvas that dawn paints with hope. The comparison is common and uses \"like\", so it is really a simile, but it is coherent and fits the prompt.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 520,
+        "output_tokens": 114
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.00226,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "9acfede5e3456d49496d6f8977d05c66d56288e7df557575c75974b773f6de0a",
+      "presentation_id": "presentation-547450f65a3d2ccaf7b9a5eb31fd131ecbecfc41e52c73a6bd002048e6fb8aa6",
+      "presentation_sha256": "d449e901b8d4839a1b8cc7bd4506d8d344a172e4ec2d3df22135190032b59618",
+      "reason": "Response A offers an actual metaphor (really a simile) comparing night to a blank canvas awaiting dawn's colors. It is somewhat familiar, but it is coherent, imagistic and fits the prompt. Response B is a single adjective, not a metaphor, and shows no imaginative comparison, so it does not meet the task.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 520,
+        "output_tokens": 122
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.00248,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "51b33b3665c3944763173ee2a5192a9acf223cb7cd52e2f5c3e06b29c0053334",
+      "presentation_id": "presentation-698f6a68b761110b73ee9f17b3ccd66945eb27075be35a4fec89c1d0d0725aed",
+      "presentation_sha256": "b5510d4f201488a000edaefdac2d84f9b5af21d1cbc05be3f81d33980b528dd6",
+      "reason": "Response A offers a vivid, hyperbolic image (diving mouth-open through a week-old cafeteria dumpster) that conveys revulsion, though it is a simile and somewhat predictable. Response B's comparison, ketchup on white rice, is mild and not clearly disgusting, so it fits the concept poorly and shows little imagination. A is more apt and imaginative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 550,
+        "output_tokens": 138
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.00228,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "51b33b3665c3944763173ee2a5192a9acf223cb7cd52e2f5c3e06b29c0053334",
+      "presentation_id": "presentation-ab5400721321ffc4cdb7bf8be98c5ea52e6f1a80b4f74fe46f56ef619cb971c8",
+      "presentation_sha256": "ddc930c80e073790c38a59cb59182663c9417512296c1fd387339c3de9b4f256",
+      "reason": "Response B gives a vivid, imaginative image (falling face-first through a week-old cafeteria dumpster with mouth open) that conveys grossness strongly, even if hyperbolic. Response A is a mild simile about ketchup on rice, which is more bland than gross and not very original or apt for \"gross food.\"",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 550,
+        "output_tokens": 118
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.002016,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "640471c96f551b94df73ddf0b15a64cc11592723aa1cfe533d185a857225885b",
+      "presentation_id": "presentation-288d450a0956ca98e26017caca505cf906bc728d5eb7ce5d99fa3af2b3efdb15",
+      "presentation_sha256": "fda0cfd3231baef96f03a1307f1f9b0d351b52da7ff4bda18b2802b8bb9f8606",
+      "reason": "B offers a metaphor, equating the modern building with boredom and suggesting something about blandness and sterile design, though it is terse. A, \"old,\" is not a metaphor, just a contradictory adjective with no imagery or insight. B fits the task better and is more imaginative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 488,
+        "output_tokens": 104
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.002236,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "640471c96f551b94df73ddf0b15a64cc11592723aa1cfe533d185a857225885b",
+      "presentation_id": "presentation-29c742c8f494982a47b172888fa4c9a983e2268b0dbcd74bf469ad32c7daea14",
+      "presentation_sha256": "085c16ca27c60bcbb11f94f5984d44308a3fceb0a5b0ab663b95300b14d545ad",
+      "reason": "Neither response is a developed metaphor. \"Boredom\" at least offers a figurative comparison, suggesting modern architecture is bland or uninspiring, though it is terse and fairly familiar. \"Old\" is a literal adjective, not a metaphor, and ignores the prompt's request. A is more fitting and slightly more creative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 488,
+        "output_tokens": 126
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.00237,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "ab5b5723f0c05c7625527c0d8a498da940b36f243ea06690bcfcb3bd527b1a79",
+      "presentation_id": "presentation-0c80d96a2413f2e8db364c328f55098e9151baf0a9324cf528328c2ac25a5409",
+      "presentation_sha256": "f556692f3bee30d4cd6c304dc206f57b0508d1a593804f681d635fcff2489f6a",
+      "reason": "B offers an actual comparison that fits the calm beach: slow, relaxed, and warmly familiar, evoking a lazy grandpa on a Sunday evening. It is a simile rather than a pure metaphor, and somewhat familiar, but it is imaginative and apt. A, 'ibiza', is just a place name, not a metaphor, and shows little creative effort.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 505,
+        "output_tokens": 136
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.002392,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "ab5b5723f0c05c7625527c0d8a498da940b36f243ea06690bcfcb3bd527b1a79",
+      "presentation_id": "presentation-6fb3ac338a704d5390e1061ceb54d074120312d33a40ebbe57f67c2f5528d924",
+      "presentation_sha256": "eb24a2e246ff55b5186e237dff2e5c8520f9339c89734ee4578935bea8cc167b",
+      "reason": "Response A offers a simile that personifies the beach as a relaxed, familiar figure. It is somewhat clichéd and not strictly a metaphor, but it is apt and evokes calm. Response B, \"ibiza,\" is just a place name. It is neither a metaphor nor imaginative, and it connects poorly to the idea of calm, since Ibiza is known for party life.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 506,
+        "output_tokens": 138
+      }
+    },
+    {
+      "choice": "tie",
+      "cost_usd": 0.001902,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "59077a926764093e4eeba667f8b40b5f708033a0e0dcd8fb0f2c6360d60573d4",
+      "presentation_id": "presentation-aef2e0f8fde3927385f9f5f5274ab2952f9708d0c0b2d074b0017505d5b833ed",
+      "presentation_sha256": "8a61fb247e5ece1ad8f618fd64674c6cd833cc5efa90a4eb00aaed698cc9cd9c",
+      "reason": "Neither response is a metaphor. A ('fast') merely repeats the prompt's adjective, and B ('jumpy') is a single adjective with no comparison. Both are equally unoriginal and fail the task, so neither is more creative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 491,
+        "output_tokens": 92
+      }
+    },
+    {
+      "choice": "tie",
+      "cost_usd": 0.001852,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "59077a926764093e4eeba667f8b40b5f708033a0e0dcd8fb0f2c6360d60573d4",
+      "presentation_id": "presentation-44f88dab364dc78f739fe1e4a2a5ceecf5882709111c7b4c6538d71546fa5974",
+      "presentation_sha256": "67e77545e0a7592fd8d85aa0b4a880b34249fe935e307f19f508c347a883b4b3",
+      "reason": "Neither response offers a metaphor. A ('jumpy') is just an adjective, and B ('fast') only repeats the prompt's own word. Both lack originality, imagery and any real comparison, so neither is more creative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 491,
+        "output_tokens": 87
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.002294,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "a9babfe4e578c68ad82df975434fe60d99b06b0503f0eb8ba91e1aa40996f959",
+      "presentation_id": "presentation-2766e710347a9d20f94c28427fcfb297986f83109b8a2f18e2519cacc0af7085",
+      "presentation_sha256": "7e15e90f8c3775793476604250229122093ca612b1c9ce7cb7eaf79a319631c2",
+      "reason": "B gives an imagery-based comparison, though it is a simile-like phrase and somewhat conventional (shiny vs. sun). A, \"upset,\" is a single word that might hint at a pun on a spilled or upset glass, but it is cryptic and not clearly a metaphor. B is more complete and apt for the prompt, so it is more creative overall.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 497,
+        "output_tokens": 130
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.002154,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "a9babfe4e578c68ad82df975434fe60d99b06b0503f0eb8ba91e1aa40996f959",
+      "presentation_id": "presentation-1c20cd5b7dd14bcd123ab5326a5c5496711aa71348487d8e579626ca311f0358",
+      "presentation_sha256": "8eb4f2b9e85cf3cc3b2a30457f9c2c0fd3b2ba857b3ba6123894ff59bc6def38",
+      "reason": "Response A is a simile rather than a true metaphor and the comparison is fairly conventional, but it is imaginative and fits the sentence. Response B, \"upset,\" is a single word with no clear metaphorical link to a full glass, so it is cryptic. A is more complete and apt, though neither is especially strong.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 497,
+        "output_tokens": 116
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.00224,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "76b0499dcb57ded1c8f166b493ab929b3984b3c1025cfc88ef918d05c8395f89",
+      "presentation_id": "presentation-b15051e54a29f9a020ac9352380f3a30985e660fcdfc88cf71886d9adb5ad341",
+      "presentation_sha256": "95e027467488b9ad3c9ee1a568781c5205c30bbd76eb4c74752b4a00530018f5",
+      "reason": "Response A offers a vivid, personified image of ice as a frozen kiss from winter's lips. It is somewhat familiar but evocative and fits the prompt, though it is technically a simile. Response B ('lik a sword') is a minimal, typo-ridden, clichéd comparison with no development or insight. A is more creative overall.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 510,
+        "output_tokens": 122
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.00213,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "76b0499dcb57ded1c8f166b493ab929b3984b3c1025cfc88ef918d05c8395f89",
+      "presentation_id": "presentation-1869c3aecccabe2a65a92fab1f3cbcfec821477a301b64a7975a6fabd9f2d46f",
+      "presentation_sha256": "f0f87afeb22118385352791a6c87364f588b04fab25dd45c283c8e68ff68c9f7",
+      "reason": "B offers a more imaginative and evocative image, personifying winter and tying the coldness to a frozen kiss. It fits the prompt, though it is a simile and somewhat familiar. A is a brief, typo-ridden, clichéd comparison with no development or insight into why ice resembles a sword.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 510,
+        "output_tokens": 111
+      }
+    },
+    {
+      "choice": "tie",
+      "cost_usd": 0.00195,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "27eb7b20ba13100b0e711227df358ea541f8558bc156bc5c98c357b3c4db4b26",
+      "presentation_id": "presentation-bea71e62d39a532512b72a2bc820a8514be93a80e7290a463536c32386dadde6",
+      "presentation_sha256": "379673f40fdc9802cf15e57e64f3590eee62bff65d57c43ed274e996667570ee",
+      "reason": "Neither response is a metaphor. A ('small') is a plain adjective, and B ('stumpy') is a slightly more vivid adjective that only hints at a body-part image. Both fail the task, and B's marginal vividness is too slight to separate them.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 490,
+        "output_tokens": 97
+      }
+    },
+    {
+      "choice": "tie",
+      "cost_usd": 0.00204,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "27eb7b20ba13100b0e711227df358ea541f8558bc156bc5c98c357b3c4db4b26",
+      "presentation_id": "presentation-d50beb9f897bf50b03eaa9919ebc87325e225ca0c65dd5d91fead38864bc1322",
+      "presentation_sha256": "d526efc6ce1c678ed7379bf120a1ab9d66687a7bafcc9e1d04b2cf6669e865fe",
+      "reason": "Neither response offers a metaphor. A's \"stumpy\" is a vivid adjective that hints at a body-part image, but it is not a comparison. B's \"small\" is a flat descriptor with no imagery. A is slightly more evocative, but both fail the task about equally.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 490,
+        "output_tokens": 106
+      }
+    },
+    {
+      "choice": "tie",
+      "cost_usd": 0.00209,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "de91aebe35f77fb6a21567967b99f6a8f059777ca7500ce23a224e89191f3b7a",
+      "presentation_id": "presentation-ba5d7551e673c77d0b41651586f94586a8c1d36a8eb8ae0cc0b2001d12242332",
+      "presentation_sha256": "c5b6fa1188d834ac43cb4da7a90ca4ddaa06fdc995befb687cb0df8dbbd43472",
+      "reason": "Neither response offers a real metaphor. \"A joy\" is an abstract, generic label with no imagery. \"Pool\" is a fragment that hints at a sky-water comparison but is ungrammatical and undeveloped. Neither is original or meaningfully creative, so they are about equal.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 490,
+        "output_tokens": 111
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.00217,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "de91aebe35f77fb6a21567967b99f6a8f059777ca7500ce23a224e89191f3b7a",
+      "presentation_id": "presentation-0c32beb5802505e079140572e760cc3a71bdad498c5643e911000243124cbaeb",
+      "presentation_sha256": "aa72bba9bd93481ba5590545d94a2244a04493ae07a66bebd28365cdc040eeab",
+      "reason": "Both responses are minimal. \"Pool\" is a genuine metaphor, comparing the sky to water, and it is a familiar but apt image of clear blue depth. \"A joy\" is an abstract statement, not really a metaphor, and offers little imagery or originality. A is more metaphorical and slightly more creative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 490,
+        "output_tokens": 119
+      }
+    },
+    {
+      "choice": "B",
+      "cost_usd": 0.002308,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "720774e2327b4f7c5da4a7f636d2ad48d2ed80bcf3e20ed078212c604c9233ce",
+      "presentation_id": "presentation-b64e4d0f6fa3e0a5b9b8d1a445fd3bd5865cbc98e67604e1e8632af49f5f7c6e",
+      "presentation_sha256": "2eaa4427af7897084c1af15f87b81035e57982135a02c8a6ad2efd09ee982a07",
+      "reason": "Both are weak. A, \"a thunder chaos\", is awkward and vague, though it evokes noise and disorder. B uses \"as a locomotive\", a simile rather than a metaphor with an ungrammatical frame, but it suggests momentum, loudness and barreling energy. B is a more concrete, apt image, so it is slightly more creative.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 504,
+        "output_tokens": 130
+      }
+    },
+    {
+      "choice": "A",
+      "cost_usd": 0.002508,
+      "kind": "pair-judgment",
+      "model": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "pair_sha256": "720774e2327b4f7c5da4a7f636d2ad48d2ed80bcf3e20ed078212c604c9233ce",
+      "presentation_id": "presentation-9558252547114bee4dd5322dbdf8ac4310db3fa1bf30fa7ea8885c5114301bc5",
+      "presentation_sha256": "b0660f9148bfab30e30ffce024f35b944139764ae1423d884e7db4e166e51c8e",
+      "reason": "Response A offers a clear, apt comparison: a noisy party as a locomotive suggests momentum, roar, and being hard to stop. It's somewhat conventional and grammatically awkward (\"as a locomotive\" reads like a simile). Response B, \"a thunder chaos,\" is vague and ungrammatical, merging two loosely related images without a clear metaphor. A is more meaningful and coherent.",
+      "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+      "schema_version": 1,
+      "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75",
+      "status": "ok",
+      "usage": {
+        "input_tokens": 504,
+        "output_tokens": 150
+      }
+    }
+  ],
+  "judgments_sha256": "d5e57bb9da6b3a6ae03f517a3ae27d2ef4c432187ac87641cc05f8033d7c7435",
+  "kind": "committed-audit-predictions",
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "schema_version": 1
+}

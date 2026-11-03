@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "0dda078610d5b91a4c733ad71af8957bd4c6bb9eb95118160676182ffae5059a",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2058
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0039",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**Gift: a hardcover copy of a book that fits your friend's curiosities, with a short handwritten note inside the cover.**\n\nSince I don't know your friend, here's how to choose well:\n\n- **Pick based on something they've recently gotten excited about.** If they've been talking about cooking, travel, psychology, or music, choose a beautifully made book on that topic. For example, *Salt Fat Acid Heat* by Samin Nosrat for a budding cook, or *Braiding Sweetgrass* by Robin Wall Kimmerer for someone drawn to nature and big ideas.\n- **Choose a book that suits turning 25.** If you're unsure, *The Alchemist* or *Big Magic* by Elizabeth Gilbert are warm, encouraging reads for a milestone birthday.\n\n**The handwritten note** is what makes it personal. Keep it to 2-3 sentences, something like:\n\n*\"Happy 25th! I picked this because you always light up when you talk about [topic], and it made me think of you. Can't wait to hear what you think of it.\"*\n\nMention a specific memory or quality if you can. That detail turns a book into a gift they'll keep.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "0dda078610d5b91a4c733ad71af8957bd4c6bb9eb95118160676182ffae5059a",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.05",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

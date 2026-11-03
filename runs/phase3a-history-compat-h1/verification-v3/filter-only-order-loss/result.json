@@ -1,0 +1,58 @@
+{
+  "api_spend": 0,
+  "baseline_loss_expected": true,
+  "component_only_no_scientific_claim": true,
+  "failure": "native editor stopped after rejected history",
+  "fixture": true,
+  "history_guard_audits": [
+    {
+      "history_preserved": true,
+      "history_restored": false,
+      "request_sha256": "894ac7dc343f2e5fbc6b7c2f56bdb59a558fd2eafa764c3ddef5f62e8c1adc36",
+      "response_content_sha256": "fd273a2a7f099ad27bae3a1262d51c52b9b396a06737663727f80b6850925cf8",
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t01"
+    },
+    {
+      "history_preserved": true,
+      "history_restored": false,
+      "request_sha256": "0e6b79ede18d6d0c8a4ec53293cc5b94910c1037866edd2b0d06b8db7210a5f4",
+      "response_content_sha256": "934c31dfa4653325c8c3728d654dcdfded81ae6822c662a7d966c2ae01c5db88",
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t02"
+    }
+  ],
+  "invalid_ending_thinking": false,
+  "label": "inv1.a1",
+  "mock_http_calls": 2,
+  "native_proof": {
+    "R1_final_verbatim_rule_visible": true,
+    "R3_deliberately_inefficient_evidence_reading": true,
+    "actual_system_sha256": "543ccf467c9ea272a5cd9f515a72472d5d255b1ca64ecfbbbdef2ed38f8283e6",
+    "authoring_system_sha256": "37801570b6611ee29cd1b927cf63da7e1fba61160d79ee0c2ff8719c4cf97077",
+    "configured_system_visible_before_mission": true,
+    "decision": "EDIT",
+    "decision_after_complete_evidence": false,
+    "fixture": true,
+    "manifest_sha256": "75a01267aa8c023be07d76d1b99bc23db44c60533801cad8849242cd0ab15478",
+    "mission_delivery": {
+      "/tmp/harness2-prop-r78qdrr9/MISSION.md": {
+        "all_lines_model_visible": true,
+        "sha256": "5f7c99c92b68b2482fb87c2ab86eac707bf4c85538c1e0cb92b6a4bc1c34d4aa",
+        "source_lines": 66
+      }
+    },
+    "mission_visible_before_evidence": true,
+    "ordinary_rounds": 2,
+    "source_evidence": {},
+    "terminal_note_used": false,
+    "verification_after_write": false
+  },
+  "native_reply_ok": false,
+  "native_scope": "actual unchanged Harness2 Proposer.call/OpenCode; no scheduler matrix or scientific effect",
+  "passed": true,
+  "provider_calls": 0,
+  "response_content_sha256": [
+    "fd273a2a7f099ad27bae3a1262d51c52b9b396a06737663727f80b6850925cf8",
+    "934c31dfa4653325c8c3728d654dcdfded81ae6822c662a7d966c2ae01c5db88"
+  ],
+  "within_response_interleaving": true
+}

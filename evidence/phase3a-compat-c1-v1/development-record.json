@@ -1,0 +1,39 @@
+{
+  "historical_results_retagged": false,
+  "kind": "phase3a-c1-development-record-v1",
+  "note": "These are engineering verification attempts, not paid or scientific experiment replications. Final completion must bind an unchanged source and fully pass its own gates.",
+  "profile_tournament": false,
+  "real_credentials_used": false,
+  "real_provider_calls": 0,
+  "runs": [
+    {
+      "accepted_as_completion": false,
+      "exit_code": 137,
+      "host_record_sha256": "c298060be2bd4764c1290ea6bc57d1de9217731be8f6c6b2750e6d0f482eddb6",
+      "reason": "Stopped deliberately during verification to add pre-stat private-path guard; initial static tools also revealed read-only cache configuration defects.",
+      "verification": "v1"
+    },
+    {
+      "accepted_as_completion": false,
+      "exit_code": 137,
+      "host_record_sha256": "70521f8c830d8efe7dc67d8ac442c6a0e66241b0cab88ba1ea205e28f17626ed",
+      "reason": "Stopped deliberately before accepting evidence to correct verification cache paths and fail-fast behavior.",
+      "verification": "v2"
+    },
+    {
+      "accepted_as_completion": false,
+      "exit_code": 1,
+      "host_record_sha256": "b417aed0090a26a3ff4acd80f3b3f7d26022a0a0299cd1008888433d8e8ce155",
+      "reason": "Completed with103tests/21setup errors: shared new test helper chose read-only source for temporary files; zero assertion failures; demo intentionally not run.",
+      "verification": "v3"
+    },
+    {
+      "accepted_as_completion": false,
+      "exit_code": 137,
+      "host_record_sha256": "1a35c938d508e0d860e6b0e743d90e0aced1700bd738b9e332aae7d40bee466e",
+      "reason": "Stopped deliberately to finish consolidated pre-probe/constructor/CLI boundary fixes before final freeze.",
+      "verification": "v4"
+    }
+  ],
+  "single_selected_profile": "portfolio-authoring-c1-v1"
+}

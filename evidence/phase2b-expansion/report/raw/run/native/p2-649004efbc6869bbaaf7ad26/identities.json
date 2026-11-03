@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "a93800c1d5b92e7c47090ccc205963bc02f784cf50f9ff8c610378108e300cfd",
+  "portfolio_id": "portfolio-724f09a0cac60d500ebe31ee16d2004a184d4c087a3e9261221e3fb1c9e4178f",
+  "portfolio_sha256": "aa0d452882822031b1f1848ce403a0116b8d253c476b7cc0424ac0422b82d8eb",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-649004efbc6869bbaaf7ad26.answer.00",
+      "p2-649004efbc6869bbaaf7ad26.answer.01",
+      "p2-649004efbc6869bbaaf7ad26.answer.02",
+      "p2-649004efbc6869bbaaf7ad26.answer.03",
+      "p2-649004efbc6869bbaaf7ad26.answer.04",
+      "p2-649004efbc6869bbaaf7ad26.answer.05",
+      "p2-649004efbc6869bbaaf7ad26.answer.06",
+      "p2-649004efbc6869bbaaf7ad26.answer.07",
+      "p2-649004efbc6869bbaaf7ad26.answer.08",
+      "p2-649004efbc6869bbaaf7ad26.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-7943672cb3d63fc532100805",
+      "index": 0,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.00",
+      "status": "ok",
+      "text_sha256": "3a2605ca3d0b8c8e5eae732b5bfd9a3ef4495c57a2201ad662ec2750b8f41e09"
+    },
+    {
+      "id": "response-ccd3f5012b0ac53b751214c7",
+      "index": 1,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.01",
+      "status": "ok",
+      "text_sha256": "abb36b91be2de7a6aacb9dcfdba18c9f17b341e35447016e1fe2e4a5ec57bb91"
+    },
+    {
+      "id": "response-abc368724f41796365b6d33f",
+      "index": 2,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.02",
+      "status": "ok",
+      "text_sha256": "d7297ebaa983644edc0be77e09fd74fe5ce9d398cb32b61bf1fde079155ffb04"
+    },
+    {
+      "id": "response-d7a728c81a88c0bcf1901f07",
+      "index": 3,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.03",
+      "status": "ok",
+      "text_sha256": "1ce4ec37f76604cf306531c0906578d3f265fff69005c1fd54e49cd30fe4077a"
+    },
+    {
+      "id": "response-9cfc3abdfed814df125f1ccf",
+      "index": 4,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.04",
+      "status": "ok",
+      "text_sha256": "fa3e3134540cd43970550a3bb89572f00bde45d9d57672d6ed84d6e9ae1b29f7"
+    },
+    {
+      "id": "response-b9f39583642977bac71fdcbf",
+      "index": 5,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.05",
+      "status": "ok",
+      "text_sha256": "5f26447aafd5a29471e7c205085693e69528351912312a752200eaa684639c3a"
+    },
+    {
+      "id": "response-4e5fd65b010ded863674b93f",
+      "index": 6,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.06",
+      "status": "ok",
+      "text_sha256": "3ee010b38f9b8b9f47d83baa634e5feab50e5ed60f073952f518996ea1b6bcac"
+    },
+    {
+      "id": "response-10dc77eb600175e8d41b3544",
+      "index": 7,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.07",
+      "status": "ok",
+      "text_sha256": "e4896088b7e10307b0e1e8e0e3d449b57a9f6f93a56c4673fd159eba8c999994"
+    },
+    {
+      "id": "response-41da42bee90f741e97df7618",
+      "index": 8,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.08",
+      "status": "ok",
+      "text_sha256": "612f6bd14f98cb3c91232a04aa4ba8eea049a869cdef7c673aa25fbb15ec1f4d"
+    },
+    {
+      "id": "response-d6fb53d035ffe2d74126ccff",
+      "index": 9,
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.09",
+      "status": "ok",
+      "text_sha256": "3d92a4658668008c01f5ddc21a6f74d536f61e0a3036613939896006b149b8ad"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-af7dc61fe1eeaa81cd93",
+    "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-29"
+    }
+  }
+}

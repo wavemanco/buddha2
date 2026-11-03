@@ -1,0 +1,95 @@
+{
+  "files": {
+    "final-logs/author-replay-1-baseline-loss.eval": {
+      "bytes": 13839,
+      "sha256": "b673bc840aec0649a02f534d700a51fa3cb12cf642991f325198fb2b25bd74e8",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-1/logs/baseline-loss.eval"
+    },
+    "final-logs/author-replay-1-fixed-changed.eval": {
+      "bytes": 29377,
+      "sha256": "52554a11142cf17723e3ac6ffd045a0e7e20786c654ec2922cf10e3086e2d110",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-1/logs/fixed-changed.eval"
+    },
+    "final-logs/author-replay-2-baseline-loss.eval": {
+      "bytes": 13842,
+      "sha256": "eed26f2cdbb1937dddbafb0b7112fa5f3879d8e99c7bc24b9e80b634e8a2a2f0",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-2/logs/baseline-loss.eval"
+    },
+    "final-logs/author-replay-2-fixed-changed.eval": {
+      "bytes": 29245,
+      "sha256": "0c30db51fcc61ec8fe073992cf98e69dd55bdcb2540d873b0ca64a2bfe1f2332",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-2/logs/fixed-changed.eval"
+    },
+    "final-logs/reviewer-replay-1-baseline-loss.eval": {
+      "bytes": 13841,
+      "sha256": "c15911c96f3aaeb144a27d481903537174fdf22b5db6b718aaa60cf038208e3c",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/replay-1/logs/baseline-loss.eval"
+    },
+    "final-logs/reviewer-replay-1-fixed-changed.eval": {
+      "bytes": 29252,
+      "sha256": "7eb29062bcc565adafd88554eb037562aa81d0073eaa7a17778dea963ca938a0",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/replay-1/logs/fixed-changed.eval"
+    },
+    "final-logs/reviewer-replay-2-baseline-loss.eval": {
+      "bytes": 13840,
+      "sha256": "951942a0c3df7210f50099a80d085af11510cd0ff687c4ff74fcffd43b2dc3fe",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/replay-2/logs/baseline-loss.eval"
+    },
+    "final-logs/reviewer-replay-2-fixed-changed.eval": {
+      "bytes": 29242,
+      "sha256": "10df38be5eac13b3b1703743f63719b89d2166fd8716974a36e2a6bd8a74a35c",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/replay-2/logs/fixed-changed.eval"
+    },
+    "independent/actual-container.json": {
+      "bytes": 18662,
+      "sha256": "0077bf6e6c765bd74ee0c733f0693ab888c8fa71d392b523af42be444ce57a85",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/actual-container.json"
+    },
+    "independent/create.json": {
+      "bytes": 3512,
+      "sha256": "d01779dfa73151da89854e2ef73354d3b3b40fa0e6b2b9e6b24f7797a3be97fb",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/create.json"
+    },
+    "independent/execution.json": {
+      "bytes": 245,
+      "sha256": "f42f411f36f33dafe3419783d04bedac4b04566d1c6626192f88f7ebd8720ce9",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/execution.json"
+    },
+    "independent/remove.json": {
+      "bytes": 213,
+      "sha256": "33a3ac8fceac726b6bd52f741363ef9f7928160c11809911c2625ad23852e06b",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/remove.json"
+    },
+    "independent/reviewer-source.py": {
+      "bytes": 5996,
+      "sha256": "438495b034de30f1a528fef10e54b4e23d8605de9fb65246b46db27aa8a902ed",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/reviewer-source.py"
+    },
+    "independent/runner-summary.json": {
+      "bytes": 1126,
+      "sha256": "906943299c4f7845be8e78e2f6d5c81fdf97fa54e95ed3551e40c5e5b0b7a9da",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/summary.json"
+    },
+    "independent/runner-tests.json": {
+      "bytes": 1077,
+      "sha256": "cee6e7b04fe8fd6d7024bc01c6373fe6a7d1ff9efbcb82516728a1f0a053c98b",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/0-execution.json"
+    },
+    "independent/saved-log-comparison.json": {
+      "bytes": 2570,
+      "sha256": "be02900d984bf154ef9212e7032065eae33f72e696661da5385eb5230667aaff",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/saved-log-comparison.json"
+    },
+    "independent/source-preservation.json": {
+      "bytes": 402,
+      "sha256": "8ed5c46240f3422f6fe217a6a1130b158fac1c4e45f1ff4d4bcf15678bb1a1ec",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/source-preservation.json"
+    },
+    "independent/terminal.json": {
+      "bytes": 19209,
+      "sha256": "ec2b4b9f0b57b71f7156acf91a67ccc2ad50961893eaafdbef138912a66d6fba",
+      "source": "runs/inspect-visibility-i1/verification-review-v2/independent-v1/terminal.json"
+    }
+  },
+  "kind": "I1-independent-selected-evidence-v1"
+}

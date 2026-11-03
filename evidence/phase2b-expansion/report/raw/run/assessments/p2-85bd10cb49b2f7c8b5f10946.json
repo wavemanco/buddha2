@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "c20862a05cb87775ee928727a0871e096bc0af9da54bab3336f7ca3a5040ace9",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 1.5684063494423397
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        7
+      ],
+      "utility": 1.5684063494423397
+    },
+    "generation_row": {
+      "generations": [
+        "No single 4-digit combination is inherently the safest. If a code is chosen truly at random, all 10,000 possibilities (0000-9999) are equally strong. What makes a code weak is predictability, not the digits themselves.\n\n**Why people's picks are weak:** Humans gravitate toward patterns like 1234, 0000, 1111, birth years, and dates. Attackers try these first, so a \"random-looking\" code you chose yourself is often far easier to guess than a truly random one.\n\n**How to pick a safe one:**\n- **Dice:** Roll a 10-sided die four times, or roll a 6-sided die and re-roll any 7-9 equivalents (e.g., use a method that maps results to 0-9 without bias).\n- **Random number generator:** Use a password manager or a trusted RNG to generate four digits.\n- **Shuffled digits:** Write 0-9 on slips of paper, draw one, record it, and replace it. Repeat four times. (Replacing matters, since repeated digits are allowed.)\n\n**Avoid:**\n- Sequences, repeats, or keypad patterns (1234, 2580, 7777)\n- Dates, ages, addresses, phone digits\n- Reusing the same code across multiple locks or cards\n\n**Caveats:** A 4-digit code has only 10,000 possibilities, so it can be brute-forced if an attacker has unlimited attempts. Random selection is the best you can do within that limit, but for anything valuable, use a longer code, a lock with attempt limits, or a different security method.",
+        "No single 4-digit combination is inherently the safest. What matters is how unpredictable it is, and the safest combination is one that attackers are least likely to guess early.\n\n**Most commonly used PINs (avoid these)**\nAnalyses of leaked password and PIN datasets consistently show heavy clustering on a small set:\n- 1234 (by far the most common, roughly 10% of all PINs in some studies)\n- 1111, 0000, 1212, 7777\n- 2580 (the straight vertical line down a keypad)\n- 1004 (popular in Korea, \"cheonsa,\" meaning angel)\n- 2000, 2001, and other years\n- Birth years (19xx) and dates in MMDD or DDMM format\n- Repeating or sequential patterns (4321, 2222, 1122)\n\nTogether, just the top 20 or so PINs account for a large share of all choices. That means an attacker who tries a handful of guesses has a real chance of getting in.\n\n**What makes a PIN safer**\n- **Random selection:** Generate the digits with a random method (a password manager, dice, or a random number generator) rather than choosing something meaningful.\n- **Avoid patterns:** Skip keypad shapes, repeated digits, ascending or descending runs, and anything resembling a date.\n- **Avoid personal data:** Birthdays, anniversaries, addresses, and phone number fragments are easy to guess if someone knows you.\n- **Don't reuse:** Use a different PIN for each lock or card.\n\n**Reality check**\nThere are only 10,000 possible combinations, so a 4-digit lock can't resist a determined brute-force attempt. Even a perfectly random PIN is only safe where attempts are limited, such as ATMs and phones that lock after a few tries. A basic mechanical combination lock can be cycled through all 10,000 options in a short time. For anything valuable, use a longer code (6+ digits) or a lock with a different security mechanism.\n\n**Bottom line:** The safest 4-digit combination is a randomly generated one that isn't in the common-PIN lists above.",
+        "No single 4-digit combination is \"safest\" in the abstract, because every code has the same 1-in-10,000 chance of being guessed at random. The safest code is one that's chosen randomly, so it doesn't fall into the patterns attackers try first. Here is a checklist of categories to avoid and why.\n\n**Categories to avoid**\n\n1. **Birthdays and dates (e.g., 0412, 1987):** Anyone who knows or can find your birthday, or that of a partner, child, or parent, can guess these quickly. Many codes are in MMDD or DDMM format.\n2. **Years (1990-2025):** Birth years, graduation years, and the current year are heavily overrepresented, so attackers try them early.\n3. **Anniversaries and significant dates:** Weddings, move-in dates, and similar events are often discoverable from social media.\n4. **Repeated digits (0000, 1111, 7777):** These are always among the first guesses.\n5. **Sequential digits (1234, 4321, 2345, 9876):** Extremely common and always tested early.\n6. **Keypad shapes and patterns:** Straight lines (2580), corners (1397), squares (1245), and \"X\" or \"L\" shapes. They are easy to remember, which is exactly why many people choose them.\n7. **Phone number fragments:** The last four digits of your phone number, a former number, or a family member's number. These are easy for someone who knows you to find.\n8. **Addresses and ZIP codes:** House numbers, street numbers, or ZIP codes are tied to you and easy to look up.\n9. **Repeated pairs and mirrors (1212, 6969, 1221):** These are common and predictable.\n10. **Pop-culture or meme numbers (007, 1337, 8008, 4200):** Popular enough to appear on common-code lists.\n11. **Lucky numbers or jersey numbers:** Personal, and often guessable by people who know you.\n12. **PIN reuse:** Using the same code as your bank card, phone, or another lock means one leak exposes everything.\n\n**Why attackers try these first**\n\nLeaked-PIN datasets show that a small number of codes make up a large share of real-world usage. Attackers try the most common codes and personal-information guesses first, so a code with a meaningful pattern may be broken in far fewer than 10,000 attempts.\n\n**How to choose a safe one**\n\n- Generate it randomly: use a random number generator, dice (four rolls of a 10-sided die), or a password manager.\n- Check it against the list above and re-roll if it resembles any category.\n- Don't use anything derived from personal information.\n- Use a unique code for each lock or device.\n- If you can, choose a lock that limits guess attempts. A 4-digit code is weak against unlimited brute-force guessing, even if it's random.\n- For high-value protection, use a longer code (6+ digits) if the lock allows it.\n\n**Bottom line:** the safest combination is a random one you haven't used anywhere else and that doesn't match any of the patterns above.",
+        "No single 4-digit combination is \"the safest.\" If a specific number were widely recommended, it would become a popular choice and therefore a weak one. What makes a combination safe is how it was chosen: randomly, and not reused. Here's a practical procedure.\n\n**Step-by-step procedure**\n\n1. **Generate each digit randomly.** Don't pick digits that \"feel\" random, because people favor birthdays, repeated digits, and patterns. Use a 10-sided die, a random number generator (a password manager's PIN generator works), or draw numbered slips from a bag. If you only have a six-sided die, roll it and discard 0 and any results you can't map, or use two rolls (see the worked example below).\n\n2. **Check against a weak list.** Reject the combination if it is:\n   - A repeat or sequence (0000, 1111, 1234, 4321, 2468)\n   - A pattern on the dial or keypad (2580, 1357, 1212, 6969)\n   - A year or date (1990, 2024, 0704, or anything resembling a birthday or anniversary)\n   - Tied to you (address digits, phone digits, old PINs)\n   - A common \"famous\" number (1004, 2000, 7777, 8888)\n\n   If it fails, reroll the whole number instead of tweaking it, since tweaking reintroduces human bias.\n\n3. **Don't reuse it.** Use a different combination for each lock, and never reuse your bank card PIN or phone passcode. If one lock is compromised or observed, the others stay safe.\n\n4. **Test memorability.** Rehearse it a few times today, then again after a day and after a week. If you can't recall it, store it securely (a password manager or a locked note) instead of weakening it. Don't write it on the lock, your wallet, or a sticky note nearby.\n\n5. **Limit exposure.** Shield the dial or keypad when entering it, scramble the dial after locking, and change the combination if someone may have seen it or if you've shared it.\n\n**Worked example method (using a six-sided die)**\n\nTo get one digit from 0-9 with a standard die:\n- Roll the die twice.\n- If the first roll is 1-3, the digit's range is 0-4; if it's 4-6, the range is 5-9.\n- Use the second roll to pick within the range: rolls 1-5 map to the 1st through 5th digit of the range; if you roll a 6, reroll.\n\nExample: first roll 5 → range 5-9. Second roll 3 → third value in that range → **7**.\n\nRepeat four times to get four digits, then run the weak-list check from step 2. If the result passes, that's your combination. If not, start over.\n\n**Note:** With only 10,000 possibilities, a 4-digit lock can be brute-forced by anyone with unlimited access and time. Random selection protects against guessing, but for high-value items, choose a lock with more digits or a key-based or limited-attempt mechanism.",
+        "**Short answer:** Any combination chosen truly at random is equally safe. Mathematically, no 4-digit code beats another. What makes a code unsafe is that humans pick predictable ones.\n\n**The math**\n- There are 10^4 = 10,000 possible codes (0000-9999).\n- A random code has a 1-in-10,000 (0.01%) chance of being guessed on any single try.\n- Expected attempts to brute-force: on average about 5,000 (half the space); worst case 10,000.\n\n**Time to brute-force by attempt rate**\n- Manual padlock, ~1 try per 3 seconds: ~4 hours on average, ~8 hours worst case.\n- Fast manual or a practiced thief, ~1 try/second: ~1.4 hours average, ~2.8 hours worst case.\n- Automated device with no lockout, ~10 tries/second: ~8 minutes average.\n- Electronic keypad with lockout (e.g., 5 tries, then a 30-minute delay): ~5,000 average attempts × 6 min per try after the first 5 means days to weeks, and a wipe-after-10 policy makes it effectively impossible.\n\n**Why the lock type matters more than the digits**\n- **Mechanical padlock/bike lock:** There's no attempt limit, so security is purely the 10,000-code space plus the thief's patience. Some can also be defeated by feel or by sensing slight binding in the wheels, which shrinks the effective search.\n- **Electronic keypad with lockout or wipe:** The attacker gets only a few guesses, so the chance of success is tiny: with 3 attempts it's 0.03%. Here, avoiding common codes is what matters.\n- **Phone/ATM PINs:** Attempt limits and escalating delays make 4 digits adequate for most threats.\n\n**Where human choice breaks the math**\nPeople cluster on a small set of codes. Studies of leaked PINs show 1234, 1111, 0000, 1212, 7777, and birth years (19xx/20xx) account for a large share. If an attacker gets only 3 tries, guessing the most common codes succeeds noticeably more than 0.03%, often around 4-10%. Other weak patterns include dates (MMDD), repeated pairs, keypad patterns (2580), and anything tied to you (address, phone digits).\n\n**What to do**\n1. Generate the code randomly (dice, a random generator, or a password manager), not from memory aids like dates.\n2. Avoid the common patterns above.\n3. Prefer devices with attempt limits, lockouts, or wipe features. A limit of 10 tries makes digit choice nearly irrelevant for a random code.\n4. If the asset is valuable and there's no attempt limit, use a longer code (6 digits = 1,000,000 possibilities) or a key-based lock.\n\n**Bottom line:** The safest 4-digit combination is a randomly generated one that isn't on common lists, and the safest *setup* is one where the lock limits guesses.",
+        "No single 4-digit combination is \"safest\" in the abstract. With 10,000 possibilities, any code chosen truly at random is equally strong. What changes is who you're defending against, and that determines which codes to avoid.\n\n**The baseline: a random code**\nPick digits with a random method (dice, a random number generator, or digits from a shuffled deck), not your head. Humans pick predictable numbers. Roughly 10% of people use 1234, 1111, or 0000, and birth years (19xx/20xx) and dates are heavily over-represented.\n\n**Threat model 1: Casual opportunist (guessing quickly)**\n- Tries the most common codes: 1234, 0000, 1111, 2580, 1004, 2000, 4321, 6969, 1212, and years like 1990.\n- Defense: avoid any pattern, repeated digit, sequence, keypad shape, or recent year. Any random code works.\n\n**Threat model 2: Shoulder-surfer**\n- Sees or films you entering it. Randomness doesn't help here.\n- Defense: shield the keypad, avoid obvious finger movement patterns, and prefer codes without easy visual shapes. Codes with repeated digits (e.g., 7377) are easier to remember after a glimpse, so avoid them. Change the code if you suspect it was seen.\n\n**Threat model 3: Thief with time (physical inspection or brute force)**\n- Looks for wear marks, smudges, or faint sounds and clicks. On a keypad with only four worn buttons, the attacker needs to try only 24 orderings (or 12 if one digit repeats).\n- Defense: don't leave the same 4 keys visibly worn or greasy. Wipe the keypad, and where the lock allows it, use a code with a repeated digit only if the keys aren't distinguishable. On mechanical wheel locks, scramble the wheels after use. If possible, choose a lock with lockout or tamper protection, or a longer code. Brute force of 10,000 codes takes only hours at a few seconds each, so for high-value items 4 digits is the real weakness.\n\n**Threat model 4: Someone who knows you**\n- Tries birthdays, anniversaries, addresses, phone digits, PINs you reuse, and meaningful numbers (a jersey number, a childhood home).\n- Defense: use nothing connected to you, and never reuse a bank PIN. A random code beats a clever personal one.\n\n**Bottom line**\n- Best general choice: a randomly generated code with no repeats, no sequence, no personal meaning, not reused elsewhere.\n- Against observers and wear marks, behavior (shielding, wiping, rescrambling) matters more than which digits you choose.\n- If the stakes are high, 4 digits aren't enough. Use a longer code, a key lock, or a lock with lockout.",
+        "There is no single \"safest\" combination, but the safest choice is a random one, and how you handle it physically matters nearly as much as which digits you pick.\n\n**Picking the combination**\n- Generate it randomly (dice, a random number generator, or draw digits from a shuffled deck). Avoid birthdays, years, repeats like 1111, sequences like 1234, and keypad patterns like 2580 or 1397.\n- Any random 4-digit code gives 10,000 possibilities, so no code is inherently stronger than another. Strength comes from not being guessable.\n- Avoid codes using four distinct digits only if you worry about wear (see below). Distinct digits are generally better, though they reduce the pool slightly to 5,040.\n\n**Physical and mechanical weaknesses**\n\n*Keypad wear and smudges*\n- Frequently pressed buttons show wear, shiny spots, or fingerprint residue. With four distinct worn keys, an attacker only has 24 orderings to try.\n- Mitigation: wipe the keypad regularly, and consider a code that repeats a digit (e.g., 3-7-3-9) so that only three keys show wear, though note this still leaves a small search space. Better yet, where the device allows it, use a longer code (6+ digits).\n- Touch your keys with a fingertip pattern that also touches other keys or wipe after use, so residue doesn't reveal the code.\n\n*Dial and wheel locks*\n- Don't leave wheels resting on the combination digits. After opening, spin each wheel to a random position so the code isn't displayed.\n- Cheap padlocks often have manufacturing tolerances that allow feeling for slight resistance on each wheel, or reading a binding wheel by applying tension to the shackle. Choose higher-quality locks with tighter tolerances, and avoid cheap ones for anything valuable.\n- Pick codes whose digits aren't all adjacent to each other on the wheels' starting positions, such as 0000, since owners often leave these as the factory default.\n\n*Changing the default*\n- Always change the factory code (commonly 0000 or 1234).\n\n**Habits**\n- Re-scramble every time after locking: spin all wheels or clear the keypad entry.\n- Shield the keypad from view while entering the code, since shoulder surfing and cameras are more common than lock manipulation.\n- Change the code periodically, especially if it's shared or if you notice wear.\n- For high-value protection, use a lock with a limited-attempt lockout, a longer code, or a key/biometric option instead of a 4-digit code.\n\n**Bottom line:** choose a randomly generated code with no personal meaning, change it from the default, keep the keypad clean, scramble dials after each use, and use a better lock when the contents matter.",
+        "There's no single \"safest\" 4-digit combination. If you pick one that's widely known, it's weak, but any code chosen at random is equally strong. With only 10,000 possibilities, the goal is to avoid predictable choices and manage the code well.\n\n**Choose it randomly**\n- Generate the digits with dice, a random number generator, or by drawing numbers from a hat. Don't choose by feel, since people gravitate toward patterns.\n- Avoid the common picks: 1234, 0000, 1111, 2580, birth years, birthdays (like 0412), anniversaries, and repeated or sequential digits.\n\n**Remember it without writing it insecurely**\n- **Chunk it:** Split 7351 into \"73\" and \"51,\" and tie each pair to something meaningful only to you, like a house number or a jersey number you'd never associate with yourself publicly.\n- **Use a mnemonic:** Turn the digits into a mini-story or image. For example, 7-3-5-1 could be \"seven swans swam past five... one boat.\" The odder the image, the better it sticks.\n- **Use a phone-keypad word:** Pick a word that maps to four digits (e.g., \"BLUE\" is 2583) and remember the word. Don't use a word tied to you personally.\n- **Practice with spaced repetition:** Recall it after a few minutes, then a day, then a week. After that it's usually permanent.\n- If you must record it, store it in a reputable password manager, not on a sticky note, in your notes app, or in your wallet. Don't store it next to the lock.\n\n**Manage it over time**\n- Change it periodically, especially if someone may have seen you enter it, if you've shared it, or if the lock shows wear on certain buttons or dials.\n- Don't reuse it for bank cards, phone unlock, alarm systems, or other locks. One leak or shoulder-surf would then expose everything.\n- Shield the lock when entering it, and scramble the dials afterward.\n\n**A caveat**\nA 4-digit combination only deters casual access. A determined person can brute-force 10,000 options in a short time, so for anything valuable, choose a lock with a longer code, a key, or a stronger mechanism.",
+        "There is no single \"safest\" 4-digit combination. The safest one is a random one, because any fixed answer I give you (or anyone else gives) becomes a bad choice the moment it's published.\n\n**Best 4-digit approach**\n- Generate the digits randomly (dice, a random number generator, or a password manager) instead of choosing a pattern you find memorable.\n- Avoid the most commonly used codes: 1234, 1111, 0000, 2580, 1212, 2000, 7777, and 4321.\n- Avoid birthdays, anniversaries, years (1950-2025), and anything tied to your address or phone number.\n- Don't reuse the code across locks, phones, or bank cards.\n- Avoid keypad patterns like straight lines, corners, or repeated pairs.\n\n**Why 4 digits is inherently limited**\nThere are only 10,000 possible combinations. A person can try them all in a few hours on a mechanical lock, and software can do it in seconds if there's no attempt limit. Even a perfectly random 4-digit code is weak against anyone who can try guesses repeatedly. Physical wear on keys or buttons can also reveal which digits you use, shrinking the search space further.\n\n**Better alternatives**\n- **Longer PINs:** 6 digits gives 1,000,000 combinations, and 8 digits gives 100,000,000.\n- **Alphanumeric codes:** Letters plus numbers increase the possibilities enormously, even at modest length.\n- **Key locks:** A quality pick-resistant cylinder lock removes guessing as an attack and suits many physical uses.\n- **Biometric or smart locks:** Fingerprint or app-based locks with attempt limits and lockout delays are far harder to brute force, especially with a PIN fallback that is long.\n- **Two-factor setups:** Combine something you know (a code) with something you have (a key, phone, or card) so a guessed code alone isn't enough.\n\n**Bottom line**\nIf you're stuck with 4 digits, pick a truly random one, avoid the common ones, and make sure the device limits wrong attempts. If the thing you're protecting is valuable, move to a longer code, a key, or a multi-factor lock.",
+        "No single 4-digit combination is \"the safest.\" Here's why, and what to do instead.\n\n**The core point:** Any 4-digit code has 10,000 possibilities (0000-9999). If the code was chosen truly at random, every one is equally hard to guess. A \"safest\" number only exists relative to how people choose, not in the math.\n\n**Myth 1: \"Random-looking\" numbers I pick myself are safe.**\nNumbers like 7294 feel random, but humans are bad at randomness. We avoid repeats, favor certain digits (like 7), avoid round patterns, and often unconsciously use dates, phone digits, or keyboard shapes. Attackers know these biases and try the most common choices first. A hand-picked code is only as strong as it is unpredictable to someone who knows how people think.\n\n**Myth 2: Lists of \"safest\" codes solve the problem.**\nOnce a number is published as safe, it becomes popular, and popularity is exactly what makes a code unsafe. If a article names 7294 as the best code, people will use it, and attackers will add it to their guess list. Any code that is recommended widely is no longer a good choice.\n\n**Myth 3: Avoiding 1234 and 0000 is enough.**\nThat's necessary but not sufficient. Birth years (19xx, 20xx), dates (MMDD), repeated pairs (6969), and patterns on the keypad are also heavily guessed.\n\n**What actually makes a code safe:**\n- **Generate it randomly:** use dice, a random number generator, or a password manager rather than picking it yourself. Roll a die-like process four times (a 10-sided die or a random generator).\n- **Don't reuse it:** use different codes for different locks, phones, and cards.\n- **Avoid personal info:** no birthdays, addresses, anniversaries, or the last digits of a phone number.\n- **Don't share the method:** keep it unpredictable, and don't use the same code you've seen suggested.\n- **Consider physical factors:** on a keypad, worn keys can reveal which digits are used, so change codes periodically. On a mechanical lock, set it away from the default.\n- **Limit attempts where possible:** the real protection for phones and cards is lockout after a few wrong guesses, which matters far more than which number you choose.\n\n**Bottom line:** the safest 4-digit combination is one generated randomly by you, known only to you, and not taken from any list, including this one. And if the item truly matters, a 4-digit code is a weak barrier regardless, so use a longer code or a stronger lock."
+      ],
+      "id": "nb-curated-9c418f063bc433264d29",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Which 4-digit lock combination is the safest?"
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "No single 4-digit combination is inherently the safest. If a code is chosen truly at random, all 10,000 possibilities (0000-9999) are equally strong. What makes a code weak is predictability, not the digits themselves.\n\n**Why people's picks are weak:** Humans gravitate toward patterns like 1234, 0000, 1111, birth years, and dates. Attackers try these first, so a \"random-looking\" code you chose yourself is often far easier to guess than a truly random one.\n\n**How to pick a safe one:**\n- **Dice:** Roll a 10-sided die four times, or roll a 6-sided die and re-roll any 7-9 equivalents (e.g., use a method that maps results to 0-9 without bias).\n- **Random number generator:** Use a password manager or a trusted RNG to generate four digits.\n- **Shuffled digits:** Write 0-9 on slips of paper, draw one, record it, and replace it. Repeat four times. (Replacing matters, since repeated digits are allowed.)\n\n**Avoid:**\n- Sequences, repeats, or keypad patterns (1234, 2580, 7777)\n- Dates, ages, addresses, phone digits\n- Reusing the same code across multiple locks or cards\n\n**Caveats:** A 4-digit code has only 10,000 possibilities, so it can be brute-forced if an attacker has unlimited attempts. Random selection is the best you can do within that limit, but for anything valuable, use a longer code, a lock with attempt limits, or a different security method.",
+        "No single 4-digit combination is inherently the safest. What matters is how unpredictable it is, and the safest combination is one that attackers are least likely to guess early.\n\n**Most commonly used PINs (avoid these)**\nAnalyses of leaked password and PIN datasets consistently show heavy clustering on a small set:\n- 1234 (by far the most common, roughly 10% of all PINs in some studies)\n- 1111, 0000, 1212, 7777\n- 2580 (the straight vertical line down a keypad)\n- 1004 (popular in Korea, \"cheonsa,\" meaning angel)\n- 2000, 2001, and other years\n- Birth years (19xx) and dates in MMDD or DDMM format\n- Repeating or sequential patterns (4321, 2222, 1122)\n\nTogether, just the top 20 or so PINs account for a large share of all choices. That means an attacker who tries a handful of guesses has a real chance of getting in.\n\n**What makes a PIN safer**\n- **Random selection:** Generate the digits with a random method (a password manager, dice, or a random number generator) rather than choosing something meaningful.\n- **Avoid patterns:** Skip keypad shapes, repeated digits, ascending or descending runs, and anything resembling a date.\n- **Avoid personal data:** Birthdays, anniversaries, addresses, and phone number fragments are easy to guess if someone knows you.\n- **Don't reuse:** Use a different PIN for each lock or card.\n\n**Reality check**\nThere are only 10,000 possible combinations, so a 4-digit lock can't resist a determined brute-force attempt. Even a perfectly random PIN is only safe where attempts are limited, such as ATMs and phones that lock after a few tries. A basic mechanical combination lock can be cycled through all 10,000 options in a short time. For anything valuable, use a longer code (6+ digits) or a lock with a different security mechanism.\n\n**Bottom line:** The safest 4-digit combination is a randomly generated one that isn't in the common-PIN lists above.",
+        "No single 4-digit combination is \"safest\" in the abstract, because every code has the same 1-in-10,000 chance of being guessed at random. The safest code is one that's chosen randomly, so it doesn't fall into the patterns attackers try first. Here is a checklist of categories to avoid and why.\n\n**Categories to avoid**\n\n1. **Birthdays and dates (e.g., 0412, 1987):** Anyone who knows or can find your birthday, or that of a partner, child, or parent, can guess these quickly. Many codes are in MMDD or DDMM format.\n2. **Years (1990-2025):** Birth years, graduation years, and the current year are heavily overrepresented, so attackers try them early.\n3. **Anniversaries and significant dates:** Weddings, move-in dates, and similar events are often discoverable from social media.\n4. **Repeated digits (0000, 1111, 7777):** These are always among the first guesses.\n5. **Sequential digits (1234, 4321, 2345, 9876):** Extremely common and always tested early.\n6. **Keypad shapes and patterns:** Straight lines (2580), corners (1397), squares (1245), and \"X\" or \"L\" shapes. They are easy to remember, which is exactly why many people choose them.\n7. **Phone number fragments:** The last four digits of your phone number, a former number, or a family member's number. These are easy for someone who knows you to find.\n8. **Addresses and ZIP codes:** House numbers, street numbers, or ZIP codes are tied to you and easy to look up.\n9. **Repeated pairs and mirrors (1212, 6969, 1221):** These are common and predictable.\n10. **Pop-culture or meme numbers (007, 1337, 8008, 4200):** Popular enough to appear on common-code lists.\n11. **Lucky numbers or jersey numbers:** Personal, and often guessable by people who know you.\n12. **PIN reuse:** Using the same code as your bank card, phone, or another lock means one leak exposes everything.\n\n**Why attackers try these first**\n\nLeaked-PIN datasets show that a small number of codes make up a large share of real-world usage. Attackers try the most common codes and personal-information guesses first, so a code with a meaningful pattern may be broken in far fewer than 10,000 attempts.\n\n**How to choose a safe one**\n\n- Generate it randomly: use a random number generator, dice (four rolls of a 10-sided die), or a password manager.\n- Check it against the list above and re-roll if it resembles any category.\n- Don't use anything derived from personal information.\n- Use a unique code for each lock or device.\n- If you can, choose a lock that limits guess attempts. A 4-digit code is weak against unlimited brute-force guessing, even if it's random.\n- For high-value protection, use a longer code (6+ digits) if the lock allows it.\n\n**Bottom line:** the safest combination is a random one you haven't used anywhere else and that doesn't match any of the patterns above.",
+        "No single 4-digit combination is \"the safest.\" If a specific number were widely recommended, it would become a popular choice and therefore a weak one. What makes a combination safe is how it was chosen: randomly, and not reused. Here's a practical procedure.\n\n**Step-by-step procedure**\n\n1. **Generate each digit randomly.** Don't pick digits that \"feel\" random, because people favor birthdays, repeated digits, and patterns. Use a 10-sided die, a random number generator (a password manager's PIN generator works), or draw numbered slips from a bag. If you only have a six-sided die, roll it and discard 0 and any results you can't map, or use two rolls (see the worked example below).\n\n2. **Check against a weak list.** Reject the combination if it is:\n   - A repeat or sequence (0000, 1111, 1234, 4321, 2468)\n   - A pattern on the dial or keypad (2580, 1357, 1212, 6969)\n   - A year or date (1990, 2024, 0704, or anything resembling a birthday or anniversary)\n   - Tied to you (address digits, phone digits, old PINs)\n   - A common \"famous\" number (1004, 2000, 7777, 8888)\n\n   If it fails, reroll the whole number instead of tweaking it, since tweaking reintroduces human bias.\n\n3. **Don't reuse it.** Use a different combination for each lock, and never reuse your bank card PIN or phone passcode. If one lock is compromised or observed, the others stay safe.\n\n4. **Test memorability.** Rehearse it a few times today, then again after a day and after a week. If you can't recall it, store it securely (a password manager or a locked note) instead of weakening it. Don't write it on the lock, your wallet, or a sticky note nearby.\n\n5. **Limit exposure.** Shield the dial or keypad when entering it, scramble the dial after locking, and change the combination if someone may have seen it or if you've shared it.\n\n**Worked example method (using a six-sided die)**\n\nTo get one digit from 0-9 with a standard die:\n- Roll the die twice.\n- If the first roll is 1-3, the digit's range is 0-4; if it's 4-6, the range is 5-9.\n- Use the second roll to pick within the range: rolls 1-5 map to the 1st through 5th digit of the range; if you roll a 6, reroll.\n\nExample: first roll 5 → range 5-9. Second roll 3 → third value in that range → **7**.\n\nRepeat four times to get four digits, then run the weak-list check from step 2. If the result passes, that's your combination. If not, start over.\n\n**Note:** With only 10,000 possibilities, a 4-digit lock can be brute-forced by anyone with unlimited access and time. Random selection protects against guessing, but for high-value items, choose a lock with more digits or a key-based or limited-attempt mechanism.",
+        "**Short answer:** Any combination chosen truly at random is equally safe. Mathematically, no 4-digit code beats another. What makes a code unsafe is that humans pick predictable ones.\n\n**The math**\n- There are 10^4 = 10,000 possible codes (0000-9999).\n- A random code has a 1-in-10,000 (0.01%) chance of being guessed on any single try.\n- Expected attempts to brute-force: on average about 5,000 (half the space); worst case 10,000.\n\n**Time to brute-force by attempt rate**\n- Manual padlock, ~1 try per 3 seconds: ~4 hours on average, ~8 hours worst case.\n- Fast manual or a practiced thief, ~1 try/second: ~1.4 hours average, ~2.8 hours worst case.\n- Automated device with no lockout, ~10 tries/second: ~8 minutes average.\n- Electronic keypad with lockout (e.g., 5 tries, then a 30-minute delay): ~5,000 average attempts × 6 min per try after the first 5 means days to weeks, and a wipe-after-10 policy makes it effectively impossible.\n\n**Why the lock type matters more than the digits**\n- **Mechanical padlock/bike lock:** There's no attempt limit, so security is purely the 10,000-code space plus the thief's patience. Some can also be defeated by feel or by sensing slight binding in the wheels, which shrinks the effective search.\n- **Electronic keypad with lockout or wipe:** The attacker gets only a few guesses, so the chance of success is tiny: with 3 attempts it's 0.03%. Here, avoiding common codes is what matters.\n- **Phone/ATM PINs:** Attempt limits and escalating delays make 4 digits adequate for most threats.\n\n**Where human choice breaks the math**\nPeople cluster on a small set of codes. Studies of leaked PINs show 1234, 1111, 0000, 1212, 7777, and birth years (19xx/20xx) account for a large share. If an attacker gets only 3 tries, guessing the most common codes succeeds noticeably more than 0.03%, often around 4-10%. Other weak patterns include dates (MMDD), repeated pairs, keypad patterns (2580), and anything tied to you (address, phone digits).\n\n**What to do**\n1. Generate the code randomly (dice, a random generator, or a password manager), not from memory aids like dates.\n2. Avoid the common patterns above.\n3. Prefer devices with attempt limits, lockouts, or wipe features. A limit of 10 tries makes digit choice nearly irrelevant for a random code.\n4. If the asset is valuable and there's no attempt limit, use a longer code (6 digits = 1,000,000 possibilities) or a key-based lock.\n\n**Bottom line:** The safest 4-digit combination is a randomly generated one that isn't on common lists, and the safest *setup* is one where the lock limits guesses.",
+        "No single 4-digit combination is \"safest\" in the abstract. With 10,000 possibilities, any code chosen truly at random is equally strong. What changes is who you're defending against, and that determines which codes to avoid.\n\n**The baseline: a random code**\nPick digits with a random method (dice, a random number generator, or digits from a shuffled deck), not your head. Humans pick predictable numbers. Roughly 10% of people use 1234, 1111, or 0000, and birth years (19xx/20xx) and dates are heavily over-represented.\n\n**Threat model 1: Casual opportunist (guessing quickly)**\n- Tries the most common codes: 1234, 0000, 1111, 2580, 1004, 2000, 4321, 6969, 1212, and years like 1990.\n- Defense: avoid any pattern, repeated digit, sequence, keypad shape, or recent year. Any random code works.\n\n**Threat model 2: Shoulder-surfer**\n- Sees or films you entering it. Randomness doesn't help here.\n- Defense: shield the keypad, avoid obvious finger movement patterns, and prefer codes without easy visual shapes. Codes with repeated digits (e.g., 7377) are easier to remember after a glimpse, so avoid them. Change the code if you suspect it was seen.\n\n**Threat model 3: Thief with time (physical inspection or brute force)**\n- Looks for wear marks, smudges, or faint sounds and clicks. On a keypad with only four worn buttons, the attacker needs to try only 24 orderings (or 12 if one digit repeats).\n- Defense: don't leave the same 4 keys visibly worn or greasy. Wipe the keypad, and where the lock allows it, use a code with a repeated digit only if the keys aren't distinguishable. On mechanical wheel locks, scramble the wheels after use. If possible, choose a lock with lockout or tamper protection, or a longer code. Brute force of 10,000 codes takes only hours at a few seconds each, so for high-value items 4 digits is the real weakness.\n\n**Threat model 4: Someone who knows you**\n- Tries birthdays, anniversaries, addresses, phone digits, PINs you reuse, and meaningful numbers (a jersey number, a childhood home).\n- Defense: use nothing connected to you, and never reuse a bank PIN. A random code beats a clever personal one.\n\n**Bottom line**\n- Best general choice: a randomly generated code with no repeats, no sequence, no personal meaning, not reused elsewhere.\n- Against observers and wear marks, behavior (shielding, wiping, rescrambling) matters more than which digits you choose.\n- If the stakes are high, 4 digits aren't enough. Use a longer code, a key lock, or a lock with lockout.",
+        "There is no single \"safest\" combination, but the safest choice is a random one, and how you handle it physically matters nearly as much as which digits you pick.\n\n**Picking the combination**\n- Generate it randomly (dice, a random number generator, or draw digits from a shuffled deck). Avoid birthdays, years, repeats like 1111, sequences like 1234, and keypad patterns like 2580 or 1397.\n- Any random 4-digit code gives 10,000 possibilities, so no code is inherently stronger than another. Strength comes from not being guessable.\n- Avoid codes using four distinct digits only if you worry about wear (see below). Distinct digits are generally better, though they reduce the pool slightly to 5,040.\n\n**Physical and mechanical weaknesses**\n\n*Keypad wear and smudges*\n- Frequently pressed buttons show wear, shiny spots, or fingerprint residue. With four distinct worn keys, an attacker only has 24 orderings to try.\n- Mitigation: wipe the keypad regularly, and consider a code that repeats a digit (e.g., 3-7-3-9) so that only three keys show wear, though note this still leaves a small search space. Better yet, where the device allows it, use a longer code (6+ digits).\n- Touch your keys with a fingertip pattern that also touches other keys or wipe after use, so residue doesn't reveal the code.\n\n*Dial and wheel locks*\n- Don't leave wheels resting on the combination digits. After opening, spin each wheel to a random position so the code isn't displayed.\n- Cheap padlocks often have manufacturing tolerances that allow feeling for slight resistance on each wheel, or reading a binding wheel by applying tension to the shackle. Choose higher-quality locks with tighter tolerances, and avoid cheap ones for anything valuable.\n- Pick codes whose digits aren't all adjacent to each other on the wheels' starting positions, such as 0000, since owners often leave these as the factory default.\n\n*Changing the default*\n- Always change the factory code (commonly 0000 or 1234).\n\n**Habits**\n- Re-scramble every time after locking: spin all wheels or clear the keypad entry.\n- Shield the keypad from view while entering the code, since shoulder surfing and cameras are more common than lock manipulation.\n- Change the code periodically, especially if it's shared or if you notice wear.\n- For high-value protection, use a lock with a limited-attempt lockout, a longer code, or a key/biometric option instead of a 4-digit code.\n\n**Bottom line:** choose a randomly generated code with no personal meaning, change it from the default, keep the keypad clean, scramble dials after each use, and use a better lock when the contents matter.",
+        "There's no single \"safest\" 4-digit combination. If you pick one that's widely known, it's weak, but any code chosen at random is equally strong. With only 10,000 possibilities, the goal is to avoid predictable choices and manage the code well.\n\n**Choose it randomly**\n- Generate the digits with dice, a random number generator, or by drawing numbers from a hat. Don't choose by feel, since people gravitate toward patterns.\n- Avoid the common picks: 1234, 0000, 1111, 2580, birth years, birthdays (like 0412), anniversaries, and repeated or sequential digits.\n\n**Remember it without writing it insecurely**\n- **Chunk it:** Split 7351 into \"73\" and \"51,\" and tie each pair to something meaningful only to you, like a house number or a jersey number you'd never associate with yourself publicly.\n- **Use a mnemonic:** Turn the digits into a mini-story or image. For example, 7-3-5-1 could be \"seven swans swam past five... one boat.\" The odder the image, the better it sticks.\n- **Use a phone-keypad word:** Pick a word that maps to four digits (e.g., \"BLUE\" is 2583) and remember the word. Don't use a word tied to you personally.\n- **Practice with spaced repetition:** Recall it after a few minutes, then a day, then a week. After that it's usually permanent.\n- If you must record it, store it in a reputable password manager, not on a sticky note, in your notes app, or in your wallet. Don't store it next to the lock.\n\n**Manage it over time**\n- Change it periodically, especially if someone may have seen you enter it, if you've shared it, or if the lock shows wear on certain buttons or dials.\n- Don't reuse it for bank cards, phone unlock, alarm systems, or other locks. One leak or shoulder-surf would then expose everything.\n- Shield the lock when entering it, and scramble the dials afterward.\n\n**A caveat**\nA 4-digit combination only deters casual access. A determined person can brute-force 10,000 options in a short time, so for anything valuable, choose a lock with a longer code, a key, or a stronger mechanism.",
+        "There is no single \"safest\" 4-digit combination. The safest one is a random one, because any fixed answer I give you (or anyone else gives) becomes a bad choice the moment it's published.\n\n**Best 4-digit approach**\n- Generate the digits randomly (dice, a random number generator, or a password manager) instead of choosing a pattern you find memorable.\n- Avoid the most commonly used codes: 1234, 1111, 0000, 2580, 1212, 2000, 7777, and 4321.\n- Avoid birthdays, anniversaries, years (1950-2025), and anything tied to your address or phone number.\n- Don't reuse the code across locks, phones, or bank cards.\n- Avoid keypad patterns like straight lines, corners, or repeated pairs.\n\n**Why 4 digits is inherently limited**\nThere are only 10,000 possible combinations. A person can try them all in a few hours on a mechanical lock, and software can do it in seconds if there's no attempt limit. Even a perfectly random 4-digit code is weak against anyone who can try guesses repeatedly. Physical wear on keys or buttons can also reveal which digits you use, shrinking the search space further.\n\n**Better alternatives**\n- **Longer PINs:** 6 digits gives 1,000,000 combinations, and 8 digits gives 100,000,000.\n- **Alphanumeric codes:** Letters plus numbers increase the possibilities enormously, even at modest length.\n- **Key locks:** A quality pick-resistant cylinder lock removes guessing as an attack and suits many physical uses.\n- **Biometric or smart locks:** Fingerprint or app-based locks with attempt limits and lockout delays are far harder to brute force, especially with a PIN fallback that is long.\n- **Two-factor setups:** Combine something you know (a code) with something you have (a key, phone, or card) so a guessed code alone isn't enough.\n\n**Bottom line**\nIf you're stuck with 4 digits, pick a truly random one, avoid the common ones, and make sure the device limits wrong attempts. If the thing you're protecting is valuable, move to a longer code, a key, or a multi-factor lock.",
+        "No single 4-digit combination is \"the safest.\" Here's why, and what to do instead.\n\n**The core point:** Any 4-digit code has 10,000 possibilities (0000-9999). If the code was chosen truly at random, every one is equally hard to guess. A \"safest\" number only exists relative to how people choose, not in the math.\n\n**Myth 1: \"Random-looking\" numbers I pick myself are safe.**\nNumbers like 7294 feel random, but humans are bad at randomness. We avoid repeats, favor certain digits (like 7), avoid round patterns, and often unconsciously use dates, phone digits, or keyboard shapes. Attackers know these biases and try the most common choices first. A hand-picked code is only as strong as it is unpredictable to someone who knows how people think.\n\n**Myth 2: Lists of \"safest\" codes solve the problem.**\nOnce a number is published as safe, it becomes popular, and popularity is exactly what makes a code unsafe. If a article names 7294 as the best code, people will use it, and attackers will add it to their guess list. Any code that is recommended widely is no longer a good choice.\n\n**Myth 3: Avoiding 1234 and 0000 is enough.**\nThat's necessary but not sufficient. Birth years (19xx, 20xx), dates (MMDD), repeated pairs (6969), and patterns on the keypad are also heavily guessed.\n\n**What actually makes a code safe:**\n- **Generate it randomly:** use dice, a random number generator, or a password manager rather than picking it yourself. Roll a die-like process four times (a 10-sided die or a random generator).\n- **Don't reuse it:** use different codes for different locks, phones, and cards.\n- **Avoid personal info:** no birthdays, addresses, anniversaries, or the last digits of a phone number.\n- **Don't share the method:** keep it unpredictable, and don't use the same code you've seen suggested.\n- **Consider physical factors:** on a keypad, worn keys can reveal which digits are used, so change codes periodically. On a mechanical lock, set it away from the default.\n- **Limit attempts where possible:** the real protection for phones and cards is lockout after a few wrong guesses, which matters far more than which number you choose.\n\n**Bottom line:** the safest 4-digit combination is one generated randomly by you, known only to you, and not taken from any list, including this one. And if the item truly matters, a 4-digit code is a weak barrier regardless, so use a longer code or a stronger lock."
+      ],
+      "id": "nb-curated-9c418f063bc433264d29",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "7eb7426c556e3f5c1ad1b6eefc3028eab3fa81f7485787087e615eb21d528bf2",
+      "partition_scores": [
+        7
+      ],
+      "prompt": "Which 4-digit lock combination is the safest?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "5d7669c0aec137a65e510affdee6c2376b4efcb6e62d2e81ad1097d2d7d12df4",
+      "utility": 1.5684063494423397
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 1.5684063494423397,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "ae9d83bc6430baf0a083518f1f1f098a1d41e3199ba9526119c58a0e42e7e28e",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0025",
+      "fixture": false,
+      "intent_sha256": "47201adaeb1e8c05bdaef8cdfb77096316841f1fd8c540c13608169077c3d1fc",
+      "request_sha256": "9cac0cf9607f7d03b49eb9cadeae867cdfaa30d1cf86404d0efb68792a12ae91",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.816441026996472,
+        "message_id": "chatcmpl-EduwdT7SfhcypTr9aPdSsC4ocBQkY",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 145,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 108,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 5718,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 5715,
+            "cached_tokens": 0
+          },
+          "total_tokens": 5863
+        },
+        "refusal": null,
+        "request_id": "req_02f21f669f494d79a419bad10b718187",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 5715,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 5715,
+            "cached_tokens": 0
+          },
+          "output_tokens": 145,
+          "output_tokens_details": {
+            "reasoning_tokens": 108
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-85bd10cb49b2f7c8b5f10946.group",
+      "spent_micro_usd": 1764,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0026",
+      "fixture": false,
+      "intent_sha256": "7200902ba47097a497e7d7d69195c5c2673bb16b1d1b2f2a9ba633a763fd7396",
+      "request_sha256": "3d91e83d5325b9a5c52c9d35f161f6a34f3af8b5d7e1959842f13889079f6cb1",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.065976411002339,
+        "message_id": "msg_011CgUTVPMB4WU9F3odUGvZH",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUTVP9WqDcQTN2VggRAv",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 931,
+          "output_tokens": 227,
+          "output_tokens_details": {
+            "thinking_tokens": 218
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-85bd10cb49b2f7c8b5f10946.quality.00",
+      "spent_micro_usd": 11363,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-9c418f063bc433264d29"
+}

@@ -1,0 +1,27 @@
+{
+  "approved": true,
+  "billing_profile": "public-payg-envelope-v1",
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "cutoff": "2026-10-28T10:16:14Z",
+  "first_evidence": {
+    "coverage_sha256": "7cb5b80a9bb19774d8c85b29346700301a08c12d08a542c891106777dac781ba",
+    "files": {
+      "assessments/p2-66a2d4cb8703e6fa273999dd.json": "f2d4bc9cbcdd22825098dcf9d5e3cddeef494ece66bb76f29df09c9952cabc63",
+      "assessments/p2-82276b972aa39c5491c83143.json": "b05a86ffb71f57a9f2e3df5916a1efe1e0cb85061afa141e4344e7457b5d8577",
+      "assessments/p2-85bd10cb49b2f7c8b5f10946.json": "8b47e8fff0180095f15a2e7b0e8b20a11856d50c54b1d04451ee8bfd23c9763c",
+      "portfolios/p2-66a2d4cb8703e6fa273999dd.json": "908a147cc3d924f880538138bf5eb1ec83a8cd5f621a1be22a8780277681af83",
+      "portfolios/p2-82276b972aa39c5491c83143.json": "adad8cd56aa06d70ea7b33e936a3a0cdd3e4a1ebcd257a362afdcab0f5b874fd",
+      "portfolios/p2-85bd10cb49b2f7c8b5f10946.json": "cb4c4a8f6552697844d764e8fd37c48ae9644e0778529c0d2811b5236c07b9f0"
+    },
+    "native_evidence_sha256": "3c36a5061cbfb9ee9220db41cc409862fdde46e57b81008016a6855bc17d6798"
+  },
+  "fixture": false,
+  "journal_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b",
+  "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+  "prefix_attempts": 28,
+  "prefix_sha256": "c872a2d1eceae0a4bd56620282aea4cb10ea460ad301e6e3831767fb1cc73451",
+  "review_id": "live-first-review-001",
+  "review_sha256": "061dc60298827ef9bc43ccd3d6dfd59f8ea9a167278ebe3680cf3d42590ce004",
+  "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

@@ -1,0 +1,405 @@
+{
+  "assessment_identity_sha256": "a1d748e6f131cfea3b8cddc457883b771b14ec260c7273666b77d7cdf6b06116",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 4,
+    "utility": 4.043391289873442
+  },
+  "native": {
+    "fields": {
+      "distinct": 4,
+      "generation_scores": [
+        8,
+        null,
+        8,
+        7,
+        null,
+        null,
+        null,
+        null,
+        8,
+        null
+      ],
+      "partition_scores": [
+        8,
+        8,
+        7,
+        8
+      ],
+      "utility": 4.043391289873442
+    },
+    "generation_row": {
+      "generations": [
+        "**Barnaby** is a good fit for your loyal dog. It sounds warm and dependable, with a bit of old-fashioned charm.\n\nIf you'd like other options, here are a few that suit a devoted companion:\n\n- **Ember**: warm and steadfast\n- **Scout**: faithful and watchful\n- **Maple**: gentle and comforting\n- **Hachi**: a nod to the famously loyal Akita, Hachikō\n\nI can tailor the name to your story's setting, the dog's breed, or the tone if you tell me more.",
+        "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a loyal dog who sticks by his person through everything. It also shortens easily to \"Barn\" or \"Barney.\"\n\nIf you'd like other options with a similar feel: Hank, Biscuit, Juno, Murphy, or Scout.",
+        "**Biscuit** is a warm, classic name for a loyal dog, and it suits a faithful companion who's always at their person's side.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Scout** for an adventurous, watchful dog\n- **Hachi** for a story of devoted waiting (a nod to the famous Akita)\n- **Ember** for a gentle, steadfast companion\n- **Moose** for a big, goofy, big-hearted dog\n\nIf you tell me the dog's breed, the setting, or the story's mood, I can tailor the name more closely.",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog: friendly, sturdy, and memorable.\n\nIf you'd like alternatives, here are a few with different feels:\n- **Hazel** (gentle, devoted)\n- **Scout** (adventurous, watchful)\n- **Barley** (cozy, down-to-earth)",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog, one who sticks close through thick and thin, just as a bramble clings to everything it touches.",
+        "**Bramble**\n\nIt's a warm, earthy name that suits a loyal, steadfast companion. It also has a nice ring when called across a field or whispered at a bedside.\n\nIf you'd like alternatives with a different feel:\n- **Juniper**: gentle and devoted\n- **Moss**: quiet, faithful, grounded\n- **Tobias \"Toby\"**: classic and affectionate\n- **Ember**: warm, with a spark of courage",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal companion, and it has a nice ring when called across a field or whispered at a doorstep.\n\nIf you'd like alternatives with a different feel:\n\n- **Tucker**: friendly and dependable\n- **Juniper**: gentle and graceful\n- **Orion**: steadfast, a guiding presence\n- **Biscuit**: playful and endearing\n\nIf you tell me the breed, setting, or tone of your story, I can tailor the name more closely.",
+        "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a steadfast, loyal companion. It also shortens easily to \"Barn\" or \"Barney\" for affectionate moments in the story.",
+        "**Barley**\n\nIt's a warm, classic name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who would wait by the gate through any storm.",
+        "**Barley**\n\nIt's a warm, earthy name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who waits at the gate every evening and never leaves your side."
+      ],
+      "id": "nb-curated-b1b0aa2062fdabf30542",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Name the dog character in my story about a loyal dog."
+    },
+    "partition_fields": {
+      "distinct": 4,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        3,
+        3
+      ]
+    },
+    "score_row": {
+      "distinct": 4,
+      "generation_scores": [
+        8,
+        null,
+        8,
+        7,
+        null,
+        null,
+        null,
+        null,
+        8,
+        null
+      ],
+      "generations": [
+        "**Barnaby** is a good fit for your loyal dog. It sounds warm and dependable, with a bit of old-fashioned charm.\n\nIf you'd like other options, here are a few that suit a devoted companion:\n\n- **Ember**: warm and steadfast\n- **Scout**: faithful and watchful\n- **Maple**: gentle and comforting\n- **Hachi**: a nod to the famously loyal Akita, Hachikō\n\nI can tailor the name to your story's setting, the dog's breed, or the tone if you tell me more.",
+        "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a loyal dog who sticks by his person through everything. It also shortens easily to \"Barn\" or \"Barney.\"\n\nIf you'd like other options with a similar feel: Hank, Biscuit, Juno, Murphy, or Scout.",
+        "**Biscuit** is a warm, classic name for a loyal dog, and it suits a faithful companion who's always at their person's side.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Scout** for an adventurous, watchful dog\n- **Hachi** for a story of devoted waiting (a nod to the famous Akita)\n- **Ember** for a gentle, steadfast companion\n- **Moose** for a big, goofy, big-hearted dog\n\nIf you tell me the dog's breed, the setting, or the story's mood, I can tailor the name more closely.",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog: friendly, sturdy, and memorable.\n\nIf you'd like alternatives, here are a few with different feels:\n- **Hazel** (gentle, devoted)\n- **Scout** (adventurous, watchful)\n- **Barley** (cozy, down-to-earth)",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog, one who sticks close through thick and thin, just as a bramble clings to everything it touches.",
+        "**Bramble**\n\nIt's a warm, earthy name that suits a loyal, steadfast companion. It also has a nice ring when called across a field or whispered at a bedside.\n\nIf you'd like alternatives with a different feel:\n- **Juniper**: gentle and devoted\n- **Moss**: quiet, faithful, grounded\n- **Tobias \"Toby\"**: classic and affectionate\n- **Ember**: warm, with a spark of courage",
+        "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal companion, and it has a nice ring when called across a field or whispered at a doorstep.\n\nIf you'd like alternatives with a different feel:\n\n- **Tucker**: friendly and dependable\n- **Juniper**: gentle and graceful\n- **Orion**: steadfast, a guiding presence\n- **Biscuit**: playful and endearing\n\nIf you tell me the breed, setting, or tone of your story, I can tailor the name more closely.",
+        "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a steadfast, loyal companion. It also shortens easily to \"Barn\" or \"Barney\" for affectionate moments in the story.",
+        "**Barley**\n\nIt's a warm, classic name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who would wait by the gate through any storm.",
+        "**Barley**\n\nIt's a warm, earthy name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who waits at the gate every evening and never leaves your side."
+      ],
+      "id": "nb-curated-b1b0aa2062fdabf30542",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        3,
+        3
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "74a019438f6b10656e10d3a8723f98d0144f96ad181e19d51b2e1685633d55e9",
+      "partition_scores": [
+        8,
+        8,
+        7,
+        8
+      ],
+      "prompt": "Name the dog character in my story about a loyal dog.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "21fad24f9debba98237ee494c5ae5381d5854ae6abfb6cd97a4c719b28cf2a27",
+      "utility": 4.043391289873442
+    },
+    "summary": {
+      "mean_distinct": 4.0,
+      "mean_utility": 4.043391289873442,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "474d14b1a0c0a7c4263b44097550aa565bfbd2c139443508b8c93cebe265f5fd",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0246",
+      "fixture": false,
+      "intent_sha256": "9c732216152863bb5aee7dfa598b4bf6ee111573bbd8e59bd3f729218dc3f8f5",
+      "request_sha256": "dcef95d392ce4b55108d522f54f8da7634d72f531c2f5e6da1d57461e5f61ff4",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.4152259429974947,
+        "message_id": "chatcmpl-EdvwTzGHzndCNcuvazmtpqozVUG3J",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 91,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 54,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 1011,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1102
+        },
+        "refusal": null,
+        "request_id": "req_a1d74479bd7e4d479d3843cd4f4f8cf6",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,7],[2],[3,4,5,6],[8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 1011,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 91,
+          "output_tokens_details": {
+            "reasoning_tokens": 54
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-c3461f03eda02c9087e2ca8a.group",
+      "spent_micro_usd": 343,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0247",
+      "fixture": false,
+      "intent_sha256": "6fd54e461ff9396a08ba480c0719a8cd947ebd70e0f0633bbe0e2cda4f1ac245",
+      "request_sha256": "3bb2269a6960a2f37b6b42738f20528b07256ee8aa3cdc3e447a6f99e49b8ec3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.1187577240052633,
+        "message_id": "msg_011CgUYMz65U685M1zcyecEb",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYMyrvszZcQg5SRv47d",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 606,
+          "output_tokens": 77,
+          "output_tokens_details": {
+            "thinking_tokens": 68
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-c3461f03eda02c9087e2ca8a.quality.00",
+      "spent_micro_usd": 5451,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0248",
+      "fixture": false,
+      "intent_sha256": "1f80f3456d9f3e5a4765f04799dd5d43180f65272930d94ee4ee15ddfc6ed793",
+      "request_sha256": "e407a6f5a4ab1b1d450c9ab6a595739a4e1ba57e81031fe3471f1f956e23c6ca",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.7420523729961133,
+        "message_id": "msg_011CgUYNBfavBcFgQ9f9vVgF",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYNBNEep4vvyqH3JmHJ",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 617,
+          "output_tokens": 179,
+          "output_tokens_details": {
+            "thinking_tokens": 170
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-c3461f03eda02c9087e2ca8a.quality.02",
+      "spent_micro_usd": 8316,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0249",
+      "fixture": false,
+      "intent_sha256": "f6c84d37cca4bf4ecd4239aa83fb451e4027934270cb0ecb234f84a379a08f5e",
+      "request_sha256": "bbe9068893e0113291878d9d7edaf9f3e6735474f0c5e76265f22c0c7971ab48",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.464630278002005,
+        "message_id": "msg_011CgUYNVW9aNvqmYEi1uVQ4",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYNVEmjrCeqKQZqpJei",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 550,
+          "output_tokens": 199,
+          "output_tokens_details": {
+            "thinking_tokens": 190
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-c3461f03eda02c9087e2ca8a.quality.03",
+      "spent_micro_usd": 8498,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0250",
+      "fixture": false,
+      "intent_sha256": "2d1ceca3aff0aa383b42001d0067a76fef7237a22ac5d20b6c073b944692997a",
+      "request_sha256": "8092e3ecb31f4019df86d9a0857cc91dbd1def32b0de02281630d90ec6ac0b3e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.022951981009101,
+        "message_id": "msg_011CgUYNn4nt3SZm8JgPeoz6",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUYNmsPK2ZvzPPRSJXaU",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 493,
+          "output_tokens": 176,
+          "output_tokens_details": {
+            "thinking_tokens": 167
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-c3461f03eda02c9087e2ca8a.quality.08",
+      "spent_micro_usd": 7552,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-b1b0aa2062fdabf30542"
+}

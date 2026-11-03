@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-0a7802eee281baebb9c143ad29958b8fdcb88b2c8d6d11688ca86a127b288fe4",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "b28bc548db2f259dc59e3daaf049ec01b206a8cfc207780134110b44cb3fd0be",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 2,
+    "request_ids": [
+      "p2-b8135e80727f14cfba9c3039.plan",
+      "p2-b8135e80727f14cfba9c3039.answer.00",
+      "p2-b8135e80727f14cfba9c3039.answer.01",
+      "p2-b8135e80727f14cfba9c3039.answer.02",
+      "p2-b8135e80727f14cfba9c3039.answer.03",
+      "p2-b8135e80727f14cfba9c3039.answer.04",
+      "p2-b8135e80727f14cfba9c3039.answer.05",
+      "p2-b8135e80727f14cfba9c3039.answer.06",
+      "p2-b8135e80727f14cfba9c3039.answer.07",
+      "p2-b8135e80727f14cfba9c3039.answer.08",
+      "p2-b8135e80727f14cfba9c3039.answer.09",
+      "p2-5aee953e2eb0c2f0ec72ff41.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f6fe3dd7dcf5c1ef1795f9e2",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.00",
+      "status": "ok",
+      "text": "**Biscuit**\n\nIt's a warm, humble name that suits a dog whose defining trait is steadfast loyalty, something comforting and dependable that stays by your side through everything."
+    },
+    {
+      "id": "response-6109140635c1767470c07494",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.08",
+      "status": "ok",
+      "text": "**Name: Anchor**\n\nAnchor suits a loyal dog because the word already means steadfastness: something that holds fast when everything else drifts. It also gives you a motif you can reuse throughout the story.\n\n**How the motif can recur:**\n- **Early on:** Someone remarks that the dog \"stays put like an anchor\" when a storm, a crowd, or a hard moment would send others running.\n- **Middle:** The owner is adrift, whether through grief, a move, or a lost job. The dog's presence is the one fixed point. You can echo this with sea imagery: tides, ropes, harbors, a worn rope toy.\n- **Turning point:** The dog refuses to leave a spot, a person, or a doorway, and that stubbornness becomes what saves or steadies someone.\n- **Ending:** The owner says the name differently, no longer as a joke or a label but as a statement of what the dog has been to them.\n\n**Alternates, if you want a different feel:**\n- **North** (or **Compass**): guidance rather than staying power. The dog leads the character home or toward a decision.\n- **Ember:** quiet, lasting warmth. It works well for a story set in cold or loss, with recurring images of hearths and glowing coals.\n- **Oak:** rootedness and shelter. It suits a rural or generational story, perhaps with an actual oak tree on the property.\n\nMy pick is **Anchor**, with \"Anch\" or \"Annie\" as a possible nickname if you want something softer for dialogue."
+    },
+    {
+      "id": "response-ee46282a5379c3532f50d8ce",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.01",
+      "status": "ok",
+      "text": "Here are names for your loyal dog, each rooted in a word for loyalty or devotion:\n\n**Top pick: Fidel** (Latin *fidelis*, \"faithful\")\nThis is the root of the English words \"fidelity\" and \"Fido.\" It has a classic, grounded feel and suits a dog whose defining trait is steadfastness.\n\n**Other options:**\n\n- **Chūken** (Japanese, 忠犬, \"loyal dog\"): The word comes from the tradition of Hachikō, the Akita who waited at Shibuya Station for his owner for nearly ten years. It's a strong choice if your story has a theme of waiting or enduring devotion.\n\n- **Ffyddlon** (Welsh, \"faithful\"): Pronounced roughly *FUTH-lon*. It has a lyrical, earthy sound, good for a pastoral or folkloric setting. \"Ffydd\" means faith, so the name literally carries trust within it.\n\n- **Wafa** (Arabic, وفاء, \"loyalty, fidelity\"): Short and warm, and it carries a sense of keeping one's promises. It works well as a call-name.\n\n- **Pistis** (Greek, πίστις, \"faith, trust\"): Gives a mythic, ancient tone. A nickname like \"Pis\" could soften it.\n\n- **Sadiq** (Arabic, \"truthful, faithful friend\"): Fits a dog who is more companion than pet.\n\n- **Vernost** (Russian, верность, \"faithfulness\"): Heavy and dignified, ideal for a large, serious dog in a wintry setting.\n\n- **Fedele** (Italian, \"faithful\"): Softer and more melodic than Fidel, with a gentle sound for a tender story.\n\n**My recommendation:** If you want something readers will instantly connect to loyalty, choose **Fidel** or **Fedele**. If you want a name with deeper cultural weight, choose **Chūken**. If you want something distinctive and memorable, choose **Ffyddlon**, perhaps shortened to \"Ffydd\" in dialogue."
+    },
+    {
+      "id": "response-141685b04865375991309b01",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.07",
+      "status": "ok",
+      "text": "Here are some names for your loyal dog, chosen to be short, easy to say, and a pleasure to repeat in dialogue:\n\n1. **Bo**: One syllable with a round, open \"o.\" It's easy for young readers to sound out and sits well in lines like \"Come, Bo!\"\n\n2. **Moxie**: The bouncy two-beat rhythm suggests spirit and pluck, and the \"x\" gives it a memorable snap.\n\n3. **Waffles**: The soft, playful sound is fun to say aloud and gives you a warm, cozy tone.\n\n4. **Tuck**: Short and sturdy, with a hard \"k\" ending that makes it feel dependable. It also hints at staying close by.\n\n5. **Juniper (June)**: A longer name with a short nickname, so you can use whichever fits the moment.\n\n6. **Otis**: Strong vowels, a gentle rhythm, and a friendly, old-soul feel that suits a faithful companion.\n\n7. **Pip**: Tiny and quick, ideal for a small dog. The repeated \"p\" is fun in read-aloud passages (\"Pip, Pip, hooray!\").\n\n8. **Moose**: A big, warm \"oo\" sound that is great for a large, gentle dog, and easy to call out across a field.\n\n**My top pick:** **Otis**. It's easy to say, has a steady rhythm for repeated lines (\"Otis waited. Otis always waited.\"), and sounds loyal without being obvious.\n\nIf you tell me the dog's size, breed, or the story's tone, I can narrow these down."
+    },
+    {
+      "id": "response-07383e7c3c685d684446d639",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.05",
+      "status": "ok",
+      "text": "**Juniper**\n\nHere's why it fits: the owner, a widow, once planted a juniper tree beside the porch of the house she shared with her husband. After he died, she adopted a scruffy stray who kept curling up beneath that tree. She called the dog Juniper because it felt like the one living thing that had stayed rooted when everything else had shifted.\n\nIf Juniper doesn't suit your story, here are a few other names with backstories your owner character might plausibly have:\n\n- **Marlow**: named after the lakeside town where the owner spent childhood summers with a grandfather who has since passed.\n- **Biscuit**: the nickname the owner's late sister gave her as a kid, passed on to the dog as a quiet tribute.\n- **Cass**: short for Cassiopeia, the constellation a father once pointed out on camping trips.\n- **Ferris**: after the old Ferris wheel at the pier where the owner had a first date with a spouse now gone.\n\nIf you tell me the owner's age, setting, and the kind of loss or memory at the heart of the story, I can tailor a name more closely."
+    },
+    {
+      "id": "response-42c3069a61adc521209f76e4",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.02",
+      "status": "ok",
+      "text": "Here are names for your loyal dog, drawn from history's most devoted dogs and adapted into fresh variants:\n\n**From Hachikō (the Akita who waited nine years at Shibuya Station)**\n- **Hachi**: a simple, warm shortening that still carries the legacy\n- **Hatchet**: a scrappier, more playful twist\n- **Kōji**: a Japanese-sounding name that echoes the original without copying it\n\n**From Greyfriars Bobby (the Skye Terrier who guarded his master's grave in Edinburgh)**\n- **Greyfriar**: the cemetery name, used as a dog's name\n- **Bram**: a Scottish-flavored nod to \"Bobby\"\n- **Robbie Gray**: a gentle blend of \"Bobby\" and \"Greyfriars\"\n\n**From Argos (Odysseus's dog, who waited twenty years and recognized him on his return)**\n- **Argo**: a clean, memorable variant\n- **Argus**: the Latinized form, which suggests watchfulness\n- **Ajax**: a heroic-sounding name with a similar Greek feel\n\n**My pick: Argo.** It's short, easy to call out in dialogue, and has an epic undertone that suits a story about faithfulness. If your story is set somewhere like Japan or Scotland, **Hachi** or **Bram** would fit the setting better.\n\nIf you tell me the dog's breed, the setting, and the story's tone, I can narrow it to one name."
+    },
+    {
+      "id": "response-7117c78a78cac4fcb9f26d8d",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.03",
+      "status": "ok",
+      "text": "Since I don't know your setting, here are names matched to different worlds. Pick the one closest to yours:\n\n**Farm / countryside:** Biscuit, Clover, or **Gus**\n**Frontier / Old West:** Dusty, Remington, or **Tumbleweed**\n**Seaside / fishing village:** Barnacle, Skipper, or **Marlow**\n**Wartime (1940s):** Victor, Sergeant, or **Tommy**\n**Fantasy kingdom:** Aldric, Bramble, or **Thorn**\n\nIf you want just one answer: **Gus**. It's short, warm, and sounds like a dog who'd wait at the gate for years.\n\nIf you tell me the setting and era, I can narrow it to a single name that fits."
+    },
+    {
+      "id": "response-15d13085a3637089bd8ac38b",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.06",
+      "status": "ok",
+      "text": "Here are dog names grouped by tone, so you can pick the one that fits your story's mood:\n\n**Heartwarming**\n- **Biscuit**: soft, cozy, and instantly lovable\n- **Willow**: gentle and faithful\n- **Clover**: a small name for a big-hearted companion\n\n**Epic**\n- **Ranger**: suggests a steadfast protector on a long journey\n- **Atlas**: a dog who carries the weight of the world for those he loves\n- **Valor**: a name that announces courage\n\n**Humorous**\n- **Sir Barksalot**: pure comic charm\n- **Noodle**: a goofy name for a dog with unwavering devotion\n- **Meatball**: undignified name, deeply dignified loyalty\n\n**Melancholic**\n- **Ash**: quiet, weathered, and wistful\n- **Juniper**: tender with a hint of loss\n- **Hollis**: an old-soul name for a dog who waits\n\nIf I had to choose one: **Biscuit** for a warm, classic loyal-dog tale, or **Ash** if your story leans toward bittersweet. Tell me the setting and tone, and I can narrow it to one name."
+    },
+    {
+      "id": "response-2c224915ba1c23b55f448762",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.04",
+      "status": "ok",
+      "text": "Name your dog **Biscuit**.\n\nIt's a humble, everyday name with a warm, golden feel, and it suits a loyal dog who is always at someone's heel. A dog named Biscuit might be a medium-sized, tawny-coated mutt with one ear that never stays up, who waits by the door at the same time every day.\n\nIf you'd like other options, here are a few built around coat, size, and quirks:\n\n- **Pickle**: a small, wiry terrier mix with a green-gray brindle coat and a stubborn streak.\n- **Toast**: a golden-brown lab with a habit of leaning his whole weight against your legs.\n- **Mop**: a shaggy, oversized sheepdog type who follows his person from room to room.\n- **Pepper**: a black-and-white border collie with a speckled muzzle and watchful eyes.\n- **Waffle**: a stocky, square-faced dog with a patterned coat and a lopsided, hopeful grin.\n\nEach of these names is plain and a little funny, which makes the dog's steadfast loyalty stand out more. If you tell me the breed, setting, or tone of your story, I can narrow it down to one."
+    },
+    {
+      "id": "response-d0f191f1bd0a85d9f25c2a31",
+      "request_id": "p2-b8135e80727f14cfba9c3039.answer.09",
+      "status": "ok",
+      "text": "Provisional name: **Barley**. It's warm, friendly, and suits a steady, devoted dog.\n\nA few quick questions so I can refine it:\n\n1. **Breed and size:** Is your dog a sturdy shepherd, a scrappy terrier, a big retriever, or something else? The name can echo that.\n2. **Setting and era:** Is it a farm, a small town, wartime, a fantasy world, or somewhere else? A 1940s countryside story might suit \"Biscuit\" or \"Jip,\" while a fantasy one might suit something like \"Orrin.\"\n3. **Tone:** Is the story gentle and heartwarming, bittersweet, or adventurous? A tearjerker might call for a soft, simple name, while an adventure might want something bolder, like \"Ranger\" or \"Scout.\"\n\nTell me even one or two of these and I'll offer a tailored shortlist."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-b1b0aa2062fdabf30542",
+    "prompt": "Name the dog character in my story about a loyal dog.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-21"
+    }
+  }
+}

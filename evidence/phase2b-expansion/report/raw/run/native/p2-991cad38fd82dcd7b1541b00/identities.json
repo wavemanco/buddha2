@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "73f9e94000e7c9ee964bcd4490783f07cd5754e3913a880c76e2061c6c2a29bd",
+  "portfolio_id": "portfolio-a89d38fa6575284d9dab0777f9847e38ac222478e23264c0b0df3b6f03a219e4",
+  "portfolio_sha256": "34882b64e4bfa3203bf8720e4c163b6c6feb01fcb84732f3fdbeb990a96d7dde",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-991cad38fd82dcd7b1541b00.answer.00",
+      "p2-991cad38fd82dcd7b1541b00.answer.01",
+      "p2-991cad38fd82dcd7b1541b00.answer.02",
+      "p2-991cad38fd82dcd7b1541b00.answer.03",
+      "p2-991cad38fd82dcd7b1541b00.answer.04",
+      "p2-991cad38fd82dcd7b1541b00.answer.05",
+      "p2-991cad38fd82dcd7b1541b00.answer.06",
+      "p2-991cad38fd82dcd7b1541b00.answer.07",
+      "p2-991cad38fd82dcd7b1541b00.answer.08",
+      "p2-991cad38fd82dcd7b1541b00.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-2cd39cbaf4242480a8d1b7dc",
+      "index": 0,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.00",
+      "status": "ok",
+      "text_sha256": "fd497a68b1bbcb1aac4145dbd0d2346fc035c8bc3d9624c56f39a1286d79ebe6"
+    },
+    {
+      "id": "response-2a01b3d9a7c40b91c1c4a0d2",
+      "index": 1,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.01",
+      "status": "ok",
+      "text_sha256": "ea950e623960d9c4f394266988ac792db747968b38818bf858767e1d9e7d4013"
+    },
+    {
+      "id": "response-f936fd4a2264185ca6dd0459",
+      "index": 2,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.02",
+      "status": "ok",
+      "text_sha256": "0a2f1a4ad6ffa86c064c5aaf7e90559f2d017ec2208863ee8356f6bef9451f53"
+    },
+    {
+      "id": "response-5f429f20a388684086cc7a9f",
+      "index": 3,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.03",
+      "status": "ok",
+      "text_sha256": "f63a92c2c3968eab2da1dc5d2866405e1fd12575270c12be728c4014b647de51"
+    },
+    {
+      "id": "response-cb142d1236d32aac10c1034c",
+      "index": 4,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.04",
+      "status": "ok",
+      "text_sha256": "61558bec68264eab4a19eec4356f849e0738aca5f7c874269c090450ddba4f6b"
+    },
+    {
+      "id": "response-2064defaef1f93c7f6d4ba62",
+      "index": 5,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.05",
+      "status": "ok",
+      "text_sha256": "59736e6fd7484faba827d34a61f148286db1ccdfa2b58e8d95f8b7cd37d14239"
+    },
+    {
+      "id": "response-40aaaa3eaa66126bc41a65a0",
+      "index": 6,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.06",
+      "status": "ok",
+      "text_sha256": "36706aecd8171ebf251624a201b17901841bdaa41849bb85fd534bd2d1631450"
+    },
+    {
+      "id": "response-cdf07b0879cb76c71da98967",
+      "index": 7,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.07",
+      "status": "ok",
+      "text_sha256": "cf213b1f5ec01b729dd9b4d26b3d1335c2d2f79bda6418394046d8dc38f6dc3d"
+    },
+    {
+      "id": "response-9a24158d129e9b1e9530df58",
+      "index": 8,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.08",
+      "status": "ok",
+      "text_sha256": "e7e15e2e7aff4cbe9fc14ca2ad7336d279664dbe338f28eb20fe266c55a3f89b"
+    },
+    {
+      "id": "response-5b7df3bec3e4a0a3be08a8da",
+      "index": 9,
+      "request_id": "p2-991cad38fd82dcd7b1541b00.answer.09",
+      "status": "ok",
+      "text_sha256": "7c0bd010082c483854f8d548bdc6cc5b3e4c079d3e22eb417bc3ec171e787fec"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+    "prompt": "Can you list 3 influential persons from the nineteenth century?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-63"
+    }
+  }
+}

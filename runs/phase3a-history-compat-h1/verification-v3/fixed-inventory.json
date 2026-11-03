@@ -1,0 +1,24 @@
+{
+  "all_other_entries_sha256": "c7e622eb49f1f72e803ed3936ad0a0aae55e21efcd7e3a81688ac4d98fddb02a",
+  "all_other_entry_count": 393039,
+  "docker_injected_files": [
+    "/etc/hostname",
+    "/etc/hosts",
+    "/etc/resolv.conf"
+  ],
+  "docker_virtual_mounts": [
+    "/dev",
+    "/proc",
+    "/sys"
+  ],
+  "excluded_private_names": [
+    "/opt/phase3a-opencode/node_modules/.bun/bottleneck@2.19.5/node_modules/bottleneck/.env",
+    "/root/.bun/install/cache/bottleneck@2.19.5@@@1/.env"
+  ],
+  "target_mode_uid_gid": [
+    493,
+    0,
+    0
+  ],
+  "target_sha256": "037e295c1905487293ebf99f660d889343eb4e675cd9223329df3febace72821"
+}

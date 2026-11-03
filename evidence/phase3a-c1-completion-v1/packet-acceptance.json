@@ -1,0 +1,38 @@
+{
+  "archive": "evidence/phase3a-c1-completion-v1/offline-kit-v1.zip",
+  "archive_bytes": 7277419,
+  "archive_manifest_sha256": "c0595644ee1411c92825c7819faa3e786d2b30a3335699c2493c4f8ad2a24af1",
+  "archive_sha256": "1e53c490609e2c239c49c188b6fad127b5159bdfd3414061be431f3d715347be",
+  "checks": {
+    "ZIP_CRC_all_members": true,
+    "all_192_frozen_source_bytes_match": true,
+    "all_nonmanifest_members_equal_current_working_bytes": true,
+    "closed_parent_archive_references_match": true,
+    "exact_inventory_every_member_SHA256": true,
+    "no_private_member_names_or_path_escape_or_case_aliases": true,
+    "no_zip_symlink_or_directory_members": true,
+    "offline_only_no_live_or_scientific_readiness_claim": true,
+    "prior_unknown_full_reservation_retained": true,
+    "six_gate_groups_and_three_source_bound_certificates_passed": true
+  },
+  "gate_sha256": "5634ccd5f30ed4f68e9bdf88a24c7ca03db4afc96acbecfd3e6f726ee45fd75d",
+  "kind": "phase3a-c1-completion-independent-packet-acceptance-v1",
+  "limitations": [
+    "This verifies public archive bytes, provenance and accepted offline evidence; actual account access and authentic live completion remain unmeasured.",
+    "No raw-secret string scan can establish absence of every unknown credential; exclusion and no-real-key execution controls are the basis of this public packet."
+  ],
+  "member_count": 1393,
+  "passed": true,
+  "real_credentials_read": false,
+  "real_provider_calls": 0,
+  "reviewed_at_utc": "2026-10-29T20:19:31.504089+00:00",
+  "sha256": "963ba419bc947554096c43fcb19cb11d4b63548a51a838af9e7aea96f845de0e",
+  "source_sha256": "e2471ad9e38171cabc2d32615bac797739f378c3f6c7ebc64f8b95f8632d9d26",
+  "study_sha256": "1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57",
+  "three_acceptance_certificate_sha256": {
+    "admission-acceptance.json": "d10cddffeef91900b3ed0b7179493590e5fbbac643f09cb7b26453a237f54db8",
+    "launch-acceptance.json": "16f1e5d00149ef2ad60f94a39dd698f039c094b6f887b7374e990d1e250bbceb",
+    "scientific-acceptance.json": "76b276cda034599aaed36e6d79ef491fc1c86efb73f21d945d8a632bb7e7cf56"
+  },
+  "verification_method": "Independent standard-library ZIP/JSON/hash audit; did not invoke the packager, project runner, SDK or provider."
+}

@@ -1,0 +1,116 @@
+{
+  "mounts": {
+    "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+    "Destination": "/workspace",
+    "RW": false
+  },
+  "purpose": "Phase1A final helper checks",
+  "recorded_at_utc": "2026-10-25T09:59:45.3426760Z",
+  "environment_names": [
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONPATH",
+    "PATH",
+    "LANG",
+    "GPG_KEY",
+    "PYTHON_VERSION",
+    "PYTHON_SHA256",
+    "PYTHONUNBUFFERED",
+    "PYTHONNOUSERSITE",
+    "HF_HUB_OFFLINE",
+    "HF_DATASETS_OFFLINE",
+    "TRANSFORMERS_OFFLINE",
+    "TOKENIZERS_PARALLELISM",
+    "OMP_NUM_THREADS",
+    "NOVELTYBENCH_ROOT",
+    "BUDDHA2_NB_UPSTREAM",
+    "HARNESS2_ROOT",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "BUDDHA2_OFFLINE",
+    "TMPDIR"
+  ],
+  "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "exit_code": 0,
+  "network_mode": "none",
+  "readonly_rootfs": true,
+  "container_id": "889c45fc0f8dcc51422bc5b4b1521537880448e00768fa03eb22a14d15deba3d",
+  "results": {
+    "inspection_rules": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "evidence/phase1a-data-readiness-r07/",
+        "-p",
+        "test_reproduce.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_global_rank_unique_groups_and_no_quota_redistribution (test_reproduce.InspectionRules.test_global_rank_unique_groups_and_no_quota_redistribution) ... ok\ntest_orientation_alternates_canonical_ids_without_scores (test_reproduce.InspectionRules.test_orientation_alternates_canonical_ids_without_scores) ... ok\ntest_score_floor_and_margin_are_inclusive (test_reproduce.InspectionRules.test_score_floor_and_margin_are_inclusive) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+    },
+    "source_and_pair_regressions": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_muce",
+        "tests.test_pairs",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_blank_full_prompt_uses_raw_prompt_without_merging_distinct_groups (tests.test_muce.MucePreparationTests.test_blank_full_prompt_uses_raw_prompt_without_merging_distinct_groups) ... ok\ntest_deterministic_separation_and_no_labels_in_critic_inputs (tests.test_muce.MucePreparationTests.test_deterministic_separation_and_no_labels_in_critic_inputs) ... ok\ntest_expected_source_id_reuse_is_valid_but_conflicting_full_identity_fails (tests.test_muce.MucePreparationTests.test_expected_source_id_reuse_is_valid_but_conflicting_full_identity_fails) ... ok\ntest_exposed_group_removed_across_source_variants (tests.test_muce.MucePreparationTests.test_exposed_group_removed_across_source_variants) ... ok\ntest_identical_effective_prompts_cannot_cross_the_split (tests.test_muce.MucePreparationTests.test_identical_effective_prompts_cannot_cross_the_split) ... ok\ntest_quotas_fail_before_any_allocation_and_no_silent_construct_substitution (tests.test_muce.MucePreparationTests.test_quotas_fail_before_any_allocation_and_no_silent_construct_substitution) ... ok\ntest_same_prompt_aliases_across_sources_are_one_independent_group (tests.test_muce.MucePreparationTests.test_same_prompt_aliases_across_sources_are_one_independent_group) ... ok\ntest_score_gap_context_and_distinct_response_rules (tests.test_muce.MucePreparationTests.test_score_gap_context_and_distinct_response_rules) ... ok\ntest_shortfall_publishes_only_aggregate_manifest_and_success_is_immutable (tests.test_muce.MucePreparationTests.test_shortfall_publishes_only_aggregate_manifest_and_success_is_immutable) ... ok\ntest_source_hash_is_checked_before_preparation (tests.test_muce.MucePreparationTests.test_source_hash_is_checked_before_preparation) ... ok\ntest_source_identity_and_policy_are_frozen_before_selection (tests.test_muce.MucePreparationTests.test_source_identity_and_policy_are_frozen_before_selection) ... ok\ntest_audit_thresholds_count_prompts_not_presentations (tests.test_pairs.PairAnalysisTests.test_audit_thresholds_count_prompts_not_presentations) ... ok\ntest_duplicates_stale_labels_or_mixed_evaluator_revisions_refuse (tests.test_pairs.PairAnalysisTests.test_duplicates_stale_labels_or_mixed_evaluator_revisions_refuse) ... ok\ntest_exact_integer_consistency_floor_and_both_orders_requirement (tests.test_pairs.PairAnalysisTests.test_exact_integer_consistency_floor_and_both_orders_requirement) ... ok\ntest_real_and_fixture_observations_cannot_be_pooled (tests.test_pairs.PairAnalysisTests.test_real_and_fixture_observations_cannot_be_pooled) ... ok\ntest_same_normalized_question_under_another_id_is_not_independent (tests.test_pairs.PairAnalysisTests.test_same_normalized_question_under_another_id_is_not_independent) ... ok\ntest_small_descriptive_report_cannot_claim_screen_pass (tests.test_pairs.PairAnalysisTests.test_small_descriptive_report_cannot_claim_screen_pass) ... ok\ntest_ties_abstentions_refusals_and_missing_do_not_earn_consistency (tests.test_pairs.PairAnalysisTests.test_ties_abstentions_refusals_and_missing_do_not_earn_consistency) ... ok\ntest_unknown_accounting_or_broken_transport_is_inconclusive_not_bad_critic (tests.test_pairs.PairAnalysisTests.test_unknown_accounting_or_broken_transport_is_inconclusive_not_bad_critic) ... ok\ntest_wilson_interval_has_independent_known_values_and_validates_denominator (tests.test_pairs.PairAnalysisTests.test_wilson_interval_has_independent_known_values_and_validates_denominator) ... ok\ntest_canonical_pair_and_display_order_have_separate_identities (tests.test_pairs.PairContractTests.test_canonical_pair_and_display_order_have_separate_identities) ... ok\ntest_constructor_and_reference_type_errors_are_explicit_contract_failures (tests.test_pairs.PairContractTests.test_constructor_and_reference_type_errors_are_explicit_contract_failures) ... ok\ntest_judgments_enforce_status_choice_provenance_and_finite_accounting (tests.test_pairs.PairContractTests.test_judgments_enforce_status_choice_provenance_and_finite_accounting) ... ok\ntest_malformed_or_label_bearing_inputs_are_rejected (tests.test_pairs.PairContractTests.test_malformed_or_label_bearing_inputs_are_rejected) ... ok\ntest_normalized_prompt_group_preserves_original_text (tests.test_pairs.PairContractTests.test_normalized_prompt_group_preserves_original_text) ... ok\ntest_swapped_or_stale_order_and_label_evidence_are_rejected (tests.test_pairs.PairContractTests.test_swapped_or_stale_order_and_label_evidence_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.075s\n\nOK\n"
+    },
+    "ruff": {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "evidence/phase1a-data-readiness-r07/reproduce.py",
+        "evidence/phase1a-data-readiness-r07/test_reproduce.py"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "mypy": {
+      "command": [
+        "python",
+        "-m",
+        "mypy",
+        "--cache-dir",
+        "/tmp/mypy",
+        "--follow-imports",
+        "skip",
+        "evidence/phase1a-data-readiness-r07/reproduce.py",
+        "evidence/phase1a-data-readiness-r07/test_reproduce.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Success: no issues found in 2 source files\n",
+      "stderr": ""
+    },
+    "bandit": {
+      "command": [
+        "python",
+        "-m",
+        "bandit",
+        "-q",
+        "-ll",
+        "evidence/phase1a-data-readiness-r07/reproduce.py",
+        "-f",
+        "json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-10-25T09:59:44Z\",\n  \"metrics\": {\n    \"./evidence/phase1a-data-readiness-r07/reproduce.py\": {\n      \"CONFIDENCE.HIGH\": 18,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 18,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 230,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 18,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 18,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 230,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+      "stderr": ""
+    }
+  },
+  "schema_version": 1
+}

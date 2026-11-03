@@ -1,0 +1,53 @@
+{
+  "all549_source_and_main_copies_and681_live_audits_present": true,
+  "archive": "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.zip",
+  "archive_bytes": 584542601,
+  "archive_sha256": "e463acf545cacd94221a74e44ae41edb3964f978af07c2f572c175930942fcba",
+  "current_study_saved_data_evidence_self_contained": true,
+  "final_delivery_commit_verified": false,
+  "fixture": false,
+  "historical_accounting_settled": false,
+  "historical_held_micro_usd": 22880000,
+  "included_raw_live_replay_result": {
+    "path": "runs/phase3a-readiness-recovery-v1/verification-v3/reviewer/live-closeout-v1/saved-live-replay-result-v1.json",
+    "raw_sha256": "d4fd23be67fbf6c527835021097392c9d35118aa6b8339d3209a39b8ed8c140d"
+  },
+  "kind": "phase3a-rp2-independent-live-packet-acceptance-v1",
+  "launcher_sha256": "d143fa9ced8d1cc279ac060cbdc2611cebdf6755f78453fadf955e6b4360bf1f",
+  "lossless_operator_bundle17_and_prearchive_readout_verified": true,
+  "manifest_sha256": "a8a7357be32ee5f9ffdd5c787bc294c23a4886f860510da37cd858dc562a2b25",
+  "member_count": 9761,
+  "new_model_provider_calls": 0,
+  "original_folder_accessed": false,
+  "outcome_file_sha256": "694b94c39af36ea9ff7c686142aedebd4270a982ec5d07eeff5d5aef88e14e6f",
+  "outcome_independent_review_sha256": "98dd1b1b2a53c4a45411468fee8e8fb4a7d78d76efc8a869b80485ebe32e0ee8",
+  "passed": true,
+  "physical_audit": {
+    "path": "runs/phase3a-readiness-recovery-v1/reviewer/live-packet-audit-v1/physical-audit-v1.json",
+    "raw_sha256": "c5267b4a3b29aac68fe8a4ab5ea0e2905a0782fc265d23803dbf37501d92f12c"
+  },
+  "policy_sha256": "45699c381f216cb7d4f0e36eaf462b50454c50d957289d238ea72f1ae22b3265",
+  "prior_single_contained_live_replay": {
+    "path": "runs/phase3a-readiness-recovery-v1/verification-v3/reviewer/live-closeout-v1/replay-review-v1.json",
+    "raw_sha256": "ebdb3d46c9b9cef9f498d7b7e66a8f3bf315733baaacb689691582cf630319d6"
+  },
+  "raw_credentials_or_real_unknown_stream_metadata_or_content_accessed": false,
+  "remaining_delivery_step": "Finalize navigation/status-only wording and verify the final commit separately; archive byte content remains frozen.",
+  "report_sha256": {
+    "PHASE3A_REPORT.md": "d1f022a4ec4ed72fa5e2f6fb5b5a5fc2676b924bb4518233804d2505dda8201d",
+    "accounting.json": "3c6abc604e26f451a2f95ed3ca373abc740c414d2fba5f60eacc41439d4b0355",
+    "analysis.json": "4f8d01ae4ca72a9264d8fe0d4977e9d86fe74d68b37489ccf86adf13962205e0",
+    "coverage.json": "fe4d0b1a8f977b67b5dc4bd20320d6345ac195124522d90b199559b1ba74885c",
+    "protocol.json": "35591ebbdae41ad8fe8df785866dec98b5b42a949de3f2806320b9c8c8d721ca",
+    "readiness.json": "0209f9688910a450deffa3635ac2e146ea30c3caf231ef28d5beb42bce6045c7",
+    "rows.json": "6615f4744d4a55793eb486b02a15cec5bd72abf78ac036b9a40924f6fbc3834e",
+    "summary.json": "a198f89fd7612fa00634e76e5064ab3872b7d264c5ac30db55f09a2250cd025a"
+  },
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "scientific_result_scope": "Four exposed development prompt pairs; fixed descriptive win only, no population/held-out/human/equal-realized-compute claim.",
+  "second_saved_live_replay_or_archive_code_execution": false,
+  "source_sha256": "517b8efcdfc68bbb3e6ac6d260dc2e7e0541fdb02ea46784afc4ca5e2d300ed8",
+  "study_sha256": "bc86391000266d413276de0f9ca8fb7f4f5b65632aa509d650f8236a48735be8",
+  "uncompressed_bytes": 881469227,
+  "whole_historical_fullsuite_or38cases_independently_reexecuted": false
+}

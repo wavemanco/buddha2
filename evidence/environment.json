@@ -1,0 +1,864 @@
+{
+  "image_id": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "python": "3.12.15",
+  "platform": "linux",
+  "architecture": "x86_64",
+  "torch": "2.14.1+cpu",
+  "torch_cuda": null,
+  "transformers": "5.20.2",
+  "installed_packages": [
+    {
+      "name": "absl-py",
+      "version": "2.5.1",
+      "license_expression": "Apache-2.0",
+      "license_notice_hashes": {
+        "absl_py-2.5.1.dist-info/licenses/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "annotated_doc-0.0.5.dist-info/licenses/LICENSE": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+      }
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "annotated_types-0.8.0.dist-info/licenses/LICENSE": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+      }
+    },
+    {
+      "name": "anthropic",
+      "version": "1.4.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "anthropic-1.4.0.dist-info/licenses/LICENSE": "8bf96984ff8bcfae7e48cae76a529e8a25317ba9e02abf7fd3cc64fdf95657a6"
+      }
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "anyio-4.15.1.dist-info/licenses/LICENSE": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+      }
+    },
+    {
+      "name": "ast_serialize",
+      "version": "0.13.1",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "ast_serialize-0.13.1.dist-info/licenses/LICENSE": "db90b8fd0ae1748117ab467680a5193bfd057a3119846cb53ee3b64f16577b3b",
+        "ast_serialize-0.13.1.dist-info/licenses/crates/LICENSE": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+      }
+    },
+    {
+      "name": "bandit",
+      "version": "1.9.4",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "bandit-1.9.4.dist-info/licenses/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+      }
+    },
+    {
+      "name": "boolean.py",
+      "version": "5.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "boolean_py-5.0.dist-info/licenses/LICENSE.txt": "5ea0cdf8cfc824b446cccf597ff6518c3607a659e9804bc75f1261f9c6ac4ada"
+      }
+    },
+    {
+      "name": "CacheControl",
+      "version": "0.14.4",
+      "license_expression": "Apache-2.0",
+      "license_notice_hashes": {
+        "cachecontrol-0.14.4.dist-info/licenses/LICENSE.txt": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+      }
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "certifi-2026.10.23.dist-info/licenses/LICENSE": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+      }
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "charset_normalizer-3.5.2.dist-info/licenses/LICENSE": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887"
+      }
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "click-8.5.0.dist-info/licenses/LICENSE.txt": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+      }
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "cloudpickle-3.1.2.dist-info/licenses/LICENSE": "3029ea34173e9fdc233ad315dc6b100bd1ea71f529b1c1af97664a272fdc55f5"
+      }
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "colorama-0.4.6.dist-info/licenses/LICENSE.txt": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+      }
+    },
+    {
+      "name": "cyclonedx-python-lib",
+      "version": "11.12.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "cyclonedx_python_lib-11.12.0.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "cyclonedx_python_lib-11.12.0.dist-info/licenses/NOTICE": "1c3bd67b96888a4ca25f3a94683d929b3f66d7e4cdfe6c04d24f16501a9375c3"
+      }
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "defusedxml-0.7.1.dist-info/LICENSE": "b80ce9da8c42a1f91079627fbbe2bf27210ae108a0ffe5f077d5b08e076c24c8"
+      }
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "distro-1.9.0.dist-info/LICENSE": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+      }
+    },
+    {
+      "name": "docstring_parser",
+      "version": "0.18.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "docstring_parser-0.18.0.dist-info/licenses/LICENSE.md": "dfe514a337ae8417abd31a8af707bbd6172b03e5430bb083e145899ea97a3eea"
+      }
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.4",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "filelock-4.2.4.dist-info/licenses/LICENSE": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+      }
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "fsspec-2026.9.0.dist-info/licenses/LICENSE": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94"
+      }
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "h11-0.16.0.dist-info/licenses/LICENSE.txt": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+      }
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "license_expression": "Apache-2.0",
+      "license_notice_hashes": {
+        "hf_xet-1.7.0.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "httpcore-1.0.9.dist-info/licenses/LICENSE.md": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+      }
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.0",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "httpcore2-2.16.0.dist-info/licenses/LICENSE.md": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9"
+      }
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "httpx-0.28.1.dist-info/licenses/LICENSE.md": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+      }
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.0",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "httpx2-2.16.0.dist-info/licenses/LICENSE.md": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30"
+      }
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "2.3.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "huggingface_hub-2.3.0.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "idna-3.20.dist-info/licenses/LICENSE.md": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+      }
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "jinja2-3.1.6.dist-info/licenses/LICENSE.txt": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+      }
+    },
+    {
+      "name": "jiter",
+      "version": "0.18.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "jiter-0.18.0.dist-info/licenses/LICENSE": "7c7134b9f7b978c03fca875517cf398db91f19bbb8109b6685e742aa3f57468e"
+      }
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "joblib-1.6.0.dist-info/licenses/LICENSE.txt": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a"
+      }
+    },
+    {
+      "name": "librt",
+      "version": "0.16.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "librt-0.16.0.dist-info/licenses/LICENSE": "88f9e379c684580053c58e75e296ca2eb243b6edcc6e5357f247310e96eeef8a"
+      }
+    },
+    {
+      "name": "license-expression",
+      "version": "30.4.4",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "license_expression-30.4.4.dist-info/licenses/NOTICE": "ef97db07e32f6e5d34363461acf5acc7d72db924533bce3d9f3b87046313363c",
+        "license_expression-30.4.4.dist-info/licenses/apache-2.0.LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "lxml-6.1.3.dist-info/licenses/LICENSE.txt": "8fc2b568133516e46845d2147917adeee1648e70ae9ab5ed6c5417afef4ce855",
+        "lxml-6.1.3.dist-info/licenses/LICENSES.txt": "388fa99f3bde4447cd5a4cbb114037be026854db6cfe89e112691c1d8abdcf3c"
+      }
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "markdown_it_py-4.2.0.dist-info/licenses/LICENSE": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+        "markdown_it_py-4.2.0.dist-info/licenses/LICENSE.markdown-it": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+      }
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "markupsafe-3.0.4.dist-info/licenses/LICENSE.txt": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+      }
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "mdurl-0.1.2.dist-info/LICENSE": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+      }
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "mpmath-1.3.0.dist-info/LICENSE": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+      }
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.3",
+      "license_expression": "Apache-2.0",
+      "license_notice_hashes": {
+        "msgpack-1.2.3.dist-info/licenses/COPYING": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+      }
+    },
+    {
+      "name": "mypy",
+      "version": "2.4.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "mypy-2.4.0.dist-info/licenses/LICENSE": "fdf1cd17f50e1305ed8cfd37467312d27a984648dba622cef70573b5512e4e1b",
+        "mypy-2.4.0.dist-info/licenses/mypy/typeshed/LICENSE": "295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe"
+      }
+    },
+    {
+      "name": "mypy_extensions",
+      "version": "1.1.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "mypy_extensions-1.1.0.dist-info/licenses/LICENSE": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4"
+      }
+    },
+    {
+      "name": "networkx",
+      "version": "3.7",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "networkx-3.7.dist-info/licenses/LICENSE.txt": "6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e"
+      }
+    },
+    {
+      "name": "nltk",
+      "version": "3.10.4",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "nltk-3.10.4.dist-info/licenses/LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "numpy-2.2.6.dist-info/LICENSE.txt": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+      }
+    },
+    {
+      "name": "openai",
+      "version": "1.107.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "openai-1.107.0.dist-info/licenses/LICENSE": "d711ed37bb19ae7249af8d093b8fc6ea758fd3554b92ac61500c1ad3cc0e3fb9"
+      }
+    },
+    {
+      "name": "packageurl-python",
+      "version": "0.17.6",
+      "license_expression": null,
+      "license_notice_hashes": {}
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_notice_hashes": {
+        "packaging-26.3.dist-info/licenses/LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "packaging-26.3.dist-info/licenses/LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "packaging-26.3.dist-info/licenses/LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+      }
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pandas-2.3.2.dist-info/LICENSE": "1dea2e80ed1cbd0233f84cee4486b29689f133babaccf4d295e51c43051f3216"
+      }
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pathspec-1.1.1.dist-info/licenses/LICENSE": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+      }
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "pip-26.2.2.dist-info/licenses/LICENSE.txt": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/certifi/LICENSE": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/distro/LICENSE": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/msgpack/COPYING": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pygments/LICENSE": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/requests/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/rich/LICENSE": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/tomli/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/truststore/LICENSE": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+        "pip-26.2.2.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+      }
+    },
+    {
+      "name": "pip-requirements-parser",
+      "version": "32.0.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pip_requirements_parser-32.0.1.dist-info/mit.LICENSE": "18081c2c82771ca09d99d08cdac405924309e09fd19b16f1eea59cbc6ab809ed"
+      }
+    },
+    {
+      "name": "pip_api",
+      "version": "0.0.35",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pip_api-0.0.35.dist-info/licenses/LICENSE": "14ed54990120efea26042269885df36e1b53db858bf04b40c8cfc8c5e12f6fb1"
+      }
+    },
+    {
+      "name": "pip_audit",
+      "version": "2.10.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pip_audit-2.10.1.dist-info/licenses/LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      }
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.13.5",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "platformdirs-4.13.5.dist-info/licenses/LICENSE": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+      }
+    },
+    {
+      "name": "portalocker",
+      "version": "4.4.1",
+      "license_expression": "BSD-3-Clause",
+      "license_notice_hashes": {
+        "portalocker-4.4.1.dist-info/licenses/LICENSE": "a50570fa3b3102a42d7babb0569238b0b3c0aedce0063c8e4d65060dfd3f7293"
+      }
+    },
+    {
+      "name": "py-serializable",
+      "version": "2.1.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "py_serializable-2.1.0.dist-info/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.7",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "pydantic-2.11.7.dist-info/licenses/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+      }
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.33.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pydantic_core-2.33.2.dist-info/licenses/LICENSE": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+      }
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "license_expression": "BSD-2-Clause",
+      "license_notice_hashes": {
+        "pygments-2.21.0.dist-info/licenses/LICENSE": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+      }
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "pyparsing-3.3.3.dist-info/licenses/LICENSE": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e"
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "python_dateutil-3.0.0.dist-info/licenses/LICENSE": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+      }
+    },
+    {
+      "name": "pytz",
+      "version": "2026.5",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pytz-2026.5.dist-info/LICENSE.txt": "be8b1a37ebe26c592a90f6c0eb33103a7f383ce2f4d7498c0af9a526990a07b8"
+      }
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "pyyaml-6.0.3.dist-info/licenses/LICENSE": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+      }
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "license_expression": "Apache-2.0 AND CNRI-Python",
+      "license_notice_hashes": {
+        "regex-2026.9.29.dist-info/licenses/LICENSE.txt": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+      }
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "requests-2.34.2.dist-info/licenses/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "requests-2.34.2.dist-info/licenses/NOTICE": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+      }
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "rich-15.0.0.dist-info/licenses/LICENSE": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+      }
+    },
+    {
+      "name": "rouge_score",
+      "version": "0.1.2",
+      "license_expression": null,
+      "license_notice_hashes": {}
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.2",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "ruff-0.17.2.dist-info/licenses/LICENSE": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+      }
+    },
+    {
+      "name": "sacrebleu",
+      "version": "2.5.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "sacrebleu-2.5.1.dist-info/LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "safetensors-0.8.0.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "setuptools-84.2.1.dist-info/licenses/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+        "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04",
+        "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
+        "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+        "setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+        "setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+        "setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+        "setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+        "setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+      }
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "shellingham-1.5.4.dist-info/LICENSE": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+      }
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "six-1.17.0.dist-info/LICENSE": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+      }
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "sniffio-1.3.1.dist-info/LICENSE": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b",
+        "sniffio-1.3.1.dist-info/LICENSE.APACHE2": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "sniffio-1.3.1.dist-info/LICENSE.MIT": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b"
+      }
+    },
+    {
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "sortedcontainers-2.4.0.dist-info/LICENSE": "1db7cae7fce6452e2e608e401a0f953e0133e4c2d75db69fb8ae851d2086f5b6"
+      }
+    },
+    {
+      "name": "stevedore",
+      "version": "5.9.1",
+      "license_expression": "Apache-2.0",
+      "license_notice_hashes": {
+        "stevedore-5.9.1.dist-info/licenses/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "sympy-1.14.0.dist-info/licenses/LICENSE": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+      }
+    },
+    {
+      "name": "tabulate",
+      "version": "0.10.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "tabulate-0.10.0.dist-info/licenses/LICENSE": "cdfab50d37d8ead06468fb76a3abafcd05c16749ec8a18eebfa50fd48c7cb2d2"
+      }
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "license_expression": null,
+      "license_notice_hashes": {}
+    },
+    {
+      "name": "tomli",
+      "version": "2.5.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "tomli-2.5.0.dist-info/licenses/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+      }
+    },
+    {
+      "name": "tomli_w",
+      "version": "1.2.0",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "tomli_w-1.2.0.dist-info/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+      }
+    },
+    {
+      "name": "torch",
+      "version": "2.14.1+cpu",
+      "license_expression": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT",
+      "license_notice_hashes": {
+        "torch-2.14.1+cpu.dist-info/licenses/LICENSE": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/FP16/LICENSE": "17e4f539024be2749ee729d1e2f01d24cef12ece8c9bf18e91a4349be29c80bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/FXdiv/LICENSE": "7cac00006125b1486a27e4801ed66357236e984c540bd323945ab7b66b078ec3",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/NNPACK/LICENSE": "ab09e33621f513ebdd1ef685b324f39c1f6bee9221d15600bafd958322df1231",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/NVTX/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/NVTX/docs/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/NVTX/python/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/NVTX/rust/LICENSE": "e165ed77854f47fb208850d23d935a9f0ab8bb4527381466beeb16025e2f6e9e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/VulkanMemoryAllocator/LICENSE.txt": "8d70e4cf2a9941f6454da71cd60e38484dd3e34810c824760d550e982af6d97a",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/XNNPACK/LICENSE": "63f519e15726f4c4f830bd958f694c84fecb4e0a4cacc527d2696bb71ef95ada",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/aiter/3rdparty/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/aiter/LICENSE": "0baca809927cad448401b252ce3bae12687c2987597ad7088cf3423f872d5bcd",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/benchmark/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cpp-httplib/LICENSE": "4b45cbe16d7b71b89ae6127e26e0d90a029198ca5e958ad8e3d0b8bbed364d8b",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cpuinfo/LICENSE": "8e7e60636c3aa0cb03571a1a841ce5697f9551ff92b3c426c2561613d15ade70",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cpuinfo/deps/clog/LICENSE": "68a14c3e79add023eecd83d611e73f05b8bf1d16852efeb7eb4033a96736da9e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cudnn_frontend/LICENSE.txt": "3fc4b473a2c08768a8066bf7e4a58a1185060f3ad674f2ca9e2011bca4adf2ce",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cutlass/LICENSE.txt": "ad1513ca983da737a6843364ad19e8424a56d860736c2da773b8c5be527e1475",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/cutlass/python/LICENSE.txt": "00bf1806f664ac1afe4221f5f04b384fb6f1ca6eb33efcb6dccf599eb06d08b9",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/LICENSE": "12c2370ec32e78115dcd71ba22cdcb1297320fdc4ade81f798136d42357c58b8",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/cpuinfo/LICENSE": "8e7e60636c3aa0cb03571a1a841ce5697f9551ff92b3c426c2561613d15ade70",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/cpuinfo/deps/clog/LICENSE": "68a14c3e79add023eecd83d611e73f05b8bf1d16852efeb7eb4033a96736da9e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/external/hipify_torch/LICENSE.txt": "ecf819d55b17c2f091b3ba0934d044368aa0680d8a81374860306aa2b91aa1eb",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/experimental/hstu/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/src/quantize_ops/mx/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/test/quantize/mx/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/csrc/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/csrc/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/csrc/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/flash_attn/cute/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flash-attention/third_party/aiter/LICENSE": "0baca809927cad448401b252ce3bae12687c2987597ad7088cf3423f872d5bcd",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flatbuffers/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flatbuffers/dart/LICENSE": "edd9b3459bee4c79b549a5ef66d06d12bd144ddb8d08e0b448fb421267f43dd5",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/flatbuffers/swift/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/fmt/LICENSE": "a65fcc5a1095fc33cc37e4fff69366e49d7e92f613558a2b95ed1b70e33758b4",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/gemmlowp/gemmlowp/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/gloo/LICENSE": "2afbc572cf7f60888159bc2ca48ba58f8adec06682ae5de820d61449d1eeea81",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/ideep/LICENSE": "a26add03107a53a605a89711b9b7dbd4f5dd668ae193a912e01a879366a23b0e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/LICENSE": "e9fc874fc09801b9acf3411ba72394098473704d832d713404b6c4861a086318",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/third_party/gtest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/third_party/opencl/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/kineto/LICENSE": "6f3d59b9103e72e5c977eecf61b261c2e1546a9be2995847e3ee2d31021fd39b",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog_headers/LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/fmt/LICENSE": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/llvm-openmp/LICENSE.txt": "68395143f21a9aa29b8232168c71892af5ec4f1ae2529571cd250a71c9e37a03",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mimalloc/LICENSE": "82ade5d7d9b029044b5fbbc326207fc47c2d44ee4dd71e8a559c36d728217de9",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/miniz-3.0.2/LICENSE": "0115478d567121238cf6cc1c0c361926cf07a49d9e4c9e66da97fac6a01646b3",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/LICENSE": "44519cbe722d7bf092cd7e0fa26558b9e3905b88fca4c0c278e2733a9f6b4cf9",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/external/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/external/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/external/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/external/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/external/hipify_torch/LICENSE.txt": "ecf819d55b17c2f091b3ba0934d044368aa0680d8a81374860306aa2b91aa1eb",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/mslk/mslk/attention/flash_attn/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/onnx/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/onnx/third_party/pybind11/LICENSE": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/perfetto/LICENSE": "9a682a56cffc9524dfa9b0b1c0dca9cb81a19e96d5bd0793aaf02c08a95ee7ca",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/LICENSE": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/benchmark/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googlemock/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googlemock/scripts/generator/LICENSE": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/protobuf/third_party/utf8_range/LICENSE": "5a629d2b868081d8af08bbce5d038116f3a0e2e0d4ce9adf4d53f14e76b6b2e0",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/psimd/LICENSE": "984ce1e0b8ee89d234e28b960381f240e03a07a8031f35012f9c3256f56964e2",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/pthreadpool/LICENSE": "57814a606b4d0fb087d9a534919084b6c11b58a4174cb5a4aef200187780dc3a",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/pybind11/LICENSE": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/python-peachpy/LICENSE.rst": "e6d6fdbfc09c9cc1bfc55946ca9690dd9276deeaed2b72ac7fc5c79bde80ff32",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/sleef/LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/LICENSE.txt": "f4dcef0d1f0520b414d5bfaeed8df02f188e4ec05c0a17bf1c18f25f6cc66245",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googlemock/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googlemock/scripts/generator/LICENSE": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/libnop/LICENSE": "876e8f7432440974ee5543a2aa1344370ef1f2f7949ad98a1f3899cf722d5631",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/libuv/LICENSE": "16de0c32b265cb7d46a6d3bd614f259dd4d693a5e26b3407b04aae8d73041f0c",
+        "torch-2.14.1+cpu.dist-info/licenses/third_party/tensorpipe/third_party/pybind11/LICENSE": "9a37ea54aa3cf12c7f3292799f20822ffd4b9b7142b36a7a9997b28c39264dc9"
+      }
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "tqdm-4.67.1.dist-info/LICENCE": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a"
+      }
+    },
+    {
+      "name": "transformers",
+      "version": "5.20.2",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "transformers-5.20.2.dist-info/licenses/LICENSE": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+      }
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "truststore-0.10.5.dist-info/licenses/LICENSE": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+      }
+    },
+    {
+      "name": "typer",
+      "version": "0.27.3",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "typer-0.27.3.dist-info/licenses/LICENSE": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49"
+      }
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "typing_inspection-0.4.4.dist-info/licenses/LICENSE": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+      }
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "license_expression": "PSF-2.0",
+      "license_notice_hashes": {
+        "typing_extensions-4.16.0.dist-info/licenses/LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+      }
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "license_expression": null,
+      "license_notice_hashes": {
+        "tzdata-2026.5.dist-info/licenses/LICENSE": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+        "tzdata-2026.5.dist-info/licenses/licenses/LICENSE_APACHE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "urllib3-2.8.0.dist-info/licenses/LICENSE.txt": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+      }
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "license_expression": "MIT",
+      "license_notice_hashes": {
+        "wheel-0.48.0.dist-info/licenses/LICENSE.txt": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654"
+      }
+    }
+  ]
+}

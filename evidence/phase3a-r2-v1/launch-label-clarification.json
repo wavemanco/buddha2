@@ -1,0 +1,25 @@
+{
+  "affected_artifact_sha256": {
+    "runs/phase3a-r2-v1/collect_launch.py": "4a6b8df6ede9c5e4ebcde398530fe54b8dbd96f5c99e37b82bfa293b713a935f",
+    "runs/phase3a-r2-v1/release-v1/launch-record-index.json": "ed4a0c70b33a84206bac00aede0236a222c9ada70e338a1d03fb4d7e1123b4fb",
+    "runs/phase3a-r2-v1/release-v1/readiness.json": "cf60131ebf72b50f61fa46b5f5d1cdb4329cb162433abc388e4e46cf7b63b4d7"
+  },
+  "basis": "Both records bind the R2 study/source, R2 canonical log and artifact paths, separate first/remaining stages, and actual inspected R2 containers.",
+  "correct_meaning": "The two records are actual R2 first and remaining host SDKMock lifecycles. They are not physical host cold resumes.",
+  "kind": "phase3a-r2-launch-label-clarification-v1",
+  "launcher_sha256": "9a709e6d09b62691c63d771ac7da592216ca1fd1d44395d31c7745045ebbd21f",
+  "limitation": "This corrects only stale auxiliary wording. Existing index, executed helper, gate, configuration, models, source identities and outcomes remain byte-unchanged.",
+  "original_artifacts_preserved": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "provider_calls": 0,
+  "real_credentials_read": false,
+  "runtime_sha256": "f12168b4e20523b73d51268383cd2ec5d9b4cb152757a057cdc3015c67b2980b",
+  "source_or_scientific_change": false,
+  "source_sha256": "a3b9403d6bc0a144d0bb74e74a330ccf057850da0d23dcb2d9059d94a20883e3",
+  "stale_literals": {
+    "collector_docstring": "Index only the two settled, inspected R1 host mock lifecycles.",
+    "index_coverage": "Actual R1 first and remaining host mock lifecycles, not cold-resume tests."
+  },
+  "study_sha256": "17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032",
+  "test_or_mock_repeats": 0
+}

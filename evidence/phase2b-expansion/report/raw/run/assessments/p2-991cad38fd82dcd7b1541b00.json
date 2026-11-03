@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "ff779bc9005538b4992e8f7161c2ebfdbf91d3a4e6bc4a72cd2704e9dda1e702",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 2.0165224492830083
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        9
+      ],
+      "utility": 2.0165224492830083
+    },
+    "generation_row": {
+      "generations": [
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist who co-authored *The Communist Manifesto* (1848) and wrote *Das Kapital*, shaping modern political and economic thought and inspiring socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. president, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and shaping modern science.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the United States through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, laid the groundwork for socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The English naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, reshaping biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, laid the foundation for Marxism and influenced political movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The English naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose theory of evolution by natural selection, presented in *On the Origin of Species* (1859), transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, preserved the Union, and issued the Emancipation Proclamation, helping set the stage for the abolition of slavery.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)** – The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859), which transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)** – The 16th U.S. President, who led the nation through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)** – The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political thought, economics, and social movements."
+      ],
+      "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Can you list 3 influential persons from the nineteenth century?"
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        9,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist who co-authored *The Communist Manifesto* (1848) and wrote *Das Kapital*, shaping modern political and economic thought and inspiring socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. president, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and shaping modern science.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the United States through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, laid the groundwork for socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809–1882)**: The English naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, reshaping biology and our understanding of life.\n\n2. **Abraham Lincoln (1809–1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818–1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, laid the foundation for Marxism and influenced political movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The English naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose theory of evolution by natural selection, presented in *On the Origin of Species* (1859), transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: The British naturalist whose book *On the Origin of Species* (1859) introduced the theory of evolution by natural selection, transforming biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)**: The 16th U.S. President, who led the country through the Civil War, preserved the Union, and issued the Emancipation Proclamation, helping set the stage for the abolition of slavery.\n\n3. **Karl Marx (1818-1883)**: The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political and economic thought and inspired socialist and communist movements worldwide.",
+        "Here are three influential people from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)** – The British naturalist who developed the theory of evolution by natural selection, published in *On the Origin of Species* (1859), which transformed biology and our understanding of life.\n\n2. **Abraham Lincoln (1809-1865)** – The 16th U.S. President, who led the nation through the Civil War, issued the Emancipation Proclamation, and helped bring about the end of slavery in the United States.\n\n3. **Karl Marx (1818-1883)** – The German philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital*, shaped modern political thought, economics, and social movements."
+      ],
+      "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "7dfb78fc76dcca0a9aa0da74a135ba2d8d7c3e97933bab43cfb08f3461ffdc34",
+      "partition_scores": [
+        9
+      ],
+      "prompt": "Can you list 3 influential persons from the nineteenth century?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "6e36a2ecc45b008fec0ac762cfa040e26133d577bc8712c3d87e6565a3e6e02a",
+      "utility": 2.0165224492830083
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 2.0165224492830083,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "34882b64e4bfa3203bf8720e4c163b6c6feb01fcb84732f3fdbeb990a96d7dde",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0433",
+      "fixture": false,
+      "intent_sha256": "46fb4cd2e110e43dc69b68d2503c8b16d93da53cde4e77ffdf9220f436ffa48a",
+      "request_sha256": "424f5f5c49375d8db9c514d0c95801851368b06830095cbc33474094db4b8466",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.742426639990299,
+        "message_id": "chatcmpl-Edw74SkFmV7pxwTFGm5HxPikUDMZ6",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 50,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 13,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 1852,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 1849,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1902
+        },
+        "refusal": null,
+        "request_id": "req_388c940a15b742b1a7ce1cb49635b7cc",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 1849,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 1849,
+            "cached_tokens": 0
+          },
+          "output_tokens": 50,
+          "output_tokens_details": {
+            "reasoning_tokens": 13
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-991cad38fd82dcd7b1541b00.group",
+      "spent_micro_usd": 576,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0434",
+      "fixture": false,
+      "intent_sha256": "3b8e6ddec683a252aaec1912040ecf87031d35e17b197ab7e5975d43e5fe20c5",
+      "request_sha256": "e58f558f28eb2410b9796c199c52b70c93e57bbabba59e4e53093ea21469a0d1",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.0995554459950654,
+        "message_id": "msg_011CgUZCNiCgBaTk5tWMPC4T",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZCNWJJo6gYB1fX4y99",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 687,
+          "output_tokens": 62,
+          "output_tokens_details": {
+            "thinking_tokens": 53
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-991cad38fd82dcd7b1541b00.quality.00",
+      "spent_micro_usd": 5484,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+}

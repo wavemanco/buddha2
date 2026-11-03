@@ -1,0 +1,35 @@
+{
+  "api_spend": 0,
+  "baseline_loss_expected": true,
+  "component_only_no_scientific_claim": true,
+  "failure": "native editor stopped after rejected history",
+  "fixture": true,
+  "history_guard_audits": [],
+  "invalid_ending_thinking": true,
+  "label": "inv1.a1",
+  "mock_http_calls": 1,
+  "native_proof": {
+    "R1_final_verbatim_rule_visible": true,
+    "R3_deliberately_inefficient_evidence_reading": true,
+    "actual_system_sha256": "cb7fec6ddf5cbb46725aeb187dd0034f9006ebae67b25f5c1e27606f5c3951a8",
+    "authoring_system_sha256": "37801570b6611ee29cd1b927cf63da7e1fba61160d79ee0c2ff8719c4cf97077",
+    "configured_system_visible_before_mission": true,
+    "decision": "EDIT",
+    "decision_after_complete_evidence": false,
+    "fixture": true,
+    "manifest_sha256": "75a01267aa8c023be07d76d1b99bc23db44c60533801cad8849242cd0ab15478",
+    "mission_visible_before_evidence": false,
+    "ordinary_rounds": 1,
+    "source_evidence": {},
+    "terminal_note_used": false,
+    "verification_after_write": false
+  },
+  "native_reply_ok": false,
+  "native_scope": "actual unchanged Harness2 Proposer.call/OpenCode; no scheduler matrix or scientific effect",
+  "passed": true,
+  "provider_calls": 0,
+  "response_content_sha256": [
+    "b99253c681a59eadb29a0b20377d5c9a0b6afd002754cdbbca8a9faad237210d"
+  ],
+  "within_response_interleaving": false
+}

@@ -1,0 +1,1370 @@
+{
+  "SDK_constructions": 0,
+  "arithmetic_passed": true,
+  "attempt_accounting": {
+    "historical_attempts": 861,
+    "historical_known": 860,
+    "historical_unknown": 1,
+    "maximum_cumulative_attempts": 1636,
+    "new_max_attempts_including_readiness": 775,
+    "readiness_extra_attempt_allowance": 0
+  },
+  "compiled_at_utc": "2026-10-29T22:38:43.976312+00:00",
+  "conditional_working_assumptions": {
+    "all_second_shape_case": {
+      "additional_demand_usd": "18.315000",
+      "assumed_requests": 658,
+      "extra_editor_calls_whole_pilot": 60,
+      "five_calls_per_conversation_assumed": true,
+      "full_untruncated_demand_usd": "45.791890",
+      "no_additional_allowance": true,
+      "six_editor_conversations_per_adaptive": true
+    },
+    "basis": "Declared hypothetical accumulated billable-token means, not estimated from bytes or synthetic fixture usage. Ordinary uncached public standard rates; 1.1 inherited allowance for Opus and Luna. Actual cache/tier/context categories are accounted by frozen controls.",
+    "clean_full_assumed_requests": 598,
+    "clean_full_demand_usd": "27.476890",
+    "full_roles": [
+      {
+        "calls": 60,
+        "demand_usd": "18.315000",
+        "input_mean": 48000,
+        "model": "claude-opus-5",
+        "output_mean": 1500,
+        "role": "adaptive editor"
+      },
+      {
+        "calls": 192,
+        "demand_usd": "2.688000",
+        "input_mean": 2000,
+        "model": "claude-sonnet-5-5",
+        "output_mean": 1000,
+        "role": "adaptive strategy (plan/answer/rank)"
+      },
+      {
+        "calls": 288,
+        "demand_usd": "4.032000",
+        "input_mean": 2000,
+        "model": "claude-sonnet-5-5",
+        "output_mean": 1000,
+        "role": "fixed strategy (plan/answer/rank)"
+      },
+      {
+        "calls": 4,
+        "demand_usd": "0.550000",
+        "input_mean": 20000,
+        "model": "claude-opus-5",
+        "output_mean": 1000,
+        "role": "fixed whole-portfolio selector"
+      },
+      {
+        "calls": 9,
+        "demand_usd": "0.035640",
+        "input_mean": 12000,
+        "model": "gpt-5.6-luna",
+        "output_mean": 1000,
+        "role": "native grouping"
+      },
+      {
+        "calls": 45,
+        "demand_usd": "1.856250",
+        "input_mean": 2500,
+        "model": "claude-opus-5",
+        "output_mean": 1000,
+        "role": "native head quality"
+      }
+    ],
+    "readiness": {
+      "editor_calls": 15,
+      "editor_demand_usd": "4.578750",
+      "mean_editor_input_tokens": 48000,
+      "mean_editor_output_tokens_including_thinking": 1500,
+      "mean_strategy_input_tokens": 2000,
+      "mean_strategy_output_tokens_including_thinking": 1000,
+      "readiness_is_included_once_in_adaptive01": true,
+      "strategy_calls": 48,
+      "strategy_demand_usd": "0.672000",
+      "total_usd": "5.250750"
+    },
+    "scope_note": "Hypothetical billable-token means and 45 quality-head calls, not new profile measurements or a forecast from the old partial DOM run; seven ordinary turns is a sensitivity, not a guaranteed finish.",
+    "seven_ordinary_turns_per_stage_sensitivity": {
+      "accounted_demand_per_editor_call_usd": "0.305250",
+      "basis": "Three stages times seven ordinary requests per native path, without shape repair; other role/token/head assumptions remain the same.",
+      "editor_calls_per_path": 21,
+      "editor_calls_whole_pilot": 84,
+      "editor_demand_whole_pilot_usd": "25.641000",
+      "mean_billable_editor_input_tokens": 48000,
+      "mean_billable_editor_output_tokens_including_thinking": 1500,
+      "no_additional_allowance": true,
+      "noneditor_whole_pilot_demand_usd": "9.161890",
+      "not_a_forecast_or_admission_guarantee": true,
+      "readiness_editor_demand_usd": "6.410250",
+      "readiness_strategy_demand_usd": "0.672000",
+      "readiness_total_untruncated_demand_usd": "7.082250",
+      "whole_pilot_assumed_requests": 622,
+      "whole_pilot_untruncated_demand_usd": "34.802890"
+    }
+  },
+  "failed_v1_history": {
+    "DOM_editor_requests": 7,
+    "accounted_known_usd": "0.791758",
+    "base_strategy_requests": 12,
+    "interpretation": "Counted once in history; a completed DOM session rejected by the strict final envelope does not estimate full readiness or pilot success/cost.",
+    "known_requests": 19,
+    "new_unknown_requests": 0,
+    "new_unresolved_usd": "0.000000",
+    "used_to_predict_full_path_cost_or_success": false
+  },
+  "final_offline_gate_status": "Not certified by this worksheet; current candidate2 complete replay/tests/preservation/actual-host gate required separately.",
+  "financial_guarantee": false,
+  "historical_fixture_size_reference": {
+    "body_measurement_basis": "Saved parsed SDK bodies reserialized with the exact pinned httpx2 encode_json settings: UTF-8, ensure_ascii=False, compact separators, allow_nan=False. Key order does not affect byte length. Includes repeated SYSTEM, accumulated tool/results/history, schemas and request controls; excludes HTTP headers/TLS framing.",
+    "byte_to_token_conversion_performed": false,
+    "bytes_are_not_tokens": true,
+    "editor_request_count": 20,
+    "encoder": {
+      "function": "encode_json",
+      "image": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+      "module": "/usr/local/lib/python3.12/site-packages/httpx2/_content.py",
+      "module_sha256": "b0da7d2156a2d758173bfe0fe5491af17aab4ff03c01be71920465283e31798d"
+    },
+    "fixture": true,
+    "fixture_usage_tokens_used_as_forecast": false,
+    "future_turn_count_inferred": false,
+    "historical_exposed_context_size_range": {
+      "lossless_view_file_bytes_max": 223291,
+      "lossless_view_file_bytes_min": 24679,
+      "required_original_evidence_bytes_max": 196806,
+      "required_original_evidence_bytes_min": 21242
+    },
+    "real_model_workload": false,
+    "scope": "Closed C1 synthetic proof and already-exposed R2 conformance contexts. Neither measures new C2 requests or future real full-context workload.",
+    "source_sha256": "e138a2eb07e537bfbf047dd451f487f96424abfdce9080968e3e8ad7637570d4",
+    "stage_measurements": [
+      {
+        "largest_body_bytes": 70933,
+        "lossless_view_file_bytes": 18451,
+        "ordinary_rounds": 7,
+        "required_original_evidence_bytes": 14142,
+        "required_source_files": 15,
+        "required_view_files": 15,
+        "session": "agg1.a1",
+        "smallest_body_bytes": 12233,
+        "stage": "agg1",
+        "total_accumulated_transmitted_json_body_bytes": 374103
+      },
+      {
+        "largest_body_bytes": 37396,
+        "lossless_view_file_bytes": 5818,
+        "ordinary_rounds": 6,
+        "required_original_evidence_bytes": 4403,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "dom1.a1",
+        "smallest_body_bytes": 10875,
+        "stage": "dom1",
+        "total_accumulated_transmitted_json_body_bytes": 170973
+      },
+      {
+        "largest_body_bytes": 39029,
+        "lossless_view_file_bytes": 5818,
+        "ordinary_rounds": 7,
+        "required_original_evidence_bytes": 4403,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "inv1.a1",
+        "smallest_body_bytes": 10876,
+        "stage": "inv1",
+        "total_accumulated_transmitted_json_body_bytes": 212027
+      }
+    ],
+    "study_sha256": "e714db239f395ce0e4fa155fbd943c2fe3e1f99af820c2f7c979e788a58664b9",
+    "total_accumulated_transmitted_json_body_bytes": 757103
+  },
+  "inherited_worksheet_reference": {
+    "file_sha256": "0eb40a67748e4ad90ff6e3ceafad5136a7e01fd5b9cc713c9fa181f4c7f7490c",
+    "path": "evidence/phase3a-c1-completion-v1/prospective-cost-worksheet.json",
+    "record_seal_sha256": "220e60700a4aea3c78e80989fd44a56ad6618503993e850259adaebc6d694a72",
+    "target_is_old_completion_v1_not_new": true,
+    "use": "Declared hypothetical token cases and historical C1 fixture/exposed-context size measurements only; not new proof or forecasting."
+  },
+  "joint_admission": {
+    "all_max_output_combinations_cannot_complete": true,
+    "all_max_output_demand_per_adaptive_tokens": 964608,
+    "assessment_pool_usd": "45.860000",
+    "editor_max_requests_per_adaptive": 48,
+    "every_inference_cell_usd": "20.000000",
+    "historical_known_usd": "11.279643",
+    "historical_unknown_released": false,
+    "historical_unresolved_usd": "11.440000",
+    "included_first_assessment_sublimit_usd": "23.700000",
+    "included_first_pair_cap_usd": "50.860000",
+    "max_output_cell_tokens": 786432,
+    "maximum_cumulative_exposure_usd": "228.579643",
+    "new_cap_usd": "205.860000",
+    "next_editor_requires_cell_settled_cost_at_most_usd": "8.560000",
+    "next_initial_quality_requires_initial_assessment_spent_at_most_usd": "12.260000",
+    "next_quality_requires_total_assessment_spent_at_most_usd": "34.420000",
+    "next_strategy_requires_cell_settled_cost_at_most_usd": "17.459040",
+    "ordinary_editor_clean_max": 21,
+    "per_request_reservations": {
+      "editor_selector_quality": {
+        "basis": "Full context at the most expensive allowed cache category (one-hour write), plus all output/thinking, with a conservative 1.1 geographic allowance. The allowance is retained for the shared role policy even where global routing is explicit; it is not a claim of an actual global surcharge. Priority Tier excludes the exact Opus 5 model; Fast mode is not requested.",
+        "calculation": "(1000000*10*1.1 + 16000*25*1.1)/1000000",
+        "maximum_billable_input_tokens": 1000000,
+        "maximum_input_rate_usd_per_million": "11",
+        "maximum_output_rate_usd_per_million": "27.50",
+        "micro_usd": 11440000,
+        "reserved_total_output_tokens": 16000,
+        "sources": [
+          "anthropic-opus",
+          "anthropic-context",
+          "anthropic-thinking",
+          "anthropic-tiers",
+          "anthropic-pricing"
+        ],
+        "usd": "11.440000"
+      },
+      "group": {
+        "basis": "Reserve the whole 1.05M context independently of maximum output, conservatively overstating a shared input/output window. Apply the documented >272K long-input rates, maximum supported inherited public tier, default cache-write price, and geographic allowance. A longer 12h write is a Responses-only opt-in, not part of this native Chat request.",
+        "calculation": "(1050000*1.10 + 128000*3.96)/1000000",
+        "input_rate_calculation": "0.20*1.25(cache write)*2(long input)*2(Fast/priority)*1.1(geography)",
+        "maximum_billable_input_tokens": 1050000,
+        "maximum_input_rate_usd_per_million": "1.10",
+        "maximum_output_rate_usd_per_million": "3.96",
+        "micro_usd": 1661880,
+        "output_rate_calculation": "1.20*1.5(long output)*2(Fast/priority)*1.1(geography)",
+        "reserved_total_output_tokens": 128000,
+        "sources": [
+          "openai-luna",
+          "openai-pricing",
+          "openai-fast",
+          "openai-cache",
+          "openai-chat",
+          "openai-context"
+        ],
+        "usd": "1.661880"
+      },
+      "strategy": {
+        "basis": "Full documented context reserved at the five-minute write rate, plus every allowed output/thinking token. Global standard controls are explicit. One-hour writes require an explicit extended TTL; the strategy body does not request one.",
+        "calculation": "(1000000*2.50 + 4096*10)/1000000",
+        "maximum_billable_input_tokens": 1000000,
+        "maximum_input_rate_usd_per_million": "2.50",
+        "maximum_output_rate_usd_per_million": "10",
+        "micro_usd": 2540960,
+        "reserved_total_output_tokens": 4096,
+        "sources": [
+          "anthropic-sonnet",
+          "anthropic-context",
+          "anthropic-cache",
+          "anthropic-pricing"
+        ],
+        "usd": "2.540960"
+      }
+    },
+    "policy": {
+      "am1_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+      "assessment_micro_usd": 45860000,
+      "cell_http": 96,
+      "cell_input": 4000000,
+      "cell_micro_usd": 20000000,
+      "cell_output": 786432,
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "editor_payload_bytes": 1048576,
+      "editor_turns": 8,
+      "first_assessment_micro_usd": 23700000,
+      "first_micro_usd": 50860000,
+      "id": "phase3a-r2-accounting-v1",
+      "phase_micro_usd": 205860000
+    },
+    "readiness_cell_usd": "20.000000",
+    "readiness_max_attempts_included": 96,
+    "reserved_tokens_also_must_fit": true,
+    "strategy_requests_per_adaptive": 48,
+    "thresholds_assume_no_other_outstanding_liability": true,
+    "warnings": [
+      "The $205.86 is a joint liability cap, not an expected or guaranteed invoice. Phase/cell/first-check/assessment limits overlap, and no pool may borrow from another.",
+      "A below-$20 hindsight demand can still stop early: the next editor reserves $11.44, so it cannot be admitted after $8.56 has settled in that cell.",
+      "The heavier and all-second-shape means are untruncated demand sheets, not promises that all calls can be admitted. Input/output/HTTP/payload guards may stop earlier.",
+      "A future body exceeding its byte limit is rejected locally. Byte size does not certify provider token usage. Actual thinking/output and supported billing categories are charged from returned usage.",
+      "Unknown delivery or usage retains its complete reservation and stops further outbound calls; no replacement, release or repeated readiness allowance is included."
+    ],
+    "worklist_max_attempts": 775
+  },
+  "kind": "phase3a-c1-completion-r1-prospective-cost-worksheet-v1",
+  "launcher_sha256": "b990c174ae442e9873e1a8b2d3ce1e0b2eaf87030b3cbe7a78e97315e0f58743",
+  "limitations": [
+    "Billable-token means/head counts are declared assumptions, not estimated from payload bytes or synthetic fixture usage.",
+    "Repeated SYSTEM/history/tool content increases transmitted bytes; bytes establish neither provider tokens, model attention, success probability nor realized cache billing.",
+    "Request reservations and cell/phase/first/assessment/token/HTTP ceilings apply jointly and can truncate any demand case before nominal cash caps are exhausted.",
+    "The fresh $205.86 allowance is not residual funding inside the failed v1 episode; historical liabilities remain carried.",
+    "Dated public documentation/arithmetic do not establish current account access, billing correctness or guaranteed completion."
+  ],
+  "network_access_for_this_worksheet": false,
+  "new_C2_fixture_payload_measurement": {
+    "all_role_payload_summary": {
+      "answer": {
+        "largest_body_bytes": 573,
+        "requests": 400,
+        "smallest_body_bytes": 476,
+        "total_body_bytes": 205340
+      },
+      "editor": {
+        "largest_body_bytes": 74732,
+        "requests": 80,
+        "smallest_body_bytes": 13137,
+        "total_body_bytes": 3308750
+      },
+      "fixed_selector": {
+        "largest_body_bytes": 5828,
+        "requests": 4,
+        "smallest_body_bytes": 5777,
+        "total_body_bytes": 23221
+      },
+      "group": {
+        "largest_body_bytes": 2132,
+        "requests": 9,
+        "smallest_body_bytes": 2081,
+        "total_body_bytes": 18993
+      },
+      "plan": {
+        "largest_body_bytes": 849,
+        "requests": 40,
+        "smallest_body_bytes": 798,
+        "total_body_bytes": 33050
+      },
+      "quality": {
+        "largest_body_bytes": 1095,
+        "requests": 90,
+        "smallest_body_bytes": 1044,
+        "total_body_bytes": 96600
+      },
+      "rank": {
+        "largest_body_bytes": 2280,
+        "requests": 40,
+        "smallest_body_bytes": 2182,
+        "total_body_bytes": 88598
+      }
+    },
+    "all_role_total_accumulated_transmitted_json_body_bytes": 3774552,
+    "body_measurement_basis": "Actual parsed mock SDK bodies from frozen mock-wire.json reserialized with the pinned httpx2 encode_json UTF-8/non-ASCII/compact/finite convention. Dictionary key order does not change byte length. Includes actual configured SYSTEM, accumulated tool/history/schema/controls; excludes HTTP headers/TLS framing.",
+    "byte_to_token_conversion_performed": false,
+    "editor_request_count": 80,
+    "editor_total_accumulated_transmitted_json_body_bytes": 3308750,
+    "encoder": {
+      "function": "encode_json",
+      "image": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+      "module": "/usr/local/lib/python3.12/site-packages/httpx2/_content.py",
+      "module_sha256": "b0da7d2156a2d758173bfe0fe5491af17aab4ff03c01be71920465283e31798d"
+    },
+    "fixture": true,
+    "fixture_usage_tokens_used_as_forecast": false,
+    "future_turn_count_inferred": false,
+    "limitations": [
+      "Synthetic solver answers are short; these measurements do not predict future real trajectories, reasoning/signatures, notes, repair contexts, turn counts or cache billing.",
+      "Summed bodies include repeated prefixes/history and are neither distinct-source bytes nor billable tokens.",
+      "No live-model attention, grounding, quality or normal completion is established by this fixture."
+    ],
+    "not_external_network_traffic": true,
+    "raw_HTTP_bytes_captured": false,
+    "real_model_workload": false,
+    "references_sha256": {
+      "evidence/phase3a-c1-completion-v2/provider-documentation.json": "8254fd6d56da6697dfb2d7fe0f0c3300859fab58b3d8c728664ab35311cd2b80",
+      "runs/phase3a-c1-completion-v2/verification-v1/candidate-rejection.json": "2d29d839a8753c8b42c95674666a1ed9834308507a167ecb845b40cf92ca37ea",
+      "runs/phase3a-c1-completion-v2/verification-v2/matrix.json": "0f285ac9be9554191a20b1bcf7d78b4985f616785c8763c76e315191219deb4f",
+      "runs/phase3a-c1-completion-v2/verification-v2/mock-proof.json": "71bf3cc446e4fe448fbdaecd45c943f187c65107ab86048966286ea595a996eb",
+      "runs/phase3a-c1-completion-v2/verification-v2/mock-wire.json": "b76d5887a4d009a5766d3d99650cc6c59c0493b286fb9e5c188d4ae25172139d",
+      "runs/phase3a-c1-completion-v2/verification-v2/release/study.json": "b41a87f6326971dd0bfe89662c35e34adbfc1dddf4d3a3ae69752b069cf91c29",
+      "runs/phase3a-c1-completion-v2/verification-v2/source-before.json": "fd2e61f87948a7154788877d3ea2b309de2b684f83fbf23a6266e3cdcbdf3008",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "1a4590e82002925cb069834bbd43cc8746ff607817f1644281fc321de85fb1ed",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "9655b588ccd58d6a443a23646cd0cf066941e8497e81a54bef8828e12f4c24e1",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "5fb176cb6131d33b5076afc9f70ac1ac953a6227720bd54d1a93ee6390a826db",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "44e9abf000559e5f1d8404dcd2ade5cc4c7c5f68d81a287a94a926748d388d61",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "ab4a4116a08797e6eeb182c123f1671799dade7ee078cb1bae8352e548e434b5",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "84dcfbd25af6825ce97213580646bc858ed8bd1379a6114e5fb67e1c079cf1da",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "97a9453faaa008906763bad84ba47c81fe98b646c371d410cfba87eb70a8dc66",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "5457c3d337ab4912b07721a6ca54d0c3956d8c0a3ba8a332c5e8e7197479a607",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "b9a410e9561a319b8600b4d491e75eef707df572a17fb7f86fd7fd00fb5dec1b",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "2da906614a8b75e6cb7753bf91e38d9e4415537e1723295d655e5c7e0422eb40",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "b23e925bcfeac3d120c9d333ce5256063b3b2c5b17b50639eb7e9a8f9340bd5a",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "6e57cf5bae5144ca43adcb752bf44af59e821dd95214197ec8e71ad9b8204101",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "56a789836f0cace0efc197da08c881d5a6f2f74463c6df4fa39fae4f37d2e124",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "0fa70429063668235e8181c82308ab879ef16f8a98f1277bb442b2045c6d0430",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "962987d2b761ed2cc0e0e720ca75daffbe615d26a68d5eb0803665c80da6106f",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "332c51c7f91dd084f5d21191ea13b7f0a6572be1652f9ac37aa48018fab3df9f",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "46867e9e5496203c15ee6aa5b40a9fd2311d64907d328dda0865e2e296db0df8",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "71642f72225ac781866b71df4e9702ed6eb303a600008f8a0e2ad19ab8517349",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "b41ae4ba5ef734ecefb1229e6e5d79474df456e58ec3bb607de2ae16e9d35377",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "5ee8a12e4de93ea68b8ad410770c0edb415d888d84645c538b66b97f3b0d1e97",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "6ac1d9bf038765af00ada3bfd6ca97d94821d735cb94881c33f5f414302df285",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "c45e0c162a49ccfac4dc59bd3d2bd4b190c1d8ac694b2d2edc6a5297e88c81cb",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "8a42b846b5c58c65149ee24c21ba1ad5b1b712e4773fee3f62701b1f188c9527",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "112e1db8df28e61a077fe47ebd5a9c1e4a3e4e411e905db85216b6c8ec55aa6d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "eee211a54c12353e8dd362341cbb355cf283b4ebf143353e321d46925449a133",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "97a5504aeb86ae99d032d1b84287ff78737a83202a66e11a438a24c66651d581",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "e3e3f9fccd0409f9a0adbc60b67635ac08d377dac8fa92cd8fd86d4dac545fc7",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "5324fab03a64a52f4327f0d0b84e2aeddab5e49e1719675600fb6a5289801c77",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "c30b000ca503eb3e594842cf2b7d1cc6595b9dc971381162bc82cc7c0d5009c4",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "d618432960a5cd2e43a2250f5bb43ecdb4532b756d8e8809d996343a9cedd627",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "8e3b18a8dd7cb1d81aae0ff4ff43c8d88cd9005e8fc2c09d8e8bd3415067e5c7",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "eda8105d956ebad0029b2b13815a901b94bf3f2683ae2c9fe10135a01a758217",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "315fa0304a151bb4f667f3ec8b64d6678734851d16fc1d0e7f7aaec53b0a4cbd",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "9a64fda81c922bd9dde4c17dbbbbc31846b8276d2723c61d0e3afa2ff4f4af30",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "a0398547fe2e2ecae22d8941c04c6cc8b88af2456748eecd88a2718187e44959",
+      "runs/phase3a-compat-c1-v1/completion-v2/28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "8bafe1fb851add386a4310b5b2773694d715cbfee8f36d86f2ad33f341da7c25"
+    },
+    "request_count_all_roles": 663,
+    "role_counts": {
+      "answer": 400,
+      "editor": 80,
+      "fixed_selector": 4,
+      "group": 9,
+      "plan": 40,
+      "quality": 90,
+      "rank": 40
+    },
+    "source_sha256": "33cc36cb56fa75b6b427add09934a943515dd40e57cccfb4d4cfcb92a8b4bc1c",
+    "stage_measurements": [
+      {
+        "authoring_system_sha256": "1a4590e82002925cb069834bbd43cc8746ff607817f1644281fc321de85fb1ed",
+        "configured_agent_prompt_bytes": 8701,
+        "effective_mission_bytes": 4865,
+        "largest_body_bytes": 74719,
+        "lossless_view_file_bytes": 18452,
+        "manifest_sha256": "5c53a968fee99bf430ce0b020ca8cefbebac962e0a6f626abca208f844438277",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-01",
+        "requests": [
+          {
+            "canonical_request_sha256": "c3b8e517b74a2145cb2db7d1637c4878f66bb7258db20f75ff68e8b875d1ece4",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t01",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 14495
+          },
+          {
+            "canonical_request_sha256": "9640ad555074e4a0581f20c98aefc1923d4d72230de4c7cfaac9b42cbb848e07",
+            "messages_json_bytes": 5849,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t02",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 20111
+          },
+          {
+            "canonical_request_sha256": "a9f3ceead5de2ba8ad1d304619f9be768cdd1a93abbda3526417cc892913a803",
+            "messages_json_bytes": 55782,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t03",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 70044
+          },
+          {
+            "canonical_request_sha256": "d51014dd7e2f95ccd5085743fbe3550dc248a4013cc6895f13fcef05950cab62",
+            "messages_json_bytes": 57518,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t04",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 71780
+          },
+          {
+            "canonical_request_sha256": "77acdaa7a773ab1bb17ba24df799f68f4542b7348fcf282d857bcf3493468637",
+            "messages_json_bytes": 59286,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t05",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 73548
+          },
+          {
+            "canonical_request_sha256": "bc62e031d977d724dc76fd3ce85bb81325320bf33d921e2cfbee7fced90e340f",
+            "messages_json_bytes": 59813,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t06",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74075
+          },
+          {
+            "canonical_request_sha256": "1796ae63a9e567a4d29c955787e57070bee3af3548eaebb94c9dbbf2f6606921",
+            "messages_json_bytes": 60457,
+            "slot_id": "p3a-01.adaptive.editor.agg1.a1.t07",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74719
+          }
+        ],
+        "required_original_evidence_bytes": 14143,
+        "required_source_files": 15,
+        "required_view_files": 15,
+        "session": "agg1.a1",
+        "smallest_body_bytes": 14495,
+        "stage": "agg1",
+        "total_accumulated_transmitted_json_body_bytes": 398772
+      },
+      {
+        "authoring_system_sha256": "44e9abf000559e5f1d8404dcd2ade5cc4c7c5f68d81a287a94a926748d388d61",
+        "configured_agent_prompt_bytes": 7363,
+        "effective_mission_bytes": 4857,
+        "largest_body_bytes": 41182,
+        "lossless_view_file_bytes": 5819,
+        "manifest_sha256": "83b3572e34878743f4cd1ffd4ab0b5fe1851a2250b3e643bb2d7f0addd549367",
+        "ordinary_rounds": 6,
+        "pilot": "p3a-01",
+        "requests": [
+          {
+            "canonical_request_sha256": "7732fd8f2dec02c28f7e5c5236d6cb01ab6d52245700a8f92b0aca9c5f43fe38",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t01",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 13137
+          },
+          {
+            "canonical_request_sha256": "646ce7a734cea292114ee340ab990e6ae931c2660e5c5d3c0679eccd230da76b",
+            "messages_json_bytes": 5841,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t02",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 18745
+          },
+          {
+            "canonical_request_sha256": "954318e8a0c8f91e150bc16e24f987722ecee01dd3cba697f81057b6a4559b8b",
+            "messages_json_bytes": 25336,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t03",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 38240
+          },
+          {
+            "canonical_request_sha256": "a0021613d19b80493c2fea13076f8c472f2d4c6281d37ecbb549ca4c897b2b5f",
+            "messages_json_bytes": 27109,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t04",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40013
+          },
+          {
+            "canonical_request_sha256": "cc8993dbe663b3ef9469cd0eac8d3c840cd0c86c64f418e6d105a070847fa228",
+            "messages_json_bytes": 27635,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t05",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40539
+          },
+          {
+            "canonical_request_sha256": "24b35c6da7bbb7680c80d33c8e06b235cc0a45de5e532a69690f96676b306385",
+            "messages_json_bytes": 28278,
+            "slot_id": "p3a-01.adaptive.editor.dom1.a1.t06",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 41182
+          }
+        ],
+        "required_original_evidence_bytes": 4404,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "dom1.a1",
+        "smallest_body_bytes": 13137,
+        "stage": "dom1",
+        "total_accumulated_transmitted_json_body_bytes": 191856
+      },
+      {
+        "authoring_system_sha256": "97a9453faaa008906763bad84ba47c81fe98b646c371d410cfba87eb70a8dc66",
+        "configured_agent_prompt_bytes": 7364,
+        "effective_mission_bytes": 4858,
+        "largest_body_bytes": 42815,
+        "lossless_view_file_bytes": 5819,
+        "manifest_sha256": "003cf4dc9f52699cdfb0238ff4c4961151171a2ef2c5f5bea07bcda2f8e3a59e",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-01",
+        "requests": [
+          {
+            "canonical_request_sha256": "665b06aa9f4eadda97c65b6f281ec15ae267d0dcd9d5cd094bc104e3bbbd18f5",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t01",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 13138
+          },
+          {
+            "canonical_request_sha256": "682f3dafd5241d26e4ed0718cc74630d3d4660246cdbe8b11b9e9343949b0194",
+            "messages_json_bytes": 5842,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t02",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 18747
+          },
+          {
+            "canonical_request_sha256": "4237ccb2d123cd7c5a134a492884fb75af6f6920a3a68c17c7087e9eb2fab33a",
+            "messages_json_bytes": 25337,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t03",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 38242
+          },
+          {
+            "canonical_request_sha256": "923c574440d0f753157bb690fb55551d0a1c34a4793e3695cca552bc81272fc2",
+            "messages_json_bytes": 27025,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t04",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 39930
+          },
+          {
+            "canonical_request_sha256": "415d11a6223a9428738d3d7353e98f580be73048121242db9778d3981726f637",
+            "messages_json_bytes": 28745,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t05",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 41650
+          },
+          {
+            "canonical_request_sha256": "ae678cca385ca496e3e0a449bc9305697a1629421c13ce6bdd31ef077cf8c7c0",
+            "messages_json_bytes": 29269,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t06",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42174
+          },
+          {
+            "canonical_request_sha256": "5ea2ad01ed8ec5f81307ab367e4f06097ca7c7b5e51c7299e60478944c9d322c",
+            "messages_json_bytes": 29910,
+            "slot_id": "p3a-01.adaptive.editor.inv1.a1.t07",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42815
+          }
+        ],
+        "required_original_evidence_bytes": 4404,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "inv1.a1",
+        "smallest_body_bytes": 13138,
+        "stage": "inv1",
+        "total_accumulated_transmitted_json_body_bytes": 236696
+      },
+      {
+        "authoring_system_sha256": "2da906614a8b75e6cb7753bf91e38d9e4415537e1723295d655e5c7e0422eb40",
+        "configured_agent_prompt_bytes": 8701,
+        "effective_mission_bytes": 4865,
+        "largest_body_bytes": 74732,
+        "lossless_view_file_bytes": 18465,
+        "manifest_sha256": "311ac0c57df1de62d542d3f2bf6790898ee5b5dbae07cf338e732cfb12d27b9f",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-02",
+        "requests": [
+          {
+            "canonical_request_sha256": "a56a996fb3bc722005960f605cc8f98c4eca19f0817167b3e3f9346da985f49a",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t01",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 14495
+          },
+          {
+            "canonical_request_sha256": "89cc8cb4987376dcb57a1c73cde73c0b9e25ce9f2476e211221cc7707072dc29",
+            "messages_json_bytes": 5849,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t02",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 20111
+          },
+          {
+            "canonical_request_sha256": "16b897b0b6c2c861bc106de9635d182ac88f78f918b14751326478270f4cdd25",
+            "messages_json_bytes": 55795,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t03",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 70057
+          },
+          {
+            "canonical_request_sha256": "acba104a52cc836a9dfe1df765c2ebe490f74fcb77b5b85a1905ab4898d1871a",
+            "messages_json_bytes": 57531,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t04",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 71793
+          },
+          {
+            "canonical_request_sha256": "26d6681f42b91546e26b845dc365cf42fcde9e2b188f0496299310748e16f4cf",
+            "messages_json_bytes": 59299,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t05",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 73561
+          },
+          {
+            "canonical_request_sha256": "709d1a1aa19bfc6550da51afacd8b516eab31e9392df1166eea1c9d718ffdce4",
+            "messages_json_bytes": 59826,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t06",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74088
+          },
+          {
+            "canonical_request_sha256": "6e5c136076ae8c372c77734435b5460f6474f6ca4df99887b6ac5f3e89e8fb1a",
+            "messages_json_bytes": 60470,
+            "slot_id": "p3a-02.adaptive.editor.agg1.a1.t07",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74732
+          }
+        ],
+        "required_original_evidence_bytes": 14156,
+        "required_source_files": 15,
+        "required_view_files": 15,
+        "session": "agg1.a1",
+        "smallest_body_bytes": 14495,
+        "stage": "agg1",
+        "total_accumulated_transmitted_json_body_bytes": 398837
+      },
+      {
+        "authoring_system_sha256": "56a789836f0cace0efc197da08c881d5a6f2f74463c6df4fa39fae4f37d2e124",
+        "configured_agent_prompt_bytes": 7363,
+        "effective_mission_bytes": 4857,
+        "largest_body_bytes": 41195,
+        "lossless_view_file_bytes": 5832,
+        "manifest_sha256": "e0bba26a53625b48346b4f17de3e9ebe9403acdaed368e51e53e4fefe2fe10f6",
+        "ordinary_rounds": 6,
+        "pilot": "p3a-02",
+        "requests": [
+          {
+            "canonical_request_sha256": "918666e35ec15b7221106a0d7a2d08a16a2558da6a75467974a0cde9e652900e",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t01",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 13137
+          },
+          {
+            "canonical_request_sha256": "70ba5fee655a88d1b36d77ce38b77b5b02d47ae2c7e27f109b08807e27d40a4e",
+            "messages_json_bytes": 5841,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t02",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 18745
+          },
+          {
+            "canonical_request_sha256": "52877bd99b518e9873bc4ff021e6fb48b62f17ca12d2b012dd209e19f346d9db",
+            "messages_json_bytes": 25349,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t03",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 38253
+          },
+          {
+            "canonical_request_sha256": "b65ef7683be58e7786de90885ea88d530d0692bdf285219503162f79d33a66bb",
+            "messages_json_bytes": 27122,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t04",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40026
+          },
+          {
+            "canonical_request_sha256": "90d495bcf6a54fc5a0ad54450c50a964ab8f6c25aeae3f86bb60ba9719ef2282",
+            "messages_json_bytes": 27648,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t05",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40552
+          },
+          {
+            "canonical_request_sha256": "47039cc408dd7798abfd5d7711eb353011873068d68b708869cdcf42b2c0f19e",
+            "messages_json_bytes": 28291,
+            "slot_id": "p3a-02.adaptive.editor.dom1.a1.t06",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 41195
+          }
+        ],
+        "required_original_evidence_bytes": 4417,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "dom1.a1",
+        "smallest_body_bytes": 13137,
+        "stage": "dom1",
+        "total_accumulated_transmitted_json_body_bytes": 191908
+      },
+      {
+        "authoring_system_sha256": "332c51c7f91dd084f5d21191ea13b7f0a6572be1652f9ac37aa48018fab3df9f",
+        "configured_agent_prompt_bytes": 7364,
+        "effective_mission_bytes": 4858,
+        "largest_body_bytes": 42828,
+        "lossless_view_file_bytes": 5832,
+        "manifest_sha256": "913f845c41f89a53ce678c1a0ec48074bfca2cc7c5e5add0e87fe3cae5fa6dd9",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-02",
+        "requests": [
+          {
+            "canonical_request_sha256": "89b7204b1bf8cf93cf47fe1886ebb282bc7a0cce5f2f3795d880580ca78177f6",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t01",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 13138
+          },
+          {
+            "canonical_request_sha256": "53280bd2f18185690f9e8a92700e073850699a82ce93b75c43856ee8eff998b1",
+            "messages_json_bytes": 5842,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t02",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 18747
+          },
+          {
+            "canonical_request_sha256": "48f8a4a9f0e39c5c7adf319160a498b102a427fd6dcfd897d05773d7229d47d5",
+            "messages_json_bytes": 25350,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t03",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 38255
+          },
+          {
+            "canonical_request_sha256": "07178b4eda23c68f6082199ab15dff5107482e6a79b57c962011bd0322bf1bec",
+            "messages_json_bytes": 27038,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t04",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 39943
+          },
+          {
+            "canonical_request_sha256": "c752df033d4fa9b085d0652b84d70c99f0735707f026579d1ccbf354ca66572b",
+            "messages_json_bytes": 28758,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t05",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 41663
+          },
+          {
+            "canonical_request_sha256": "3efe5ae20265890dd4a02bec49c6eccd4827c9572eeaff43ad4c513dfe47ae79",
+            "messages_json_bytes": 29282,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t06",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42187
+          },
+          {
+            "canonical_request_sha256": "719c24d9de88af9a64192ff82aa76e996aff9048adc9a51abe7bc186b3f107fa",
+            "messages_json_bytes": 29923,
+            "slot_id": "p3a-02.adaptive.editor.inv1.a1.t07",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42828
+          }
+        ],
+        "required_original_evidence_bytes": 4417,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "inv1.a1",
+        "smallest_body_bytes": 13138,
+        "stage": "inv1",
+        "total_accumulated_transmitted_json_body_bytes": 236761
+      },
+      {
+        "authoring_system_sha256": "b41ae4ba5ef734ecefb1229e6e5d79474df456e58ec3bb607de2ae16e9d35377",
+        "configured_agent_prompt_bytes": 8701,
+        "effective_mission_bytes": 4865,
+        "largest_body_bytes": 74681,
+        "lossless_view_file_bytes": 18414,
+        "manifest_sha256": "002a470a3112796be9575fb2415ab707eb23686f1c239fdf3aa0a6233780c360",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-03",
+        "requests": [
+          {
+            "canonical_request_sha256": "917e5b6edac2cf83da15fdc7c6cb7ae879418551d331e60a6a97ab7153308423",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t01",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 14495
+          },
+          {
+            "canonical_request_sha256": "1e16812cf7e0c19b3fc4771ae6cee4fdd431d1ddc2a033a7c0e63be6a5032d54",
+            "messages_json_bytes": 5849,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t02",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 20111
+          },
+          {
+            "canonical_request_sha256": "111adb7e90b6deecf5435eaec67e725c0af331271303f5c057a247c098d0fb92",
+            "messages_json_bytes": 55744,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t03",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 70006
+          },
+          {
+            "canonical_request_sha256": "527e2bbcc52bc84d95b43bcd25ad1f7d36a357cd118b8c7c57c9189124a36bda",
+            "messages_json_bytes": 57480,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t04",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 71742
+          },
+          {
+            "canonical_request_sha256": "3782668e15021e252be712069d82b0e60f54b45b11cf6d9895ea82e5b1063235",
+            "messages_json_bytes": 59248,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t05",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 73510
+          },
+          {
+            "canonical_request_sha256": "beab6070125164d30b81fc045a940ef8526750c1b75abf43c4893cd4e2148008",
+            "messages_json_bytes": 59775,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t06",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74037
+          },
+          {
+            "canonical_request_sha256": "6ad93dafb4283026653cdf0f7da109443912a514b2192a8cd54268b2d9b93b6a",
+            "messages_json_bytes": 60419,
+            "slot_id": "p3a-03.adaptive.editor.agg1.a1.t07",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74681
+          }
+        ],
+        "required_original_evidence_bytes": 14105,
+        "required_source_files": 15,
+        "required_view_files": 15,
+        "session": "agg1.a1",
+        "smallest_body_bytes": 14495,
+        "stage": "agg1",
+        "total_accumulated_transmitted_json_body_bytes": 398582
+      },
+      {
+        "authoring_system_sha256": "c45e0c162a49ccfac4dc59bd3d2bd4b190c1d8ac694b2d2edc6a5297e88c81cb",
+        "configured_agent_prompt_bytes": 7363,
+        "effective_mission_bytes": 4857,
+        "largest_body_bytes": 41144,
+        "lossless_view_file_bytes": 5781,
+        "manifest_sha256": "5d45a7a211ad542591362fa346a2ab8495cd0a188d792b3778e89948a5b4c622",
+        "ordinary_rounds": 6,
+        "pilot": "p3a-03",
+        "requests": [
+          {
+            "canonical_request_sha256": "f4fb62ed33d15f9935dcb43c119aefba73f2b4f8c22fccae9d0d4a708ee9846b",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t01",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 13137
+          },
+          {
+            "canonical_request_sha256": "acaa42f22adc0567f739bc9a3ccf84d8599d474718bb92e33a516c78856fb860",
+            "messages_json_bytes": 5841,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t02",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 18745
+          },
+          {
+            "canonical_request_sha256": "da64d3e361cf6ac7510a0d383a56dc57a7e7623167a4d15cffe175b3a90e1ff2",
+            "messages_json_bytes": 25298,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t03",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 38202
+          },
+          {
+            "canonical_request_sha256": "5f8ccfe5b7436564431c7ea76665521b760d9e1ea73d5a8a8a9bcb14aeb0e8fc",
+            "messages_json_bytes": 27071,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t04",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 39975
+          },
+          {
+            "canonical_request_sha256": "97123a5a4247168ff9662308d25622a4b4f31169aa0535ecc2f6c463a0c04e27",
+            "messages_json_bytes": 27597,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t05",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40501
+          },
+          {
+            "canonical_request_sha256": "ac536f24553a32cf4bce2344b3da46a634381093c9e8cbe510e16b0c7861e1fc",
+            "messages_json_bytes": 28240,
+            "slot_id": "p3a-03.adaptive.editor.dom1.a1.t06",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 41144
+          }
+        ],
+        "required_original_evidence_bytes": 4366,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "dom1.a1",
+        "smallest_body_bytes": 13137,
+        "stage": "dom1",
+        "total_accumulated_transmitted_json_body_bytes": 191704
+      },
+      {
+        "authoring_system_sha256": "eee211a54c12353e8dd362341cbb355cf283b4ebf143353e321d46925449a133",
+        "configured_agent_prompt_bytes": 7364,
+        "effective_mission_bytes": 4858,
+        "largest_body_bytes": 42777,
+        "lossless_view_file_bytes": 5781,
+        "manifest_sha256": "34d1abe430e70539508dcf57db5fd28a38e95efe286706cd78ec3b202d66bc86",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-03",
+        "requests": [
+          {
+            "canonical_request_sha256": "de10d33c5db4572ce4861f68276946926864fbc1faa487790cfab7d626520add",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t01",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 13138
+          },
+          {
+            "canonical_request_sha256": "b4d98280d1ca874ae272294d89119e7efba5755384bf496dcfffde132ad10ab0",
+            "messages_json_bytes": 5842,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t02",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 18747
+          },
+          {
+            "canonical_request_sha256": "0b0c0abfc7ce7355c21a84089c16870f842281583a8ae5ebbd371164e8404989",
+            "messages_json_bytes": 25299,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t03",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 38204
+          },
+          {
+            "canonical_request_sha256": "a66f00274119c34694d3bf1e13321344b6162f9e7eb909ff8c59c838a26bb013",
+            "messages_json_bytes": 26987,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t04",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 39892
+          },
+          {
+            "canonical_request_sha256": "970d8a960d90d710791195bf23ac0b11cc487cc83703b1f9c4bb0280b67dc12a",
+            "messages_json_bytes": 28707,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t05",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 41612
+          },
+          {
+            "canonical_request_sha256": "1f67bea428c837d5b09280f52c07f08a26ef8348f4295f80df688c76d802b7ea",
+            "messages_json_bytes": 29231,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t06",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42136
+          },
+          {
+            "canonical_request_sha256": "96a4eb285f4068db28b410ade1e2ed509e9e65dfc4f688c91cd943d87e0c5b32",
+            "messages_json_bytes": 29872,
+            "slot_id": "p3a-03.adaptive.editor.inv1.a1.t07",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42777
+          }
+        ],
+        "required_original_evidence_bytes": 4366,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "inv1.a1",
+        "smallest_body_bytes": 13138,
+        "stage": "inv1",
+        "total_accumulated_transmitted_json_body_bytes": 236506
+      },
+      {
+        "authoring_system_sha256": "5324fab03a64a52f4327f0d0b84e2aeddab5e49e1719675600fb6a5289801c77",
+        "configured_agent_prompt_bytes": 8701,
+        "effective_mission_bytes": 4865,
+        "largest_body_bytes": 74705,
+        "lossless_view_file_bytes": 18438,
+        "manifest_sha256": "54811ecafbd6291d9a5fc9c2023018c2d6f354dc6b5ce25afca805bbf04198aa",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-04",
+        "requests": [
+          {
+            "canonical_request_sha256": "1dab05a9645680117f5ff9afd91332a1c9729bf5c227fc94f4d0505e5c428c6b",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t01",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 14495
+          },
+          {
+            "canonical_request_sha256": "0f0b1d3869aa01303a5713bcd74504398bf95b1abd2e6f4d67f4433c9cec1b52",
+            "messages_json_bytes": 5849,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t02",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 20111
+          },
+          {
+            "canonical_request_sha256": "8cf97d482bec696e101742a28ebee4afd02cc96e8362c80ede4b565add4b2e2a",
+            "messages_json_bytes": 55768,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t03",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 70030
+          },
+          {
+            "canonical_request_sha256": "021a49bbe75174912de8cf1c852bcb307c64ab52a827e024fa2718beaa77d2de",
+            "messages_json_bytes": 57504,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t04",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 71766
+          },
+          {
+            "canonical_request_sha256": "eecb83a1468e9899eed7fc8ea069d2a288134b732a81ac0f857717a60922e410",
+            "messages_json_bytes": 59272,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t05",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 73534
+          },
+          {
+            "canonical_request_sha256": "e437dfed676ebb2b0493e5f456961ac31ae2d8d68b20d0e94fed151675ce0b6e",
+            "messages_json_bytes": 59799,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t06",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74061
+          },
+          {
+            "canonical_request_sha256": "df4ed530866aa7b02396b76d9dc3bb4651232396d7ec34f225c7a03191811cc7",
+            "messages_json_bytes": 60443,
+            "slot_id": "p3a-04.adaptive.editor.agg1.a1.t07",
+            "system_json_bytes": 9243,
+            "transmitted_json_body_bytes": 74705
+          }
+        ],
+        "required_original_evidence_bytes": 14129,
+        "required_source_files": 15,
+        "required_view_files": 15,
+        "session": "agg1.a1",
+        "smallest_body_bytes": 14495,
+        "stage": "agg1",
+        "total_accumulated_transmitted_json_body_bytes": 398702
+      },
+      {
+        "authoring_system_sha256": "8e3b18a8dd7cb1d81aae0ff4ff43c8d88cd9005e8fc2c09d8e8bd3415067e5c7",
+        "configured_agent_prompt_bytes": 7363,
+        "effective_mission_bytes": 4857,
+        "largest_body_bytes": 41168,
+        "lossless_view_file_bytes": 5805,
+        "manifest_sha256": "f065ebc53b83fd9f5f4bb7255a1f198d881528b4b41f95c376c382a2d617c14c",
+        "ordinary_rounds": 6,
+        "pilot": "p3a-04",
+        "requests": [
+          {
+            "canonical_request_sha256": "b065c4978b0ade4a629d032e6738dd79b3d423afb9c1f0dbdd1acd1ddf77c619",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t01",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 13137
+          },
+          {
+            "canonical_request_sha256": "3a455575e01ef8fc21212ff145b93e24c6e13c1d1df3b0e7e072d22fd5a57b8f",
+            "messages_json_bytes": 5841,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t02",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 18745
+          },
+          {
+            "canonical_request_sha256": "2d16d8e95998b2373ad2c714cd05e2bfa5f7ca6ba5fcdde275ea4912c3ebf1ef",
+            "messages_json_bytes": 25322,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t03",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 38226
+          },
+          {
+            "canonical_request_sha256": "fcbbe984250684962e59ef34acf0449488bf7732441d6190e1bfe72b1f4ce6e7",
+            "messages_json_bytes": 27095,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t04",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 39999
+          },
+          {
+            "canonical_request_sha256": "599283166d86826a8885d5ce16f74c8cee1e266f66f9ff0220dd9db29a39956e",
+            "messages_json_bytes": 27621,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t05",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 40525
+          },
+          {
+            "canonical_request_sha256": "f5a6df9a499ff91bcff735d094d06826d52b7578bea640ef8566113feee0d3b1",
+            "messages_json_bytes": 28264,
+            "slot_id": "p3a-04.adaptive.editor.dom1.a1.t06",
+            "system_json_bytes": 7885,
+            "transmitted_json_body_bytes": 41168
+          }
+        ],
+        "required_original_evidence_bytes": 4390,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "dom1.a1",
+        "smallest_body_bytes": 13137,
+        "stage": "dom1",
+        "total_accumulated_transmitted_json_body_bytes": 191800
+      },
+      {
+        "authoring_system_sha256": "9a64fda81c922bd9dde4c17dbbbbc31846b8276d2723c61d0e3afa2ff4f4af30",
+        "configured_agent_prompt_bytes": 7364,
+        "effective_mission_bytes": 4858,
+        "largest_body_bytes": 42801,
+        "lossless_view_file_bytes": 5805,
+        "manifest_sha256": "0bf6a267a97e3ac23eb0b45e4f0dd242c5420654022b0328edb602cdc74d6a30",
+        "ordinary_rounds": 7,
+        "pilot": "p3a-04",
+        "requests": [
+          {
+            "canonical_request_sha256": "1b1948d6f6ed04fdcf9b198503d8623f51f9e98918cad28d2658dd2c511ac389",
+            "messages_json_bytes": 233,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t01",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 13138
+          },
+          {
+            "canonical_request_sha256": "a6620886eb4b605156592baeb956b6b2133a53ae0bd0477b9d9eb61159566af4",
+            "messages_json_bytes": 5842,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t02",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 18747
+          },
+          {
+            "canonical_request_sha256": "2c924a245e290ccadad5a8a756605034d4c796af87cd65f03a171baafbf04d1a",
+            "messages_json_bytes": 25323,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t03",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 38228
+          },
+          {
+            "canonical_request_sha256": "8a7f91e45f888e390a155c9c69ef29a45f566beaeedcb49e9db21055148ad782",
+            "messages_json_bytes": 27011,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t04",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 39916
+          },
+          {
+            "canonical_request_sha256": "ba56f03c62f7382ab21c0810f3120e2d3797176ea3ac035731be2156d696f361",
+            "messages_json_bytes": 28731,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t05",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 41636
+          },
+          {
+            "canonical_request_sha256": "11aec6bd9f4e89f4022214fd573a9f503061f16605dd8bb250a458523ccc903c",
+            "messages_json_bytes": 29255,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t06",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42160
+          },
+          {
+            "canonical_request_sha256": "80cd549605b701447a372e15770b5a3664f17dd33daf40b463fee9dbc30e37e2",
+            "messages_json_bytes": 29896,
+            "slot_id": "p3a-04.adaptive.editor.inv1.a1.t07",
+            "system_json_bytes": 7886,
+            "transmitted_json_body_bytes": 42801
+          }
+        ],
+        "required_original_evidence_bytes": 4390,
+        "required_source_files": 5,
+        "required_view_files": 5,
+        "session": "inv1.a1",
+        "smallest_body_bytes": 13138,
+        "stage": "inv1",
+        "total_accumulated_transmitted_json_body_bytes": 236626
+      }
+    ],
+    "status": "measured_saved_actual_mock_SDK_bodies_current_candidate2",
+    "study_sha256": "28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62",
+    "tokenizer_or_token_count_endpoint_used": false,
+    "total_accumulated_transmitted_json_body_bytes": 3308750
+  },
+  "new_experiments_performed": false,
+  "original_folder_accessed": false,
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "provider_calls": 0,
+  "provider_documentation": {
+    "account_access_confirmed_by_this_worksheet": false,
+    "must_apply_checked_before_launch": true,
+    "original_dossier_path": "evidence/phase3a-c1-completion-v1/provider-documentation.json",
+    "original_dossier_sha256": "990ef3e1957dd7f553430edb0ce354a0a1eabae5b40b1f97f7ad378d3b8f95e5",
+    "original_review_content_unchanged": true,
+    "original_review_retained_at_utc": "2026-10-29T18:23:24Z",
+    "path": "evidence/phase3a-c1-completion-v2/provider-documentation.json",
+    "r1_reconfirmation_at_utc": "2026-10-29T21:53:48.845981+00:00",
+    "rates_usd_per_million": {
+      "claude-opus-5": {
+        "1h_write": "10",
+        "5m_write": "6.25",
+        "cache_read": "0.50",
+        "ordinary_input": "5",
+        "output": "25"
+      },
+      "claude-sonnet-5-5": {
+        "1h_write": "4",
+        "5m_write": "2.50",
+        "cache_read": "0.10",
+        "ordinary_input": "2",
+        "output": "10"
+      },
+      "gpt-5.6-luna": {
+        "30m_write": "0.25",
+        "cache_read": "0.02",
+        "ordinary_input": "0.20",
+        "output": "1.20"
+      }
+    },
+    "request_profile_or_reservation_change": false,
+    "requirement": "Confirm exact models, same public-PAYG accounts/billing assumptions and applicable context/cache/tier/geography/control categories before dispatch; no substitutions or paid access/token-count probes.",
+    "reuse": "Original18:23:24Z dossier content retained, with additive dated R1 official-source reconfirmation and factual price-row metadata. No fresh browsing/account probe by this worksheet.",
+    "sha256": "8254fd6d56da6697dfb2d7fe0f0c3300859fab58b3d8c728664ab35311cd2b80"
+  },
+  "purpose": "Conditional role demand, dated provider dossier, historical size references and pending final completion-v2 source/payload binding; no inference or token counting.",
+  "real_credentials_read": false,
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "sha256": "4aec943a3ca39caa5acb441962095de7fb05940e1d3d0a4060cde889ee622cde",
+  "source_sha256": "33cc36cb56fa75b6b427add09934a943515dd40e57cccfb4d4cfcb92a8b4bc1c",
+  "status": "bound-prospective-worksheet-current-candidate2",
+  "study_sha256": "28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62",
+  "target": {
+    "launcher_sha256": "b990c174ae442e9873e1a8b2d3ce1e0b2eaf87030b3cbe7a78e97315e0f58743",
+    "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+    "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+    "source_sha256": "33cc36cb56fa75b6b427add09934a943515dd40e57cccfb4d4cfcb92a8b4bc1c",
+    "study_sha256": "28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62"
+  },
+  "target_source_files": 221,
+  "target_source_record_path": "runs/phase3a-c1-completion-v2/verification-v2/source-before.json",
+  "target_source_record_sha256": "fd2e61f87948a7154788877d3ea2b309de2b684f83fbf23a6266e3cdcbdf3008",
+  "token_count_calls": 0,
+  "unaccepted_prior_candidates": [
+    {
+      "candidate_rejection_path": "runs/phase3a-c1-completion-v2/verification-v1/candidate-rejection.json",
+      "candidate_rejection_sha256": "2d29d839a8753c8b42c95674666a1ed9834308507a167ecb845b40cf92ca37ea",
+      "changed_source_files_for_candidate2": [
+        "followups/phase3a_c1_completion_v2/tests/test_support.py"
+      ],
+      "historical_fixture_editor_payload_bytes": 3308750,
+      "historical_fixture_editor_requests": 80,
+      "matrix_path": "runs/phase3a-c1-completion-v2/verification-v1/matrix.json",
+      "mock_wire_path": "runs/phase3a-c1-completion-v2/verification-v1/mock-wire.json",
+      "mock_wire_sha256": "477f5f2ebc802ce5efdef084be52024022452bf8221232b387004cd4a14ca582",
+      "not_a_current_release_or_paid_authority": true,
+      "old_measurement_references_sha256": {
+        "evidence/phase3a-c1-completion-v2/provider-documentation.json": "8254fd6d56da6697dfb2d7fe0f0c3300859fab58b3d8c728664ab35311cd2b80",
+        "runs/phase3a-c1-completion-v2/verification-v1/matrix.json": "3551dfdd820cf732fa0d283058e6f5b0b16e78aaa3bf09ac73e00cf4c60f1092",
+        "runs/phase3a-c1-completion-v2/verification-v1/mock-proof.json": "178c2855bc05bc3e1c645f19c2578a23c7209011624b69f99cc755919127f543",
+        "runs/phase3a-c1-completion-v2/verification-v1/mock-wire.json": "477f5f2ebc802ce5efdef084be52024022452bf8221232b387004cd4a14ca582",
+        "runs/phase3a-c1-completion-v2/verification-v1/release/study.json": "6b5b681bd68d6dc96d274fc1dc48be2667da4978daa2c2d1aeb5fa99c3c3e3e8",
+        "runs/phase3a-c1-completion-v2/verification-v1/source-before.json": "4cc076bb25503acc4bf3624dff6fbf23c145aea9255786c1ea3ce7dbc54c4e4f",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "8cba5cd1c6a83d231193a96a7cde467313d19f78af2f1ebb2d808a05662e36ac",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "f2fb4344850f506d5bffaa2d5a69ff9b3a25b719fbfe102621c95450e9239d65",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "32d64f4fd124901957849bdc476a788d979220fa8b1b78ed8f5d82faa05be901",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "a17a73f12585fc6ec29c32938b92837edb0eaba5ab17357861e54c14934ff99f",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "e0feb60aa2a6446597fcf3433837bb682ea2639a693eed6b64d5233c67e21bcb",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "70bddb714046c700288278ac0e8fd04d479e7fa0881ba382ae763196c4a0e4cc",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "1aeef4feb2f8d4bac403fccd592c8ded01bb3bea0e68565b3c6151dc7396a038",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "0cb800218c55a3473e30ff82a6fc1f390a5a724868a0766357e88e04e1665217",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "5b4f3510f74867d2b412f45d5dbc6ba876abeeb8dba919b7d7141d4d3250d6b8",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "431b651b4a521e48e1df0fd62875afedfac6b5e1f33d2b2d5ac13af34eeedb29",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "3eab918fceb29d4bfabd0af1c6760185b1b5c193612aa28473a03dc5d95939b0",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "15fae6471c3dc05c7812bc7c6e75b4a4d20f2915a959a462043684b556f7091a",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "a3f51bd2af58cc08d15aa7364888352f6e9355cc8010fe47cfdc644eca90aa55",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "7ae359580309eb95898d821e72b78bc4afeaf2c080b3e528093df08064f878fc",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "eba6da7039a6deb862ed7ac9ac99ab09a7ed315ca07f98379df3a19d94241d40",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "a26dd6c57e5127ce21a764c817ace156971ed8f94971f0c7773d610248c3ea20",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "745b2f38b292ce41b76e44eb28d5713c3cbf131f7f6556d894d43335c246f248",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "3be5172723450f9d4c872769a064ac4e69120daf1f46d0663c6715735ed7366f",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "5a57b780bb6c1b148127049833be1a973039f19751de02183cad9761b8176e0e",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "908e10d788c57abda0af5b55d077ae9640c298b366f4f490dfad3868cbbf1ac6",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "600ac6fb6e76a7e664a9ecc629dffe6f5e50ccb7b3a98a2c505ceff20ef7a286",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "7d901d273df95c706d54c9b761af7a01a2140b75e13d61128477ee7e8709b587",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "8f98a2326c2e1516523574b6fca03ee91416f861aa45f6cacbcd05ab64ed3797",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "1e3918d07a380ef34473f3e5f96129a848f91e32ed7bfa160294342cdc234e0e",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "691e3514c4b02dfa58ebf8852cf6f15bd64abb81e43999785e5f2058274ac927",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "ca1e8fa19f511e00c3a594885359989bf83858fcb81cb936d6d6f56b54e2307e",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "4fe563f1ad6d2ecca6c9dc57e758d86ed66de74cafb56b3635b2f29a58451139",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/configured-agent-prompt.md": "2893933f041e66e8f5e0f5a19105c931ba8f6d9706b97bba250fc7d29e71506b",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/effective-mission.md": "79f24f596be06640160dc06d071149c439a47ea1028d03501a86e2860a4fdcb4",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/manifest.json": "b98aff18cedcf2e24c3e25c038adc582cea462252d9bd5ac187741f19d76d865",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "5dc82700c3f59d935617bc74422e8bea872a8298c33541344ac4ba4feb24f514",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/configured-agent-prompt.md": "dc333af42a8e47d17500df081c12feb449d6934b9cd740fa91a9d3b7a4a7f3df",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/effective-mission.md": "b6c3f871684d71a023dfa93aa30136c47a99e17c3dd52ed9e898a0278c8d495d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/manifest.json": "bb204c9d63373d4f2cae7a1f73940d23171a10010822854d080a80f1c4f96330",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "c762077e88981429968c7faf4b4b59d9ec2ec5b2115613abe3beedc1b6cbeab6",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/configured-agent-prompt.md": "2e1a7b961b9476bcedc016367265bbe1215bb6e0abf8754cb8fc1be3aabdfcfe",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/effective-mission.md": "e4f9dbd1891f585e8cfed202e16bef9af7fd4b45383fbff17a335fdeb9bcb48d",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/manifest.json": "9b7851310f840050c0e5a8a42ba6b38d3924b33f431a1bb6701299297694d0f5",
+        "runs/phase3a-compat-c1-v1/completion-v2/ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "8c0c9fefcd4da72c900ffcd41a4ad8b7a83d9e7c66c12fe5b6d5f3084197fc19"
+      },
+      "old_outputs_reused_as_current": false,
+      "previous_worksheet_file_sha256": "4f2c3c57a31d5bedcf4fbef3d8df636503fdb7cf2760a87f3ab47618e8cf8827",
+      "previous_worksheet_record_seal_sha256": "e2fcc730c6ca28c0a54c4b5988331890933db5b008f935cd73026a84e831ab19",
+      "reason": "New unit fixture used read-only source mount instead of declared writable output mount. Actual matrix/replay passed; full gate rejected.",
+      "source_sha256": "aeedbf3b8e9033cfc96073362608e64c34441ee89ef1a4b460b092117c0db1e3",
+      "status": "unaccepted_engineering_candidate",
+      "study_sha256": "ff5108dd39a8448964a75103bc5d6b8d203928ce2a962f2d88d4f63739d35e21"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "kind": "phase3b-s2-independent-candidate-source-review-v3",
+  "reviewer": "/root/s2_preacceptance",
+  "created_at_utc": "2026-11-03T03:21:29.7811036+00:00",
+  "candidate_commit": "0f9c8279e4152a70eeb21529cd403e8760cde18c",
+  "status": "source_review_pass_whole_gate_and_physical_packet_pending",
+  "source_review_passed": true,
+  "passed": false,
+  "final_acceptance": false,
+  "keys_or_live_accepted": false,
+  "source_sha256": "ba914c1c00376646cd3eaf29f4dd560d36edcfff731e419e5f631d010e6743c9",
+  "study_sha256": "7298302496c0ea5e4c96f5f29ac9e98b67a68a73f1819b1afed4bfec4c1300c3",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "policy_sha256": "98a889983d7accb5f72ebd33c9c597c574081079809e2aaefe30b9c94fc72787",
+  "launcher_sha256": "848b06d9d89bb07db351c10c79565f5636b7428476cc7772a82a268b57ae3272",
+  "reviewed_sha256": {
+    "followups/phase3b_seq2_v1/strategy.py": "f2d941c19199044c8990a43d760021616377ed91df85cfae91f7b809cf217ac3",
+    "followups/phase3b_seq2_v1/ledger_core.py": "5cdf04d7418a228d897d79e32c456fc9a2c2069dc503ad46d96ff4a4b55ecc02",
+    "followups/phase3b_seq2_v1/workflow.py": "153826a1d4ab6c01f8dda653744e44db078c0985fc2619932e8550208a467545",
+    "followups/phase3b_seq2_v1/report.py": "c58fa908a893e6f5935b2530af72e5c21576700d7d1b36383cb8f20a6fd22e0b",
+    "followups/phase3b_seq2_v1/verify.py": "4e49809bc76537036c4ecfe23cce59b9da951d6f81746e7475189f0c787d6b95",
+    "followups/phase3b_seq2_v1/native.py": "0e45625ed55a762c0cd093c5ecd79eac370ef2d6ac105fa7bab807d3cabf8faf",
+    "followups/phase3b_seq2_v1/editor.py": "7f5f52e86a04ad1f7b92a7a1935326a799da7abe0492dd033b9f032560aa3f0e",
+    "followups/phase3b_seq2_v1/evidence.py": "85f95722d0ac18bbffe0bc094d8194f7825287957779ebb58aa2279d77d03201",
+    "followups/phase3b_seq2_v1/delivery.py": "6f6972fce24ab6450e6c71fedc6bb71464289608bcd17695e096ff4105468aae",
+    "followups/phase3b_seq2_v1/contract.py": "cafe8cab399784a2623e6519026b4d981b6de19802864fb9bcee09c571fbc29a",
+    "followups/phase3b_seq2_v1/capacity.py": "7c9aa467115b17b12336e2eb6f065e4575abc9eaada21804f93fe9ddb2575038",
+    "followups/phase3b_seq2_v1/support.py": "5d24304ca6d4b5e145d63b5bd8e989b6090cf2ef53014908cb6ef9a026f585e8",
+    "evidence/phase3b-seq2-v1/package_public.py": "1838e8bcee1c2f061775016dc3c7765a4d0a6ccaf0851aa2d2855f8b04c4ed0e",
+    "followups/phase3b_seq2_v1/test_information_s2.py": "d14e3f376df8a532ed8f792bdf44121ba722ed0a0ea3f6016a7b539b7e3cc48c",
+    "followups/phase3b_seq2_v1/test_delivery_s2.py": "7f2f4ba449087bcd943c95f52e90497a6725e34b0e8697090e13ec96c6988985",
+    "followups/phase3b_seq2_v1/test_required_checkpoint_s2.py": "fcac8fbbf514dfac27734b097069ecbe2211ed30485fdab797b20179930eb1b0",
+    "followups/phase3b_seq2_v1/test_package_s2.py": "8354c07ef824e0d7ddd07db652247537e0b1ea27269bbd6c67e3058d7c2bd619",
+    "followups/phase3b_seq2_v1/test_readme_provenance_s2.py": "493a92fd413acf2d7d5ca611c70de60b50eee9d3f7a6e77e73c00112fd026e8a",
+    "evidence/phase3b-seq2-v1/readme-provenance-cases-v1.json": "95214754ca0cef5c14d3419b70da2f50ac9d74e4c85a59de22d302ad12d6e7e6",
+    "evidence/phase3b-seq2-v1/readme-refresh-authority-v1.json": "4a7424c1fe0a77817a93ee759e9dc7c7b037e72d754ce5d3c560f275bf4865df",
+    "evidence/phase3b-seq2-v1/capacity-acceptance-cases.json": "2fa12f82c05c5c9e80680e2aa7033a0979deb47e693f49f597c7878a27c49799",
+    "evidence/phase3b-seq2-v1/capacity-aggregate-cases-v1.json": "22ca2c350c2254ea4fe1a6b89c3ab7b84c757cceee24bd724c3253f25353de9b",
+    "evidence/phase3b-seq2-v1/capacity-artifact-bound-clarification-v1.json": "9f5cdf24fc18343999b2c346e8a06628738312b91a2f49e461c66b0f2b6f5019",
+    "runs/phase3b-seq2-v1/verification-v1/source-before.json": "dd48c0488d137ffa42f977c989a9c3caf31e74bb53acab8097005367e380b8c5",
+    "runs/phase3b-seq2-v1/verification-v1/release/study.json": "7ac97da45474fd1a2f3894768e8241701ceccf9d0b56c05b256465e873fc9ad9",
+    "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/capacity.json": "f1e2c0cc5a5320da2e3a44c95e7bed11bac5aec97e0fe37c6f3a6b9a725d1d04",
+    "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/assembly.json": "00879d64b3e72b986be022adbd2792c2e30c42f2581f35a64746c283332022c0",
+    "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/actual-sdk-serialization.json": "8f868f76e7f53519cfa30d55c129c6eab3105cbb183078861d0e985c99ce83eb",
+    "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/aggregate-branch-envelope.json": "83e5b7aecca09419c76bd817696622594bcad64e79192e66c1034da00576b1d7",
+    "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/aggregate-editor-evidence.json": "0f9665a953f41e6a2df6c3567e0ad7b607023d5b65289eda94a13f5062181ecb",
+    "runs/phase3b-seq2-v1/component-runtime-v10/checks-result.json": "ce9aabe53bf73c78c8acf18d70cd1ef1255d9e29b03c3cb55dcc88128c17c55e",
+    "runs/phase3b-seq2-v1/component-required-checkpoint-v1/check-result.json": "a66704ccbf9adb3230ab0a072cf0f2923f988c4182fd13cdf31bf0a99575397d",
+    "runs/phase3b-seq2-v1/component-required-checkpoint-static-v2/check-result.json": "2852932e5983b24f66a4173dc82400f9f3fbf4933259783c0b6ffff623ce2446",
+    "runs/phase3b-seq2-v1/component-readme-provenance-v3/paired-result.json": "05942f9da4e35d3e53a2709c097c68f5c48b629b2d0d2411a5a55f03fa8c7573"
+  },
+  "material_findings": [],
+  "prior_findings": [
+    {
+      "status": "resolved",
+      "id": "F01",
+      "proof": "Complete cache/private names now centralized in packet public/safe; direct input metadata trap present; no broader stream exception."
+    },
+    {
+      "status": "resolved",
+      "id": "F02",
+      "proof": "Fixed control fails immediately on incomplete candidate, preserves all12 dispositions, prohibits selector or later candidate calls; allfour full pools gate report completeness."
+    },
+    {
+      "status": "resolved",
+      "id": "F03",
+      "proof": "Normal fixture classification requires fixture=True/authentic=False plus six normal stages and selector; matrix explicitly rejects scientific_complete/authentic_live_path true."
+    },
+    {
+      "status": "resolved_in_candidate_source",
+      "id": "F04",
+      "proof": "Every relay session checks full prepared evidence before forwarding first write/edit/direct-final, binds normal notes/harvest rereads, and saves exact proofs. validate_persisted_sessions invokes verify_recorded_information for every normal session across all pilots. Omitted later c1 pool/candidate view tests and actual large SDK request replay negative are retained."
+    },
+    {
+      "status": "resolved",
+      "id": "F05",
+      "proof": "First55/first-assessment25 permanently apply to p3b01 after review; known assessment checkpoint stop creates irreversible primary-stop before later paid work."
+    }
+  ],
+  "additional_seams": [
+    {
+      "name": "Immediate mandatory checkpoint economy",
+      "status": "source_and_saved_component_pass",
+      "proof": "native.PortfolioAdapter latches c1/c2 known failure or preintent budget stop through workflow primary_stop before upstream may swallow the exception. Callback precedes failure artifact write; saved failed checkpoints stop resume; ordinary probe failures and unknown transport holds remain separately classified."
+    },
+    {
+      "name": "Read page footer",
+      "status": "source_and_saved_component_pass",
+      "proof": "Canonical pinned paged read footer is metadata only; range,count,offset,duplicate,mixed/noncanonical validation remains strict. Partial page cannot satisfy complete target. Actual191-view large saved request positive and omitted-view negative retained."
+    },
+    {
+      "name": "Packet strict JSON",
+      "status": "source_pass",
+      "proof": "read rejects duplicate keys,NaN/Infinity and nonobject JSON; tests cover direct inputs. The fixed hash-pinned historical classification receipt remains trusted exact bytes."
+    },
+    {
+      "name": "Historical README alias",
+      "status": "source_and_saved_component_pass",
+      "proof": "One explicitly authorized README.md to README_LEGACY.md alias retains old exact hash. New README and related docs are separately bound. Old parent receipt/manifest/study/source map and archive checks stay pinned; no added private/cache/stream access allowance."
+    }
+  ],
+  "capacity": {
+    "maximum_actual_sdk_serialized_bytes": 1082228,
+    "report_seal_valid": true,
+    "scope_limit": "24 contexts were assembled across4 already-exposed tasks. Actual OpenCode/SDK execution covers the largest observed task six stages and both selectors, not24 distinct author sessions. Borrowed/duplicated samples are capacity fixtures, not fresh research evidence or live readiness.",
+    "native_selector_sessions_executed": 1,
+    "author_contexts_executed_through_actual_opencode_sdk_mock": 6,
+    "independent_model_input_liability": 1000000,
+    "status": "saved_evidence_independently_checked",
+    "maximum_effective_bytes": 1082228,
+    "serialized_request_records_rehashed": 68,
+    "assembly_seal_valid": true,
+    "public_artifact_bound_bytes": 32000000,
+    "normal_sessions_with_full_information_and_final_delivery_proofs": 7,
+    "exposed_tasks": 4,
+    "actual_sdk_request_semantics_match_effective_intents": true,
+    "original_exposed_artifacts_rehashed": 152,
+    "aggregate_editor_evidence_bytes": 26448598,
+    "boundary_negative_sdk_calls": 0,
+    "independent_opus_reservation_micro_usd": 11440000,
+    "aggregate_branch_envelope_bytes": 28230365,
+    "actual_sdk_mock_calls": 68,
+    "editor_native_selector_fixed_selector_exact_plus1_boundary_rejected_before_intent": true,
+    "complete_contexts_assembled": 24,
+    "request_bound_bytes": 2097152,
+    "fixed_selector_requests_executed": 1,
+    "report_path": "runs/phase3b-seq2-v1/capacity-component-v8/native/capacity-component-v8/capacity.json"
+  },
+  "source_integrity": {
+    "stream_names_lexically_skipped_before_any_metadata": 14,
+    "readonly_review_no_project_imports": true,
+    "source_map_digest_verified": true,
+    "current_worktree_clean_before_note": true,
+    "source_files": 632,
+    "public_source_files_rehashed": 618,
+    "all_public_hashes_match": true,
+    "study_digest_verified": true,
+    "external_v3_note_in_source_inputs": false
+  },
+  "saved_component_evidence": {
+    "required_checkpoint_static_v2": "Ruff,mypy3files,Bandit all exit0 after type-only test annotations",
+    "required_checkpoint_v1": "4 unit/native tests passed; original mypy errors retained",
+    "readme_v3": "Paired current source/preservation snapshots equal,old549source preserved with single authorized README alias,no before-refresh claim",
+    "runtime_v10": "Paged-footer4tests;actual large191-view request complete-positive/omitted-view-negative;Ruff,mypy2files,Bandit exit0"
+  },
+  "pricing_and_resource_review": "Prior v1 independent official-source arithmetic remains applicable: Sonnet2.540960,Opus11.44,Luna1.661880;2344 new attempts,180global/35cell/70assessment/55first/25firstassessment;no independent token-fit or account access claim.",
+  "scope": {
+    "product_source_edited": false,
+    "containers_run_by_reviewer": 0,
+    "keys_or_account_probes": 0,
+    "protected_original_or_common_parent_accessed": false,
+    "tests_run_by_reviewer": 0,
+    "write": "Only this new append-only external audit note",
+    "sdk_imports_or_constructors": 0,
+    "project_imports": 0,
+    "private_cache_or_provider_stream_paths_read_or_statted": false,
+    "provider_calls": 0
+  },
+  "pending_acceptance": [
+    "Whole source-bound offline gate including all required groups must complete and remain unchanged.",
+    "Fresh keyless actual-supervisor operational rehearsal must pass within its original deadlines.",
+    "Physical archive member inventory,raw hashes/CRC,extracted-only cold replay and final independent packet/source acceptance remain required before keys."
+  ],
+  "receipt_handling": "Do not add this note to SOURCE_INPUTS during the running gate. A fresh verification-v1/external-reviews copy may be losslessly bound by independent-acceptance.json and included by existing packet walk."
+}

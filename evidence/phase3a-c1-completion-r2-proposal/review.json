@@ -1,0 +1,33 @@
+{
+  "authority_boundary": "User-supplied AGENTS requires stopping/checking in after each slice; closed R1 forbids automatic next attempt. Standing budget approval retained. New method/source/worklist/gate and masked operator invocation are required.",
+  "cumulative_max_micro_usd": 240971444,
+  "definition": "PHASE3A_C1_COMPLETION_R2_DEFINITION.md",
+  "definition_level_blockers_resolved": true,
+  "definition_sha256": "1968907a73413efc44822a314492c3f7ba361fa7c3f5d348321ea0f0bfd21ed3",
+  "fresh_cap_micro_usd": 205860000,
+  "held_history_micro_usd": 22880000,
+  "implementation_feasibility_and_all_checks_unproved": true,
+  "kind": "phase3a-c1-completion-r2-definition-review-v1",
+  "known_history_micro_usd": 12231444,
+  "max_cumulative_attempts": 1660,
+  "new_budget_approval_required": false,
+  "new_r2_implementation": false,
+  "new_r2_provider_calls": 0,
+  "review_scope": [
+    "unchanged scientific protocol and fresh-output rules",
+    "known/held cumulative arithmetic and standing cap authority",
+    "absolute conversation deadline clamped after serialized admission wait",
+    "completion versus cancellation cleanup clocks",
+    "late known accounting without output forwarding or success rescue",
+    "immutable committed unknown and no resend",
+    "bounded owner/worker stop and prevention of late writes"
+  ],
+  "reviewed_at_utc": "2026-10-30T02:54:42.789562+00:00",
+  "reviewers": [
+    "/root/gate_acceptance",
+    "/root/release_launcher"
+  ],
+  "sha256": "0c0d6a36c0c439c8b5abf3c721f4d0172d4d62b63e81ef01dd99888490276f4c",
+  "status": "definition-reviewed-proposal-awaiting-slice-check-in",
+  "supplies_no_execution_grant": true
+}

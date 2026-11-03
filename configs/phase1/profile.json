@@ -1,0 +1,11 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 2048,
+  "thinking": {"type": "adaptive"},
+  "output_config": {"effort": "medium"},
+  "service_tier": "standard_only",
+  "inference_geo": "global",
+  "input_token_limit": 8000,
+  "input_micro_usd_per_token": 2,
+  "output_micro_usd_per_token": 10
+}

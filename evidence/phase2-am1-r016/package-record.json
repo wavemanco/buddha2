@@ -1,0 +1,11 @@
+{
+  "kind": "am1-offline-handoff-package",
+  "entries": 477,
+  "archive_bytes": 1564017,
+  "archive_sha256": "af66d22c26c7498c0f98bfb0b584aae1ca65c205c9b6543ad52bb37631df08a6",
+  "manifest_sha256": "836f1da29527aed983ac3a8c51db86b46b668b62945022359738ad0f08aff983",
+  "all_members_verified": true,
+  "provider_calls": 0,
+  "api_spend_micro_usd": 0,
+  "provider_enabled_launcher": false
+}

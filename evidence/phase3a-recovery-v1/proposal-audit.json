@@ -1,0 +1,73 @@
+{
+  "SDK_constructions": 0,
+  "assumptions": "ordinary uncached input; standard public PAYG; all billed thinking/tool/conversation tokens included in per-request means; fixed original profiles; no fast/batch/server tools; not a cache or invoice forecast",
+  "authorized": false,
+  "carry_micro_usd": 14135297,
+  "combined_checkpoint_exposure_micro_usd": 64995297,
+  "combined_total_exposure_micro_usd": 219995297,
+  "conditional_demand_not_forecast": {
+    "heavier": {
+      "clean_conversations": 12,
+      "editor_mean_input_output": [
+        32000,
+        4000
+      ],
+      "quality_heads_per_assessment": 10,
+      "turns_per_conversation": 8,
+      "usd": {
+        "editor_clean": "27.456000",
+        "editor_per_call": "0.286000",
+        "new_first_all_second_shapes": "21.555760",
+        "new_first_including_duplicate": "14.691760",
+        "new_total_all_second_shapes": "82.074280",
+        "new_total_clean": "54.618280",
+        "unchanged_other_components": "27.162280"
+      }
+    },
+    "working": {
+      "clean_conversations": 12,
+      "editor_mean_input_output": [
+        12000,
+        1000
+      ],
+      "quality_heads_per_assessment": 5,
+      "turns_per_conversation": 8,
+      "usd": {
+        "editor_clean": "8.976000",
+        "editor_per_call": "0.093500",
+        "new_first_all_second_shapes": "6.936130",
+        "new_first_including_duplicate": "4.692130",
+        "new_total_all_second_shapes": "27.113890",
+        "new_total_clean": "18.137890",
+        "unchanged_other_components": "9.161890"
+      }
+    }
+  },
+  "configured_adaptive_maximum_output": 964608,
+  "credential_contents_read": false,
+  "cumulative_attempt_ceiling": 952,
+  "definition_sha256": "0fc81798f6f92df63f89062a5a427447c7f34110fec59331c004fe4e6002b984",
+  "equal_allowed_inference_vector": {
+    "http": 96,
+    "input": 4000000,
+    "output": 786432,
+    "usd": 20
+  },
+  "historical_known_micro_usd": 2695297,
+  "implementation_started": false,
+  "joint_output_limit_can_stop_earlier": true,
+  "kind": "phase3a-r2-proposal-arithmetic-audit-v1",
+  "new_assessment_micro_usd": 45860000,
+  "new_attempt_ceiling": 775,
+  "new_cap_micro_usd": 205860000,
+  "new_first_attempt_ceiling": 202,
+  "new_first_cap_micro_usd": 50860000,
+  "original_folder_accessed": false,
+  "overlapping_first_assessment_micro_usd": 23700000,
+  "parent_specification_sha256": "637bf3f85064ad2372ed1c0d7c92f953db3b980137439a86614aa3f3f7008aa0",
+  "passed": true,
+  "prior_attempts": 177,
+  "provider_calls": 0,
+  "unknown_reconciled_or_released": false,
+  "unresolved_historical_micro_usd": 11440000
+}

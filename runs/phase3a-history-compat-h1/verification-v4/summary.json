@@ -1,0 +1,33 @@
+{
+  "H1_complete": false,
+  "H1_engineering_checks_passed": true,
+  "api_spend": 0,
+  "fixture": true,
+  "independent_acceptance_required": true,
+  "kind": "PRESERVATION AMENDMENT",
+  "paid_launcher_readiness_claimed": false,
+  "proof_script_sha256": "ea6a2c10d267e20c51a5548b0eff52e2ebe21e243392bdb59c7ba112576c1be2",
+  "provider_calls": 0,
+  "real_provider_signature_validation_tested": false,
+  "rerun": [
+    "Ruff",
+    "Mypy",
+    "Bandit",
+    "all 8 unit methods including preservation tripwires",
+    "authenticated 294-file R3 preservation before/after",
+    "10-source before/after and exact v3 component/AST equality",
+    "all retained v3 evidence hashes before/after"
+  ],
+  "reused": [
+    "unchanged immutable derived image and baseline layers",
+    "393039-entry private-first whole-runtime comparison",
+    "actual installed SDK conversion/order/incomplete-stream probes",
+    "all five native changed/KEEP/negative cases"
+  ],
+  "reused_evidence_manifest_sha256": "9fbfccf63b0fe5057353623b8efacceb18628f384e6b0b88065114be70fd6c22",
+  "runtime_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "scientific_complete": false,
+  "source_sha256": "0ab7775b63193b5de354f33ffa46ad8086e6a080bae6bd757090d0003769f813",
+  "v3_source_preserved_and_v3_results_unmodified": true,
+  "v3_summary_sha256": "f7b24da3daeeb0da645e94483035447d658f8a747a5c4d0204919f5fe275aca8"
+}

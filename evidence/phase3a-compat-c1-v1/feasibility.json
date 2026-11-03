@@ -1,0 +1,16 @@
+{
+  "deadline_utc": "2026-10-29T17:19:11Z",
+  "decision": "narrow-external-seam-feasible",
+  "evidence_delivery_requirement": "freeze manifest before SDK fixture; reconstruct exact original bytes from actual returned model-visible tool content before decision",
+  "guard_carrier": "unchanged strict Ledger requires775-slot carrier; only one synthetic adaptive cell is admitted, all other slots unused, fixture authority false and no live route",
+  "kind": "phase3a-c1-feasibility-decision-v1",
+  "parent_source_sha256": "a3b9403d6bc0a144d0bb74e74a330ccf057850da0d23dcb2d9059d94a20883e3",
+  "protected_original_accessed": false,
+  "provider_calls": 0,
+  "read_limit_correction": "OpenCode read truncates lines beyond 2000 characters and total read bytes; bounded lossless views plus pretty manifest avoid those surfaces without semantic summary",
+  "real_credentials_used": false,
+  "recorded_utc": "2026-10-29T16:38:30.109468+00:00",
+  "seam": "AccountedProposer.call -> native Proposer.call -> actual OpenCode; scoped auxiliary views removed after call; native harvest/probes/composition/selection unchanged",
+  "selected_correction": "one shared versioned three-string authoring contract with INV/DOM/AGG roles and exact lossless evidence views",
+  "source_preservation_passed": true
+}

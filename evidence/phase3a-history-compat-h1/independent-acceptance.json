@@ -1,0 +1,237 @@
+{
+  "H1_complete": true,
+  "api_spend": 0,
+  "authorship_disclosure": "This separate worker authored none of the H1 implementation, native fixture, main test suite, verifier, Dockerfile or v4 amendment. It contributed upstream research, reviewed source and retained evidence, executed additional isolated guard checks, and authored the independent private-scanner regression and this receipt.",
+  "created_at_utc": "2026-10-30T22:42:29.359204+00:00",
+  "credentials_accessed": false,
+  "criteria": {
+    "H1-01": {
+      "evidence": "Baseline native loss reproduces at1 mock call; actual installed SDK preserves signed-empty before the lossy OpenCode transform.",
+      "passed": true
+    },
+    "H1-02": {
+      "evidence": "Installed SDK/fixed OpenCode retains exact synthetic signed-empty, visible and redacted blocks, tools and within-response [thinking,tool1,thinking,tool2] ordering; all prior assistant ownership/history remains exact.",
+      "passed": true
+    },
+    "H1-03": {
+      "evidence": "Unchanged pinned Harness2 Proposer.call normal EDIT11 rounds and grounded KEEP_BASE10 rounds; full evidence seen, notes reread, verification after write, normal final; no terminal note used.",
+      "passed": true
+    },
+    "H1-04": {
+      "evidence": "13 history-tamper variants stop before next mock admission; incomplete response and stopped-latch checks forbid second dispatch; identical relay request replays with one admission; ordinary15 limit enforced.",
+      "passed": true
+    },
+    "H1-05": {
+      "evidence": "Only the authorized two target hunks differ in the new immutable image; same scanned-other-entry digest and base layers; no history restoration or dependency/settings changes.",
+      "passed": true
+    },
+    "H1-06": {
+      "evidence": "Fresh v4 Ruff/Mypy/Bandit/all8 unit methods pass, independently authenticated preservation and retained proofs pass; failed source snapshots retained; this separate review completes the bounded acceptance gate.",
+      "passed": true
+    }
+  },
+  "definition": "PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md",
+  "definition_version": "1.2",
+  "evidence_composition": {
+    "all_existing_HistoryTests_AST_unchanged": true,
+    "changed_since_v3": [
+      "followups/phase3a_history_compat_h1/verify.py: preserved_r3 only",
+      "followups/phase3a_history_compat_h1/tests.py: import and two new PreservationTests methods"
+    ],
+    "current_source_is_not_identical_to_full_v3_source": true,
+    "full_runtime_and_native_gate": "runs/phase3a-history-compat-h1/verification-v3",
+    "preservation_amendment": "runs/phase3a-history-compat-h1/verification-v4",
+    "rerun_by_author_v4": [
+      "Ruff",
+      "Mypy",
+      "Bandit",
+      "all8 unit methods, including8 unauthenticated-map variants and symlink/junction ancestor traps",
+      "authenticated294-file R3 preservation before/after",
+      "10-source equality and v3 component/AST equality",
+      "all161 retained v3 evidence hashes before/after"
+    ],
+    "retained_v3_evidence_files_rehashed": 161,
+    "reused": [
+      "immutable derived image and baseline layer ancestry",
+      "393039-entry private-first runtime comparison",
+      "actual installed AI SDK/OpenCode conversion, ordering and incomplete-stream probes",
+      "five native Proposer.call changed/KEEP/negative cases"
+    ],
+    "terminal_execution_attestation": "evidence/phase3a-history-compat-h1/terminal-execution.json",
+    "terminal_status_basis": "Reviewed actual saved successful check records and the separate author's tool-session terminal-execution attestation. The reviewer did not rerun the full393039-entry inventory or native matrix.",
+    "unchanged_components_verified": 8,
+    "unchanged_verifier_AST_outside_preserved_r3": true
+  },
+  "evidence_sha256": {
+    "evidence/phase3a-c1-completion-v4/live-packet-acceptance.json": "96e00d4179252ddf3370af34ca2cf30ff536e9198cc5b5e5279d431b839ee075",
+    "evidence/phase3a-history-compat-h1/filter-only-image.json": "65ced1cd6bd98c93f1e1972f94b7cfbebd4395e14174f756b8645ac06c7c0e5a",
+    "evidence/phase3a-history-compat-h1/filter-only-valid-order-probe.json": "1809d1d4543cacc99f88e1d8a0efd24766b2798880a257da9e5b60f6fa5bf118",
+    "evidence/phase3a-history-compat-h1/independent-private-scan-check.py": "44e1c751153d048b95323393bddc49977c011dabe29655784a15f02846c189ea",
+    "evidence/phase3a-history-compat-h1/independent-private-scan-result.json": "bddf8d3916c52c0ee99d28a4496e8507b8f97921190ec80647f2f1fff15f1471",
+    "evidence/phase3a-history-compat-h1/terminal-execution.json": "ddc4f9422c19fa4d4a366626d58310e7a742e80b866f0a41025e86aa776619f0",
+    "evidence/phase3a-history-compat-h1/unaccepted-v1/rejection.json": "9aa854f9be02ea3779d5128280f10ed2a677e63fca3ceddc01ebef25ae2b0ed8",
+    "evidence/phase3a-history-compat-h1/unaccepted-v2/rejection.json": "6385c64781d725315755b1a29765ab1150245a5420db5d15ad912faa8ee72cb0",
+    "evidence/phase3a-history-compat-h1/unaccepted-v3/rejection.json": "716736816e44ea02825dbbc2eb7f7d1a1d28babf730f326270f4815f45b7bf58",
+    "runs/phase3a-c1-completion-v4/live-closeout-v1/report-proof.json": "0517ba1ce01ef79efc4006086993dcf6512a83a70c2d695fede98e99cb08c3cf",
+    "runs/phase3a-history-compat-h1/verification-v3/source-after.json": "a3b9f8522b66c8b941ffde1590080ec7af3494983a09ccffd09955c0d1a641bd",
+    "runs/phase3a-history-compat-h1/verification-v3/source-before.json": "a3b9f8522b66c8b941ffde1590080ec7af3494983a09ccffd09955c0d1a641bd",
+    "runs/phase3a-history-compat-h1/verification-v3/summary.json": "f7b24da3daeeb0da645e94483035447d658f8a747a5c4d0204919f5fe275aca8",
+    "runs/phase3a-history-compat-h1/verification-v4/bandit.json": "2ced7942b40a56d0b2c278e52a25769871dabb41ab52bb233cb64940a3d237a4",
+    "runs/phase3a-history-compat-h1/verification-v4/component-equality.json": "c45abb648183c6b77a1402d057cae9fb9fdd22968f54f4bc59e923e99038c36f",
+    "runs/phase3a-history-compat-h1/verification-v4/fixed-image.json": "34fd54e7f36789334ce0846f067c3f01d133379e4dd2e32de390c4ddd93c40b9",
+    "runs/phase3a-history-compat-h1/verification-v4/mypy.json": "204fc4376159b8381a571815f65977d950662afbc4e571029d123498475e3ac5",
+    "runs/phase3a-history-compat-h1/verification-v4/preservation-amendment.py": "ea6a2c10d267e20c51a5548b0eff52e2ebe21e243392bdb59c7ba112576c1be2",
+    "runs/phase3a-history-compat-h1/verification-v4/r3-preservation-after.json": "05a65f2ae7d15b4b89e480d0704f002ab8ec195af203ef971cd8c6a535ccf098",
+    "runs/phase3a-history-compat-h1/verification-v4/r3-preservation-before.json": "05a65f2ae7d15b4b89e480d0704f002ab8ec195af203ef971cd8c6a535ccf098",
+    "runs/phase3a-history-compat-h1/verification-v4/reused-v3-evidence.json": "9fbfccf63b0fe5057353623b8efacceb18628f384e6b0b88065114be70fd6c22",
+    "runs/phase3a-history-compat-h1/verification-v4/ruff.json": "6bfded8f10a4949961e254b7be12ce6d484a0b34542271647f7919fee3fa7c50",
+    "runs/phase3a-history-compat-h1/verification-v4/source-after.json": "39dd79c1444412fa876479aa0afa6346cc8e31381ed9966166438000ba0b0b10",
+    "runs/phase3a-history-compat-h1/verification-v4/source-before.json": "39dd79c1444412fa876479aa0afa6346cc8e31381ed9966166438000ba0b0b10",
+    "runs/phase3a-history-compat-h1/verification-v4/summary.json": "d67a8a09e6df89d3863e84f0c53b43225a3d7e64023ed316db625a8289df41d9",
+    "runs/phase3a-history-compat-h1/verification-v4/unit.json": "5755bd66fd822eed7616c358eed768f80d7abd11a5cd32687479401f89b6b050"
+  },
+  "findings": [],
+  "independent_additional_checks": {
+    "R3_closure_input_files_rehashed": 974,
+    "current_R3_source_files_rehashed": 294,
+    "current_source_files_rehashed": 10,
+    "failed_source_snapshots_verified": {
+      "v1": 10,
+      "v2": 10,
+      "v3": 10
+    },
+    "guard_check": {
+      "checks": [
+        {
+          "case": "unknown",
+          "delegate_calls": 1,
+          "repeat_rejected": true
+        },
+        {
+          "case": "delegate-exception",
+          "delegate_calls": 1,
+          "repeat_rejected": true
+        },
+        {
+          "case": "malformed-thinking",
+          "delegate_calls": 1,
+          "repeat_rejected": true
+        },
+        {
+          "case": "complete-15-turn-sequence",
+          "delegate_calls": 15,
+          "request_objects_unmodified": true,
+          "turn16_rejected": true
+        }
+      ],
+      "fixture": true,
+      "network_blocked": true,
+      "passed": true,
+      "provider_calls": 0
+    },
+    "guard_check_actual_exit_code": 0,
+    "private_scanner_check": "New scanner made zero private DirEntry classifications/lstat/content reads; known-bad os.walk was rejected by the classification trap on synthetic private entries.",
+    "private_scanner_result": "evidence/phase3a-history-compat-h1/independent-private-scan-result.json",
+    "private_scanner_runnable": "python -B evidence/phase3a-history-compat-h1/independent-private-scan-check.py",
+    "retained_R3_source_files_rehashed": 294,
+    "upstream_checkouts": {
+      "harness2": {
+        "head": "1cfe254e8d25b15f37048c3730134686abe60335",
+        "tracked_changes": 0
+      },
+      "novelty-bench": {
+        "head": "64a23be6b18ec1dacc298830aab276061b6e143c",
+        "tracked_changes": 0
+      }
+    },
+    "v1_snapshot_disclosure": "Later exact reconstruction from retained v2 source plus inverse documented cache-constant change; every original v1 full-file SHA matched. It is not represented as a contemporaneous copy.",
+    "v3_source_snapshot_files_rehashed": 10
+  },
+  "kind": "phase3a-history-compat-h1-independent-offline-acceptance-v1",
+  "limits": [
+    "Offline synthetic-fixture compatibility evidence only; no real Anthropic cryptographic signature validation and no provider effectiveness claim.",
+    "Anthropic selected path only. Baseline filter branch is shared with Bedrock; unchanged or compatible Bedrock behavior was not established.",
+    "Actual SDK truncated-stream probe and guard incomplete-result unit are compositional checks, not a combined native end-to-end truncation-recovery demonstration.",
+    "Guard covers ordinary editor turns1–15. Terminal16, scheduler integration, resumable paid execution, grant/accounting authority and new paid kit are outside H1.",
+    "An invalid response ending in thinking was retained as a negative; valid interleaving positive ends in a tool block.",
+    "V1/V2/V3 source and failed/unaccepted records remain historical. Acceptance is of current10-source identity plus explicitly retained v3 component evidence.",
+    "R3 readiness/scientific failure is unchanged; H1 does not authorize or execute a new experiment."
+  ],
+  "native_cases": {
+    "baseline-loss": {
+      "mock_http_calls": 1,
+      "native_reply_ok": false
+    },
+    "filter-only-order-loss": {
+      "mock_http_calls": 2,
+      "native_reply_ok": false
+    },
+    "fixed-changed": {
+      "mock_http_calls": 11,
+      "native_reply_ok": true
+    },
+    "fixed-unchanged": {
+      "mock_http_calls": 10,
+      "native_reply_ok": true
+    },
+    "invalid-ending": {
+      "mock_http_calls": 1,
+      "native_reply_ok": false
+    }
+  },
+  "paid_launcher_readiness_claimed": false,
+  "passed": true,
+  "phase3a_complete": false,
+  "protected_original_accessed": false,
+  "provider_calls": 0,
+  "real_provider_streams_accessed": false,
+  "reviewer": "/root/research_history_compat",
+  "runtime_change": "Exactly two upstream-derived hunks in the actual installed baseline file; signature/redacted-aware empty-reasoning retention and removal of Anthropic/Vertex tool reordering. No dependency, lockfile, model, prompt, SDK or science-setting upgrade.",
+  "runtime_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "runtime_inventory": {
+    "baseline_fixed_scanned_entries_equal": true,
+    "docker_injected_files_excluded": [
+      "/etc/hostname",
+      "/etc/hosts",
+      "/etc/resolv.conf"
+    ],
+    "excluded_bytes_limit": "Private exclusions were not read or hashed. Unchanged base-layer ancestry and single-target patch are separate evidence; they do not turn exclusions into direct byte comparisons.",
+    "private_file_bytes_directly_compared": false,
+    "private_names_excluded_before_metadata": 2,
+    "scanned_other_entries": 393039,
+    "scanned_other_entries_sha256": "c7e622eb49f1f72e803ed3936ad0a0aae55e21efcd7e3a81688ac4d98fddb02a",
+    "virtual_mounts_excluded": [
+      "/dev",
+      "/proc",
+      "/sys"
+    ]
+  },
+  "runtime_target": "/opt/phase3a-opencode/packages/opencode/src/provider/transform.ts",
+  "runtime_target_after_sha256": "037e295c1905487293ebf99f660d889343eb4e675cd9223329df3febace72821",
+  "runtime_target_before_sha256": "13eeb2824f9455f216a6f948c1718e53d4a148a2108fc1d13fa32858fb63b462",
+  "scientific_complete": false,
+  "source_files": {
+    "PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md": "3375060b7252941a1aa9c8860232231c7edbe8af836e5940111c075b2a9bbf1a",
+    "followups/phase3a_history_compat_h1/Dockerfile": "69f80a5e96a4d68ba3960050e65a0e5255bc88ae8f3515eb56d476c22df49c04",
+    "followups/phase3a_history_compat_h1/README.md": "1ab1da6900cdc8604743d7d14f1b441a089152bcafe0398cef891cb223a61a65",
+    "followups/phase3a_history_compat_h1/__init__.py": "bcb32f9c7c23db235a44ce55ccecadee64f51b72b1cb9fd9cf7810c856d895d2",
+    "followups/phase3a_history_compat_h1/fixture.py": "477a0ad1551e10668c6482e3e227e0726283f757382929d51819eafd83985223",
+    "followups/phase3a_history_compat_h1/guard.py": "b80415038bec5b70fc66ef536f556e44a4d9f7a28237d383a505589c9916e78d",
+    "followups/phase3a_history_compat_h1/probe.ts": "29ac3a5531ccd583f0896a731e4141a2fee6e4316d1e2dbb9355620cb7c0f54f",
+    "followups/phase3a_history_compat_h1/runtime.py": "37f0a89c8f47b84afaa088a272800d2657d217327c148558cfdd9872bed5356d",
+    "followups/phase3a_history_compat_h1/tests.py": "40446f9466d30e2cf62f9368062b36ed16471dbf308427dc0df600221303f05f",
+    "followups/phase3a_history_compat_h1/verify.py": "fa70d508cabf0d52c291a0dacec671938e43321b180addf46caf177d2db6a766"
+  },
+  "source_sha256": "0ab7775b63193b5de354f33ffa46ad8086e6a080bae6bd757090d0003769f813",
+  "upstream_fixes": [
+    {
+      "merge_commit": "4e14f79511728d04329da664b747dd0b359cf931",
+      "pull_request": "https://github.com/anomalyco/opencode/pull/26276"
+    },
+    {
+      "merge_commit": "59403040987137a367f259884766efc363725c39",
+      "pull_request": "https://github.com/anomalyco/opencode/pull/30483"
+    }
+  ],
+  "verdict": "H1 definition1.2 accepted for the bounded offline Anthropic history-compatibility component, using full v3 runtime/native evidence plus the narrowly verified v4 preservation amendment."
+}

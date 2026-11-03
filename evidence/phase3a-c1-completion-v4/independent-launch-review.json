@@ -1,0 +1,176 @@
+{
+  "actual_finished_zip_verified": false,
+  "authorship_disclosure": "This reviewer authored no implementation, tests, launcher, scientific/admission/launch scope-owner certificate, or evidence-generation code. This separate AI worker performed read-only inspection and independently implemented local verification checks; its sole repository write is this certificate. The launch scope owner disclosed implementation/integration authorship.",
+  "created_at_utc": "2026-10-30T18:24:26.493714+00:00",
+  "distinct_scheduled_checks": 126,
+  "evidence_sha256": {
+    "evidence/phase3a-c1-completion-v4/admission-acceptance.json": "6ca59edd5e42fcd21c428ed5bbc36fd061f934aed1bc1bd7ad211e2b12ca9855",
+    "evidence/phase3a-c1-completion-v4/independent-admission-review.json": "6a497a4b7a5e913a21a002fa1fbbb64ed4974790e2cfc7210778880b494cfba4",
+    "evidence/phase3a-c1-completion-v4/launch-acceptance.json": "0218882008016a2590471f91d5f78081b0d98a9bf5a815cc2b79d6257da22fb3",
+    "evidence/phase3a-c1-completion-v4/scientific-acceptance.json": "4da4b02b70baa71b9c05e6a40d4c4a6b1b8d2fe2106410a0197523e5874b09f7",
+    "evidence/phase3a-c1-completion-v4/unaccepted-candidate-v1/candidate-rejection.json": "211cceaef82271ac708d3d9edaa0082b5c8153622e6e47edd3397d9dec5015fa",
+    "evidence/phase3a-c1-completion-v4/unaccepted-candidate-v2/candidate-rejection.json": "422ede3d625024520c563b7542308dd16ef594526a92e0f49c36692894878b93",
+    "runs/phase3a-c1-completion-v4/launcher/12046f8b072043ebb524cd16b97c19e3.inspection.json": "0fb1f6f49c603d3d95bcadc4db7f58d84da6c88a657c9dbec352107248b8ce1f",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.inspection.json": "355353b577b0368c5df30079ba6c0f0b048ba5d4e2d515d0bb7b276298775a6e",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.result.json": "256fdca02ff1e0b45fa1d4ffa5f31b7f0b4610a6cf3fbea101029c95538daa1a",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.stdout.log": "78abd4239e80c58caff6e32e43e65255984c9b56844b15d526b9a9a08764c082",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-config.log": "5b724b7484731f47fc9def7d8e751b894fc69be56bb9e7140cf286b3dde369c3",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-host.json": "5e8655ff0896813aa9af42f321626a85d6fa984992fd8b2f87b1b9fd1ec6a89a",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-mock.log": "b27a9087a517e30be711b0e437167a77d257feaa899dab3dd1fab6ec68778c78",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher.json": "45cfbd5c444c6d32fdb0b83bdf4e6811d82035850f9a595df9a7e8f3e5353243",
+    "runs/phase3a-c1-completion-v4/verification-v3/matrix.json": "42247aed0c017546b3459e4f0bd205b1a54f645fc7ef83a6afc3c41e37698fa0",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation-after.json": "5f6ab5c200b2c16ea1f80f6ed569ea46fc8df042a681da00eb63ea62c72e8a5d",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation-before.json": "5f6ab5c200b2c16ea1f80f6ed569ea46fc8df042a681da00eb63ea62c72e8a5d",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation.json": "eed6a29fedd842631c470086953015a7a232d8eafd8478cd7cc55641663983ea",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/live-grant.json": "b58296e40f176d502b42054dc48d37fa46c682824bb745cb9b1f1ce0a62cef90",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/mock-grant.json": "f8974aed8e413cc1b36978beff66ffb9365693d472fc513461e0955d6880e763",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/offline-gate.json": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/study.json": "80da9e8702941323e1abbb78df9ceaa568ed3462a4ea3c4c28522064d0b2c37e",
+    "runs/phase3a-c1-completion-v4/verification-v3/replay.json": "308140c39f4d591a5a88cfdd4ec21b44ebf982c6acdd5c7f2f2c2fd7a799a6ad",
+    "runs/phase3a-c1-completion-v4/verification-v3/source-after.json": "9ef919ea357be9d13da2ee06d6b7cc67cab6fc90d70065fc517c7e24e2052030",
+    "runs/phase3a-c1-completion-v4/verification-v3/source-before.json": "9ef919ea357be9d13da2ee06d6b7cc67cab6fc90d70065fc517c7e24e2052030",
+    "runs/phase3a-c1-completion-v4/verification-v3/static.json": "cf5e1dd218eb2479c783c56c42f45a0c517728d20f18247ec9280199e686d2db",
+    "runs/phase3a-c1-completion-v4/verification-v3/tests.json": "b22800288b5023c718a38a751dbb24b3a1048a935dc1526b82f33392b0ca5df2",
+    "runs/phase3a-c1-completion-v4/verification-v3/tests.log": "10b3392f32db6ceaabb20db7435d7934a598fcd7fc7740da3aacf8e8b69c7ad4",
+    "runs/phase3a-c1-completion-v4/verification-v3/verifier-exit.json": "c1958c2a088d492afd93410706954425cf14fba511f29a4ed214380066bf0a72",
+    "runs/phase3a-c1-completion-v4/verification-v3/windows-tests.json": "a75d67ba05c481a9e8d0de0e2cdfe14283ccc8a4086a7ae742fecbbcea12971e",
+    "runs/phase3a-c1-completion-v4/verification-v3/windows-tests.log": "a55d27a096426bb6f10289404bdcfaa2715c936e22fb010625ebd9aa9b019ddb",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/PHASE3A_REPORT.md": "698682a9a667affe6aba1ebdb88c2fa5e617d2dd6db07dba6e1a0b41b426b402",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/accounting.json": "6ed4142ba57bad986399d0765ec641045f5d0fbe8044416f96c75a8f8f86fa46",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/analysis.json": "bd63255d7940ddce4795f542711d525fc2b30d0bdcd74605c786482aacc83382",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/coverage.json": "4dbb5d8e3538adb230ca9ca081299c9fd015a59d97d63d285609bcf5d6adbbbb",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/protocol.json": "ef59ffeff6a597c0be915f7378eca052c110a5a5c06d87a764f0dcf56515b724",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/readiness.json": "bb02970234766f88fb3d017233d10a3c8482409d4cb9f14254f4d1b8a73e5c57",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/rows.json": "1b40b302b32670c7369d21647946f4c319336f889a89ee5443d86a744bbbeb66",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/summary.json": "da29dfbcd3adc75b6cef25a7846925bd6a5f28a440ecc9e34ea6d698f696aded",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/PHASE3A_REPORT.md": "698682a9a667affe6aba1ebdb88c2fa5e617d2dd6db07dba6e1a0b41b426b402",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/accounting.json": "6ed4142ba57bad986399d0765ec641045f5d0fbe8044416f96c75a8f8f86fa46",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/analysis.json": "bd63255d7940ddce4795f542711d525fc2b30d0bdcd74605c786482aacc83382",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/coverage.json": "4dbb5d8e3538adb230ca9ca081299c9fd015a59d97d63d285609bcf5d6adbbbb",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/protocol.json": "ef59ffeff6a597c0be915f7378eca052c110a5a5c06d87a764f0dcf56515b724",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/readiness.json": "bb02970234766f88fb3d017233d10a3c8482409d4cb9f14254f4d1b8a73e5c57",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/rows.json": "1b40b302b32670c7369d21647946f4c319336f889a89ee5443d86a744bbbeb66",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/replay/summary.json": "da29dfbcd3adc75b6cef25a7846925bd6a5f28a440ecc9e34ea6d698f696aded"
+  },
+  "exact_zero_new_call_report_replay": true,
+  "findings": [],
+  "fixture_primary_scores": 8,
+  "gate_evidence": {
+    "launcher": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/launcher.json",
+      "sha256": "45cfbd5c444c6d32fdb0b83bdf4e6811d82035850f9a595df9a7e8f3e5353243"
+    },
+    "matrix": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/matrix.json",
+      "sha256": "42247aed0c017546b3459e4f0bd205b1a54f645fc7ef83a6afc3c41e37698fa0"
+    },
+    "preservation": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/preservation.json",
+      "sha256": "eed6a29fedd842631c470086953015a7a232d8eafd8478cd7cc55641663983ea"
+    },
+    "replay": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/replay.json",
+      "sha256": "308140c39f4d591a5a88cfdd4ec21b44ebf982c6acdd5c7f2f2c2fd7a799a6ad"
+    },
+    "static": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/static.json",
+      "sha256": "cf5e1dd218eb2479c783c56c42f45a0c517728d20f18247ec9280199e686d2db"
+    },
+    "tests": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/tests.json",
+      "sha256": "b22800288b5023c718a38a751dbb24b3a1048a935dc1526b82f33392b0ca5df2"
+    }
+  },
+  "host_actions": [
+    {
+      "action": "mock",
+      "actual_credentials_supplied": false,
+      "inspection_file_sha256": "355353b577b0368c5df30079ba6c0f0b048ba5d4e2d515d0bb7b276298775a6e",
+      "inspection_path": "/results/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.inspection.json",
+      "mode": "mock",
+      "network_mode": "none",
+      "new_mock_calls": 0,
+      "runtime_executed": true
+    },
+    {
+      "action": "config",
+      "actual_credentials_supplied": false,
+      "inspection_file_sha256": "0fb1f6f49c603d3d95bcadc4db7f58d84da6c88a657c9dbec352107248b8ce1f",
+      "inspection_path": "/results/phase3a-c1-completion-v4/launcher/12046f8b072043ebb524cd16b97c19e3.inspection.json",
+      "mode": "provider-config",
+      "network_mode": "bridge",
+      "new_mock_calls": null,
+      "runtime_executed": false
+    }
+  ],
+  "kind": "phase3a-c1-completion-r3-independent-launch-review-v1",
+  "launcher_sha256": "0149a21063a6b394e460a01885ff332e1f5fdc575093936da6a01bf85ee75dbb",
+  "limitations": [
+    "This is a separate non-author AI worker cross-review, not an independent human audit.",
+    "Physical Windows file-symlink creation was unavailable; actual junction and missing-descendant rejection were exercised. Physical Windows file-symlink rejection is not claimed.",
+    "Historical preservation is supported by the completed source-bound gate and identical before/after preservation records; this launch review did not independently rehash every historical collection or all 3,966 retained candidate snapshot bytes.",
+    "Scripted offline fixtures do not establish live model completion, semantic grounding, scientific effectiveness, account access, credits, quota or invoice settlement.",
+    "Historical known cost of $13.101271 and held liability of $22.88 remain retained; no historical hold is reconciled or released.",
+    "All time, token, call, reservation and dollar limits overlap and can stop execution below the ceiling. This certificate does not guarantee full live completion.",
+    "The actual public ZIP must still be built and independently verified against its complete member inventory, SHA256, CRC, working bytes and both retained candidate snapshot sets; its external receipt must bind this exact certificate before provider key entry."
+  ],
+  "linux_checks_passed": 123,
+  "mock_http_calls": 711,
+  "non_author_of_reviewed_implementation": true,
+  "offline_gate_file_sha256": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+  "offline_gate_seal_sha256": "5a58a241f9ee7b8cd0a2b5840452e80700171913e226891b0a6b66d86c338b4e",
+  "outcome": "No blocking finding within the reviewed offline launch/source/gate scope. This does not certify a built archive or authorize bypass of independent external packet acceptance.",
+  "packet_acceptance_required_separately": true,
+  "passed": true,
+  "policy_sha256": "a43e580d1d3cd9ad49f10d5633c5895e87d97be1a6af5571bc21e66c9871918e",
+  "preservation_before_after_bytes_identical": true,
+  "private_file_metadata_or_content_accessed": false,
+  "project_tests_or_containers_launched_by_reviewer": false,
+  "protected_original_accessed": false,
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "real_provider_calls_by_reviewer": 0,
+  "report_sha256": {
+    "PHASE3A_REPORT.md": "698682a9a667affe6aba1ebdb88c2fa5e617d2dd6db07dba6e1a0b41b426b402",
+    "accounting.json": "6ed4142ba57bad986399d0765ec641045f5d0fbe8044416f96c75a8f8f86fa46",
+    "analysis.json": "bd63255d7940ddce4795f542711d525fc2b30d0bdcd74605c786482aacc83382",
+    "coverage.json": "4dbb5d8e3538adb230ca9ca081299c9fd015a59d97d63d285609bcf5d6adbbbb",
+    "protocol.json": "ef59ffeff6a597c0be915f7378eca052c110a5a5c06d87a764f0dcf56515b724",
+    "readiness.json": "bb02970234766f88fb3d017233d10a3c8482409d4cb9f14254f4d1b8a73e5c57",
+    "rows.json": "1b40b302b32670c7369d21647946f4c319336f889a89ee5443d86a744bbbeb66",
+    "summary.json": "da29dfbcd3adc75b6cef25a7846925bd6a5f28a440ecc9e34ea6d698f696aded"
+  },
+  "retained_candidates": {
+    "v1": {
+      "record_sha256": "211cceaef82271ac708d3d9edaa0082b5c8153622e6e47edd3397d9dec5015fa",
+      "rehashed_all_snapshot_bytes_in_this_launch_review": false,
+      "snapshot_references": 1994
+    },
+    "v2": {
+      "record_sha256": "422ede3d625024520c563b7542308dd16ef594526a92e0f49c36692894878b93",
+      "rehashed_all_snapshot_bytes_in_this_launch_review": false,
+      "snapshot_references": 1972
+    }
+  },
+  "reviewer": "/root/r3_packet_crosscheck",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "same_windows_only_checks_passed": 3,
+  "scope": [
+    "Completed offline launch source and exact six-group gate acceptance only.",
+    "All 294 current and retained source hashes match the final freeze.",
+    "126 distinct scheduled checks: 123 Linux passes plus the same three Windows-only passes.",
+    "Complete 711-call offline matrix and eight saved report files with exact zero-call byte-identical replay.",
+    "Actual host mock network-none zero-new-call replay and provider configuration bridge created/inspected without startup or key entry.",
+    "Exact release/grant/inspection/image/mount/resource bindings and packet/review acceptance interlock before provider key handshake."
+  ],
+  "scope_and_admission_certificate_sha256": {
+    "admission-acceptance.json": "6ca59edd5e42fcd21c428ed5bbc36fd061f934aed1bc1bd7ad211e2b12ca9855",
+    "independent-admission-review.json": "6a497a4b7a5e913a21a002fa1fbbb64ed4974790e2cfc7210778880b494cfba4",
+    "launch-acceptance.json": "0218882008016a2590471f91d5f78081b0d98a9bf5a815cc2b79d6257da22fb3",
+    "scientific-acceptance.json": "4da4b02b70baa71b9c05e6a40d4c4a6b1b8d2fe2106410a0197523e5874b09f7"
+  },
+  "source_before_after_bytes_identical": true,
+  "source_files_verified_current_and_retained": 294,
+  "source_sha256": "5c592fdf7724fe7371491ab3b2ec2c5d223bcaf7bede091485789d5050a5ecfb",
+  "study_sha256": "080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34"
+}

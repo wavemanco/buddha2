@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "54fa614b7260d0a2398f0c52911f47df5e5f390032d5211a81ffbe0f32314d43"
+  ],
+  "exit_code": 2,
+  "stderr": "python: can't open file '/workspace/\\\\workspace\\\\runs\\\\phase3a-h1-integrated-v1\\\\verification-v4\\\\provider-preflight-v1\\\\provider_preflight.py': [Errno 2] No such file or directory\n",
+  "stdout": ""
+}

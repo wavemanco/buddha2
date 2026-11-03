@@ -1,0 +1,26 @@
+{
+  "additional_cap_micro_usd": 30000000,
+  "answer_plan_rank_generation_authorized": false,
+  "combined_accounted_ceiling_micro_usd": 35983504,
+  "credential_method": "operator masked prompts after actual runtime inspection; transient stdin only",
+  "definition": "PHASE2B_RANK_FORMAT_DEFINITION.md",
+  "definition_sha256": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517",
+  "definition_version": "1.0",
+  "fresh_native_orders": 4,
+  "implementation_authorized": true,
+  "kind": "p2bn-user-authorization-v1",
+  "max_new_requests": 44,
+  "new_roles": [
+    "group",
+    "quality"
+  ],
+  "offline_gate_required_before_live": true,
+  "original_strict_result_rewrite_authorized": false,
+  "provider_calls_at_recording": 0,
+  "recorded_at_utc": "2026-10-28T16:38:40Z",
+  "recursive_adaptation_authorized": false,
+  "retries_fallbacks_replacements_authorized": false,
+  "shared_historical_cost_micro_usd": 5983504,
+  "source": "Current user reply after P2B-N definition in thread01a170c9-414e-7771-8348-897bd81b945e",
+  "user_reply_exact": "proposed budget and caps are approved"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "selection_revision": "phase1-muce-v1",
+  "dataset": "CNCL-Penn-State/MuCE",
+  "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+  "configuration": "full_agreement",
+  "split": "train",
+  "construct": "creativity",
+  "seed": 20261024,
+  "min_margin": 5,
+  "families": {"Metaphors": {"calibration": 12, "audit": 12}},
+  "exposure_patterns": {"Metaphors": ["the hot tea is", "stomata are tiny"]},
+  "aliases": {},
+  "effective_prompt": "FullPrompt-or-Prompt",
+  "population_authorization": "user-selected-metaphors-overall-creativity-24"
+}

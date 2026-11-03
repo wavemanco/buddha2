@@ -1,0 +1,42 @@
+{
+  "kind": "phase3a-rp1-unaccepted-candidate-v1",
+  "candidate_commit": "069377d",
+  "created_utc": "2026-10-31T22:23:22.616918+00:00",
+  "status": "unaccepted",
+  "study_sha256": "3d7e7e6d1a9fd1249c55a5a2893175edaccce1041043255f01f64d976379a5ed",
+  "source_sha256": "96c177dc378338d8bdfa6990fcb9f1707a3d4c7b918bbcbe93b1368637169ae8",
+  "reason": "One copied test expected pre-HI historical exposure39460264. Actual historical known24463235+unreleased22880000=47343235 agrees with frozen RP1 definition and unchanged closed accounting. No production/scientific threshold is changed.",
+  "tests_executed": 41,
+  "failures": 1,
+  "matrix_started": false,
+  "real_provider_calls": 0,
+  "owned_container_removed": true,
+  "source_and_history_preserved": true,
+  "evidence": {
+    "tests.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/tests.json",
+      "sha256": "1ec13b1ad095c678598e1b7a38f7488c2870552e81583acbbc255ee042ec093c"
+    },
+    "tests.log": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/tests.log",
+      "sha256": "dc9e41866cf7ac2222acd56e82c269c184bd5399035526328c59628320b1cf25"
+    },
+    "inside-execution.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/inside-execution.json",
+      "sha256": "d3995c30ef9f8cb9349e7e3ca53d154f74aed6e721c4ee263db5a04e06ddbb85"
+    },
+    "inside-remove.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/inside-remove.json",
+      "sha256": "8ae61b90854362103ad01e3b35a6f888c2c2f22d1a762dcda06c46a506b8d5ec"
+    },
+    "preservation.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/preservation.json",
+      "sha256": "d84e5a09c6f60fe86a9d310808c42bf4dc65ba7960f97766b780d8db707de5a4"
+    },
+    "driver-exit.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v1/driver-exit.json",
+      "sha256": "a18e565c06e660d3f8daaeef5ef7c617069ca0fef0d2b54d09e82b49053c571b"
+    }
+  },
+  "next": "Correct only the documented historical expectation and run a fresh whole offline gate with new source/study identities."
+}

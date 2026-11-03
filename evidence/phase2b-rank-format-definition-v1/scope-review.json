@@ -1,0 +1,139 @@
+{
+  "actions": {
+    "new_credential_reads": 0,
+    "new_provider_calls": 0,
+    "new_sdk_constructions": 0,
+    "only_write": "evidence/phase2b-rank-format-definition-v1/scope-review.json",
+    "original_folder_access": false,
+    "source_history_journal_or_existing_file_writes": 0
+  },
+  "checked_artifact_hashes": {
+    "PHASE2B_RANK_FORMAT_DEFINITION.md": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517",
+    "PHASE2B_REPORT.md": "cef642b23b5b846c3cf40877a162469eb98b6f775aa8fa36f67b51b6a53c02f8",
+    "evidence/phase2b-expansion/report/manifest.json": "932e280b781edce72b3b73c6d7087ea5008fb65ee60c7e15ee370387a41f3fbb",
+    "evidence/phase2b-expansion/report/public-report/decision.json": "bf02fc8165dbddbff1d486d1ea26b99d02481ed4ab5b51089296ba86a00eef4f",
+    "evidence/phase2b-expansion/report/raw/run/journal/events.jsonl": "f3de07a6ad7a0ebbd2561bec671ea5c361ccf778ea49f90856c65ec9388d5ea6",
+    "evidence/phase2b-rank-format-definition-v1/public-price-review.json": "3f0f87257753f1b9464fe84aa56e7e1f5fd1b2c600f1774a3b9028438576ae80",
+    "evidence/phase2b-rank-format-definition-v1/worksheet.json": "9f296b8b44a8e8c71b3229e52897653ff6bf6347c5582fba00004d2f10c6e48d",
+    "runs/phase2-release-r018/release/release-readiness.json": "8e9b5ce2fe826a4eb79934dd426cd5f8c4fab2ba01211797b33c7760c17d33ce",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_analysis.py": "024bbadb8537099da3e07e43a66249bf1e5bc5cf2cae17163e973d86191db00c",
+    "src/buddha2/phase2_contracts.py": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+    "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+    "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+    "src/buddha2/phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+    "src/buddha2/phase2_release.py": "495962d7a03bb048acc93bb818cbc5d16a277cf835b11461d049b31ed3f1093f"
+  },
+  "criteria_mapping": {
+    "N1_policy": {
+      "criterion": "Uniform score-blind deterministic policy; exact parent-ID permutations; all-candidate validity/agreement and bounded resource rejection; no semantic or per-case correction.",
+      "status": "pass"
+    },
+    "authority_budget": {
+      "criterion": "Definition supplies no work/grant authority. Future $30 marginal study/source/worklist-bound grant required, with existing profile/inspection/handshake guards; no old $125 allowance reuse.",
+      "status": "pass"
+    },
+    "bounded_effort_no_creep": {
+      "criterion": "One block includes known normalization/reuse/adapter/mock/report work; 4–8-hour allowance, four-hour review and eight-hour stop/revise boundary. No deferred generic platform or per-order approval project.",
+      "status": "pass"
+    },
+    "cost_accounting": {
+      "criterion": "Share historical $5.983504 once; separate marginal ledger and combined ceiling $35.983504. C-N attribution $1.621512 includes original ranks. Three conditional cases and $17.86 stress arithmetic independently checked.",
+      "status": "pass"
+    },
+    "decision_lineage": {
+      "criterion": "New rank-format-development-v1/posthoc-C-N-v1 decision with original inconclusive parent unchanged. Twelve prompt units, two repeats and exact utility/cost/A-B-C-N tie-break; no new gain threshold.",
+      "status": "pass"
+    },
+    "exclusions_validity": {
+      "criterion": "No provider-schema rank experiment, judge calibration, new strategies/data/models, human collection, adaptation or holdout. Reused historical scores and four later judgments are not prospective independent validation.",
+      "status": "pass"
+    },
+    "feasible_minimal_boundary": {
+      "criterion": "Small external wrapper/host entry can reuse generic Dispatcher, unchanged canonical AM1 new-study path and NativeAssessment. Old full-pilot loader/controller and 26 source files stay unchanged.",
+      "status": "pass"
+    },
+    "identity_reuse": {
+      "criterion": "Original 48 A/B and 20 C objects remain origin references; four new study-bound outputs require fresh native assessment. New cross-study validator and compatibility mapping; no rewritten hashes or old guard relaxation.",
+      "status": "pass"
+    },
+    "native_work": {
+      "criterion": "Exactly four groups plus 4–40 quality heads gives 8–44 calls. No new answer/plan/rank/probes; scoring/model/failure/accounting controls unchanged.",
+      "status": "pass"
+    },
+    "objective_scope": {
+      "criterion": "One bounded post-hoc format-contract follow-up over all 24 saved ranks; no original strict-C completion, recursive adaptation or new generation.",
+      "status": "pass"
+    },
+    "offline_gate": {
+      "criterion": "Freeze policy and expected negative cases before implementation. Future gate requires 24 dispositions, 20 unchanged/four derived outputs, 68 replayed reuse proofs and guarded pinned-SDK mocks.",
+      "status": "pass"
+    },
+    "usable_completion": {
+      "criterion": "Offline checkpoint independently usable; full new 72-row comparison needs four scored new orders and exact replay. Any missing/incompatible evidence remains inconclusive without replacement or complete-case selection.",
+      "status": "pass"
+    }
+  },
+  "definition_only": true,
+  "definition_version": "1.0",
+  "implementation_authorized": false,
+  "independent_checks": {
+    "conditional_mean_cost_scenarios_recomputed": 3,
+    "frozen_gate_hashes_matching": 70,
+    "future_candidate_references_checked": 4,
+    "launcher_matching": true,
+    "long_output_scenario_micro_usd": 17860000,
+    "normalized_outputs_or_new_judgments_created": 0,
+    "original_source_method_counts": {
+      "A": 24,
+      "B": 24,
+      "C": 20
+    },
+    "proposed_original_assessment_references_checked": 68,
+    "proposed_view_labels": {
+      "A": 24,
+      "B": 24,
+      "C-N": 20
+    },
+    "rank_input_references_checked": 24,
+    "raw_rank_size_range_utf8_bytes": [
+      371,
+      1576
+    ],
+    "source_files_matching": 26,
+    "worksheet_input_hashes_matching": 15
+  },
+  "kind": "p2bn-independent-definition-scope-identity-authority-review",
+  "limitations": [
+    "Prospective definition review only: N1, cross-study validator and small new host adapter are not implemented or proved by this record.",
+    "Actual pinned-SDK mocks, guarded launch and all reuse/derivation proofs remain future mandatory offline gates within the defined block.",
+    "Consumed rank texts and historical scores cannot establish held-out or prospective reliability.",
+    "Price record is planning evidence, not account/invoice certification; future launch requires supported profile and applicable new authority."
+  ],
+  "outstanding_concerns": [],
+  "paid_judging_authorized": false,
+  "review_sha256": "13676b2912b501e9f47c29189e4d7c2d4fca6cf9b6e915c8c226b38da670bc66",
+  "reviewed_at_utc": "2026-10-28T16:23:54Z",
+  "reviewer_agent": "/root/release_journal",
+  "source_backed_implementation_notes": {
+    "future_slot_budget_shape": "44 group/quality slots may use checkpoint canary; cap_micro_usd=canary_cap_micro_usd=30000000 under AM1, bound to the new study/source/policy/worklist. Retain canonical path guard.",
+    "generic_live_path": "/results/phase2-am1/<new-study-sha256>/first-block/journal",
+    "native_identity": "Existing native calls/folding can evaluate new internal-C portfolios under new identity; new cross-study reuse/decision wrapper remains required.",
+    "source_evidence_lines": [
+      "phase2_contracts.py:45",
+      "phase2_contracts.py:148",
+      "phase2_contracts.py:176",
+      "phase2_analysis.py:43",
+      "phase2_analysis.py:81",
+      "phase2_dispatch.py:179",
+      "phase2_dispatch.py:381",
+      "phase2_am1_controls.py:57",
+      "phase2_native.py:135",
+      "phase2_native.py:172",
+      "phase2_decisions.py:254",
+      "phase2_release.py:125"
+    ]
+  },
+  "status": "pass"
+}

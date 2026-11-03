@@ -1,0 +1,26 @@
+{
+  "automatic_readiness_gate_passed": false,
+  "bundle_sha256": "1abe96e47ceaae4101ba5e4b6d7e793740f94f9f54c382effbfabc6ba89149d3",
+  "judgments_sha256": "64f7e5722179c9ffb5a84b2eea575bafc021e031757886b8030edaa7cba2ccaf",
+  "kind": "phase1-readiness-exception-proposal",
+  "observed_statuses": [
+    "ok",
+    "malformed"
+  ],
+  "preserve": [
+    "Both original requests/results and their statuses",
+    "Malformed calibration outcome earns zero; no JSON extraction or repair",
+    "No retries or replacements",
+    "Same model/settings/data/rubric/acceptance floors",
+    "Same shared run/48 scheduled presentations/52 attempt ceiling/$5 total cap",
+    "Audit labels remain sealed until predictions committed"
+  ],
+  "proposal": "Permit the first-two route check with one valid JSON result and one correctly classified malformed result, with complete verified transport/control/accounting evidence.",
+  "remaining_scheduled_presentations": 46,
+  "requires_explicit_user_review": true,
+  "reserved_micro_usd": 0,
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "schema_version": 1,
+  "spent_micro_usd": 4754,
+  "status": "proposed-not-authorized"
+}

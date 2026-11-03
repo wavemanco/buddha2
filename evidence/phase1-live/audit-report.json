@@ -1,0 +1,258 @@
+{
+  "analysis_revision": "phase1-v1",
+  "applicability": "Supplementary pairwise comparison on the declared population only; no absolute or portfolio validation.",
+  "choices": {
+    "A": 10,
+    "B": 8,
+    "abstain": 1,
+    "tie": 5
+  },
+  "cost": {
+    "complete_total_usd": 0.052236000000000005,
+    "known_total_usd": 0.052236000000000005,
+    "scope": "final presentation records; attempt ledger additionally includes retries/liabilities",
+    "unit": "USD",
+    "unknown_usage_presentations": 0,
+    "unreported_presentations": 0
+  },
+  "coverage": {
+    "agreement_among_decisive": 0.5,
+    "decisive_fraction": 0.75,
+    "decisive_presentations": 18,
+    "human_agreeing_presentations": 9,
+    "scheduled_presentations": 24
+  },
+  "evaluator": {
+    "requested_model": "claude-sonnet-5-5",
+    "returned_models": [
+      "claude-sonnet-5-5"
+    ],
+    "rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+    "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75"
+  },
+  "execution": {
+    "attempts": 24,
+    "finalized_presentations": 24,
+    "fixture": false,
+    "provider_calls": 24,
+    "reserved_micro_usd": 0,
+    "retries": 0,
+    "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+    "scope": "audit",
+    "spent_micro_usd": 52236,
+    "status": "ready",
+    "token_count_requests": 24
+  },
+  "expected_prompts": 12,
+  "families": {
+    "Metaphors": {
+      "human_agreement": 4,
+      "order_consistency": 8,
+      "prompts": 12
+    }
+  },
+  "first_position_preference": {
+    "A_choices": 10,
+    "decisive_presentations": 18,
+    "fraction": 0.5555555555555556,
+    "unit": "presentation; two dependent presentations per prompt"
+  },
+  "fixture": false,
+  "human_agreement": {
+    "denominator": 12,
+    "minimum": 9,
+    "proportion": 0.3333333333333333,
+    "successes": 4,
+    "wilson95": [
+      0.13812009109121315,
+      0.6093779111272004
+    ]
+  },
+  "independent_prompts": 12,
+  "kind": "pair-evaluator-analysis",
+  "length_diagnostics": {
+    "equal_length_choices": 0,
+    "longer_choices": 17,
+    "shorter_choices": 1,
+    "unit": "Unicode code points in original response text",
+    "wrong_equal_length_choices": 0,
+    "wrong_longer_choices": 9,
+    "wrong_shorter_choices": 0
+  },
+  "limitations": [
+    "Operational floors are a small-sample screen, not high-confidence validation.",
+    "Order, length and family diagnostics are descriptive; no additional acceptance gates.",
+    "Analysis requires separate access control and a committed prediction set before audit labels."
+  ],
+  "order_consistency": {
+    "denominator": 12,
+    "minimum": 11,
+    "proportion": 0.6666666666666666,
+    "successes": 8,
+    "wilson95": [
+      0.39062208887279953,
+      0.8618799089087867
+    ]
+  },
+  "outcome": "diagnostic-only",
+  "phase_execution": {
+    "attempts": 48,
+    "count_incomplete": false,
+    "finalized_presentations": 48,
+    "fixture": false,
+    "provider_calls": 48,
+    "reserved_micro_usd": 0,
+    "retries": 0,
+    "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+    "spent_micro_usd": 112696,
+    "status": "ready",
+    "token_count_requests": 48
+  },
+  "presentations": 24,
+  "prompts": [
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-14167e77d1171071f1a672f5cd21b3eded865b1138829108009033c4ec845a7d",
+      "prompt_id": "muce-prompt-fc932b0b85b856c296b8c531145bf6e7104f3cab7fc38578715e0b9a5adf57f8",
+      "selected_response_ids": [
+        "muce-response-5477a65d2ee8989e4c9d8388b06c23e2834fc2431d8ad7a7a9e08d1790b0b695",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": true,
+      "pair_id": "pair-54f7ec767940a3a2cb94d92106da6dce52034acd8d0205f644fbe98d196b92ec",
+      "prompt_id": "muce-prompt-a3619f5c70192d4eb51aba03fc84d1e058aa57f94cfcd4d1bbcd1e798dbcc1d4",
+      "selected_response_ids": [
+        "muce-response-00cb28c83bb64177d8be729f6bd55405b62e66f2197ea5649051699627ad2847",
+        "muce-response-00cb28c83bb64177d8be729f6bd55405b62e66f2197ea5649051699627ad2847"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-38cf93512429300c906329ffc167aa124fad8b5206cac5e27ba3b3946ef55ea6",
+      "prompt_id": "muce-prompt-9ba3f3b1ccad23ecad403c70f5faee26207efa6eac04d95412f8590568d4b02e",
+      "selected_response_ids": [
+        "muce-response-9b6cdbe4ec962b63971db1633458df311fd6ad8f606b65de05be9e18f4baaf8d",
+        "muce-response-9b6cdbe4ec962b63971db1633458df311fd6ad8f606b65de05be9e18f4baaf8d"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-8aec534d466a7c0c29ec62ec7cae36714f15cdf5546ba37a02ad09a285b0852a",
+      "prompt_id": "muce-prompt-4adfa931f265b4c0521e6845b150e525460ac3167bccf944d4b7f4e415121e1c",
+      "selected_response_ids": [
+        "muce-response-6a7e8c55a069f5433004f06ca97d7cbfe73a1f2d0c81a6ad15eb5654d13204ae",
+        "muce-response-6a7e8c55a069f5433004f06ca97d7cbfe73a1f2d0c81a6ad15eb5654d13204ae"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": true,
+      "pair_id": "pair-5e09322b1aad51c1a4348ff67726deda9b1110bfc3b1751e1d169b1c82c912fe",
+      "prompt_id": "muce-prompt-8a0025558b6c25e8a1abeb0e4de902dc7b1acf3eda3e21191bc4f02d152a511b",
+      "selected_response_ids": [
+        "muce-response-2a5b73a6a4137d8267891c3ecaead2be3d9190e905915b3bfc177c2237886db3",
+        "muce-response-2a5b73a6a4137d8267891c3ecaead2be3d9190e905915b3bfc177c2237886db3"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-d28d3068e87975a13ead0566ff9d9145361036442f6a519f005bbf8a90e29d2c",
+      "prompt_id": "muce-prompt-78122fbc1598b978edc2c291649d703edc29abeb3096e2fd689e7dd6e03da1f1",
+      "selected_response_ids": [
+        "muce-response-0003a44a66116a8589e0ddeeeb9a02409810b71d6cce8577a0f966748578f52b",
+        "muce-response-0003a44a66116a8589e0ddeeeb9a02409810b71d6cce8577a0f966748578f52b"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-2c10d804b302b96df81b0023dd6805df59f49fc66dcd0aedaadaeeaf0784ebf2",
+      "prompt_id": "muce-prompt-c7eee95b7ff5ed3fbae4620dad45206e66146600e693b9d9fec892f24493a487",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": true,
+      "pair_id": "pair-bca57b50e4d2b5b55d866ab652ed06d5c27442a2b4e1fad368b76c22fae696d3",
+      "prompt_id": "muce-prompt-a83921b1ed131f5c361e4f9c5faa1757d542ad78e47589366c9d8b4a2ff83fb1",
+      "selected_response_ids": [
+        "muce-response-fa427e15e05c27ee4733ebc85f4306e929fd5d8982f3709483c3192d8ccf1818",
+        "muce-response-fa427e15e05c27ee4733ebc85f4306e929fd5d8982f3709483c3192d8ccf1818"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-50141a3d2004dfbd0e4f8ecd6b8b6c5ae0de0582156c0784130b30c8fabfba5c",
+      "prompt_id": "muce-prompt-930e99b6ce928e2093886879092ccf18aa9d33ae1221d2cf6e417f759498932b",
+      "selected_response_ids": [
+        "muce-response-841ec889d94065fc7395b4b7a1978cd4dc809ed55b21b81a8f66aa6d6f3aec85",
+        "muce-response-841ec889d94065fc7395b4b7a1978cd4dc809ed55b21b81a8f66aa6d6f3aec85"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-893af229422b4a67162ef7d4d0c65d253197978f4800f5a141880281c981e558",
+      "prompt_id": "muce-prompt-00517d47bdb8e0c36030dd1bf676f28ab7e3fba99da12c86fda2f96f660e2cfb",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-2bb4aed686904e3a80ee5ea791db715ef4b5aea0b209d7f9b773ab403eb122e2",
+      "prompt_id": "muce-prompt-0a337f26e74b13a95842ce6afc041a73ca0e22772d531b6461f3e9dd03b246fc",
+      "selected_response_ids": [
+        null,
+        "muce-response-48fec8cfb02a1ba5532a54028ff274a1e1eae3020e7c8647c7e2425e029608cc"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": true,
+      "pair_id": "pair-7e980577833556dabca7d2321341981b080c3905c9de970fba8769a05f555be1",
+      "prompt_id": "muce-prompt-15a79d527c929dddf7f7f3e5a089bb0d28b6a06c142003984172bd856a42fbfc",
+      "selected_response_ids": [
+        "muce-response-ed1c9e3325cc82cd894ddbb065966b47c38486c38104abfd3bc4730a75391c71",
+        "muce-response-ed1c9e3325cc82cd894ddbb065966b47c38486c38104abfd3bc4730a75391c71"
+      ]
+    }
+  ],
+  "saved_judgments": 24,
+  "schema_version": 1,
+  "stage": "audit",
+  "statuses": {
+    "malformed": 0,
+    "missing": 0,
+    "ok": 24,
+    "refused": 0,
+    "transport_error": 0,
+    "truncated": 0,
+    "unknown": 0
+  }
+}

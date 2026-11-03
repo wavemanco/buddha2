@@ -1,0 +1,36 @@
+{
+  "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "command": [
+    "-m",
+    "unittest",
+    "tests.test_phase2_am1",
+    "tests.test_phase2_am1_controls",
+    "tests.test_phase2_am1_sdk",
+    "tests.test_phase2_policy",
+    "-v"
+  ],
+  "network": "none",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "security_opt": [
+    "no-new-privileges"
+  ],
+  "mounts": [
+    {
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Destination": "/workspace",
+      "RW": false
+    },
+    {
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+      "Destination": "/results",
+      "RW": true
+    }
+  ],
+  "historical_source_override": false,
+  "provider_calls": 0,
+  "real_credentials_supplied": false,
+  "exit_code": 0
+}

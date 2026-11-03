@@ -1,0 +1,43 @@
+{
+  "kind": "phase3a-rp1-unaccepted-candidate-v3",
+  "candidate_commit": "b7fad91",
+  "created_utc": "2026-10-31T22:48:51.577464+00:00",
+  "status": "unaccepted",
+  "study_sha256": "92e50993b56d5171684cbb3bf86ce9ecd44702e6c99981402e5a3c8cea1a7aa2",
+  "source_sha256": "dec7ca4863b1d17fb2d7a71dc949959f4781c611e91009feba98d9dbb8626330",
+  "reason": "Copied HostOwnershipTests emitted two old p3a-hi public owner/result kinds; currentRP1 strict production identity guard correctly rejected them. All production participants use newRP1 kinds. Update fixture tags, strengthen negative assertion to exact stop reason; no production/science/threshold change.",
+  "tests_executed": 53,
+  "errors": 1,
+  "failures": 0,
+  "matrix_started": false,
+  "real_provider_calls": 0,
+  "owned_container_removed": true,
+  "source_and_history_preserved": true,
+  "evidence": {
+    "tests.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/tests.json",
+      "sha256": "c52b74d772dbfab1ab70ac59ff2b3c5ac50147d039b3cce22baef4742d80d0b1"
+    },
+    "tests.log": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/tests.log",
+      "sha256": "7689387e0d5658fcd44e8f84642c99b0da33d5735536286bf87583fbaac552cf"
+    },
+    "inside-execution.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/inside-execution.json",
+      "sha256": "930728fc8642803f7a085a1f71f070a667788913740cbbb3a7b454734f642ccc"
+    },
+    "inside-remove.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/inside-remove.json",
+      "sha256": "b54cb3616b6d79599373442734e5ef1791e55c44a1d99ec087c188be59a02433"
+    },
+    "preservation.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/preservation.json",
+      "sha256": "2baf0bcd94db2ca861165c9fc40c95f8563ea53a049d5f8741f9842cec381b4c"
+    },
+    "driver-exit.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v3/driver-exit.json",
+      "sha256": "71b08f580cc81885e911621d4c3c8860297abb19bb23f1576a8597529047ff91"
+    }
+  },
+  "next": "Run all remaining integration modules as a bounded diagnostic, then a fresh complete gate under new source identity."
+}

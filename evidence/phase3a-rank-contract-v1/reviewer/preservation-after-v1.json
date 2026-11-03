@@ -1,0 +1,28 @@
+{
+  "before_sha256": "4f27a53bf7e7caaaed3b3b5e281435270112a4dc3cc0423d54b56f1e63443553",
+  "created_utc": "2026-10-31T21:44:02.721117+00:00",
+  "frozen_input_sha256": {
+    "fixture-inventory.json": "c4ccc6f2830f7122f604febfdf33028a0902e307e371aa9ad1bf75ad976dc878",
+    "historical_failure.json": "e19d5b5c16f327ee1146b46ac00e326553baf4f1fc9ecb560d71ac5232994a90",
+    "lineage.json": "9383e0d1d58bcdd9615f6a3e218840f3ad0a037ada244034083369eb675c5ef9",
+    "manifest.json": "18c192a24fa41284aa1dba23b09981d17318712940de7c077a450f15471cc48d",
+    "saved_parent.json": "733e6628c0441131643ebddbc8c74db7e1d7227dc43b9f9d9a4ad8295cf551ef",
+    "strategy.json": "faef587853c34db39492ed97169a7a54c6d6ce1f8b96cb447c4cca1b836a06e7"
+  },
+  "frozen_source_files_unchanged": 356,
+  "historical_accounts_and_archives_unchanged": true,
+  "historical_failed_run_still_failed": true,
+  "historical_reference_files_unchanged": 34,
+  "kind": "p3a-rc1-independent-preservation-after-v1",
+  "native_folds": 0,
+  "new_rc1_source_sha256": {
+    "adapter.py": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+    "test_adapter.py": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+    "verify.py": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935"
+  },
+  "original_folder_accessed": false,
+  "passed": true,
+  "provider_calls": 0,
+  "public_harness2_python_files_unchanged": 39,
+  "upstream_before_sha256": "afc5553c593bf263f24a2de98383ddce0e7ee635827dc2e13b615c4f193cbb45"
+}

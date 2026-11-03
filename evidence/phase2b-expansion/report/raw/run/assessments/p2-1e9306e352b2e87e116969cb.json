@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "08215e0bc5082d29b84472a5d2cb6e6a34cb478ffec90c2a94180962b6a312a8",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 7.2419043417101365
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        7,
+        8,
+        8,
+        6,
+        8,
+        7,
+        8,
+        5,
+        8,
+        5
+      ],
+      "partition_scores": [
+        7,
+        8,
+        8,
+        6,
+        8,
+        7,
+        8,
+        5,
+        8,
+        5
+      ],
+      "utility": 7.2419043417101365
+    },
+    "generation_row": {
+      "generations": [
+        "The one best thing about going on vacation is **psychological detachment**: the chance to truly disengage your mind from work and routine.\n\nMost of the time, even when we're off the clock, part of us stays on call, rehearsing tomorrow's tasks, scanning email, or carrying low-grade worry. A vacation, especially one with enough distance from your usual environment, breaks that loop. Without the daily cues that trigger obligations, your mind finally gets permission to stop monitoring and let go.\n\nThat single shift produces several benefits:\n\n- **Restored energy:** Mental fatigue comes from sustained demands with no real recovery. Detaching lets your attention and willpower replenish, so you return less drained.\n- **Fresh perspective:** Stepping away from problems lets you see them from a distance. Many people find that issues which felt overwhelming shrink, and solutions surface when they're not forcing them.\n- **Better mood:** Without constant pressure, stress hormones ease, and you have room for curiosity, play, and presence with the people you're with.\n\nOther perks, like new sights, good food, and time with loved ones, are wonderful, but they work best because your mind is free to enjoy them. Detachment is what makes the rest of the vacation land.",
+        "The best thing about going on vacation is novelty: stepping into a place where almost nothing is familiar.\n\nAt home, your brain runs on autopilot. You know the route to work, the taste of your usual coffee, the layout of your grocery store. That efficiency is useful, but it also means weeks can blur together. On vacation, everything demands a little attention. You're deciphering street signs, tasting a dish you can't quite name, learning how people greet each other, and noticing the light and the architecture in ways you've stopped noticing at home.\n\nThat attention stretches your perception. Your mind starts registering details again, and your assumptions about \"how things are done\" get gently challenged when you see another culture doing them differently and doing them well.\n\nIt also makes time feel fuller. Novel experiences are encoded more densely in memory, so a week abroad often feels longer and richer in hindsight than a month of routine. You're essentially buying more *felt* life per day.\n\nAnd it leaves you with vivid memories. Years later, you might not recall a single ordinary Tuesday, but you'll remember the market you got lost in, the unexpected meal, or the view when you turned a corner. Rest and relaxation are nice, but novelty is what makes a trip stay with you.",
+        "The best thing about going on vacation is the quality time it gives you with the people you love.\n\nIn everyday life, time together gets squeezed into the margins: a rushed dinner, a distracted evening with phones out, a weekend packed with errands. A vacation clears all of that away. You get whole days with no agenda beyond being together, and that uninterrupted stretch is what deepens bonds.\n\nPicture a family renting a small beach house. On the third morning, no one has set an alarm. Dad burns the pancakes, and everyone ends up eating them anyway, laughing at how bad they are. Later, the kids drag everyone out to hunt for hermit crabs, and a sudden rainstorm sends the whole group sprinting back, soaked and shrieking. That night, with no TV in the house, they play cards until midnight, and Grandma finally confesses how she and Grandpa really met.\n\nYears later, nobody remembers what they did the week before or after that trip. But they still talk about the burnt pancakes, the crab hunt, and Grandma's story. Those shared moments become the retold stories that define a family, a friendship, or a relationship, and that's something no ordinary week can produce in quite the same way.",
+        "The single best thing about a vacation is that it pays you back three times: in anticipation, in the trip itself, and in memory.\n\n**Before:** Looking forward to a trip is a real source of happiness. A well-known Dutch study (Nawijn et al., 2010) found that vacationers were happier than non-vacationers in the weeks leading up to a trip, and the boost was biggest for people who had a trip on the calendar. Planning gives you something to look forward to, which lifts your mood on ordinary workdays.\n\n**During:** Being away from routine, with new places, different rhythms, and fewer obligations, makes your attention sharper and your time feel fuller. Even so, research suggests the trip itself is often the shortest-lived part of the benefit.\n\n**After:** Experiences tend to become part of who we are in a way possessions don't. Work by Thomas Gilovich and others shows that people get lasting satisfaction from experiential purchases, partly because we keep retelling and reliving them. Novel experiences also create more distinct memories, so a week away can stay vivid for years while a routine week blurs together.\n\nSo the best thing isn't just the relaxation or the scenery. A vacation gives you excitement before, enjoyment during, and a store of memories afterward, and few other things in life return that much from a single investment.",
+        "The one best thing about a vacation is the freedom to decide each hour for yourself.\n\nIn ordinary life, your time is mostly spoken for: alarms, commutes, deadlines, errands, other people's needs. On vacation, that structure falls away. You wake up without an obligation waiting for you, and the day is an open question. Do you linger over coffee, wander into a street you haven't seen, take a nap at 2 p.m., or stay at the beach until sunset? Nobody needs an answer from you, and the answer can change at any moment.\n\nThat autonomy is what makes a vacation feel different from just being in a nicer place. Scenery, food, and new experiences are great, but they're all enhanced by the sense that your time is truly your own. It's also why even a quiet stay-at-home break can feel restorative: the real luxury is being the one who chooses what happens next.",
+        "The best thing about going on vacation is the fresh perspective you bring home.\n\nWhen you're immersed in daily routines, work deadlines, and familiar obligations, it's hard to see your life clearly. Stepping away changes that. Distance gives you room to notice what's working, what's draining you, and what you've been putting off deciding. A problem that felt overwhelming on Tuesday often looks manageable or even obvious from a beach chair or a mountain trail.\n\nThat clarity tends to show up in practical ways:\n\n- **Better decisions:** With a rested mind and less noise, you can weigh choices about your career, relationships, or finances more honestly.\n- **Renewed motivation:** Rest and novelty refill your energy, so returning to your work or goals feels more like a fresh start than a grind.\n- **Clearer priorities:** Time away reminds you what you actually miss, and what you don't, which helps you focus on what matters.\n- **Appreciation for home:** Even routines you were tired of can feel comforting once you've been away from them.\n\nThe sunsets, food, and adventures are wonderful, but they fade into memories. A sharper view of your own life is the benefit that keeps paying off long after the suitcase is unpacked.",
+        "The one best thing about going on vacation is being fully present.\n\nPicture the first morning somewhere new. You wake before your alarm, because you don't have one. The air through the window smells like salt and warm bread. You pad out in bare feet, carrying a chipped ceramic mug of coffee that's too hot to sip yet, and sit on a stone step while the sky goes from slate to peach. A neighbor's shutters creak open. A bird you can't name argues with another one. You have nowhere to be, and for once your mind isn't racing ahead to the next thing. It's just here, with the steam on your face and the light creeping over the rooftops.\n\nThat moment is the real gift. Not the landmarks or the photos, but the way rest and novelty combine to pull your attention back into the present. Everyday life trains us to skim past our own hours. A vacation slows them down until you can feel each one. You come home with a tan or a souvenir, sure, but what you really bring back is the memory of being completely, quietly there.",
+        "The best thing about going on vacation is **physiological recovery**: it gives your body and mind a real chance to downshift from chronic stress.\n\nHere's what research generally suggests:\n\n- **Lower stress:** Time away from work is associated with reduced cortisol and subjective stress. Some studies find that the effect is strongest when you're fully detached from work demands (e.g., not checking email).\n- **Better sleep:** Many people sleep longer and more deeply on vacation, especially when they're away from daily schedules and alarms. Studies of vacationers often report improved sleep quality during and shortly after a trip.\n- **Reduced burnout risk:** Research on \"recovery experiences\" (psychological detachment, relaxation, mastery activities, and control over your time) links them to lower exhaustion and better well-being. Vacations are one of the most effective ways to get all four at once.\n- **Possible heart health benefits:** Long-running observational studies, such as the Framingham Heart Study, have linked regular vacations with lower cardiovascular risk. These are correlations, not proof of cause, but they're consistent with the stress-recovery picture.\n\nA caveat: the benefits tend to fade within a few weeks of returning to work, and a stressful or poorly planned trip can blunt them. Vacations that let you truly disconnect, rest, and do things you enjoy deliver the most restoration.\n\nSo the single best thing is that a vacation lets you recover, and that recovery supports everything else: mood, focus, relationships, and long-term health.",
+        "The best thing about a vacation is permission to do nothing productive, guilt-free.\n\nIn ordinary life, almost every hour is spoken for. Work needs doing, errands pile up, and even leisure often gets turned into self-improvement: the workout, the podcast you \"should\" listen to, the hobby you're supposed to be monetizing. Rest at home tends to come with a low hum of guilt, because there's always something undone within eyesight, like the laundry, the inbox, or the unfinished project.\n\nA vacation breaks that spell. You've changed locations, told people you're unavailable, and often paid money to be there, so the usual to-do list loses its authority. Lying by a pool, wandering with no destination, or sleeping until you wake up naturally all become legitimate choices rather than lapses in discipline.\n\nThe contrarian part is that the sights and experiences, which people usually name first, are secondary. Plenty of them can be had at home on a weekend. What's rare is the social and psychological sanction to be unproductive without justifying it. Most of modern life treats idleness as something to be earned or explained, and a vacation is one of the few times it's simply allowed.",
+        "The one best thing about going on vacation is **self-discovery**.\n\nAway from your usual roles (employee, parent, friend, the person everyone expects you to be), you get to try on different versions of yourself. Nobody knows your habits or reputation, so you can be the spontaneous one, the adventurous one, the quiet observer, or the person who strikes up conversations with strangers. Some of those versions fit surprisingly well, and you bring them home with you. Rest and fun are great, but this kind of growth lasts after the tan fades.\n\n**Brief tips to maximize it:**\n\n- **Leave some of the schedule empty.** Unplanned time is where you notice what you actually want to do.\n- **Do one thing you wouldn't normally do.** Try the unfamiliar food, take the class, or talk to the local.\n- **Go easy on the screen.** Less scrolling means more room to hear your own thoughts.\n- **Travel solo for an afternoon.** Even if you're with others, spend a few hours on your own.\n- **Jot down notes.** Write a few lines each evening about what energized you and what didn't.\n- **Ask yourself on the last day:** \"What did I like about who I was here, and how can I keep it?\""
+      ],
+      "id": "nb-curated-4b5afc9736f082c708eb",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What's the one best thing about going on a vacation?"
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        7,
+        8,
+        8,
+        6,
+        8,
+        7,
+        8,
+        5,
+        8,
+        5
+      ],
+      "generations": [
+        "The one best thing about going on vacation is **psychological detachment**: the chance to truly disengage your mind from work and routine.\n\nMost of the time, even when we're off the clock, part of us stays on call, rehearsing tomorrow's tasks, scanning email, or carrying low-grade worry. A vacation, especially one with enough distance from your usual environment, breaks that loop. Without the daily cues that trigger obligations, your mind finally gets permission to stop monitoring and let go.\n\nThat single shift produces several benefits:\n\n- **Restored energy:** Mental fatigue comes from sustained demands with no real recovery. Detaching lets your attention and willpower replenish, so you return less drained.\n- **Fresh perspective:** Stepping away from problems lets you see them from a distance. Many people find that issues which felt overwhelming shrink, and solutions surface when they're not forcing them.\n- **Better mood:** Without constant pressure, stress hormones ease, and you have room for curiosity, play, and presence with the people you're with.\n\nOther perks, like new sights, good food, and time with loved ones, are wonderful, but they work best because your mind is free to enjoy them. Detachment is what makes the rest of the vacation land.",
+        "The best thing about going on vacation is novelty: stepping into a place where almost nothing is familiar.\n\nAt home, your brain runs on autopilot. You know the route to work, the taste of your usual coffee, the layout of your grocery store. That efficiency is useful, but it also means weeks can blur together. On vacation, everything demands a little attention. You're deciphering street signs, tasting a dish you can't quite name, learning how people greet each other, and noticing the light and the architecture in ways you've stopped noticing at home.\n\nThat attention stretches your perception. Your mind starts registering details again, and your assumptions about \"how things are done\" get gently challenged when you see another culture doing them differently and doing them well.\n\nIt also makes time feel fuller. Novel experiences are encoded more densely in memory, so a week abroad often feels longer and richer in hindsight than a month of routine. You're essentially buying more *felt* life per day.\n\nAnd it leaves you with vivid memories. Years later, you might not recall a single ordinary Tuesday, but you'll remember the market you got lost in, the unexpected meal, or the view when you turned a corner. Rest and relaxation are nice, but novelty is what makes a trip stay with you.",
+        "The best thing about going on vacation is the quality time it gives you with the people you love.\n\nIn everyday life, time together gets squeezed into the margins: a rushed dinner, a distracted evening with phones out, a weekend packed with errands. A vacation clears all of that away. You get whole days with no agenda beyond being together, and that uninterrupted stretch is what deepens bonds.\n\nPicture a family renting a small beach house. On the third morning, no one has set an alarm. Dad burns the pancakes, and everyone ends up eating them anyway, laughing at how bad they are. Later, the kids drag everyone out to hunt for hermit crabs, and a sudden rainstorm sends the whole group sprinting back, soaked and shrieking. That night, with no TV in the house, they play cards until midnight, and Grandma finally confesses how she and Grandpa really met.\n\nYears later, nobody remembers what they did the week before or after that trip. But they still talk about the burnt pancakes, the crab hunt, and Grandma's story. Those shared moments become the retold stories that define a family, a friendship, or a relationship, and that's something no ordinary week can produce in quite the same way.",
+        "The single best thing about a vacation is that it pays you back three times: in anticipation, in the trip itself, and in memory.\n\n**Before:** Looking forward to a trip is a real source of happiness. A well-known Dutch study (Nawijn et al., 2010) found that vacationers were happier than non-vacationers in the weeks leading up to a trip, and the boost was biggest for people who had a trip on the calendar. Planning gives you something to look forward to, which lifts your mood on ordinary workdays.\n\n**During:** Being away from routine, with new places, different rhythms, and fewer obligations, makes your attention sharper and your time feel fuller. Even so, research suggests the trip itself is often the shortest-lived part of the benefit.\n\n**After:** Experiences tend to become part of who we are in a way possessions don't. Work by Thomas Gilovich and others shows that people get lasting satisfaction from experiential purchases, partly because we keep retelling and reliving them. Novel experiences also create more distinct memories, so a week away can stay vivid for years while a routine week blurs together.\n\nSo the best thing isn't just the relaxation or the scenery. A vacation gives you excitement before, enjoyment during, and a store of memories afterward, and few other things in life return that much from a single investment.",
+        "The one best thing about a vacation is the freedom to decide each hour for yourself.\n\nIn ordinary life, your time is mostly spoken for: alarms, commutes, deadlines, errands, other people's needs. On vacation, that structure falls away. You wake up without an obligation waiting for you, and the day is an open question. Do you linger over coffee, wander into a street you haven't seen, take a nap at 2 p.m., or stay at the beach until sunset? Nobody needs an answer from you, and the answer can change at any moment.\n\nThat autonomy is what makes a vacation feel different from just being in a nicer place. Scenery, food, and new experiences are great, but they're all enhanced by the sense that your time is truly your own. It's also why even a quiet stay-at-home break can feel restorative: the real luxury is being the one who chooses what happens next.",
+        "The best thing about going on vacation is the fresh perspective you bring home.\n\nWhen you're immersed in daily routines, work deadlines, and familiar obligations, it's hard to see your life clearly. Stepping away changes that. Distance gives you room to notice what's working, what's draining you, and what you've been putting off deciding. A problem that felt overwhelming on Tuesday often looks manageable or even obvious from a beach chair or a mountain trail.\n\nThat clarity tends to show up in practical ways:\n\n- **Better decisions:** With a rested mind and less noise, you can weigh choices about your career, relationships, or finances more honestly.\n- **Renewed motivation:** Rest and novelty refill your energy, so returning to your work or goals feels more like a fresh start than a grind.\n- **Clearer priorities:** Time away reminds you what you actually miss, and what you don't, which helps you focus on what matters.\n- **Appreciation for home:** Even routines you were tired of can feel comforting once you've been away from them.\n\nThe sunsets, food, and adventures are wonderful, but they fade into memories. A sharper view of your own life is the benefit that keeps paying off long after the suitcase is unpacked.",
+        "The one best thing about going on vacation is being fully present.\n\nPicture the first morning somewhere new. You wake before your alarm, because you don't have one. The air through the window smells like salt and warm bread. You pad out in bare feet, carrying a chipped ceramic mug of coffee that's too hot to sip yet, and sit on a stone step while the sky goes from slate to peach. A neighbor's shutters creak open. A bird you can't name argues with another one. You have nowhere to be, and for once your mind isn't racing ahead to the next thing. It's just here, with the steam on your face and the light creeping over the rooftops.\n\nThat moment is the real gift. Not the landmarks or the photos, but the way rest and novelty combine to pull your attention back into the present. Everyday life trains us to skim past our own hours. A vacation slows them down until you can feel each one. You come home with a tan or a souvenir, sure, but what you really bring back is the memory of being completely, quietly there.",
+        "The best thing about going on vacation is **physiological recovery**: it gives your body and mind a real chance to downshift from chronic stress.\n\nHere's what research generally suggests:\n\n- **Lower stress:** Time away from work is associated with reduced cortisol and subjective stress. Some studies find that the effect is strongest when you're fully detached from work demands (e.g., not checking email).\n- **Better sleep:** Many people sleep longer and more deeply on vacation, especially when they're away from daily schedules and alarms. Studies of vacationers often report improved sleep quality during and shortly after a trip.\n- **Reduced burnout risk:** Research on \"recovery experiences\" (psychological detachment, relaxation, mastery activities, and control over your time) links them to lower exhaustion and better well-being. Vacations are one of the most effective ways to get all four at once.\n- **Possible heart health benefits:** Long-running observational studies, such as the Framingham Heart Study, have linked regular vacations with lower cardiovascular risk. These are correlations, not proof of cause, but they're consistent with the stress-recovery picture.\n\nA caveat: the benefits tend to fade within a few weeks of returning to work, and a stressful or poorly planned trip can blunt them. Vacations that let you truly disconnect, rest, and do things you enjoy deliver the most restoration.\n\nSo the single best thing is that a vacation lets you recover, and that recovery supports everything else: mood, focus, relationships, and long-term health.",
+        "The best thing about a vacation is permission to do nothing productive, guilt-free.\n\nIn ordinary life, almost every hour is spoken for. Work needs doing, errands pile up, and even leisure often gets turned into self-improvement: the workout, the podcast you \"should\" listen to, the hobby you're supposed to be monetizing. Rest at home tends to come with a low hum of guilt, because there's always something undone within eyesight, like the laundry, the inbox, or the unfinished project.\n\nA vacation breaks that spell. You've changed locations, told people you're unavailable, and often paid money to be there, so the usual to-do list loses its authority. Lying by a pool, wandering with no destination, or sleeping until you wake up naturally all become legitimate choices rather than lapses in discipline.\n\nThe contrarian part is that the sights and experiences, which people usually name first, are secondary. Plenty of them can be had at home on a weekend. What's rare is the social and psychological sanction to be unproductive without justifying it. Most of modern life treats idleness as something to be earned or explained, and a vacation is one of the few times it's simply allowed.",
+        "The one best thing about going on vacation is **self-discovery**.\n\nAway from your usual roles (employee, parent, friend, the person everyone expects you to be), you get to try on different versions of yourself. Nobody knows your habits or reputation, so you can be the spontaneous one, the adventurous one, the quiet observer, or the person who strikes up conversations with strangers. Some of those versions fit surprisingly well, and you bring them home with you. Rest and fun are great, but this kind of growth lasts after the tan fades.\n\n**Brief tips to maximize it:**\n\n- **Leave some of the schedule empty.** Unplanned time is where you notice what you actually want to do.\n- **Do one thing you wouldn't normally do.** Try the unfamiliar food, take the class, or talk to the local.\n- **Go easy on the screen.** Less scrolling means more room to hear your own thoughts.\n- **Travel solo for an afternoon.** Even if you're with others, spend a few hours on your own.\n- **Jot down notes.** Write a few lines each evening about what energized you and what didn't.\n- **Ask yourself on the last day:** \"What did I like about who I was here, and how can I keep it?\""
+      ],
+      "id": "nb-curated-4b5afc9736f082c708eb",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "9fc2364b6934759a8d9ed4c326d8b096e8c22a07737627e2d9825a0045c7571a",
+      "partition_scores": [
+        7,
+        8,
+        8,
+        6,
+        8,
+        7,
+        8,
+        5,
+        8,
+        5
+      ],
+      "prompt": "What's the one best thing about going on a vacation?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "66975763258912c3991fba4f52a64e22b692791067b0c57a2c98743233c0208e",
+      "utility": 7.2419043417101365
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 7.2419043417101365,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "ce162c8c01bd31f509b89dfd6d240d454379e717c4a96ceef0cc659ddb31d7b7",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0680",
+      "fixture": false,
+      "intent_sha256": "d1ad78b1b4d6af3a41c3df5dcf814392575a5b2433445010bb7782e8b70f6339",
+      "request_sha256": "c7e3503a8b733282b29e00ce8ac42d2583b55b09b008323e980ca80483655a14",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.7367364300007466,
+        "message_id": "chatcmpl-EdwLx29JKVLI5FUo3eyE8TJzzn8tV",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 240,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 203,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2734,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2731,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2974
+        },
+        "refusal": null,
+        "request_id": "req_7db657fee2794686912e87dd2d1f9739",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2731,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2731,
+            "cached_tokens": 0
+          },
+          "output_tokens": 240,
+          "output_tokens_details": {
+            "reasoning_tokens": 203
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.group",
+      "spent_micro_usd": 1069,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0681",
+      "fixture": false,
+      "intent_sha256": "310cc5d6ece6c32cf7da076d5fd48664bc4a90e8c4b72d7bcc6222249ad043c3",
+      "request_sha256": "d3b7fae04ade16eb97a183c99a8fbfc766e22e65cecb8131177f1730c1ccb65a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.619414157990832,
+        "message_id": "msg_011CgUaNXxiWwWNXxvG178UD",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaNXKWgVSaZir6HVPvc",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 828,
+          "output_tokens": 159,
+          "output_tokens_details": {
+            "thinking_tokens": 150
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.00",
+      "spent_micro_usd": 8927,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0682",
+      "fixture": false,
+      "intent_sha256": "feb2b29116710c5a9fc014cde8d67fd7ad356061cb23b5648964fddb8000ae2b",
+      "request_sha256": "d7ed37e084e625568d87de129b47deef318a9dd8e141a4463a0c474c7bc78a6a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.3719859789998736,
+        "message_id": "msg_011CgUaNqURPixT7Wfdt7QCw",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaNqGmQVA6D3TEACaQZ",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 822,
+          "output_tokens": 177,
+          "output_tokens_details": {
+            "thinking_tokens": 168
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.01",
+      "spent_micro_usd": 9389,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0683",
+      "fixture": false,
+      "intent_sha256": "69899537b413bac57ac4270b27c1e5d3854a53bc987d1d1445926e4a4b21d395",
+      "request_sha256": "d8c3ac70c84ca6368188156f5a75269db5b2655112c0326444d577f4b7bd1e8c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.28115634599817,
+        "message_id": "msg_011CgUaP8GTMKEyonudf5zJn",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaP83Zvoz3bpo6Rm5QR",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 812,
+          "output_tokens": 143,
+          "output_tokens_details": {
+            "thinking_tokens": 134
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.02",
+      "spent_micro_usd": 8399,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0684",
+      "fixture": false,
+      "intent_sha256": "42f8ddf69b45d891a569d5d23c90983ed0426e87b3bc4403347f8a15b2fc79c7",
+      "request_sha256": "14b48eb66d24c17763d1aefd14ecc656b80cf20ba57583a443e73a69411eab35",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.1691196210013,
+        "message_id": "msg_011CgUaPQbihkEGYQfQr1He1",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaPQPLFJQuWuimM4RKE",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 848,
+          "output_tokens": 225,
+          "output_tokens_details": {
+            "thinking_tokens": 216
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.03",
+      "spent_micro_usd": 10852,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0685",
+      "fixture": false,
+      "intent_sha256": "0d920c20e904606b249ddffdda935ebb725f3af224b09225982b8f4b3cbb1701",
+      "request_sha256": "8c29663c7c6993dd9969cef41c9a89b72c066a08e9be785b8aad51ff7f9e0522",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.3735783120064298,
+        "message_id": "msg_011CgUaPkjCAEiQZ5jmKBip8",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaPkWY8ididinD6Asyi",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 705,
+          "output_tokens": 144,
+          "output_tokens_details": {
+            "thinking_tokens": 135
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.04",
+      "spent_micro_usd": 7838,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0686",
+      "fixture": false,
+      "intent_sha256": "861587b4f75e46213b9479ac86adec2a7ebbeb35ff60428715ca2ec4aee25c99",
+      "request_sha256": "23eea417d7e7659c3186e8bbf4ed746787d8051bca5b5e92ad919f08f046c669",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.600031167996349,
+        "message_id": "msg_011CgUaQ4MLmHW7e4vdS5y6u",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaQ49wHz5RtJAMRJY25",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 822,
+          "output_tokens": 157,
+          "output_tokens_details": {
+            "thinking_tokens": 148
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.05",
+      "spent_micro_usd": 8839,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0687",
+      "fixture": false,
+      "intent_sha256": "4253cfa5d86c55392c50cfff254a82a7d28e7aa3dc55b2a212a6cdd627da2838",
+      "request_sha256": "085189dacea2533d42f7d2a68fe099af4ff1defb3d558dced82228874a29ed3f",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.873453657986829,
+        "message_id": "msg_011CgUaQNAuXLpqgz9tFK5Pc",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaQMyVisn764sDsXCKE",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 747,
+          "output_tokens": 206,
+          "output_tokens_details": {
+            "thinking_tokens": 197
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.06",
+      "spent_micro_usd": 9774,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0688",
+      "fixture": false,
+      "intent_sha256": "75e925037d43e89e739f5cae225d9696fb27b620872d112af487b1ec22a1441b",
+      "request_sha256": "79d1e9f495b431bb2e5a3a4b247f3387db70d82a2482c781b2c6e52473cbc62f",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.8452358079957776,
+        "message_id": "msg_011CgUaQh8RJvxLfENniWDdy",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaQgu2x5t318n2SWWTX",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 5}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 922,
+          "output_tokens": 196,
+          "output_tokens_details": {
+            "thinking_tokens": 187
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.07",
+      "spent_micro_usd": 10461,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0689",
+      "fixture": false,
+      "intent_sha256": "e38e3938110e47c43d1e1088d46a5ce1a9b5fd8fe268bee5955203c8c2bcd220",
+      "request_sha256": "b7bb0a763a987bf48f1f30c1bca226d3040a8e776e954c891d4b967fb6391477",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.375399117008783,
+        "message_id": "msg_011CgUaR21V9uxBLBB6zvh9g",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaR1gspYfedSugQkNZ9",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 799,
+          "output_tokens": 167,
+          "output_tokens_details": {
+            "thinking_tokens": 158
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.08",
+      "spent_micro_usd": 8987,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0690",
+      "fixture": false,
+      "intent_sha256": "fccd736f7360f10bd117b74ad7d62d0fec0dcd380ec28ee506891932a5a1408f",
+      "request_sha256": "916ff6f1de7e7bbdc586332a5a514ca6563330c3398332b675f27d50c723da93",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.1881802450079704,
+        "message_id": "msg_011CgUaRJpWbNmaUN7CHxDSh",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaRJdNDcwENAT69R9hy",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 5}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 821,
+          "output_tokens": 166,
+          "output_tokens_details": {
+            "thinking_tokens": 157
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1e9306e352b2e87e116969cb.quality.09",
+      "spent_micro_usd": 9081,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-4b5afc9736f082c708eb"
+}

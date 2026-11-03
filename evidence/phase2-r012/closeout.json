@@ -1,0 +1,98 @@
+{
+  "archive_note": "Closeout and manifest are external to the ZIP to avoid recursive identities. The historical execution is included with its exact source archive.",
+  "checks": {
+    "bandit_medium_high": "pass",
+    "mypy": "pass",
+    "phase2_tests_included": 105,
+    "pip_check": "pass",
+    "project_tests": 203,
+    "ruff": "pass",
+    "upstream_harness2_tests": 5
+  },
+  "crpo_activated": false,
+  "decision": "Offline policy update complete; stop before separately scoped live-readiness work.",
+  "demonstration": {
+    "benchmark_immutable_replay_identical": true,
+    "benchmark_synthetic_seed": "A",
+    "divergent_continuation": true,
+    "experiment_api_spend_usd": 0,
+    "fixture": true,
+    "generation_requests": 0,
+    "historical_files_verified_unchanged": 2218,
+    "historical_study_sha256_unchanged": "4de2d582d4a5f6f289df70284295da2c67961a1a26384957dd3a43a2635c982e",
+    "human_ratings": 0,
+    "human_with_late_synthetic_concerns": "B",
+    "human_without_forms": "inconclusive",
+    "kind": "phase2-policy-offline-demonstration",
+    "limitations": [
+      "All human forms, dates and future contexts are synthetic scenarios.",
+      "This is software evidence, not a real method performance result.",
+      "Historical native cutoff is an operator-declared snapshot boundary."
+    ],
+    "original_folder_accessed": false,
+    "prepared_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+    "provider_calls": 0,
+    "same_execution_and_native_assessment": true
+  },
+  "execution_specification": "0.12",
+  "experiment_api_spend_usd": 0,
+  "handoff_archive": {
+    "bytes": 10120045,
+    "crc_and_bytes_verified": true,
+    "entries": 2378,
+    "path": "evidence/phase2-r012/phase2-policy-kit.zip",
+    "sha256": "a163a81fac7754ff910515b4106dcc1a528d2812ae9642fc85cda6c54d4a94ae"
+  },
+  "historical_execution_study_sha256": "4de2d582d4a5f6f289df70284295da2c67961a1a26384957dd3a43a2635c982e",
+  "human_collection_started": false,
+  "human_ratings": 0,
+  "kind": "phase2-policy-offline-closeout",
+  "live_ready": false,
+  "phase2b_authorized": false,
+  "preservation": {
+    "changed_baseline_files": [
+      "AGENTS.md",
+      "EXPERIMENT_PLAN.md",
+      "PHASE_DEFINITIONS.md",
+      "README.md",
+      "src/buddha2/__main__.py"
+    ],
+    "historical_manifest_entries_verified": 2314,
+    "historical_revisions_verified_in_original_archive": [
+      "AGENTS.md",
+      "EXPERIMENT_PLAN.md",
+      "PHASE_DEFINITIONS.md",
+      "README.md",
+      "src/buddha2/__main__.py"
+    ],
+    "historical_walkthrough_files_unchanged": 2218,
+    "no_original_mounts_or_working_directories": true,
+    "original_folder_accessed": false,
+    "prior_source_result_files_unchanged": 250,
+    "tracked_baseline_files": 331,
+    "unchanged_baseline_files": 326,
+    "upstream_files_unchanged": {
+      "harness2": 114,
+      "novelty-bench": 169
+    }
+  },
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-10-27T00:21:32.915677+00:00",
+  "remaining_live_prerequisites": [
+    "verified provider input-admission bound",
+    "applicable spending authorization",
+    "provider credentials/account/model access",
+    "confirm grouping cache-write billing before final reservation review"
+  ],
+  "route_h_started": false,
+  "runtime_records": {
+    "checks": "evidence/phase2-r012/runtime/95960409692d44af8556787421f4a34f.json",
+    "exercise": "evidence/phase2-r012/runtime/exercise-runtime.json",
+    "full_tests": "evidence/phase2-r012/runtime/3e376bcc518f4e6c8b88b47248bf8e4f.json",
+    "historical_replay": "evidence/phase2-r012/runtime/historical-replay-runtime.json"
+  },
+  "schema_version": 1,
+  "status": "complete-with-live-admission-blocker",
+  "study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "token_count_calls": 0
+}

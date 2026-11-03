@@ -1,0 +1,12 @@
+{
+  "kind": "p2r-execution-kit-package",
+  "entries": 2006,
+  "bytes": 5289104,
+  "archive_sha256": "5f553c51396f6787d641ed85b6a1fd686fdc56125802b9684f6aa92e047ea9b3",
+  "manifest_sha256": "bd6064dba05961e07a2094f1478234e9b5c17ce83c6f0d03ccb63ce1fe51d896",
+  "all_members_verified": true,
+  "provider_calls": 0,
+  "api_spend_micro_usd": 0,
+  "actual_credentials_supplied": false,
+  "paid_authority_included": false
+}

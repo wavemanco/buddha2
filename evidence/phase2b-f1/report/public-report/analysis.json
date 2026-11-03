@@ -1,0 +1,281 @@
+{
+  "accounted_total_micro_usd": 210174,
+  "assessment_records": 3,
+  "contrasts": {
+    "B_minus_A": null,
+    "C_minus_B": null
+  },
+  "distinct_range": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "distinct_scored_order_coverage": {
+    "A": 1,
+    "B": 1,
+    "C": 1
+  },
+  "first_answer_quality": {
+    "mean_of_prompt_means": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "prompt_mean_range": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "scored_order_coverage": {
+      "A": 1,
+      "B": 1,
+      "C": 1
+    }
+  },
+  "fixture": false,
+  "generation_ranking_cost_micro_usd_by_candidate": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "head_quality": {
+    "mean_of_prompt_means": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "orders_with_head_scores": {
+      "A": 1,
+      "B": 1,
+      "C": 1
+    },
+    "prompt_mean_range": {
+      "A": null,
+      "B": null,
+      "C": null
+    }
+  },
+  "independent_prompts": 12,
+  "kind": "phase2-native-descriptive-analysis-v1",
+  "latency_seconds_by_role": {
+    "answer": {
+      "maximum": 9.667224660006468,
+      "measured_requests": 20,
+      "minimum": 4.565066063994891,
+      "total": 133.28871551400516
+    },
+    "group": {
+      "maximum": 3.1229653199989116,
+      "measured_requests": 3,
+      "minimum": 2.816441026996472,
+      "total": 9.051295368990395
+    },
+    "plan": {
+      "maximum": 9.02101906700409,
+      "measured_requests": 1,
+      "minimum": 9.02101906700409,
+      "total": 9.02101906700409
+    },
+    "quality": {
+      "maximum": 6.14498576700862,
+      "measured_requests": 3,
+      "minimum": 5.065976411002339,
+      "total": 16.33797685301397
+    },
+    "rank": {
+      "maximum": 2.5574448910047067,
+      "measured_requests": 1,
+      "minimum": 2.5574448910047067,
+      "total": 2.5574448910047067
+    }
+  },
+  "limitations": [
+    "Development only; fixtures never establish model effectiveness or select a real seed.",
+    "Ranges describe the twelve within-prompt repeat means; missing metrics stay missing.",
+    "C includes its B parent generation cost for candidate comparison; total ledger cost counts every request once.",
+    "B/C presentations share texts; counts are not independent tasks or additional generated answers.",
+    "Head-quality averages weight orders/prompts, not pooled heads; first answer is the first native group head."
+  ],
+  "mean_distinct": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "mean_utility": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "missing_orders": 69,
+  "order_statuses": {
+    "scored": 3
+  },
+  "paired_prompt_means": [
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-9c418f063bc433264d29"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-0ac59a48456661d0d8d5"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-7a77e85421d12bca8653"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-b1b0aa2062fdabf30542"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-510dc2800c595827238e"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-055c45e37c6c14cca664"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-4b5afc9736f082c708eb"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-0589e47205e5256cc5b3"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-6584de30a11a0e08ca32"
+    },
+    {
+      "B_minus_A": null,
+      "C_minus_B": null,
+      "means": {
+        "A": null,
+        "B": null,
+        "C": null
+      },
+      "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+    }
+  ],
+  "response_presentations": {
+    "A": {
+      "missing": 230,
+      "recorded": 10,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 10
+      }
+    },
+    "B": {
+      "missing": 230,
+      "recorded": 10,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 10
+      }
+    },
+    "C": {
+      "missing": 230,
+      "recorded": 10,
+      "scheduled_presentations": 240,
+      "statuses": {
+        "ok": 10
+      }
+    }
+  },
+  "scheduled_order_assessments": 72,
+  "scored_orders": 3,
+  "unique_request_cost_micro_usd_by_role": {
+    "answer": 141734,
+    "group": 4800,
+    "plan": 9894,
+    "quality": 33792,
+    "rank": 19954
+  },
+  "unresolved_reservation_micro_usd": 0,
+  "utility_range": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "utility_scored_order_coverage": {
+    "A": 1,
+    "B": 1,
+    "C": 1
+  }
+}

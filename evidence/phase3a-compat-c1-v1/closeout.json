@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "d8ee68dff5aa4870f04af23f19b3c411b6e1317011718c0308ba74b7748f26d5",
+  "automatic_live_launch_authorized": false,
+  "kind": "phase3a-c1-closeout-v1",
+  "manifest_sha256": "ef2a6979bb8b7d05295deec1043cf1d62202c6029fa75500095deefacb93a0d4",
+  "original_folder_accessed": false,
+  "provider_calls": 0,
+  "source_sha256": "e138a2eb07e537bfbf047dd451f487f96424abfdce9080968e3e8ad7637570d4",
+  "spend_micro_usd": 0,
+  "status": "offline-compatible"
+}

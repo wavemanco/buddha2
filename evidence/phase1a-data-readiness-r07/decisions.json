@@ -1,0 +1,92 @@
+{
+  "completion_separate_from_validity": true,
+  "decisions": [
+    {
+      "basis": [
+        "OriginalParquet/JSONL identity andall48prior mappingsreconcile",
+        "Source-safecontextandconstructinventoryavailable",
+        "Exposureandtraining-overlaplimitsrecorded"
+      ],
+      "prohibited_claims": [
+        "Bestgeneralcreativityjudge",
+        "Independenthumanvalidation",
+        "RMtrainingexclusion",
+        "Unseenpretrainingdata"
+      ],
+      "required_next_definition": [
+        "Freezeactualdevelopmentpopulation,criterion,models/reasoning,counts,decisionrulesandcostbeforeanynewexperiment"
+      ],
+      "status": "ready_for_specified_limited_use",
+      "use": "Development-only agreement with published MuCE labels"
+    },
+    {
+      "basis": [
+        "Exactsource/modelmetadataandpublicrewardadapteridentified",
+        "OurcurrentpairconstructionisnotexactMuCE-Prefreproduction"
+      ],
+      "conditions": [
+        "Chooseandlabelcode-faithfulvsformula-faithfulimplementationwhere source differs",
+        "Verifyaccess,terms,dependenciesandcomputeinaseparatelydefinedslice",
+        "UseexplicitpublishedqualityadapterratherthanCLIdefault",
+        "Proveanyclaimedvalidationdataareoutsideevaluatortrainingmembership; otherwiseonlyreproduction/descriptiveclaims"
+      ],
+      "prohibited_claims": [
+        "Equivalentmodelsbasedonlyonmodelcards",
+        "Independentlyvalidatedcreativitymetric",
+        "Reproducedauthorresultsbeforeexecution"
+      ],
+      "status": "conditional",
+      "use": "CrPO measurement-only reproduction"
+    },
+    {
+      "basis": [
+        "Nohumanstudyperformed",
+        "Originalper-raterrecords/uncertaintyunavailable",
+        "Someinstructioncontextsaretransformed;Mersealsourceprotocolunresolved",
+        "Existinginspectionandoldmodeldisagreementsdonotisolatecause"
+      ],
+      "conditions": [
+        "Defineintendedcreativitycriterionandcollectboundedindependentblindedhumanreferencebeforeconfirmatoryclaims"
+      ],
+      "prohibited_claims": [
+        "CertifiedhumanalignmentfromMuCEscoreagreement",
+        "Dataset-wideerrorratefromselectedcases",
+        "Transferacrossfamiliesorbenchmarkswithoutobservation"
+      ],
+      "status": "not_currently_suitable_as_sole_reference",
+      "use": "Claimsjudgeagreeswithhumansonnewoutputs"
+    }
+  ],
+  "evidence": {
+    "packet_sha256": "88bf5d3e8bfebfecfac77549663638bbc0a8ed89e6dfd05a58136bd8a2ca7f6a",
+    "pre_key_notes_sha256": "18c8d9bed5015cceba9ff9825bae2cc6572956a61640c95546702091c4621dc6",
+    "score_key_sha256": "4deda3ec24f3df5a4aaeeb89cdc04aeadd5eb0cf88d9a5027624a43b69301202",
+    "selection_sha256": "2b76b04cac2aa9e40e9380be9e3342990adefbd3332ddb1e79530c21ab86ffa7",
+    "source_audit_sha256": "cf30000dd9ed4b14792fc0e74eaea503772a72ed855890e3aa297218756e6879"
+  },
+  "experiment_model_calls": 0,
+  "experiment_spend_usd": 0,
+  "heldout_row_contents_opened": false,
+  "kind": "phase1a-use-specific-decisions",
+  "local_model_inference": 0,
+  "new_human_ratings": 0,
+  "new_prompt_groups_consumed": 0,
+  "population": "Pinned originalMuCE full_agreement/train; creativity and originality remain separate; manualinspectionMetaphorsonly",
+  "recommended_next_route": {
+    "definition_still_needed": [
+      "Ratereligibilityandavailability",
+      "Exactcomparisoninstructionsandtietreatment",
+      "Blinding/prior-recognitionprocedure",
+      "Descriptivereportanddecisionrule;8pairsarenotglobalvalidation",
+      "Human-time/recruitmentcostandanyauthorization"
+    ],
+    "id": "H",
+    "name": "Bounded independent human-reference check",
+    "next_route_started": false,
+    "reason": "Resolvecriterion/task-contextinterpretationbeforeselectingfrontiermodelsagainsttheselabels.",
+    "smallest_usable_proposal": "Use the8fixedinspectionpairswith2independenthumanreaders:16pairwisejudgmentsplusbriefcriterionnotes; no modelcalls or newdata groups."
+  },
+  "recorded_at_utc": "2026-10-25T10:05:21.748062+00:00",
+  "schema_version": 1,
+  "token_count_requests": 0
+}

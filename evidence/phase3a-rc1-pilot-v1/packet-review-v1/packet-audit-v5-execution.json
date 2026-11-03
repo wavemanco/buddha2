@@ -1,0 +1,27 @@
+{
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "-S",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rc1-pilot-v1\\reviewer\\packet_reader_v3.py",
+    "--mode",
+    "offline",
+    "--expect-archive-sha256",
+    "9026c0d15341409f976aeef0274d181457ab8342da6500f18743dd5efeab2f89",
+    "--expect-manifest-sha256",
+    "39cc0734a6124313d31cf95b2cc9baa97750e99d0e53f0fc07817c37ba7401e7",
+    "--expect-gate-file-sha256",
+    "d5fc2366b0e7e3c1cc7578672082db69e7b257c086c9ee911e8f29659971b75b"
+  ],
+  "exit_code": 0,
+  "independent_acceptance_sha256": "5d51331f9a8b411b48b22ed0fba7b0eb0337de9792b1c1ef3b6807b2bfe61cd2",
+  "kind": "rp1-independent-packet-audit-execution-v1",
+  "packed_files_modified_by_wrapper": false,
+  "packet_receipt_written": false,
+  "provider_calls": 0,
+  "reader_reported_passed": true,
+  "reader_sha256": "ccd91ad10d3b68bb55290c540bc98a6569369e52bf5abb98e00debe752357ab5",
+  "stderr": "",
+  "stdout_result": "runs/phase3a-rc1-pilot-v1/reviewer/packet-audit-v5.json",
+  "stdout_result_sha256": "af8b8c0efabaf2b18bfbf2d9c79bf958396721e8d314fa6ce6dd62bd990f0623"
+}

@@ -1,0 +1,986 @@
+{
+  "CRC_and_all_member_SHA256_verified": true,
+  "SDK_constructions": 0,
+  "archive_bytes": 2147891,
+  "archive_grants_no_new_requests": true,
+  "archive_sha256": "45ddbd3cd8d32ecd92902955315996ee02377521ed8f1943ad57aae21157cc0c",
+  "authentic_live_path_in_current_first_report": false,
+  "cumulative_known_micro_usd": 5659054,
+  "cumulative_max_exposure_micro_usd": 17099054,
+  "diagnostic_scored": 1,
+  "engineering_review": "ffc9e303a32b08bd64f93bc63e582a457a131152a6f1b35aa0246edb91985098",
+  "event_count": 357,
+  "excluded_before_stat_or_read": [
+    "credential-binding.json",
+    "journal/.writer.lock",
+    "launch-owner/.writer.lock",
+    "owner/.writer.lock",
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/summary.lock"
+  ],
+  "fixture": false,
+  "grant_sha256": "90c50eb7f8c5ef80a593c6f10f1b577d04e71cff9db0d1d702051b6d8f760e14",
+  "historical_accounting_settled": false,
+  "historical_unknown_released": false,
+  "journal_sha256": "467ba97481b0724ff6ce6cf08d53d8063125fe0db9bcc0ee4c8a85ca8720aed5",
+  "kind": "phase3a-r2-first-pair-archive-v1",
+  "known_requests": 178,
+  "launcher_sha256": "9a709e6d09b62691c63d771ac7da592216ca1fd1d44395d31c7745045ebbd21f",
+  "member_count": 205,
+  "member_sha256": {
+    "PHASE3A_R2_FIRST_PAIR_REPORT.md": "e3ececb73f85b639f16d5aaf349648f1e7fb2b70ecfbd7355ef2e2740723f140",
+    "evidence/phase3a-r2-v1/authorization.json": "c60de93644cbf05f4f3e21074e7572b2ab175f0bf4ca393c031c96ad1a4ac471",
+    "evidence/phase3a-r2-v1/first-pair-v1/independent-audit.json": "6a0474f9ce5875c2ae9aef10ef407d671329c5ae774e5653b1ffe97e8378a28a",
+    "evidence/phase3a-r2-v1/offline-execution-kit-v1.manifest.json": "86660f8dbc64d67a73f1495e72bc5ecf41070ea1929e0c6ff70afb6e8ed1e76a",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/assessments/p3a-assessment-2ea91548df038664089d56f1.json": "e27c8ce29603ecc5583c0bd5eb143fce56a82ef6204fad037f8c282ce676d4b0",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/assessments/p3a-assessment-848ff1c7612e47256e632433.json": "0d1405ab0db802889d2f86f1c7725419e9885ac2999b56889faba2284a8df512",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/assessments/p3a-assessment-a0bd0abe294be2705d6ba164.json": "d282e0f4a7483d235a8a01007e8ac04c478a6ee45b77abeda664c83489352585",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/branches/p3a-01-adaptive.json": "c436d16e1ac68c47b0039afa743668eb75b2882d3dbf15523b5ded30eba98f2b",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/branches/p3a-01-fixed.json": "45f4981d2bde8e7d6839c25bcaad03492515aa4f5d55d758b6b235248d2e7295",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/journal/events.jsonl": "467ba97481b0724ff6ce6cf08d53d8063125fe0db9bcc0ee4c8a85ca8720aed5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/journal/manifest.json": "4ee43df8c1d2a37670082b0f255ac3c075081e2a347645de56e9b7a95ac4add5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/report-cutoffs/f9cb4668e1312a000db048575297001cc2b8f77d12af3472a0cd5f0c8943f21b.json": "1a528ff147136cc5e65fd3e40ec1341d2b16dfe04d046df57deef36a3477ccc7",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/seals/p3a-01.json": "5cbc904d73e7a9c7f710d028262bd27b83d5b3a45caf6c80a633cd73f310acee",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/adaptation.json": "f23a09114124d945a5afb97afca9ac4f900317ab3935ddb9522af1d4c001d70a",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.meta.json": "0511783b3bf0412fcec33f2b6178d127b88da33323e6deebaf933dc527b9def1",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.mission.md": "245eb64b93c363ea5f3f5d3a2c450788edd18c94d123c361ff4d591b497d2226",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.response.md": "e31de12d371efe17c1a670ef8bd084e88d6881ff5d7b6fc138069d1f568d798d",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.meta.json": "4e8479db37671f8706af7ed9d4ebfa6a2f3ca8f00bfcfd93f47d06cccf31367a",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.mission.md": "ff0e1d76e9696cf730b1c639bc8a65eae6f44134c3b81d06162052391cdb2144",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.response.md": "7b24e277ea456c9db802323bfa56145067d879e479a85f00b17358d3da72ecb9",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.meta.json": "ece01632f7008150239abcdea88e43f1d1e49afda53f481c8abc692c81dba5a1",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.mission.md": "aa7485604dacad4158fb78c4472660d32fb386714fe82b9829accbe46e6e75b1",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.response.md": "1173781af61cbfe7253c4a4f665daad0365a6e963d2f8f270056c2486ba50955",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/agg1.a1.settled.json": "86deac90d3d1f9614a20b7a3b30b9750dd6490e6763e24440b34acc68e970c09",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/agg1.a1.started.json": "b24e4fd3d8f630c9b57be64668a8242d2e9af0fc2e706c08ea6ccbcca5c88eba",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/dom1.a1.settled.json": "1bf65c7afe60b79699211c461fb0c7b316c02b6f8caadb7a01d564b1f721c922",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/dom1.a1.started.json": "05633c3c73b8b6a9c0778776ad46284f319d5fbfffe6fe47f7ba25585c8e9873",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/inv1.a1.settled.json": "0e9fc439b965d826d3e1ab572cf6c94f4ce9a6aabc47a50856b1809de4910d73",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/editor-audit/phase3a-sessions/inv1.a1.started.json": "99ac93c9a2932ebec41b5c85c181c4819017d688a220c7157e216f1d8a626db8",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/identity.json": "794e1fcd4df1cfa95611a969cdc9bd9fa9a22059cff5471c62c83ab4b84c70be",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/decisions/dom1.md": "7b24e277ea456c9db802323bfa56145067d879e479a85f00b17358d3da72ecb9",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/decisions/inv1.md": "1173781af61cbfe7253c4a4f665daad0365a6e963d2f8f270056c2486ba50955",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/deliverables/base1/INDEX.md": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/deliverables/base1/answers.json.txt": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/produced.md": "298d68145ae7bcf2e0148048623c502c702c6db116c999d62e1334a4bdcf2ff5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/rollout.md": "70b3364183b5fc762a59f46052b5d2692b00d2b8eb5fe7949412b87f9c5c9e3e",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/produced.md": "51d76f3d55ae59ccbb6e459cdc6a8f2021365b9328f03ad9b52217791d18e281",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/rollout.md": "cac949b5783c5d41a668fd469ec7f1f9437ba0cf87eb7e67410707c0c2ec8079",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/rollouts/base1.md": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/task.md": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/deliverables/base1/INDEX.md": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/deliverables/base1/answers.json.txt": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/rollouts/base1.md": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/task.md": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/deliverables/base1/INDEX.md": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/deliverables/base1/answers.json.txt": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/rollouts/base1.md": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/task.md": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/selection/agg1/selection.json": "9ca1508f0b17e275f72bff335194aa9836f931a1193aae1199f05b9662a01805",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/summary.json": "2f2af5205b6439f0009cee77bda69371e7ab07e2f784ee525ddfa3cb2031b4e3",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/agg1/rollout.json": "def71e37a1c42df8253fb682458641da2a3cf3df67f911671ceb6f9d3d909242",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/base1/rollout.json": "6da95dcbfdf7258acbf695bbb0c0489dddac4f3cd0f3e2020ac33ca42d2e4b4b",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/dom1/rollout.json": "0825e06eacce929c1f5facdd8dd7e59a22b4eaa674eb17fd2c3b20b49109f329",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/systemprompt.md": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/harness/tool_descriptions/tool_guidance.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/phase3a-r2-v1/17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032/live/search/p3a-01/adaptive/rollouts/inv1/rollout.json": "332a547173a4628561d8a18b2588fac9ab3977bdefa3296f2792131d443d4e31",
+    "runs/phase3a-r2-v1/first_pair_packet.py": "c230f03c454ef87caee7b822cf9c079d22dc39012b72af9bf52fa61be4dc4d62",
+    "runs/phase3a-r2-v1/launcher/a4aaf4de8e234982b97238dd0d7b8c17.inspection-draft.json": "d19a451f9bee5a9894b5eaef29c675e3486b5c1c6c96d96052aa59c39509c064",
+    "runs/phase3a-r2-v1/launcher/a4aaf4de8e234982b97238dd0d7b8c17.inspection.json": "100e4814080be244a4bfeaba676996dda70a0c38f4d5a99b4640d0f50d8d38b9",
+    "runs/phase3a-r2-v1/launcher/a4aaf4de8e234982b97238dd0d7b8c17.preflight-container.json": "78abc6145a8c2534ec4dbd59dd67a62c440b666f0bc8b63dd7a147facbc50f0a",
+    "runs/phase3a-r2-v1/launcher/a4aaf4de8e234982b97238dd0d7b8c17.preflight.json": "c90b371a43d4d9c41c9e22f1d8b88e37e9cf31cdb55ea1baa2a838fc1ea373e6",
+    "runs/phase3a-r2-v1/launcher/a4aaf4de8e234982b97238dd0d7b8c17.result.json": "2ba8162261ca6a4e52ca4a31b2af35e64ee18f1068f91bfee7cb777b72b43593",
+    "runs/phase3a-r2-v1/live-first-inspect.json": "06a42a46dc6c4f7b3f9693207052ba0bc6f011fc32ab6dc66fc8efc5989fd770",
+    "runs/phase3a-r2-v1/live-first-report-summary.json": "449525a7e77d0ab6b712a161df9522aba4783d9b7c8d00d9459f5155c0caef7a",
+    "runs/phase3a-r2-v1/live-first-review.json": "184f73bd952fd8f97b8d042f1b4149797c6c85a7475283c1f5812958302e7295",
+    "runs/phase3a-r2-v1/live-study.json": "0fd2953bb8899b3f3d4256e4cedcf16201acb4332389905c51748ecb0f37f472",
+    "runs/phase3a-r2-v1/release-v1/live-grant.json": "42c7f7f380ae30e8b2af268fbae7d9275a7ada0d97bd7fe69065f7fd41e92e5b",
+    "runs/phase3a-r2-v1/release-v1/mock-grant.json": "6479a729768ad4f8c403db9ad7d64658fb9a66b569160b0103ce9b3545178a92",
+    "runs/phase3a-r2-v1/release-v1/readiness.json": "cf60131ebf72b50f61fa46b5f5d1cdb4329cb162433abc388e4e46cf7b63b4d7",
+    "runs/phase3a-r2-v1/release-v1/study.json": "117e2d5a2782c14206cbff2fbb9be6b3266eedcc7016bb934bb178d899ba4fbf",
+    "runs/phase3a-r2-v1/reports/live-first-v1/PHASE3A_REPORT.md": "63ea0e81f1f24c90d272b7869ec30923fd16990c7a22e0bc0f7427c0127e889c",
+    "runs/phase3a-r2-v1/reports/live-first-v1/accounting.json": "6a03b1aa3396757e9111be8d9aeba5d1321e05c18b91e0d61cd65b5394aedc8d",
+    "runs/phase3a-r2-v1/reports/live-first-v1/analysis.json": "d51fddcbb0cba5d38a1dcebd3e547dba9d5fa4cad9c2f8e3efc3a5150754042e",
+    "runs/phase3a-r2-v1/reports/live-first-v1/coverage.json": "bc8191820aaf39e707622a3eb5b73475a2b0ff32f40e1e8cbf0e95761e84a3db",
+    "runs/phase3a-r2-v1/reports/live-first-v1/protocol.json": "5d4c8cc2705abe3f7d5e6fc9f78c97e4ee5b86610916bd416e0511ffedba8bc1",
+    "runs/phase3a-r2-v1/reports/live-first-v1/rows.json": "e6700d161ad2ba2b290a0019e2ce538e955fdfe2ec24535caa15c77102afe456",
+    "runs/phase3a-r2-v1/reports/live-first-v1/summary.json": "1184c87bacd08be1c0a399c00b10aaa497fe9d7c8d62b84015f5f09623363395"
+  },
+  "new_provider_calls": 0,
+  "offline_source_reference": {
+    "archive": "evidence/phase3a-r2-v1/offline-execution-kit-v1.zip",
+    "embedded_again": false,
+    "manifest_sha256": "86660f8dbc64d67a73f1495e72bc5ecf41070ea1929e0c6ff70afb6e8ed1e76a",
+    "sha256": "1303ef9ca97f346ac7f03908669457f6ed648a6cc522f76a2d10545925269f40",
+    "source_files": 157
+  },
+  "original_folder_accessed": false,
+  "original_public_inputs_preserved": true,
+  "passed": true,
+  "pending": 0,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "primary_scored": 2,
+  "prior_known_spent_micro_usd": 2695297,
+  "prior_reserved_micro_usd": 11440000,
+  "provider_calls": 178,
+  "provider_terminal_prefix_event_count": 356,
+  "provider_terminal_prefix_sha256": "3bfebaf795e30a18fb806c54c072dca1152e183d9e182406d37d27851e08fea5",
+  "raw_file_count": 180,
+  "raw_files": {
+    "assessments/p3a-assessment-2ea91548df038664089d56f1.json": {
+      "bytes": 85427,
+      "sha256": "e27c8ce29603ecc5583c0bd5eb143fce56a82ef6204fad037f8c282ce676d4b0"
+    },
+    "assessments/p3a-assessment-848ff1c7612e47256e632433.json": {
+      "bytes": 79156,
+      "sha256": "0d1405ab0db802889d2f86f1c7725419e9885ac2999b56889faba2284a8df512"
+    },
+    "assessments/p3a-assessment-a0bd0abe294be2705d6ba164.json": {
+      "bytes": 85420,
+      "sha256": "d282e0f4a7483d235a8a01007e8ac04c478a6ee45b77abeda664c83489352585"
+    },
+    "branches/p3a-01-adaptive.json": {
+      "bytes": 619149,
+      "sha256": "c436d16e1ac68c47b0039afa743668eb75b2882d3dbf15523b5ded30eba98f2b"
+    },
+    "branches/p3a-01-fixed.json": {
+      "bytes": 1004697,
+      "sha256": "45f4981d2bde8e7d6839c25bcaad03492515aa4f5d55d758b6b235248d2e7295"
+    },
+    "journal/events.jsonl": {
+      "bytes": 2454029,
+      "sha256": "467ba97481b0724ff6ce6cf08d53d8063125fe0db9bcc0ee4c8a85ca8720aed5"
+    },
+    "journal/manifest.json": {
+      "bytes": 131851,
+      "sha256": "4ee43df8c1d2a37670082b0f255ac3c075081e2a347645de56e9b7a95ac4add5"
+    },
+    "report-cutoffs/f9cb4668e1312a000db048575297001cc2b8f77d12af3472a0cd5f0c8943f21b.json": {
+      "bytes": 128,
+      "sha256": "1a528ff147136cc5e65fd3e40ec1341d2b16dfe04d046df57deef36a3477ccc7"
+    },
+    "seals/p3a-01.json": {
+      "bytes": 724,
+      "sha256": "5cbc904d73e7a9c7f710d028262bd27b83d5b3a45caf6c80a633cd73f310acee"
+    },
+    "search/p3a-01/adaptive/adaptation.json": {
+      "bytes": 610775,
+      "sha256": "f23a09114124d945a5afb97afca9ac4f900317ab3935ddb9522af1d4c001d70a"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.meta.json": {
+      "bytes": 195,
+      "sha256": "0511783b3bf0412fcec33f2b6178d127b88da33323e6deebaf933dc527b9def1"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.mission.md": {
+      "bytes": 11556,
+      "sha256": "245eb64b93c363ea5f3f5d3a2c450788edd18c94d123c361ff4d591b497d2226"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.response.md": {
+      "bytes": 5348,
+      "sha256": "e31de12d371efe17c1a670ef8bd084e88d6881ff5d7b6fc138069d1f568d798d"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/editor-audit/agg1.a1.a8309f1a104389ba.workspace/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.meta.json": {
+      "bytes": 195,
+      "sha256": "4e8479db37671f8706af7ed9d4ebfa6a2f3ca8f00bfcfd93f47d06cccf31367a"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.mission.md": {
+      "bytes": 14254,
+      "sha256": "ff0e1d76e9696cf730b1c639bc8a65eae6f44134c3b81d06162052391cdb2144"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.response.md": {
+      "bytes": 6739,
+      "sha256": "7b24e277ea456c9db802323bfa56145067d879e479a85f00b17358d3da72ecb9"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/editor-audit/dom1.a1.01e006c37c547bce.workspace/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.meta.json": {
+      "bytes": 196,
+      "sha256": "ece01632f7008150239abcdea88e43f1d1e49afda53f481c8abc692c81dba5a1"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.mission.md": {
+      "bytes": 13677,
+      "sha256": "aa7485604dacad4158fb78c4472660d32fb386714fe82b9829accbe46e6e75b1"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.response.md": {
+      "bytes": 3509,
+      "sha256": "1173781af61cbfe7253c4a4f665daad0365a6e963d2f8f270056c2486ba50955"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/editor-audit/inv1.a1.43bc4979f3c4e12c.workspace/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/agg1.a1.settled.json": {
+      "bytes": 6237,
+      "sha256": "86deac90d3d1f9614a20b7a3b30b9750dd6490e6763e24440b34acc68e970c09"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/agg1.a1.started.json": {
+      "bytes": 1895,
+      "sha256": "b24e4fd3d8f630c9b57be64668a8242d2e9af0fc2e706c08ea6ccbcca5c88eba"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/dom1.a1.settled.json": {
+      "bytes": 6237,
+      "sha256": "1bf65c7afe60b79699211c461fb0c7b316c02b6f8caadb7a01d564b1f721c922"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/dom1.a1.started.json": {
+      "bytes": 1895,
+      "sha256": "05633c3c73b8b6a9c0778776ad46284f319d5fbfffe6fe47f7ba25585c8e9873"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/inv1.a1.settled.json": {
+      "bytes": 6237,
+      "sha256": "0e9fc439b965d826d3e1ab572cf6c94f4ce9a6aabc47a50856b1809de4910d73"
+    },
+    "search/p3a-01/adaptive/editor-audit/phase3a-sessions/inv1.a1.started.json": {
+      "bytes": 1895,
+      "sha256": "99ac93c9a2932ebec41b5c85c181c4819017d688a220c7157e216f1d8a626db8"
+    },
+    "search/p3a-01/adaptive/identity.json": {
+      "bytes": 5257,
+      "sha256": "794e1fcd4df1cfa95611a969cdc9bd9fa9a22059cff5471c62c83ab4b84c70be"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/decisions/dom1.md": {
+      "bytes": 6739,
+      "sha256": "7b24e277ea456c9db802323bfa56145067d879e479a85f00b17358d3da72ecb9"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/decisions/inv1.md": {
+      "bytes": 3509,
+      "sha256": "1173781af61cbfe7253c4a4f665daad0365a6e963d2f8f270056c2486ba50955"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/deliverables/base1/INDEX.md": {
+      "bytes": 398,
+      "sha256": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/deliverables/base1/answers.json.txt": {
+      "bytes": 26153,
+      "sha256": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness.diff": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/produced.md": {
+      "bytes": 29160,
+      "sha256": "298d68145ae7bcf2e0148048623c502c702c6db116c999d62e1334a4bdcf2ff5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/dom1/rollout.md": {
+      "bytes": 32062,
+      "sha256": "70b3364183b5fc762a59f46052b5d2692b00d2b8eb5fe7949412b87f9c5c9e3e"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness.diff": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/produced.md": {
+      "bytes": 31549,
+      "sha256": "51d76f3d55ae59ccbb6e459cdc6a8f2021365b9328f03ad9b52217791d18e281"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/pool/inv1/rollout.md": {
+      "bytes": 34598,
+      "sha256": "cac949b5783c5d41a668fd469ec7f1f9437ba0cf87eb7e67410707c0c2ec8079"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/rollouts/base1.md": {
+      "bytes": 28929,
+      "sha256": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/agg1/task.md": {
+      "bytes": 76,
+      "sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/deliverables/base1/INDEX.md": {
+      "bytes": 398,
+      "sha256": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/deliverables/base1/answers.json.txt": {
+      "bytes": 26153,
+      "sha256": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/rollouts/base1.md": {
+      "bytes": 28929,
+      "sha256": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/dom1/task.md": {
+      "bytes": 76,
+      "sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/deliverables/base1/INDEX.md": {
+      "bytes": 398,
+      "sha256": "d0616a4b148686e1c656bea973646e4b44dc1db187b8ed05d5144b213b0f5268"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/deliverables/base1/answers.json.txt": {
+      "bytes": 26153,
+      "sha256": "bd29a46d32b4af0d2cc368a0a3acc5240ebc0aeb49358a94d9b3b3b51e1dcab9"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/rollouts/base1.md": {
+      "bytes": 28929,
+      "sha256": "3c521bf6865c6cc46bfdd6313e948e8c8e7d24e83db877c82557445c98855eb6"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/context/inv1/task.md": {
+      "bytes": 76,
+      "sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/agg1/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/base/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/dom1/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/harnesses/inv1/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/selection/agg1/selection.json": {
+      "bytes": 727,
+      "sha256": "9ca1508f0b17e275f72bff335194aa9836f931a1193aae1199f05b9662a01805"
+    },
+    "search/p3a-01/adaptive/native/noveltybench-phase3a-portfolio-api-agg1-phase3a-8ae46d62ac78e7a49786-p3a-01/nb-curated-0589e47205e5256cc5b3/summary.json": {
+      "bytes": 19008,
+      "sha256": "2f2af5205b6439f0009cee77bda69371e7ab07e2f784ee525ddfa3cb2031b4e3"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/agg1/rollout.json": {
+      "bytes": 118167,
+      "sha256": "def71e37a1c42df8253fb682458641da2a3cf3df67f911671ceb6f9d3d909242"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/base1/rollout.json": {
+      "bytes": 111322,
+      "sha256": "6da95dcbfdf7258acbf695bbb0c0489dddac4f3cd0f3e2020ac33ca42d2e4b4b"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/dom1/rollout.json": {
+      "bytes": 120608,
+      "sha256": "0825e06eacce929c1f5facdd8dd7e59a22b4eaa674eb17fd2c3b20b49109f329"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/LongTermMEMORY.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/guardrails.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/plugin/README.md": {
+      "bytes": 154,
+      "sha256": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/scripts/README.md": {
+      "bytes": 111,
+      "sha256": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/skills/README.md": {
+      "bytes": 175,
+      "sha256": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/sub_agents/README.md": {
+      "bytes": 177,
+      "sha256": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/systemprompt.md": {
+      "bytes": 1211,
+      "sha256": "d5da9e8ccdae4e5d37d12291508f964951fd4955245213bf36ccb70ccc9ff671"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/harness/tool_descriptions/tool_guidance.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "search/p3a-01/adaptive/rollouts/inv1/rollout.json": {
+      "bytes": 128149,
+      "sha256": "332a547173a4628561d8a18b2588fac9ab3977bdefa3296f2792131d443d4e31"
+    }
+  },
+  "real_credentials_read": false,
+  "reserved_micro_usd": 0,
+  "runtime_sha256": "f12168b4e20523b73d51268383cd2ec5d9b4cb152757a057cdc3015c67b2980b",
+  "scientific_phase_complete": false,
+  "source_sha256": "a3b9403d6bc0a144d0bb74e74a330ccf057850da0d23dcb2d9059d94a20883e3",
+  "spent_micro_usd": 2963757,
+  "study_sha256": "17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032",
+  "unknown": 0
+}

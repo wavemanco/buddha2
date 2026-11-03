@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "cbacf84ef14a99e9b1344f4387e219c565a7ff4e53f25669f24dc9d87df25977",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2013
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0026",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**Gift: a copy of *Designing Your Life* by Bill Burnett and Dave Evans, with a handwritten note tucked inside.**\n\nTwenty-five is often a crossroads: early career choices are settling in, and big questions about direction, relationships, and where to live start to feel real. This book is practical rather than preachy. It offers hands-on exercises for exploring options and trying small experiments instead of agonizing over one \"right\" path.\n\n**The handwritten note (feel free to adapt):**\n\n*Happy 25th, [Name]!*\n\n*I picked this book because I've watched you [grow/take risks/figure things out] this past year, and I think you're at the start of something great. You don't need to have it all figured out, and this book is a good reminder that nobody does. Try things, stay curious, and know I'm in your corner for whatever comes next.*\n\n*Here's to your next chapter.*\n*[Your name]*\n\n**Tip:** Mark one page or exercise that made you think of them, and mention it in the note to make it feel personal.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "cbacf84ef14a99e9b1344f4387e219c565a7ff4e53f25669f24dc9d87df25977",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-718a1781795dd29b5ebe57e4.quality.03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

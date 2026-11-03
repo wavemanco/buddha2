@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-54f7bf563ec15ea4d8aefd7bd254aaa83ea6f915ab2de592c78890df0b859e3d",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-8cdb74f765c0c6a857a261bb.answer.00",
+      "p2-8cdb74f765c0c6a857a261bb.answer.01",
+      "p2-8cdb74f765c0c6a857a261bb.answer.02",
+      "p2-8cdb74f765c0c6a857a261bb.answer.03",
+      "p2-8cdb74f765c0c6a857a261bb.answer.04",
+      "p2-8cdb74f765c0c6a857a261bb.answer.05",
+      "p2-8cdb74f765c0c6a857a261bb.answer.06",
+      "p2-8cdb74f765c0c6a857a261bb.answer.07",
+      "p2-8cdb74f765c0c6a857a261bb.answer.08",
+      "p2-8cdb74f765c0c6a857a261bb.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-93a6dd18d5692ee57a74d63d",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.00",
+      "status": "ok",
+      "text": "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety you can get in 4 characters.\n\nKeep in mind that 4 characters is inherently weak, since even a complex one can be cracked quickly by brute force. If the system allows it, use 12 or more characters or a passphrase instead."
+    },
+    {
+      "id": "response-f4982a77d507c3b92f498d3a",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.01",
+      "status": "ok",
+      "text": "**v7#Q**\n\nFour characters is very short, so this is only as strong as a 4-character password can be. It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a dictionary word or a common pattern. If the system allows it, a longer password or passphrase (12+ characters) would be much safer. Also, use a password manager to generate and store it rather than reusing this one."
+    },
+    {
+      "id": "response-65d80854bb4976fd73420238",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.02",
+      "status": "ok",
+      "text": "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety possible in 4 characters.\n\nNote that 4 characters is inherently weak, since even a random one can be cracked quickly by brute force. If the system allows it, use 12 or more characters instead."
+    },
+    {
+      "id": "response-d8ae1df1ae713afe97decdca",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.03",
+      "status": "ok",
+      "text": "**r7#K**\n\nWith only 4 characters, this uses all four character types (lowercase, digit, symbol, uppercase) to maximize strength. Still, 4 characters is inherently weak. If the system allows it, use 12 or more characters instead."
+    },
+    {
+      "id": "response-8fef9134784079215c2884b4",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.04",
+      "status": "ok",
+      "text": "**r7$K**\n\nWith only 4 characters, this is as strong as a password of that length can be: it mixes lowercase, a digit, a symbol, and an uppercase letter. Still, 4 characters is inherently weak and can be cracked quickly by brute force. If the system allows it, use 12 or more characters."
+    },
+    {
+      "id": "response-0cd72ce6030fd109d5a8e3b6",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.05",
+      "status": "ok",
+      "text": "**r7#K**\n\nWith only 4 characters, this mixes a lowercase letter, a digit, a symbol, and an uppercase letter to get as much variety as possible. Even so, 4 characters is inherently weak, so use a longer password (12+ characters) wherever the system allows it."
+    },
+    {
+      "id": "response-f7724cc35308fae6df4eaf4c",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.06",
+      "status": "ok",
+      "text": "**k#9Q**\n\nWith only 4 characters, this mixes lowercase, uppercase, a symbol, and a digit to maximize strength for that length. It's still weak in absolute terms, since any 4-character password can be cracked almost instantly. If the system allows it, use a longer passphrase of 12 or more characters instead."
+    },
+    {
+      "id": "response-07824bb7f8235586c5d2546f",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.07",
+      "status": "ok",
+      "text": "**r7$K**\n\nWith only 4 characters, this uses one lowercase letter, one digit, one symbol, and one uppercase letter to get the most variety possible. Still, 4 characters is inherently weak and can be cracked very quickly by brute force. If the system allows it, use 12 or more characters."
+    },
+    {
+      "id": "response-ea633a91660a34375820b161",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.08",
+      "status": "ok",
+      "text": "**v#9Q**\n\nFour characters is very short, so this is about as strong as a 4-character password can be, using a mix of lowercase, uppercase, a symbol, and a digit in a non-predictable order. If the system allows it, a longer passphrase (12+ characters) would be much more secure."
+    },
+    {
+      "id": "response-7a8fa383c610e438f8bbf157",
+      "request_id": "p2-8cdb74f765c0c6a857a261bb.answer.09",
+      "status": "ok",
+      "text": "**k#7Q**\n\nWith only 4 characters, this uses all four character types (lowercase, symbol, number, uppercase) to maximize strength within the limit. Keep in mind that 4 characters is inherently weak, so use it only where the system forces that limit, and use a longer passphrase wherever you can."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-6584de30a11a0e08ca32",
+    "prompt": "Suggest a strong 4 character password.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-96"
+    }
+  }
+}

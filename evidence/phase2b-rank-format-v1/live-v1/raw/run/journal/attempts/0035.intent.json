@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "ff1481c94320adcae1c88f6f0e3c42627b5b90e780361ecbf9d594b41531ea91",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 1835
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0035",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**A custom star map of the night they were born.**\n\nFor a 25th birthday, a star map marks a quarter-century by showing the exact sky over their birthplace on the day they arrived. Choose a framed print with their name, birth date, and city, plus a short line underneath that fits your friendship. It could be an inside joke, a lyric they love, or something like \"25 years of you.\"\n\nTo make it more personal, you can:\n- Choose a color scheme that matches their home or favorite color.\n- Add a handwritten note on the back about what you've appreciated about them over the years.\n- Use the sky from another meaningful date, like the day you met, if you'd prefer something about your friendship.\n\nServices like Etsy sellers, The Night Sky, or Under Lucky Stars can produce these in a few days, and a frame is easy to find locally.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "ff1481c94320adcae1c88f6f0e3c42627b5b90e780361ecbf9d594b41531ea91",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.01",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

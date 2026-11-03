@@ -1,0 +1,125 @@
+{
+  "all_member_SHA256_and_CRC_verified": true,
+  "all_member_sizes_verified": true,
+  "archive": "evidence/phase3a-c1-completion-v4/offline-kit-v1.zip",
+  "archive_bytes": 32128276,
+  "archive_sha256": "e085a323efe9f0883115d64a6d94f6e7681ae174b1cdded9b93a64232ef0b565",
+  "authorship_disclosure": "This separate AI worker authored no reviewed implementation, tests, packager, archive, manifest, report or runbook. It previously authored the independent launch-review certificate included in this packet and now authors only this external receipt. The packet producer and launch scope-owner authorship remain disclosed separately.",
+  "casefold_unique_inventory_verified": true,
+  "closed_parent_references_verified": {
+    "evidence/phase3a-c1-completion-v3/live-outcome-v1.manifest.json": {
+      "bytes": 630862,
+      "sha256": "0a59e2e9b51ea7992eaa732a11fddfd3c2ec15a798b2d2b012a2251c0ee64129"
+    },
+    "evidence/phase3a-c1-completion-v3/live-outcome-v1.zip": {
+      "bytes": 11031048,
+      "sha256": "7b026fbe76282269149e34e507651dbd6da3693a68ce261e943ec2689952dd05"
+    },
+    "evidence/phase3a-c1-completion-v3/live-packet-acceptance.json": {
+      "bytes": 6694,
+      "sha256": "b11b6d09c856c277ce0866121c51c21634a1bdc71fe47d0b6fb0932be531195b"
+    }
+  },
+  "created_at_utc": "2026-10-30T18:35:47.994979+00:00",
+  "effective_source_files_verified": 294,
+  "evidence_sha256": {
+    "PHASE3A_C1_COMPLETION_R3_DEFINITION.md": "081d72d5b35d7c89480da437048ebb4c03aea4591e142c9728d5cef032f9075c",
+    "PHASE3A_C1_COMPLETION_R3_REPORT.md": "1362ea762630532f126edae927f0aafdb3665c4d1b385b59dafd9b74b49e37a4",
+    "PHASE3A_C1_COMPLETION_R3_RUNBOOK.md": "1e6c6fa8bcbc47b0531b44f880d509fae8097b2a4b57cfc8ea287ae4dca9a871",
+    "evidence/phase3a-c1-completion-v3/live-outcome-v1.manifest.json": "0a59e2e9b51ea7992eaa732a11fddfd3c2ec15a798b2d2b012a2251c0ee64129",
+    "evidence/phase3a-c1-completion-v3/live-outcome-v1.zip": "7b026fbe76282269149e34e507651dbd6da3693a68ce261e943ec2689952dd05",
+    "evidence/phase3a-c1-completion-v3/live-packet-acceptance.json": "b11b6d09c856c277ce0866121c51c21634a1bdc71fe47d0b6fb0932be531195b",
+    "evidence/phase3a-c1-completion-v4/REQUIREMENTS.md": "46e652e304be1972b218e9d8355419aa2b426903b93802f7da46d472ce4864b2",
+    "evidence/phase3a-c1-completion-v4/admission-acceptance.json": "6ca59edd5e42fcd21c428ed5bbc36fd061f934aed1bc1bd7ad211e2b12ca9855",
+    "evidence/phase3a-c1-completion-v4/authorization.json": "20ccf2d67900e9a30d1c994a66713912bf4ff8bf4519147ed00431515a8c7318",
+    "evidence/phase3a-c1-completion-v4/independent-admission-review.json": "6a497a4b7a5e913a21a002fa1fbbb64ed4974790e2cfc7210778880b494cfba4",
+    "evidence/phase3a-c1-completion-v4/independent-launch-review.json": "2ed9ab6310f0b0d0c4c8bdf0d75e8a7742dcfb450098c907c787fed71a749715",
+    "evidence/phase3a-c1-completion-v4/launch-acceptance.json": "0218882008016a2590471f91d5f78081b0d98a9bf5a815cc2b79d6257da22fb3",
+    "evidence/phase3a-c1-completion-v4/offline-kit-v1.manifest.json": "76df5a182a7c5d24b1d2847f785831ec7f603f81452c726b2cf8f26cdf9cdf74",
+    "evidence/phase3a-c1-completion-v4/offline-kit-v1.zip": "e085a323efe9f0883115d64a6d94f6e7681ae174b1cdded9b93a64232ef0b565",
+    "evidence/phase3a-c1-completion-v4/scientific-acceptance.json": "4da4b02b70baa71b9c05e6a40d4c4a6b1b8d2fe2106410a0197523e5874b09f7",
+    "evidence/phase3a-c1-completion-v4/unaccepted-candidate-v1/candidate-rejection.json": "211cceaef82271ac708d3d9edaa0082b5c8153622e6e47edd3397d9dec5015fa",
+    "evidence/phase3a-c1-completion-v4/unaccepted-candidate-v2/candidate-rejection.json": "422ede3d625024520c563b7542308dd16ef594526a92e0f49c36692894878b93",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher.json": "45cfbd5c444c6d32fdb0b83bdf4e6811d82035850f9a595df9a7e8f3e5353243",
+    "runs/phase3a-c1-completion-v4/verification-v3/matrix.json": "42247aed0c017546b3459e4f0bd205b1a54f645fc7ef83a6afc3c41e37698fa0",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation.json": "eed6a29fedd842631c470086953015a7a232d8eafd8478cd7cc55641663983ea",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/offline-gate.json": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/study.json": "80da9e8702941323e1abbb78df9ceaa568ed3462a4ea3c4c28522064d0b2c37e",
+    "runs/phase3a-c1-completion-v4/verification-v3/replay.json": "308140c39f4d591a5a88cfdd4ec21b44ebf982c6acdd5c7f2f2c2fd7a799a6ad",
+    "runs/phase3a-c1-completion-v4/verification-v3/source-before.json": "9ef919ea357be9d13da2ee06d6b7cc67cab6fc90d70065fc517c7e24e2052030",
+    "runs/phase3a-c1-completion-v4/verification-v3/static.json": "cf5e1dd218eb2479c783c56c42f45a0c517728d20f18247ec9280199e686d2db",
+    "runs/phase3a-c1-completion-v4/verification-v3/tests.json": "b22800288b5023c718a38a751dbb24b3a1048a935dc1526b82f33392b0ca5df2",
+    "runs/phase3a-c1-completion-v4/verification-v3/verifier-exit.json": "c1958c2a088d492afd93410706954425cf14fba511f29a4ed214380066bf0a72"
+  },
+  "findings": [],
+  "five_source_gate_bound_certificates_verified": {
+    "admission-acceptance.json": "6ca59edd5e42fcd21c428ed5bbc36fd061f934aed1bc1bd7ad211e2b12ca9855",
+    "independent-admission-review.json": "6a497a4b7a5e913a21a002fa1fbbb64ed4974790e2cfc7210778880b494cfba4",
+    "independent-launch-review.json": "2ed9ab6310f0b0d0c4c8bdf0d75e8a7742dcfb450098c907c787fed71a749715",
+    "launch-acceptance.json": "0218882008016a2590471f91d5f78081b0d98a9bf5a815cc2b79d6257da22fb3",
+    "scientific-acceptance.json": "4da4b02b70baa71b9c05e6a40d4c4a6b1b8d2fe2106410a0197523e5874b09f7"
+  },
+  "input_member_count": 6290,
+  "internal_manifest_member": "PUBLIC_PACKET_MANIFEST.json",
+  "internal_manifest_sha256": "ea43dac4708a23862d59d41e8bd2c50a548f698a5b3d54040505848948d62ab1",
+  "inventory_names_sha256": "2054e26a39229c3cd62c5e2fae93e6c8919a76c38d4ffc8fbd045b271e4ceef4",
+  "kind": "phase3a-c1-completion-r3-independent-packet-acceptance-v1",
+  "launcher_sha256": "0149a21063a6b394e460a01885ff332e1f5fdc575093936da6a01bf85ee75dbb",
+  "limits": [
+    "This is a separate AI worker cross-review, not an independent human audit.",
+    "The compact internal retained_rejected_candidate field intentionally describes v1 alone; both actual rejection records and all3966 snapshots were independently verified from the full input/member inventory.",
+    "Physical Windows file-symlink creation was unavailable; the included actual junction and missing-descendant denial evidence is preserved without claiming a physical file-symlink test.",
+    "Names and source provenance were checked for excluded private entries, HTML and provider raw-stream scope. String matching cannot establish that arbitrary public text contains no sensitive data; no raw credential file metadata or content was read.",
+    "This receipt certifies the actual offline packet and preserved engineering evidence. It does not establish live model authenticity, semantic quality, effectiveness, account access, quota, credits, invoice treatment or future live completion.",
+    "Historical known cost of $13.101271 and held liability of $22.88 remain unchanged. No hold is released and no paid request is made by this audit.",
+    "This receipt is external to the immutable ZIP. The root must separately exercise the source/packet/preflight interlock before any real-key handshake; that invocation is not claimed by this receipt."
+  ],
+  "live_run_payload_members": 0,
+  "manifest": "evidence/phase3a-c1-completion-v4/offline-kit-v1.manifest.json",
+  "manifest_sha256": "76df5a182a7c5d24b1d2847f785831ec7f603f81452c726b2cf8f26cdf9cdf74",
+  "member_count": 6291,
+  "no_extraction_performed": true,
+  "offline_gate_file_sha256": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+  "offline_gate_seal_sha256": "5a58a241f9ee7b8cd0a2b5840452e80700171913e226891b0a6b66d86c338b4e",
+  "passed": true,
+  "permitted_offline_or_historical_source_stream_members": 58,
+  "policy_sha256": "a43e580d1d3cd9ad49f10d5633c5895e87d97be1a6af5571bc21e66c9871918e",
+  "private_entries_checked_by_name_before_working_metadata": true,
+  "private_member_payload_or_working_metadata_accessed": false,
+  "project_tests_or_containers_launched_by_reviewer": false,
+  "protected_original_accessed": false,
+  "provider_calls_by_reviewer": 0,
+  "raw_HTML_members": 0,
+  "retained_candidates": {
+    "v1": {
+      "all_snapshot_member_SHA256_and_working_bytes_verified": true,
+      "record_sha256": "211cceaef82271ac708d3d9edaa0082b5c8153622e6e47edd3397d9dec5015fa",
+      "snapshot_references": 1994
+    },
+    "v2": {
+      "all_snapshot_member_SHA256_and_working_bytes_verified": true,
+      "record_sha256": "422ede3d625024520c563b7542308dd16ef594526a92e0f49c36692894878b93",
+      "snapshot_references": 1972
+    }
+  },
+  "retained_snapshot_references_verified": 3966,
+  "retained_snapshot_unique_members_verified": 3966,
+  "retained_source_files_verified": 294,
+  "reviewer": "/root/r3_packet_crosscheck",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "safe_ordinary_member_paths_verified": true,
+  "scope": [
+    "Actual completed offline ZIP and external manifest, independently recomputed rather than trusting producer verification flags.",
+    "Every member decompressed to EOF with independently calculated CRC32, SHA256 and uncompressed byte count; complete unique inventory and all 6290 working files compared byte for byte.",
+    "All294 effective and retained source files, exact study/gate bindings and six gate-reference hashes, five review-certificate bytes, core documentation and immutable parent references.",
+    "Both pinned rejection records and all3966 distinct retained snapshot references included and independently verified."
+  ],
+  "source_sha256": "5c592fdf7724fe7371491ab3b2ec2c5d223bcaf7bede091485789d5050a5ecfb",
+  "study_sha256": "080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34",
+  "total_uncompressed_bytes_verified": 156812446,
+  "unexpected_provider_raw_stream_members": 0,
+  "unique_exact_inventory_verified": true,
+  "verified_member_SHA256_inventory_sha256": "04908bc51e24e2fe3cd299739951c89f8f23b9cc120541229b7ce7c80d3e4e89",
+  "working_bytes_identical": true,
+  "working_files_compared_byte_for_byte": 6290
+}

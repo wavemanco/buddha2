@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "buddha2-inspect-i1-verification-review-v2-0"
+  ],
+  "exit_code": 0,
+  "stderr": "test_actual_frozen_inputs_and_failure_meaning (__main__.ImportChecks.test_actual_frozen_inputs_and_failure_meaning) ... ok\ntest_changed_status_config_role_rejected (__main__.ImportChecks.test_changed_status_config_role_rejected) ... ok\ntest_hash_mismatch_rejected (__main__.ImportChecks.test_hash_mismatch_rejected) ... ok\ntest_link_rejected (__main__.ImportChecks.test_link_rejected) ... ok\ntest_private_escape_unknown_precede_io (__main__.ImportChecks.test_private_escape_unknown_precede_io) ... ok\ntest_reuse_copies_only_manifested_wheel_bytes (__main__.ImportChecks.test_reuse_copies_only_manifested_wheel_bytes) ... ok\ntest_strict_json (__main__.ImportChecks.test_strict_json) ... ok\ntest_z_deliberate_containment_negatives (__main__.ImportChecks.test_z_deliberate_containment_negatives) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 2.151s\n\nOK\n",
+  "stdout": ""
+}

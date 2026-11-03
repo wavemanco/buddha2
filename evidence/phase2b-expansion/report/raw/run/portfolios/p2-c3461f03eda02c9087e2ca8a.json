@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-52bb50becb54c2ef6b1c8f433a53aff79c3cbef418785af3cff27f64e7e1e2c6",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-c3461f03eda02c9087e2ca8a.answer.00",
+      "p2-c3461f03eda02c9087e2ca8a.answer.01",
+      "p2-c3461f03eda02c9087e2ca8a.answer.02",
+      "p2-c3461f03eda02c9087e2ca8a.answer.03",
+      "p2-c3461f03eda02c9087e2ca8a.answer.04",
+      "p2-c3461f03eda02c9087e2ca8a.answer.05",
+      "p2-c3461f03eda02c9087e2ca8a.answer.06",
+      "p2-c3461f03eda02c9087e2ca8a.answer.07",
+      "p2-c3461f03eda02c9087e2ca8a.answer.08",
+      "p2-c3461f03eda02c9087e2ca8a.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-297bc8db019dba1ebe9667c8",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.00",
+      "status": "ok",
+      "text": "**Barnaby** is a good fit for your loyal dog. It sounds warm and dependable, with a bit of old-fashioned charm.\n\nIf you'd like other options, here are a few that suit a devoted companion:\n\n- **Ember**: warm and steadfast\n- **Scout**: faithful and watchful\n- **Maple**: gentle and comforting\n- **Hachi**: a nod to the famously loyal Akita, Hachikō\n\nI can tailor the name to your story's setting, the dog's breed, or the tone if you tell me more."
+    },
+    {
+      "id": "response-f9440d23effd3e54c1ca4d26",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.01",
+      "status": "ok",
+      "text": "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a loyal dog who sticks by his person through everything. It also shortens easily to \"Barn\" or \"Barney.\"\n\nIf you'd like other options with a similar feel: Hank, Biscuit, Juno, Murphy, or Scout."
+    },
+    {
+      "id": "response-f099c8cd4bb36e19dfcb1f2c",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.02",
+      "status": "ok",
+      "text": "**Biscuit** is a warm, classic name for a loyal dog, and it suits a faithful companion who's always at their person's side.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Scout** for an adventurous, watchful dog\n- **Hachi** for a story of devoted waiting (a nod to the famous Akita)\n- **Ember** for a gentle, steadfast companion\n- **Moose** for a big, goofy, big-hearted dog\n\nIf you tell me the dog's breed, the setting, or the story's mood, I can tailor the name more closely."
+    },
+    {
+      "id": "response-f68f2cefb2b1749be4acfebe",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.03",
+      "status": "ok",
+      "text": "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog: friendly, sturdy, and memorable.\n\nIf you'd like alternatives, here are a few with different feels:\n- **Hazel** (gentle, devoted)\n- **Scout** (adventurous, watchful)\n- **Barley** (cozy, down-to-earth)"
+    },
+    {
+      "id": "response-5a021287861249f678054e6e",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.04",
+      "status": "ok",
+      "text": "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal dog, one who sticks close through thick and thin, just as a bramble clings to everything it touches."
+    },
+    {
+      "id": "response-49dcd8c124067e0e39018cb4",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.05",
+      "status": "ok",
+      "text": "**Bramble**\n\nIt's a warm, earthy name that suits a loyal, steadfast companion. It also has a nice ring when called across a field or whispered at a bedside.\n\nIf you'd like alternatives with a different feel:\n- **Juniper**: gentle and devoted\n- **Moss**: quiet, faithful, grounded\n- **Tobias \"Toby\"**: classic and affectionate\n- **Ember**: warm, with a spark of courage"
+    },
+    {
+      "id": "response-8d41975e22bbd0a6f81f706d",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.06",
+      "status": "ok",
+      "text": "**Bramble**\n\nIt's a warm, slightly scruffy name that suits a loyal companion, and it has a nice ring when called across a field or whispered at a doorstep.\n\nIf you'd like alternatives with a different feel:\n\n- **Tucker**: friendly and dependable\n- **Juniper**: gentle and graceful\n- **Orion**: steadfast, a guiding presence\n- **Biscuit**: playful and endearing\n\nIf you tell me the breed, setting, or tone of your story, I can tailor the name more closely."
+    },
+    {
+      "id": "response-e9827801d727abbf23f8133d",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.07",
+      "status": "ok",
+      "text": "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a steadfast, loyal companion. It also shortens easily to \"Barn\" or \"Barney\" for affectionate moments in the story."
+    },
+    {
+      "id": "response-6e39ca6e112255e22ab50d66",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.08",
+      "status": "ok",
+      "text": "**Barley**\n\nIt's a warm, classic name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who would wait by the gate through any storm."
+    },
+    {
+      "id": "response-5c727d33b4a56fc2578a9793",
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.09",
+      "status": "ok",
+      "text": "**Barley**\n\nIt's a warm, earthy name that suits a loyal, steadfast dog. It sounds friendly and a little rugged, like a dog who waits at the gate every evening and never leaves your side."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-b1b0aa2062fdabf30542",
+    "prompt": "Name the dog character in my story about a loyal dog.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-21"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_accounting_sha256": "b431fefcfdf833f1508e80620c232c40a8cc8f06d5e26dac649d38223d574cf8",
+  "evidence_limit": "The rejected live second request was not retained. The same caller propagation and rejection were reproduced with actual pinned OpenCode and concrete SDK mocks.",
+  "files": {
+    "candidate-accounting-function.py": "d2d363ef61c58156381420724a025da001b79a1e882c19784bf22b42fbc703da",
+    "candidate-direct-caller.json": "7b781506083c7048fbc1cbf09d3842c000eeb96b2641ecb866d624867fc2a2b7",
+    "candidate.patch": "4c6621453369e356c1ac2500780f5ed4e8f7fcaa19ee6e61a5c627c551fd2434",
+    "frozen-v3-rejection.json": "b192d36ca604884878e5a4177e391cf0e19260815a09955b38360d1e7f043fc3",
+    "proof.json": "e5dfbdd9cd3b9a4899736ffc984cdc726a16aacec4f516769f9be837831c94f6",
+    "reproduce.py": "ea6b15146873f60a3a113fc5868c82ef315c3faf3d62056c017c2d6151437e7a"
+  },
+  "fixture": true,
+  "kind": "phase3a-direct-caller-regression-artifacts-v1",
+  "original_accounting_sha256": "82302c1fe1aa7b17b15a8a68c6ffccd8e41bad04871150e1b251a2d395b96d99",
+  "original_source_preserved": true,
+  "passed": true,
+  "primary_reference": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+  "production_patch_applied": false,
+  "real_provider_calls": 0
+}

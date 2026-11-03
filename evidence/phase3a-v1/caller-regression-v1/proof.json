@@ -1,0 +1,26 @@
+{
+  "absent_caller_still_supported": true,
+  "caller_metadata_preserved_on_wire": true,
+  "candidate_actual_OpenCode_three_turn_path_passed": true,
+  "candidate_function_sha256": "d2d363ef61c58156381420724a025da001b79a1e882c19784bf22b42fbc703da",
+  "case_results": {
+    "candidate": {
+      "HTTP": 3,
+      "error": null
+    },
+    "frozen-v3": {
+      "HTTP": 1,
+      "error": "ProposerError"
+    }
+  },
+  "effective_request_not_mutated": true,
+  "fixture": true,
+  "frozen_guard_reproduced": true,
+  "kind": "phase3a-direct-caller-offline-regression-v1",
+  "old_runtime_source_unchanged": true,
+  "original_function_sha256": "0afa2827683ae7c25f0955a5075112d570068c7cb726c3975fc6e3cecc2e8887",
+  "passed": true,
+  "real_credentials_read": false,
+  "real_provider_calls": 0,
+  "unsupported_callers_rejected": 4
+}

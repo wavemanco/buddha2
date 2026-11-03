@@ -1,0 +1,17 @@
+{
+  "actual_keys_read": false,
+  "container_started": false,
+  "grant_sha256": "1ec88376aaee918e3783a57883d9c20cfdbd1105d0ca82283c4181f45ef9ddbb",
+  "inspection_sha256": "c44a08b9b97b77b18d5f5d30aa14eb02d2d335316b4098cd424f372fc9072481",
+  "kind": "p2bn-final-handoff-validation-v1",
+  "live_configuration_inspection": "/results/phase2b-rank-format-v1/launcher/ee37010d578b4a66a95afbc0c07fb976.inspection.json",
+  "live_journal_absent": true,
+  "mock_report_replay_byte_equal": true,
+  "new_provider_calls": 0,
+  "new_spend_micro_usd": 0,
+  "passed": true,
+  "python_validation_of_actual_host_inspection": true,
+  "real_seed_selected": false,
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

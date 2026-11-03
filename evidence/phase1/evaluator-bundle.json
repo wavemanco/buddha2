@@ -1,0 +1,22 @@
+{
+  "files": {
+    "initial-rubric.md": "892e9656c07b6f08c26b8902732f911e6d57d87e1a03bed32916a750b518591a",
+    "plan.json": "576c5cb10116c662e500d55c0a77230816226e99d1a72b703de0eab0bee38eab",
+    "preparation.json": "45f5fabb5d284bf87a5e90614e1b6a559ceb8beec71ef7e8299de79b5d7bdc20"
+  },
+  "kind": "phase1-evaluator-bundle",
+  "labels_staged": false,
+  "package_files": {
+    "__init__.py": "e908915f394c261ef4369f4a2a2255e609015f6bd5e196e998dc4e19a0e84090",
+    "__main__.py": "d68cd0f73c0f629981e28503226b9eba2bfc50e781b7793c5220f928205e6940",
+    "artifacts.py": "156e2aabc91d1a6388b43ab682100d0a4197e0f4b6980d2c9d34594936c2a5ed",
+    "engine.py": "09430c9a9c505ea0d6d167517ca81aadca2736daf820b9bd4ba488da45a38768",
+    "evaluation.py": "46e21c1cc44f1c8dce90a33e7583ff5f57371a15187ca9b636e17bf0add6672f",
+    "muce.py": "34a7320c4449dfe14eae938501b86a5a384cbf52d3e5f8f051fb9e52a12094be",
+    "nb_worker.py": "e5e6a3f42077b5658207b32b15cd7645d7ba6686a9046045958b88a4f24b6b13",
+    "pairs.py": "bbc95a5ea1328a5a14dbeb4b6847da9d5a2d991d33ffe416020d97ab02ef8232",
+    "phase1.py": "f093b467ba7c2afc9efb93beb8e41dc992ebd4237b73049f13b6b05470041cf2",
+    "phase1_runner.py": "f5ca19ab34a1c932a66866e2cff1a9605456f1835119e02a47c779c8df35bb98"
+  },
+  "schema_version": 1
+}

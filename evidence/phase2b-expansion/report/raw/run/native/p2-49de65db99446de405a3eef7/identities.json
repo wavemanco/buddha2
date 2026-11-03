@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "b62f6a3aae6fcf3ff747028fb146e38c7e018c9911ec1b328412ff25c11897a2",
+  "portfolio_id": "portfolio-7c8c8fc39aac0a87d506472324e81f9275dec02fe106ef0fab854aa9e3c1d041",
+  "portfolio_sha256": "0ec3220f8d1832c38224d8fb08595dcf39f411a62e868cca65e266f5273cd758",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-49de65db99446de405a3eef7.answer.00",
+      "p2-49de65db99446de405a3eef7.answer.01",
+      "p2-49de65db99446de405a3eef7.answer.02",
+      "p2-49de65db99446de405a3eef7.answer.03",
+      "p2-49de65db99446de405a3eef7.answer.04",
+      "p2-49de65db99446de405a3eef7.answer.05",
+      "p2-49de65db99446de405a3eef7.answer.06",
+      "p2-49de65db99446de405a3eef7.answer.07",
+      "p2-49de65db99446de405a3eef7.answer.08",
+      "p2-49de65db99446de405a3eef7.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-16f6882da4e31704257d42f7",
+      "index": 0,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.00",
+      "status": "ok",
+      "text_sha256": "4edd71a451b2e450d97f9e2f51eb537c27bbfc2af63b4b7f8fb81b80e1a22152"
+    },
+    {
+      "id": "response-45ec332e84757159c6478c61",
+      "index": 1,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.01",
+      "status": "ok",
+      "text_sha256": "304ec129d9db4e4c54ae9c752d69200982529dbca34ccc32fd424749077f2512"
+    },
+    {
+      "id": "response-36d43aea3fd4590e6f51c8ce",
+      "index": 2,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.02",
+      "status": "ok",
+      "text_sha256": "b7b323be35fc523efeb814898a91b22b8cda40c3537993061ea620f390e2c0e8"
+    },
+    {
+      "id": "response-c0979dda3fe1f96124764212",
+      "index": 3,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.03",
+      "status": "ok",
+      "text_sha256": "2f1bec56e662dad4e54e775f3fd320fe487c978c035df48ca718b78fa6c9db22"
+    },
+    {
+      "id": "response-51c0495b4d93622661d93f89",
+      "index": 4,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.04",
+      "status": "ok",
+      "text_sha256": "22a936c64126c7ef98ccaaa11cac8f13390acf7bc5dfc695efb2d64524ca151d"
+    },
+    {
+      "id": "response-26bec769379f7174ee98d0c1",
+      "index": 5,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.05",
+      "status": "ok",
+      "text_sha256": "d9b22ca6fc264110095c3ad064fd05d2e54a75f8b52e824a96a9b6b5bcff6d23"
+    },
+    {
+      "id": "response-b614a47d95f222d3776f5503",
+      "index": 6,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.06",
+      "status": "ok",
+      "text_sha256": "fe2d2a9fc09bf44f328c2d2ad99a2cb8e8a6e53fcad436f92db8e7750dc01e5a"
+    },
+    {
+      "id": "response-9602f9f7cc92a26268c4c7e5",
+      "index": 7,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.07",
+      "status": "ok",
+      "text_sha256": "6840f8a390b4f1082027fad3c63a0e7da5122d15a79095cf9db4f818c0e6a577"
+    },
+    {
+      "id": "response-82856be386abab562e57792c",
+      "index": 8,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.08",
+      "status": "ok",
+      "text_sha256": "2d2dda17eca2dc49dc8232ad5469f7e1159c1b72d3303a7027e858a5f0dc57bc"
+    },
+    {
+      "id": "response-d0524b4655d5362b2b5a5ff1",
+      "index": 9,
+      "request_id": "p2-49de65db99446de405a3eef7.answer.09",
+      "status": "ok",
+      "text_sha256": "47d2c0b9edf19da9e1ec7a31e658e2f3bae437be6f17ae1fb1be13b90ca2ae66"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-510dc2800c595827238e",
+    "prompt": "Name one reputed publication in science.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-62"
+    }
+  }
+}

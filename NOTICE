@@ -1,0 +1,22 @@
+Buddha2
+Copyright 2026 the Buddha2 contributors.
+
+Code and documentation authored for this research project are licensed under the Apache
+License, Version 2.0; see LICENSE. Third-party material retains its own notices
+and terms. This notice does not relicense datasets, models, dependency binaries,
+copied reference material, or other projects.
+
+Google Research Harness² supplies the native adaptation engine (Apache-2.0).
+NoveltyBench supplies the benchmark protocol and native assessment code (MIT).
+Inspect AI, from the UK AI Security Institute, supplies passive records and the
+viewer (MIT). OpenCode supplies the tool-using substrate (MIT); the compatibility
+backports and their upstream revisions are attributed in docs/ATTRIBUTIONS.md.
+
+Exact MIT notices for Inspect AI, NoveltyBench and the OpenCode base are retained
+in third_party_licenses/. Selected Creative Preference Optimization reference
+source is Copyright (c) 2025 Mete Ismayilzada and remains MIT licensed under its
+adjacent evidence/phase1a-data-readiness-r07/references/assets/crpo-LICENSE.txt.
+Those captures are reference material, not an additional execution engine.
+
+See docs/ATTRIBUTIONS.md for exact revisions, primary license links, dependency
+inventories, research citations and the limits of the runtime license review.

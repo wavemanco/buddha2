@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "corpus_reuse": true,
+    "launcher": true,
+    "normalizer": true,
+    "preservation": true,
+    "sdk_mocks": true,
+    "static": true
+  },
+  "evidence": {
+    "corpus_reuse": {
+      "path": "/results/phase2b-rank-format-v1/gate/corpus_reuse.json",
+      "sha256": "57ca569b0671f1ac617020a932b39c8ddbe3d67078da991e950b4fd440750bdd"
+    },
+    "launcher": {
+      "path": "/results/phase2b-rank-format-v1/gate/launcher.json",
+      "sha256": "d9b96683d8b463120395221c8f65efc555eeb714de8f6ad1c6728fa387149c8e"
+    },
+    "normalizer": {
+      "path": "/results/phase2b-rank-format-v1/gate/normalizer.json",
+      "sha256": "25fa537b5b679add26d549bf975dc75e051cdab7a50160d75f3ea5e47127297d"
+    },
+    "preservation": {
+      "path": "/results/phase2b-rank-format-v1/gate/preservation.json",
+      "sha256": "ad23a3ed7123aef118eb064c14c98a2e945c7fdc748b04ca3535327139c0c419"
+    },
+    "sdk_mocks": {
+      "path": "/results/phase2b-rank-format-v1/gate/sdk_mocks.json",
+      "sha256": "6becf5d22df33827251c1ebf87b48119d1c723e7ee2d198d5d008ab267e8e141"
+    },
+    "static": {
+      "path": "/results/phase2b-rank-format-v1/gate/static.json",
+      "sha256": "238113cd0f2b27cc8f6dc24afc503b09955e9d419ce23d956cbc4f94bb125faa"
+    }
+  },
+  "kind": "p2bn-offline-readiness-v1",
+  "passed": true,
+  "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

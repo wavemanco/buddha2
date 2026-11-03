@@ -1,0 +1,30 @@
+{
+  "errors": 1,
+  "failures": 1,
+  "group": "tests",
+  "kind": "phase3a-c1-completion-offline-check-v1",
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "modules": [
+    "followups.phase3a_c1_completion_v3.tests.test_accounting",
+    "followups.phase3a_c1_completion_v3.tests.test_contract",
+    "followups.phase3a_c1_completion_v3.tests.test_deadline",
+    "followups.phase3a_c1_completion_v3.tests.test_evidence",
+    "followups.phase3a_c1_completion_v3.tests.test_launch",
+    "followups.phase3a_c1_completion_v3.tests.test_report",
+    "followups.phase3a_c1_completion_v3.tests.test_support",
+    "followups.phase3a_c1_completion_v3.tests.test_verify",
+    "followups.phase3a_c1_completion_v3.tests.test_workflow",
+    "followups.phase3a_v1.tests.test_strategy",
+    "followups.phase3a_v1.tests.test_accounting",
+    "followups.phase3a_v1.tests.test_editor_terminal",
+    "followups.phase3a_v1.tests.test_editor_shape",
+    "followups.phase3a_v1.tests.test_transport"
+  ],
+  "passed": false,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "skipped": 3,
+  "source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89",
+  "study_sha256": "8889603f3720753e0543b0c8dd714c384fc173822d0d3899d8131506121c20bc",
+  "tests": 150
+}

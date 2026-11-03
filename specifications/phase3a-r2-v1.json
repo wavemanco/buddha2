@@ -1,0 +1,475 @@
+{
+  "accounting_scenario_multiplier": {
+    "editor": "1.1",
+    "fixed_selector": "1.1",
+    "native_group": "1.1",
+    "native_quality": "1.1",
+    "strategy": "1"
+  },
+  "admission_examples": {
+    "first_pair_next_quality_prior_assessment_spend_max_micro_usd": 12260000,
+    "long_judge_output_assumptions": "90 quality calls at1000ordinary input/16000billable output,1.1 envelope;9groups each0.01accountedUSD",
+    "long_judge_output_sensitivity_usd": "40.185",
+    "next_opus_prior_arm_spend_max_micro_usd": 8560000,
+    "next_quality_prior_assessment_spend_max_micro_usd": 34420000
+  },
+  "arms": {
+    "adaptive": {
+      "k": 1,
+      "logical_edit_stages_per_prompt": 3,
+      "max_editor_conversations_per_prompt": 6,
+      "max_editor_http_per_prompt": 48,
+      "max_http_per_editor_conversation": 8,
+      "max_new_inference_http_per_prompt": 96,
+      "max_strategy_http_per_prompt": 48,
+      "native_mode": "agg",
+      "pool_policy": "finals",
+      "rollouts_per_prompt": 4,
+      "shape_attempts_per_stage": 2,
+      "stock_subprocess_attempts_per_prompt_up_to": 12
+    },
+    "fixed": {
+      "independent_C_N_candidates": 6,
+      "max_new_inference_http_per_prompt": 73,
+      "max_strategy_http_per_prompt": 72,
+      "selector_http_per_prompt": 1,
+      "strategy_http_per_candidate": 12
+    }
+  },
+  "common_arm_allowance": {
+    "aggregate_input_tokens_including_reservations": 4000000,
+    "aggregate_output_tokens_including_reservations": 786432,
+    "editor_selector_max_output_per_http": 16000,
+    "editor_selector_payload_utf8_bytes": 1048576,
+    "inference_cap_micro_usd": 20000000,
+    "match_claim": "equal allowed resource envelope, not equal realized compute",
+    "max_http_attempts": 96,
+    "role_policy": "same declared model access; different frozen uses; no transfers/spend-to-equalize",
+    "strategy_max_output_per_http": 4096
+  },
+  "completion": {
+    "automatic_fallback_alone_counts_as_authentic_path": false,
+    "complete_authentic_live_paths_minimum": 1,
+    "duplicate_required_outcome": "classified, not agreement pass",
+    "fallback_finals_retained_in_primary_procedure_comparison": true,
+    "historical_unknown_may_remain_disclosed_and_fully_reserved": true,
+    "new_study_unknown_liability_allowed": false,
+    "path_requires": [
+      "valid model-backed INV and DOM proposals",
+      "both executed probes",
+      "valid model-backed AGG composition using probe evidence",
+      "executed agg1 final"
+    ],
+    "primary_scored_finals": 8,
+    "primary_selected_finals": 8,
+    "terminal_note_and_unchanged_effective_input_is_authenticity_ineligible": true,
+    "valid_explicit_unchanged_counts": true
+  },
+  "conditional_limits": "new editor channel must prove effective per-request/request-count/retry/accounting controls offline; no claims of live availability or guaranteed completion",
+  "cost_basis": "conservative planning/accounting envelope, not invoice or measured forecast;1.1is an allowance even for declared global roles",
+  "date": "2026-10-29",
+  "external_assessment": {
+    "anchor": "fixed selected final of p3a-01; absent if unavailable, no substitute",
+    "duplicate_anchor": 1,
+    "group_reservation_micro_usd": 1661880,
+    "included_first_pair_checkpoint_micro_usd": 23700000,
+    "max_group_calls": 9,
+    "max_http_calls": 99,
+    "max_quality_calls": 90,
+    "primary": 8,
+    "quality_reservation_micro_usd": 11440000,
+    "separate_cap_micro_usd": 45860000
+  },
+  "first_pair_checkpoint": {
+    "included_assessment_sublimit_micro_usd": 23700000,
+    "included_total_limit_micro_usd": 50860000,
+    "inference_cell_cap_micro_usd": 20000000,
+    "inference_cells": 2,
+    "limits_overlap": true,
+    "not_additional_to_phase_cap": true,
+    "pilot_id": "p3a-01",
+    "type": "initial engineering-review spend checkpoint, not an additional pool or irrevocable final-pair ceiling",
+    "unknown_or_integrity_holds_unlockable": false,
+    "unlock_rule": "settled engineering review unlocks only planned unattempted first assessments inside the same cumulative45.86M pool; no replacement/hold release/cell borrowing"
+  },
+  "integration_amendments": {
+    "authenticity": "terminal_note_used AND consumed3fieldsunchangedfromsessioninput is ineligible; preserve native flags and scores",
+    "failure_evidence": "allowlisted category/stage/status/provider request ID; retain safely serializable response on processing failure; unknown holds globally; no exception text or retries",
+    "joint_limits": "775possibleworklistslots not guaranteed simultaneousmax tokens;964608configured output canhit786432pool;8x90scanhit600sconversation",
+    "terminal_note_sha256": "dd27eb87f2347972e29af2187fea9fa8498fdd012044a60c23179083806b685f",
+    "terminal_role_translation": "exact pinned final turn8 OpenCode MAX_STEPS assistant control note only, preserve full content/cache/history"
+  },
+  "kind": "phase3a-r2-planning-sheet-v1",
+  "native": {
+    "authoring_surface_schema": "opencode",
+    "bun_version": "1.3.11",
+    "cross_task_memory": false,
+    "editable_file": "systemprompt.md",
+    "editable_json_fields": [
+      "answer_system",
+      "plan_system",
+      "rank_system"
+    ],
+    "harness2_commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+    "library": null,
+    "native_adaptive_paid_final_selector_calls": 0,
+    "noveltybench_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "opencode_commit": "23fb5e0516c99ac04a1aa46c193efda2e1b9bb24",
+    "paid_transport_replay_allowed": false,
+    "provider_http_timeout_seconds": 90,
+    "requested_editor_steps": 8,
+    "requested_editor_timeout_seconds": 600,
+    "stock_stage_shape_attempts": 2,
+    "stock_transport_attempts": 2,
+    "subagents": false,
+    "substrate_name": "portfolio-api"
+  },
+  "parent_decision_sha256": "5c2ddcbd434f53209f4245c519f9479229c6b06e6dec2b9043669c5a4f338dea",
+  "parent_study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+  "phase": {
+    "definition_spend_micro_usd": 0,
+    "experiments_authorized": true,
+    "implementation_authorized": true,
+    "included_first_pair_cap_micro_usd": 50860000,
+    "max_inference_http_calls": 676,
+    "max_total_http_calls": 775,
+    "paid_work_authorized": true,
+    "proposed_cap_micro_usd": 205860000
+  },
+  "price_sources": [
+    {
+      "opened": "2026-10-28",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    }
+  ],
+  "price_sources_note": "Frozen planning rates retained; confirm exact role prices/access before launch. No substitution or unpriced fee permitted.",
+  "prices_usd_per_million": {
+    "claude-opus-5": {
+      "cache_1h_write": "10",
+      "cache_5m_write": "6.25",
+      "cache_read": ".5",
+      "ordinary_input": "5",
+      "output": "25"
+    },
+    "claude-sonnet-5-5": {
+      "cache_1h_write": "4",
+      "cache_5m_write": "2.5",
+      "cache_read": ".1",
+      "ordinary_input": "2",
+      "output": "10"
+    },
+    "gpt-5.6-luna": {
+      "cache_read": ".02",
+      "cache_write": ".25",
+      "ordinary_input": ".2",
+      "output": "1.2"
+    }
+  },
+  "prior_live_episode": {
+    "cumulative_max_attempts": 952,
+    "episodes": [
+      {
+        "archive_sha256": "efaefbda81e12fe12f1a443acbdc1a37aeb423746e10605cbbee085bfef9fa16",
+        "closeout_sha256": "c3d806d5cdc90266ae4ffa3511a46a97e0522fdeb94dfd63f2f924d6a76262b3",
+        "cost_audit_sha256": "932bc9106f5de24881caeee6e6225b50a3597483517cdf1929517c9d7139304c",
+        "evidence_directory": "evidence/phase3a-v1/live-stop-v1",
+        "known_requests": 86,
+        "known_spent_micro_usd": 1293437,
+        "manifest_sha256": "0ff885eda187bd2752fe5cd76176c3a79d1117b042f229aa0994a45890a6e5a4",
+        "provider_calls": 86,
+        "reserved_micro_usd": 0,
+        "study_sha256": "1628a958477de938f55bd925cfa08150a1067ef8233ae937ae79e9bcbbcfe42a",
+        "unknown_requests": 0
+      },
+      {
+        "archive_sha256": "b19b3a326e37b4fcf270e2ca467ebedf35277c9212841a516970ebfb71f44661",
+        "closeout_sha256": "eaf4c242ff1b62186de1b95ae0e594f655d3c3493c3d6a77fcff8e72feecd2a3",
+        "cost_audit_sha256": "15ccee8bca49c907fbe55e4fadb736437d05fb2f256d6468d827fd18c4d40dd4",
+        "evidence_directory": "evidence/phase3a-r1-v1/live-stop-v1",
+        "known_requests": 90,
+        "known_spent_micro_usd": 1401860,
+        "manifest_sha256": "63d105e4b79f8753f231af4f8e6a1b751aee78542db8f8c0a30262d997c5789e",
+        "provider_calls": 91,
+        "reserved_micro_usd": 11440000,
+        "study_sha256": "44d12d6ff196a9481bd6106541ad62d8161fff50fa7a1fd6eef899df4f627012",
+        "unknown_requests": 1
+      }
+    ],
+    "historical_unknown_released": false,
+    "known_requests": 176,
+    "known_spent_micro_usd": 2695297,
+    "new_max_attempts": 775,
+    "provider_calls": 177,
+    "reserved_micro_usd": 11440000,
+    "results_reused": false,
+    "unknown_requests": 1
+  },
+  "role_profiles": {
+    "editor_selector": {
+      "channel_model": "anthropic/claude-opus-5",
+      "effort": "high",
+      "inference_geo": "global",
+      "max_tokens": 16000,
+      "service_tier": "standard_only",
+      "thinking": "adaptive",
+      "wire_model": "claude-opus-5"
+    },
+    "native_group": {
+      "api": "chat_completions",
+      "effort_output_cap_temperature_seed": "omitted-native-request",
+      "model": "gpt-5.6-luna"
+    },
+    "native_quality": {
+      "effort": "high",
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "service_tier_and_geography": "omitted-native-request",
+      "thinking": "adaptive"
+    },
+    "strategy": {
+      "effort": "low",
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "service_tier": "standard_only",
+      "thinking": "adaptive"
+    }
+  },
+  "scenario_assumptions": "ordinary uncached input; standard public PAYG; all billed thinking/tool/conversation tokens included in per-request means; fixed original profiles; no fast/batch/server tools; not a cache or invoice forecast",
+  "scenarios": [
+    {
+      "accounted_usd": {
+        "assessment": "0.40689",
+        "editor": "2.574",
+        "first_pair_all_second_shapes": "2.40013",
+        "first_pair_including_anchor": "1.75663",
+        "fixed_selector": "0.55",
+        "strategy": "3.36",
+        "total_all_second_shapes": "9.46489",
+        "total_clean": "6.89089"
+      },
+      "editor_conversations_clean": 12,
+      "editor_http_calls_clean": 36,
+      "editor_turns_per_conversation": 3,
+      "external_judge_calls": 18,
+      "fixed_selector_calls": 4,
+      "heads_per_assessment": 1,
+      "input_output_tokens_per_editor_turn": [
+        8000,
+        1000
+      ],
+      "input_output_tokens_per_fixed_selector": [
+        20000,
+        1000
+      ],
+      "input_output_tokens_per_group": [
+        12000,
+        1000
+      ],
+      "input_output_tokens_per_quality": [
+        2500,
+        1000
+      ],
+      "input_output_tokens_per_strategy_call": [
+        1000,
+        500
+      ],
+      "name": "lean",
+      "strategy_calls": 480,
+      "untruncated_demand_not_forecast": true
+    },
+    {
+      "accounted_usd": {
+        "assessment": "1.89189",
+        "editor": "8.976000",
+        "first_pair_all_second_shapes": "6.936130",
+        "first_pair_including_anchor": "4.692130",
+        "fixed_selector": "0.55",
+        "strategy": "6.72",
+        "total_all_second_shapes": "27.113890",
+        "total_clean": "18.137890"
+      },
+      "editor_conversations_clean": 12,
+      "editor_http_calls_clean": 96,
+      "editor_turns_per_conversation": 8,
+      "external_judge_calls": 54,
+      "fixed_selector_calls": 4,
+      "heads_per_assessment": 5,
+      "input_output_tokens_per_editor_turn": [
+        12000,
+        1000
+      ],
+      "input_output_tokens_per_fixed_selector": [
+        20000,
+        1000
+      ],
+      "input_output_tokens_per_group": [
+        12000,
+        1000
+      ],
+      "input_output_tokens_per_quality": [
+        2500,
+        1000
+      ],
+      "input_output_tokens_per_strategy_call": [
+        2000,
+        1000
+      ],
+      "name": "working",
+      "strategy_calls": 480,
+      "untruncated_demand_not_forecast": true
+    },
+    {
+      "accounted_usd": {
+        "assessment": "12.44628",
+        "editor": "27.456000",
+        "first_pair_all_second_shapes": "21.555760",
+        "first_pair_including_anchor": "14.691760",
+        "fixed_selector": "1.276",
+        "strategy": "13.44",
+        "total_all_second_shapes": "82.074280",
+        "total_clean": "54.618280"
+      },
+      "editor_conversations_clean": 12,
+      "editor_http_calls_clean": 96,
+      "editor_turns_per_conversation": 8,
+      "external_judge_calls": 99,
+      "fixed_selector_calls": 4,
+      "heads_per_assessment": 10,
+      "input_output_tokens_per_editor_turn": [
+        32000,
+        4000
+      ],
+      "input_output_tokens_per_fixed_selector": [
+        48000,
+        2000
+      ],
+      "input_output_tokens_per_group": [
+        24000,
+        2000
+      ],
+      "input_output_tokens_per_quality": [
+        5000,
+        4000
+      ],
+      "input_output_tokens_per_strategy_call": [
+        4000,
+        2000
+      ],
+      "name": "heavier",
+      "strategy_calls": 480,
+      "untruncated_demand_not_forecast": true
+    }
+  ],
+  "seed_procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+  "status": "definition1.0-accepted-by-separate-authority-record",
+  "task_selection": {
+    "eligible_ids": [
+      "nb-curated-9c418f063bc433264d29",
+      "nb-curated-0ac59a48456661d0d8d5",
+      "nb-curated-7a77e85421d12bca8653",
+      "nb-curated-b1b0aa2062fdabf30542",
+      "nb-curated-510dc2800c595827238e",
+      "nb-curated-8e36a11f5d71bf4e3dc6",
+      "nb-curated-055c45e37c6c14cca664",
+      "nb-curated-af7dc61fe1eeaa81cd93",
+      "nb-curated-4b5afc9736f082c708eb",
+      "nb-curated-0589e47205e5256cc5b3",
+      "nb-curated-6584de30a11a0e08ca32",
+      "nb-curated-fb55f67d0ac2a857ec0f"
+    ],
+    "eligible_population": "12 exposed tasks in frozen parent study; no holdout access",
+    "rule": "lowest four SHA256 UTF8(phase3a-four-prompt-v1 + newline + parent manifest task.id (nb-curated-...)), ascending; not nested upstream curated-ID",
+    "tasks": [
+      {
+        "arm_order": [
+          "fixed",
+          "adaptive"
+        ],
+        "parent_task_id": "nb-curated-0589e47205e5256cc5b3",
+        "pilot_id": "p3a-01",
+        "prompt": "What would you invent to make the world a more interesting place to live in?",
+        "prompt_sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+        "repeats": 1,
+        "selection_hash": "19b1c106df56a755389b1718ebe617d8cf147266fe3d72752052ac63c12b9c3f",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-15"
+        }
+      },
+      {
+        "arm_order": [
+          "adaptive",
+          "fixed"
+        ],
+        "parent_task_id": "nb-curated-055c45e37c6c14cca664",
+        "pilot_id": "p3a-02",
+        "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+        "prompt_sha256": "964cd57c6de5fe8dff445606d5e4ec799ba0c67905246bf81e0f34d2b53b76c1",
+        "repeats": 1,
+        "selection_hash": "1a1c96f713b7bbadff18fac8f34158093141fb2f1714dd20250e1f82ca94754e",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-17"
+        }
+      },
+      {
+        "arm_order": [
+          "fixed",
+          "adaptive"
+        ],
+        "parent_task_id": "nb-curated-6584de30a11a0e08ca32",
+        "pilot_id": "p3a-03",
+        "prompt": "Suggest a strong 4 character password.",
+        "prompt_sha256": "4e430205a08004e06c5ef48179d294fa61668de4181f49c8b9a2223b33a665ad",
+        "repeats": 1,
+        "selection_hash": "1f1d729a1e0a757469f163ee987d0e07bce8f6c6ee52f6ed0918621a6375fc48",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-96"
+        }
+      },
+      {
+        "arm_order": [
+          "adaptive",
+          "fixed"
+        ],
+        "parent_task_id": "nb-curated-af7dc61fe1eeaa81cd93",
+        "pilot_id": "p3a-04",
+        "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+        "prompt_sha256": "85cf52442cf412f046759306a3cf68e33a5780a3b55aadbb2191a75fdad826a1",
+        "repeats": 1,
+        "selection_hash": "2df91490f93e9bc7ca89034bbc5d1d22ad1e6eff8f6a8ff36cd5e3283e3a5633",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-29"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

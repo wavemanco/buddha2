@@ -1,0 +1,30 @@
+{
+  "kind": "phase3a-terminal-note-runtime-source-audit-v1",
+  "observed_utc_date": "2026-10-29",
+  "image_id": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+  "files": {
+    "/opt/phase3a-opencode/packages/opencode/src/session/prompt/max-steps.txt": {
+      "bytes": 765,
+      "sha256": "dd27eb87f2347972e29af2187fea9fa8498fdd012044a60c23179083806b685f"
+    },
+    "/opt/phase3a-opencode/packages/opencode/src/session/prompt.ts": {
+      "bytes": 74541,
+      "sha256": "e4b95f17b6efd722fc4855c124c4dee302e6e3926302a1d4d83c828f0bc374a1"
+    }
+  },
+  "observed_source_line_references": {
+    "max_steps_configuration": 1401,
+    "last_step_test": 1402,
+    "assistant_control_note_append": 1489
+  },
+  "method": "Root and separate reader inspected the same pinned image using read-only standard-library file reads in a network-disabled container, with no host mounts.",
+  "network": "none",
+  "read_only_rootfs": true,
+  "host_mounts": [],
+  "container_exit_code": 0,
+  "SDK_constructions": 0,
+  "provider_calls": 0,
+  "credentials_read": false,
+  "original_folder_accessed": false,
+  "actual_unknown_exception_established": false
+}

@@ -1,0 +1,18 @@
+{
+  "authority": "Explicit user reply in current Codex conversation",
+  "authorization_micro_usd": 5000000,
+  "bundle_sha256": "1abe96e47ceaae4101ba5e4b6d7e793740f94f9f54c382effbfabc6ba89149d3",
+  "date_local": "2026-10-25",
+  "judgments_sha256": "64f7e5722179c9ffb5a84b2eea575bafc021e031757886b8030edaa7cba2ccaf",
+  "kind": "phase1-user-readiness-exception-authorization",
+  "method_changes": false,
+  "original_automatic_gate_passed": false,
+  "proposal_sha256": "03c27c01041be843172d6ba05c6273a6ea2287af5d2f352689fc5dd03b117d99",
+  "question_item_id": "[\"request_user_input_async\",\"call_a857822260ca4508bcd7de9995072e73\",0]",
+  "remaining_scheduled_presentations": 46,
+  "replacement_calls_authorized": false,
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "schema_version": 1,
+  "timezone": "America/Los_Angeles",
+  "user_reply": "Approve documented readiness exception (Recommended)"
+}

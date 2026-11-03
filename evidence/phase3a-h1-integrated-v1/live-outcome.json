@@ -1,0 +1,68 @@
+{
+  "claims": {
+    "completed_scored_primaries": 2,
+    "held_out_effectiveness_tested": false,
+    "planned_primaries": 8,
+    "pooled_method_selection": null,
+    "successive_refinement_tested": false
+  },
+  "closed": true,
+  "closure_provider_calls": 0,
+  "cumulative_known_micro_usd": 24463235,
+  "cumulative_known_plus_held_micro_usd": 47343235,
+  "failure_diagnostic": "runs/phase3a-h1-integrated-v1/verification-v4/reviewer/live-primary-failure-v1/diagnostic.json",
+  "fixture": false,
+  "historical_held_micro_usd": 22880000,
+  "historical_known_micro_usd": 16580264,
+  "journal": "runs/phase3a-h1-integrated-v1/a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a/live/journal",
+  "kind": "phase3a-hi-outcome-v1",
+  "known_spent_micro_usd": 7882971,
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "new_held_micro_usd": 0,
+  "paid_attempts": 256,
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "primary_stop": {
+    "arm": "adaptive",
+    "attempts": 256,
+    "fixture": false,
+    "kind": "p3a-hi-primary-failfast-v1",
+    "pilot": "p3a-02",
+    "reason": "missing_primary_final",
+    "remaining_slots_are_unattempted": true,
+    "sha256": "a97f54c72357af7f81a0dbb542bb708d57e0b129fbaa2acd2a327b8568f94a60",
+    "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+    "spent_micro_usd": 7882971,
+    "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a"
+  },
+  "report_sha256": {
+    "PHASE3A_REPORT.md": "a16cdee880f02ef3ac745282f66b9b3edad552c775292bd8f8a12e6453627c47",
+    "accounting.json": "e446d02ab332b2bf5c9131dd861e8dab3b67d675fed0de0ef94cbdea8591102d",
+    "analysis.json": "abf1eaa476d09dcecc79ee9626e8aff14230cf83f884e74aa11ad40157d683ee",
+    "coverage.json": "31843ea973f043997049d6fcd9b404dc928d8fc169a0a54eb9b170999b3a83fc",
+    "protocol.json": "fe03ac2040f81d8cb9864acc2aa150ec5575b220799e0e07a6e377b442517bdf",
+    "readiness.json": "4366a3cd62afcb623447fee06a01bdb110ddf732bb786784a0dda66bb580db19",
+    "rows.json": "fa426500057bc95245040176e86165c750b851d3ca401ea2bf0226f9198d9afc",
+    "summary.json": "3c27cec5d31eaff77586d1f318d461ffab44bd6273ef91cf4d721a2ad99faa32"
+  },
+  "run": "runs/phase3a-h1-integrated-v1/native/a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a/live",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sanitized_launcher_records": [
+    "runs/phase3a-h1-integrated-v1/launcher/41ee14d9027344938abe33743d5d3bfe.inspection.json",
+    "runs/phase3a-h1-integrated-v1/launcher/41ee14d9027344938abe33743d5d3bfe.result.json"
+  ],
+  "scientific_complete": false,
+  "scope": {
+    "original_folder_accessed": false,
+    "paid_repeat": false,
+    "source_changed_during_live": false
+  },
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
+  "visibility": {
+    "closure_export": "complete",
+    "first_live_export": "timeout",
+    "first_offline_replay": "complete",
+    "original_timeout_preserved": true,
+    "provider_execution_uses_inspect": false
+  }
+}

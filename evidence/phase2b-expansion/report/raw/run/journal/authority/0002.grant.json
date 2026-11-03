@@ -1,0 +1,21 @@
+{
+  "attempts_at_grant": 28,
+  "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+  "grant": {
+    "authorized": true,
+    "billing_profile": "public-payg-envelope-v1",
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "cumulative_cap_micro_usd": 125000000,
+    "fixture": false,
+    "grant_id": "live-expansion-001",
+    "grant_sha256": "27d948aaa2a5200a62d6dee16ccb1aad980bc6c724065b8bcd53659c694d3bbe",
+    "journal_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b",
+    "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+    "previous_authority_sha256": "abf45dbabb5f9689fe8d2aa81273be654f5a87220317f804f337e2789ec81e39",
+    "review_sha256": "061dc60298827ef9bc43ccd3d6dfd59f8ea9a167278ebe3680cf3d42590ce004",
+    "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+    "stage": "expansion",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "prefix_sha256": "c872a2d1eceae0a4bd56620282aea4cb10ea460ad301e6e3831767fb1cc73451"
+}

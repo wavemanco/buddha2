@@ -1,0 +1,105 @@
+{
+  "candidate_strata": {
+    "both_at_least20": 185,
+    "both_below20": 39,
+    "straddling20": 2854
+  },
+  "eligible_candidate_pairs": 3078,
+  "new_prompt_groups_consumed": 0,
+  "policy_sha256": "2a8e875217395a6df89173824e7ffc4e006e11dff8ea106cf0ae3912fbbbbe5a",
+  "schema_version": 1,
+  "selected": [
+    {
+      "context_sha256": "18008bae5e32dceff3e0467116dabfd2eb61a86710bfcc3047f7ee4201f0c8a4",
+      "group_id": "muce-prompt-a3619f5c70192d4eb51aba03fc84d1e058aa57f94cfcd4d1bbcd1e798dbcc1d4",
+      "rank": "0004e81cb2071b50cb841bae09fa5aef292b00fffe5b5b6d8df2e5f827eea321",
+      "response_ids": [
+        "muce-response-ca6f378d7060df738a667d671f6ab4296a73049819a3a00adaf523264529a5c7",
+        "muce-response-e72124ff08d179e1b36e9b0a13d6216b381cba810a3b40bcc92f937f1c28daa2"
+      ],
+      "stratum": "straddling20"
+    },
+    {
+      "context_sha256": "8dbbcdcff222c877ff6c14d1bf22d8df48c170448857735ba8be6974fe1f644f",
+      "group_id": "muce-prompt-4adfa931f265b4c0521e6845b150e525460ac3167bccf944d4b7f4e415121e1c",
+      "rank": "003310bdabb67dbfed3b6263d2e36e8a87325046307f09953f6b8336020abcaa",
+      "response_ids": [
+        "muce-response-752b70263025a579538f1c7363a738558d6ff8ec8752caf4967a115216735aba",
+        "muce-response-862dd2b8195014b51408e53a4fb9a1e548c6b22bf9e5ea8a80312e844721fcaf"
+      ],
+      "stratum": "straddling20"
+    },
+    {
+      "context_sha256": "1dfdc3ed277199d8a38ca151046d50ea964df54d47cddbafdec44f5e1e42da4f",
+      "group_id": "muce-prompt-1a4e9684afed8355020cb48fe7b5467ca65aaa5049699fc715cef2b666d902fb",
+      "rank": "03c555ccf68cfe52e640a52c46f82e2bf51062044f8cc61b57581d0dbb0f3abe",
+      "response_ids": [
+        "muce-response-0e6e5720508702120bce278bd335d08fa4084e7192a2598cf2a3b401d59448f4",
+        "muce-response-bf9b640bbaf10e8d56b4f95e3b3c07e7a83a3fabeeaa2fc3d525e2a0427f8c1e"
+      ],
+      "stratum": "straddling20"
+    },
+    {
+      "context_sha256": "4391ae626a2fa28f698e1e085e7cba46ec14fcea474574ad3fa18fe4e3930c9c",
+      "group_id": "muce-prompt-6094b17dae4d3541ee03c8fa1831e6e5f60e0b876bbe67e8e80eded84c4e453a",
+      "rank": "0421acb9d4c642732bbab072857d300bd57379b75195d9d0ab2860365dfdde26",
+      "response_ids": [
+        "muce-response-1b94009de2ed1099b6dd3353e127f0574699610341772ebe865a9a86157f880f",
+        "muce-response-9782c890ba028b84525f9209c5df312864aaaf4f5b1074bcee67d59305aa7ebd"
+      ],
+      "stratum": "straddling20"
+    },
+    {
+      "context_sha256": "80467e6a310eec9e97e0aad47a6c24a050f69b1d2a80c14a3f59be656dd24cc4",
+      "group_id": "muce-prompt-9ba3f3b1ccad23ecad403c70f5faee26207efa6eac04d95412f8590568d4b02e",
+      "rank": "04e3e1141c903d55e9d383b1cc2030852d7dacc668a07efd41e7b14fced6d328",
+      "response_ids": [
+        "muce-response-451c005ed77f84df192dc5525895b081571bd043b4e57adf19eec2a0d574f53c",
+        "muce-response-f2d72c01c65857139999409db9891890d17f5cd6a56a7d5594b76d4aec319f7e"
+      ],
+      "stratum": "both_at_least20"
+    },
+    {
+      "context_sha256": "019645ecf85bed52156ec3c6a8aee8549355df1cb909ac24843bfbdb9163a833",
+      "group_id": "muce-prompt-9c54782c396d9aa95dab7adaa85537e0a6a33aa6bbfffc0de4c396830bb6e0d8",
+      "rank": "055dd05cb26e12f9b5ae5cd2d05760834a1fd27c391ad4e4230870b5e01cb0e4",
+      "response_ids": [
+        "muce-response-5f954027fc35f761db9cb1c47787870d21020d530e614ceb03a36e590eeb396f",
+        "muce-response-664d7650a77b9b74ec7d237d3ff9fb125fbb03a08103e338a17611528ef1c293"
+      ],
+      "stratum": "both_at_least20"
+    },
+    {
+      "context_sha256": "8dd9baa2f36f12f8966832cd80af13079d0ba35f83c0805c9c42cb99c894939b",
+      "group_id": "muce-prompt-c3985fbd8108a9521d68a1623d8b38f157254a1aa1ac1afabbedb6b03117eab6",
+      "rank": "097fd7f65b640f6df4313953e3de486526b89571f97819aeadd893dfbb0ee377",
+      "response_ids": [
+        "muce-response-45d561c65d47d97e986784ff99b9dcebcddb66e9c4b144ff77df70b50dedf4f3",
+        "muce-response-dde1648019dbc042e9e86fa6a7803555c61e93b063afd96fc249dfd99ef54faa"
+      ],
+      "stratum": "both_at_least20"
+    },
+    {
+      "context_sha256": "b8f26dcf4939696acbbc67787a20f159f44393b80292fd305c28ccfcb10fc5ff",
+      "group_id": "muce-prompt-c5710e249cdab4b31fd94b59604f7c61764e728e709b978628b6ba93b7173dc3",
+      "rank": "0acb5c7fda1e60fdbb975ae0079a091535eaa16bd6e1ca4b449202a0c2f0edab",
+      "response_ids": [
+        "muce-response-0a5b96134af693c9ed6eedbe6d65c0dbcc62d7bc6ebbda42049686f3edddbdea",
+        "muce-response-496d669ca236f51a448611a9cf762f0a43d6fe2a870b27e7a9a8e67c9c41749b"
+      ],
+      "stratum": "both_at_least20"
+    }
+  ],
+  "selected_count": 8,
+  "selected_strata": {
+    "both_at_least20": 4,
+    "straddling20": 4
+  },
+  "selected_unique_groups": 8,
+  "shortfalls": {
+    "both_at_least20": 0,
+    "both_below20": 4,
+    "straddling20": 0
+  },
+  "source_or_model_outcomes_used_for_selection": "Source scores only for eligibility/stratum; no Sonnet outcome access in this script."
+}

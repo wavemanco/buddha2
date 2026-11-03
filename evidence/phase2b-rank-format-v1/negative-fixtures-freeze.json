@@ -1,0 +1,13 @@
+{
+  "kind": "p2bn-negative-fixtures-freeze-v1",
+  "fixture": "followups/rank_format_v1/tests/fixtures.json",
+  "fixture_sha256": "e4acded332abb48de58f92cdfaaa728027ae0d0e1dd0b0dca15ddadc97e91d2c",
+  "definition_sha256": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517",
+  "frozen_at_utc": "2026-10-28T16:43:10.8861495Z",
+  "cases": 76,
+  "accepted": 13,
+  "rejected": 63,
+  "normalizer_implementation_existed": false,
+  "test_code_existed": false,
+  "expected_outcomes_frozen": true
+}

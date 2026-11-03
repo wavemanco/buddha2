@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "ce6c0448be71da1456b0a2232395de86cf167019c594d2a14b7a65a6d0e3549a",
+  "bounded_secret_check": "structured credential fields and recognizable token prefixes only; unknown strings are not certified",
+  "first_block_complete": true,
+  "fixture": false,
+  "hold_expansion": true,
+  "kind": "phase2b-first-block-report-package-check",
+  "manifest_sha256": "aad42e5bafed71127d688a97bcd97bddcf8c9b66f155e9c608bf8f4144a07e1e",
+  "members": 30,
+  "native_analysis_decision_replay_exact": true,
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "output": "/results/phase2b-f1/report",
+  "source_evidence_unchanged": true,
+  "status": "pass"
+}

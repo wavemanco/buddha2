@@ -1,0 +1,8 @@
+{
+  "cause": "An unqualified Python read_text used the Windows CP1252 default between two UTF-8 writes. Only the current closure specification was affected.",
+  "correction": "Strict inverse CP1252/UTF-8 conversion; review original Unicode and diff before re-freezing.",
+  "before_sha256": "af3bc6ad37edc4e5cc8d08740844b217d3f3eb4489be652493b3b53adc57d9aa",
+  "after_sha256": "48962dd7c721b251b965eef4b2cddc03162055228c48ff6bf599353838b91b9b",
+  "source_or_scientific_evidence_changed": false,
+  "runtime_tests_repeated": false
+}

@@ -1,0 +1,117 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "a059a84ed1cec150e012ce36491a437d74d5b38b3b14275a6e666a19e6727ce2",
+  "portfolio_id": "portfolio-1666f439753be807677d3d8363ec691602bf0e2b70b6b681e8f1d74ceadf8d90",
+  "portfolio_sha256": "a8de9e8aa00811cfbaaef13ab57faa6d953d851aee055f0e79cc024e9a6fa7cd",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "ae9d83bc6430baf0a083518f1f1f098a1d41e3199ba9526119c58a0e42e7e28e",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 1,
+    "request_ids": [
+      "p2-85bd10cb49b2f7c8b5f10946.plan",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.00",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.01",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.02",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.03",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.04",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.05",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.06",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.07",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.08",
+      "p2-85bd10cb49b2f7c8b5f10946.answer.09",
+      "p2-66a2d4cb8703e6fa273999dd.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-63d4c2bc2b3bf82d29f4fe78",
+      "index": 0,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.00",
+      "status": "ok",
+      "text_sha256": "1324c6f47eea99a3e7064802fe5f43824dcd20d2479850033e50542a80bb7e5a"
+    },
+    {
+      "id": "response-c0bc5bcace5ea53061022747",
+      "index": 1,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.01",
+      "status": "ok",
+      "text_sha256": "ff9201598c3eae8f087c48dbde848fb09c5fefd9b348fccd2d08dc49cc9d55d5"
+    },
+    {
+      "id": "response-f7db0c5fb74b60abeaf4f3bc",
+      "index": 2,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.04",
+      "status": "ok",
+      "text_sha256": "db72a7a83bd452e2d08d71a8d15b1745cc10328a9b406274ad77fdfb06eef152"
+    },
+    {
+      "id": "response-b1597f830ca657fa73009979",
+      "index": 3,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.08",
+      "status": "ok",
+      "text_sha256": "4bb58ff1c1426c523a2b96d196272ebb467b98de2b6c16e6c2ea322681433935"
+    },
+    {
+      "id": "response-57d245b8b2d5cbde6d874096",
+      "index": 4,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.05",
+      "status": "ok",
+      "text_sha256": "b035c59977819165334f59353f49d478ccb638514e36c8474df399976d4cdcc6"
+    },
+    {
+      "id": "response-350a7a1097801e3f7d199156",
+      "index": 5,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.02",
+      "status": "ok",
+      "text_sha256": "6ab00fcf545c50c6bd9dffd5f935a3b290c0601e49ef20f2edd70be8eb69c23b"
+    },
+    {
+      "id": "response-14b2d93e7556f38f75615128",
+      "index": 6,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.09",
+      "status": "ok",
+      "text_sha256": "9ade0426d5b8f129647f43aa7f4e23a1ba8f1475923466f76de3e975925d6a61"
+    },
+    {
+      "id": "response-72eb2aa140cc89889160186b",
+      "index": 7,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.03",
+      "status": "ok",
+      "text_sha256": "8e0346cf6a8d30edf6f31daeddfb79e06ce892f2b89fae77419b55d39c8dc711"
+    },
+    {
+      "id": "response-2b698fedabd19004e324e2a9",
+      "index": 8,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.06",
+      "status": "ok",
+      "text_sha256": "5d1e317e5c239d484487e6cb016f8b740c60fc75c5243286d7d57316df5c2a32"
+    },
+    {
+      "id": "response-4376fa61e67febceea70f432",
+      "index": 9,
+      "request_id": "p2-85bd10cb49b2f7c8b5f10946.answer.07",
+      "status": "ok",
+      "text_sha256": "37ae7eb320f9e7010d5fb1f62d0db5f0edf62cb7ba6e9c5be3b868a0ebc0346e"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-9c418f063bc433264d29",
+    "prompt": "Which 4-digit lock combination is the safest?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-95"
+    }
+  }
+}

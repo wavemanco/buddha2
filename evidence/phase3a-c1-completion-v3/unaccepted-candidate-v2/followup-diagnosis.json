@@ -1,0 +1,31 @@
+{
+  "correction_scope": "Use the existing absolute cleanup deadline for normal worker exit, retain forced-cleanup/unknown terminal stops; fix incompatible NoCalls test fixture and improve failure-summary diagnostics without relaxing assertions.",
+  "demonstrated_defect": "A completed known/timely SDK worker delayed0.6s before process exit is killed after approximately0.305s and falsely terminalizes the transport, despite the unchanged60s cleanup allowance.",
+  "evidence": {
+    "unaccepted-cost-capture.json": {
+      "original_path": "evidence/phase3a-c1-completion-v3/prospective-cost-worksheet.json",
+      "sha256": "4f4fd91b2f992d9fbd778900c7caca870cc361e1ccc88975a0c068083f041348"
+    },
+    "worker-exit-command.json": {
+      "original_path": "runs/phase3a-c1-completion-v3/worker-exit-diagnostic-v1/command.json",
+      "sha256": "6d1f7cc4c1ff8d47d03d7528570724618ddd31db16484d27707dcf6324a2c0b5"
+    },
+    "worker-exit-diagnostic-result.json": {
+      "original_path": "runs/phase3a-c1-completion-v3/worker-exit-diagnostic-v1/result.json",
+      "sha256": "287ecfcb8dd9c6bc30ae54080fca6756f020317dcdba152cb0e91eb1e7a22d11"
+    },
+    "worker-exit-diagnostic.py": {
+      "original_path": "runs/phase3a-c1-completion-v3/worker-exit-diagnostic-v1/diagnostic.py",
+      "sha256": "8a04a941264b26d609f7f39d56f2c9b5de61f2ea7a77d124d05ff4e8e1ced46a"
+    },
+    "worker-exit-status.json": {
+      "original_path": "runs/phase3a-c1-completion-v3/worker-exit-diagnostic-v1/exit.json",
+      "sha256": "e81bc160c0843ee56f31f12997bb3aff50528d596002d4866676cb8a1b19195a"
+    }
+  },
+  "kind": "phase3a-c1-completion-r2-candidate2-followup-diagnosis-v1",
+  "original_41_call_failure_cause_proven": false,
+  "original_failure_limitation": "Unit-test teardown removed its intermediate native journal/audits; an isolated retained readiness reproduction later passed68calls.",
+  "real_provider_calls": 0,
+  "source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89"
+}

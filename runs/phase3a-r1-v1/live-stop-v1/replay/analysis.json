@@ -1,0 +1,45 @@
+{
+  "authentic_live_path": false,
+  "complete_primary": false,
+  "diagnostic": {
+    "assessment_id": "phase3a-dcbe13788d6dd09a0766:p3a-01:fixed:anchor",
+    "partition_equal": null,
+    "primary_unchanged": true,
+    "shared_head_positions": [],
+    "shared_head_score_disagreements": null,
+    "status": "missing",
+    "utility_difference": null
+  },
+  "fixture": false,
+  "held_evidence_failure": null,
+  "independent_prompt_units": 4,
+  "kind": "phase3a-paired-development-analysis-v1",
+  "limits": [
+    "Development feasibility only; no population or equal-realized-compute causal claim.",
+    "The duplicate is diagnostic and never replaces the original primary assessment."
+  ],
+  "mean_adaptive_minus_fixed": null,
+  "pairs": [
+    {
+      "adaptive_minus_fixed": null,
+      "adaptive_minus_fixed_distinct": null,
+      "pilot": "p3a-01"
+    },
+    {
+      "adaptive_minus_fixed": null,
+      "adaptive_minus_fixed_distinct": null,
+      "pilot": "p3a-02"
+    },
+    {
+      "adaptive_minus_fixed": null,
+      "adaptive_minus_fixed_distinct": null,
+      "pilot": "p3a-03"
+    },
+    {
+      "adaptive_minus_fixed": null,
+      "adaptive_minus_fixed_distinct": null,
+      "pilot": "p3a-04"
+    }
+  ],
+  "selected_method": null
+}

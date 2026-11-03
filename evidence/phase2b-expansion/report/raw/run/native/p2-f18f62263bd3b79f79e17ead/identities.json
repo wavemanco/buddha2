@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "71fe47ade17334b240d00e17b5a809d972f95edbce2ba54544518a514d7a0b88",
+  "portfolio_id": "portfolio-a5f68aaeb40d0298b3d17062b9ff475bbd3ab397ae51334198ba240770f464cb",
+  "portfolio_sha256": "0750b7017462f7b1dac4707a1ea2849bc827a4abb2c199a408edbb783beb8516",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-f18f62263bd3b79f79e17ead.plan",
+      "p2-f18f62263bd3b79f79e17ead.answer.00",
+      "p2-f18f62263bd3b79f79e17ead.answer.01",
+      "p2-f18f62263bd3b79f79e17ead.answer.02",
+      "p2-f18f62263bd3b79f79e17ead.answer.03",
+      "p2-f18f62263bd3b79f79e17ead.answer.04",
+      "p2-f18f62263bd3b79f79e17ead.answer.05",
+      "p2-f18f62263bd3b79f79e17ead.answer.06",
+      "p2-f18f62263bd3b79f79e17ead.answer.07",
+      "p2-f18f62263bd3b79f79e17ead.answer.08",
+      "p2-f18f62263bd3b79f79e17ead.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-69b5830c63f08ee6cdbbdce9",
+      "index": 0,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.00",
+      "status": "ok",
+      "text_sha256": "d7aab9192d41aa399ea427c0efcf706a350b0287466cb31b9e5e66e1fdc9ce5e"
+    },
+    {
+      "id": "response-5739327c7ef6184ec86cea10",
+      "index": 1,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.01",
+      "status": "ok",
+      "text_sha256": "f8f516022630c5b1406374135280a65f9461ab77e8e725705e46f717b4196106"
+    },
+    {
+      "id": "response-c05cdd332b40ba1e818d9f66",
+      "index": 2,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.02",
+      "status": "ok",
+      "text_sha256": "ba045dea5871ad6723342e4ae159a512a709733da6133f03c75d62bd59d4c69a"
+    },
+    {
+      "id": "response-96228e81f94257d8bc9e02f0",
+      "index": 3,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.03",
+      "status": "ok",
+      "text_sha256": "c927e76e677d29de9a4c91ced0a0c3291bd83af298adcc2d3aa0734bde2f3dd1"
+    },
+    {
+      "id": "response-92f91bb39b554502376099e7",
+      "index": 4,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.04",
+      "status": "ok",
+      "text_sha256": "6278639e3e2a14de26fa776e18eda55c7dddc96529d86737f69a742cb9fc7114"
+    },
+    {
+      "id": "response-246e8dbab86e15f0661a69a1",
+      "index": 5,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.05",
+      "status": "ok",
+      "text_sha256": "55d96f2038053b9d090bb57a0753dc1766e2d3c0dc0b555734a819f83014776a"
+    },
+    {
+      "id": "response-d584e0dac65965d67560e4b0",
+      "index": 6,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.06",
+      "status": "ok",
+      "text_sha256": "0ebfb5008072421315d564fdba5bcdc6408762befc68808f67ff0b8bf02e982a"
+    },
+    {
+      "id": "response-3e9c71b876ca9dd06d68906b",
+      "index": 7,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.07",
+      "status": "ok",
+      "text_sha256": "27762e257fdc157a7a11da7da16022b6be4141f125594181e25186f2d74f5343"
+    },
+    {
+      "id": "response-d25cbf4bb33847c8c4ae0f48",
+      "index": 8,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.08",
+      "status": "ok",
+      "text_sha256": "93b4ff6efa22328e6fe4b9a6f1ea54e13a4e4d4dc61acc1731acbd09c6ff5693"
+    },
+    {
+      "id": "response-bbdb83e8e2feb2b3e0138a4b",
+      "index": 9,
+      "request_id": "p2-f18f62263bd3b79f79e17ead.answer.09",
+      "status": "ok",
+      "text_sha256": "039bbaed794c48207835d5b64659f8fbb424ee4b45de7fc50e41117ab849b88f"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-fb55f67d0ac2a857ec0f",
+    "prompt": "Which US city has terrible quality of life?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-41"
+    }
+  }
+}

@@ -1,0 +1,1076 @@
+[
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "8638cb821e1e3014fa8cc3302551ea1c5377fc35dc58ff5288849e7fb9210470",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/fixed-candidate/identity",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A01",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "f297e8155843dabfcdb88ea940ad804c73519b0ef3d8cafb5b57ba0e34b13ac7",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/fixed-candidate/reverse",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A02",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "0ec71e9b2087a870df31509888a913a9af9de6ee894b41f82aac57d27e72fe52",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/fixed-candidate/fixed_nontrivial_2_0_1_4_3_6_5_9_7_8",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A03",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "533cc12f6ae9ea2ee7e00228f2d0b608e123f6e1e400eaff17e6e570b7695f3e",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/native-rollout/identity",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A04",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "3f5192c95a5ba65bfa6229f407883869f7115756588269806b67a8f31a18a305",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/native-rollout/reverse",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A05",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "7dec4f98ab053b05ff56b4bb5a2f94c9b6752c1a9dd30086f12ed29431481422",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "synthetic_B/native-rollout/fixed_nontrivial_2_0_1_4_3_6_5_9_7_8",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A06",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "d7b61acbc717ac9f875ed82dcbe8b99e89f70309016d980c5b2b7c84f5edf1da",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/fixed-candidate/identity",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A07",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "0cbc5f989e24c41738a229915a84ea46775e0ea35010134547944c2951691673",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/fixed-candidate/reverse",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A08",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "96d677cbff6f1ca54f04785d6f25722a8d670c4da9666214c65899c7cf57d9eb",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/fixed-candidate/fixed_nontrivial_2_0_1_4_3_6_5_9_7_8",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A09",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "ce56926ec08f6a54c96ecd8b6c18df9125dae3c28b2082c704519dcb6a527b4c",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/native-rollout/identity",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A10",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "8c788a550c06e0c6cc4fac3951202650247e69e20ff139c73445351bf2c3a39c",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/native-rollout/reverse",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A11",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "canonical_output_sha256": "09dc3e17b6644218e3b454b123c60dcfd68e89a05925374a285eb7e7bec951aa",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "saved_candidate06_B/native-rollout/fixed_nontrivial_2_0_1_4_3_6_5_9_7_8",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "A12",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "590c036c8d93b792f16badf61cad2326c2dc9a843f4ae35670a4f43169dd1ffd",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "strict",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B01",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "708f9526377a91e7c3e5f64b0dd2bf7acf453c38ca407db6119300af4f8a8398",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "prose",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B02",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "6cd45461bac37fef193e7e213acbd3c451c9559004b3369b9e0f28fbab1d5ad0",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "fence",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B03",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 2,
+        "raw_reply_sha256": "2e78db5681082864bdac22bb332c538bdd30eef92ee125a496e09e02b7d302d4",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "repeated_identical_with_correction_prose",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B04",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 2,
+        "raw_reply_sha256": "fae0a9f10cf49077d9a40706cb590cc768ffe70deb9ab1c4c4e673e0e60367b9",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "adjacent_identical",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B05",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "9dfca4871c51e01ecf66d49baaacd297323207c2ed6dcac0a347bb113791780a",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "whitespace",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B06",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "72a44cf67060aed6e63691666778b8f46e949effe9b8a7fc7580fd34f3de665c",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "equivalent_escaped_key_and_labels",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B07",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "889e5150cc554f8ab55eb88ed2aabba47ba3ad05c347793a49ac918596b1d19b",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "unicode_prose_offsets",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B08",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "cb8144ee0e6a1ea3ea2a2060bcb83277947f51d22ac3b73aa683544b233d7c7d",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "contradictory_prose_ignored_structurally",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B09",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "986ed19e6b1f78e1791c8b165b10accf070164d5e93b3a2f65478db54d5c7f7b",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "prose_numbers",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B10",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 16,
+        "raw_reply_sha256": "fcc4a3b3e5cc23115b544bf60239eb4bc9227caa83a5948ccf0f7af91b1314b1",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "sixteen_identical_objects",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B11",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "ee6dcb9cacb230e1bae6b8ef880c92587e1b0a6f0c2053a5e77265c94b1215a0",
+        "synthetic": true
+      },
+      "reason": null,
+      "status": "accepted"
+    },
+    "case": "exact_65536_utf8_bytes",
+    "expected": "accepted",
+    "expected_reason": null,
+    "id": "B12",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "714a9c63c8aa62f2e608f817a30e1ab2727677cb3bcdfa43dbcf89859ba71f5c",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "missing_label",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C01",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "b0765ea85b0d77fa624167a5feb86823313d6d2a4071f7ddf9daca1243b2ce49",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "duplicate_label",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C02",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "22111e96d32f3afcf17ef2ed4370578f647384d87dac89d56c5c1d8cde4f1625",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "foreign_label",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C03",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "4905d9d6062221bae3fe699f4873ef5429eaf932f9aa39d07eef4068a8456869",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "uppercase_label",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C04",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "ac11c07355fa7cb44e14710c654d9d2108702361782fec491e5eeb135b9c8594",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "fullwidth_confusable",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C05",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "71a3297cdedaccb6ad7b18e4ea7f2f6c1f4a5477e88672a0c56fec71860b0749",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "whitespace_suffix_label",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C06",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "aee69d126a529b8f0abdc64c6f7071edf93914252ee5351954ebe282bec3ebcb",
+        "synthetic": true
+      },
+      "reason": "invalid_shape",
+      "status": "rejected"
+    },
+    "case": "numeric_entry",
+    "expected": "rejected",
+    "expected_reason": "invalid_shape",
+    "id": "C07",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "d5c8229afabf23a5ff1d358490d1ca6d126ed9245cf46f1c6144927eb523d741",
+        "synthetic": true
+      },
+      "reason": "invalid_shape",
+      "status": "rejected"
+    },
+    "case": "boolean_entry",
+    "expected": "rejected",
+    "expected_reason": "invalid_shape",
+    "id": "C08",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "d16b092457601e12f8dd953d4cdfc4d6593190044bd52f8e8827dc0134951de9",
+        "synthetic": true
+      },
+      "reason": "invalid_shape",
+      "status": "rejected"
+    },
+    "case": "null_entry",
+    "expected": "rejected",
+    "expected_reason": "invalid_shape",
+    "id": "C09",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "fb1b4293d49ab3cc5298f17f98652d5a1cbe39b204c1a034962772252fc53811",
+        "synthetic": true
+      },
+      "reason": "invalid_shape",
+      "status": "rejected"
+    },
+    "case": "extra_key",
+    "expected": "rejected",
+    "expected_reason": "invalid_shape",
+    "id": "C10",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "6f8a3e5b64d53faddc37450e6ccbd10b163da3211da543f3ba7babc764aa97b6",
+        "synthetic": true
+      },
+      "reason": "duplicate_keys",
+      "status": "rejected"
+    },
+    "case": "duplicate_decoded_order_key",
+    "expected": "rejected",
+    "expected_reason": "duplicate_keys",
+    "id": "C11",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "2041fdc35251447933789b2feeb14509e594b05fc30641dbed7cc1fa57ec12aa",
+        "synthetic": true
+      },
+      "reason": "malformed_json",
+      "status": "rejected"
+    },
+    "case": "trailing_comma",
+    "expected": "rejected",
+    "expected_reason": "malformed_json",
+    "id": "C12",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "c4e5151a8b4e0d2776545acc86db29a1f423f91b280258924c5f1e047320e74d",
+        "synthetic": true
+      },
+      "reason": "malformed_boundary",
+      "status": "rejected"
+    },
+    "case": "truncated_object",
+    "expected": "rejected",
+    "expected_reason": "malformed_boundary",
+    "id": "C13",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 0,
+        "raw_reply_sha256": "e63996c400c1e828d8da109722248152dfe674e9078e01ee93429ca63d77aeb2",
+        "synthetic": true
+      },
+      "reason": "outside_delimiter",
+      "status": "rejected"
+    },
+    "case": "outside_closing_delimiter",
+    "expected": "rejected",
+    "expected_reason": "outside_delimiter",
+    "id": "C14",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 0,
+        "raw_reply_sha256": "fda0bc3d9192c19b55fb74636aa0959acbe6e397453d7b8a047c690c630809a4",
+        "synthetic": true
+      },
+      "reason": "no_candidate",
+      "status": "rejected"
+    },
+    "case": "no_object",
+    "expected": "rejected",
+    "expected_reason": "no_candidate",
+    "id": "C15",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "525ec0977733804e538671e8c4d4de2d29ae7a9f62e96898d9d76b0381408b78",
+        "synthetic": true
+      },
+      "reason": "nonfinite",
+      "status": "rejected"
+    },
+    "case": "nonfinite_candidate",
+    "expected": "rejected",
+    "expected_reason": "nonfinite",
+    "id": "C16",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 0,
+        "raw_reply_sha256": "c0e5e710bf0a0747764c45b615f24ce55d8977690421f27ca9b43eb82d0c9778",
+        "synthetic": true
+      },
+      "reason": "invalid_utf8",
+      "status": "rejected"
+    },
+    "case": "invalid_utf8_surrogate",
+    "expected": "rejected",
+    "expected_reason": "invalid_utf8",
+    "id": "C17",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 0,
+        "raw_reply_sha256": "76c002eec0c9da854ca2ee5dae9fb0069a622274b6638ab712fcb70384304899",
+        "synthetic": true
+      },
+      "reason": "size_limit",
+      "status": "rejected"
+    },
+    "case": "ascii_65537_bytes",
+    "expected": "rejected",
+    "expected_reason": "size_limit",
+    "id": "C18",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 0,
+        "raw_reply_sha256": "e6e612244de4c573af8f07b164b297add6fea0c8efdfb5629e6ad175717c911c",
+        "synthetic": true
+      },
+      "reason": "size_limit",
+      "status": "rejected"
+    },
+    "case": "multibyte_over_65536_utf8",
+    "expected": "rejected",
+    "expected_reason": "size_limit",
+    "id": "C19",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "e54fe55b21e4c7beee08925faffd1fbd1c8d0e399efceb14c6351fa0b86f80d2",
+        "synthetic": true
+      },
+      "reason": "depth_limit",
+      "status": "rejected"
+    },
+    "case": "nested_order_array",
+    "expected": "rejected",
+    "expected_reason": "depth_limit",
+    "id": "C20",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "c55e9f5eea97bc72981f31f01ceae6aab5831f1ea5dd340660be34c6abfde23d",
+        "synthetic": true
+      },
+      "reason": "depth_limit",
+      "status": "rejected"
+    },
+    "case": "enclosing_object_wrapper",
+    "expected": "rejected",
+    "expected_reason": "depth_limit",
+    "id": "C21",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 17,
+        "raw_reply_sha256": "2858cc3595051bbf03bea0dc1edb6dd6a418fb67ae3f6d9b64bf5dc490c8f467",
+        "synthetic": true
+      },
+      "reason": "object_count_limit",
+      "status": "rejected"
+    },
+    "case": "seventeen_identical_objects",
+    "expected": "rejected",
+    "expected_reason": "object_count_limit",
+    "id": "C22",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 2,
+        "raw_reply_sha256": "67fd9a1bce7aa54c89180dfe62012d4207dbea5a4e8b29d255fcd21ae6091184",
+        "synthetic": true
+      },
+      "reason": "ambiguous_order",
+      "status": "rejected"
+    },
+    "case": "conflicting_valid_orders",
+    "expected": "rejected",
+    "expected_reason": "ambiguous_order",
+    "id": "C23",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 2,
+        "raw_reply_sha256": "715cd757a850f5c46bf07475d0341394b691cefd37f4ee3972efc3c000b8e71e",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "valid_then_invalid_ids",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C24",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 1,
+        "raw_reply_sha256": "79768fe857b1c0056c6ac41a7e1ac407a54daccf3db2ae77db850c2f6964cd1f",
+        "synthetic": true
+      },
+      "reason": "invalid_ids",
+      "status": "rejected"
+    },
+    "case": "invalid_ids_then_valid",
+    "expected": "rejected",
+    "expected_reason": "invalid_ids",
+    "id": "C25",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": {
+        "candidate_count": 2,
+        "raw_reply_sha256": "89daddd0e706d1b9c799aff987d73ad39c3d7c764d75ab1a520fbbac236a2b86",
+        "synthetic": true
+      },
+      "reason": "malformed_boundary",
+      "status": "rejected"
+    },
+    "case": "valid_then_truncated",
+    "expected": "rejected",
+    "expected_reason": "malformed_boundary",
+    "id": "C26",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "parent_nine",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D01",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "duplicate_canonical_id",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D02",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_parent_text_stale_identity",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D03",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_ordered_map_ids",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D04",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "wrong_map_seal",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D05",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "wrong_rank_profile",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D06",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "altered_prepared_body",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D07",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "wrong_request_binding_hash",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D08",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_consumed_strategy",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D09",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_context_study",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D10",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_context_run",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D11",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_context_slot",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D12",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "changed_context_caller",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D13",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "wrong_result_reply_hash",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D14",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "wrong_result_request_binding",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D15",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "stale_valid_aliases_wrong_parent_map_result",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D16",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "result_not_synthetic",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D17",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "bound provenance rejected; no canonical output",
+      "status": "ContractError_before_acceptance"
+    },
+    "case": "result_claims_provider_call",
+    "expected": "ContractError_before_acceptance",
+    "expected_reason": null,
+    "id": "D18",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "renderer_only_rank_id_values_change",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E01",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "seed_three_strings_exact",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E02",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "rank_system_edit_consumed_runtime_schema_unchanged",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E03",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "settings_identity_retained",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E04",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "new_procedure_identity_shared_across_map_instances",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E05",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "duplicate_and_literal_id_texts_and_all_response_fields_exact",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E06",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "deterministic_zero_call_replay_input_immutability",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E07",
+    "passed": true
+  },
+  {
+    "actual": {
+      "proof": "actual renderer/canonical functions and immutable synthetic evidence checked",
+      "status": "invariant_pass"
+    },
+    "case": "both_caller_shapes_same_helper_and_body_no_topology_execution",
+    "expected": "invariant_pass",
+    "expected_reason": null,
+    "id": "E08",
+    "passed": true
+  }
+]

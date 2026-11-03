@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "buddha2-inspect-i1-final-independent-reader"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"passed\": true, \"saved_logs_compared\": 8, \"model_calls\": 0}\n"
+}

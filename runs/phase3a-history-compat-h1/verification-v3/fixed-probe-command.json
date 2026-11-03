@@ -1,0 +1,32 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp:rw,exec,size=1073741824",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--mount",
+    "type=bind,source=C:\\Users\\arvik\\code\\research\\Buddha2,target=/workspace,readonly",
+    "-e",
+    "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2:/workspace",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "--workdir",
+    "/workspace",
+    "--entrypoint",
+    "/usr/local/bin/bun",
+    "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "run",
+    "/workspace/followups/phase3a_history_compat_h1/probe.ts"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"fixture\":true,\"fetch_invocations\":0,\"rows\":[{\"case\":\"signed-empty\",\"before_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":true,\"visible_exact\":false,\"redacted_exact\":false,\"tool_preserved\":true},\"after_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":true,\"visible_exact\":false,\"redacted_exact\":false,\"tool_preserved\":true}},{\"case\":\"signed-visible\",\"before_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":false,\"visible_exact\":true,\"redacted_exact\":false,\"tool_preserved\":true},\"after_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":false,\"visible_exact\":true,\"redacted_exact\":false,\"tool_preserved\":true}},{\"case\":\"redacted\",\"before_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":false,\"visible_exact\":false,\"redacted_exact\":true,\"tool_preserved\":true},\"after_OpenCode\":{\"opaque_blocks\":1,\"empty_exact\":false,\"visible_exact\":false,\"redacted_exact\":true,\"tool_preserved\":true}},{\"case\":\"absent\",\"before_OpenCode\":{\"opaque_blocks\":0,\"empty_exact\":false,\"visible_exact\":false,\"redacted_exact\":false,\"tool_preserved\":true},\"after_OpenCode\":{\"opaque_blocks\":0,\"empty_exact\":false,\"visible_exact\":false,\"redacted_exact\":false,\"tool_preserved\":true}}],\"order\":{\"valid_ends_in_tool\":true,\"expected\":[\"thinking\",\"tool1\",\"thinking\",\"tool2\"],\"actual\":[\"thinking\",\"tool1\",\"thinking\",\"tool2\"]},\"incomplete_stream\":{\"mock_fetches\":1,\"event_types\":[\"stream-start\",\"response-metadata\",\"reasoning-start\",\"reasoning-delta\"],\"complete_terminal\":false,\"eligible_for_next_admission\":false}}\n"
+}

@@ -1,0 +1,11 @@
+{
+  "baseline_sha256": "b2e0c9961ea1af33a6469e6593cccea98bfee7aee061d18a72dc7684b096e6fd",
+  "canonical_live_replay_files_unchanged": 108,
+  "changed_files": [],
+  "checked_files": 962,
+  "effective_source_files_unchanged": 113,
+  "kind": "p2bn-live-publication-preservation-result-v1",
+  "offline_report_and_packet_unchanged": true,
+  "original_strict_decision_unchanged": true,
+  "protected_original_accessed": false
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "p2bf1-public-price-refresh-v1",
+  "reviewed_at_utc": "2026-10-27T21:16:37Z",
+  "scope": "public documentation only; no account, provider API or credential access",
+  "standard_input_output_usd_per_million": {
+    "claude-sonnet-5-5": [
+      "2",
+      "10"
+    ],
+    "gpt-5.6-luna": [
+      "0.20",
+      "1.20"
+    ],
+    "claude-opus-5": [
+      "5",
+      "25"
+    ]
+  },
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+    "https://platform.claude.com/docs/en/models/opus-5/overview",
+    "https://platform.claude.com/docs/en/about-claude/pricing"
+  ],
+  "previous_review_file_sha256": "c5a4a0463afa0541f79eb7f67c655c65ee6fc3f39a3fbaca60b4aab3108272db",
+  "observed_base_rates_unchanged": true,
+  "scientific_settings_changed": false,
+  "account_profile_verified": false,
+  "operator_confirmation_required": true,
+  "provider_api_calls": 0
+}

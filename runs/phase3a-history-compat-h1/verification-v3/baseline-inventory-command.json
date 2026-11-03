@@ -1,0 +1,20 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--entrypoint",
+    "python",
+    "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+    "-B",
+    "-",
+    "inventory"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"all_other_entries_sha256\": \"c7e622eb49f1f72e803ed3936ad0a0aae55e21efcd7e3a81688ac4d98fddb02a\", \"all_other_entry_count\": 393039, \"docker_injected_files\": [\"/etc/hostname\", \"/etc/hosts\", \"/etc/resolv.conf\"], \"docker_virtual_mounts\": [\"/dev\", \"/proc\", \"/sys\"], \"excluded_private_names\": [\"/opt/phase3a-opencode/node_modules/.bun/bottleneck@2.19.5/node_modules/bottleneck/.env\", \"/root/.bun/install/cache/bottleneck@2.19.5@@@1/.env\"], \"target_mode_uid_gid\": [493, 0, 0], \"target_sha256\": \"13eeb2824f9455f216a6f948c1718e53d4a148a2108fc1d13fa32858fb63b462\"}\n"
+}

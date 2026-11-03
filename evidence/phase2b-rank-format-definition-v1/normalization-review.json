@@ -1,0 +1,130 @@
+{
+  "api_spend_micro_usd": 0,
+  "bound_input_sha256": {
+    "PHASE2B_RANK_FORMAT_DEFINITION.md": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517",
+    "PHASE2B_REPORT.md": "cef642b23b5b846c3cf40877a162469eb98b6f775aa8fa36f67b51b6a53c02f8",
+    "evidence/phase2b-expansion/report/manifest.json": "932e280b781edce72b3b73c6d7087ea5008fb65ee60c7e15ee370387a41f3fbb",
+    "evidence/phase2b-expansion/report/public-report/analysis.json": "d22cbed19f2fa3d5c1e624e03ccc8fedd3f96c46217e7391f762dda9a22e448a",
+    "evidence/phase2b-expansion/report/public-report/coverage.json": "ba5298e8c17b1ff3180f50dbe4efe6b075c763c9507ae8bf2bb4884314ab38fa",
+    "evidence/phase2b-expansion/report/public-report/decision.json": "bf02fc8165dbddbff1d486d1ea26b99d02481ed4ab5b51089296ba86a00eef4f",
+    "evidence/phase2b-expansion/report/raw/run/journal/events.jsonl": "f3de07a6ad7a0ebbd2561bec671ea5c361ccf778ea49f90856c65ec9388d5ea6",
+    "evidence/phase2b-expansion/report/raw/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_analysis.py": "024bbadb8537099da3e07e43a66249bf1e5bc5cf2cae17163e973d86191db00c",
+    "src/buddha2/phase2_contracts.py": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+    "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+    "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+    "src/buddha2/phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+    "src/buddha2/phase2_release.py": "495962d7a03bb048acc93bb818cbc5d16a277cf835b11461d049b31ed3f1093f"
+  },
+  "criteria": {
+    "bounded_utf8_depth_and_count": true,
+    "every_candidate_valid_and_identical": true,
+    "exact_ids_duplicate_keys_nonfinite_no_repair": true,
+    "implementation_and_budget_not_authorized": true,
+    "later_judge_variability_and_no_generalization": true,
+    "malformed_and_outside_delimiter_rejection": true,
+    "new_lineage_no_old_experiment_completion": true,
+    "offline_gate_before_paid_judging": true,
+    "offset_convention_defined": true,
+    "reuse_identity_and_evaluator_compatibility": true,
+    "source_and_original_strict_failure_preservation": true,
+    "tests_fixed_before_implementation": true,
+    "uniform_score_blind_policy": true
+  },
+  "existing_files_modified": false,
+  "findings": "No blocking issue found in the definition, planned grammar/tests, bindings, counts, reuse/lineage or cost arithmetic. This is approval of definition coherence, not implementation, parser reliability, live readiness or paid execution.",
+  "independent_cost_checks": {
+    "C_N_attributed_generation_ranking_micro_usd": 1621512,
+    "combined_historical_plus_new_ceiling_micro_usd": 35983504,
+    "long_output_additional_micro_usd": 17860000,
+    "observed_shape_scenarios": [
+      {
+        "additional_micro_usd_fraction": "275148992/6715",
+        "calls": 8,
+        "displayed_usd_3_decimals": "0.041",
+        "quality_heads": 4
+      },
+      {
+        "additional_micro_usd_fraction": "254151424/1343",
+        "calls": 24,
+        "displayed_usd_3_decimals": "0.189",
+        "quality_heads": 20
+      },
+      {
+        "additional_micro_usd_fraction": "503053456/1343",
+        "calls": 44,
+        "displayed_usd_3_decimals": "0.375",
+        "quality_heads": 40
+      }
+    ],
+    "proposed_additional_cap_micro_usd": 30000000,
+    "quality_admission_prior_settled_threshold_micro_usd": 18560000
+  },
+  "kind": "p2bn-independent-normalization-definition-review-v1",
+  "limitations": [
+    "N1 was defined after observing this consumed corpus; expected20 unchanged/four derivable is not general validation.",
+    "Four new orders still require fresh native judgments if later authorized; B native scores are only an observed cost shape, never replacement scores.",
+    "All68 reuse references require future native replay/compatibility proofs; current review creates no new assessment or decision.",
+    "The original strict-C failures and inconclusive decision remain unchanged; a prospective post-hoc C-N decision has its own identity."
+  ],
+  "native_judgments_created": 0,
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "normalization_executed": false,
+  "normalized_outputs_published": 0,
+  "old_assessments_replayed_in_this_review": false,
+  "only_write": "evidence/phase2b-rank-format-definition-v1/normalization-review.json",
+  "original_folder_access": false,
+  "original_strict_status_counts": {
+    "invalid_rank": 4,
+    "ok": 20
+  },
+  "price_scope": "Arithmetic checked against the supplied public-price review and actual original usage accounting; no independent web or provider access in this review.",
+  "reuse_implementation_proof_status": "Required future offline gate; current review checks exact references, original object hashes/evaluator identity and stored request/result binding only.",
+  "reuse_reference_file_hashes_checked": 136,
+  "reuse_reference_method_counts": {
+    "A": 24,
+    "B": 24,
+    "C-N": 20
+  },
+  "reviewed_at_utc": "2026-10-28T16:22:26Z",
+  "reviewed_file_sha256": {
+    "PHASE2B_RANK_FORMAT_DEFINITION.md": "be60f694d4810909a6f05e5712051904048ad7759faf4b524c8e92f5703c1517",
+    "evidence/phase2b-rank-format-definition-v1/public-price-review.json": "3f0f87257753f1b9464fe84aa56e7e1f5fd1b2c600f1774a3b9028438576ae80",
+    "evidence/phase2b-rank-format-definition-v1/worksheet.json": "9f296b8b44a8e8c71b3229e52897653ff6bf6347c5582fba00004d2f10c6e48d"
+  },
+  "reviewer": "/root/release_runner",
+  "same_four_B_observed_shape": {
+    "cost_micro_usd": 367313,
+    "native_calls": 43,
+    "quality_heads": 39
+  },
+  "saved_input_bindings_checked": 24,
+  "status": "pass-definition-review",
+  "verified_policy_limits": {
+    "all_candidates_required_valid": true,
+    "id": "rank-format-N1",
+    "implemented": false,
+    "max_candidate_objects": 16,
+    "max_structural_depth": 2,
+    "max_utf8_bytes": 65536,
+    "per_case_rules_allowed": false,
+    "scores_allowed": false,
+    "unique_order_required": true
+  },
+  "verified_scope": {
+    "expected_new_derived_orders": 4,
+    "expected_unchanged_orders": 20,
+    "future_calls_max": 44,
+    "future_calls_min": 8,
+    "future_group_calls": 4,
+    "future_quality_calls_max": 40,
+    "future_quality_calls_min": 4,
+    "new_generation_plan_rank_calls": 0,
+    "proposed_reused_assessments": 68,
+    "proposed_total_view_rows": 72,
+    "saved_rank_inputs": 24
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "account_key_token_count_probes": 0,
+  "all_source_checks_passed": true,
+  "arithmetic_verified": true,
+  "created_at_utc": "2026-11-03T00:09:46.969997+00:00",
+  "independent_acceptance_still_required": true,
+  "initial_check_correction": "The first fetch used positional source indexes and zero-padded price literals; false string checks are preserved in that initial record. This review keys sources by exact URL and accepts semantically identical decimal spelling.",
+  "kind": "phase3b-s2-public-billing-semantic-review-v1",
+  "no_new_models_or_controls": true,
+  "original_fetch_file_sha256": "ba40e44b2378ea6692c5176aba4e901bfbf64137db436dc6ea7cd200e274cbba",
+  "provider_calls": 0,
+  "real_credentials_accessed": false,
+  "request_body_and_native_settings_review_still_required": true,
+  "reservations_usd": {
+    "claude-opus-5": "11.44",
+    "claude-sonnet-5-5": "2.54096",
+    "gpt-5.6-luna": "1.66188"
+  },
+  "reviewer": "/root",
+  "source_checks_by_url": {
+    "cache_125": true,
+    "cache_rates_supported": true,
+    "fast_native_inherited_control_documented": true,
+    "global_residency_or_11_allowance": true,
+    "luna_input_02_output_12": true,
+    "luna_long_context_2_input_15_output": true,
+    "luna_model_and_context": true,
+    "opus_identity_context_prices": true,
+    "sonnet_identity_context_prices": true,
+    "standard_only_control": true
+  },
+  "sources": [
+    {
+      "accessed_utc": "2026-11-03T00:09:46.405260+00:00",
+      "bytes": 21893,
+      "final_url": "https://developers.openai.com/api/docs/pricing.md",
+      "sha256": "842ac0dce2324251d274026d197a81473e72ff40eef1194bdd4e6b32833d8f55",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/pricing.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.485392+00:00",
+      "bytes": 3658,
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "sha256": "bf9fdb1c3b6466c37fb856e5f8e5973ff088164b6c7792d3fb15e0d9927bd781",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.411920+00:00",
+      "bytes": 56584,
+      "final_url": "https://developers.openai.com/api/docs/guides/prompt-caching.md",
+      "sha256": "8c672dafd6a332d4b9ad7464aefa3ca4f6b0fffa8bf66bb5ee087e1b39152711",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.404081+00:00",
+      "bytes": 8788,
+      "final_url": "https://developers.openai.com/api/docs/guides/fast-mode.md",
+      "sha256": "673f3f882070c3245b18d578d4f94cbb2d603c01d4227698bdf67acffb423e80",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.762344+00:00",
+      "bytes": 53451,
+      "final_url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "sha256": "79f8d09b6562f37f5edba5108b871cdd13dba26603efbd748e77a40f18c5ff53",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.648649+00:00",
+      "bytes": 16449,
+      "final_url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "sha256": "97d424f09d73bd096f7282d26d2da392f343ca4865d541226dc4c4e606979c2d",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.645216+00:00",
+      "bytes": 14215,
+      "final_url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "sha256": "50f1680eb95585d596e101ee9528e7e5c8ea5feea14efe097f9e9c6dcfb8b4b0",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.706556+00:00",
+      "bytes": 29831,
+      "final_url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md",
+      "sha256": "14b6c8ffb027288f16795f2b25d4490059a490998c4b21bbb921ef4bd41a2f23",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.742316+00:00",
+      "bytes": 29520,
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md",
+      "sha256": "a652805c745e6434ccbb4125ede78897847d3f563311e27f3f804186e7e61981",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.831403+00:00",
+      "bytes": 143315,
+      "final_url": "https://platform.claude.com/docs/en/api/messages/create.md",
+      "sha256": "7bdae71980a2aff09491755da1744932b5cf722f459c1d4a2a8c818539f82ce3",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/api/messages/create.md"
+    },
+    {
+      "accessed_utc": "2026-11-03T00:09:46.967429+00:00",
+      "bytes": 10024,
+      "final_url": "https://platform.claude.com/docs/en/api/service-tiers.md",
+      "sha256": "6fc40845f32f77ebe986fd38bdd6c54a314216c3c72e487c667c32c35ac1e59d",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/api/service-tiers.md"
+    }
+  ]
+}

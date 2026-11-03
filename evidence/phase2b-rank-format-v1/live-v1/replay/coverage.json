@@ -1,0 +1,62 @@
+{
+  "order_counts": {
+    "scored": 4
+  },
+  "orders": {
+    "p2-718a1781795dd29b5ebe57e4": "scored",
+    "p2-cce2c41315048eab5ffb1d45": "scored",
+    "p2-e8740bae4e77d0e443e32104": "scored",
+    "p2-ee9c05c3f5ed94c379d9249d": "scored"
+  },
+  "scheduled_slots": 44,
+  "slot_counts": {
+    "not_needed_nonhead": 1,
+    "ok": 43
+  },
+  "slots": {
+    "p2-718a1781795dd29b5ebe57e4.group": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.00": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.01": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.02": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.03": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.04": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.05": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.06": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.07": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.08": "ok",
+    "p2-718a1781795dd29b5ebe57e4.quality.09": "ok",
+    "p2-cce2c41315048eab5ffb1d45.group": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.00": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.01": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.02": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.03": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.04": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.05": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.06": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.07": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.08": "ok",
+    "p2-cce2c41315048eab5ffb1d45.quality.09": "not_needed_nonhead",
+    "p2-e8740bae4e77d0e443e32104.group": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.00": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.01": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.02": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.03": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.04": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.05": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.06": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.07": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.08": "ok",
+    "p2-e8740bae4e77d0e443e32104.quality.09": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.group": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.00": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.01": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.02": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.03": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.04": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.05": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.06": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.07": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.08": "ok",
+    "p2-ee9c05c3f5ed94c379d9249d.quality.09": "ok"
+  }
+}

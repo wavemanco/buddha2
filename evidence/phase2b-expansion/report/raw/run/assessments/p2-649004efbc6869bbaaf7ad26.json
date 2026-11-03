@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "a0e9cb56efdf11f57e7c3e7c4894d266497993fb2ea454972a60a3564bf5ce66",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 1.792464399362674
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        8
+      ],
+      "utility": 1.792464399362674
+    },
+    "generation_row": {
+      "generations": [
+        "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being over-the-top, and works for almost any personality and décor style.",
+        "A personalized star map print showing the night sky as it appeared on the day and in the place where your friend was born. It's a thoughtful, sentimental keepsake that marks the 25th milestone without being overly expensive, and it looks great framed on a wall or shelf.",
+        "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being overly sentimental, and works for almost any friend. You can order one online by entering their birth date and location, and many services let you add a short custom message at the bottom.",
+        "A personalized star map print showing the night sky as it appeared on the day and location of their birth (or another meaningful date, like when you two met). It's thoughtful, looks good framed on a wall, and marks the 25th as a milestone without being overly sentimental or expensive.",
+        "A personalized star map print of the night sky from the date and location of something meaningful to them, such as the night they were born or the city where you two met. It's thoughtful and works for almost anyone. Frame it so it's ready to hang.",
+        "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom framed. It's thoughtful, looks great on a wall, and marks the milestone in a memorable way.",
+        "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom-framed. It's thoughtful, looks great on a wall, and marks the 25th as a milestone without being overly sentimental or expensive.",
+        "A personalized star map print showing the night sky as it appeared on the day and place they were born (or another meaningful location, like where you two met). It's thoughtful, looks great framed, and marks the milestone of 25 years in a memorable way.",
+        "A personalized star map print of the night sky from the date and place they were born, framed. It's a meaningful, visually striking gift that marks the milestone of 25 years without being tied to a specific hobby, so it works for almost any friend.",
+        "A personalized star map print showing the night sky as it appeared on the day and in the place they were born (or a place meaningful to your friendship). It's thoughtful, looks great framed, and marks the milestone of 25 years in a unique way."
+      ],
+      "id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one"
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being over-the-top, and works for almost any personality and décor style.",
+        "A personalized star map print showing the night sky as it appeared on the day and in the place where your friend was born. It's a thoughtful, sentimental keepsake that marks the 25th milestone without being overly expensive, and it looks great framed on a wall or shelf.",
+        "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being overly sentimental, and works for almost any friend. You can order one online by entering their birth date and location, and many services let you add a short custom message at the bottom.",
+        "A personalized star map print showing the night sky as it appeared on the day and location of their birth (or another meaningful date, like when you two met). It's thoughtful, looks good framed on a wall, and marks the 25th as a milestone without being overly sentimental or expensive.",
+        "A personalized star map print of the night sky from the date and location of something meaningful to them, such as the night they were born or the city where you two met. It's thoughtful and works for almost anyone. Frame it so it's ready to hang.",
+        "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom framed. It's thoughtful, looks great on a wall, and marks the milestone in a memorable way.",
+        "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom-framed. It's thoughtful, looks great on a wall, and marks the 25th as a milestone without being overly sentimental or expensive.",
+        "A personalized star map print showing the night sky as it appeared on the day and place they were born (or another meaningful location, like where you two met). It's thoughtful, looks great framed, and marks the milestone of 25 years in a memorable way.",
+        "A personalized star map print of the night sky from the date and place they were born, framed. It's a meaningful, visually striking gift that marks the milestone of 25 years without being tied to a specific hobby, so it works for almost any friend.",
+        "A personalized star map print showing the night sky as it appeared on the day and in the place they were born (or a place meaningful to your friendship). It's thoughtful, looks great framed, and marks the milestone of 25 years in a unique way."
+      ],
+      "id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "6e15ca9e5d4bdbb6291b7f92c0ec5fcd6e85caa52c26300f7badef7789b74794",
+      "partition_scores": [
+        8
+      ],
+      "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "9cda88b52395f06cc8318dac8e63d80a9e2570efcfdea845cc76e4342ba6d43a",
+      "utility": 1.792464399362674
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 1.792464399362674,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "aa0d452882822031b1f1848ce403a0116b8d253c476b7cc0424ac0422b82d8eb",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0608",
+      "fixture": false,
+      "intent_sha256": "dd9d38c359cc669f0a1cfc018a251861197f271763dbc252917b5dc8ac05552a",
+      "request_sha256": "8b6c7b32ad72f142acef279fc4cc985d4f23f162791998b91ac8b090395c5179",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.904442700004438,
+        "message_id": "chatcmpl-EdwHf4B6HhLZQHBJFZGkJa0AZkPGb",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 50,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 13,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 783,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 833
+        },
+        "refusal": null,
+        "request_id": "req_5d4f1b6da2cf4abd804b2cfdc73ca0ad",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 783,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 50,
+          "output_tokens_details": {
+            "reasoning_tokens": 13
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-649004efbc6869bbaaf7ad26.group",
+      "spent_micro_usd": 239,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0609",
+      "fixture": false,
+      "intent_sha256": "c39947b88c6cc1644fa7172836cdba1baa629000690cab170c28f9d91176bdf6",
+      "request_sha256": "5f9b67152bf0331b71f910d91010747a5ca9e76a3197a85fde0c7f4d3213ac69",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.018635336004081,
+        "message_id": "msg_011CgUa2pPsTHDjYL5teEFpd",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUa2pCTfdD5Y2mERop6W",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 498,
+          "output_tokens": 162,
+          "output_tokens_details": {
+            "thinking_tokens": 153
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-649004efbc6869bbaaf7ad26.quality.00",
+      "spent_micro_usd": 7194,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+}

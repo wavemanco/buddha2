@@ -1,0 +1,299 @@
+{
+  "api_spend_micro_usd": 0,
+  "basis_file_hashes": {
+    "PHASE2B_F1_REPORT.md": "9d49e7327a5d5f8343c7096e6f2df35d7bebd5438934706c3df8c0fe0c2b6d38",
+    "PHASE2B_REMAINDER_DEFINITION.md": "ff1edb0f65437adc3a97ae55aa1e2ff95c4f5cd72be00c697c5b35c8d599ef74",
+    "evidence/phase2b-f1/closeout.json": "1acd185547e2aa54d68aedd87f1fee8549c718fc4e18804b24289cbdd0ea292c",
+    "evidence/phase2b-f1/report/first-block-data.json": "35569252f503e8ed1f680d39e049ac6eac78d12f33b1705123d2f77a3de746d4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/authority/0001.grant.json": "ddfe2a46110dab96e46642c94fa8887d3468fa3bc2103a845281c6acd4c3d366",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/events.jsonl": "d4795ae8f6b52dc17b843dd5968e896c39d1ff69563a866d5e605640a3db1656",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/reviews/first.json": "ab722a0840861bf08c9fe6df3757ffc4c4b525871ac67037a136089c2d3d1b77",
+    "runs/phase2-release-r018/release/release-readiness.json": "8e9b5ce2fe826a4eb79934dd426cd5f8c4fab2ba01211797b33c7760c17d33ce",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+    "src/buddha2/phase2_release_journal.py": "a93b2b917e5cd7d10ce894806884c9fb41650e0c6a912ec63e8f9e4177be9c4e",
+    "src/buddha2/phase2_release_runner.py": "5468f40ae543284868c5348d414da05bef3d05cc8364576767bb6e1d0467e483"
+  },
+  "checks": {
+    "conditional_headroom_micro_usd": 124789826,
+    "document_cent_values_checked": 18,
+    "exact_frozen_remaining_blocks_and_prompt_hashes": 23,
+    "first_permanent_nonheads": 27,
+    "first_spent_micro_usd": 210174,
+    "minimum_supported_cumulative_expansion_cap_micro_usd": 20000000,
+    "new_expansion_grants": 0,
+    "no_authority_implied_by_definition": true,
+    "per_request_integer_ceiling_scenarios_checked": 18,
+    "prior_settled_quality_admission_threshold_micro_usd": 113560000,
+    "proposed_cumulative_cap_micro_usd": 125000000,
+    "quality_reservation_micro_usd": 11440000,
+    "remaining_logical_slots": 1265,
+    "remaining_role_counts": {
+      "answer": 460,
+      "group": 69,
+      "plan": 23,
+      "quality": 690,
+      "rank": 23
+    },
+    "scenarios_not_forecasts": true,
+    "successful_full_call_range": [
+      672,
+      1293
+    ],
+    "successful_remaining_call_range": [
+      644,
+      1265
+    ],
+    "worksheet_input_file_hashes_checked": 13
+  },
+  "existing_files_unchanged": true,
+  "kind": "p2be-independent-cost-and-count-review-v1",
+  "limitations": [
+    "One prompt and three head judgments are not a representative future-cost estimate.",
+    "Generation/group costs and quality input/cache mix are held fixed; output counts include thinking.",
+    "No model inference, SDK construction, key lookup or grant creation was performed.",
+    "Definition is planning only; paid expansion remains unapproved."
+  ],
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "only_write": "evidence/phase2b-expansion-definition-v1/cost-review.json",
+  "original_folder_access": false,
+  "price_scope": "Arithmetic independently checked against frozen conservative accounting coefficients and actual F1 usage; official-source refresh was supplied by the root reviewer and was not independently browsed in this cost review.",
+  "reservation_counterexample": {
+    "fits_eventual_cap_but_reservation_prevents_completion": true,
+    "heads_per_future_order": 10,
+    "hypothetical_cumulative_micro_usd": 121708640,
+    "hypothetical_final_quality_cost_micro_usd": 170121,
+    "hypothetical_prior_to_last_quality_micro_usd": 121538519,
+    "quality_output": 6000,
+    "required_with_last_reservation_micro_usd": 132978519
+  },
+  "reviewed_at_utc": "2026-10-28T10:47:49Z",
+  "reviewed_file_hashes": {
+    "PHASE2B_REMAINDER_DEFINITION.md": "ff1edb0f65437adc3a97ae55aa1e2ff95c4f5cd72be00c697c5b35c8d599ef74",
+    "evidence/phase2b-expansion-definition-v1/worksheet.json": "e19c7c14572bf369edba90cbd927975109d26d8fec9e02b3b5ac8980c155479b"
+  },
+  "reviewer": "/root/release_runner",
+  "scenarios_independently_recomputed": [
+    {
+      "additional_micro_usd": 4834002,
+      "cumulative_micro_usd": 5044176,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 7942866,
+      "cumulative_micro_usd": 8153040,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 11828946,
+      "cumulative_micro_usd": 12039120,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 6313454,
+      "cumulative_micro_usd": 6523628,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 15340126,
+      "cumulative_micro_usd": 15550300,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 26623466,
+      "cumulative_micro_usd": 26833640,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 12005954,
+      "cumulative_micro_usd": 12216128,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 43802626,
+      "cumulative_micro_usd": 44012800,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 83548466,
+      "cumulative_micro_usd": 83758640,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 15800954,
+      "cumulative_micro_usd": 16011128,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 62777626,
+      "cumulative_micro_usd": 62987800,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 121498466,
+      "cumulative_micro_usd": 121708640,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 19595954,
+      "cumulative_micro_usd": 19806128,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 81752626,
+      "cumulative_micro_usd": 81962800,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 159448466,
+      "cumulative_micro_usd": 159658640,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 34775954,
+      "cumulative_micro_usd": 34986128,
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "per_request_costs_micro_usd": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    },
+    {
+      "additional_micro_usd": 157652626,
+      "cumulative_micro_usd": 157862800,
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "per_request_costs_micro_usd": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    },
+    {
+      "additional_micro_usd": 311248466,
+      "cumulative_micro_usd": 311458640,
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "per_request_costs_micro_usd": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    }
+  ],
+  "status": "pass",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

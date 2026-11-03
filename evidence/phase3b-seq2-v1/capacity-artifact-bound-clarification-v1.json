@@ -1,0 +1,8 @@
+{
+  "kind": "p3b-s2-capacity-artifact-bound-clarification-v1",
+  "parent_cases": "capacity-aggregate-cases-v1.json",
+  "public_artifact_bound_bytes": 32000000,
+  "unit_clarification": "The existing S2 public reader uses32,000,000 bytes (decimal32MB); the parent supplement's informal32MiB wording does not enlarge that exact bound.",
+  "individual_request_bound_bytes": 2097152,
+  "limits_changed": false
+}

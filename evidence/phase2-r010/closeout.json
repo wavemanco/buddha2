@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "bandit_medium_high": "pass",
+    "mypy": "pass",
+    "phase2_tests_included": 77,
+    "pip_check": "pass",
+    "project_tests": 175,
+    "ruff": "pass",
+    "upstream_harness2_tests": 5
+  },
+  "closure_revision": "0.11",
+  "crpo_activated": false,
+  "decision": "Stop after 2A; resolve admission/billing, access/readers and applicable authorization before a counted 2B check.",
+  "execution_specification": "0.10",
+  "experiment_api_spend_usd": 0,
+  "handoff_archive": {
+    "bytes": 2768247,
+    "crc_and_bytes_verified": true,
+    "entries": 2290,
+    "path": "evidence/phase2-r010/phase2a-kit.zip",
+    "sha256": "54ae99efa70c513da92578a0edad4a2f26b2581ac9466c38dace83630f5f3084"
+  },
+  "human_ratings": 0,
+  "kind": "phase2a-offline-closeout",
+  "live_ready": false,
+  "phase2b_authorized": false,
+  "preservation": {
+    "changed_baseline_files": [
+      "AGENTS.md",
+      "EXPERIMENT_PLAN.md",
+      "PHASE_DEFINITIONS.md",
+      "README.md",
+      "src/buddha2/__main__.py"
+    ],
+    "no_original_mounts_or_working_directories": true,
+    "original_folder_accessed": false,
+    "prior_source_result_files_unchanged": 250,
+    "tracked_baseline_files": 264,
+    "upstream_files_unchanged": {
+      "harness2": 114,
+      "novelty-bench": 169
+    }
+  },
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-10-25T20:38:36.975658+00:00",
+  "remaining_live_prerequisites": [
+    "verified provider input-admission bound",
+    "applicable spending authorization",
+    "provider credentials/account/model access",
+    "two eligible pilot-output readers and availability",
+    "confirm grouping cache-write billing before final reservation review"
+  ],
+  "route_h_started": false,
+  "runtime_records": {
+    "export": "evidence/phase2-r010/runtime/1b60674e79df416884e7f41a5effbf6a.json",
+    "full_tests": "evidence/phase2-r010/runtime/16a587b3091b40889884c5e1edcf8b39.json",
+    "import": "evidence/phase2-r010/runtime/55375385480d43be9d5203c891b2277d.json",
+    "inspect": "evidence/phase2-r010/runtime/f2d4f24fdc1641b48067e1a4871fdb4d.json",
+    "prepare": "evidence/phase2-r010/runtime/40915de212624ba59eb0735c3c9ae7c2.json",
+    "replay": "evidence/phase2-r010/runtime/4fb013f7044a47dcb1a6ad5f258288ff.json"
+  },
+  "schema_version": 2,
+  "status": "complete-with-live-admission-blocker",
+  "study_sha256": "4de2d582d4a5f6f289df70284295da2c67961a1a26384957dd3a43a2635c982e",
+  "token_count_calls": 0,
+  "walkthrough": {
+    "not_needed_nonhead_slots": 360,
+    "orders": 72,
+    "replayed_assessments": 72,
+    "resume_new_dispatches": 0,
+    "synthetic_dispatches": 960,
+    "unchanged_files": 2218
+  },
+  "walkthrough_runtime": "evidence/phase2-r010/walkthrough-runtime-complete.json"
+}

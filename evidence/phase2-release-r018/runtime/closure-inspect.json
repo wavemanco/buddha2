@@ -1,0 +1,36 @@
+{
+  "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "command": [
+    "-m",
+    "buddha2",
+    "phase2-release",
+    "inspect",
+    "--study",
+    "/results/phase2-release-r018/release/study.json"
+  ],
+  "network": "none",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "security_opt": [
+    "no-new-privileges"
+  ],
+  "mounts": [
+    {
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Destination": "/workspace",
+      "RW": false
+    },
+    {
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+      "Destination": "/results",
+      "RW": true
+    }
+  ],
+  "historical_source_override": false,
+  "retained_source": null,
+  "provider_calls": 0,
+  "real_credentials_supplied": false,
+  "exit_code": 0
+}

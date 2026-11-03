@@ -1,0 +1,10 @@
+{
+  "kind": "p3b-s2-capacity-aggregate-cases-v1",
+  "parent_cases": "capacity-acceptance-cases.json",
+  "frozen_before_aggregate_implementation": true,
+  "cases": [
+    "After the largest complete authoring context passes, exercise the other five stages of that same observed task through actual pinned OpenCode and SDK MockTransport, preserving full signed history and all required evidence.",
+    "Measure and reload the combined six-author-plus-native-selector editor evidence and containing branch JSON envelopes under the existing32MiB public artifact bound.",
+    "If the measured combined fixture exceeds32MiB, report change-required without enlarging the bound or dropping data. Individual request and financial limits remain unchanged."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "runs/phase3a-rc1-pilot-v1/reviewer/packet-audit-v5-execution.json": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/packet-review-v1/packet-audit-v5-execution.json",
+    "sha256": "f1fb1bd734f5b653a54bdad7d7cebfca0b49a2248c0433edef045a13c6f38c29"
+  },
+  "runs/phase3a-rc1-pilot-v1/reviewer/packet-audit-v5.json": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/packet-review-v1/packet-audit-v5.json",
+    "sha256": "af8b8c0efabaf2b18bfbf2d9c79bf958396721e8d314fa6ce6dd62bd990f0623"
+  },
+  "runs/phase3a-rc1-pilot-v1/reviewer/packet_reader_v3.py": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/packet-review-v1/packet_reader_v3.py",
+    "sha256": "ccd91ad10d3b68bb55290c540bc98a6569369e52bf5abb98e00debe752357ab5"
+  }
+}

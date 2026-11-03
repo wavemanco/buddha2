@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-7c8c8fc39aac0a87d506472324e81f9275dec02fe106ef0fab854aa9e3c1d041",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-49de65db99446de405a3eef7.answer.00",
+      "p2-49de65db99446de405a3eef7.answer.01",
+      "p2-49de65db99446de405a3eef7.answer.02",
+      "p2-49de65db99446de405a3eef7.answer.03",
+      "p2-49de65db99446de405a3eef7.answer.04",
+      "p2-49de65db99446de405a3eef7.answer.05",
+      "p2-49de65db99446de405a3eef7.answer.06",
+      "p2-49de65db99446de405a3eef7.answer.07",
+      "p2-49de65db99446de405a3eef7.answer.08",
+      "p2-49de65db99446de405a3eef7.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-16f6882da4e31704257d42f7",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.00",
+      "status": "ok",
+      "text": "**Nature** is one of the most reputed publications in science. Founded in 1869, it is a weekly international journal covering research across many scientific disciplines."
+    },
+    {
+      "id": "response-45ec332e84757159c6478c61",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.01",
+      "status": "ok",
+      "text": "**Nature** is a highly reputed scientific journal. It was first published in 1869 and covers research across many scientific disciplines."
+    },
+    {
+      "id": "response-36d43aea3fd4590e6f51c8ce",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.02",
+      "status": "ok",
+      "text": "**Nature** is a reputed scientific publication. It is a peer-reviewed journal that has been published since 1869 and covers a wide range of scientific disciplines."
+    },
+    {
+      "id": "response-c0979dda3fe1f96124764212",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.03",
+      "status": "ok",
+      "text": "**Nature** is a reputed science publication. It is a weekly international journal that has been published since 1869 and covers research across many scientific fields."
+    },
+    {
+      "id": "response-51c0495b4d93622661d93f89",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.04",
+      "status": "ok",
+      "text": "**Nature** is one of the most reputed publications in science. It is a weekly international journal that has published peer-reviewed research across many scientific disciplines since 1869."
+    },
+    {
+      "id": "response-26bec769379f7174ee98d0c1",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.05",
+      "status": "ok",
+      "text": "**Nature** is one of the most reputed publications in science. Founded in 1869, it is a weekly peer-reviewed journal covering a broad range of scientific disciplines."
+    },
+    {
+      "id": "response-b614a47d95f222d3776f5503",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.06",
+      "status": "ok",
+      "text": "**Nature** is a highly reputed scientific journal, published weekly since 1869. It covers research across a wide range of scientific disciplines."
+    },
+    {
+      "id": "response-9602f9f7cc92a26268c4c7e5",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.07",
+      "status": "ok",
+      "text": "**Nature** is a highly reputed scientific journal. Published weekly since 1869, it covers research across many scientific disciplines."
+    },
+    {
+      "id": "response-82856be386abab562e57792c",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.08",
+      "status": "ok",
+      "text": "**Nature** is a highly reputed scientific journal, published weekly since 1869. It covers a wide range of disciplines, including biology, physics, chemistry, and earth sciences."
+    },
+    {
+      "id": "response-d0524b4655d5362b2b5a5ff1",
+      "request_id": "p2-49de65db99446de405a3eef7.answer.09",
+      "status": "ok",
+      "text": "**Nature** is a highly reputed scientific journal. Published weekly since 1869, it covers a broad range of scientific disciplines and is known for its rigorous peer review."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-510dc2800c595827238e",
+    "prompt": "Name one reputed publication in science.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-62"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "archive": "evidence/phase3a-c1-completion-v2/offline-kit-v1.zip",
+  "archive_bytes": 8026681,
+  "archive_manifest_sha256": "aa6427180dbe8305e2fc6f18ae74fce068a97519ad4d240352a587b8c0697793",
+  "archive_sha256": "fadb7cf8609ff3a7d074b5349f03d6a57285a4046f5bdfd9364dba17032ed39c",
+  "checks": {
+    "ZIP_CRC_all_members": true,
+    "all_221_source_files_exact": true,
+    "all_nonmanifest_members_equal_current_working_bytes": true,
+    "closed_parent_reference_hashes_exact": true,
+    "exact_inventory_every_member_SHA256": true,
+    "gate_six_groups_and_three_certificates_common5_bindings": true,
+    "historical_known_and_full_unknown_carried_once": true,
+    "no_ZIP_directory_or_symbolic_link_members": true,
+    "no_live_scientific_completion_claim": true,
+    "private_names_lexically_excluded_no_escape_or_case_alias": true,
+    "usable_conditional_report_and_runbook_included": true
+  },
+  "gate_sha256": "727adf7d9ae71635fb78f5fca2d76419096523d492af06949db43c1dc7b392e5",
+  "kind": "phase3a-c1-completion-r1-independent-packet-acceptance-v1",
+  "launcher_sha256": "b990c174ae442e9873e1a8b2d3ce1e0b2eaf87030b3cbe7a78e97315e0f58743",
+  "limitations": [
+    "Public archive integrity and offline evidence do not establish actual provider access or scientific completion.",
+    "No string detector can prove absence of every unknown raw secret; lexical private exclusions and no-real-key offline execution are the relevant controls.",
+    "Actual file-symbolic-link creation was unavailable in Windows checks, as documented in the bound launch certificate."
+  ],
+  "member_count": 1451,
+  "new_provider_calls": 0,
+  "new_real_credentials_read": false,
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "reviewed_at_utc": "2026-10-29T23:10:37.515928+00:00",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scientific_or_actual_model_readiness_claim": false,
+  "sha256": "f8e6f389710381d747a1e4a48e3a7dc7832c4e8af27a49494b3e556a67423c9e",
+  "source_sha256": "33cc36cb56fa75b6b427add09934a943515dd40e57cccfb4d4cfcb92a8b4bc1c",
+  "study_sha256": "28519e20cf71fbf599f6f21a5c2c3b275fbc9c24ffedf4df2041d49816e8eb62",
+  "three_certificate_sha256": {
+    "admission-acceptance.json": "d4f2c70bfdc4248c83bb8f97188b1d8d7bc3f8533f85a5b64d0a73e480504b4c",
+    "launch-acceptance.json": "fe49cc3ac6d3f93bd14b07eb8d954e8b03dfd8b59ccda549d96ec5a96217f1f1",
+    "scientific-acceptance.json": "dcc305c5164297fd9c5cf8d9e1753845d56cca0d69223fab0015b22fafca374d"
+  },
+  "verification_method": "Independent stdlib ZIP/JSON/hash read-only audit; no packager/project runner/SDK/provider execution."
+}

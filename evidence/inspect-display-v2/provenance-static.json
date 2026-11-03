@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "exit_code": 0,
+      "result": "All checks passed!",
+      "scope": "followups/inspect_display_v2/provenance.py",
+      "tool": "ruff"
+    },
+    {
+      "exit_code": 0,
+      "explicit_package_bases": true,
+      "follow_imports": "silent",
+      "ignore_missing_imports": true,
+      "no_incremental": true,
+      "result": "Success: no issues found in 1 source file",
+      "scope": "followups/inspect_display_v2/provenance.py",
+      "tool": "mypy"
+    },
+    {
+      "exit_code": 0,
+      "scope": "followups/inspect_display_v2/provenance.py",
+      "tool": "bandit"
+    }
+  ],
+  "helper_sha256": "1a2194b16c5a3945989f9ba817afec482ef01466b3ae20dfd3d440dd6e06c2a9",
+  "kind": "inspect-display-v2-provenance-static-v1",
+  "old_source_files_changed": false,
+  "passed": true,
+  "provenance_sha256": "12862b8493de14371b5c1fe15ed8490a261cf8cc3c5af4480c79307a56b49ba4",
+  "provider_calls": 0,
+  "validation_sha256": "c56c5077893c0c907bfec13c1b9e304f1df8db228b228e126fc375b098e07264"
+}

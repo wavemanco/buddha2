@@ -1,0 +1,8 @@
+* text=auto eol=lf
+# Markdown hard line breaks are intentional.
+*.md whitespace=-blank-at-eol
+# Retain supplied material and raw verification evidence byte for byte.
+references/surprise-conversation.md -text -whitespace
+evidence/** -text -whitespace
+specifications/archive/** -text -whitespace
+README_LEGACY.md -text -whitespace

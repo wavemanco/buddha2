@@ -1,0 +1,140 @@
+{
+  "kind": "conditional-readiness-cost-sheet",
+  "date_local": "2026-10-26 America/Los_Angeles",
+  "currency": "USD",
+  "parent_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "authorized": false,
+  "live_cap_certified": false,
+  "usable_for_dispatch": false,
+  "input_bound_established": false,
+  "actual_experiment_api_spend_micro_usd": 0,
+  "provider_calls": 0,
+  "rate_unit": "hundredths of a microUSD per token",
+  "rates": {
+    "answer": {
+      "base": 200,
+      "write": 250,
+      "read": 10,
+      "output": 1000
+    },
+    "plan": {
+      "base": 200,
+      "write": 250,
+      "read": 10,
+      "output": 1000
+    },
+    "rank": {
+      "base": 200,
+      "write": 250,
+      "read": 10,
+      "output": 1000
+    },
+    "group": {
+      "base": 20,
+      "write": 25,
+      "read": 2,
+      "output": 120
+    },
+    "quality": {
+      "base": 500,
+      "write": 0,
+      "read": 50,
+      "output": 2500
+    }
+  },
+  "quality_write_zero_meaning": "No cache_control in the exact native quality body; this projection assumes no write, it does not certify live billing or price a write at zero. Official Opus write rates are625/1000 in these units for5m/1h; any such usage is unsupported by current code.",
+  "sonnet_write_profile": "Conservatively allinputat5mwrite; bodyrequestsnone but oldenvelope allowed5m andforbids1h.",
+  "group_write_profile": "Sensitivitycase allgroupinputat documented1.25xdefaultwrite (.25USD/M); exactendpointusage notvalidated.",
+  "output_accounting": "Thinking and nonvisible formatting are included in total billedoutput; no doublecount of visibletext and detailbreakdowns.",
+  "assumed_input_limits": {
+    "answer": 8000,
+    "plan": 8000,
+    "rank": 64000,
+    "group": 64000,
+    "quality": 8000
+  },
+  "assumed_output_limits": {
+    "answer": 4096,
+    "plan": 4096,
+    "rank": 4096,
+    "group": 128000,
+    "quality": 16000
+  },
+  "per_request_micro_usd": {
+    "answer": 60960,
+    "plan": 60960,
+    "rank": 200960,
+    "group": 169600,
+    "quality": 440000
+  },
+  "full_counts": {
+    "answer": 480,
+    "plan": 24,
+    "rank": 24,
+    "group": 72,
+    "quality": 720
+  },
+  "first_block_counts": {
+    "answer": 20,
+    "plan": 1,
+    "rank": 1,
+    "group": 3,
+    "quality": 30
+  },
+  "conditional_full_micro_usd": 364558080,
+  "conditional_first_block_micro_usd": 15189920,
+  "conditional_scenarios": {
+    "working": {
+      "assumed_tokens": {
+        "sonnet_input": 1056000,
+        "sonnet_output": 528000,
+        "group_input": 864000,
+        "group_output": 72000,
+        "quality_input": 900000,
+        "quality_output": 360000
+      },
+      "micro_usd": 21722400
+    },
+    "higher": {
+      "assumed_tokens": {
+        "sonnet_input": 2112000,
+        "sonnet_output": 1056000,
+        "group_input": 1728000,
+        "group_output": 144000,
+        "quality_input": 3600000,
+        "quality_output": 2880000
+      },
+      "micro_usd": 106444800
+    }
+  },
+  "historical": {
+    "full_micro_usd": 364327680,
+    "first_block_micro_usd": 15180320,
+    "working_micro_usd": 21679200,
+    "higher_micro_usd": 106358400,
+    "group_per_request_micro_usd": 166400
+  },
+  "proposed_not_granted_caps_micro_usd": {
+    "first_block": 5000000,
+    "full_study": 125000000
+  },
+  "proof_limits": [
+    "Every arithmeticenvelope assumesunproved8k/64kproviderinputlimits andknownstandard/global tiers.",
+    "Not certified currentmaximum,actualcost or AM1maximum-liabilitypricing.",
+    "Longcontext/regional/fast/batchtool ratesareoutside thisconditionalcase; unsupportedtiers/categoriesstayblocked.",
+    "AM1needsnew maximum-billableinputM andhighestapplicablepricefactoringcontextthresholds before any reservationcertificate.",
+    "The old5dollar capcanhalt55slotblockincomplete; neither proposalpromisescompletion."
+  ],
+  "billing_category_decisions": {
+    "ordinary_input": "priced under statedassumptions",
+    "cache_reads": "known rates but no assumedhit saving",
+    "sonnet5m_write": "reserved at2.5USD/M",
+    "sonnet1h_write": "4USD/M documented; currentrequest/settlementdoesnotallow, reject",
+    "group_write": "documented rate .25USD/M; currentusagepathunsupported, no-go",
+    "quality_write": "5m6.25/1h10USD/M documented; notrequested/currentsettlementunsupported",
+    "thinking_and_output": "reserve totaloutput, not visibletext only",
+    "service_region_fast": "exactsupportedprofile/defaultsneedproof; no surchargeassumedhere",
+    "tools_modalities": "notallowed in these textonlyrolebodies",
+    "unknown_missing_usage": "retainliabilityhalt; thisdoesnotcertify thereservationsize"
+  }
+}

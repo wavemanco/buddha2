@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "a2e3ed3a73e0c171729c91d0bc2fa462da1913f29ccc4652527a047fe431bf81",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2172
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0006",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nTell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.\n</prompt>\n\n<response>\nBurned-out Chicago pastry chef Josie Miller returns to her tiny wheat-farming hometown of Buttercup, Kansas, just before Easter after learning her grandmother's beloved bakery is days from foreclosure. Within an hour of arriving, she's pulled over by the new sheriff, Cal Hendricks, her high-school crush, who has grown from a gangly kid who once tripped over her locker into a broad-shouldered lawman with a lopsided grin. To save the bakery, Josie reluctantly agrees to enter the town's legendary Easter Sunday bake-off, with Cal as her unlikely sous-chef after a prank-gone-wrong leaves the bakery's oven broken and half the town's egg shipment missing. Between flour-dusted kitchen flirtations, a runaway lamb at the church egg hunt, and a rival baker's sabotage, Josie and Cal rediscover the spark they never quite let go of, until a lucrative Chicago job offer forces her to question whether she's running toward her dream or away from her heart. On Easter morning, Josie wins the bake-off with her grandmother's secret hot cross bun recipe, turns down the offer, and kisses Cal in the middle of the sunlit wheat field as the whole town cheers.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "a2e3ed3a73e0c171729c91d0bc2fa462da1913f29ccc4652527a047fe431bf81",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-cce2c41315048eab5ffb1d45.quality.04",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

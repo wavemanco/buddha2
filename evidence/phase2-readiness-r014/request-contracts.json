@@ -1,0 +1,149 @@
+{
+  "kind": "five-role-readiness-contracts",
+  "study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "shared_admission": "canonical request JSONUTF8bytes +2048; explicitly provider_verified:false",
+  "source_review_only": true,
+  "actual_sdk_invocations": 0,
+  "wire_bodies_captured": false,
+  "roles": [
+    {
+      "role": "answer",
+      "requested_profile": {
+        "inference_geo": "global",
+        "input_limit": 8000,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "provider": "anthropic",
+        "reserved_output": 4096,
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "input": "Original task, optionally only the assigned B angle; one fresh user message.",
+      "sdk_method": "Anthropic.messages.create",
+      "output_cap_in_body": 4096,
+      "output_reserved_tokens": 4096,
+      "input_limit_local_tokens_claim": 8000,
+      "canonical_payload_limit_bytes": 5952,
+      "admission_bound_established": false,
+      "schema_sent": false,
+      "proved": "Exact local builder/profile and native source contract from code review; no body/profile edits.",
+      "assumption": "JSONUTF8bytes+2048 conservatively bounds provider inputtokens.",
+      "unsupported": "No justified uniform upper bound on hidden framing/schema expansion.",
+      "unverified_live": "Account/model access, effective SDK wire serialization, live settings compatibility and returned usage."
+    },
+    {
+      "role": "plan",
+      "requested_profile": {
+        "inference_geo": "global",
+        "input_limit": 8000,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "provider": "anthropic",
+        "reserved_output": 4096,
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "input": "Original task; local angle JSON contract, no API output schema.",
+      "sdk_method": "Anthropic.messages.create",
+      "output_cap_in_body": 4096,
+      "output_reserved_tokens": 4096,
+      "input_limit_local_tokens_claim": 8000,
+      "canonical_payload_limit_bytes": 5952,
+      "admission_bound_established": false,
+      "schema_sent": false,
+      "proved": "Exact local builder/profile and native source contract from code review; no body/profile edits.",
+      "assumption": "JSONUTF8bytes+2048 conservatively bounds provider inputtokens.",
+      "unsupported": "No justified uniform upper bound on hidden framing/schema expansion.",
+      "unverified_live": "Account/model access, effective SDK wire serialization, live settings compatibility and returned usage."
+    },
+    {
+      "role": "rank",
+      "requested_profile": {
+        "inference_geo": "global",
+        "input_limit": 64000,
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "provider": "anthropic",
+        "reserved_output": 4096,
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "input": "Original task and all ten saved response IDs/texts in user JSON; local permutation JSON contract.",
+      "sdk_method": "Anthropic.messages.create",
+      "output_cap_in_body": 4096,
+      "output_reserved_tokens": 4096,
+      "input_limit_local_tokens_claim": 64000,
+      "canonical_payload_limit_bytes": 61952,
+      "admission_bound_established": false,
+      "schema_sent": false,
+      "proved": "Exact local builder/profile and native source contract from code review; no body/profile edits.",
+      "assumption": "JSONUTF8bytes+2048 conservatively bounds provider inputtokens.",
+      "unsupported": "No justified uniform upper bound on hidden framing/schema expansion.",
+      "unverified_live": "Account/model access, effective SDK wire serialization, live settings compatibility and returned usage."
+    },
+    {
+      "role": "group",
+      "requested_profile": {
+        "input_limit": 64000,
+        "model": "gpt-5.6-luna",
+        "provider": "openai",
+        "reserved_output": 128000
+      },
+      "input": "Native system/user grouping prompt and all ten ordered responses; strict Partition response_format schema.",
+      "sdk_method": "OpenAI.chat.completions.create",
+      "output_cap_in_body": null,
+      "output_reserved_tokens": 128000,
+      "input_limit_local_tokens_claim": 64000,
+      "canonical_payload_limit_bytes": 61952,
+      "admission_bound_established": false,
+      "schema_sent": true,
+      "proved": "Exact local builder/profile and native source contract from code review; no body/profile edits.",
+      "assumption": "JSONUTF8bytes+2048 conservatively bounds provider inputtokens.",
+      "unsupported": "No justified uniform upper bound on hidden framing/schema expansion.",
+      "unverified_live": "Account/model access, effective SDK wire serialization, live settings compatibility and returned usage."
+    },
+    {
+      "role": "quality",
+      "requested_profile": {
+        "input_limit": 8000,
+        "max_tokens": 16000,
+        "model": "claude-opus-5",
+        "output_config": {
+          "effort": "high"
+        },
+        "provider": "anthropic",
+        "reserved_output": 16000,
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "input": "Native system/user quality prompt and original task/one group-head response; output_config.format strict Score schema.",
+      "sdk_method": "Anthropic.messages.create",
+      "output_cap_in_body": 16000,
+      "output_reserved_tokens": 16000,
+      "input_limit_local_tokens_claim": 8000,
+      "canonical_payload_limit_bytes": 5952,
+      "admission_bound_established": false,
+      "schema_sent": true,
+      "proved": "Exact local builder/profile and native source contract from code review; no body/profile edits.",
+      "assumption": "JSONUTF8bytes+2048 conservatively bounds provider inputtokens.",
+      "unsupported": "No justified uniform upper bound on hidden framing/schema expansion.",
+      "unverified_live": "Account/model access, effective SDK wire serialization, live settings compatibility and returned usage."
+    }
+  ]
+}

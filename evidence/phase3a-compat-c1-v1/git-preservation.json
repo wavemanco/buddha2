@@ -1,0 +1,39 @@
+{
+  "historical_private_git_metadata_only": {
+    "evidence/phase2b-rank-format-v1/live-v1/raw/run/credential-binding.json": {
+      "git_blob": "1e03b0c8dff278613f954ec78e701a383ac4070e",
+      "index_matches_pre_C1_commit": true,
+      "worktree_accessed": false
+    },
+    "evidence/phase2b-rank-format-v1/live-v1/raw/run/journal/.writer.lock": {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "index_matches_pre_C1_commit": true,
+      "worktree_accessed": false
+    },
+    "evidence/phase2b-rank-format-v1/live-v1/raw/run/launch-owner/.writer.lock": {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "index_matches_pre_C1_commit": true,
+      "worktree_accessed": false
+    },
+    "evidence/phase2b-rank-format-v1/live-v1/raw/run/owner/.writer.lock": {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "index_matches_pre_C1_commit": true,
+      "worktree_accessed": false
+    }
+  },
+  "kind": "phase3a-c1-git-preservation-v1",
+  "passed": true,
+  "pre_C1_commit": "55cb07b",
+  "private_worktree_accessed": false,
+  "protected_original_accessed": false,
+  "upstreams": {
+    "harness2": {
+      "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+      "tracked_worktree_unchanged": true
+    },
+    "novelty-bench": {
+      "commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "tracked_worktree_unchanged": true
+    }
+  }
+}

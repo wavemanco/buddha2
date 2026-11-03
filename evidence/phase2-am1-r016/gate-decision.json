@@ -1,0 +1,24 @@
+{
+  "kind": "am1-evidence-gate-decision",
+  "specification": "0.16",
+  "started_at_utc": "2026-10-27T05:31:12Z",
+  "decided_at_utc": "2026-10-27T05:37:10Z",
+  "initial_evidence_seconds": 358,
+  "within_one_hour": true,
+  "outcome": "pass-for-declared-public-payg-profile",
+  "admission_review": "admission-review.json",
+  "billing_review": "billing-review.json",
+  "root_verified": [
+    "Claude context includes ordinary, cache-read and cache-write input; overflow behavior rejects input above the window.",
+    "OpenAI context defines the single-request total; Luna supplies the exact window and output maximum.",
+    "The exact Chat Completions schema documents cache_write_tokens; service tier omission inherits project defaults."
+  ],
+  "interpretation": "A conservative operational inference from published provider contracts, not an invoice guarantee. Preserve scientific requests and cover all documented public PAYG tier/geography modifiers. A future grant/preflight must explicitly bind this billing profile; unknown or private contracts remain blocked.",
+  "implementation_authorized_by_user": true,
+  "provider_calls_authorized": 0,
+  "real_credential_access_authorized": false,
+  "phase2b_authorized": false,
+  "api_spend_ceiling_micro_usd": 0,
+  "live_account_or_model_access_verified": false,
+  "parent_readiness_no_go_preserved": true
+}

@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "c8f89e65e4f540ba0181ac36d34c856f964a288103274ec665fda5da5937140f",
+  "portfolio_id": "portfolio-37e868b94ab9a66ddeb537fc8749f3b4a746632345f74107215979764785214b",
+  "portfolio_sha256": "1030d6beca69155deaa14603ec398472efb9b10e506a03279e40cb572f06b401",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-0963685e2489a62e7f0f745a.answer.00",
+      "p2-0963685e2489a62e7f0f745a.answer.01",
+      "p2-0963685e2489a62e7f0f745a.answer.02",
+      "p2-0963685e2489a62e7f0f745a.answer.03",
+      "p2-0963685e2489a62e7f0f745a.answer.04",
+      "p2-0963685e2489a62e7f0f745a.answer.05",
+      "p2-0963685e2489a62e7f0f745a.answer.06",
+      "p2-0963685e2489a62e7f0f745a.answer.07",
+      "p2-0963685e2489a62e7f0f745a.answer.08",
+      "p2-0963685e2489a62e7f0f745a.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-542e2b94fad0406f5ea1b38d",
+      "index": 0,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.00",
+      "status": "ok",
+      "text_sha256": "0716890fc9386bad8afa284bdb1c3554da22b322daa6024d31355173e04a5c50"
+    },
+    {
+      "id": "response-1d783cecfa6f1e9216fb0c50",
+      "index": 1,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.01",
+      "status": "ok",
+      "text_sha256": "632f9a37f5909cceda4cc3bf27119f7343f5089bd90e1fbd37dc7e3b4cd2c243"
+    },
+    {
+      "id": "response-af75201cdf66c91b2f455353",
+      "index": 2,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.02",
+      "status": "ok",
+      "text_sha256": "2785488101163551a6d1ad78d162b8f36ac9391252c0c985e1abb96904ecba7f"
+    },
+    {
+      "id": "response-c4e1c6b433b887dda1621a43",
+      "index": 3,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.03",
+      "status": "ok",
+      "text_sha256": "10521ae3cc7e3d5340edec0421263e5001574ff5a3bc176c650a82ed11ad8e2b"
+    },
+    {
+      "id": "response-60987d4546cee93e970e8765",
+      "index": 4,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.04",
+      "status": "ok",
+      "text_sha256": "16ad81a767c3680d030750f6a0483d02924f0fc21b7c1708c331f77c944c371d"
+    },
+    {
+      "id": "response-abfc88e7a80468f4c59927d9",
+      "index": 5,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.05",
+      "status": "ok",
+      "text_sha256": "474e51213185d90359b8af7903faa99193da10e496ab7acc09da59e5411e59a5"
+    },
+    {
+      "id": "response-34f90fde2565c2c440e90955",
+      "index": 6,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.06",
+      "status": "ok",
+      "text_sha256": "18526079c52d7d6f93c1268d05da2e7f28a02367f86072a4d0acbc7c8c8c04c0"
+    },
+    {
+      "id": "response-6f54be31535c9382e3afe21e",
+      "index": 7,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.07",
+      "status": "ok",
+      "text_sha256": "8204cb4aa356e4f075267b54da401bb76bc00ab73057506c83c2ec7f4c7aa741"
+    },
+    {
+      "id": "response-4f7cb78b2e5bb1d39e9398c9",
+      "index": 8,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.08",
+      "status": "ok",
+      "text_sha256": "57b2377b137eda8a5cc45d8cd58fd19f4ab70615e2ccaf78f0bda9b19bab71d2"
+    },
+    {
+      "id": "response-2a942c8dc86a68318881faf8",
+      "index": 9,
+      "request_id": "p2-0963685e2489a62e7f0f745a.answer.09",
+      "status": "ok",
+      "text_sha256": "f8e9b14361df77778d711fd5f6a673a1a73c70f9674fbf4081524db4d824351f"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-fb55f67d0ac2a857ec0f",
+    "prompt": "Which US city has terrible quality of life?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-41"
+    }
+  }
+}

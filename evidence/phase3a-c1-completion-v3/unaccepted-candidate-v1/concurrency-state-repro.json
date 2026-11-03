@@ -1,0 +1,31 @@
+{
+  "actual_mock_sdk_requests": 1,
+  "candidate_source_sha256": "66779bdaef1b2fd55e54997184eae71e07d2f57a50a2239c8d1e41930ae0a555",
+  "candidate_study_sha256": "fcfa299b8ecb4c447bb8b573148f1ddca2466beb6a290c9180622eb18685387b",
+  "concurrent_active_unsettled_intents": [
+    "p3a-01.adaptive.plan.00"
+  ],
+  "concurrent_durable_unknown_results": 0,
+  "concurrent_state_results": {
+    "p3a-01.adaptive.plan.00": "unknown"
+  },
+  "concurrent_state_return_seconds": 0.013160283997422084,
+  "concurrent_state_status": "blocked-unknown",
+  "confirmed_bug": true,
+  "durable_event_kinds_at_concurrent_read": [
+    "intent"
+  ],
+  "durable_unknown_events_at_concurrent_read": 0,
+  "final_attempts": 1,
+  "final_known_spent_micro_usd": 400,
+  "final_reserved_micro_usd": 0,
+  "final_result_statuses": {
+    "p3a-01.adaptive.plan.00": "response"
+  },
+  "final_status": "ready",
+  "fixture": true,
+  "fixture_journal": "/results/phase3a-c1-completion-v3/13e4b019fb8d1a28084737e053a9b2e439036b62cfd65be3782bf9816897166f/mock/journal",
+  "kind": "frozen-v3-state-concurrency-reproduction-v1",
+  "provider_calls": 0,
+  "real_spend_micro_usd": 0
+}

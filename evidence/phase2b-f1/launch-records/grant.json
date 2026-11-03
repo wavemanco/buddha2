@@ -1,0 +1,16 @@
+{
+  "authorized": true,
+  "billing_profile": "public-payg-envelope-v1",
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "cumulative_cap_micro_usd": 20000000,
+  "fixture": false,
+  "grant_id": "live-first-001",
+  "grant_sha256": "4e0cc79bf4495cc1aa7776593b7af5161d221ea9776c7220277d57f1e74f6cb4",
+  "journal_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b",
+  "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+  "previous_authority_sha256": null,
+  "review_sha256": null,
+  "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+  "stage": "first",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

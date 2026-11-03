@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp:rw,nosuid,nodev,size=268435456",
+    "--mount",
+    "type=bind,source=C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1,target=/i1,readonly",
+    "--workdir",
+    "/i1",
+    "--entrypoint",
+    "python",
+    "buddha2-h1:scoped-backport",
+    "-B",
+    "-m",
+    "mypy",
+    "--ignore-missing-imports",
+    "--check-untyped-defs",
+    "--cache-dir",
+    "/tmp/i1-mypy",
+    "/i1"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "Success: no issues found in 6 source files\n"
+}

@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "08404212a7ed72a6b027a5cc7c88c307f27b72d68602b031e39d70dd3c6ab7d4",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 7.98531613164042
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        7,
+        9,
+        8,
+        8,
+        8
+      ],
+      "partition_scores": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        7,
+        9,
+        8,
+        8,
+        8
+      ],
+      "utility": 7.98531613164042
+    },
+    "generation_row": {
+      "generations": [
+        "The top item I'd add is a **wildcard slot**: one line on the list that reads \"something I've never tried.\"\n\nHere's why it works:\n\n- **It turns errands into exploration.** Instead of walking the same aisles on autopilot, you're hunting. You might end up looking at a dragon fruit, a jar of pickled something, a regional hot sauce, or the strangest-looking squash in the bin.\n- **It creates a story.** Nobody remembers the week they bought the usual eggs and rice, but everyone remembers the time they brought home a romanesco or a mystery soda flavor and everyone at the table had to taste it.\n- **The stakes are low.** It's one item, usually a few dollars. If it's a dud, you've got a funny memory. If it's great, you've found a new favorite.\n\nA few ways to play it:\n\n1. **Oddest produce rule:** Pick the most unfamiliar fruit or vegetable in the produce section, then ask a staff member or search online how to prepare it.\n2. **New-product rule:** Choose something with packaging or a name you can't resist.\n3. **Shared pick:** Let a kid, partner, or friend choose the wildcard for you.\n4. **Aisle roulette:** Close your eyes, pick an aisle number, and grab the first intriguing thing you see in it.\n\nThe unplanned item is what makes the trip feel like play rather than a chore, and that's what sticks in memory.",
+        "**Top pick: peak-season, locally grown stone fruit, ideally ripe peaches.**\n\nHere's why it makes a shopping trip memorable:\n\n- **The selecting is part of the fun.** You get to pick them up, feel the slight give near the stem, and smell that honeyed, floral perfume. A ripe peach announces itself before you even taste it.\n- **Freshness is obvious.** In season, locally grown fruit is picked closer to ripeness, so the flavor is dramatically better than anything shipped long distances. It's the kind of difference people actually remember.\n- **It invites conversation.** At a farmers market or good produce stand, you can ask the grower which variety is sweetest today, or what's best for eating now versus in two days.\n- **The payoff is immediate.** You can eat one on the walk back to the car, juice running down your wrist, and the trip becomes a small event rather than a chore.\n\n**Tip:** Buy a mix of ripeness levels, some ready to eat today and some firm for later in the week, and keep them on the counter, not in the fridge, until they soften.",
+        "**An artisan cheese from the cheesemonger counter.**\n\nWhat makes it memorable is the experience around the cheese, not just the cheese itself:\n\n- **Talk to the person behind the counter.** Tell them what you're cooking, what you usually like, or what you've never tried. A good cheesemonger will steer you toward something you wouldn't have picked on your own.\n- **Taste before you buy.** Sampling lets you compare a young, creamy cheese with an aged, crystalline one, or a mild washed-rind with a sharper blue. Your preferences can surprise you.\n- **Learn its story.** Ask where it's from, who makes it, what the animals ate, and how long it aged. A wedge of cheese with a name, a place, and a maker attached tastes different at the dinner table.\n\nAsk, \"What's tasting especially good right now?\" Cheese is seasonal and changes from batch to batch, so you may walk away with something that won't be available next month.\n\nThen build the rest of the meal around it: a crusty baguette, some honey or fig jam, and a handful of nuts or fruit. The cheese turns an errand into a small discovery.",
+        "**Gochujang.**\n\nThis Korean fermented chili paste is my top pick because it turns a routine grocery run into a small discovery. It's savory, a little sweet, mildly spicy, and deeply umami. Finding it means wandering into an aisle you might normally skip, reading unfamiliar labels, and maybe asking someone for advice on which brand to try.\n\nIt also inspires cooking right away. A few easy ways to use it:\n\n- **Quick glaze:** Mix with honey, soy sauce, and sesame oil for chicken, salmon, or tofu.\n- **Instant stew base:** Stir into broth with tofu, vegetables, and kimchi.\n- **Better sauces:** Blend into mayo for a sandwich spread, or whisk into a stir-fry sauce.\n\nTo make the trip more memorable, pick up a few companions: a jar of kimchi, toasted sesame oil, and a bag of short-grain rice. You'll leave with the start of a whole meal and a new flavor to build on.",
+        "**A whole fresh fish from the fish counter.** Something like a whole branzino, red snapper, or dorade.\n\nHere's why it makes the trip memorable:\n\n- **The challenge:** Choosing a whole fish takes some skill. Look for clear, bright eyes, red gills, firm flesh that springs back when pressed, and a clean ocean smell rather than a \"fishy\" one. It feels like a small test, and passing it is satisfying.\n\n- **The conversation:** The fishmonger becomes your guide. Ask what came in that morning, how they'd cook it, and whether they can scale and gut it for you. You'll often leave with a tip you'd never find in a recipe, like stuffing the cavity with lemon and fennel or how to tell when it's done at the bone.\n\n- **The payoff:** A whole roasted or grilled fish is a showstopper at a dinner party. It comes to the table crisp-skinned and fragrant, and carving it in front of guests makes the meal feel like an occasion. It's also simpler than it looks: olive oil, salt, herbs, lemon, and about 20 to 25 minutes in a hot oven.\n\nIf you want to push it further, ask what unusual seafood is available that day, such as sea urchin, fresh sardines, or langoustines. Trying something new makes the whole outing feel like an adventure instead of an errand.",
+        "**A favorite treat chosen for someone else.** Think of the snack your friend always steals from your pantry, or the odd cereal your kid has been eyeing for weeks.\n\nWhy it works:\n\n- **The memory comes from the connection, not the product.** You'll forget most groceries within a day, but you'll remember picking something out and thinking, \"They're going to love this.\"\n- **It changes how you shop.** Instead of rushing down the aisles with a checklist, you're hunting with a purpose, and that makes the trip feel more personal.\n- **The payoff comes after the store.** Handing it over, or watching someone discover it in the cupboard, is the part that sticks.\n\nIf you're shopping with a child, let them pick one item entirely on their own. The choice they make, and how proud they are of it, will probably be the most memorable part of the trip.",
+        "A fresh-baked loaf of bread from the in-store bakery.\n\nGrab it last, while it's still warm. The scent of crust and yeast follows you through checkout and into the car, and it turns an ordinary errand into something you'll remember. Tearing off a corner on the drive home is a small ritual that feels a little like cheating, and it's one of the best parts of the trip.\n\nOnce you're home, the loaf makes the rest of the haul better too. It's good with the good butter, a wedge of cheese, olive oil for dipping, or a pot of soup. Pick a crusty sourdough, a rosemary focaccia, or a country boule, and you'll have a reason to enjoy the groceries before you've even put them away.",
+        "**A really good bottle of extra virgin olive oil.**\n\nA small luxury like this stays with you because you taste it again and again, not just once. Here's why it earns the top spot:\n\n- **It upgrades many meals.** A drizzle over roasted vegetables, soup, grilled bread, eggs, pasta, or even vanilla ice cream makes ordinary food taste intentional.\n- **The difference is noticeable.** A fresh, well-made oil is grassy, fruity, peppery, and sometimes bitter in a pleasant way. The first taste on a piece of warm bread tends to be a small revelation.\n- **It's an affordable indulgence.** For roughly $15-30, you get something that feels special without a big splurge, and a bottle lasts weeks.\n- **It makes the shopping itself more fun.** Choosing one invites you to read labels and compare regions, like Tuscany, Puglia, Crete, or California.\n\n**What to look for:**\n- A harvest date (within the last 12-18 months) rather than just a \"best by\" date\n- A dark glass bottle or tin to protect it from light\n- A named origin or single estate, ideally with a mention of the olive variety\n- \"Extra virgin\" certification\n\n**How to use it for maximum memory:** Save it for finishing rather than high-heat cooking. Taste a spoonful on its own first, then try it on simple foods like tomatoes with salt, fresh bread, or a soft-boiled egg, where its flavor can shine.",
+        "My top pick: a nostalgic childhood candy, specifically something like Pixy Stix, Fun Dip, or whatever neon-wrapped treat you begged for at the checkout lane as a kid.\n\nWhy it works: grocery shopping is usually a routine errand, but spotting that one familiar package turns it into time travel. You turn down the candy aisle, catch the bright colors out of the corner of your eye, and suddenly you're eight years old again, tugging on a parent's sleeve and negotiating for just one thing. The crinkle of the wrapper and the first sugary taste bring back details you didn't know you'd kept: the car seat, the cartoon on Saturday morning, the corner store.\n\nTo make it count:\n- **Pick the one you haven't seen in years.** The longer the gap, the stronger the jolt.\n- **Buy it on purpose.** Write it on the list so it feels like a planned treat, not a guilty impulse.\n- **Save it for later.** Eat it somewhere quiet, or share it with someone and trade stories about your favorite childhood snacks.\n\nIt costs a dollar or two, and it turns an ordinary trip into one you'll remember.",
+        "**Fresh flowers: a bouquet from the store's floral section.**\n\nGroceries are mostly about function, so a non-food sensory item stands out. A bouquet gives you color and scent, and it changes how the trip feels. Walking past the produce with something beautiful in your cart makes the whole errand feel more like a treat than a chore. At home, the flowers brighten the kitchen table or counter for a week or more, so the pleasure outlasts the meal you cook.\n\n**Practical tips:**\n\n- **Budget:** A good grocery store bouquet usually costs $5-$12. That's a small spend for the lift it gives. Mixed bouquets are often cheaper than buying single stems.\n- **Picking blooms:** Choose bunches with a mix of open flowers and tight buds, so they keep opening over the week. Avoid petals that are browning or drooping and stems that look slimy or yellow.\n- **Longevity:** Look for sturdy varieties like alstroemeria, carnations, chrysanthemums, or snapdragons. They hold up well and cost less.\n- **Care:** Trim the stems at an angle when you get home, put them in clean water, and change the water every couple of days.\n\nPutting flowers on the list takes almost no effort, and they make an ordinary shopping trip feel a bit more special."
+      ],
+      "id": "nb-curated-055c45e37c6c14cca664",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?"
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        7,
+        9,
+        8,
+        8,
+        8
+      ],
+      "generations": [
+        "The top item I'd add is a **wildcard slot**: one line on the list that reads \"something I've never tried.\"\n\nHere's why it works:\n\n- **It turns errands into exploration.** Instead of walking the same aisles on autopilot, you're hunting. You might end up looking at a dragon fruit, a jar of pickled something, a regional hot sauce, or the strangest-looking squash in the bin.\n- **It creates a story.** Nobody remembers the week they bought the usual eggs and rice, but everyone remembers the time they brought home a romanesco or a mystery soda flavor and everyone at the table had to taste it.\n- **The stakes are low.** It's one item, usually a few dollars. If it's a dud, you've got a funny memory. If it's great, you've found a new favorite.\n\nA few ways to play it:\n\n1. **Oddest produce rule:** Pick the most unfamiliar fruit or vegetable in the produce section, then ask a staff member or search online how to prepare it.\n2. **New-product rule:** Choose something with packaging or a name you can't resist.\n3. **Shared pick:** Let a kid, partner, or friend choose the wildcard for you.\n4. **Aisle roulette:** Close your eyes, pick an aisle number, and grab the first intriguing thing you see in it.\n\nThe unplanned item is what makes the trip feel like play rather than a chore, and that's what sticks in memory.",
+        "**Top pick: peak-season, locally grown stone fruit, ideally ripe peaches.**\n\nHere's why it makes a shopping trip memorable:\n\n- **The selecting is part of the fun.** You get to pick them up, feel the slight give near the stem, and smell that honeyed, floral perfume. A ripe peach announces itself before you even taste it.\n- **Freshness is obvious.** In season, locally grown fruit is picked closer to ripeness, so the flavor is dramatically better than anything shipped long distances. It's the kind of difference people actually remember.\n- **It invites conversation.** At a farmers market or good produce stand, you can ask the grower which variety is sweetest today, or what's best for eating now versus in two days.\n- **The payoff is immediate.** You can eat one on the walk back to the car, juice running down your wrist, and the trip becomes a small event rather than a chore.\n\n**Tip:** Buy a mix of ripeness levels, some ready to eat today and some firm for later in the week, and keep them on the counter, not in the fridge, until they soften.",
+        "**An artisan cheese from the cheesemonger counter.**\n\nWhat makes it memorable is the experience around the cheese, not just the cheese itself:\n\n- **Talk to the person behind the counter.** Tell them what you're cooking, what you usually like, or what you've never tried. A good cheesemonger will steer you toward something you wouldn't have picked on your own.\n- **Taste before you buy.** Sampling lets you compare a young, creamy cheese with an aged, crystalline one, or a mild washed-rind with a sharper blue. Your preferences can surprise you.\n- **Learn its story.** Ask where it's from, who makes it, what the animals ate, and how long it aged. A wedge of cheese with a name, a place, and a maker attached tastes different at the dinner table.\n\nAsk, \"What's tasting especially good right now?\" Cheese is seasonal and changes from batch to batch, so you may walk away with something that won't be available next month.\n\nThen build the rest of the meal around it: a crusty baguette, some honey or fig jam, and a handful of nuts or fruit. The cheese turns an errand into a small discovery.",
+        "**Gochujang.**\n\nThis Korean fermented chili paste is my top pick because it turns a routine grocery run into a small discovery. It's savory, a little sweet, mildly spicy, and deeply umami. Finding it means wandering into an aisle you might normally skip, reading unfamiliar labels, and maybe asking someone for advice on which brand to try.\n\nIt also inspires cooking right away. A few easy ways to use it:\n\n- **Quick glaze:** Mix with honey, soy sauce, and sesame oil for chicken, salmon, or tofu.\n- **Instant stew base:** Stir into broth with tofu, vegetables, and kimchi.\n- **Better sauces:** Blend into mayo for a sandwich spread, or whisk into a stir-fry sauce.\n\nTo make the trip more memorable, pick up a few companions: a jar of kimchi, toasted sesame oil, and a bag of short-grain rice. You'll leave with the start of a whole meal and a new flavor to build on.",
+        "**A whole fresh fish from the fish counter.** Something like a whole branzino, red snapper, or dorade.\n\nHere's why it makes the trip memorable:\n\n- **The challenge:** Choosing a whole fish takes some skill. Look for clear, bright eyes, red gills, firm flesh that springs back when pressed, and a clean ocean smell rather than a \"fishy\" one. It feels like a small test, and passing it is satisfying.\n\n- **The conversation:** The fishmonger becomes your guide. Ask what came in that morning, how they'd cook it, and whether they can scale and gut it for you. You'll often leave with a tip you'd never find in a recipe, like stuffing the cavity with lemon and fennel or how to tell when it's done at the bone.\n\n- **The payoff:** A whole roasted or grilled fish is a showstopper at a dinner party. It comes to the table crisp-skinned and fragrant, and carving it in front of guests makes the meal feel like an occasion. It's also simpler than it looks: olive oil, salt, herbs, lemon, and about 20 to 25 minutes in a hot oven.\n\nIf you want to push it further, ask what unusual seafood is available that day, such as sea urchin, fresh sardines, or langoustines. Trying something new makes the whole outing feel like an adventure instead of an errand.",
+        "**A favorite treat chosen for someone else.** Think of the snack your friend always steals from your pantry, or the odd cereal your kid has been eyeing for weeks.\n\nWhy it works:\n\n- **The memory comes from the connection, not the product.** You'll forget most groceries within a day, but you'll remember picking something out and thinking, \"They're going to love this.\"\n- **It changes how you shop.** Instead of rushing down the aisles with a checklist, you're hunting with a purpose, and that makes the trip feel more personal.\n- **The payoff comes after the store.** Handing it over, or watching someone discover it in the cupboard, is the part that sticks.\n\nIf you're shopping with a child, let them pick one item entirely on their own. The choice they make, and how proud they are of it, will probably be the most memorable part of the trip.",
+        "A fresh-baked loaf of bread from the in-store bakery.\n\nGrab it last, while it's still warm. The scent of crust and yeast follows you through checkout and into the car, and it turns an ordinary errand into something you'll remember. Tearing off a corner on the drive home is a small ritual that feels a little like cheating, and it's one of the best parts of the trip.\n\nOnce you're home, the loaf makes the rest of the haul better too. It's good with the good butter, a wedge of cheese, olive oil for dipping, or a pot of soup. Pick a crusty sourdough, a rosemary focaccia, or a country boule, and you'll have a reason to enjoy the groceries before you've even put them away.",
+        "**A really good bottle of extra virgin olive oil.**\n\nA small luxury like this stays with you because you taste it again and again, not just once. Here's why it earns the top spot:\n\n- **It upgrades many meals.** A drizzle over roasted vegetables, soup, grilled bread, eggs, pasta, or even vanilla ice cream makes ordinary food taste intentional.\n- **The difference is noticeable.** A fresh, well-made oil is grassy, fruity, peppery, and sometimes bitter in a pleasant way. The first taste on a piece of warm bread tends to be a small revelation.\n- **It's an affordable indulgence.** For roughly $15-30, you get something that feels special without a big splurge, and a bottle lasts weeks.\n- **It makes the shopping itself more fun.** Choosing one invites you to read labels and compare regions, like Tuscany, Puglia, Crete, or California.\n\n**What to look for:**\n- A harvest date (within the last 12-18 months) rather than just a \"best by\" date\n- A dark glass bottle or tin to protect it from light\n- A named origin or single estate, ideally with a mention of the olive variety\n- \"Extra virgin\" certification\n\n**How to use it for maximum memory:** Save it for finishing rather than high-heat cooking. Taste a spoonful on its own first, then try it on simple foods like tomatoes with salt, fresh bread, or a soft-boiled egg, where its flavor can shine.",
+        "My top pick: a nostalgic childhood candy, specifically something like Pixy Stix, Fun Dip, or whatever neon-wrapped treat you begged for at the checkout lane as a kid.\n\nWhy it works: grocery shopping is usually a routine errand, but spotting that one familiar package turns it into time travel. You turn down the candy aisle, catch the bright colors out of the corner of your eye, and suddenly you're eight years old again, tugging on a parent's sleeve and negotiating for just one thing. The crinkle of the wrapper and the first sugary taste bring back details you didn't know you'd kept: the car seat, the cartoon on Saturday morning, the corner store.\n\nTo make it count:\n- **Pick the one you haven't seen in years.** The longer the gap, the stronger the jolt.\n- **Buy it on purpose.** Write it on the list so it feels like a planned treat, not a guilty impulse.\n- **Save it for later.** Eat it somewhere quiet, or share it with someone and trade stories about your favorite childhood snacks.\n\nIt costs a dollar or two, and it turns an ordinary trip into one you'll remember.",
+        "**Fresh flowers: a bouquet from the store's floral section.**\n\nGroceries are mostly about function, so a non-food sensory item stands out. A bouquet gives you color and scent, and it changes how the trip feels. Walking past the produce with something beautiful in your cart makes the whole errand feel more like a treat than a chore. At home, the flowers brighten the kitchen table or counter for a week or more, so the pleasure outlasts the meal you cook.\n\n**Practical tips:**\n\n- **Budget:** A good grocery store bouquet usually costs $5-$12. That's a small spend for the lift it gives. Mixed bouquets are often cheaper than buying single stems.\n- **Picking blooms:** Choose bunches with a mix of open flowers and tight buds, so they keep opening over the week. Avoid petals that are browning or drooping and stems that look slimy or yellow.\n- **Longevity:** Look for sturdy varieties like alstroemeria, carnations, chrysanthemums, or snapdragons. They hold up well and cost less.\n- **Care:** Trim the stems at an angle when you get home, put them in clean water, and change the water every couple of days.\n\nPutting flowers on the list takes almost no effort, and they make an ordinary shopping trip feel a bit more special."
+      ],
+      "id": "nb-curated-055c45e37c6c14cca664",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "868926b2fb952b649bc3e6806349b05157390fb416b474c6222c46e2a276638e",
+      "partition_scores": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        7,
+        9,
+        8,
+        8,
+        8
+      ],
+      "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "15d9b3dbcf61d2ff6aed24970be48ed756517723b84ee459589254ea98eed253",
+      "utility": 7.98531613164042
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 7.98531613164042,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "9663fd42f6bda69284a47ae18c03a280f5f116c96fde7431279633b6402f2c2f",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0575",
+      "fixture": false,
+      "intent_sha256": "40630b189237442570f6154e8c7f3057fe26edd6a974d283ab02a0fc639f3fc7",
+      "request_sha256": "1af1efb630ceb40900467f5ffaa9b2c218a64e1c9ea7931fade801e7abd3efcb",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.9054656469961628,
+        "message_id": "chatcmpl-EdwFgFRUjdBPVVOhkMPC7NRxHb9xD",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 89,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 52,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2676,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2673,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2765
+        },
+        "refusal": null,
+        "request_id": "req_941caa1e56c748bb955a4039a881b3a1",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2673,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2673,
+            "cached_tokens": 0
+          },
+          "output_tokens": 89,
+          "output_tokens_details": {
+            "reasoning_tokens": 52
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.group",
+      "spent_micro_usd": 854,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0576",
+      "fixture": false,
+      "intent_sha256": "7bedc89e597b94b0d367b646c41c0db287fe967d68a35c687cbcf3dbbf3be50f",
+      "request_sha256": "e331a00cc5884c6406f911870e5eb6c3a78558ca261fa04c7a442d11ad72a923",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.0934296710038325,
+        "message_id": "msg_011CgUZskzEn3U2uFXAoj7Cs",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZsknLETnn3jXUiFoQ6",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 900,
+          "output_tokens": 157,
+          "output_tokens_details": {
+            "thinking_tokens": 148
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.00",
+      "spent_micro_usd": 9268,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0577",
+      "fixture": false,
+      "intent_sha256": "a0c1328ea3d1fb95c024f87037d92355b530fb06c47afa62c50833c27bd28ec1",
+      "request_sha256": "cae1ac1cc47937d91dd1e3b1ed4574ed4ce2d463f94934c5fd829e6ef9f5f96d",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.1884123499912675,
+        "message_id": "msg_011CgUZt2Rus13wp4iPDp7Zv",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZt2Ekz5F9mDCx3x5ag",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 792,
+          "output_tokens": 96,
+          "output_tokens_details": {
+            "thinking_tokens": 87
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.01",
+      "spent_micro_usd": 6996,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0578",
+      "fixture": false,
+      "intent_sha256": "8b3478a260bd8ebccc078a8ce9d33fa0da1bf4ad47a834fd025097f92cc71277",
+      "request_sha256": "7ce5677400e81691f1940177d6130694a0590afa799ca34cb2b20ebcf2c46a19",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9310145580093376,
+        "message_id": "msg_011CgUZtEF58EbXkBeumuMky",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZtE2Aqrvzj9LeQMRtg",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 807,
+          "output_tokens": 143,
+          "output_tokens_details": {
+            "thinking_tokens": 134
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.02",
+      "spent_micro_usd": 8371,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0579",
+      "fixture": false,
+      "intent_sha256": "c27042064074b0bcb59b4405e6ae76e14d578dbdb088aaf281a9d706afeacd67",
+      "request_sha256": "361b760187408c14348bb1182e4153cb44994f4c398cdefcc31dbdda23abb02a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.423931126992102,
+        "message_id": "msg_011CgUZtV6XjB2uebnaazV8t",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZtUqQt3Guo5JYzWgEx",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 770,
+          "output_tokens": 93,
+          "output_tokens_details": {
+            "thinking_tokens": 84
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.03",
+      "spent_micro_usd": 6793,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0580",
+      "fixture": false,
+      "intent_sha256": "1c55db3109f5c9d709107323ac7bcabd1524f4c2618ba05bec39e7fa84ba2d52",
+      "request_sha256": "ad0015bc207a8bee9e888da625d349d23fde7bd124c77f56cba5b785713b784e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.6223877029988216,
+        "message_id": "msg_011CgUZthZNqRLLDeUMjLhJE",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZthGXJnxeAdGrTqQyS",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 881,
+          "output_tokens": 133,
+          "output_tokens_details": {
+            "thinking_tokens": 124
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.04",
+      "spent_micro_usd": 8503,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0581",
+      "fixture": false,
+      "intent_sha256": "4732a66cb459941b5af4e215d10781a1433cdbf6ce780fc9178026e68b31bd46",
+      "request_sha256": "225ea57172d975aa6edffc25f20b4825824c0a599c2faf2c324c8a841fcd23f9",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.901278983990778,
+        "message_id": "msg_011CgUZu1h3yfHubNCjdXL6X",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZu127wRyaZajRK4GB1",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 706,
+          "output_tokens": 275,
+          "output_tokens_details": {
+            "thinking_tokens": 266
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.05",
+      "spent_micro_usd": 11446,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0582",
+      "fixture": false,
+      "intent_sha256": "0811cacf0fca19bb6a6766d749c4cf2cfae1e371e230a415814e32c619f9b89b",
+      "request_sha256": "6229697eb414cfcab9912441f3eee03558f823307ceabc5c0c6094ed4e32a460",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.2982355679996544,
+        "message_id": "msg_011CgUZuQJagg4Hrx2goGHyk",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZuQ6S19ZssWAeJnmtH",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 671,
+          "output_tokens": 91,
+          "output_tokens_details": {
+            "thinking_tokens": 82
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.06",
+      "spent_micro_usd": 6193,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0583",
+      "fixture": false,
+      "intent_sha256": "43caa06eb13c72c005c8791adfe0ca154960dfe646a0807a4c6c07618f785ffb",
+      "request_sha256": "4fe180762a966e0062ea86c40beb55487183e3ee6ce0fc9e97a9040cbd697232",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.406998922000639,
+        "message_id": "msg_011CgUZucM8tLmfTtMhqSpZ2",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZuc9ygVv12rG2NRznB",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 922,
+          "output_tokens": 113,
+          "output_tokens_details": {
+            "thinking_tokens": 104
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.07",
+      "spent_micro_usd": 8179,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0584",
+      "fixture": false,
+      "intent_sha256": "0f2321c71a64b8dee3d8a2d641af2d120e10f2f22b2a4423fba15bde487832c2",
+      "request_sha256": "0d2290483e291d9d549121e06e0211a2267af734cb6a08b3ec6b58a28d6b133e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.4489375130069675,
+        "message_id": "msg_011CgUZuqUfgEgnJiSAg4NtA",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZuqGWJqBcFB3q11riW",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 820,
+          "output_tokens": 141,
+          "output_tokens_details": {
+            "thinking_tokens": 132
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.08",
+      "spent_micro_usd": 8388,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0585",
+      "fixture": false,
+      "intent_sha256": "083aac92dcaf7545179fd0527516aa6376519922ee03df8d9d4ba65e57416c7e",
+      "request_sha256": "5e37860086379fd4f4504994a5bc8acf40f0ffe41a086b310edc606023e31665",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.0078573250066256,
+        "message_id": "msg_011CgUZv4AQRbdyEXgZbLXP1",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZv3wWSKb5sz56kbPYV",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 865,
+          "output_tokens": 154,
+          "output_tokens_details": {
+            "thinking_tokens": 145
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-f8d9f2dd85c409c3cfa2491b.quality.09",
+      "spent_micro_usd": 8993,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-055c45e37c6c14cca664"
+}

@@ -1,0 +1,14 @@
+{
+  "record_hashes": {
+    "analysis": "26e1d93c0d5df95a36f3881cb47ccd4370c6a42141e80bcc31adb8545722d38b",
+    "coverage": "156c7b5314f4738c4c48fc100a6965b73fbe311a45e269afde1871afcf2c0b5f",
+    "decision": "4a77ca0ea239d84466d97075cef8ba1fc81e158b94625a58ecd0abac13ff5a52",
+    "execution": "8ee742b2cc69a8be60363cca6df9cf62236ba60961b28f5484f02134ad6c10ed",
+    "failures": "41ca19ff8c7b7b0790bc1f8e576e2baf69201281373945f7d74ca1a24541701e",
+    "native_assessment": "702e6234693901335195297c2d6b871fa7aafa2261ebbd85d470575f485de8fc",
+    "recoverable_exports": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "state": "7bbb569770d8da4b522f576aab8b79040efffa082919544cb34189d65d8f58e4",
+    "summary": "6e7d868b80e959d220878394034bbed324dabc34297d66206c66ed591cd2c6f2"
+  },
+  "snapshot_sha256": "89639aa6e4b5d393df4e80bb1ca3c79cf1401ebbfd762c4b0e7a5d65479921ec"
+}

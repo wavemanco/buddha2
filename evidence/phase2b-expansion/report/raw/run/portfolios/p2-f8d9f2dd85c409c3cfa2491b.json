@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-2ccc6bd499721b8765c56b758d8751de1348a524de6be5da89cbc648ceaa3d05",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "81f1aee8f6ad9a722db5fc954ba05ed7bc0014778ce13e2eec2967bf1fa3c11e",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 2,
+    "request_ids": [
+      "p2-3a024c1febb26cec05ace2f6.plan",
+      "p2-3a024c1febb26cec05ace2f6.answer.00",
+      "p2-3a024c1febb26cec05ace2f6.answer.01",
+      "p2-3a024c1febb26cec05ace2f6.answer.02",
+      "p2-3a024c1febb26cec05ace2f6.answer.03",
+      "p2-3a024c1febb26cec05ace2f6.answer.04",
+      "p2-3a024c1febb26cec05ace2f6.answer.05",
+      "p2-3a024c1febb26cec05ace2f6.answer.06",
+      "p2-3a024c1febb26cec05ace2f6.answer.07",
+      "p2-3a024c1febb26cec05ace2f6.answer.08",
+      "p2-3a024c1febb26cec05ace2f6.answer.09",
+      "p2-f8d9f2dd85c409c3cfa2491b.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f704e1aab867faec500aafc5",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.06",
+      "status": "ok",
+      "text": "The top item I'd add is a **wildcard slot**: one line on the list that reads \"something I've never tried.\"\n\nHere's why it works:\n\n- **It turns errands into exploration.** Instead of walking the same aisles on autopilot, you're hunting. You might end up looking at a dragon fruit, a jar of pickled something, a regional hot sauce, or the strangest-looking squash in the bin.\n- **It creates a story.** Nobody remembers the week they bought the usual eggs and rice, but everyone remembers the time they brought home a romanesco or a mystery soda flavor and everyone at the table had to taste it.\n- **The stakes are low.** It's one item, usually a few dollars. If it's a dud, you've got a funny memory. If it's great, you've found a new favorite.\n\nA few ways to play it:\n\n1. **Oddest produce rule:** Pick the most unfamiliar fruit or vegetable in the produce section, then ask a staff member or search online how to prepare it.\n2. **New-product rule:** Choose something with packaging or a name you can't resist.\n3. **Shared pick:** Let a kid, partner, or friend choose the wildcard for you.\n4. **Aisle roulette:** Close your eyes, pick an aisle number, and grab the first intriguing thing you see in it.\n\nThe unplanned item is what makes the trip feel like play rather than a chore, and that's what sticks in memory."
+    },
+    {
+      "id": "response-7032a5aab93101d04831baf0",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.00",
+      "status": "ok",
+      "text": "**Top pick: peak-season, locally grown stone fruit, ideally ripe peaches.**\n\nHere's why it makes a shopping trip memorable:\n\n- **The selecting is part of the fun.** You get to pick them up, feel the slight give near the stem, and smell that honeyed, floral perfume. A ripe peach announces itself before you even taste it.\n- **Freshness is obvious.** In season, locally grown fruit is picked closer to ripeness, so the flavor is dramatically better than anything shipped long distances. It's the kind of difference people actually remember.\n- **It invites conversation.** At a farmers market or good produce stand, you can ask the grower which variety is sweetest today, or what's best for eating now versus in two days.\n- **The payoff is immediate.** You can eat one on the walk back to the car, juice running down your wrist, and the trip becomes a small event rather than a chore.\n\n**Tip:** Buy a mix of ripeness levels, some ready to eat today and some firm for later in the week, and keep them on the counter, not in the fridge, until they soften."
+    },
+    {
+      "id": "response-4a83e20bf95c309d73f979dc",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.02",
+      "status": "ok",
+      "text": "**An artisan cheese from the cheesemonger counter.**\n\nWhat makes it memorable is the experience around the cheese, not just the cheese itself:\n\n- **Talk to the person behind the counter.** Tell them what you're cooking, what you usually like, or what you've never tried. A good cheesemonger will steer you toward something you wouldn't have picked on your own.\n- **Taste before you buy.** Sampling lets you compare a young, creamy cheese with an aged, crystalline one, or a mild washed-rind with a sharper blue. Your preferences can surprise you.\n- **Learn its story.** Ask where it's from, who makes it, what the animals ate, and how long it aged. A wedge of cheese with a name, a place, and a maker attached tastes different at the dinner table.\n\nAsk, \"What's tasting especially good right now?\" Cheese is seasonal and changes from batch to batch, so you may walk away with something that won't be available next month.\n\nThen build the rest of the meal around it: a crusty baguette, some honey or fig jam, and a handful of nuts or fruit. The cheese turns an errand into a small discovery."
+    },
+    {
+      "id": "response-00f79407cbefb23dff2a6a9c",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.01",
+      "status": "ok",
+      "text": "**Gochujang.**\n\nThis Korean fermented chili paste is my top pick because it turns a routine grocery run into a small discovery. It's savory, a little sweet, mildly spicy, and deeply umami. Finding it means wandering into an aisle you might normally skip, reading unfamiliar labels, and maybe asking someone for advice on which brand to try.\n\nIt also inspires cooking right away. A few easy ways to use it:\n\n- **Quick glaze:** Mix with honey, soy sauce, and sesame oil for chicken, salmon, or tofu.\n- **Instant stew base:** Stir into broth with tofu, vegetables, and kimchi.\n- **Better sauces:** Blend into mayo for a sandwich spread, or whisk into a stir-fry sauce.\n\nTo make the trip more memorable, pick up a few companions: a jar of kimchi, toasted sesame oil, and a bag of short-grain rice. You'll leave with the start of a whole meal and a new flavor to build on."
+    },
+    {
+      "id": "response-09b596523485e0fe05e340b6",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.05",
+      "status": "ok",
+      "text": "**A whole fresh fish from the fish counter.** Something like a whole branzino, red snapper, or dorade.\n\nHere's why it makes the trip memorable:\n\n- **The challenge:** Choosing a whole fish takes some skill. Look for clear, bright eyes, red gills, firm flesh that springs back when pressed, and a clean ocean smell rather than a \"fishy\" one. It feels like a small test, and passing it is satisfying.\n\n- **The conversation:** The fishmonger becomes your guide. Ask what came in that morning, how they'd cook it, and whether they can scale and gut it for you. You'll often leave with a tip you'd never find in a recipe, like stuffing the cavity with lemon and fennel or how to tell when it's done at the bone.\n\n- **The payoff:** A whole roasted or grilled fish is a showstopper at a dinner party. It comes to the table crisp-skinned and fragrant, and carving it in front of guests makes the meal feel like an occasion. It's also simpler than it looks: olive oil, salt, herbs, lemon, and about 20 to 25 minutes in a hot oven.\n\nIf you want to push it further, ask what unusual seafood is available that day, such as sea urchin, fresh sardines, or langoustines. Trying something new makes the whole outing feel like an adventure instead of an errand."
+    },
+    {
+      "id": "response-c94d03608aa7261c969ef2e9",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.04",
+      "status": "ok",
+      "text": "**A favorite treat chosen for someone else.** Think of the snack your friend always steals from your pantry, or the odd cereal your kid has been eyeing for weeks.\n\nWhy it works:\n\n- **The memory comes from the connection, not the product.** You'll forget most groceries within a day, but you'll remember picking something out and thinking, \"They're going to love this.\"\n- **It changes how you shop.** Instead of rushing down the aisles with a checklist, you're hunting with a purpose, and that makes the trip feel more personal.\n- **The payoff comes after the store.** Handing it over, or watching someone discover it in the cupboard, is the part that sticks.\n\nIf you're shopping with a child, let them pick one item entirely on their own. The choice they make, and how proud they are of it, will probably be the most memorable part of the trip."
+    },
+    {
+      "id": "response-8590abf4672ddd2ff236428b",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.03",
+      "status": "ok",
+      "text": "A fresh-baked loaf of bread from the in-store bakery.\n\nGrab it last, while it's still warm. The scent of crust and yeast follows you through checkout and into the car, and it turns an ordinary errand into something you'll remember. Tearing off a corner on the drive home is a small ritual that feels a little like cheating, and it's one of the best parts of the trip.\n\nOnce you're home, the loaf makes the rest of the haul better too. It's good with the good butter, a wedge of cheese, olive oil for dipping, or a pot of soup. Pick a crusty sourdough, a rosemary focaccia, or a country boule, and you'll have a reason to enjoy the groceries before you've even put them away."
+    },
+    {
+      "id": "response-983ce10e8090b74b79b51dce",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.07",
+      "status": "ok",
+      "text": "**A really good bottle of extra virgin olive oil.**\n\nA small luxury like this stays with you because you taste it again and again, not just once. Here's why it earns the top spot:\n\n- **It upgrades many meals.** A drizzle over roasted vegetables, soup, grilled bread, eggs, pasta, or even vanilla ice cream makes ordinary food taste intentional.\n- **The difference is noticeable.** A fresh, well-made oil is grassy, fruity, peppery, and sometimes bitter in a pleasant way. The first taste on a piece of warm bread tends to be a small revelation.\n- **It's an affordable indulgence.** For roughly $15-30, you get something that feels special without a big splurge, and a bottle lasts weeks.\n- **It makes the shopping itself more fun.** Choosing one invites you to read labels and compare regions, like Tuscany, Puglia, Crete, or California.\n\n**What to look for:**\n- A harvest date (within the last 12-18 months) rather than just a \"best by\" date\n- A dark glass bottle or tin to protect it from light\n- A named origin or single estate, ideally with a mention of the olive variety\n- \"Extra virgin\" certification\n\n**How to use it for maximum memory:** Save it for finishing rather than high-heat cooking. Taste a spoonful on its own first, then try it on simple foods like tomatoes with salt, fresh bread, or a soft-boiled egg, where its flavor can shine."
+    },
+    {
+      "id": "response-91c0f53a176a089025e58421",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.08",
+      "status": "ok",
+      "text": "My top pick: a nostalgic childhood candy, specifically something like Pixy Stix, Fun Dip, or whatever neon-wrapped treat you begged for at the checkout lane as a kid.\n\nWhy it works: grocery shopping is usually a routine errand, but spotting that one familiar package turns it into time travel. You turn down the candy aisle, catch the bright colors out of the corner of your eye, and suddenly you're eight years old again, tugging on a parent's sleeve and negotiating for just one thing. The crinkle of the wrapper and the first sugary taste bring back details you didn't know you'd kept: the car seat, the cartoon on Saturday morning, the corner store.\n\nTo make it count:\n- **Pick the one you haven't seen in years.** The longer the gap, the stronger the jolt.\n- **Buy it on purpose.** Write it on the list so it feels like a planned treat, not a guilty impulse.\n- **Save it for later.** Eat it somewhere quiet, or share it with someone and trade stories about your favorite childhood snacks.\n\nIt costs a dollar or two, and it turns an ordinary trip into one you'll remember."
+    },
+    {
+      "id": "response-3e783f42941733218f953020",
+      "request_id": "p2-3a024c1febb26cec05ace2f6.answer.09",
+      "status": "ok",
+      "text": "**Fresh flowers: a bouquet from the store's floral section.**\n\nGroceries are mostly about function, so a non-food sensory item stands out. A bouquet gives you color and scent, and it changes how the trip feels. Walking past the produce with something beautiful in your cart makes the whole errand feel more like a treat than a chore. At home, the flowers brighten the kitchen table or counter for a week or more, so the pleasure outlasts the meal you cook.\n\n**Practical tips:**\n\n- **Budget:** A good grocery store bouquet usually costs $5-$12. That's a small spend for the lift it gives. Mixed bouquets are often cheaper than buying single stems.\n- **Picking blooms:** Choose bunches with a mix of open flowers and tight buds, so they keep opening over the week. Avoid petals that are browning or drooping and stems that look slimy or yellow.\n- **Longevity:** Look for sturdy varieties like alstroemeria, carnations, chrysanthemums, or snapdragons. They hold up well and cost less.\n- **Care:** Trim the stems at an angle when you get home, put them in clean water, and change the water every couple of days.\n\nPutting flowers on the list takes almost no effort, and they make an ordinary shopping trip feel a bit more special."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-055c45e37c6c14cca664",
+    "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-17"
+    }
+  }
+}

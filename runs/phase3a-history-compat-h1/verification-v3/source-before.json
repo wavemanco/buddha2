@@ -1,0 +1,12 @@
+{
+  "PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md": "3375060b7252941a1aa9c8860232231c7edbe8af836e5940111c075b2a9bbf1a",
+  "followups/phase3a_history_compat_h1/Dockerfile": "69f80a5e96a4d68ba3960050e65a0e5255bc88ae8f3515eb56d476c22df49c04",
+  "followups/phase3a_history_compat_h1/README.md": "1ab1da6900cdc8604743d7d14f1b441a089152bcafe0398cef891cb223a61a65",
+  "followups/phase3a_history_compat_h1/__init__.py": "bcb32f9c7c23db235a44ce55ccecadee64f51b72b1cb9fd9cf7810c856d895d2",
+  "followups/phase3a_history_compat_h1/fixture.py": "477a0ad1551e10668c6482e3e227e0726283f757382929d51819eafd83985223",
+  "followups/phase3a_history_compat_h1/guard.py": "b80415038bec5b70fc66ef536f556e44a4d9f7a28237d383a505589c9916e78d",
+  "followups/phase3a_history_compat_h1/probe.ts": "29ac3a5531ccd583f0896a731e4141a2fee6e4316d1e2dbb9355620cb7c0f54f",
+  "followups/phase3a_history_compat_h1/runtime.py": "37f0a89c8f47b84afaa088a272800d2657d217327c148558cfdd9872bed5356d",
+  "followups/phase3a_history_compat_h1/tests.py": "9eb7b33be5446e31261c6f7fed634f6b5cb8daa6311f209e6e2e4e216d409554",
+  "followups/phase3a_history_compat_h1/verify.py": "c784974d3c38a08144465ca960f07b53e16c81d2a96f21c38660baa2411eb936"
+}

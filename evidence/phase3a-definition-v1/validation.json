@@ -1,0 +1,45 @@
+{
+  "api_spend_micro_usd": 0,
+  "balanced_arm_order": true,
+  "broken_links": [],
+  "caps_and_reservations_consistent": true,
+  "changed_previous_files": [],
+  "cost_scenarios_recomputed": [
+    {
+      "all_second_shapes_usd": "9.46489",
+      "clean_usd": "6.89089",
+      "first_pair_usd": "1.75663",
+      "scenario": "lean"
+    },
+    {
+      "all_second_shapes_usd": "22.62589",
+      "clean_usd": "15.89389",
+      "first_pair_usd": "4.13113",
+      "scenario": "working"
+    },
+    {
+      "all_second_shapes_usd": "68.34628",
+      "clean_usd": "47.75428",
+      "first_pair_usd": "12.97576",
+      "scenario": "heavier"
+    }
+  ],
+  "current_authority": "documentation-only",
+  "files": {
+    "CURRENT_SPEC.md": "193a26ebe8eb548d7152ac0963b555f0fad0449b5a749f72077be78f97e941d5",
+    "PHASE3A_DEFINITION.md": "e66ef31ec7841285d07cfdb452ff863ec68be8e5a70af42ac9baab047d01629a",
+    "specifications/phase3a-v1.json": "d3a45d249f6fdf8a596ae82e096d0fb5c77406896447fbc10f22de9d237239ed"
+  },
+  "historical_source_report_grant_archive_preserved": true,
+  "kind": "phase3a-definition-validation-v1",
+  "links_checked": true,
+  "native_retry_and_http_counts_consistent": true,
+  "new_runtime_code_files": 0,
+  "passed": true,
+  "previously_tracked_files_checked": 1130,
+  "protected_original_accessed": false,
+  "provider_calls": 0,
+  "runtime_tests_or_experiments_run": 0,
+  "selected_parent_tasks_match_hash_rule": true,
+  "six_required_definition_categories_present": true
+}

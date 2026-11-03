@@ -1,0 +1,88 @@
+{
+  "benchmark_decision_sha256": null,
+  "candidate_cost_micro_usd": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "cutoff": "2026-10-28T10:16:14Z",
+  "decision_sha256": "f1604716e5f98aed14432f3d9aede3dda787395fb32ba96202f9ed3726932ee9",
+  "eligible_methods": [
+    "A",
+    "B",
+    "C"
+  ],
+  "execution_sha256": "3cc13c2cab99be5aae64ced44fa9d404ce03576223932635d2a8dac8d8bb5557",
+  "fixture": false,
+  "human_assessment_sha256": null,
+  "human_status": "not-required",
+  "implementation": {
+    "files": {
+      "__init__.py": "e908915f394c261ef4369f4a2a2255e609015f6bd5e196e998dc4e19a0e84090",
+      "__main__.py": "2714bf3a2444998203ff6e148caa6903d835684b010c8bd8b977bf545bceaea4",
+      "artifacts.py": "156e2aabc91d1a6388b43ab682100d0a4197e0f4b6980d2c9d34594936c2a5ed",
+      "engine.py": "09430c9a9c505ea0d6d167517ca81aadca2736daf820b9bd4ba488da45a38768",
+      "evaluation.py": "46e21c1cc44f1c8dce90a33e7583ff5f57371a15187ca9b636e17bf0add6672f",
+      "muce.py": "34a7320c4449dfe14eae938501b86a5a384cbf52d3e5f8f051fb9e52a12094be",
+      "nb_worker.py": "e5e6a3f42077b5658207b32b15cd7645d7ba6686a9046045958b88a4f24b6b13",
+      "pairs.py": "bbc95a5ea1328a5a14dbeb4b6847da9d5a2d991d33ffe416020d97ab02ef8232",
+      "phase1.py": "f093b467ba7c2afc9efb93beb8e41dc992ebd4237b73049f13b6b05470041cf2",
+      "phase1_runner.py": "f5ca19ab34a1c932a66866e2cff1a9605456f1835119e02a47c779c8df35bb98",
+      "phase2.py": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+      "phase2_am1.py": "23661181068422e59531e4cdbc37f32892429dabc9221ae41503e9c0c4629c86",
+      "phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+      "phase2_am1_mock.py": "f462d259425bd9cf68070f56b82350dbe6a8c02587b7ca11dbd7d70cecf21fe6",
+      "phase2_analysis.py": "024bbadb8537099da3e07e43a66249bf1e5bc5cf2cae17163e973d86191db00c",
+      "phase2_contracts.py": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+      "phase2_coverage.py": "1f104482c10ffd2ca33f1f21ec7a2b556341f9b0cbe612d52dbec929f334f4ef",
+      "phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+      "phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+      "phase2_human.py": "9d800a25fd3a3f457e7083446dd60e82de43adc0b53c078ea59bba9d7764a566",
+      "phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+      "phase2_policy.py": "557a7bd435aede212d09eb30ac990ba2bd77956b2ff42d4483433a70bb1bf439",
+      "phase2_release.py": "495962d7a03bb048acc93bb818cbc5d16a277cf835b11461d049b31ed3f1093f",
+      "phase2_release_journal.py": "a93b2b917e5cd7d10ce894806884c9fb41650e0c6a912ec63e8f9e4177be9c4e",
+      "phase2_release_launch.py": "abd77810219e83f029e08eef67efa0fc02f26e14fa4587188331c7272fb78ded",
+      "phase2_release_runner.py": "5468f40ae543284868c5348d414da05bef3d05cc8364576767bb6e1d0467e483"
+    },
+    "id": "phase2-independent-decisions-v1"
+  },
+  "kind": "phase2-track-decision-v1",
+  "limitations": [
+    "Development-only decision; fixtures never select a real seed.",
+    "Shared outputs are not independent replication.",
+    "Human review applies only to its declared sample, not later outputs.",
+    "Shared source/scoring/accounting defects invalidate affected tracks."
+  ],
+  "mean_utility": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "native_assessment_sha256": "dc45134373a419607375f6e3e601e46c7b64541b410dbc7b85bf1f825e5d4e78",
+  "native_complete": false,
+  "native_evidence_sha256": "045befecc84592a2a81015ea6d922fb8a50a99fcf5a83dbebac5bb719641281f",
+  "parent_decision_sha256": null,
+  "policy": {
+    "human_required": false,
+    "id": "phase2-benchmark-v1",
+    "requires": [
+      "complete comparable native coverage",
+      "reconciled accounting"
+    ],
+    "sort": [
+      "highest mean utility",
+      "lowest actual generation/ranking cost",
+      "A then B then C"
+    ],
+    "version": 1
+  },
+  "policy_predeclared_for_execution": true,
+  "policy_sha256": "ace4b819146101f9e03e1dcf4314dacadc2057ae7bad921211812129e8451941",
+  "selected_method": null,
+  "selected_procedure_sha256": null,
+  "status": "inconclusive",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "synthetic_selected_method": null,
+  "track": "benchmark"
+}

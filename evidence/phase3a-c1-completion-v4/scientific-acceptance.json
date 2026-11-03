@@ -1,0 +1,207 @@
+{
+  "created_at_utc": "2026-10-30T18:20:35.908043+00:00",
+  "evidence_file_sha256": {
+    "runs/phase3a-c1-completion-v4/launcher/12046f8b072043ebb524cd16b97c19e3.inspection.json": "0fb1f6f49c603d3d95bcadc4db7f58d84da6c88a657c9dbec352107248b8ce1f",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.inspection.json": "355353b577b0368c5df30079ba6c0f0b048ba5d4e2d515d0bb7b276298775a6e",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.result.json": "256fdca02ff1e0b45fa1d4ffa5f31b7f0b4610a6cf3fbea101029c95538daa1a",
+    "runs/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.stdout.log": "78abd4239e80c58caff6e32e43e65255984c9b56844b15d526b9a9a08764c082",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-config.log": "5b724b7484731f47fc9def7d8e751b894fc69be56bb9e7140cf286b3dde369c3",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-host.json": "5e8655ff0896813aa9af42f321626a85d6fa984992fd8b2f87b1b9fd1ec6a89a",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher-mock.log": "b27a9087a517e30be711b0e437167a77d257feaa899dab3dd1fab6ec68778c78",
+    "runs/phase3a-c1-completion-v4/verification-v3/launcher.json": "45cfbd5c444c6d32fdb0b83bdf4e6811d82035850f9a595df9a7e8f3e5353243",
+    "runs/phase3a-c1-completion-v4/verification-v3/matrix.json": "42247aed0c017546b3459e4f0bd205b1a54f645fc7ef83a6afc3c41e37698fa0",
+    "runs/phase3a-c1-completion-v4/verification-v3/mock-proof.json": "555a330070ea4d57082c4bff76772be7e8290fa91b49d77988ff9bb9af5b2783",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation-after.json": "5f6ab5c200b2c16ea1f80f6ed569ea46fc8df042a681da00eb63ea62c72e8a5d",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation-before.json": "5f6ab5c200b2c16ea1f80f6ed569ea46fc8df042a681da00eb63ea62c72e8a5d",
+    "runs/phase3a-c1-completion-v4/verification-v3/preservation.json": "eed6a29fedd842631c470086953015a7a232d8eafd8478cd7cc55641663983ea",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/offline-gate.json": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+    "runs/phase3a-c1-completion-v4/verification-v3/release/study.json": "80da9e8702941323e1abbb78df9ceaa568ed3462a4ea3c4c28522064d0b2c37e",
+    "runs/phase3a-c1-completion-v4/verification-v3/replay.json": "308140c39f4d591a5a88cfdd4ec21b44ebf982c6acdd5c7f2f2c2fd7a799a6ad",
+    "runs/phase3a-c1-completion-v4/verification-v3/source-after.json": "9ef919ea357be9d13da2ee06d6b7cc67cab6fc90d70065fc517c7e24e2052030",
+    "runs/phase3a-c1-completion-v4/verification-v3/source-before.json": "9ef919ea357be9d13da2ee06d6b7cc67cab6fc90d70065fc517c7e24e2052030",
+    "runs/phase3a-c1-completion-v4/verification-v3/static.json": "cf5e1dd218eb2479c783c56c42f45a0c517728d20f18247ec9280199e686d2db",
+    "runs/phase3a-c1-completion-v4/verification-v3/tests.json": "b22800288b5023c718a38a751dbb24b3a1048a935dc1526b82f33392b0ca5df2",
+    "runs/phase3a-c1-completion-v4/verification-v3/verifier-exit.json": "c1958c2a088d492afd93410706954425cf14fba511f29a4ed214380066bf0a72",
+    "runs/phase3a-c1-completion-v4/verification-v3/windows-tests.json": "a75d67ba05c481a9e8d0de0e2cdfe14283ccc8a4086a7ae742fecbbcea12971e",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/readiness-review.json": "bb02970234766f88fb3d017233d10a3c8482409d4cb9f14254f4d1b8a73e5c57",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/analysis.json": "bd63255d7940ddce4795f542711d525fc2b30d0bdcd74605c786482aacc83382",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/reports/final/rows.json": "1b40b302b32670c7369d21647946f4c319336f889a89ee5443d86a744bbbeb66",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "92ac10b2a03f063a915690322dbcc77c6496cf7fea6adf03f6948c4a08af735b",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "667e23c735924b1f3a503641f92f406049bd9514397d1b3f295921a3af39c259",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-01/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "40a78b4476c5bb4d2981ff00c6c0ada1ba75137ba1084782ef3e53936f7ac210",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "8e681885612fb1e9568b47372f4fe13c10fcbee8ff6df7f6a6085356b68c1933",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "494d5dc5eca13a0830b8db1ac292e9e2b69073cd7a0c0e001e5b358b25e0bb5f",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-02/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "28dff195a0badfbb3602333f528a7722dbd71d3b688c0a00cda16a0f8ef39176",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "1e01df0bfcf4464d44c9ec97220aedc8f6f0cccda1179aa7b804cbd3e690b73f",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "b450b5577bae8fe4fe625132b2a2dde02a87e250a512c79af89319f75ea9141c",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-03/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "8a39a20f51fec0711d43cd421763f30bb4bf60953fe4db3d25c3191dac29892b",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/agg1.a1/system-profile.json": "7697325daee0fa9ac6ac79858855e5e79809d88b8e00fb57aaf338d284b0c026",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/dom1.a1/system-profile.json": "f8e00894d0142c964222c0cab68567fc223bcb8b6e9e224a6cca088c5ebdc61c",
+    "runs/phase3a-compat-c1-v1/completion-v4/080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34/mock/search/p3a-04/adaptive/editor-audit/c1-contracts/inv1.a1/system-profile.json": "6a6686a9f63971c643bc2edaf62eb4ddd23d73275ae30104ea58759f56bfacc3"
+  },
+  "historical_accounting": {
+    "held_micro_usd": 22880000,
+    "known_micro_usd": 13101271,
+    "released": false,
+    "unknown_requests": 2
+  },
+  "kind": "phase3a-c1-completion-r3-scientific-scope-acceptance-v1",
+  "launcher_sha256": "0149a21063a6b394e460a01885ff332e1f5fdc575093936da6a01bf85ee75dbb",
+  "limitations": [
+    "No live model behavior, semantic grounding, effectiveness, human preference, held-out generalization, account availability or actual provider billing is established by this offline acceptance.",
+    "Scripted 11/10/11-round completion and grounded KEEP_BASE mechanics do not predict that a real model can or will complete within the allowance; counted live readiness still requires independent semantic inspection.",
+    "Four exposed development prompts support only the predeclared descriptive pilot; equal ceilings are not equal realized compute.",
+    "Windows physical file-symlink creation was unavailable, so that rejection path is not claimed exercised; actual junction and missing-descendant rejection are evidenced.",
+    "The two historical unknown liabilities remain held in full. This certificate releases no liability and authorizes no extra method change or repeat."
+  ],
+  "mechanical_sessions": [
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-01",
+      "session": "inv1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "KEEP_BASE",
+      "effective_changed": false,
+      "ordinary_requests": 10,
+      "pilot": "p3a-01",
+      "session": "dom1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-01",
+      "session": "agg1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-02",
+      "session": "inv1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "KEEP_BASE",
+      "effective_changed": false,
+      "ordinary_requests": 10,
+      "pilot": "p3a-02",
+      "session": "dom1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-02",
+      "session": "agg1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-03",
+      "session": "inv1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "KEEP_BASE",
+      "effective_changed": false,
+      "ordinary_requests": 10,
+      "pilot": "p3a-03",
+      "session": "dom1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-03",
+      "session": "agg1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-04",
+      "session": "inv1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "KEEP_BASE",
+      "effective_changed": false,
+      "ordinary_requests": 10,
+      "pilot": "p3a-04",
+      "session": "dom1.a1",
+      "terminal_used": false
+    },
+    {
+      "decision": "EDIT",
+      "effective_changed": true,
+      "ordinary_requests": 11,
+      "pilot": "p3a-04",
+      "session": "agg1.a1",
+      "terminal_used": false
+    }
+  ],
+  "offline_gate_file_sha256": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+  "offline_gate_seal_sha256": "5a58a241f9ee7b8cd0a2b5840452e80700171913e226891b0a6b66d86c338b4e",
+  "passed": true,
+  "policy_sha256": "a43e580d1d3cd9ad49f10d5633c5895e87d97be1a6af5571bc21e66c9871918e",
+  "reviewer": {
+    "agent": "r3_scientific_scope",
+    "authored": "This acceptance record only. Authored no implementation, mocks, tests, definitions, study, control policy, launcher, verifier or gate.",
+    "implementation_author": false,
+    "review_mode": "Independent source reading and saved public evidence verification; no project functions imported, tests rerun, provider or credential access, or container/process control."
+  },
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scientific_scope_findings": [
+    "Actual pinned native agg,k=1 path remains invoked; saved ledgers show three stages and base/INV/DOM/AGG four rollouts for each of four fixture prompts.",
+    "All twelve saved OpenCode system profiles use sixteen steps and read/write/edit only; each native fixture session finishes normally in eleven/ten/eleven ordinary requests, after the old seven-request boundary and before terminal16.",
+    "Complete lossless evidence precedes the first decision; mission-first delivery, written-notes reread and post-write verification are present. Four normal DOM KEEP_BASE decisions preserve consumed fields and remain eligible; edits are not forced.",
+    "Readiness rejects terminal16 before admission. Later changed/unchanged terminal classifications preserve the inherited eligibility rules and cannot qualify initial normal readiness.",
+    "The same four exposed development prompts, C-N seed, fixed best-of-six whole-portfolio control, delivered ordering, native assessment and fixed duplicate diagnostic remain in scope.",
+    "Inherited reporting requires eight valid primary scores, independently grounded normal live readiness/authentic path, classified diagnostic and settled new accounting before a real pooled conclusion; missing coverage or deadline/unknown holds retain null conclusions.",
+    "Current fixture reports explicitly retain scientific_complete=false, authentic_live_path=false and selected_method=null. Synthetic arithmetic is not evidence of effect."
+  ],
+  "scope": "Scientific-scope acceptance of the complete R3 offline execution kit under definition 1.1; engineering evidence only, not Phase 3A scientific completion.",
+  "sha256": "6f10f75ec5cfa594ce79a3ade0232c794313a47d6d2d715aec8c9ff8872495b0",
+  "source_commit": "d42876021d31c6ecea354f7ca15329a3c7caa19e",
+  "source_sha256": "5c592fdf7724fe7371491ab3b2ec2c5d223bcaf7bede091485789d5050a5ecfb",
+  "study_sha256": "080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34",
+  "verification": {
+    "Linux_executed_passed": 123,
+    "Linux_skips": 3,
+    "Windows_file_symlink_creation_unavailable": true,
+    "Windows_file_symlink_rejection_exercised": false,
+    "Windows_junction_and_missing_descendant_rejection_exercised": true,
+    "distinct_scheduled_tests": 126,
+    "duplicate_scored_and_classified": true,
+    "errors": 0,
+    "failures": 0,
+    "gate_internal_seal_and_file_hash_verified": true,
+    "history_preservation_before_after_identical": true,
+    "host_mock_additional_calls": 0,
+    "mock_HTTP_calls": 711,
+    "new_pending_unknown_reserved": 0,
+    "primary_fixtures_scored": 8,
+    "provider_configuration_never_started_or_keyed": true,
+    "real_provider_calls": 0,
+    "same_Windows_cases_passed": 3,
+    "saved_replay_new_mock_calls": 0,
+    "saved_report_files": 8,
+    "six_gate_group_file_hashes_and_five_bindings_verified": true,
+    "source_before_after_identical": true,
+    "source_files": 294,
+    "verifier_actual_exit_code": 0,
+    "verifier_recorded_pinned_containers_remaining": 0
+  }
+}

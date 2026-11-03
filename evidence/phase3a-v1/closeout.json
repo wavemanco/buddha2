@@ -1,0 +1,95 @@
+{
+  "archive": {
+    "CRC_and_all_member_SHA256_verified": true,
+    "Docker_image_embedded": false,
+    "full_benchmark_datasets_embedded": false,
+    "members": 1797,
+    "path": "evidence/phase3a-v1/offline-execution-kit-v3.zip",
+    "sha256": "f0b6448ff0b72b34b3f679abca8961137888b7e2467ad76b6645cc6165210aa0"
+  },
+  "artifacts": {
+    "PHASE3A_IMPLEMENTATION_REPORT.md": "6384df532b1ad314b4ab89aa35349bdf120e398b2e2c96c44cbacd5d30d9111b",
+    "PHASE3A_RUNBOOK.md": "770c35551083d36142ed8cfe16c4a7fbf3fab8e5905d79ef2bdb4cfd24caa338",
+    "evidence/phase3a-v1/authorization.json": "6fcfe85e5c55f93fc27ae75caa755d36f5f6b378a495f141329c6632bd8793a0",
+    "evidence/phase3a-v1/offline-execution-kit-v3.manifest.json": "cfd362d03333bc2d1419071bbe9dbc1208fee39767daf9fe1d11de55c5ce3cb9",
+    "evidence/phase3a-v1/offline-execution-kit-v3.zip": "f0b6448ff0b72b34b3f679abca8961137888b7e2467ad76b6645cc6165210aa0",
+    "evidence/phase3a-v1/prior-evidence-audit.json": "688000d3ecb41c3d3ee8cd19a05c8fc9ab1842686126b5dab3393ee34a08a290",
+    "evidence/phase3a-v1/runtime-provenance.json": "a089a8d4fc4c51eb222dad2cb6880a6414b214a5723430e9fb908507f4ed2cb2",
+    "followups/phase3a_v1/.gitattributes": "fcd931ede79b8d08447b17e81b71f1f20b424dc340751fab5fdac17b6fd2cab9",
+    "phase3a.ps1": "9458cc558b4d170ed8f312854edaa2ea065a0a6b1ea0c97cc141a010a1c17c1f",
+    "runs/phase3a-v1/preservation-v3.json": "0fba85c0a4c728c3a4c963b321ac25a03a7365ea35d13b7e6ed8ff46a87fdcb8",
+    "runs/phase3a-v1/release-v3/post-gate-configuration.json": "f281c5515416636aa5a28238b89da856ebdae28329fde8834c27f4b5542a940f",
+    "runs/phase3a-v1/release-v3/raw-run-manifest.json": "b262496755e5ee1bc3c51013e23156c403f1e8ba0f669bbbd9e3d43c95976b46",
+    "runs/phase3a-v1/release-v3/readiness.json": "3ea3fb515d345c6ab5e1e002b18c42aa27c3193b01ef4c3445a29163adc43444",
+    "runs/phase3a-v1/release-v3/report-snapshot-proof.json": "5ef0ccb2305f78ce6473b79c95d5ebb37f1bfa9020a3e21dd720bdd5ead63098",
+    "runs/phase3a-v1/release-v3/resume-check.json": "fa04a090d28af3730a81738df4cf26999ef0db0a32d7e378544cfc139d0dd52b"
+  },
+  "authority": {
+    "cap_micro_usd": 220000000,
+    "included_first_pair_checkpoint_micro_usd": 65000000,
+    "new_budget_approval_required_for_defined_pilot": false,
+    "whole_phase_approved": true
+  },
+  "checks": {
+    "bandit_passed": true,
+    "current_and_retained_runtime_source_files": 142,
+    "gate_groups_passed": 9,
+    "independent_nested_artifact_hashes_checked": 1396,
+    "linux_host_only_skip": 1,
+    "linux_test_passes": 65,
+    "mypy_passed": true,
+    "preserved_legacy_tests_passed": 271,
+    "raw_files_verified": 1332,
+    "ruff_passed": true,
+    "separate_actual_windows_host_pass": 1
+  },
+  "closeout_sha256": "e6507a6f182aeb3507e8398e3e817e68643f9f4e7a54b32d021a0659ef27cd8b",
+  "completed_at_utc": "2026-10-29T01:58:12.690666+00:00",
+  "engineering_launch_notes": [
+    "The first archive-helper invocation was rejected by the image default CLI before helper execution or input/output changes. Explicit python entrypoint completed the prepared archive job. No scientific or provider attempt occurred."
+  ],
+  "fixture_status": {
+    "authentic_live_path": false,
+    "fresh_cn_rollouts": 40,
+    "known_mock_http": 619,
+    "maximum_slots": 727,
+    "report_replay_files_byte_equal": 7,
+    "resume_new_calls": 0,
+    "resume_routes": [
+      "physical-host-first",
+      "current-source-sdk-mock-cli-remaining"
+    ],
+    "scored_assessments_including_duplicate": 9,
+    "selected_primary_finals": 8,
+    "synthetic_spent_micro_usd": 355193,
+    "unresolved_reservation_micro_usd": 0
+  },
+  "git_eol_preservation": {
+    "new_metadata": "followups/phase3a_v1/.gitattributes",
+    "purpose": "Preserve the frozen schema CRLF bytes in Git; no effective runtime input change.",
+    "rule": "editor-tools.json -text"
+  },
+  "kind": "phase3a-offline-closeout-v1",
+  "launcher_sha256": "9458cc558b4d170ed8f312854edaa2ea065a0a6b1ea0c97cc141a010a1c17c1f",
+  "live_status": {
+    "live_journal_exists": false,
+    "provider_calls": 0,
+    "real_credentials_accessed": false,
+    "spent_micro_usd": 0
+  },
+  "next_step": "Fresh masked operator key entry in the inspected launcher, then counted first-pair engineering review and remaining three pairs under the same approved authority. No Phase3B.",
+  "parent_head": "a2eed26fde5bcfbdaba0afb3aba6ed39f87d4158",
+  "policy_sha256": "8a5cd98c5497b4e69a92c9def0cf22b163ef01c96e178b05754f6ab00f9e3349",
+  "preservation": {
+    "frozen_runtime_source_changed": false,
+    "historical_reports_already_committed": 13,
+    "old_tracked_files_preserved": 1137,
+    "original_folder_accessed": false,
+    "predefinition_baseline_files_preserved": 1130
+  },
+  "runtime_sha256": "28e56dfbe214cefdb547bb33c2785642f53cd82aec21e07c2012a3c6e6777a4b",
+  "scientific_phase_complete": false,
+  "source_sha256": "583b2e816863f98c050615dc501273f9f11f2f3caad0b0dcd5795285bf71dbf4",
+  "status": "offline-complete-live-pending",
+  "study_sha256": "1628a958477de938f55bd925cfa08150a1067ef8233ae937ae79e9bcbbcfe42a"
+}

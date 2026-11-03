@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "c8ab661f32a805f43038318649516ef84b5adc3e97739f1853e4d650242076ff",
+  "portfolio_id": "portfolio-a60c1026af7bfb09343ce8ebbf03dd49cf8ea06cbb9cd9d23f24efa7e32cc7d5",
+  "portfolio_sha256": "a002db2c185f9d2fb31fb470e83b87688e88263d83aec3b59a8360771b18e0a2",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-d8e673f3e914d38a27b7183d.plan",
+      "p2-d8e673f3e914d38a27b7183d.answer.00",
+      "p2-d8e673f3e914d38a27b7183d.answer.01",
+      "p2-d8e673f3e914d38a27b7183d.answer.02",
+      "p2-d8e673f3e914d38a27b7183d.answer.03",
+      "p2-d8e673f3e914d38a27b7183d.answer.04",
+      "p2-d8e673f3e914d38a27b7183d.answer.05",
+      "p2-d8e673f3e914d38a27b7183d.answer.06",
+      "p2-d8e673f3e914d38a27b7183d.answer.07",
+      "p2-d8e673f3e914d38a27b7183d.answer.08",
+      "p2-d8e673f3e914d38a27b7183d.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-234ff95bc81e8f3ee6747e31",
+      "index": 0,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.00",
+      "status": "ok",
+      "text_sha256": "9258553524c9618648610e78a4debf614ce9ef12aa1e95a31374348d4e58fac5"
+    },
+    {
+      "id": "response-cee2a9d0e16ac556e60bbce9",
+      "index": 1,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.01",
+      "status": "ok",
+      "text_sha256": "87269d7042c851101611f089f70e3427f866d6bb41fe4cee757c5e674fb4c78f"
+    },
+    {
+      "id": "response-479e74228eb29604f06dde02",
+      "index": 2,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.02",
+      "status": "ok",
+      "text_sha256": "1f364ef9145703948b034c74a1667733b6461c1d630c779207d92c3d0ed2f58c"
+    },
+    {
+      "id": "response-8f12b505c91c6960da45e759",
+      "index": 3,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.03",
+      "status": "ok",
+      "text_sha256": "2f2da0eed681771330bf446a642fe8665100f2b67c7cac390068e39530fe630c"
+    },
+    {
+      "id": "response-ff182c6d1413099c599c8dc0",
+      "index": 4,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.04",
+      "status": "ok",
+      "text_sha256": "23edc43271d20392d16a8565696d19fffeba468144a6034738396c990cbda881"
+    },
+    {
+      "id": "response-8641ecf5a313d7acf8b5ac02",
+      "index": 5,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.05",
+      "status": "ok",
+      "text_sha256": "878c2775715b8ff2b9d013c4642069c6427d06fb9a1c2c0fb03f0fefe8d00d86"
+    },
+    {
+      "id": "response-2ff82608d51a4cb2c0af39a3",
+      "index": 6,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.06",
+      "status": "ok",
+      "text_sha256": "b5a69a8ced21922c11ccf3e8a2644776c731e4ae8d61c98fdfece03e1d51bd96"
+    },
+    {
+      "id": "response-be7962f19bfd9a718049ea43",
+      "index": 7,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.07",
+      "status": "ok",
+      "text_sha256": "cf08ae1c4b54722838f754e8d76a2c1efe386d7e6ce887854e0a003f3bdece01"
+    },
+    {
+      "id": "response-f8d842cd7f9ed82992d34bca",
+      "index": 8,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.08",
+      "status": "ok",
+      "text_sha256": "c94166507368585637b21ea94e1d86b6aaa239264569a1ae14d2ef0d834acf93"
+    },
+    {
+      "id": "response-d450068230ba016dafec6dcd",
+      "index": 9,
+      "request_id": "p2-d8e673f3e914d38a27b7183d.answer.09",
+      "status": "ok",
+      "text_sha256": "18f61794d229138ff046348807d7dcefa90b1708f9e5c189902c39ddc2392990"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-0ac59a48456661d0d8d5",
+    "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-2"
+    }
+  }
+}

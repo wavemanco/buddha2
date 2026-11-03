@@ -1,0 +1,23 @@
+{
+  "authorized": true,
+  "calls_require_offline_gate_and_fresh_masked_keys": true,
+  "cumulative_max_attempts": 1660,
+  "cumulative_max_exposure_micro_usd": 240971444,
+  "definition_sha256": "b63081c5817c7f261f639acab4e49b0c31da669a6f8917982892a8fe9ee7bb5b",
+  "first_assessment_sublimit_micro_usd": 23700000,
+  "first_cap_micro_usd": 50860000,
+  "historical_known_micro_usd": 12231444,
+  "historical_liability_release_authorized": false,
+  "historical_reserved_micro_usd": 22880000,
+  "kind": "phase3a-c1-completion-r2-authority-v1",
+  "latest_user_authorization": "based on what we have done till now, if R2 needs redefining, do that and then (or otherwise) proceed to complete the R2 block.",
+  "models_and_billing_profile_unchanged": true,
+  "new_cap_micro_usd": 205860000,
+  "new_max_attempts": 775,
+  "no_separate_readiness_study_or_spend": true,
+  "objective": "complete Phase 3A. All proposed caps below $250 are hereby auto-approved",
+  "old_results_reused": false,
+  "readiness_included_micro_usd": 20000000,
+  "recorded_at_utc": "2026-10-30T03:20:51.415077+00:00",
+  "scope": "One complete R2 block: coordinated deadlines/cancellation and diagnostics, full offline kit/gate, one fresh four-prompt pilot with counted readiness, reviews, remainder and closure; no R1 continuation or automatic repeat."
+}

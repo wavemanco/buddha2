@@ -1,0 +1,76 @@
+{
+  "added_since_predecessor": [
+    "followups/rank_format_v1/tests/test_cli.py"
+  ],
+  "changed_since_predecessor": [
+    "followups/rank_format_v1/cli.py"
+  ],
+  "handoff_path_clarification": {
+    "correct_study_argument": "phase2b-rank-format-v1/release-r2/study.json",
+    "incorrect_prefix": "runs/ must not be added to that launcher argument",
+    "reason": "Get-RunPath joins Study/Grant relative arguments beneath the fixed new project runs directory.",
+    "verdict": "confirmed"
+  },
+  "identity_handling": {
+    "earlier_review_not_overwritten": true,
+    "new_final_preparation_namespace": "phase2b-rank-format-v1/release-r2",
+    "new_identity_required": true,
+    "prior_candidate": "root-reported abandoned offline preparation c6fc...; preserve it without rebinding"
+  },
+  "kind": "p2bn-independent-review-supplement-v1",
+  "narrow_correction": {
+    "fix": "cli.main now passes Path(\"/workspace/evidence/phase2b-rank-format-v1/authorization.json\") to the unchanged reader.",
+    "problem": "The retained artifact read_json helper requires pathlib.Path; the offline CLI grant branch supplied a str and failed before grant construction.",
+    "regression_test": {
+      "execution": "Not independently rerun in this read-only supplement; root final test run remains required.",
+      "path": "followups/rank_format_v1/tests/test_cli.py",
+      "source_review": "Reads the actual retained authority through the CLI, mocks only workflow.grant_template, writes a fixture grant in a temporary RESULTS directory, and verifies expected arguments and saved bytes. No real client or provider call."
+    },
+    "verdict": "pass-source-review; correct shared helper argument type with no authority, policy, model, scope, budget or provider change"
+  },
+  "parent_preservation": {
+    "frozen_launcher_hash_match": true,
+    "frozen_package_files_checked": 26
+  },
+  "predecessor": {
+    "file_sha256": "f768376d7443b8e32cc54edbffb212d468aca654268046b3ad2a23fbb9c53ade",
+    "path": "evidence/phase2b-rank-format-v1/independent-review.json",
+    "preserved_unchanged": true,
+    "review_sha256": "bd9bd752402d229a8917e434ed80a5c793c2f39e2ecbe945f23075f42c6a9dce"
+  },
+  "prior_review_applicability": "All eleven unchanged previously reviewed owned files match predecessor hashes; its source/boundary findings and limitations continue to apply. Both changed/new files are explicitly reviewed here.",
+  "remaining_limitations": [
+    "Full actual PowerShell fixture mock/resume/config lifecycle and measured handshake timing remain pending.",
+    "Final static/full test evidence must bind the new source identity, including the new CLI regression test.",
+    "This supplement is not the completed whole offline gate and establishes no provider readiness or scientific result."
+  ],
+  "review_actions": {
+    "application_source_edits": 0,
+    "credential_binding_or_ambient_environment_reads": 0,
+    "only_write": "evidence/phase2b-rank-format-v1/independent-review-r2.json",
+    "original_folder_access": false,
+    "provider_calls": 0,
+    "real_credential_reads": 0,
+    "sdk_constructions": 0,
+    "whole_gate_claimed_passed": false
+  },
+  "review_sha256": "ea43b7781e0765382d31e1f7403a13c07cb7608ba02a16c84f447eac4d159b63",
+  "reviewed_at_utc": "2026-10-28T17:06:39Z",
+  "reviewed_owned_files": {
+    "followups/rank_format_v1/cli.py": "52bdfe291a6fb7c064eb4c36e89756e376bd6aac8dcf2a9db780c7cd53524dcf",
+    "followups/rank_format_v1/launch.py": "6ef81a687c54a54f162d7bf5fd44d05b0d55e37c1c72a1a432f281d77e3aeb5b",
+    "followups/rank_format_v1/normalizer.py": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+    "followups/rank_format_v1/support.py": "a89a89979f97aac0dfc35c27c616b812bd98721fe0a81ecd795ee51baa52381f",
+    "followups/rank_format_v1/tests/fixtures.json": "e4acded332abb48de58f92cdfaaa728027ae0d0e1dd0b0dca15ddadc97e91d2c",
+    "followups/rank_format_v1/tests/test_cli.py": "40f41744a906efdef603709caf5da2f42485d7e186a37ae06fe985d76b31b3c9",
+    "followups/rank_format_v1/tests/test_launcher.ps1": "3fa7445c2e7f701004cd3758a18e42bea78ebf68698777e93104f41eb9c77f53",
+    "followups/rank_format_v1/tests/test_launcher.py": "8b0accdb203b2ff5cbb7dcc32172d55a2a086d069f8c4b05d00debd1bb7e89c1",
+    "followups/rank_format_v1/tests/test_normalizer.py": "2fd18dd6ffa1a789fe3bf4e4486e6d54f917dfdfd571dfe062d1c2e1cacefdd3",
+    "followups/rank_format_v1/tests/test_support.py": "c78a274f39a9abe1b0a279f08de2cae3cbd42c708be2caa19973f07ac83d2699",
+    "followups/rank_format_v1/tests/test_workflow.py": "37bbfb1bb251065b2a80be01a6e44d09189bc58491e0d1a3324c6d087ca0b42c",
+    "followups/rank_format_v1/workflow.py": "ec0f444283746ff778b32bbfa6784405beffb026e3c7286b0df253248d74fc2b",
+    "rank-format.ps1": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76"
+  },
+  "reviewer": "/root/release_launcher",
+  "status": "source-review-pass-final-host-integration-pending"
+}

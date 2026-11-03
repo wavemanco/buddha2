@@ -1,0 +1,36 @@
+{
+  "kind": "readiness-preservation",
+  "starting_commit": "d09ebebaf255fb1b52fee3483ada52765d750dcb",
+  "tracked_baseline_files": 376,
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "unchanged_preexisting_files": 372,
+  "effective_package_files_unchanged": 19,
+  "parent_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "parent_manifest_entries_verified": 2380,
+  "historical_current_documents_verified_in_frozen_archive": [
+    "AGENTS.md",
+    "EXPERIMENT_PLAN.md",
+    "PHASE_DEFINITIONS.md",
+    "README.md"
+  ],
+  "prior_source_result_files_unchanged": 250,
+  "historical_walkthrough_files_unchanged": 2218,
+  "upstream_files_unchanged": {
+    "harness2": 114,
+    "novelty-bench": 169
+  },
+  "lockfiles_unchanged": {
+    "requirements-build.lock": "215caa7e98c92126bc218409820d6374a801f3ab006e8221969ece313a63cffe",
+    "requirements.lock": "9cc5afd9f1f01988a89ab209d2c8e921feef5024590d6903370993f504e39ce9"
+  },
+  "exact_frozen_0_14_sha256": "fe4b730714dfd8b619c6f0e07104c8dd5a0e86443ec230414a69458785f09a3d",
+  "production_source_changes": false,
+  "new_runtime_outputs": false,
+  "original_folder_accessed": false,
+  "scope": "All inspection/output paths were beneath the new project; original folder never read, mounted or used as cwd."
+}

@@ -1,0 +1,522 @@
+{
+  "assessment_identity_sha256": "47ee8b9ce7d28a5089a57837b529c5b9c7c64467f3b0957113aa17afe59cc9d9",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 7,
+    "utility": 6.408919004585153
+  },
+  "native": {
+    "fields": {
+      "distinct": 7,
+      "generation_scores": [
+        9,
+        8,
+        null,
+        9,
+        9,
+        null,
+        9,
+        null,
+        8,
+        9
+      ],
+      "partition_scores": [
+        9,
+        8,
+        9,
+        9,
+        9,
+        8,
+        9
+      ],
+      "utility": 6.408919004585153
+    },
+    "generation_row": {
+      "generations": [
+        "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety you can get in 4 characters.\n\nKeep in mind that 4 characters is inherently weak, since even a complex one can be cracked quickly by brute force. If the system allows it, use 12 or more characters or a passphrase instead.",
+        "**v7#Q**\n\nFour characters is very short, so this is only as strong as a 4-character password can be. It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a dictionary word or a common pattern. If the system allows it, a longer password or passphrase (12+ characters) would be much safer. Also, use a password manager to generate and store it rather than reusing this one.",
+        "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety possible in 4 characters.\n\nNote that 4 characters is inherently weak, since even a random one can be cracked quickly by brute force. If the system allows it, use 12 or more characters instead.",
+        "**r7#K**\n\nWith only 4 characters, this uses all four character types (lowercase, digit, symbol, uppercase) to maximize strength. Still, 4 characters is inherently weak. If the system allows it, use 12 or more characters instead.",
+        "**r7$K**\n\nWith only 4 characters, this is as strong as a password of that length can be: it mixes lowercase, a digit, a symbol, and an uppercase letter. Still, 4 characters is inherently weak and can be cracked quickly by brute force. If the system allows it, use 12 or more characters.",
+        "**r7#K**\n\nWith only 4 characters, this mixes a lowercase letter, a digit, a symbol, and an uppercase letter to get as much variety as possible. Even so, 4 characters is inherently weak, so use a longer password (12+ characters) wherever the system allows it.",
+        "**k#9Q**\n\nWith only 4 characters, this mixes lowercase, uppercase, a symbol, and a digit to maximize strength for that length. It's still weak in absolute terms, since any 4-character password can be cracked almost instantly. If the system allows it, use a longer passphrase of 12 or more characters instead.",
+        "**r7$K**\n\nWith only 4 characters, this uses one lowercase letter, one digit, one symbol, and one uppercase letter to get the most variety possible. Still, 4 characters is inherently weak and can be cracked very quickly by brute force. If the system allows it, use 12 or more characters.",
+        "**v#9Q**\n\nFour characters is very short, so this is about as strong as a 4-character password can be, using a mix of lowercase, uppercase, a symbol, and a digit in a non-predictable order. If the system allows it, a longer passphrase (12+ characters) would be much more secure.",
+        "**k#7Q**\n\nWith only 4 characters, this uses all four character types (lowercase, symbol, number, uppercase) to maximize strength within the limit. Keep in mind that 4 characters is inherently weak, so use it only where the system forces that limit, and use a longer passphrase wherever you can."
+      ],
+      "id": "nb-curated-6584de30a11a0e08ca32",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Suggest a strong 4 character password."
+    },
+    "partition_fields": {
+      "distinct": 7,
+      "partition": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        2,
+        4,
+        3,
+        5,
+        6
+      ]
+    },
+    "score_row": {
+      "distinct": 7,
+      "generation_scores": [
+        9,
+        8,
+        null,
+        9,
+        9,
+        null,
+        9,
+        null,
+        8,
+        9
+      ],
+      "generations": [
+        "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety you can get in 4 characters.\n\nKeep in mind that 4 characters is inherently weak, since even a complex one can be cracked quickly by brute force. If the system allows it, use 12 or more characters or a passphrase instead.",
+        "**v7#Q**\n\nFour characters is very short, so this is only as strong as a 4-character password can be. It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a dictionary word or a common pattern. If the system allows it, a longer password or passphrase (12+ characters) would be much safer. Also, use a password manager to generate and store it rather than reusing this one.",
+        "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is the most variety possible in 4 characters.\n\nNote that 4 characters is inherently weak, since even a random one can be cracked quickly by brute force. If the system allows it, use 12 or more characters instead.",
+        "**r7#K**\n\nWith only 4 characters, this uses all four character types (lowercase, digit, symbol, uppercase) to maximize strength. Still, 4 characters is inherently weak. If the system allows it, use 12 or more characters instead.",
+        "**r7$K**\n\nWith only 4 characters, this is as strong as a password of that length can be: it mixes lowercase, a digit, a symbol, and an uppercase letter. Still, 4 characters is inherently weak and can be cracked quickly by brute force. If the system allows it, use 12 or more characters.",
+        "**r7#K**\n\nWith only 4 characters, this mixes a lowercase letter, a digit, a symbol, and an uppercase letter to get as much variety as possible. Even so, 4 characters is inherently weak, so use a longer password (12+ characters) wherever the system allows it.",
+        "**k#9Q**\n\nWith only 4 characters, this mixes lowercase, uppercase, a symbol, and a digit to maximize strength for that length. It's still weak in absolute terms, since any 4-character password can be cracked almost instantly. If the system allows it, use a longer passphrase of 12 or more characters instead.",
+        "**r7$K**\n\nWith only 4 characters, this uses one lowercase letter, one digit, one symbol, and one uppercase letter to get the most variety possible. Still, 4 characters is inherently weak and can be cracked very quickly by brute force. If the system allows it, use 12 or more characters.",
+        "**v#9Q**\n\nFour characters is very short, so this is about as strong as a 4-character password can be, using a mix of lowercase, uppercase, a symbol, and a digit in a non-predictable order. If the system allows it, a longer passphrase (12+ characters) would be much more secure.",
+        "**k#7Q**\n\nWith only 4 characters, this uses all four character types (lowercase, symbol, number, uppercase) to maximize strength within the limit. Keep in mind that 4 characters is inherently weak, so use it only where the system forces that limit, and use a longer passphrase wherever you can."
+      ],
+      "id": "nb-curated-6584de30a11a0e08ca32",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        2,
+        4,
+        3,
+        5,
+        6
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "8de8d857f353b18468ba284eb8242b6cf8627ba6db3b219480a1dff90c97c41e",
+      "partition_scores": [
+        9,
+        8,
+        9,
+        9,
+        9,
+        8,
+        9
+      ],
+      "prompt": "Suggest a strong 4 character password.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "9f0b227c176068554b86d8b8f2a67cf412c403ad1384d0b194514445db4b63d8",
+      "utility": 6.408919004585153
+    },
+    "summary": {
+      "mean_distinct": 7.0,
+      "mean_utility": 6.408919004585153,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "d8ec3a6ba87985e95fd6ed36ad333e22e645a25084effc331bb09186a3f93343",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0859",
+      "fixture": false,
+      "intent_sha256": "2bbfe8701e46bc1a1056baa3888ab484b4e753c4ea8adf788ec2da710378f358",
+      "request_sha256": "84108b6d266be29185505d2e78e709fd7caefdd52563f74462c73ba00acd294c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.246643783990294,
+        "message_id": "chatcmpl-EdwbiARY6kz1XV6fnsxSXs3C3nbrN",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 308,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 271,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 971,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1279
+        },
+        "refusal": null,
+        "request_id": "req_73451b89f5c545a19713914b7ad5e274",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,2],[1],[3,5],[4,7],[6],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 971,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 308,
+          "output_tokens_details": {
+            "reasoning_tokens": 271
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.group",
+      "spent_micro_usd": 621,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0860",
+      "fixture": false,
+      "intent_sha256": "a87f99cfb6c54d6d23957007f16d601e49640c952a31cd021b24a394f22832de",
+      "request_sha256": "ef5e19602379a7c7236d2b824d313658f01212d6d9d9b23bd95a0342baaef43b",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.129282115987735,
+        "message_id": "msg_011CgUbcekzWRAAXwSwTvSWk",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbceXrYq4mupZv3hbLC",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 554,
+          "output_tokens": 94,
+          "output_tokens_details": {
+            "thinking_tokens": 85
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.00",
+      "spent_micro_usd": 5632,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0861",
+      "fixture": false,
+      "intent_sha256": "22f0ef5fa2fa9c74b144c75468a87a661815c623b19f94d87b22883a599e1fb7",
+      "request_sha256": "9539f314d2c3e3df0d0e43e5a6cafbaab6e4c6d99ff0b4ba3d3ab2136be88e3a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.4048467879911186,
+        "message_id": "msg_011CgUbcvgTjwneMUrX1H3WB",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbcvNrTuMBMvbbGrVjG",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 561,
+          "output_tokens": 170,
+          "output_tokens_details": {
+            "thinking_tokens": 161
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.01",
+      "spent_micro_usd": 7761,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0862",
+      "fixture": false,
+      "intent_sha256": "feb16c48b7cc0be441301e772d794f41941702eb18c2e39f4a3d8c4d14476d96",
+      "request_sha256": "8a67b4ba5a296a85e36833e2caeb0d654c8126a54f910a9a77812f7dae9b95eb",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.3780703869997524,
+        "message_id": "msg_011CgUbdE2zXcnGTAi53M3KG",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbdDoqxc7MmYcbxy46p",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 508,
+          "output_tokens": 127,
+          "output_tokens_details": {
+            "thinking_tokens": 118
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.03",
+      "spent_micro_usd": 6287,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0863",
+      "fixture": false,
+      "intent_sha256": "b485f14d273c48d39ca0861d8d3fec361046fd22411b9404e565f95602f439e8",
+      "request_sha256": "57a82adc051a76da14cd9f55958d4d84d9bb856afee90333e503964478e72bd2",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.4739262700022664,
+        "message_id": "msg_011CgUbdXGL6NMie6bQcAUQE",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbdX1CgTPoRCtXvZpbC",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 528,
+          "output_tokens": 130,
+          "output_tokens_details": {
+            "thinking_tokens": 121
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.04",
+      "spent_micro_usd": 6479,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0864",
+      "fixture": false,
+      "intent_sha256": "93f215731280d78b77e11a63faf38ec685ced97143f35503b2119feccb7209c7",
+      "request_sha256": "f4d4f345beb83df6db5ee8aa5398aa6b7189ad59b982e04f0d2c428497088715",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.6025129440095043,
+        "message_id": "msg_011CgUbdpmnV3bCoW38LSuMN",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbdpVRAQwkSwL8zgD1M",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 533,
+          "output_tokens": 69,
+          "output_tokens_details": {
+            "thinking_tokens": 60
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.06",
+      "spent_micro_usd": 4829,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0865",
+      "fixture": false,
+      "intent_sha256": "fbca2921f98b700c0bd1583b4db61b441b6656abfcdc145a262f68a1e4bea194",
+      "request_sha256": "a6a8281656cdeeddbb91de0715d46fe4559aecb79b22daed38afda015abb5961",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.385260091992677,
+        "message_id": "msg_011CgUbe58VB9GtXgXGmg4oW",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbe4tb35cRi1GiUvuvE",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 522,
+          "output_tokens": 145,
+          "output_tokens_details": {
+            "thinking_tokens": 136
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.08",
+      "spent_micro_usd": 6859,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0866",
+      "fixture": false,
+      "intent_sha256": "9c2dd1a040808332625a8570150c67983369e35336777bf4307344e4cc9a6b4f",
+      "request_sha256": "67740d1f4d972454a30d2e29f2e6c9548f1d78a21377104102028ca2b18181cb",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.3519857020000927,
+        "message_id": "msg_011CgUbeN8BkqLuU1AWxJB43",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUbeMsoPYSTVE6MXAdHu",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 526,
+          "output_tokens": 89,
+          "output_tokens_details": {
+            "thinking_tokens": 80
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-8cdb74f765c0c6a857a261bb.quality.09",
+      "spent_micro_usd": 5341,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-6584de30a11a0e08ca32"
+}

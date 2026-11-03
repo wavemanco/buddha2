@@ -1,0 +1,36 @@
+{
+  "candidate_cost_micro_usd": {
+    "A": 635220,
+    "B": 1320486,
+    "C-N": 1621512
+  },
+  "cutoff": "2026-10-28T18:55:44Z",
+  "decision_sha256": "5c2ddcbd434f53209f4245c519f9479229c6b06e6dec2b9043669c5a4f338dea",
+  "fixture": false,
+  "human_status": "not-required",
+  "kind": "rank-format-development-decision-v1",
+  "mean_utility": {
+    "A": 2.747011259200218,
+    "B": 6.658121902836613,
+    "C-N": 6.797187351858792
+  },
+  "native_complete": true,
+  "parent_decision_sha256": "6cc0d324f9be864a9747140c4d6bd41a42606f31e38ee772e5c35aac62e381fc",
+  "policy": {
+    "id": "rank-format-development-v1",
+    "lineage": "posthoc-C-N-v1",
+    "sort": [
+      "highest exact mean utility",
+      "lowest candidate cost",
+      "A/B/C-N"
+    ],
+    "track": "benchmark"
+  },
+  "posthoc_not_independent_replication": true,
+  "selected_method": "C-N",
+  "selected_procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+  "status": "complete-development",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+  "synthetic_selected_method": null,
+  "synthetic_selected_procedure_sha256": null
+}

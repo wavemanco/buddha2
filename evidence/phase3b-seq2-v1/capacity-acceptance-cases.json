@@ -1,0 +1,16 @@
+{
+  "kind": "p3b-s2-capacity-acceptance-cases-v1",
+  "frozen_before_capacity_implementation": true,
+  "definition": "PHASE3B_DEFINITION.md",
+  "cases": [
+    "Read only explicitly named already-exposed Phase3A solver/native artifacts; exclude graders, streams, private files and held-out contents.",
+    "Bind original bytes and lengths with raw source hashes, retaining the four observed prompt/answer/trajectory/strategy/notes distributions.",
+    "Use actual pinned native context.build to create six complete seq2 authoring contexts for each exposed task, including two bases and all cumulative histories.",
+    "The round2 current harness is the first composed checkpoint; full notes, original answers, trajectories, diffs and strategy files remain unchanged and present.",
+    "Run the largest complete cumulative authoring context and native selector through real pinned OpenCode and SDK MockTransport, retaining actual signed thinking/tool history serialization.",
+    "Exercise fixed best-of-twelve selector on complete length-matched exposed answer sets; no answer trimming or evidence summaries.",
+    "Every effective editor and selector request must fit the declared2MiB ceiling unchanged or reject before any SDK intent; oversize negative makes zero SDK calls.",
+    "Serialized bytes and model maximum input-token liability are independent controls; retain the supported full-context reservations without tokenizer/provider probes.",
+    "No real credentials, network/provider endpoints, new generation, grading, experiments or old-output rescoring occur."
+  ]
+}

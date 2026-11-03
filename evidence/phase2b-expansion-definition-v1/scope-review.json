@@ -1,0 +1,122 @@
+{
+  "actions": {
+    "journal_or_source_writes": 0,
+    "new_credential_reads": 0,
+    "new_provider_calls": 0,
+    "new_sdk_constructions": 0,
+    "only_write": "evidence/phase2b-expansion-definition-v1/scope-review.json",
+    "original_folder_access": false
+  },
+  "checked_artifact_hashes": {
+    "PHASE2B_F1_REPORT.md": "9d49e7327a5d5f8343c7096e6f2df35d7bebd5438934706c3df8c0fe0c2b6d38",
+    "PHASE2B_REMAINDER_DEFINITION.md": "ff1edb0f65437adc3a97ae55aa1e2ff95c4f5cd72be00c697c5b35c8d599ef74",
+    "evidence/phase2b-expansion-definition-v1/public-price-refresh.json": "466137bb7e5239ac87284b9e74630c2af661b5949bccc51ad9449bc820703bea",
+    "evidence/phase2b-expansion-definition-v1/worksheet.json": "e19c7c14572bf369edba90cbd927975109d26d8fec9e02b3b5ac8980c155479b",
+    "evidence/phase2b-f1/closeout.json": "1acd185547e2aa54d68aedd87f1fee8549c718fc4e18804b24289cbdd0ea292c",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/authority/0001.grant.json": "ddfe2a46110dab96e46642c94fa8887d3468fa3bc2103a845281c6acd4c3d366",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/reviews/first.json": "ab722a0840861bf08c9fe6df3757ffc4c4b525871ac67037a136089c2d3d1b77",
+    "runs/phase2-release-r018/release/release-readiness.json": "8e9b5ce2fe826a4eb79934dd426cd5f8c4fab2ba01211797b33c7760c17d33ce",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514",
+    "src/buddha2/phase2.py": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+    "src/buddha2/phase2_analysis.py": "024bbadb8537099da3e07e43a66249bf1e5bc5cf2cae17163e973d86191db00c",
+    "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+    "src/buddha2/phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+    "src/buddha2/phase2_release_journal.py": "a93b2b917e5cd7d10ce894806884c9fb41650e0c6a912ec63e8f9e4177be9c4e",
+    "src/buddha2/phase2_release_launch.py": "abd77810219e83f029e08eef67efa0fc02f26e14fa4587188331c7272fb78ded",
+    "src/buddha2/phase2_release_runner.py": "5468f40ae543284868c5348d414da05bef3d05cc8364576767bb6e1d0467e483"
+  },
+  "criteria_mapping": {
+    "authority_and_credentials": {
+      "criterion": "New explicit expansion grant required, same journal/current predecessor/approved review, cumulative20–125USD range; no implied grant or automatic top-up. Same credentials supplied through existing masked launcher without ambient lookup/fingerprint rewrite.",
+      "status": "pass"
+    },
+    "budget_and_cost_qualification": {
+      "criterion": "Observed first-block costs are conditional nonrepresentative inputs; eighteen scenarios reproduce with per-request integer rounding. Proposed125USD includes first0.210174;11.44USD quality reservation can stop hypothetical totals below125USD.",
+      "status": "pass"
+    },
+    "call_denominators": {
+      "criterion": "Remaining644–1265 actual successful calls; full672–1293 actual calls given first28; logical1320 denominator and first27 nonheads preserved.",
+      "status": "pass"
+    },
+    "complete_versus_bounded_closeout": {
+      "criterion": "A complete decision requires72 comparable scored orders, provenance/replay and reconciled liability-free accounting. A bounded stop is usable but not full completion; unfavorable complete results are valid scientific negatives.",
+      "status": "pass"
+    },
+    "failure_and_stop_behavior": {
+      "criterion": "Unknown/budget/authority/source/runtime/admission/unexpected contract problems halt globally; known settled content failures retain dependency-aware continuation; snapshot first-block-complete alone is insufficient.",
+      "status": "pass"
+    },
+    "models_methods_protocol": {
+      "criterion": "Existing A/B/C methods, requested model/settings, native v1.1/patience0.8, strict scoring, zero retries/repairs/replacements and no interim tuning remain unchanged.",
+      "status": "pass"
+    },
+    "no_scope_or_approval_creep": {
+      "criterion": "One worklist-level execution/reporting block, no new engineering prerequisite, per-task permission, per-block favorable-result gate or protocol change.",
+      "status": "pass"
+    },
+    "objective": {
+      "criterion": "Complete the frozen base/planner/reranker development comparison; allow ordinary sampling selection; exclude compute-controlled, human, held-out and recursive attribution.",
+      "status": "pass"
+    },
+    "optional_humans_and_future_phases": {
+      "criterion": "Human inputs remain optional later assessments/decisions without benchmark rewrites or automatic second matrix. CrPO/new strategies/benchmarks are excluded. Genuine one-step and recursive Harness2 and held-out work remain later separately defined phases.",
+      "status": "pass"
+    },
+    "scope_and_unit": {
+      "criterion": "Exactly23 frozen remaining blocks, same12 prompts/two repeats and balanced generation order; independent analysis unit12 prompts, with no reopened task selection.",
+      "status": "pass"
+    },
+    "seed_selection": {
+      "criterion": "Two repeats averaged within each of12 prompts, then equal prompt mean; exact utility ranking, generation/planning/ranking cost tie-break thenA/B/C. No new margin, significance rule or complete-case substitution.",
+      "status": "pass"
+    },
+    "usable_deliverables": {
+      "criterion": "Canonical outcomes/coverage, whole-pilot report, committed raw evidence/archive/replay and selected unchanged procedure hash or explicit no-seed closeout; existing routes reused.",
+      "status": "pass"
+    }
+  },
+  "definition_sections_by_line": {
+    "Analysis and completion criteria": 109,
+    "Cost: measured basis, sensitivity and proposed ceiling": 73,
+    "Deliverables and usable output": 100,
+    "Entry and what happens next": 136,
+    "Exclusions and stop/review criteria": 126,
+    "Objective": 9,
+    "Procedures and exact settings": 40,
+    "Scope and immutable starting point": 15,
+    "Work and call limits": 60
+  },
+  "definition_version": "1.0",
+  "expansion_authorized": false,
+  "independent_checks": {
+    "exact_remaining_sequence_rows_checked": 23,
+    "first_review_and_authority_match": true,
+    "frozen_gate_files_matching": 70,
+    "launcher_matching": true,
+    "new_expansion_grants_present": 0,
+    "remaining_role_counts": {
+      "answer": 460,
+      "group": 69,
+      "plan": 23,
+      "quality": 690,
+      "rank": 23
+    },
+    "scenario_cells_independently_recomputed": 18,
+    "source_files_matching": 26,
+    "worksheet_input_hashes_match": true
+  },
+  "kind": "p2be-independent-scope-decision-definition-review",
+  "limitations": [
+    "This is a planning/scope review, not spending authorization or execution evidence.",
+    "Public-price refresh is reviewed as primary-source documentation and matches frozen rates; this reviewer did not independently inspect provider accounts or invoices.",
+    "Scenario arithmetic was independently recomputed from declared inputs; future usage, head counts and completion under a cap remain unmeasured.",
+    "Actual new execution, human judgment, recursive adaptation and held-out performance are not established by this review."
+  ],
+  "outstanding_concerns": [],
+  "planning_only": true,
+  "review_sha256": "8bc04804400361674e9f86b0a13585b50fc479bcafb46eaf9ea121bcb9f4ec88",
+  "reviewed_at_utc": "2026-10-28T10:47:48Z",
+  "reviewer_agent": "/root/release_journal",
+  "status": "pass",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

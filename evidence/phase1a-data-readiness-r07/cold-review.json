@@ -1,0 +1,22 @@
+{
+  "blockers": [],
+  "clarification_applied": "Historical disagreement table is not a fixed A/B mapping; each attempt refers to its saved presentation plan",
+  "independently_verified": [
+    "16948 Parquet/JSONL rows and48 historical mappings",
+    "195 normalized aliases",
+    "3078 inspection candidates, strata, exact8 selected, order and private key",
+    "39 low-stratum candidates occupy2 groups; frozen greedy shortfall correct",
+    "221-context inventory has no unused raw text/score fields",
+    "All195 tracked baseline and250 historical source/run hashes unchanged before declared status updates",
+    "Final report numbers, limited claims and RouteH scope",
+    "29-check record and normalized semantics hash"
+  ],
+  "limits": [
+    "Did not independently reopen every external publication or verify publisher source-study ICC values",
+    "Final closeout/archive/status identities verified by root separately"
+  ],
+  "method": "Separate standard-library reconciliation without importing reproduce.py; cold final report review",
+  "recorded_at_utc": "2026-10-25T10:13:24.208076+00:00",
+  "reviewer": "/root/data_checkpoint_review",
+  "schema_version": 1
+}

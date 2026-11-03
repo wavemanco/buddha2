@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "kind": "phase1a-source-semantics-review",
+  "recorded_at_utc": "2026-10-25T09:53:13.210675+00:00",
+  "scope": {
+    "experiment_inference_calls": 0,
+    "experiment_spend_usd": 0,
+    "weight_downloads": 0,
+    "new_row_corpora": 0,
+    "published_heldout_answer_or_label_content_opened": false,
+    "source_data_edits": false,
+    "author_contact": false,
+    "artifact_namespace": "phase1a-data-readiness-r07",
+    "review_type": "bounded documentary provenance and semantics; no new reliability study",
+    "heldout_scope_definition": "No published held-out dataset corpus files, answer rows, label rows or row inventories were opened. Public paper snapshots were allowed and contain previously public task/examples; those documents are not treated as fresh confirmation data."
+  },
+  "source_release": {
+    "dataset": "CNCL-Penn-State/MuCE",
+    "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "configuration": "full_agreement",
+    "approved_cached_split": "train",
+    "revision_api_sha": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "repository_last_modified": "2025-09-11T11:03:28.000Z",
+    "metadata_only_split_counts": {
+      "train": 16948,
+      "val": 2180,
+      "test": 2004,
+      "heldout_item": 1940,
+      "heldout_task": 187
+    },
+    "metadata_only_total_rows": 23259,
+    "scope_boundary": "Only the existing original release train corpus may be read. Other split counts/filenames are repository metadata, not opened row inventories. Newer similarly named ORACL releases are distinct and are neither substituted nor fetched here.",
+    "card_license_declaration": "mit",
+    "license_limit": "No separate LICENSE file is listed at this revision. Card declaration does not prove every original donor permission or participant condition; local research cache only, no redistribution decision."
+  },
+  "references": [
+    {
+      "requested_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+      "retrieved_at_utc": "2026-10-25T09:46:22.687358+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"e4c23d9929985e85e0e6d14e44487f79d0b07f4c\"",
+      "last_modified": null,
+      "bytes": 2040,
+      "sha256": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-card.md"
+    },
+    {
+      "requested_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+      "retrieved_at_utc": "2026-10-25T09:46:22.874223+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"b02-uqgJ2CYh1z2PExaGRMM0TilPrWU\"",
+      "last_modified": null,
+      "bytes": 2818,
+      "sha256": "8f07f66f048a3e81b9588da931a340d11abe99a9161a0289f17769423b9484a7",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-revision.json"
+    },
+    {
+      "requested_url": "https://aclanthology.org/2025.findings-emnlp.509.pdf",
+      "retrieved_at_utc": "2026-10-25T09:46:23.035950+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://aclanthology.org/2025.findings-emnlp.509.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "etag": "\"96da2-642799f31952d\"",
+      "last_modified": "Fri, 31 Oct 2025 19:46:29 GMT",
+      "bytes": 617890,
+      "sha256": "ae43e11b0ca006d82480d2c945aad22cc498340b366c2ed4e0fd3a7c1fa9be0c",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/crpo-published.pdf"
+    },
+    {
+      "requested_url": "https://arxiv.org/html/2505.14442v2",
+      "retrieved_at_utc": "2026-10-25T09:46:23.685156+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://arxiv.org/html/2505.14442v2",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "etag": "\"CNyx6/r+uZYDEAE=\"",
+      "last_modified": "Mon, 24 Aug 2026 19:24:29 GMT",
+      "bytes": 413570,
+      "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/crpo-arxiv-v2.html"
+    },
+    {
+      "requested_url": "https://www.tandfonline.com/doi/pdf/10.1080/10400419.2024.2326343",
+      "retrieved_at_utc": "2026-10-25T09:46:23.807071+00:00",
+      "status": "unavailable",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_url": "https://www.tandfonline.com/doi/abs/10.1080/10400419.2024.2326343",
+      "retrieved_at_utc": "2026-10-25T09:46:23.870492+00:00",
+      "status": "unavailable",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_url": "https://api.crossref.org/works/10.1080/10400419.2024.2326343",
+      "retrieved_at_utc": "2026-10-25T09:48:07.738164+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://api.crossref.org/works/10.1080/10400419.2024.2326343",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes": 11724,
+      "sha256": "0fea25a98ef599ad0e3ccc3be49c6108975e5541a65df0e1400203cd2a2ab7f5",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/distefano-crossref.json"
+    },
+    {
+      "requested_url": "https://api.osf.io/v2/nodes/2dqpj/",
+      "retrieved_at_utc": "2026-10-25T09:48:08.098719+00:00",
+      "status": "retrieved",
+      "resolved_url": "https://api.osf.io/v2/nodes/2dqpj/",
+      "http_status": 200,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "bytes": 4234,
+      "sha256": "94a86750a0046cf81d44709fd41dcb26ffde91e1d8396791e6121a2094cd8bfc",
+      "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/distefano-osf-project.json"
+    }
+  ],
+  "crpo_code": {
+    "repository": "mismayil/creative-preference-optimization",
+    "revision": "9c0d71438687255b355216481064b1ced471ceeb",
+    "commit_url": "https://github.com/mismayil/creative-preference-optimization/commit/9c0d71438687255b355216481064b1ced471ceeb",
+    "snapshots": [
+      {
+        "path": "evidence/phase1a-data-readiness-r07/references/assets/crpo-data.py",
+        "sha256": "641483b24e6191387b78bec6cb7de700db510507214b1e593bc01218d9c98d98"
+      },
+      {
+        "path": "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-crpo-data.py",
+        "sha256": "df4ef9139c4c2c3c6f887e2f3ce9eedce55359e71d04515d36c222c843295e4b"
+      },
+      {
+        "path": "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-crpo-data.sh",
+        "sha256": "667925eec3dc5345dd873e819e478f2a8fac3258fc4c5a1d7a62829f91c7dd4d"
+      },
+      {
+        "path": "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-raw-data.sh",
+        "sha256": "cc39721c2be9e7e095916c6fdd5f919396e7517597fd98231d9cc08385d61411"
+      },
+      {
+        "path": "evidence/phase1a-data-readiness-r07/references/assets/crpo-prepare-raw-data.py",
+        "sha256": "448ee6a3b35f625fcc582339cc392674ca7d6518bb8af2c9f4ca95632a425b80"
+      }
+    ],
+    "shared_asset_index": "evidence/phase1a-data-readiness-r07/references/asset-metadata.json",
+    "execution": "Source read only; no imports, preparation, inference, training, or dataset publication performed."
+  },
+  "published_population": {
+    "source": "https://aclanthology.org/2025.findings-emnlp.509.pdf",
+    "location": "Table1, printed page9597/PDF page18; AppendixA",
+    "postconstruction_total_responses": 245030,
+    "task_types": 25,
+    "languages": 11,
+    "prompts": 587,
+    "splits": {
+      "train": 183973,
+      "dev": 23254,
+      "test": 22419,
+      "OOD-i": 6253,
+      "OOD-l": 4719,
+      "OOD-t": 4412
+    },
+    "initial_inclusion_pool_before_later_rater_and_duplicate_filters": 321572,
+    "do_not_equate_with_public_release": "The paper-scale multilingual corpus and 23,259-row English full_agreement release are different populations. Paper breadth or source ICCs cannot be imputed to our 24 Metaphors groups."
+  },
+  "field_semantics": [
+    {
+      "fields": [
+        "Dataset",
+        "DatasetsSplit",
+        "Language",
+        "TasksNamesFull",
+        "TaskType",
+        "RatingLabel",
+        "Prompt"
+      ],
+      "meaning": "Source/scoring/task/construct context; preserve rather than treating score labels as universally interchangeable.",
+      "evidence": [
+        "original-card",
+        "paper-AppendixA",
+        "frozen-local-muce.py"
+      ],
+      "status": "documented plus local implementation"
+    },
+    {
+      "field": "ID",
+      "meaning": "Original source row identifier; uniqueness is not documented by the card. Local Phase1 preparation observed reuse and derives canonical content/context identities.",
+      "evidence": [
+        "PHASE1_DECISIONS.md",
+        "evidence/phase1/source-notes.md"
+      ],
+      "status": "current checkpoint integrity/count agent independently reconciles"
+    },
+    {
+      "field": "FullPrompt",
+      "meaning": "A generated task instruction assembled by public CrPO prepare_full_prompt; it is not established as a verbatim original participant instruction or rater instruction.",
+      "evidence": "https://github.com/mismayil/creative-preference-optimization/blob/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/data.py#L8-L194",
+      "status": "verified code"
+    },
+    {
+      "field": "RatingLabel",
+      "meaning": "Originality and creativity remain distinct source constructs. Both appear in the public schema population; no human truth labels for separate CrPO novelty/diversity/surprise/quality are supplied per response.",
+      "evidence": [
+        "original-card",
+        "paper-Section4",
+        "PHASE1_DECISIONS.md"
+      ],
+      "status": "documented; no construct relabeling"
+    },
+    {
+      "field": "facsco_grm_scaled",
+      "meaning": "Higher values indicate more of the judged source construct. GRM-derived response factor estimates are rescaled independently within subdatasets to integers 10-50. They are not raw mean ratings, calibrated probabilities, interval certainty, or a common ability scale across source contexts.",
+      "evidence": "paper-Section4 and AppendixA",
+      "status": "documented transformation; actual rater fits not reconstructed"
+    }
+  ],
+  "rating_construction": {
+    "source": [
+      "https://arxiv.org/html/2505.14442v2#S4",
+      "https://arxiv.org/html/2505.14442v2#A1"
+    ],
+    "steps": [
+      "Authors solicited participant responses with individual human scores and task/item/construct/language metadata; OSF additions were associated with citable peer-reviewed sources.",
+      "Responses lacking at least two human ratings and within-item/task duplicate responses were removed.",
+      "Judge Response Theory/graded-response information and a genetic algorithm selected informative rater subsets, retaining at least two ratings per response.",
+      "Decimal source scales were rounded for the GRM. GRM factor scoring was fitted separately over each source subdataset.",
+      "Each source subdataset was min-max rescaled and rounded into 10-50 integers, reportedly for single-token score prediction."
+    ],
+    "public_export_available": [
+      "original source identifiers/context",
+      "response",
+      "derived source score",
+      "generated FullPrompt"
+    ],
+    "public_export_unavailable": [
+      "individual rater scores",
+      "retained rater identities/count per row",
+      "individual disagreement/uncertainty",
+      "rater demographic or detailed criterion records",
+      "GRM parameters or per-response standard errors"
+    ],
+    "full_agreement_limit": "The paper describes retaining samples with agreement from all annotators before preference training. The public export does not expose the individual ratings or exact filter derivation, so it cannot independently establish how original versus retained-rater agreement was operationalized. It does not record direct votes on our constructed response pairs.",
+    "reliability_limit": "JRT/GA is an explicit quality-control method, not a reported empirical error bound for our subset. No per-source reliability estimates or per-response confidence intervals for the final MuCE GRM release were found in the inspected paper/card.",
+    "alpha_0463_scope": "Krippendorff alpha0.463 in AppendixD.1 refers to a separate15-person Prolific study comparing newly generated model responses, not underlying MuCE reference label reliability.",
+    "five_point_margin_limit": "A gap>=5 is a preference-data curation choice; it is not evidence that the probability of the higher-rated response being better exceeds a calibrated threshold."
+  },
+  "source_study_mapping": [
+    {
+      "release_dataset_identifier": "DiStefano2024crj_Meta",
+      "task": "Metaphors",
+      "citation": "DiStefano, P. V.; Patterson, J. D.; Beaty, R. E. Automatic Scoring of Metaphor Creativity with Large Language Models. DOI 10.1080/10400419.2024.2326343. Online 2024-03-23; volume 37(4), 2025, pp. 555-569.",
+      "publication_url": "https://doi.org/10.1080/10400419.2024.2326343",
+      "mapping_evidence": [
+        "CrPOpaperTable9 names this study for Metaphors.",
+        "Pinneddata.py explicitly recognizes Dataset=DiStefano2024crj_Meta."
+      ],
+      "mapping_status": "Study-level association supported; exact row-to-one-of-seven-original-cohorts not proved by public card or paper.",
+      "original_participant_task": "Recall a specific personal experience and describe it metaphorically; prompts concerned boring classes, gross food/drink, bad movies and messy rooms. Examples/stems assisted production.",
+      "released_prompt_difference": "Pinnedprepare_full_prompt turns the concept label into a generic request for an original/creative metaphor. Thus the released FullPrompt is not verbatim the original autobiographical task context.",
+      "rating_protocol": "Independent 2-4 trained raters per source cohort, 5-point creativity ratings using an adapted consensual-assessment procedure; no direct pair votes.",
+      "source_sample": {
+        "participants": 1546,
+        "responses": 4589,
+        "cohorts": 7
+      },
+      "published_source_icc": {
+        "metric": "ICC(3,k),publisher finalTable1",
+        "values_by_cohort": [
+          0.75,
+          0.84,
+          0.73,
+          0.77,
+          0.6,
+          0.88,
+          0.82
+        ],
+        "range": [
+          0.6,
+          0.88
+        ],
+        "scope": "Original complete source-cohort ratings, not recalculated MuCE final labels or custom pair reliability.",
+        "version_warning": "An indexed older author preprint reports ICC2k and some different values; do not silently substitute it for the publisher final table."
+      },
+      "criterion_caution": "The source discussion suggests future explicit inclusion of aptness; our rubric explicitly weighs appropriateness. This indicates a potential criterion mismatch, not proof that original raters ignored appropriateness.",
+      "accessible_evidence": "Publisher full article/PDF text accessible through web search index; direct HTTP retrieval returned403. Crossrefmetadata and OSFnode metadata retained; no OSF response files downloaded.",
+      "osf_project": "https://osf.io/2dqpj/",
+      "raw_rater_records_checked": false,
+      "source_row_contents_downloaded": false
+    },
+    {
+      "release_dataset_identifier": "MersealDissertation",
+      "released_scoring_group_identifier": "MersealDissertationMetaphors_english",
+      "task": "Metaphors",
+      "mapping_evidence": "Pinneddata.py prepare_full_prompt explicitly recognizes MersealDissertation and constructs a sentence-completion metaphor instruction; historical local source notes preserve the group identifier.",
+      "mapping_status": "Original dissertation identity, exact original instructions, source-specific original rating procedure, rater count/reliability, and donor license not established from inspected public release/paper.",
+      "source_safe_statement": "Keep the exact identifier in evidence; do not infer a publication, population, protocol, or source-level reliability from a filename, author biography, or another metaphor study.",
+      "bounded_searches": [
+        "Exact MersealDissertation identifier",
+        "Merseal dissertation metaphor creativity",
+        "Merseal modern building metaphor",
+        "site:etda.libraries.psu.edu Merseal"
+      ],
+      "result": "No verified row-to-original-source/instruction mapping located during bounded search. A lab notice that HannahMerseal defended a dissertation does not establish that this corpus is that dissertation.",
+      "unknowns_not_completion_blockers": true
+    },
+    {
+      "release_dataset_identifier": "yuhua2024cogsci_meta",
+      "task": "Metaphors",
+      "citation": "Yu etal.(2024), Exploring How Generating Metaphor via Insight Versus Analysis Affects Metaphor Quality and Learning Outcomes; CognitiveScience48(8):e13488.",
+      "mapping_status": "Paper/source-code task-level association; not our Phase1 creativity population.",
+      "construct_boundary": "Historical local notes report originality-labeled public rows. Do not impute its task/rater protocol to Merseal or DiStefano rows."
+    }
+  ],
+  "crpo_preference_policy": {
+    "paper": "AppendixB defines preference-training curation, not a model-judge validation protocol.",
+    "paper_settings": {
+      "source": "English fullagreement",
+      "minimum_score_both_responses": 20,
+      "minimum_absolute_gap": 5,
+      "maximum_pairings_per_response": 10,
+      "preferred": "higher source score",
+      "reported_training_pairs": 42058,
+      "reported_sft_samples": 5285
+    },
+    "code_grouping": [
+      "TasksNamesFull",
+      "FullPrompt"
+    ],
+    "code_eligibility": "Nested i<j pairs; min_score excludes either member below threshold; gap test inclusive>=min_margin; max_matching counts uses per response array index.",
+    "strict_label_checking_default": false,
+    "code_does_not_assert_same": [
+      "Dataset",
+      "DatasetsSplit",
+      "Language",
+      "RatingLabel unless strict_label_checking is explicitly enabled"
+    ],
+    "implication": "Same task+FullPrompt can pool source contexts in principle. Actual cross-context pairing frequency is not established by this documentary review. Our source-safe policy must not be described as exact author pairing merely by adding min_score20.",
+    "settings_provenance_limit": "The shell recipe for margin5/minscore20/maxmatching10 is present but commented. Paper supplies final experimental settings; helper defaults differ and are not a run manifest.",
+    "randomness_caution": "prepare_crpo_data main seeds NumPy42; helpers use Python random when sampling/capping/length balancing is enabled, without a Python random seed in the inspected main. No generation or pair recreation executed here.",
+    "optional_rm_split_branch": "Helper exists to split by whole prompts; the inspected prepare_crpo_data branch rm_split>0 references crpo_dataset before assignment, whereas CLIdefault is0. Do not infer actual released reward-model train membership from this optional helper. Asset review separately checks released training metadata.",
+    "full_agreement_upstream_route": "Pinned prepare_raw_data.sh names CNCL-Penn-State/MultitaskDataset_FullAgreement; prepare_raw_data.py selects text/English, builds FullPrompt, maps inherited Set values into split names, and omits empty splits. It does not implement/reconstruct original rater selection, GRM, or full-agreement filter.",
+    "source_context_frequency_status": "Potential cross-context or identical-text pairing is visible in helper structure; actual frequency is unknown until counted against approved cached train without opening new corpora."
+  },
+  "split_policy": {
+    "paper_global_formation": [
+      "Spanish removed to OOD-language.",
+      "Poems and AlternativeTitleGeneration removed to OOD-task.",
+      "Small items chosen by task for OOD-item: one item when<20taskitems, otherwise two; item candidates had<=5%taskresponses.",
+      "Remaining responses assigned80/10/10 within source-subdataset/task/language/item/rating-label strata."
+    ],
+    "evidence": "paperAppendixA",
+    "interpretation": "Ordinary train/dev/test are response holdouts within represented contexts; they do not by themselves establish unseen prompts, participants or source studies. SeparateOODaxes test narrower shifts.",
+    "public_release_names": [
+      "train",
+      "val",
+      "test",
+      "heldout_item",
+      "heldout_task"
+    ],
+    "public_release_no_equivalence_claim": "Counts and paths from the originalcard only; no heldout source contents/IDs read. Do not infer all paperOODaxes are available in this English subset.",
+    "our_phase1_allocation": "Only originaltrain; normalized source/effective aliases clustered before one pair per group and12/12 group allocation;24 selected groups consumed for later evaluator confirmation.",
+    "training_overlap": "Unknown for arbitrary frontier models; known training-source relationship for MuCE-trained reward adapter is not proof of exact row membership. Membership classification belongs separate asset/exposure records.",
+    "public_code_mapping": {
+      "Training": "train",
+      "Validation": "val",
+      "Test": "test",
+      "HeldoutItem": "heldout_item",
+      "HeldoutTask": "heldout_task",
+      "HeldoutLanguage": "heldout_language if nonempty"
+    },
+    "current_code_vs_paper": "Public raw preparation inherits Set assignments; the paper describes how original assignments were made. This checkpoint neither executes that original pipeline nor reconstructs participant separation."
+  },
+  "policy_comparison": [
+    {
+      "aspect": "criterion",
+      "phase1": "creativity only, Metaphors only",
+      "crpo": "publicpreference helpers can include multiple source rating labels; strict label equality optional",
+      "consequence": "Do not silently replace overall creativity with originality."
+    },
+    {
+      "aspect": "sourcecomparability",
+      "phase1": "same Dataset/Set/DatasetsSplit/Language/task/type/RatingLabel and compatible normalized prompt context",
+      "crpo": "group by task+FullPrompt; no equivalent source equality enforcement",
+      "consequence": "Keep source-safe comparisons; label them as departures if claiming reproduction."
+    },
+    {
+      "aspect": "minimumscore",
+      "phase1": "no20floor",
+      "crpo": "both members>=20",
+      "consequence": "Prepare policy sensitivity counts; keep the original failed audit unchanged."
+    },
+    {
+      "aspect": "margin",
+      "phase1": "gap>=5",
+      "crpo": "gap>=5 finalpaperrecipe",
+      "consequence": "Shared curation threshold; no quantified confidence guarantee."
+    },
+    {
+      "aspect": "pairunit",
+      "phase1": "one seeded pair per normalized prompt group, both response orders",
+      "crpo": "many pairs per prompt, each response may occur up to10 times",
+      "consequence": "Pair count is not independent prompt count."
+    },
+    {
+      "aspect": "validation",
+      "phase1": "custom both-orders agreement and coverage floors",
+      "crpo": "training preference construction +separate measurement/human/NoveltyBench evaluation",
+      "consequence": "Matching the data filter does not make our screen a MuCE-prescribed protocol."
+    }
+  ],
+  "use_constraints": {
+    "development_agreement": "Can support reproducible agreement against these published source-scoped labels after integrity/exposure checks, with no assertion that every label is correct.",
+    "crpo_measurement_reproduction": "Conditional on exact component/template/weight access and training-overlap records, not resolved by selecting similarly named base models. No inference authorized in Phase1A.",
+    "new_output_human_alignment": "Cannot be established from this documentary/data inspection. Needs independent human evidence on the actual target outputs, with development/confirmation separation.",
+    "frontier_tournament": "Do not optimize to questionable labels and call the winner universally best. Resolve criterion/reference alignment first and retain independent confirmation."
+  },
+  "unresolved": [
+    "Original Merseal dissertation/instructions/rater reliability and donor permissions.",
+    "Per-response uncertainty and exact full-agreement derivation from original versus retained raters.",
+    "Original source row-to-participant/demographic mapping and response-level rater records.",
+    "Exact score calibration fit inputs and whether source psychometric fitting was restricted to training responses; paper describes rating construction before split but gives no train-only-fit claim.",
+    "Whether released reward-model examples overlap a proposed future confirmation cohort; metadata may constrain but not automatically settle it.",
+    "Independent human preference agreement on new harness outputs."
+  ],
+  "preservation": "No source/rubric/model/profile/historical result edited. Source/cache reconciliation and candidatecounts are root-task deliverables; this record does not substitute for their measured results.",
+  "public_release_inventory": [
+    {
+      "dataset": "CNCL-Penn-State/MuCE",
+      "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "configuration": "full_agreement",
+      "unit": "scored human response record",
+      "metadata_only_split_counts": {
+        "train": 16948,
+        "val": 2180,
+        "test": 2004,
+        "heldout_item": 1940,
+        "heldout_task": 187
+      },
+      "all_listed_split_rows": 23259,
+      "card_snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-card.md",
+      "card_sha256": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+      "row_contents_downloaded": false,
+      "cached_train_read_by_root_checkpoint": true,
+      "scope_note": "Viewer14tasknames/195prompts supplied by user describes the displayed split; not an established release-wide unique count. Rootreconcilesexact cachedtraincounts. Distinctrowrecords are not guaranteed unique participants."
+    },
+    {
+      "dataset": "CNCL-Penn-State/MuCE-SFT",
+      "revision": "9b14581063a5e5fe2eb25bd78d94af790ca29166",
+      "configuration": "full_agreement",
+      "unit": "SFT conversation with one selected response and score",
+      "metadata_only_split_counts": {
+        "train": 5285,
+        "val": 669,
+        "test": 660,
+        "heldout_item": 415,
+        "heldout_task": 150
+      },
+      "all_listed_split_rows": 7179,
+      "primary_split_rows_excluding_named_samples": 7179,
+      "card_snapshot": "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-sft-README.md",
+      "card_sha256": "27422f1706575daa38bfd88fb9d390d1866d3845d440e081c58d6d3dc5fa720e",
+      "metadata_snapshot": "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-sft-metadata.json",
+      "metadata_sha256": "d335edd7c70c9b2ddbcd447b6130fb0772b18147e226a158ebe1f9ef73d53a42",
+      "raw_card_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-SFT/raw/9b14581063a5e5fe2eb25bd78d94af790ca29166/README.md",
+      "row_contents_downloaded": false,
+      "count_interpretation": "Counts are record rows, not independent people or new judgments. Derived preference pairs and named evaluation samples can reuse underlying responses."
+    },
+    {
+      "dataset": "CNCL-Penn-State/MuCE-Pref",
+      "revision": "c586b786a08d29ef959bf5d4c3a3be67250842cd",
+      "configuration": "full_agreement",
+      "unit": "derived chosen/rejected response pair; not a fresh direct human comparison",
+      "metadata_only_split_counts": {
+        "train": 42058,
+        "val": 4880,
+        "test": 4533,
+        "heldout_item": 3521,
+        "heldout_task": 52,
+        "val_sample1024": 744,
+        "val_sample4096": 2356,
+        "test_sample1024": 720,
+        "test_sample4096": 2373
+      },
+      "all_listed_split_rows": 61237,
+      "primary_split_rows_excluding_named_samples": 55044,
+      "card_snapshot": "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-pref-README.md",
+      "card_sha256": "c90cb59ccee8fdfb27c4ab75109722e390c098afff756ebe33ab3e0f01ca89b3",
+      "metadata_snapshot": "evidence/phase1a-data-readiness-r07/references/assets/hf-muce-pref-metadata.json",
+      "metadata_sha256": "ff8bb519f717bff01f6ed9c7520513eb006f0c9da77c0e65ad411cda087d0cba",
+      "raw_card_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-Pref/raw/c586b786a08d29ef959bf5d4c3a3be67250842cd/README.md",
+      "row_contents_downloaded": false,
+      "count_interpretation": "Counts are record rows, not independent people or new judgments. Derived preference pairs and named evaluation samples can reuse underlying responses."
+    }
+  ],
+  "public_release_inventory_notes": [
+    "MuCE-SFT totals7,179 SFT records across the five splits; paper figure5,285 is its training split, not the publictotal.",
+    "MuCE-Pref primary five splits total55,044pair records; four additional named val/test samples total6,193 record references. The55,044 or61,237 listing total is not a count of unique human responses or independent judgments.",
+    "OriginalMuCE provides16,948 cached train responses;42,058 preference training pairs come from combinatorial re-use after curation and do not imply42,058 independent human comparison votes.",
+    "No MuCE-SFT/MuCE-Pref answer text, row-ID inventory, scores, chosen/rejected content or held-out row files was opened. Only public cards and repository metadata used."
+  ]
+}

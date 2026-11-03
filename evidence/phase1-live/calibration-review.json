@@ -1,0 +1,16 @@
+{
+  "audit_dispatches_before_review": 0,
+  "calibration_label_access": "Offline calibration analysis only after all24 calibration presentations finalized; audit labels not read.",
+  "calibration_report_sha256": "fe9cf2241785c782deafbd356857013a83a60b9f64c6bf092b39bea2cd9f23ec",
+  "calibration_rerun": false,
+  "changes": "Only the final JSON-output instruction paragraph. Creative comparison criteria, model/settings and parser remain unchanged.",
+  "decision": "Freeze this single wording revision for all24 audit presentations; no further tuning or replacement.",
+  "extra_model_calls": 0,
+  "final_rubric_sha256": "5ef028c3c44d259b952b22e5416782406e4d041a45fe54b47483058bc1ba01f6",
+  "initial_rubric_sha256": "892e9656c07b6f08c26b8902732f911e6d57d87e1a03bed32916a750b518591a",
+  "kind": "phase1-calibration-review",
+  "reason": "Calibration returned 11 strict JSON choices and 13 malformed outcomes, mostly explanation outside JSON; retain all results and reinforce format before held-out audit.",
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "schema_version": 1,
+  "wording_revisions": 1
+}

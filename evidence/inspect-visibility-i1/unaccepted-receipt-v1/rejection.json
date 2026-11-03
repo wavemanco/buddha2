@@ -1,0 +1,17 @@
+{
+  "accepted": false,
+  "native_import_mapping_checks_still_valid": true,
+  "prior_receipt_sha256": "82b6d5cf9393cc84f21ec87f67dca4fbcb2f59c21b240b51a6179b3c3601c04e",
+  "reason": "Post-review root found setup reuse shutil.copytree could classify/copy unreviewed extra private or linked entries beyond authenticated wheel manifest; boundary must be corrected before acceptance. No actual private access or fixture mutation established.",
+  "replacement_receipt_required": true,
+  "retained_matching_source_files": {
+    "followups/inspect_visibility_i1/Dockerfile": "cbf0fb97f3af570d375f2637f3c1d7013db848991784af940642c078f497bbe2",
+    "followups/inspect_visibility_i1/README.md": "c296aeee3168abdc5d39ccaf8344ed71b3ed2ba5c57ef8e01dbad0902aec30c0",
+    "followups/inspect_visibility_i1/__init__.py": "0a59298b364057f86a0a2fd53dbb73cea55f754537f3a8ed487d29c6322f470b",
+    "followups/inspect_visibility_i1/importer.py": "b430f0dbd4b3d42e38fc9d750f4dc7064809b39ab228d39e56f17c5a7d92448e",
+    "followups/inspect_visibility_i1/paths.py": "abdf2710b5c807553714e02c081b940b89f7a89111249205caf236b317388be2",
+    "followups/inspect_visibility_i1/run.py": "d03e1bbd98fc560763f2a3f65085460e74597b9bee688de54529fbfa76dba163",
+    "followups/inspect_visibility_i1/setup.py": "6d3f7cd63d90a9aa0fe32577768fff911d590beaa16eecadf5b0ec3e2697fd9f",
+    "followups/inspect_visibility_i1/tests.py": "8e505c69dfa67c88073cc8d0e296db0be4e1541e1ca26fd84a0e2f9ccdce5473"
+  }
+}

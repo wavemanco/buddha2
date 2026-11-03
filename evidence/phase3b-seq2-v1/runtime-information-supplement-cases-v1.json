@@ -1,0 +1,15 @@
+{
+  "kind": "phase3b-s2-runtime-information-supplement-cases-v1",
+  "status": "expected_cases_frozen_before_information_guard_edits",
+  "basis": "Existing S2-2, S2-3, S2-4 and S2-5 requirements; no new scientific method, criterion or funding",
+  "provider_calls": 0,
+  "cases": [
+    {"id": "IG01", "expect": "any pilot and any authoring or selector conversation cannot forward its first output/strategy mutation before all mandatory complete original lossless evidence is model-visible"},
+    {"id": "IG02", "expect": "a normal direct final without a file mutation cannot bypass mandatory complete evidence; terminal and fallback remain explicit separate classifications"},
+    {"id": "IG03", "expect": "missing round2 prior-pool or earlier-author view in a later pilot rejects before a subsequent paid stage or solver rollout"},
+    {"id": "IG04", "expect": "missing anonymous candidate content in a later-pilot selector rejects normal completion, even when its choice ID is syntactically valid"},
+    {"id": "IG05", "expect": "saved-session replay recomputes and binds every normal session information proof to actual source instructions, signed requests, response and native candidate identity"},
+    {"id": "IG06", "expect": "selector id-map is the native deterministic assign_ids map for actual task_id, mode seq, k2, c1/c2 candidates, and chosen_id maps to chosen_label"},
+    {"id": "IG07", "expect": "a positive full genuine two-round mock path proves normal six-stage and selector delivery; a later-pilot omitted-view negative is rejected without changing the accepted information requirement"}
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "65165ba57364ce61cd8ce454f7a90a1248684d3d5d5b49c42d43f7aa81bbd796",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 1661
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0036",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**A quality cast-iron skillet (a 10- or 12-inch Lodge or, if you want to splurge, a Smithey).**\n\nAt 25, your friend is likely settling into adult life: cooking more, hosting friends, maybe moving into a place that's really theirs. A cast-iron pan is a gift that grows with them. It sears steak, bakes cornbread, roasts vegetables, and makes a great weekend breakfast. With basic care it lasts decades, and it even gets better with age, which makes it a nice symbol for the next chapter.\n\n**Make it feel personal:** Tuck in a small bottle of seasoning oil or a chain-mail scrubber, and add a handwritten note like, \"Here's to the next 25 years of good meals.\"\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "65165ba57364ce61cd8ce454f7a90a1248684d3d5d5b49c42d43f7aa81bbd796",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.02",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

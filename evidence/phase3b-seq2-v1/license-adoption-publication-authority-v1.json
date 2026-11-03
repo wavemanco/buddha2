@@ -1,0 +1,25 @@
+{
+  "adopted": true,
+  "canonical_license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "copyright_notice_scope": "Code and documentation authored for this new research project; third-party notices and separate terms retained.",
+  "created_at_utc": "2026-11-03T06:31:23.097644+00:00",
+  "github_repository": "https://github.com/wavemanco/buddha2",
+  "kind": "buddha2-license-adoption-publication-authority-v1",
+  "license_and_notice_file_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "0478a146ccccce758bb78723a7691aa520af4769f1621c5f81234398179bc67d",
+    "third_party_licenses/INSPECT_AI.txt": "c593c2afc81388521eaeb03f0d1a4b01bc3e5147ed9cb16c1f129e5be353b6af",
+    "third_party_licenses/NOVELTYBENCH.txt": "14e69e7fbb2f8fd0aa8ccf17d7d4ddd54665555c613a0336767f7a5fa477895c",
+    "third_party_licenses/OPENCODE.txt": "625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b"
+  },
+  "license_file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "original_project_access_or_publication_authorized": false,
+  "private_credentials_locks_raw_logs_and_unreviewed_archives_published": false,
+  "public_git_history_route": "Reviewed clean publication snapshot; preserve existing local history and artifacts.",
+  "scientific_models_prompts_caps_or_repetitions_changed": false,
+  "source_and_documentation_license": "Apache-2.0",
+  "third_party_material_relicensed": false,
+  "user_boundary_clarification": "Only the new working folder is part of the work and publication; the original Buddha2 folder is excluded.",
+  "user_instruction": "when you complete the current piece of work, please push everything to https://github.com/wavemanco/buddha2. Add the license you proposed for this repo.",
+  "working_root": "C:\\Users\\arvik\\code\\research\\Buddha2"
+}

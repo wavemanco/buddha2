@@ -1,0 +1,178 @@
+{
+  "all_cached_train_rows_machine_read": true,
+  "groups": [
+    {
+      "group_id": "muce-prompt-00517d47bdb8e0c36030dd1bf676f28ab7e3fba99da12c86fda2f96f660e2cfb",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-0a337f26e74b13a95842ce6afc041a73ca0e22772d531b6461f3e9dd03b246fc",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-1330af04f7336ffc077c3330bb1126949eecd19687347539c8be798588dad732",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-15a79d527c929dddf7f7f3e5a089bb0d28b6a06c142003984172bd856a42fbfc",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-1a4e9684afed8355020cb48fe7b5467ca65aaa5049699fc715cef2b666d902fb",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-4066b7ecf310f4b50c13fa02e952d05bf13a7afd477c231a945392f6407d3e1d",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-4adfa931f265b4c0521e6845b150e525460ac3167bccf944d4b7f4e415121e1c",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-6094b17dae4d3541ee03c8fa1831e6e5f60e0b876bbe67e8e80eded84c4e453a",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-78122fbc1598b978edc2c291649d703edc29abeb3096e2fd689e7dd6e03da1f1",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-7950d2e5602216aee4ca52e036b4816d5bb97af16ece4af57718d1345572221f",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-8a0025558b6c25e8a1abeb0e4de902dc7b1acf3eda3e21191bc4f02d152a511b",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-8ef89169dcd7ec5ced1756fe5db5a7573a91b703d1bd8cf9f45c5a664c97389c",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-930e99b6ce928e2093886879092ccf18aa9d33ae1221d2cf6e417f759498932b",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-9637779605c41687a888ca40c61490853842ff6d6f87fc555358d9be95fee947",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-9ba3f3b1ccad23ecad403c70f5faee26207efa6eac04d95412f8590568d4b02e",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-9c54782c396d9aa95dab7adaa85537e0a6a33aa6bbfffc0de4c396830bb6e0d8",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-a3619f5c70192d4eb51aba03fc84d1e058aa57f94cfcd4d1bbcd1e798dbcc1d4",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-a83921b1ed131f5c361e4f9c5faa1757d542ad78e47589366c9d8b4a2ff83fb1",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-be585f17c6e19ecf67f8ce0793122b348f6544f1f2b3391f9fd76308cc434a0f",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-c3985fbd8108a9521d68a1623d8b38f157254a1aa1ac1afabbedb6b03117eab6",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-c5710e249cdab4b31fd94b59604f7c61764e728e709b978628b6ba93b7173dc3",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": true,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-c629706e1128bec1ed33ca5cd2b021704b03d0c8ba7e24eb3949b5315ed0ce5b",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-c7eee95b7ff5ed3fbae4620dad45206e66146600e693b9d9fec892f24493a487",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    },
+    {
+      "group_id": "muce-prompt-fc932b0b85b856c296b8c531145bf6e7104f3cab7fc38578715e0b9a5adf57f8",
+      "model_evaluated_in_Phase1": true,
+      "phase1a_inspection": false,
+      "status": "development_only_Phase1_already_exposed"
+    }
+  ],
+  "independent_human_ratings_collected": 0,
+  "published_example_groups": [
+    "muce-prompt-ec9f83bc79b2428b94cbf286d2d9229ba42e1045a1088257d5397bc95265419e"
+  ],
+  "published_heldout_splits": {
+    "heldout_item": {
+      "dataset_revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "path": "full_agreement/heldout_item-00000-of-00001.parquet",
+      "status": "metadata_pointer_only_no_rows_opened"
+    },
+    "heldout_task": {
+      "dataset_revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "path": "full_agreement/heldout_task-00000-of-00001.parquet",
+      "status": "metadata_pointer_only_no_rows_opened"
+    },
+    "test": {
+      "dataset_revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "path": "full_agreement/test-00000-of-00001.parquet",
+      "status": "metadata_pointer_only_no_rows_opened"
+    },
+    "val": {
+      "dataset_revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "path": "full_agreement/val-00000-of-00001.parquet",
+      "status": "metadata_pointer_only_no_rows_opened"
+    }
+  },
+  "reward_training_membership": "unknown_without_separate_proof",
+  "schema_version": 1,
+  "unused_answer_texts_or_scores_displayed": false
+}

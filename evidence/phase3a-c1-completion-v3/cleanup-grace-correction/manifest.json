@@ -1,0 +1,15 @@
+{
+  "files": {
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks.json": "df7a3565a5a3ab209c7e1b67be6f64163ff1018415d8ce2f4f9c0320d3825b5a",
+    "command.json": "3bccf69aeff304134ab811d599c1f8bdab32234227c1e954bcd4d5ff6636d75f",
+    "exit.json": "e81bc160c0843ee56f31f12997bb3aff50528d596002d4866676cb8a1b19195a",
+    "mypy.log": "f9b031e5c45aa702cd4fef028d465551cb20a2c4698e0913c7b00766b20ac4d8",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "tests.log": "a7f722dffa997400b5908a9cc23f2fb19e5e7a8959d0b9aebaee2e2ec7840cfc"
+  },
+  "kind": "phase3a-r2-cleanup-grace-development-evidence-v1",
+  "not_whole_kit_acceptance": true,
+  "passed": true,
+  "real_provider_calls": 0
+}

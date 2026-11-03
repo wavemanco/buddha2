@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-dff78139dd3095a364494d65086a2c4fce0028d6b0310f225ad62a9a3182e6e6",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "b685650f8f4b81cd754cf907da17729ed72f135fb1fe8ef15a38925e61705688",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 1,
+    "request_ids": [
+      "p2-bb4114325fac6e0f738f14ca.plan",
+      "p2-bb4114325fac6e0f738f14ca.answer.00",
+      "p2-bb4114325fac6e0f738f14ca.answer.01",
+      "p2-bb4114325fac6e0f738f14ca.answer.02",
+      "p2-bb4114325fac6e0f738f14ca.answer.03",
+      "p2-bb4114325fac6e0f738f14ca.answer.04",
+      "p2-bb4114325fac6e0f738f14ca.answer.05",
+      "p2-bb4114325fac6e0f738f14ca.answer.06",
+      "p2-bb4114325fac6e0f738f14ca.answer.07",
+      "p2-bb4114325fac6e0f738f14ca.answer.08",
+      "p2-bb4114325fac6e0f738f14ca.answer.09",
+      "p2-f2499c2a8327dcbb58c664f4.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-06069eb2cf076f070922ac72",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.00",
+      "status": "ok",
+      "text": "**Password:** `k7G!`\n\nThis mixes a lowercase letter, a digit, an uppercase letter, and a symbol. Drawing from all four character classes (about 94 printable characters) makes each position as unpredictable as possible, giving roughly 94⁴ ≈ 78 million combinations, the most a 4-character password can offer.\n\nFour characters is still very short and can be cracked quickly by brute force, so use a longer password wherever the system allows it."
+    },
+    {
+      "id": "response-795eae17a670ee45d2f38e12",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.02",
+      "status": "ok",
+      "text": "**Suggested password:** `m7#Q`\n\nI picked it by random choice from uppercase and lowercase letters, digits, and symbols, so it follows no pattern or dictionary word.\n\n**A 4-character password can't really be strong.** The math:\n\n- About 94 printable ASCII characters are available.\n- 94⁴ ≈ 78 million combinations, which is about 26 bits of entropy.\n- Against an offline attack, such as a stolen password hash, a modern GPU setup can test billions of guesses per second. It would crack any 4-character password in well under a second.\n- Against an online attack, such as a login form, it holds up much better. That only works if the system limits attempts or locks accounts after repeated failures.\n\n**What makes it as good as it can be at this length:**\n- Use all four character types (as above).\n- Avoid words, names, years, and keyboard patterns like `1234` or `qwer`.\n- Don't reuse it anywhere else.\n\n**If you have any say in the length,** go longer. Each added random character multiplies the possibilities by about 94. At 12 random characters you reach roughly 79 bits of entropy, which is out of reach for brute force. A passphrase of four or five random words is similarly strong and easier to remember.\n\nIf a system forces exactly 4 characters, such as a PIN or device code, use `m7#Q`-style randomness if symbols are allowed. Pair it with rate limiting or lockout, since that is what actually protects you there."
+    },
+    {
+      "id": "response-0418c9e578c5ececc6382295",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.01",
+      "status": "ok",
+      "text": "Here are several 4-character options, each exactly 4 characters, using different strategies:\n\n**Symbol-heavy**\n- `#7!q`\n- `%k@9`\n\n**Mixed-case + digit**\n- `rT4v`\n- `9Gm2`\n\n**Punctuation-led**\n- `?x8W`\n- `~Q3d`\n\nPick one and don't reuse it elsewhere. A 4-character password is inherently weak (roughly 95⁴ ≈ 81 million possibilities at best, which can be cracked quickly offline), so use it only where the system limits you to 4 characters, such as a PIN-style lock or a low-stakes device. Wherever longer passwords are allowed, use 12+ characters or a passphrase."
+    },
+    {
+      "id": "response-ee1f5d92469e3f5a54e08a70",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.06",
+      "status": "ok",
+      "text": "**Suggested password: `Mc3!`**\n\n**Derivation (mnemonic):**\n- Start with a personal phrase: *\"My cat has 3 lives!\"*\n- Take the initials: **M**, **c**, then keep the number **3** and the symbol **!**\n- Result: `Mc3!`\n\nThis gives you one uppercase letter, one lowercase letter, one digit, and one symbol, so all four character types are covered in just 4 characters.\n\n**Caveat:** Four characters is inherently weak, because there are only about 95⁴ (~81 million) possible combinations, which can be cracked quickly by brute force. Use this only where the system forces a 4-character limit (like a PIN-style lock), and make up your own phrase rather than using this example. Wherever longer passwords are allowed, use 12+ characters or a passphrase."
+    },
+    {
+      "id": "response-6a71d208a88042ce40476f70",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.05",
+      "status": "ok",
+      "text": "**Suggested 4-character password: `k7#Q`**\n\nWhy it holds up better than most 4-character choices:\n\n- **Mixed character types:** It has a lowercase letter, a digit, a symbol, and an uppercase letter, so it draws from the full ~95-character keyboard set.\n- **No pattern:** It isn't a keyboard walk (qwer, asdf, 1234), a repeat (0000, aaaa), a date or year (1990, 0412), or a word fragment.\n- **Unpredictable placement:** The symbol and capital are in the middle and end rather than the usual \"capital first, number last\" spot attackers try early.\n\n**What attackers try first:**\n1. Lists of the most common passwords and PINs (1234, 0000, 1111, password fragments)\n2. Keyboard walks (qwer, zxcv, 1qaz)\n3. Dates, birth years, and repeated digits\n4. Short words with simple substitutions (p@ss)\n5. Brute force across all combinations, which is where randomness matters\n\n**Honest limit:** Four characters is inherently weak. Even with ~95 options per slot, there are only about 81 million combinations (95⁴), which a computer can exhaust in seconds if the system allows unlimited guesses. A 4-character password is only reasonably safe where there's strict attempt limiting (like a phone lock or ATM that locks after a few tries). Wherever you can, use 14+ characters or a random passphrase with a password manager.\n\nAlso, generate your own random one rather than reusing an example from the internet, including this one."
+    },
+    {
+      "id": "response-81b2d2a9807d3ff0732bd099",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.08",
+      "status": "ok",
+      "text": "**Suggested password:** `r7#Q`\n\nIt mixes a lowercase letter, a digit, a symbol, and an uppercase letter, which is about as much variety as 4 characters can hold. Choose your own random characters if you can, since a published example isn't secret.\n\n**Be aware:** a 4-character password can't be truly strong. Even with about 95 possible characters per position, there are only about 81 million combinations, and an attacker with offline access to a hash could crack that in seconds. Because of this, the following measures matter a lot:\n\n- **Enable two-factor authentication (2FA)** so the password alone isn't enough to get in.\n- **Use account lockout or rate limiting** so guessing is cut off after a few failed attempts. This is where a short password is most acceptable, like a phone PIN or an ATM card.\n- **Never reuse it.** Use a different one for every site or device.\n- **Use a password manager** if the system permits longer passwords. A random 16+ character password is far stronger.\n- **Avoid patterns**, such as keyboard walks, birth years, or dictionary fragments.\n\nIf the system caps you at 4 characters, treat the lockout and 2FA protections as what actually keeps the account secure."
+    },
+    {
+      "id": "response-71ac2a0f799bd19347eacfda",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.07",
+      "status": "ok",
+      "text": "**Suggested password: `k7#R`**\n\nWhy it works within a 4-character limit:\n- It mixes a lowercase letter, a digit, a symbol, and an uppercase letter, which gives the most variety possible in 4 characters.\n- It avoids look-alike characters (no O/0, l/1/I).\n- All four characters are easy to reach on mobile keyboards. The symbol `#` is on the first symbol page, and you only need one shift for `R`.\n\nKeep in mind that 4 characters is inherently weak. Even with a full character mix, it can be brute-forced quickly. If the system allows it, use a longer passphrase. If you're stuck with 4 characters, pair it with lockout limits or two-factor authentication."
+    },
+    {
+      "id": "response-128987df4c684fe25a966a0a",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.09",
+      "status": "ok",
+      "text": "Here's a 4-character example: **k7#Q**\n\nIt mixes a lowercase letter, a digit, a symbol, and an uppercase letter, which is about as strong as 4 characters can get.\n\nA few caveats:\n- **Don't reuse this one.** Any password shared publicly, including this example, shouldn't be used for a real account.\n- **Personalize it.** Change at least one character, such as swapping the symbol or the digit, so it's unique to you.\n- **Four characters is inherently weak.** Even a well-mixed 4-character password can be cracked quickly by automated tools. If the system allows it, use 12 or more characters, or a passphrase, and store it in a password manager."
+    },
+    {
+      "id": "response-e85d84919d9f3c4113b59a11",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.04",
+      "status": "ok",
+      "text": "**Example 4-character password:** `q7#Lv`... wait, that's 5. Here's a correct one: **`k7#R`**\n\n**Caveat:** 4 characters is inherently weak. Even with uppercase, lowercase, digits, and symbols (about 94 options per position), there are only about 78 million combinations (94⁴), which a computer can crack almost instantly if an attacker can guess offline. It's only reasonably safe where the system limits guesses, such as a phone or ATM PIN lockout.\n\n**How to generate your own (don't reuse mine):**\n\n1. **Password manager method:** Open your password manager's generator, set length to 4, enable lowercase, uppercase, numbers, and symbols, then generate. Re-roll if it omits a class you need.\n\n2. **Dice method:** Make a numbered chart of 94 characters (or a smaller set, such as 36 letters and digits). Roll dice to pick a number per position, such as two d10s or d6 combinations, rejecting out-of-range values, and look up the matching character. Repeat 4 times.\n\n3. **Check the result:** Avoid anything that spells a word, a year, or a keyboard pattern, since true randomness is what gives a short password any strength.\n\nIf you have any say in the length, use 12 or more characters, or a 4-5 word random passphrase, for real security."
+    },
+    {
+      "id": "response-b1e587419f1b19835b8d3ecc",
+      "request_id": "p2-bb4114325fac6e0f738f14ca.answer.03",
+      "status": "ok",
+      "text": "**Suggested 4-character password:** `q7#Lx` is 5, so here is a true 4-character one: **`k9$T`**\n\nIt mixes a lowercase letter, a digit, a symbol, and an uppercase letter, and it isn't a word or pattern. That gives about 95⁴ ≈ 81 million combinations, which is the most a 4-character password can offer.\n\n**Where a 4-character password is acceptable**\n- Device lock screens or SIM/app PINs that lock out or wipe after a few wrong attempts\n- Logins with strict rate limiting or lockout, where an attacker gets only a handful of guesses\n- Low-value, temporary, or offline-irrelevant uses, such as a throwaway local account\n\n**Where it is dangerous**\n- Any online account without lockouts, such as email, banking, or social media\n- Encrypted files, password managers, or Wi-Fi networks, where an attacker can guess offline at billions of attempts per second. A 4-character password falls in seconds or less.\n- Anything protecting sensitive data or reused across sites\n\n**Better advice when the system allows it**\n- Use a passphrase of 4 or more random words, such as `copper-lantern-drift-mango`, or at least 14-16 random characters.\n- Use a password manager to generate and store unique passwords.\n- Turn on multi-factor authentication wherever possible.\n\nIf a site forces a 4-character limit, treat it as weak protection, never reuse that password, and don't store anything valuable behind it."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-6584de30a11a0e08ca32",
+    "prompt": "Suggest a strong 4 character password.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-96"
+    }
+  }
+}

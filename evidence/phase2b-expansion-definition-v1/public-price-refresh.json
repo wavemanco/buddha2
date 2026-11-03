@@ -1,0 +1,48 @@
+{
+  "account_or_invoice_verified": false,
+  "base_rates_changed": false,
+  "execution_profile_confirmation_required": true,
+  "kind": "p2be-planning-public-price-refresh-v1",
+  "method": "Official-domain web search, then pages opened; public documents only",
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "planning_only": true,
+  "reviewed_at_utc": "2026-10-28T10:44:41Z",
+  "scientific_settings_changed": false,
+  "sources": [
+    {
+      "observation": "Exact Sonnet model remains available; ordinary input/output2/10, five-minute write2.5, read0.10.",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+    },
+    {
+      "observation": "Exact Luna model:1,050,000 context,128,000 output; ordinary input/output0.20/1.20, cachewrite1.25x; medium default effort.",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+    },
+    {
+      "observation": "Exact legacy Opus5 remains available; ordinary input/output5/25, one-hour write10, read0.50.",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview"
+    },
+    {
+      "observation": "Global standard rates, USgeography1.1x, cache and fast-mode categories distinguish the existing supported profile.",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "observation": "Regional processing adds10percent where applicable; existing conservative inherited-premium treatment retained.",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    }
+  ],
+  "standard_input_output_usd_per_million": {
+    "claude-opus-5": [
+      "5",
+      "25"
+    ],
+    "claude-sonnet-5-5": [
+      "2",
+      "10"
+    ],
+    "gpt-5.6-luna": [
+      "0.20",
+      "1.20"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "ContainerId": "d0f33500fbe64c1c85d61ead93c59710b00a663f6433f0b6aa93109df17ed4ed",
+  "Image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "Command": [
+    "python",
+    "-B",
+    "-m",
+    "buddha2",
+    "export",
+    "--portfolio",
+    "/results/example/portfolio.json",
+    "--output",
+    "/results/exported"
+  ],
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+      "Destination": "/results",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Destination": "/workspace",
+      "RW": false
+    }
+  ],
+  "NetworkMode": "none",
+  "ReadonlyRootfs": true,
+  "CapDrop": [
+    "ALL"
+  ],
+  "SecurityOpt": [
+    "no-new-privileges"
+  ],
+  "Env": [
+    "BUDDHA2_IMAGE_ID=sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "LANG=C.UTF-8",
+    "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+    "PYTHON_VERSION=3.12.15",
+    "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "PYTHONUNBUFFERED=1",
+    "PYTHONNOUSERSITE=1",
+    "HF_HUB_OFFLINE=1",
+    "HF_DATASETS_OFFLINE=1",
+    "TRANSFORMERS_OFFLINE=1",
+    "TOKENIZERS_PARALLELISM=false",
+    "OMP_NUM_THREADS=1",
+    "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2",
+    "NOVELTYBENCH_ROOT=/workspace/.upstream/novelty-bench",
+    "BUDDHA2_NB_UPSTREAM=/workspace/.upstream/novelty-bench",
+    "HARNESS2_ROOT=/workspace/.upstream/harness2",
+    "BUDDHA2_OUTPUT_ROOT=/results",
+    "BUDDHA2_TEST_OUTPUT_ROOT=/results/acceptance",
+    "BUDDHA2_OFFLINE=1",
+    "TMPDIR=/tmp"
+  ],
+  "OmittedEnvironmentNames": [],
+  "PidsLimit": 256,
+  "Memory": 4294967296,
+  "NanoCpus": 2000000000,
+  "Tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=536870912"
+  },
+  "ExitCode": 0,
+  "State": "exited",
+  "OOMKilled": false,
+  "Logs": {
+    "Stdout": "81e7c1aeed754269b4f71565d9e4d7da.stdout.log",
+    "Stderr": "81e7c1aeed754269b4f71565d9e4d7da.stderr.log",
+    "StdoutSha256": "e86aab8c95e9c46a35230e99ff034ef1b2bf54c68770685ddae0b7ce2ce555e7",
+    "StderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

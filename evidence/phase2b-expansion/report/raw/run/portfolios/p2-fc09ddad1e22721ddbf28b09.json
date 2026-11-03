@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-553d7aea4e2f7f9f1419cb9ff34ee2d71a622f6a60df9f68f130e8289b8f8fd5",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-fc09ddad1e22721ddbf28b09.answer.00",
+      "p2-fc09ddad1e22721ddbf28b09.answer.01",
+      "p2-fc09ddad1e22721ddbf28b09.answer.02",
+      "p2-fc09ddad1e22721ddbf28b09.answer.03",
+      "p2-fc09ddad1e22721ddbf28b09.answer.04",
+      "p2-fc09ddad1e22721ddbf28b09.answer.05",
+      "p2-fc09ddad1e22721ddbf28b09.answer.06",
+      "p2-fc09ddad1e22721ddbf28b09.answer.07",
+      "p2-fc09ddad1e22721ddbf28b09.answer.08",
+      "p2-fc09ddad1e22721ddbf28b09.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-545e6609a85a3e61f50c82eb",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.00",
+      "status": "ok",
+      "text": "Here's a 4-character password: **k#9Q**\n\nIt mixes a lowercase letter, a symbol, a digit, and an uppercase letter, which is about as strong as 4 characters can be. Even so, 4 characters is very short and can be cracked quickly by automated tools. If the system allows it, use 12 or more characters, ideally a passphrase or one from a password manager."
+    },
+    {
+      "id": "response-80d3c40bf79b98e905f7ffa6",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.01",
+      "status": "ok",
+      "text": "**r7$K**\n\nFour characters is very short, so this is only as strong as a 4-character password can be. It mixes a lowercase letter, a digit, a symbol, and an uppercase letter. If you have any choice in the matter, use 12 or more characters. Also, don't reuse this one, since it's now been shared in plain text."
+    },
+    {
+      "id": "response-b434b7d8202a58e5945f42cf",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.02",
+      "status": "ok",
+      "text": "**k7#Q**\n\nFour characters is very short, so this mixes a lowercase letter, a digit, a symbol, and an uppercase letter to get the most variety possible. If the system allows it, use a longer passphrase instead, since length matters far more than complexity."
+    },
+    {
+      "id": "response-fd5b9b4e4e3106604960ceb2",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.03",
+      "status": "ok",
+      "text": "**k7#R**\n\nThis uses four character types (lowercase, number, symbol, uppercase) and doesn't spell a word. Four characters is inherently weak, though, so if the system allows it, use a longer password or a passphrase for real security."
+    },
+    {
+      "id": "response-037067c19ef57ae54c222f56",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.04",
+      "status": "ok",
+      "text": "**k7#Q**\n\nThis uses a lowercase letter, a digit, a symbol, and an uppercase letter. With only 4 characters, any password is inherently weak against brute-force attacks, so use a longer one (12+ characters) wherever the system allows."
+    },
+    {
+      "id": "response-9345569708864f262a81b809",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.05",
+      "status": "ok",
+      "text": "**r7!Q**\n\nAt only 4 characters, any password is inherently weak, since it can be cracked quickly by brute force. This one uses mixed case, a digit, and a symbol to maximize strength within the limit. If the system allows, use a longer passphrase instead."
+    },
+    {
+      "id": "response-18ff85af9d4ecfdef96897c9",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.06",
+      "status": "ok",
+      "text": "Here's a 4-character password: **k7#Q**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is as strong as 4 characters can get. Still, length matters most for security, so use a longer password (12+ characters) whenever the system allows it."
+    },
+    {
+      "id": "response-d3e8c1395156a6ad42db126a",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.07",
+      "status": "ok",
+      "text": "**x7#Q**\n\nOnly 4 characters is inherently weak, but this one uses a mix of lowercase, a digit, a symbol, and an uppercase letter to maximize strength within that limit. If the system allows it, a longer passphrase would be far more secure."
+    },
+    {
+      "id": "response-56992484a63517f44a90e79d",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.08",
+      "status": "ok",
+      "text": "**r7#K**\n\nWith only 4 characters, this is the strongest approach: it mixes lowercase, uppercase, a digit, and a symbol, and it avoids dictionary words and patterns.\n\nBe aware that any 4-character password is inherently weak, since it can be cracked almost instantly by brute force. If the system allows it, use at least 12-16 characters, such as a passphrase made of several random words."
+    },
+    {
+      "id": "response-3236b8bfad607b0f6118f968",
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.09",
+      "status": "ok",
+      "text": "Here's a 4-character password: **q7#Z**\n\nIt mixes a lowercase letter, a number, a symbol, and an uppercase letter, which is about as strong as 4 characters can be. Be aware that any 4-character password is inherently weak against brute-force attacks, so use a longer one (12+ characters) wherever the system allows it."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-6584de30a11a0e08ca32",
+    "prompt": "Suggest a strong 4 character password.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-96"
+    }
+  }
+}

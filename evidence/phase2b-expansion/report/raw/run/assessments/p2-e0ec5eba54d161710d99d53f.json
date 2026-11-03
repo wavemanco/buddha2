@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "c132d5f75bcf4e68aa4212e7f4f937f60837c9539dce77d9108dede39646a52f",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 8.474848770495612
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        8,
+        9,
+        9,
+        8,
+        9,
+        9,
+        9,
+        9,
+        8
+      ],
+      "partition_scores": [
+        8,
+        8,
+        9,
+        9,
+        8,
+        9,
+        9,
+        9,
+        9,
+        8
+      ],
+      "utility": 8.474848770495612
+    },
+    "generation_row": {
+      "generations": [
+        "**Title: *Hop to It***\n\nTess Mullins, a overworked Kansas City accountant, drives home to tiny Cottonwood Springs for Easter and, cornered by her meddling aunts and her ex's smug engagement announcement, blurts out that she's engaged to a man named \"Daniel.\" When her tire blows out on a gravel road, she meets Sam Whitaker, a stranded large-animal veterinarian whose truck is stuck in a ditch, and she persuades him to pose as her fiancé in exchange for a ride and a promise of free ham. Over the holiday weekend, their lie snowballs through a chaotic egg hunt, a runaway goat in the church sanctuary, and a midnight chase through a wheat field after the family's prized Easter lamb escapes. Between the mishaps, the two trade real confessions, and Tess realizes the easy warmth she's faking with Sam is the most honest thing she's felt in years. When her grandmother exposes the ruse at Easter dinner, Tess is humiliated and Sam leaves, but she drives out to his clinic at sunrise to tell him the truth, and he answers by asking her, with a ring made from a plastic Easter egg, to make it real.",
+        "**Title: *Hallelujah, Kansas***\n\n1. Burned-out Chicago journalist Maggie Holloway gets laid off just before Easter and reluctantly returns to her tiny hometown of Pleasant Prairie, Kansas, when her mother begs her to help save the family's struggling church's annual Easter egg hunt and sunrise service.\n\n2. She arrives to find that her high school sweetheart, Caleb Reyes, who she left behind without a proper goodbye, is now the town's earnest young sheep farmer and the volunteer coordinator of the very event she's been roped into running.\n\n3. Between runaway lambs, a disastrous egg-dyeing incident, and a feud with the church potluck committee, Maggie and Caleb slip back into their old banter and realize the spark never really died.\n\n4. Just as they're growing close, a dream job offer arrives from a major New York magazine, and Caleb discovers Maggie has been quietly drafting a story about the town's quirks, leading to a blowup that leaves them both hurt.\n\n5. On Easter morning, Maggie scraps the snarky piece, writes a heartfelt tribute to the community instead, and shows up at the sunrise service to tell Caleb she's staying, with a plan to launch a local-news-and-storytelling site, and the two share a kiss as the whole congregation cheers and a lamb wanders down the aisle.",
+        "**Hoppy Ever After**\n\nWhen Chicago event planner Maddie Collins is sent to rural Kansas to rescue the failing Easter egg hunt in Pleasant Prairie, she expects an easy weekend of pastel decorations and quick fixes. Instead, she meets Jake Dawson, a stubborn wheat farmer and lifelong volunteer who has run the hunt the same way for fifteen years and refuses to trade his hand-painted eggs for her plastic, sponsor-branded ones. Their bickering escalates through a series of disasters, including a runaway goat in the petting zoo, a barn-decorating fiasco, and a flooded field, yet each mishap forces them to work together and reveals how much each admires the other's passion. Just as Maddie begins to fall for the town and for Jake, her boss announces that the hunt will be taken over by a corporate sponsor, and Jake discovers that she kept the plan secret, causing a heartbreaking fight on Saturday night. On Easter morning, Maddie defies her company, blends his traditions with her ideas to save the event, and as the children hunt, she and Jake find the last golden egg together, which holds a note asking her to stay.",
+        "**Title: *Egg on Their Faces***\n\nWhen divorced veterinarian Maggie Hollis and divorced feed-store owner Tom Branigan both find themselves roped into co-hosting the Easter potluck in tiny Plumb Creek, Kansas, the two rivals, who haven't spoken since a disastrous county fair bake-off, are horrified. Their kids, 10-year-old Josie and 12-year-old Wyatt, secretly team up with their meddling grandmothers to sabotage every planning meeting, locking the pair in a barn, swapping their casserole labels, and rigging the church's Easter egg hunt so that Maggie and Tom keep ending up side by side. As the schemes escalate into chaos, including a runaway goat in the fellowship hall and a ham that goes missing, Maggie and Tom begin to see each other's kindness, humor, and bruised hearts beneath the bickering. Just when sparks finally fly during a late-night prairie drive to rescue the replacement ham, the kids' plot is exposed, and a hurt, embarrassed Maggie and Tom accuse each other of being part of the setup and call everything off. On Easter morning, with the potluck falling apart, Tom shows up at sunrise service with a tray of Maggie's favorite pie, the whole town cheers, and the pair share a kiss beneath the budding cottonwoods as the grandmothers high-five over the deviled eggs.",
+        "When pop star Dani Rae flees to the tiny town of Marigold, Kansas, to escape a tabloid scandal just before Easter, she's mistaken for the church's new substitute choir director and is too desperate for a hideout to correct anyone. She throws on a cardigan, borrows a rusty pickup, and quickly gets roped into rehearsals for the town's beloved Easter Sunday concert. Along the way she meets Wes Callahan, a gruff but kind farmer who has never heard of her music, and their banter over egg-dyeing, a runaway lamb, and a flooded barn leaves her feeling more like herself than she has in years. As their romance blossoms, a nosy teenager in the choir discovers her secret, and a tabloid reporter shows up just as Dani realizes she's falling for a man who knows only the \"real\" her. On Easter morning, Dani chooses to reveal the truth herself by singing an honest, unplugged song in the church, and Wes, hurt but moved, meets her under the spring blossoms to tell her he fell for the choir director, not the celebrity, and the two share a kiss as the whole town cheers.",
+        "**Title: \"Rise and Shine, Pleasant Valley\"**\n\nWhen big-city pastry chef Hannah Moore returns to her tiny hometown of Pleasant Valley, Kansas, to save her late grandmother's bakery, she finds that charming rival baker Luke Dalton has been undercutting her family's Easter pie and bread contest legacy for years. Determined to win the annual contest and keep her shop, Hannah launches a prank war with Luke, which includes swapping his sugar for salt, hiding his sourdough starter in a hen house, and accidentally releasing a flock of Easter chicks into his shop. Luke retaliates by sending Hannah's prized hot cross buns on an unplanned tour via the town's runaway parade tractor, and their feud becomes the talk of every church potluck and feed store. When a ferocious spring storm knocks out power the night before the community Easter feast, the two rivals are forced to bake together by lantern light in her grandmother's old wood-fired oven, discovering that her secret recipe card and his family's sourdough method were meant to be combined. On Easter morning, they serve a joint \"Hannah-and-Luke\" pie and bread feast to the whole town, tie for first place, and seal their new partnership and budding romance with a flour-dusted kiss under the blooming redbud trees.",
+        "**Title: *Hop to It***\n\nDr. Josie Marsh, a stubborn small-town veterinarian in Pratt County, Kansas, is already dreading Easter eve when a tornado warning sends her racing to a farm to check on a heavily pregnant cow. There she finds Ben Alvarez, a charming but hapless traveling performer in a full bunny costume who was hired to entertain at the town's Easter celebration, and the two end up trapped in the barn as the storm rages outside. Bickering turns to teamwork as they deliver a breech calf by flashlight, and Ben's goofy bedside manner wins over both the frightened animal and Josie's guarded heart. When dawn breaks they discover the storm has wrecked the church grounds, so they rally the quirky townsfolk to rebuild the sunrise service in a muddy pasture, with the newborn calf as the unlikely guest of honor. As the sun rises over the prairie, Ben, who had planned to leave town that morning, trades his bunny ears for a chance to stay, and he and Josie share a kiss as the whole congregation cheers.",
+        "When schoolteacher Josie Hartman reluctantly runs for mayor of tiny Pottersville, Kansas, to save the town's struggling Easter parade, she never expects her opponent to be Cal Brenner, the cynical hardware-store owner who thinks the parade is a waste of money and wants the funds spent on fixing potholes. Their campaign sparring escalates into a prank war, with Cal's \"vote for pavement\" signs mysteriously turning up covered in pastel bunny stickers and Josie's campaign table finding itself buried under 500 plastic eggs. As they trade barbs at town hall debates and run into each other repeatedly at the church egg hunt, the pair begin to notice the thoughtful things the other has done, like Cal secretly repairing the parade float and Josie tutoring his struggling nephew for free. When a spring storm threatens to wreck the parade the night before Easter, Josie and Cal team up with the whole town to rebuild the floats by flashlight, and a tender, flour-dusted moment in the barn leads to their first kiss. On Easter morning, the parade rolls down a freshly patched Main Street, the election results are tied in a hilarious twist, and the two rivals agree to share the job of mayor, and eventually, the rest of their lives.",
+        "When city-based pastry chef Josie Marlowe inherits her late great-aunt's rundown farm outside Cottonwood Falls, Kansas, just two weeks before Easter, she plans to sell it quickly and return to Chicago. Her gruff neighbor, wheat farmer Cal Brennan, has been trying to buy the land for years and sees her as a naive outsider who will let the property go to ruin. When Josie learns that the farm's back taxes are due by Easter Monday, she impulsively announces a community Easter egg-hunt fundraiser, and Cal reluctantly agrees to help because the town's tradition has been dying without a venue. As they repair the barn, paint thousands of eggs, and bicker over everything from tractor etiquette to the proper way to make hot cross buns, their sparring gradually turns into real affection. Just as the hunt raises enough money to save the farm, Josie discovers Cal's standing offer was never about greed but about protecting the land her great-aunt loved, and she chooses to stay, sealing the new romance with a kiss in the blooming prairie field on Easter morning.",
+        "**Title: *Hop to It, Kansas***\n\nWhen the prized golden egg vanishes from Plum Creek's 80th annual Easter Egg Hunt, just a day before the festivities, Deputy Sheriff Cal Whitaker, a by-the-book widower, is forced to investigate, and his only lead points to the missing Easter Bunny costume last seen at Rosie's Diner. Rosie Delgado, the sharp-tongued diner owner who has just inherited the place and is desperate to win the town's baking contest, reluctantly joins Cal's search after she becomes the prime suspect. As they interrogate a quirky ensemble that includes a feuding pair of church-lady rivals, a lovesick teenage farmhand, and a mayor with a suspicious fondness for chocolate, Cal and Rosie bicker their way through barns, bake sales, and one very awkward chase involving a runaway goat. Following the clues, they discover the costume was borrowed by the shy farmhand to romantically surprise his crush, and the golden egg was accidentally swept into the church-ladies' casserole feud, which exposes the town's tangled crushes and sets everyone's secrets free. On Easter morning, Cal returns the egg just in time, Rosie's pie wins over the whole town, and the two share a kiss in the middle of the egg hunt as the rest of Plum Creek cheers."
+      ],
+      "id": "nb-curated-0ac59a48456661d0d8d5",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter."
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        8,
+        9,
+        9,
+        8,
+        9,
+        9,
+        9,
+        9,
+        8
+      ],
+      "generations": [
+        "**Title: *Hop to It***\n\nTess Mullins, a overworked Kansas City accountant, drives home to tiny Cottonwood Springs for Easter and, cornered by her meddling aunts and her ex's smug engagement announcement, blurts out that she's engaged to a man named \"Daniel.\" When her tire blows out on a gravel road, she meets Sam Whitaker, a stranded large-animal veterinarian whose truck is stuck in a ditch, and she persuades him to pose as her fiancé in exchange for a ride and a promise of free ham. Over the holiday weekend, their lie snowballs through a chaotic egg hunt, a runaway goat in the church sanctuary, and a midnight chase through a wheat field after the family's prized Easter lamb escapes. Between the mishaps, the two trade real confessions, and Tess realizes the easy warmth she's faking with Sam is the most honest thing she's felt in years. When her grandmother exposes the ruse at Easter dinner, Tess is humiliated and Sam leaves, but she drives out to his clinic at sunrise to tell him the truth, and he answers by asking her, with a ring made from a plastic Easter egg, to make it real.",
+        "**Title: *Hallelujah, Kansas***\n\n1. Burned-out Chicago journalist Maggie Holloway gets laid off just before Easter and reluctantly returns to her tiny hometown of Pleasant Prairie, Kansas, when her mother begs her to help save the family's struggling church's annual Easter egg hunt and sunrise service.\n\n2. She arrives to find that her high school sweetheart, Caleb Reyes, who she left behind without a proper goodbye, is now the town's earnest young sheep farmer and the volunteer coordinator of the very event she's been roped into running.\n\n3. Between runaway lambs, a disastrous egg-dyeing incident, and a feud with the church potluck committee, Maggie and Caleb slip back into their old banter and realize the spark never really died.\n\n4. Just as they're growing close, a dream job offer arrives from a major New York magazine, and Caleb discovers Maggie has been quietly drafting a story about the town's quirks, leading to a blowup that leaves them both hurt.\n\n5. On Easter morning, Maggie scraps the snarky piece, writes a heartfelt tribute to the community instead, and shows up at the sunrise service to tell Caleb she's staying, with a plan to launch a local-news-and-storytelling site, and the two share a kiss as the whole congregation cheers and a lamb wanders down the aisle.",
+        "**Hoppy Ever After**\n\nWhen Chicago event planner Maddie Collins is sent to rural Kansas to rescue the failing Easter egg hunt in Pleasant Prairie, she expects an easy weekend of pastel decorations and quick fixes. Instead, she meets Jake Dawson, a stubborn wheat farmer and lifelong volunteer who has run the hunt the same way for fifteen years and refuses to trade his hand-painted eggs for her plastic, sponsor-branded ones. Their bickering escalates through a series of disasters, including a runaway goat in the petting zoo, a barn-decorating fiasco, and a flooded field, yet each mishap forces them to work together and reveals how much each admires the other's passion. Just as Maddie begins to fall for the town and for Jake, her boss announces that the hunt will be taken over by a corporate sponsor, and Jake discovers that she kept the plan secret, causing a heartbreaking fight on Saturday night. On Easter morning, Maddie defies her company, blends his traditions with her ideas to save the event, and as the children hunt, she and Jake find the last golden egg together, which holds a note asking her to stay.",
+        "**Title: *Egg on Their Faces***\n\nWhen divorced veterinarian Maggie Hollis and divorced feed-store owner Tom Branigan both find themselves roped into co-hosting the Easter potluck in tiny Plumb Creek, Kansas, the two rivals, who haven't spoken since a disastrous county fair bake-off, are horrified. Their kids, 10-year-old Josie and 12-year-old Wyatt, secretly team up with their meddling grandmothers to sabotage every planning meeting, locking the pair in a barn, swapping their casserole labels, and rigging the church's Easter egg hunt so that Maggie and Tom keep ending up side by side. As the schemes escalate into chaos, including a runaway goat in the fellowship hall and a ham that goes missing, Maggie and Tom begin to see each other's kindness, humor, and bruised hearts beneath the bickering. Just when sparks finally fly during a late-night prairie drive to rescue the replacement ham, the kids' plot is exposed, and a hurt, embarrassed Maggie and Tom accuse each other of being part of the setup and call everything off. On Easter morning, with the potluck falling apart, Tom shows up at sunrise service with a tray of Maggie's favorite pie, the whole town cheers, and the pair share a kiss beneath the budding cottonwoods as the grandmothers high-five over the deviled eggs.",
+        "When pop star Dani Rae flees to the tiny town of Marigold, Kansas, to escape a tabloid scandal just before Easter, she's mistaken for the church's new substitute choir director and is too desperate for a hideout to correct anyone. She throws on a cardigan, borrows a rusty pickup, and quickly gets roped into rehearsals for the town's beloved Easter Sunday concert. Along the way she meets Wes Callahan, a gruff but kind farmer who has never heard of her music, and their banter over egg-dyeing, a runaway lamb, and a flooded barn leaves her feeling more like herself than she has in years. As their romance blossoms, a nosy teenager in the choir discovers her secret, and a tabloid reporter shows up just as Dani realizes she's falling for a man who knows only the \"real\" her. On Easter morning, Dani chooses to reveal the truth herself by singing an honest, unplugged song in the church, and Wes, hurt but moved, meets her under the spring blossoms to tell her he fell for the choir director, not the celebrity, and the two share a kiss as the whole town cheers.",
+        "**Title: \"Rise and Shine, Pleasant Valley\"**\n\nWhen big-city pastry chef Hannah Moore returns to her tiny hometown of Pleasant Valley, Kansas, to save her late grandmother's bakery, she finds that charming rival baker Luke Dalton has been undercutting her family's Easter pie and bread contest legacy for years. Determined to win the annual contest and keep her shop, Hannah launches a prank war with Luke, which includes swapping his sugar for salt, hiding his sourdough starter in a hen house, and accidentally releasing a flock of Easter chicks into his shop. Luke retaliates by sending Hannah's prized hot cross buns on an unplanned tour via the town's runaway parade tractor, and their feud becomes the talk of every church potluck and feed store. When a ferocious spring storm knocks out power the night before the community Easter feast, the two rivals are forced to bake together by lantern light in her grandmother's old wood-fired oven, discovering that her secret recipe card and his family's sourdough method were meant to be combined. On Easter morning, they serve a joint \"Hannah-and-Luke\" pie and bread feast to the whole town, tie for first place, and seal their new partnership and budding romance with a flour-dusted kiss under the blooming redbud trees.",
+        "**Title: *Hop to It***\n\nDr. Josie Marsh, a stubborn small-town veterinarian in Pratt County, Kansas, is already dreading Easter eve when a tornado warning sends her racing to a farm to check on a heavily pregnant cow. There she finds Ben Alvarez, a charming but hapless traveling performer in a full bunny costume who was hired to entertain at the town's Easter celebration, and the two end up trapped in the barn as the storm rages outside. Bickering turns to teamwork as they deliver a breech calf by flashlight, and Ben's goofy bedside manner wins over both the frightened animal and Josie's guarded heart. When dawn breaks they discover the storm has wrecked the church grounds, so they rally the quirky townsfolk to rebuild the sunrise service in a muddy pasture, with the newborn calf as the unlikely guest of honor. As the sun rises over the prairie, Ben, who had planned to leave town that morning, trades his bunny ears for a chance to stay, and he and Josie share a kiss as the whole congregation cheers.",
+        "When schoolteacher Josie Hartman reluctantly runs for mayor of tiny Pottersville, Kansas, to save the town's struggling Easter parade, she never expects her opponent to be Cal Brenner, the cynical hardware-store owner who thinks the parade is a waste of money and wants the funds spent on fixing potholes. Their campaign sparring escalates into a prank war, with Cal's \"vote for pavement\" signs mysteriously turning up covered in pastel bunny stickers and Josie's campaign table finding itself buried under 500 plastic eggs. As they trade barbs at town hall debates and run into each other repeatedly at the church egg hunt, the pair begin to notice the thoughtful things the other has done, like Cal secretly repairing the parade float and Josie tutoring his struggling nephew for free. When a spring storm threatens to wreck the parade the night before Easter, Josie and Cal team up with the whole town to rebuild the floats by flashlight, and a tender, flour-dusted moment in the barn leads to their first kiss. On Easter morning, the parade rolls down a freshly patched Main Street, the election results are tied in a hilarious twist, and the two rivals agree to share the job of mayor, and eventually, the rest of their lives.",
+        "When city-based pastry chef Josie Marlowe inherits her late great-aunt's rundown farm outside Cottonwood Falls, Kansas, just two weeks before Easter, she plans to sell it quickly and return to Chicago. Her gruff neighbor, wheat farmer Cal Brennan, has been trying to buy the land for years and sees her as a naive outsider who will let the property go to ruin. When Josie learns that the farm's back taxes are due by Easter Monday, she impulsively announces a community Easter egg-hunt fundraiser, and Cal reluctantly agrees to help because the town's tradition has been dying without a venue. As they repair the barn, paint thousands of eggs, and bicker over everything from tractor etiquette to the proper way to make hot cross buns, their sparring gradually turns into real affection. Just as the hunt raises enough money to save the farm, Josie discovers Cal's standing offer was never about greed but about protecting the land her great-aunt loved, and she chooses to stay, sealing the new romance with a kiss in the blooming prairie field on Easter morning.",
+        "**Title: *Hop to It, Kansas***\n\nWhen the prized golden egg vanishes from Plum Creek's 80th annual Easter Egg Hunt, just a day before the festivities, Deputy Sheriff Cal Whitaker, a by-the-book widower, is forced to investigate, and his only lead points to the missing Easter Bunny costume last seen at Rosie's Diner. Rosie Delgado, the sharp-tongued diner owner who has just inherited the place and is desperate to win the town's baking contest, reluctantly joins Cal's search after she becomes the prime suspect. As they interrogate a quirky ensemble that includes a feuding pair of church-lady rivals, a lovesick teenage farmhand, and a mayor with a suspicious fondness for chocolate, Cal and Rosie bicker their way through barns, bake sales, and one very awkward chase involving a runaway goat. Following the clues, they discover the costume was borrowed by the shy farmhand to romantically surprise his crush, and the golden egg was accidentally swept into the church-ladies' casserole feud, which exposes the town's tangled crushes and sets everyone's secrets free. On Easter morning, Cal returns the egg just in time, Rosie's pie wins over the whole town, and the two share a kiss in the middle of the egg hunt as the rest of Plum Creek cheers."
+      ],
+      "id": "nb-curated-0ac59a48456661d0d8d5",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "aaaecbf894374ca1aa76900cbe258b2dbe59b178d167e18811948875ad6e1e36",
+      "partition_scores": [
+        8,
+        8,
+        9,
+        9,
+        8,
+        9,
+        9,
+        9,
+        9,
+        8
+      ],
+      "prompt": "Tell me the plot line in 5 sentences for a romcom movie set in rural Kansas for Easter.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "2e59338f2f9c942561dd561c67d5b692980d58710524a7585d67066e3a8c3103",
+      "utility": 8.474848770495612
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 8.474848770495612,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "96da4f325ea974d8f11c9323105ff1ae99af9dbab233710016783f72880ba60e",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0127",
+      "fixture": false,
+      "intent_sha256": "35028f21d3e28259225de8bc109ca16170e073e0f3440081788b76085c8dbef1",
+      "request_sha256": "1e7d7e22e959fbdc8f74c0a6a49b42c4e02b4d6726ed75362c14330d568c603c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.8252049459988484,
+        "message_id": "chatcmpl-Edvqojv6RplL3LNNV3f8ZNOpnzsrS",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 164,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 127,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2723,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2720,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2887
+        },
+        "refusal": null,
+        "request_id": "req_eb2dfa8828734f70ba7d0de168a60bf7",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2720,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2720,
+            "cached_tokens": 0
+          },
+          "output_tokens": 164,
+          "output_tokens_details": {
+            "reasoning_tokens": 127
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.group",
+      "spent_micro_usd": 966,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0128",
+      "fixture": false,
+      "intent_sha256": "fec84dd390a992ef3a4e3877e44b8643269b63bf2e0f4c17b11631692feec34e",
+      "request_sha256": "9b76c6353a0eb35bf2a9aae6f8f768e3de93b441f90c9f3248f93ce9ebde1c9f",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.340682301000925,
+        "message_id": "msg_011CgUXvBjaz3D4bC3ivQb2c",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXvBXBse5gvhofas4Wn",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 850,
+          "output_tokens": 189,
+          "output_tokens_details": {
+            "thinking_tokens": 180
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.00",
+      "spent_micro_usd": 9873,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0129",
+      "fixture": false,
+      "intent_sha256": "4023e0015694967f1275b6ad5eb64b7b34a20c1336be6188a9b57699854d202c",
+      "request_sha256": "07b736dc313392d08b4d6e503d31d4a0f0618a6263c51c71a65eac42ec0ad261",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.211655407998478,
+        "message_id": "msg_011CgUXvTpDTinF1UckeVhUq",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXvTbKPZ7dNQ1Kt4vGW",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 906,
+          "output_tokens": 154,
+          "output_tokens_details": {
+            "thinking_tokens": 145
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.01",
+      "spent_micro_usd": 9218,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0130",
+      "fixture": false,
+      "intent_sha256": "ab8329ec388eae00c58fa450d796a0fb4a8f65775660472754b5e6e937c18642",
+      "request_sha256": "48317c3b387d5b4632fac1d85ddc06d262e8945cc0e977665d152211cb3d8bdd",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.584606118994998,
+        "message_id": "msg_011CgUXvjDBNRjh9ekeEWEQF",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXvj2GNpLWTLm4AXaW9",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 843,
+          "output_tokens": 111,
+          "output_tokens_details": {
+            "thinking_tokens": 102
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.02",
+      "spent_micro_usd": 7689,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0131",
+      "fixture": false,
+      "intent_sha256": "107f6884c0069f1aa30770c0bdf0f91d26c7314df9f32a13262b0cf9144bcb42",
+      "request_sha256": "401dee5373e07d936029b6d12bb4b6cf7609c6e086fc3620153a633637c44e0d",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.082768191990908,
+        "message_id": "msg_011CgUXvwsBo2D2QKTLhFtBX",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXvwemvtvsHayJba7Ug",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 924,
+          "output_tokens": 227,
+          "output_tokens_details": {
+            "thinking_tokens": 218
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.03",
+      "spent_micro_usd": 11325,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0132",
+      "fixture": false,
+      "intent_sha256": "751ac3996c7553f73b7c2912cb591324eba3885bd61af0b6c16d77f5bf80907d",
+      "request_sha256": "82f1e4e157f02ce2901c6e4ce56d609cc4c819cebb087551e76b1f012f81ac44",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.911513864994049,
+        "message_id": "msg_011CgUXwGsvJnk9U66yutX5g",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXwGfHNCkD2UJcA7Ehq",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 824,
+          "output_tokens": 145,
+          "output_tokens_details": {
+            "thinking_tokens": 136
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.04",
+      "spent_micro_usd": 8520,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0133",
+      "fixture": false,
+      "intent_sha256": "63bf7b9bb204b8eca2f6564aefcb364a2ae2f4bcf7b9332cf0a283dbf64d2e4a",
+      "request_sha256": "64d1b899ad697003fef6e1769cf2fa819dc57b005a268f2e96a7bb907028533e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.535660667999764,
+        "message_id": "msg_011CgUXwX2Dq4pzuYsHH4wMz",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXwWp5c177pEyKBLERC",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 886,
+          "output_tokens": 193,
+          "output_tokens_details": {
+            "thinking_tokens": 184
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.05",
+      "spent_micro_usd": 10181,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0134",
+      "fixture": false,
+      "intent_sha256": "78dd735d40c3eb2d081b9ecad0d3557185751de11cae08ce2b0002df18139f19",
+      "request_sha256": "3bdb3043330569496aff4f5254bd9ce93b0af02710fcadd1b424adde41b2d06e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9640189180063317,
+        "message_id": "msg_011CgUXwonHwR4tJxK1owj3x",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXwoRxULACyHf34sgGw",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 815,
+          "output_tokens": 197,
+          "output_tokens_details": {
+            "thinking_tokens": 188
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.06",
+      "spent_micro_usd": 9900,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0135",
+      "fixture": false,
+      "intent_sha256": "c6ae15add31149441c9dc76259abe5795deb8815c1f55732a37bcdaba93acc56",
+      "request_sha256": "147bbb47c621929d5340df7c4a0a5c2c89e2709f5f307ceff273498208de8de4",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.79620818598778,
+        "message_id": "msg_011CgUXx3u6R86iqwi28GWtG",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXx3fD7mmdk8fDU9Jxv",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 871,
+          "output_tokens": 194,
+          "output_tokens_details": {
+            "thinking_tokens": 185
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.07",
+      "spent_micro_usd": 10126,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0136",
+      "fixture": false,
+      "intent_sha256": "dd09ec8130f9c72dbf7a96dec7c91007ba66ebcd2f4dc371e009a171452e02c3",
+      "request_sha256": "2e4b644e172e4e378eab87dcf6f13bfa5f82167bade9484c53eef772b1bcd602",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.017606097986572,
+        "message_id": "msg_011CgUXxHasKG9E7bGWNnesL",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXxHMy4WCku8JnUVj3a",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 815,
+          "output_tokens": 228,
+          "output_tokens_details": {
+            "thinking_tokens": 219
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.08",
+      "spent_micro_usd": 10753,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0137",
+      "fixture": false,
+      "intent_sha256": "408c6e30bf8469371ba00ad9ef113c99dab4e0722abafec2f844959cd764f6d7",
+      "request_sha256": "680cde18cffad6980c847eed4296a5be23ead388619c621c082996142539ba43",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.871426472993335,
+        "message_id": "msg_011CgUXxcNj1AReBTXjqFeAb",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUXxcBKP7oTdofNGQfLT",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 907,
+          "output_tokens": 279,
+          "output_tokens_details": {
+            "thinking_tokens": 270
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e0ec5eba54d161710d99d53f.quality.09",
+      "spent_micro_usd": 12661,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-0ac59a48456661d0d8d5"
+}

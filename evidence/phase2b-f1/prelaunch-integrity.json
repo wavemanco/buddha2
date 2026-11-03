@@ -1,0 +1,14 @@
+{
+  "kind": "p2bf1-prelaunch-integrity-v1",
+  "checked_at_utc": "2026-10-27T21:16:37Z",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "readiness_evidence_files_checked": 70,
+  "source_and_retained_source_files_checked": 26,
+  "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+  "all_hashes_match": true,
+  "live_attempts_present": false,
+  "source_commit": "41aad4866b19c8ca4f113459114d18b392bf2193",
+  "provider_api_calls": 0,
+  "credentials_read": false,
+  "original_folder_accessed": false
+}

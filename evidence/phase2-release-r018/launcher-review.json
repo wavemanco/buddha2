@@ -1,0 +1,73 @@
+{
+  "api_spend_micro_usd": 0,
+  "files": {
+    "phase2-release.ps1": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+    "src/buddha2/phase2_release_launch.py": "abd77810219e83f029e08eef67efa0fc02f26e14fa4587188331c7272fb78ded",
+    "tests/test_phase2_release_launch.py": "4236f9c59e98856fee1534341469f0af2c3ca82f9fda9547fcfaa61377ad831b",
+    "tests/test_phase2_release_launcher.ps1": "bc36b2b481fc9e3bac7b17084cb977f51986dc0a40d8746ee590a33123972446"
+  },
+  "implementation_agent": "/root/release_launcher",
+  "kind": "p2r-launcher-implementation-and-review-response",
+  "limitations": [
+    "Actual provider account/model/settings/billing acceptance remains a counted Phase2B observation, not an offline claim.",
+    "Provider-config may create and inspect a bridge container but never starts it; execute refuses its configuration-only record.",
+    "Bounded cancellation is demonstrated with an actual inspected network-none sleeping container and controller-level interrupted-intent checks are separate; no real in-flight provider request was interrupted.",
+    "A forced OS/process kill can bypass finally; retained canonical intent and container handles must be reconciled without automatic retry.",
+    "Host inspection records validate a cooperative operator launch, not a malicious host attestation or OS provider-domain egress control."
+  ],
+  "provider_requests": 0,
+  "real_credential_access": false,
+  "review_findings_and_fixes": [
+    {
+      "finding": "Host keys could be entered before the execution container rechecked release/grant state.",
+      "fix": "Provider execution emits a binding-checked readiness handshake after source/grant/inspection/runtime checks. Host verifies it before masked key entry or stdin transmission. No keys in argv, environment, files or logs."
+    },
+    {
+      "finding": "Different launch processes could reach key entry before the runner owner lock.",
+      "fix": "A distinct canonical launch-owner flock spans inspection, handshake, stdin, SDK lifecycle and execution; concurrent execution is rejected before readiness/keys/SDK."
+    },
+    {
+      "finding": "Host failure or Ctrl+C could leave an owned running container active.",
+      "fix": "Finally revalidates only registered owned inspection contracts, bounds docker stop to a two-second grace period and each cleanup helper to ten seconds, retains termination/handle evidence and journal intents. Unknown cleanup is not treated as a completed stop."
+    },
+    {
+      "finding": "BYO-key provenance requires nonreversible identity without storing secrets.",
+      "fix": "Provider mode stores immutable study/control/launcher/public-profile-bound SHA256 credential fingerprints before constructing clients. Same binding is idempotent; changed keys reject before another client."
+    },
+    {
+      "finding": "Bandit flags the expected literal Docker /tmp mount as a temporary-file path.",
+      "fix": "One B108-specific nosec annotation covers only that declarative bounded mount; its explanation is separate. No global suppression or weakened validation."
+    }
+  ],
+  "runbook_review": {
+    "path": "PHASE2B_RUNBOOK.md",
+    "result": "no-blocking-command-or-recovery-mismatch",
+    "suggestion": "Before a manual recovery stop, validate the saved container image/mount/command identity as well as its ID."
+  },
+  "status": "component-and-actual-host-integration-pass",
+  "verification": {
+    "actual_negative_host_preflight": "passed-pinned-image-mount-environment-validation-then-rejected-stale-source-invalid-dummy-grant-before-key-entry",
+    "actual_owned_container_stop": "pass",
+    "actual_unregistered_handle_stop_rejection": "pass-container-remained-running",
+    "bandit_medium_high": "pass-one-reviewed-B108-false-positive",
+    "complete_host_workflow": {
+      "evidence": "evidence/phase2-release-r018/launcher-host-integration.json",
+      "first_mock_http_calls": 55,
+      "invalid_provider_grant_before_key_entry": "pass",
+      "provider_configuration_created_not_started": true,
+      "status": "pass",
+      "unchanged_resume_http_calls": 0
+    },
+    "mypy": "pass",
+    "negative_host_record": "runs/phase2-release-r018/launcher/b9b99d1b6bc449929f06b08b0132ba4e.preflight-container.json",
+    "powershell_syntax_argument_path_tests": "pass",
+    "python_boundary_tests": {
+      "count": 11,
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "network": "none",
+      "status": "pass"
+    },
+    "ruff": "pass",
+    "stop_record": "runs/phase2-release-r018/launcher/cancellation-test-1878d8c3772149caa4a3d187338a5459.termination-55f70e750cb7411a0c2dea1e99ffd3654493ea25adedb5f123f5bd32c1cc6b87.json"
+  }
+}

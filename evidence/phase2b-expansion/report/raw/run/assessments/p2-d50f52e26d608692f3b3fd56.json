@@ -1,0 +1,327 @@
+{
+  "assessment_identity_sha256": "d966bc590f11f8682f53d04ec8421058d9a405917e8528e3bdc19729828d21d9",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 2,
+    "utility": 2.262348186869203
+  },
+  "native": {
+    "fields": {
+      "distinct": 2,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        8,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        8,
+        8
+      ],
+      "utility": 2.262348186869203
+    },
+    "generation_row": {
+      "generations": [
+        "I'd invent the **Serendipity Engine**: a small, wearable, opt-in device (and companion network) that creates safe, low-stakes chances for people to stumble into things they'd never have sought out.\n\n**How it works**\n- You set a few broad preferences: how adventurous you feel today, how much time you have, your mobility needs, and your comfort with strangers.\n- Instead of recommending what you already like (as most algorithms do), it nudges you toward the *adjacent unknown*. It might suggest taking a different street, ducking into a workshop where a luthier is building a guitar, or sitting at a community table where someone is teaching origami.\n- Local people can register \"open doors\": a retired machinist willing to show how lathes work, a baker who lets visitors watch the 4 a.m. bread shift, a neighborhood astronomer with a telescope on the roof. The device matches you with these moments in real time.\n\n**Why it would make life more interesting**\n- **Breaks filter bubbles in physical space.** Most of us repeat the same routes, shops, and social circles. This would gently disrupt that.\n- **Turns experts into neighbors.** Everyone knows something fascinating, and most of it never gets shared because there's no easy channel.\n- **Rewards curiosity over consumption.** Interactions are about learning, making, or talking, not buying.\n- **Builds community.** Repeated small encounters across different walks of life make places feel more connected and trusting.\n\n**Safeguards**\n- Hosts are verified and reviewed, and encounters happen in public or semi-public settings by default.\n- Nothing is tracked beyond what you choose to share, and data stays on the device unless you opt in.\n- A \"surprise dial\" lets you control how far from your comfort zone you go, from \"slightly different coffee shop\" to \"learn to blow glass.\"\n\nThe goal isn't to optimize your life but to make it a little more unpredictable, so an ordinary Tuesday has a decent chance of turning into a story you'll tell later.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device (and companion network) that makes everyday life more full of surprise, connection, and discovery, without making it more addictive or screen-bound.\n\n**How it works**\n\n- **Detours with purpose.** Instead of optimizing for the fastest route, it can suggest a \"wander mode\" that nudges you down a different street, toward a hidden courtyard, an odd little museum, or a bakery that's only open three hours a day. It learns what kind of surprise you like but deliberately stays a bit outside your comfort zone.\n\n- **Skill-swap introductions.** If you opt in, it quietly matches you with nearby people who have complementary curiosities: someone who wants to learn bread baking and someone who wants to learn basic electronics. It suggests a 20-minute meetup at a nearby café. Both people agree before anything is shared, and no profiles or feeds are involved.\n\n- **Local lore layer.** Using audio only, it tells you the odd history of where you're standing: who lived in that building, what was there a century ago, what a street name actually refers to. Residents can contribute stories, so every neighborhood develops its own folklore.\n\n- **Weekly \"unlikely challenge.\"** Once a week, it proposes something small and slightly outside your routine: eat something you've never tried, learn a word in a language spoken on your block, or sit and sketch a stranger's chosen object. It's playful, never graded.\n\n**Design principles**\n\n1. **Privacy first.** Data stays on the device, and matches are anonymous until both people say yes.\n2. **Anti-addiction.** No streaks, no notifications that guilt you, and it gets quieter the more you use it, the way a good guide fades into the background.\n3. **Local over global.** The point is to deepen your relationship with the places and people near you rather than pull you toward the internet.\n\n**Why this?**\n\nMuch of what makes life feel dull is routine: same routes, same people, same information. Technology has made things efficient but also predictable. The Serendipity Engine would use technology to reintroduce the productive randomness that makes cities, travel, and friendships delightful, turning an ordinary Tuesday into something with a little narrative in it.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device and companion network that nudges people toward unplanned, low-stakes, delightful encounters with their own surroundings and with each other.\n\n**How it works**\n\n- **Opt-in discovery prompts.** Instead of optimizing your route for speed, it occasionally offers a \"detour of the day\": a staircase with a mural, a bakery that only opens for three hours, a hidden courtyard, a street where a neighborhood choir rehearses on Thursdays.\n- **Skill-swap matching.** If you've said you can juggle, fix bikes, or speak Portuguese, and someone nearby wants to learn that, it quietly suggests a 20-minute meetup at a public spot. No profiles, no feeds, no ratings, just a time, a place, and a shared curiosity.\n- **Local mystery layers.** Neighborhoods could host tiny puzzles, stories, or art installations that unlock as you walk past: a poem about the bridge you're standing on, an oral history recorded by someone who grew up there, a scavenger hunt a ten-year-old designed.\n- **Novelty budget.** You set how much surprise you want, from \"gentle\" to \"chaotic,\" and it respects that. It also learns to avoid repeating itself, so your routines get disrupted in ways that feel fresh rather than gimmicky.\n\n**Why this**\n\nMuch modern technology narrows our worlds by feeding us more of what we already like. This would do the opposite: widen the world by making the physical places and real people around us feel more layered and alive. Cities and towns are already full of fascinating things that most of us walk past because we're on autopilot.\n\n**Safeguards**\n\n- Meetups only in public places, with clear consent and easy opt-outs.\n- Privacy by design: location data processed on-device, with nothing sold or stored.\n- Community-curated content, so locals shape what their area reveals instead of advertisers.\n\nThe goal isn't to add more screen time but to send you back into the world with your head up, a little more curious, and a little more connected to the place where you live.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device and companion network that nudges people toward unplanned, low-stakes discoveries in their own surroundings.\n\n**How it works**\n- Once a day, it offers a \"detour\": a different route home, a street you've never walked, a shop to peek into, a bench with a good view.\n- It occasionally pairs you with a \"wildcard prompt,\" like \"Ask someone nearby what the best meal they've had this month was,\" or \"Find something older than you and learn its story.\"\n- It can connect willing strangers for short, structured exchanges: a 20-minute swap where a retired machinist teaches you how to sharpen a knife, and you show them how to edit a video.\n\n**Why it would make life more interesting**\n- Most of our days are optimized for efficiency. Maps, feeds, and recommendations all push us along the shortest, most predictable path. This would deliberately add a little productive randomness.\n- Cities and towns would become layered with local stories, skills, and micro-communities that currently stay invisible.\n- It would loosen the filter bubbles of social media by prioritizing physical, real-world variety over engagement metrics.\n\n**Safeguards**\n- Everything is opt-in, with strong privacy defaults: no location history sold, no public profiles.\n- Stranger meetups would happen only in public places, with verification, easy exits, and mutual consent.\n- Users set their own \"adventure level,\" from gentle (try a new café) to bold (join a community choir rehearsal).\n\n**The goal**\nNot to make life busier, but to make it feel larger: to turn the familiar world back into something you can still be surprised by.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device (and companion network) designed to gently nudge people toward unplanned, positive discoveries in their everyday lives.\n\n**How it works**\n\n- **Opt-in randomness.** When you activate it, it suggests a small deviation: take the next left instead of your usual right, visit the third shop on a street you've never walked, or sit at a different table in the café.\n- **Local discovery layer.** It surfaces things algorithms usually bury: a retired machinist who explains lathes to anyone curious, a hidden mural, a community garden open to visitors, a neighborhood band rehearsing in a garage with the door open.\n- **Consent-based connection.** People can flag themselves as \"open to a conversation about...\" (beekeeping, chess, bad poetry, fixing bikes). If two people overlap and are nearby, both get a gentle prompt, never a pressure.\n- **Anti-optimization rule.** It never optimizes for engagement time or ratings. It's built to get you off your screen quickly and into the world, and it deliberately avoids recommending the same type of thing twice in a row.\n\n**Why this**\n\nMost modern technology narrows our experience by feeding us more of what we already like. Cities and routines already tend toward sameness. The Serendipity Engine would work in the opposite direction, widening exposure to unfamiliar people, places, and skills.\n\n**Safeguards**\n\n- Privacy by default: location data stays on the device, and nothing is shared without explicit permission.\n- Safety checks: suggestions favor public, well-trafficked places, and meetups are always optional.\n- No scoring or social-ranking features, so it can't become a status game.\n\n**The result I'd hope for**\n\nMore small, memorable moments: learning a strange fact from a stranger, discovering a favorite dish at a place you'd never have chosen, or forming an unlikely friendship. Over time, communities would feel less like backdrops and more like living, surprising places.",
+        "I'd invent the **Serendipity Engine**, a small wearable and app combo that nudges you toward the unexpected, without optimizing for what you already like.\n\n**How it works:**\n- It learns your routines: the route you walk, the places you eat, the people you talk to, the media you consume.\n- Then it gently breaks them. It might suggest turning left instead of right, trying a shop you've never entered, or visiting a public lecture on a topic you know nothing about.\n- Once a week it offers a \"wild card\": an anonymous, opt-in meetup with someone nearby who also wants to swap a skill, story, or recipe for 30 minutes.\n\n**Why it would make the world more interesting:**\nModern technology mostly narrows our lives. Recommendation algorithms feed us more of what we already consume, and maps funnel us down the fastest route. The Serendipity Engine would do the opposite: it would deliberately widen your world.\n\n**Design principles:**\n1. **Opt-in and adjustable.** You set how adventurous you want to be, from \"mild curiosity\" to \"surprise me completely.\"\n2. **Safety first.** Suggestions avoid risky areas, and meetups happen in public places with verified participants.\n3. **Privacy-respecting.** Data stays on your device, and nothing is sold.\n4. **Reflection built in.** A short end-of-week prompt asks, \"What surprised you?\" so the novelty turns into memory and learning.\n\n**The ripple effects:**\n- People would meet others outside their usual social bubbles, which could ease polarization.\n- Local businesses, odd museums, and small community events would get discovered.\n- Everyday life would feel less like autopilot and more like exploration.\n\nThe idea is simple: if the internet gave us infinite choice but narrowed our habits, we could use technology to bring back the accidental discoveries that make life feel vivid.",
+        "I'd invent the **Serendipity Commons**: a network of small public spaces, plus a companion app, designed to produce unplanned encounters between people who would never otherwise meet.\n\n**How it works**\n\n- **The spaces:** Cafe-sized rooms in neighborhoods, libraries, and transit hubs. Each has a long shared table, a \"question wall,\" and a rotating set of odd, tactile objects: a mystery tool from a retired machinist, a map of a town that no longer exists, a jar of handwritten recipes.\n- **The matching:** When you check in, you answer one quirky question (\"What's something you're oddly good at?\"). The system seats you near someone whose answer is *different but complementary*, not similar. A beekeeper might end up beside a software engineer, or a retired sailor beside a teenage poet.\n- **The prompts:** Each table gets a small challenge to tackle together, like \"Explain your job using only a recipe\" or \"Design a holiday for a made-up season.\" These break the ice without forcing anyone to perform.\n- **The opt-out:** Wearing a plain green wristband signals \"I'd rather just sit quietly,\" so the whole thing stays low-pressure.\n\n**Why it would make the world more interesting**\n\n1. **It widens social circles.** Most of us talk to people like ourselves. This deliberately breaks that pattern.\n2. **It spreads hidden knowledge.** Everyone knows something strange and valuable, and this gives it a place to surface.\n3. **It sparks collaboration.** Many great ideas come from unlikely pairings, such as a nurse and an architect rethinking waiting rooms.\n4. **It counters loneliness.** It offers a gentle, structured way to connect without the awkwardness of approaching strangers.\n5. **It makes ordinary days less predictable.** A ten-minute coffee break could turn into a new friendship, a project, or just a story worth retelling.\n\n**The guiding principle:** Instead of algorithms that show us more of what we already like, build something that nudges us toward what we didn't know we'd enjoy.",
+        "I'd invent the **Serendipity Engine**, a lightweight, opt-in system that nudges people into unplanned, low-stakes encounters with the unfamiliar.\n\n**How it works:**\n- A small wearable or phone app learns your routines, then occasionally suggests a tiny deviation: \"Take the next left. There's a courtyard with a violin player on Thursdays.\" Or \"The person at the next table is also learning Portuguese.\"\n- It deliberately avoids what you already like. Instead of recommending more of your usual taste, it picks things adjacent to your interests, or wildly outside them.\n- Every suggestion is small: ten minutes, free or cheap, and safe. You can ignore it with zero friction.\n\n**Why it would make life more interesting:**\n- Algorithms today mostly narrow us, feeding us more of what we've already consumed. This would reverse that, widening your world instead.\n- Cities are full of hidden things (a repair shop run by a retired clockmaker, a community garden, a lecture open to the public) that most of us never notice.\n- Interesting lives are mostly built from accumulated small surprises, and this would make them routine.\n\n**Safeguards I'd build in:**\n- Privacy-first design, with data processed on your device.\n- Strict safety rules for any person-to-person suggestions, requiring mutual opt-in.\n- A \"surprise dial\" so you control how adventurous it gets.\n- No ads or paid placements, since those would corrupt the surprise.\n\nThe goal isn't to optimize your life but to make it a little less predictable, in ways you'd be glad about afterward.",
+        "I would invent the **Serendipity Engine**, a public, opt-in system that nudges people into unplanned but meaningful encounters with places, ideas, and each other.\n\n**How it works:**\n- You carry a small device or use an app that learns your *boundaries* and *curiosities*, not your habits. Unlike recommendation algorithms that feed you more of what you already like, this one deliberately aims at the edges of your experience.\n- Once in a while, it offers a \"detour\": a different route home that passes a mural you've never seen, a café where a local storyteller is performing, or a community workshop where someone is teaching bookbinding. You can accept or ignore it.\n- It also offers \"pairings.\" Two strangers who've both flagged interest in, say, beekeeping and jazz get a gentle invitation to share a bench or a coffee. Nothing is forced, and everything is consent-based and anonymous until both people say yes.\n\n**Why it would make life more interesting:**\n1. **It counters the filter bubble.** Most technology narrows our world to what's predictable. This would widen it.\n2. **It rewards local culture.** Small venues, hobbyists, elders with unusual skills, and street performers would gain visibility without needing marketing budgets.\n3. **It rebuilds casual social ties.** Many people lack low-pressure ways to meet others outside work or existing circles.\n4. **It makes familiar places new.** Your own neighborhood becomes a place of discovery rather than routine.\n\n**Safeguards I'd build in:**\n- Data stays on your device by default.\n- No advertising or paid placement, so detours can't be bought.\n- Safety features for meetups: public locations, verification, easy opt-outs.\n- A \"dial\" that lets you set how adventurous you want to be, from \"slightly different sandwich\" to \"surprise me completely.\"\n\nThe goal isn't to engineer life into a game, but to restore the small accidents that make life feel rich: the overheard conversation, the wrong turn that becomes a favorite memory, the stranger who turns into a friend.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device that nudges you toward unplanned, low-stakes encounters with people, places, and ideas you'd never have sought out on your own.\n\n**How it works:**\n- It learns your routines, then quietly suggests tiny deviations: \"Take the next left. There's a bakery that's been open since 1952,\" or \"The person at the next table is also reading a book about bees.\"\n- It never uses a feed or an endless scroll. It offers one suggestion at a time, and only a few times per week, so each one feels special rather than like noise.\n- It deliberately avoids what you already like. Its goal is the edge of your comfort zone: a lecture on a topic you know nothing about, a neighborhood you've never walked through, a community choir that needs a tenor.\n- Opt-in \"open invitation\" mode lets strangers who've also opted in be matched for a short, structured exchange, like a 20-minute walk, a shared meal, or swapping a favorite song.\n\n**Why this?**\nModern life is increasingly optimized around prediction. Algorithms feed us more of what we already know, and our routines harden. The result is a world that is efficient but a little flat. The Serendipity Engine flips that: instead of reducing surprise, it manufactures it, gently and safely.\n\n**Safeguards:**\n- Everything is private by default, with no public profiles and no ratings.\n- Suggestions stay in public, well-lit, low-risk settings.\n- You can set limits (\"not today,\" \"nothing social\") with a single tap.\n- It's built to be ignored easily, so it never becomes another thing demanding your attention.\n\n**The effect I'd hope for:** more unexpected friendships, more local businesses discovered, more cross-generational and cross-cultural conversations, and a renewed sense that an ordinary Tuesday can still hold a surprise. Cities would feel less like backdrops for commuting and more like places full of doors you hadn't noticed yet."
+      ],
+      "id": "nb-curated-0589e47205e5256cc5b3",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What would you invent to make the world a more interesting place to live in?"
+    },
+    "partition_fields": {
+      "distinct": 2,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 2,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        8,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "I'd invent the **Serendipity Engine**: a small, wearable, opt-in device (and companion network) that creates safe, low-stakes chances for people to stumble into things they'd never have sought out.\n\n**How it works**\n- You set a few broad preferences: how adventurous you feel today, how much time you have, your mobility needs, and your comfort with strangers.\n- Instead of recommending what you already like (as most algorithms do), it nudges you toward the *adjacent unknown*. It might suggest taking a different street, ducking into a workshop where a luthier is building a guitar, or sitting at a community table where someone is teaching origami.\n- Local people can register \"open doors\": a retired machinist willing to show how lathes work, a baker who lets visitors watch the 4 a.m. bread shift, a neighborhood astronomer with a telescope on the roof. The device matches you with these moments in real time.\n\n**Why it would make life more interesting**\n- **Breaks filter bubbles in physical space.** Most of us repeat the same routes, shops, and social circles. This would gently disrupt that.\n- **Turns experts into neighbors.** Everyone knows something fascinating, and most of it never gets shared because there's no easy channel.\n- **Rewards curiosity over consumption.** Interactions are about learning, making, or talking, not buying.\n- **Builds community.** Repeated small encounters across different walks of life make places feel more connected and trusting.\n\n**Safeguards**\n- Hosts are verified and reviewed, and encounters happen in public or semi-public settings by default.\n- Nothing is tracked beyond what you choose to share, and data stays on the device unless you opt in.\n- A \"surprise dial\" lets you control how far from your comfort zone you go, from \"slightly different coffee shop\" to \"learn to blow glass.\"\n\nThe goal isn't to optimize your life but to make it a little more unpredictable, so an ordinary Tuesday has a decent chance of turning into a story you'll tell later.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device (and companion network) that makes everyday life more full of surprise, connection, and discovery, without making it more addictive or screen-bound.\n\n**How it works**\n\n- **Detours with purpose.** Instead of optimizing for the fastest route, it can suggest a \"wander mode\" that nudges you down a different street, toward a hidden courtyard, an odd little museum, or a bakery that's only open three hours a day. It learns what kind of surprise you like but deliberately stays a bit outside your comfort zone.\n\n- **Skill-swap introductions.** If you opt in, it quietly matches you with nearby people who have complementary curiosities: someone who wants to learn bread baking and someone who wants to learn basic electronics. It suggests a 20-minute meetup at a nearby café. Both people agree before anything is shared, and no profiles or feeds are involved.\n\n- **Local lore layer.** Using audio only, it tells you the odd history of where you're standing: who lived in that building, what was there a century ago, what a street name actually refers to. Residents can contribute stories, so every neighborhood develops its own folklore.\n\n- **Weekly \"unlikely challenge.\"** Once a week, it proposes something small and slightly outside your routine: eat something you've never tried, learn a word in a language spoken on your block, or sit and sketch a stranger's chosen object. It's playful, never graded.\n\n**Design principles**\n\n1. **Privacy first.** Data stays on the device, and matches are anonymous until both people say yes.\n2. **Anti-addiction.** No streaks, no notifications that guilt you, and it gets quieter the more you use it, the way a good guide fades into the background.\n3. **Local over global.** The point is to deepen your relationship with the places and people near you rather than pull you toward the internet.\n\n**Why this?**\n\nMuch of what makes life feel dull is routine: same routes, same people, same information. Technology has made things efficient but also predictable. The Serendipity Engine would use technology to reintroduce the productive randomness that makes cities, travel, and friendships delightful, turning an ordinary Tuesday into something with a little narrative in it.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device and companion network that nudges people toward unplanned, low-stakes, delightful encounters with their own surroundings and with each other.\n\n**How it works**\n\n- **Opt-in discovery prompts.** Instead of optimizing your route for speed, it occasionally offers a \"detour of the day\": a staircase with a mural, a bakery that only opens for three hours, a hidden courtyard, a street where a neighborhood choir rehearses on Thursdays.\n- **Skill-swap matching.** If you've said you can juggle, fix bikes, or speak Portuguese, and someone nearby wants to learn that, it quietly suggests a 20-minute meetup at a public spot. No profiles, no feeds, no ratings, just a time, a place, and a shared curiosity.\n- **Local mystery layers.** Neighborhoods could host tiny puzzles, stories, or art installations that unlock as you walk past: a poem about the bridge you're standing on, an oral history recorded by someone who grew up there, a scavenger hunt a ten-year-old designed.\n- **Novelty budget.** You set how much surprise you want, from \"gentle\" to \"chaotic,\" and it respects that. It also learns to avoid repeating itself, so your routines get disrupted in ways that feel fresh rather than gimmicky.\n\n**Why this**\n\nMuch modern technology narrows our worlds by feeding us more of what we already like. This would do the opposite: widen the world by making the physical places and real people around us feel more layered and alive. Cities and towns are already full of fascinating things that most of us walk past because we're on autopilot.\n\n**Safeguards**\n\n- Meetups only in public places, with clear consent and easy opt-outs.\n- Privacy by design: location data processed on-device, with nothing sold or stored.\n- Community-curated content, so locals shape what their area reveals instead of advertisers.\n\nThe goal isn't to add more screen time but to send you back into the world with your head up, a little more curious, and a little more connected to the place where you live.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device and companion network that nudges people toward unplanned, low-stakes discoveries in their own surroundings.\n\n**How it works**\n- Once a day, it offers a \"detour\": a different route home, a street you've never walked, a shop to peek into, a bench with a good view.\n- It occasionally pairs you with a \"wildcard prompt,\" like \"Ask someone nearby what the best meal they've had this month was,\" or \"Find something older than you and learn its story.\"\n- It can connect willing strangers for short, structured exchanges: a 20-minute swap where a retired machinist teaches you how to sharpen a knife, and you show them how to edit a video.\n\n**Why it would make life more interesting**\n- Most of our days are optimized for efficiency. Maps, feeds, and recommendations all push us along the shortest, most predictable path. This would deliberately add a little productive randomness.\n- Cities and towns would become layered with local stories, skills, and micro-communities that currently stay invisible.\n- It would loosen the filter bubbles of social media by prioritizing physical, real-world variety over engagement metrics.\n\n**Safeguards**\n- Everything is opt-in, with strong privacy defaults: no location history sold, no public profiles.\n- Stranger meetups would happen only in public places, with verification, easy exits, and mutual consent.\n- Users set their own \"adventure level,\" from gentle (try a new café) to bold (join a community choir rehearsal).\n\n**The goal**\nNot to make life busier, but to make it feel larger: to turn the familiar world back into something you can still be surprised by.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device (and companion network) designed to gently nudge people toward unplanned, positive discoveries in their everyday lives.\n\n**How it works**\n\n- **Opt-in randomness.** When you activate it, it suggests a small deviation: take the next left instead of your usual right, visit the third shop on a street you've never walked, or sit at a different table in the café.\n- **Local discovery layer.** It surfaces things algorithms usually bury: a retired machinist who explains lathes to anyone curious, a hidden mural, a community garden open to visitors, a neighborhood band rehearsing in a garage with the door open.\n- **Consent-based connection.** People can flag themselves as \"open to a conversation about...\" (beekeeping, chess, bad poetry, fixing bikes). If two people overlap and are nearby, both get a gentle prompt, never a pressure.\n- **Anti-optimization rule.** It never optimizes for engagement time or ratings. It's built to get you off your screen quickly and into the world, and it deliberately avoids recommending the same type of thing twice in a row.\n\n**Why this**\n\nMost modern technology narrows our experience by feeding us more of what we already like. Cities and routines already tend toward sameness. The Serendipity Engine would work in the opposite direction, widening exposure to unfamiliar people, places, and skills.\n\n**Safeguards**\n\n- Privacy by default: location data stays on the device, and nothing is shared without explicit permission.\n- Safety checks: suggestions favor public, well-trafficked places, and meetups are always optional.\n- No scoring or social-ranking features, so it can't become a status game.\n\n**The result I'd hope for**\n\nMore small, memorable moments: learning a strange fact from a stranger, discovering a favorite dish at a place you'd never have chosen, or forming an unlikely friendship. Over time, communities would feel less like backdrops and more like living, surprising places.",
+        "I'd invent the **Serendipity Engine**, a small wearable and app combo that nudges you toward the unexpected, without optimizing for what you already like.\n\n**How it works:**\n- It learns your routines: the route you walk, the places you eat, the people you talk to, the media you consume.\n- Then it gently breaks them. It might suggest turning left instead of right, trying a shop you've never entered, or visiting a public lecture on a topic you know nothing about.\n- Once a week it offers a \"wild card\": an anonymous, opt-in meetup with someone nearby who also wants to swap a skill, story, or recipe for 30 minutes.\n\n**Why it would make the world more interesting:**\nModern technology mostly narrows our lives. Recommendation algorithms feed us more of what we already consume, and maps funnel us down the fastest route. The Serendipity Engine would do the opposite: it would deliberately widen your world.\n\n**Design principles:**\n1. **Opt-in and adjustable.** You set how adventurous you want to be, from \"mild curiosity\" to \"surprise me completely.\"\n2. **Safety first.** Suggestions avoid risky areas, and meetups happen in public places with verified participants.\n3. **Privacy-respecting.** Data stays on your device, and nothing is sold.\n4. **Reflection built in.** A short end-of-week prompt asks, \"What surprised you?\" so the novelty turns into memory and learning.\n\n**The ripple effects:**\n- People would meet others outside their usual social bubbles, which could ease polarization.\n- Local businesses, odd museums, and small community events would get discovered.\n- Everyday life would feel less like autopilot and more like exploration.\n\nThe idea is simple: if the internet gave us infinite choice but narrowed our habits, we could use technology to bring back the accidental discoveries that make life feel vivid.",
+        "I'd invent the **Serendipity Commons**: a network of small public spaces, plus a companion app, designed to produce unplanned encounters between people who would never otherwise meet.\n\n**How it works**\n\n- **The spaces:** Cafe-sized rooms in neighborhoods, libraries, and transit hubs. Each has a long shared table, a \"question wall,\" and a rotating set of odd, tactile objects: a mystery tool from a retired machinist, a map of a town that no longer exists, a jar of handwritten recipes.\n- **The matching:** When you check in, you answer one quirky question (\"What's something you're oddly good at?\"). The system seats you near someone whose answer is *different but complementary*, not similar. A beekeeper might end up beside a software engineer, or a retired sailor beside a teenage poet.\n- **The prompts:** Each table gets a small challenge to tackle together, like \"Explain your job using only a recipe\" or \"Design a holiday for a made-up season.\" These break the ice without forcing anyone to perform.\n- **The opt-out:** Wearing a plain green wristband signals \"I'd rather just sit quietly,\" so the whole thing stays low-pressure.\n\n**Why it would make the world more interesting**\n\n1. **It widens social circles.** Most of us talk to people like ourselves. This deliberately breaks that pattern.\n2. **It spreads hidden knowledge.** Everyone knows something strange and valuable, and this gives it a place to surface.\n3. **It sparks collaboration.** Many great ideas come from unlikely pairings, such as a nurse and an architect rethinking waiting rooms.\n4. **It counters loneliness.** It offers a gentle, structured way to connect without the awkwardness of approaching strangers.\n5. **It makes ordinary days less predictable.** A ten-minute coffee break could turn into a new friendship, a project, or just a story worth retelling.\n\n**The guiding principle:** Instead of algorithms that show us more of what we already like, build something that nudges us toward what we didn't know we'd enjoy.",
+        "I'd invent the **Serendipity Engine**, a lightweight, opt-in system that nudges people into unplanned, low-stakes encounters with the unfamiliar.\n\n**How it works:**\n- A small wearable or phone app learns your routines, then occasionally suggests a tiny deviation: \"Take the next left. There's a courtyard with a violin player on Thursdays.\" Or \"The person at the next table is also learning Portuguese.\"\n- It deliberately avoids what you already like. Instead of recommending more of your usual taste, it picks things adjacent to your interests, or wildly outside them.\n- Every suggestion is small: ten minutes, free or cheap, and safe. You can ignore it with zero friction.\n\n**Why it would make life more interesting:**\n- Algorithms today mostly narrow us, feeding us more of what we've already consumed. This would reverse that, widening your world instead.\n- Cities are full of hidden things (a repair shop run by a retired clockmaker, a community garden, a lecture open to the public) that most of us never notice.\n- Interesting lives are mostly built from accumulated small surprises, and this would make them routine.\n\n**Safeguards I'd build in:**\n- Privacy-first design, with data processed on your device.\n- Strict safety rules for any person-to-person suggestions, requiring mutual opt-in.\n- A \"surprise dial\" so you control how adventurous it gets.\n- No ads or paid placements, since those would corrupt the surprise.\n\nThe goal isn't to optimize your life but to make it a little less predictable, in ways you'd be glad about afterward.",
+        "I would invent the **Serendipity Engine**, a public, opt-in system that nudges people into unplanned but meaningful encounters with places, ideas, and each other.\n\n**How it works:**\n- You carry a small device or use an app that learns your *boundaries* and *curiosities*, not your habits. Unlike recommendation algorithms that feed you more of what you already like, this one deliberately aims at the edges of your experience.\n- Once in a while, it offers a \"detour\": a different route home that passes a mural you've never seen, a café where a local storyteller is performing, or a community workshop where someone is teaching bookbinding. You can accept or ignore it.\n- It also offers \"pairings.\" Two strangers who've both flagged interest in, say, beekeeping and jazz get a gentle invitation to share a bench or a coffee. Nothing is forced, and everything is consent-based and anonymous until both people say yes.\n\n**Why it would make life more interesting:**\n1. **It counters the filter bubble.** Most technology narrows our world to what's predictable. This would widen it.\n2. **It rewards local culture.** Small venues, hobbyists, elders with unusual skills, and street performers would gain visibility without needing marketing budgets.\n3. **It rebuilds casual social ties.** Many people lack low-pressure ways to meet others outside work or existing circles.\n4. **It makes familiar places new.** Your own neighborhood becomes a place of discovery rather than routine.\n\n**Safeguards I'd build in:**\n- Data stays on your device by default.\n- No advertising or paid placement, so detours can't be bought.\n- Safety features for meetups: public locations, verification, easy opt-outs.\n- A \"dial\" that lets you set how adventurous you want to be, from \"slightly different sandwich\" to \"surprise me completely.\"\n\nThe goal isn't to engineer life into a game, but to restore the small accidents that make life feel rich: the overheard conversation, the wrong turn that becomes a favorite memory, the stranger who turns into a friend.",
+        "I'd invent the **Serendipity Engine**: a small, wearable device that nudges you toward unplanned, low-stakes encounters with people, places, and ideas you'd never have sought out on your own.\n\n**How it works:**\n- It learns your routines, then quietly suggests tiny deviations: \"Take the next left. There's a bakery that's been open since 1952,\" or \"The person at the next table is also reading a book about bees.\"\n- It never uses a feed or an endless scroll. It offers one suggestion at a time, and only a few times per week, so each one feels special rather than like noise.\n- It deliberately avoids what you already like. Its goal is the edge of your comfort zone: a lecture on a topic you know nothing about, a neighborhood you've never walked through, a community choir that needs a tenor.\n- Opt-in \"open invitation\" mode lets strangers who've also opted in be matched for a short, structured exchange, like a 20-minute walk, a shared meal, or swapping a favorite song.\n\n**Why this?**\nModern life is increasingly optimized around prediction. Algorithms feed us more of what we already know, and our routines harden. The result is a world that is efficient but a little flat. The Serendipity Engine flips that: instead of reducing surprise, it manufactures it, gently and safely.\n\n**Safeguards:**\n- Everything is private by default, with no public profiles and no ratings.\n- Suggestions stay in public, well-lit, low-risk settings.\n- You can set limits (\"not today,\" \"nothing social\") with a single tap.\n- It's built to be ignored easily, so it never becomes another thing demanding your attention.\n\n**The effect I'd hope for:** more unexpected friendships, more local businesses discovered, more cross-generational and cross-cultural conversations, and a renewed sense that an ordinary Tuesday can still hold a surprise. Cities would feel less like backdrops for commuting and more like places full of doors you hadn't noticed yet."
+      ],
+      "id": "nb-curated-0589e47205e5256cc5b3",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "4e2d6a7159676a610fb179ac3ab0477d7b46cb6a4045547fce85c752ac6fa1e5",
+      "partition_scores": [
+        8,
+        8
+      ],
+      "prompt": "What would you invent to make the world a more interesting place to live in?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "fbddd502aee7d3902946e6a187c6233e942824055bce6dffa63b554e6d73752c",
+      "utility": 2.262348186869203
+    },
+    "summary": {
+      "mean_distinct": 2.0,
+      "mean_utility": 2.262348186869203,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "a683ba0089da83ba9b93ec2ab60d147fa94a1e461083283196ec3cb55a40331d",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0766",
+      "fixture": false,
+      "intent_sha256": "1a7c43a6173e6fd9fec62ebea83fd3ad3dd039fb6b4329ce73aef38c6e0958ee",
+      "request_sha256": "a8918d4a782cfaa295fc4e922417ed45375539e3d0b3ff460771ba44fd346324",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.107568735998939,
+        "message_id": "chatcmpl-EdwT7eppI1Si1i24tdiCa66R3j4gm",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 89,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 52,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 4330,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 4327,
+            "cached_tokens": 0
+          },
+          "total_tokens": 4419
+        },
+        "refusal": null,
+        "request_id": "req_3fa4c8692c8740b6a63a99beddf31fbc",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,7,8,9],[6]]}",
+        "usage": {
+          "cache_creation_input_tokens": 4327,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 4327,
+            "cached_tokens": 0
+          },
+          "output_tokens": 89,
+          "output_tokens_details": {
+            "reasoning_tokens": 52
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-d50f52e26d608692f3b3fd56.group",
+      "spent_micro_usd": 1309,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0767",
+      "fixture": false,
+      "intent_sha256": "4313e7b35c967c133f559afb5c143db01ddbebceea30f76617e9ad2747e2b054",
+      "request_sha256": "73f0f708097bec278b91cf91f890b2e49ec8dc77f1bc01a5086ed0b2a4006123",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.999280440999428,
+        "message_id": "msg_011CgUawAZ23pYDXGkyGHmgT",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUawAJPjNtSSFUuLpVr8",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1081,
+          "output_tokens": 216,
+          "output_tokens_details": {
+            "thinking_tokens": 207
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-d50f52e26d608692f3b3fd56.quality.00",
+      "spent_micro_usd": 11886,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0768",
+      "fixture": false,
+      "intent_sha256": "e721bea767c7406f8e996f05e5f03722a70567814f05e8c68831e5e4837be6b2",
+      "request_sha256": "3e6a6a7f503f2ff3a7395f19b1030711fc885cf8c5f68d6572c27e47b66e4bd9",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.582522267010063,
+        "message_id": "msg_011CgUawWJf9rw6LdwyZsD91",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUawW7ktBGAcn84dR4J9",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1108,
+          "output_tokens": 154,
+          "output_tokens_details": {
+            "thinking_tokens": 145
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-d50f52e26d608692f3b3fd56.quality.06",
+      "spent_micro_usd": 10329,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-0589e47205e5256cc5b3"
+}

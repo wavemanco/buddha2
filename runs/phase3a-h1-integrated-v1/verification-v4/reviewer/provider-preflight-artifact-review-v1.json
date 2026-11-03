@@ -1,0 +1,21 @@
+{
+  "bundle_check_sha256": "8d6b25b8a0c54873d107716cbf29ba199f1baff74e101adb1f1bd4e7a0a6e20c",
+  "created_utc": "2026-10-31T14:43:08.012756+00:00",
+  "guard_proof_sha256": "71f29081352673571cb76b04e520a45d4fff193e2e4937fafdb07f037eda8548",
+  "helper_sha256": "223c553f1cf065a052a27db29ffce2279c5ca9300efbd1560b0ff1618c52ef39",
+  "kind": "p3a-hi-independent-keyless-preflight-artifact-review-v1",
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "packet_acceptance_sha256": "31fdee4427f4e4609b82209d9d312201004fba019e32d13c68d27a235b47e32c",
+  "passed": true,
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "production_edits": false,
+  "provider_calls": 0,
+  "reviewer": "hi_final_acceptance: nonauthor",
+  "runbook_sha256": "5afb2a588b6e012d3f90d20410d21d21740812eb3fdc63871245242d5002f462",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "source_files_verified": 356,
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "static_proof_sha256": "94560ae8ea9ac7039e9be1c7f9f785dc45323426fcf5b7d577ca08a827528f18",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
+  "supported_execution": "One --host invocation into unused actual-v1: accepted H1/network-none, SDK/socket/subprocess-blocked unchanged provider preflight, no keys/Transport/run/global claim publication; actual result/cleanup requires independent review."
+}

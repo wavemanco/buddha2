@@ -1,0 +1,10 @@
+{
+  "kind": "p2bf1-operator-entry-nonsending-check",
+  "powershell_parser": "pass",
+  "denied_profile_response": "NO",
+  "expected_nonzero_exit": true,
+  "operator_attestation_created": false,
+  "live_grant_created": false,
+  "credentials_read": false,
+  "provider_api_calls": 0
+}

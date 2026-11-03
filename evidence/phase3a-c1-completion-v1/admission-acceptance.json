@@ -1,0 +1,228 @@
+{
+  "accounting": {
+    "assessment_synthetic_micro_usd": 99513,
+    "cells": {
+      "p3a-01:adaptive": {
+        "calls": 68,
+        "input": 6592,
+        "output": 1632,
+        "spent": 43168
+      },
+      "p3a-01:fixed": {
+        "calls": 73,
+        "input": 7568,
+        "output": 1752,
+        "spent": 32852
+      },
+      "p3a-02:adaptive": {
+        "calls": 68,
+        "input": 6592,
+        "output": 1632,
+        "spent": 43168
+      },
+      "p3a-02:fixed": {
+        "calls": 73,
+        "input": 7568,
+        "output": 1752,
+        "spent": 32852
+      },
+      "p3a-03:adaptive": {
+        "calls": 68,
+        "input": 6592,
+        "output": 1632,
+        "spent": 43168
+      },
+      "p3a-03:fixed": {
+        "calls": 73,
+        "input": 7568,
+        "output": 1752,
+        "spent": 32852
+      },
+      "p3a-04:adaptive": {
+        "calls": 68,
+        "input": 6592,
+        "output": 1632,
+        "spent": 43168
+      },
+      "p3a-04:fixed": {
+        "calls": 73,
+        "input": 7568,
+        "output": 1752,
+        "spent": 32852
+      }
+    },
+    "cumulative_max_exposure_micro_usd": 227787885,
+    "first_assessment_synthetic_micro_usd": 33171,
+    "first_review_event_index": 349,
+    "first_synthetic_micro_usd": 109191,
+    "fixture_real_cumulative_totals": null,
+    "included_first_cap_micro_usd": 50860000,
+    "journal_events": 1327,
+    "known_fixture_requests": 663,
+    "new_cap_micro_usd": 205860000,
+    "pending_unknown_new_reserved": 0,
+    "planned_slots": 775,
+    "prior_attempts": 842,
+    "prior_known_micro_usd": 10487885,
+    "prior_unreleased_reserved_micro_usd": 11440000,
+    "readiness_requests_included_in_adaptive01": 68,
+    "role_calls": {
+      "answer": 400,
+      "editor": 80,
+      "fixed_selector": 4,
+      "group": 9,
+      "plan": 40,
+      "quality": 90,
+      "rank": 40
+    },
+    "role_synthetic_micro_usd": {
+      "answer": 176400,
+      "editor": 88000,
+      "fixed_selector": 4400,
+      "group": 513,
+      "plan": 17640,
+      "quality": 99000,
+      "rank": 17640
+    },
+    "synthetic_spent_micro_usd": 403593,
+    "unused_slots": 112
+  },
+  "artifact_sha256": {
+    "evidence/phase3a-c1-completion-v1/prospective-cost-worksheet.json": "0eb40a67748e4ad90ff6e3ceafad5136a7e01fd5b9cc713c9fa181f4c7f7490c",
+    "runs/phase3a-c1-completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/journal/events.jsonl": "ac0c3dc5284cf012ca2d11c5896675d5fd1f66dfae20fe4a7109862f326415a4",
+    "runs/phase3a-c1-completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/journal/manifest.json": "cf125d1e79cfeebc93faaeeae80f43179d8c51f9532bd5bcf99353107d6960b0",
+    "runs/phase3a-c1-completion-v1/launcher/9cb5a9e6baed4a988e6250c64036518e.inspection.json": "c4b7786adce566ee0f310ff38e28d77b77a01e6f48f9d69d63aabf3f973f8e55",
+    "runs/phase3a-c1-completion-v1/launcher/9cb5a9e6baed4a988e6250c64036518e.result.json": "0dfcbad49d4e693850912a3b17f1f02920b0eca00e83c8342e33dd6efdc18353",
+    "runs/phase3a-c1-completion-v1/launcher/9cb5a9e6baed4a988e6250c64036518e.stdout.log": "2287119e38672ca61584b763dd864a8bb1c880a6eb7e168f0ba5cd6405884a1d",
+    "runs/phase3a-c1-completion-v1/launcher/b20aff58df494d52a88f0fe04f0b831d.inspection.json": "fc07ba505dd957b8290bf734ed6a0b1406e5f89af92374f71ca5569749b07694",
+    "runs/phase3a-c1-completion-v1/verification-v3/launcher-config.log": "53e8e9d30371771f36f0f16320e11015ddbb912cab5f85a970328d6411f4810a",
+    "runs/phase3a-c1-completion-v1/verification-v3/launcher-host.json": "46efa5c281c6b79355be03d2f165f42dc0673ad904646c703f51da6dd8aedc82",
+    "runs/phase3a-c1-completion-v1/verification-v3/launcher-mock.log": "8a82fe521e63b9a21e1b9786932695be5c34746176361f5efd24acd9db980e52",
+    "runs/phase3a-c1-completion-v1/verification-v3/launcher.json": "ff8a72ee0bf346ca4b9da9241d9222190de3b97eb344eabfffddbc843b85176b",
+    "runs/phase3a-c1-completion-v1/verification-v3/matrix.json": "43dae28c96dbb39f41a076a1efcc5e0962265dacbbd4c48c75cb2e065e1ada2d",
+    "runs/phase3a-c1-completion-v1/verification-v3/mock-proof.json": "dfccefeadc5a7d8ec958ffa3b83082911d3d0509be0c1781a0d20b42e886128d",
+    "runs/phase3a-c1-completion-v1/verification-v3/mock-wire.json": "717b53a07db57b094b06ff006a59163f324fa81c5680b80010b15c5820e85d32",
+    "runs/phase3a-c1-completion-v1/verification-v3/preservation-after.json": "570afd889bfb1517ba6dd12563bd9742545bfdf635e29275bc715ed09acbaedc",
+    "runs/phase3a-c1-completion-v1/verification-v3/preservation-before.json": "570afd889bfb1517ba6dd12563bd9742545bfdf635e29275bc715ed09acbaedc",
+    "runs/phase3a-c1-completion-v1/verification-v3/preservation.json": "e21d1bb48d508cecd2ed3212db1e302bfa5e0885419a4e73ea9be0c00b79697f",
+    "runs/phase3a-c1-completion-v1/verification-v3/release/live-grant.json": "8bd03197408f24f884b4af57534b6c327d05479f71e10b958f41a92cd68a5276",
+    "runs/phase3a-c1-completion-v1/verification-v3/release/mock-grant.json": "cdb8b4bfbd5c3a909402e27aec57ad22a55e11a47310fe37dfe037853ec7fed8",
+    "runs/phase3a-c1-completion-v1/verification-v3/release/offline-gate.json": "5634ccd5f30ed4f68e9bdf88a24c7ca03db4afc96acbecfd3e6f726ee45fd75d",
+    "runs/phase3a-c1-completion-v1/verification-v3/release/study.json": "e4bd94d9a132e07c338424caa0cf2b21c12f4444fc39b98bf8b2ca63d383420a",
+    "runs/phase3a-c1-completion-v1/verification-v3/replay.json": "3a882ad51cabb777fe3eae93c04ab988dd435f0ff969ffe652653d734bd13759",
+    "runs/phase3a-c1-completion-v1/verification-v3/source-after.json": "2879adccdfb1f2ee6f834c32f0fe0c6a1c16ef75b078d1d644a578471dc62f32",
+    "runs/phase3a-c1-completion-v1/verification-v3/source-before.json": "2879adccdfb1f2ee6f834c32f0fe0c6a1c16ef75b078d1d644a578471dc62f32",
+    "runs/phase3a-c1-completion-v1/verification-v3/static.json": "7859e25acab34ebc9ab617541bf985e582bbcd7a9445d46fe7ae28c6d6ae2f06",
+    "runs/phase3a-c1-completion-v1/verification-v3/tests.json": "016403d2827af0a44bf357b6350e4eacbaf7cdd11f6c344dd7334c3831603207",
+    "runs/phase3a-c1-completion-v1/verification-v3/tests.log": "47f572355f1c9404071d1fdd2642db64fc08ea3760c6a0bc2f7e6decb94af9d9",
+    "runs/phase3a-c1-completion-v1/verification-v3/windows-tests.json": "ba783755716caf118355dad200994ebf5cd1dfa275138a857b028d4840565994",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/barrier-first.json": "ff6ef3b18c61a4f2cc4a1fdf09d8b53f4090ab5887eb6288637a0cd1e1f2c975",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/barrier-readiness.json": "5e15ed6008afde299f656404d8ddea5627147de62e615ea88417ac9c83ed5a97",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-01-adaptive.json": "bf76bbd82d5be6b77fccca25ac8507e7843974475bb190e547612f82922d0bb7",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-01-fixed.json": "8d30f635dc8d95022810125dd271943ff07123137167050824cc9bc3851acba4",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-02-adaptive.json": "ef00d09e1891ed4e2a64fc1a45a3867e864bcd9027def899c2b2bf5c489d35d1",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-02-fixed.json": "a92500ad622ebb3a74335b60d4092ac486e46f0544464728a99832bf3b3fa354",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-03-adaptive.json": "a58e813238f764780c499c8b31eff0bc0647a4a2ee0c391dac58df65ff1c0acb",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-03-fixed.json": "8f838373540883d973b623b8249ab7aa54f35158a7da521439c8543053e76f3f",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-04-adaptive.json": "799f4badf1743a19a1f3587055f5f24551e6d786812239fa29625f473414147b",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/branches/p3a-04-fixed.json": "a00910749f35cd5c7106699867349fabf63e4a84ab332cd2d8b57322e43615cf",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/first-review.json": "f53e45659625fb3ab92e5c82f1018f64c3c6a8173b1e73701e806bf9e78c6c35",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/inspection-first.json": "e0e10201c357d4e20e814dcc4f4679fa15731737fcc01305e7789741da991819",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/inspection-readiness.json": "0da0a4554b8d1a30bdf5b9796dd017b64c9e676e8465c809470b88ce441a2170",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/readiness-review.json": "404e0c70d8beb000941b9390be27570d12dafcf9026a24d791726231dbe02613",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/PHASE3A_REPORT.md": "5412db0a19f57a3aa427b0abae1115ff0caf0e50c3063aeabfe56fccc533e06f",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/accounting.json": "7b14394520994b26944e227cd9887f0f14adf9447d5c5336aaa0e055161026d5",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/analysis.json": "35d19a32f2c52a8facf5ac44adeffbfccbf9832e66c8add78f73261a60523477",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/coverage.json": "5921e0dee1b67a7207db0001916d5fbd8149d628aef9eda475f73102192359f2",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/protocol.json": "3ca681f0a37a2cc9d6492a415efb1f00338d83fbde7704eabf776707f11a1ba3",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/readiness.json": "404e0c70d8beb000941b9390be27570d12dafcf9026a24d791726231dbe02613",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/rows.json": "fe5a367bb947ef94cc3e856d300cd116bd43daa09472a50ca3f0e4ee99711894",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/final/summary.json": "dae5bf70c7ca52ff14b61299648e082d0b8d0cd09c23c38b1aa405377f5569d5",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/PHASE3A_REPORT.md": "5412db0a19f57a3aa427b0abae1115ff0caf0e50c3063aeabfe56fccc533e06f",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/accounting.json": "7b14394520994b26944e227cd9887f0f14adf9447d5c5336aaa0e055161026d5",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/analysis.json": "35d19a32f2c52a8facf5ac44adeffbfccbf9832e66c8add78f73261a60523477",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/coverage.json": "5921e0dee1b67a7207db0001916d5fbd8149d628aef9eda475f73102192359f2",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/protocol.json": "3ca681f0a37a2cc9d6492a415efb1f00338d83fbde7704eabf776707f11a1ba3",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/readiness.json": "404e0c70d8beb000941b9390be27570d12dafcf9026a24d791726231dbe02613",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/rows.json": "fe5a367bb947ef94cc3e856d300cd116bd43daa09472a50ca3f0e4ee99711894",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/reports/replay/summary.json": "dae5bf70c7ca52ff14b61299648e082d0b8d0cd09c23c38b1aa405377f5569d5",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/seals/p3a-01.json": "3f4012b004d08a2c2a7989dcb94cd16072c6f781c795968ed082deacdf11315a",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/seals/p3a-02.json": "598f71713451bc920337a8d59f1e63b27d5617d58df7bf9bc4966bc03a2a7e23",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/seals/p3a-03.json": "a894bfaee5b62ec7a7978cf5324f7af57874c5b8158e4c0d8b035ff9b6480a44",
+    "runs/phase3a-compat-c1-v1/completion-v1/1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57/mock/seals/p3a-04.json": "83731a965327e0573832696221394d9b4c7c4ff39e13c3619a909709a4e5a1fb"
+  },
+  "checks": {
+    "actual_host_mock_zero_call_and_config_never_started": true,
+    "complete_transcript_evidence_and_same_live_C1_validator": true,
+    "fresh_delegated_live_journal_and_new_claim_not_old_identity": true,
+    "full775_and_fresh_authority": true,
+    "full_static_test_and_exact8file_replay": true,
+    "launch_owner_and_workflow_owner_cover_manual_review_barriers": true,
+    "overlapping_phase_first_assessment_and_cell_reservations": true,
+    "pair_seals_before_all_native_judges": true,
+    "readiness_included_once_and_first_before_other_pairs": true,
+    "source192_current_retained_and_historical_preservation": true,
+    "unknown_no_resend_and_durable_known_stop_source_and_tests": true
+  },
+  "decision": "offline-whole-scope-admission-accepted; live readiness and science remain prospective",
+  "kind": "phase3a-c1-completion-admission-acceptance-v1",
+  "launcher_sha256": "c7837a7e39967a597d667d38cb3ab0380577c1c179ef758e10088ee41740b0b3",
+  "limitations": [
+    "This is actual pinned SDK/OpenCode synthetic coverage, not observed live model normal completion, useful adaptation or human-aligned quality. Fixture scientific_complete and authentic_live_path remain false.",
+    "Real all-stage execution requires trusted manual evidence-grounding inspection at readiness and engineering inspection after the first pair under the same held workflow owner; only fixture mode auto-publishes structural inspections. Utility is not a continuation condition.",
+    "Provider configuration was created and inspected on bridge networking but never started or keyed. This audit establishes neither account access nor future provider latency.",
+    "The legacy-prefix live journal is a fresh NEW-study path by explicit frozen-core contract. Old study journals, grants, claims and the historical unknown reservation are not resumed or released.",
+    "Budgets are joint maximum-liability admission ceilings, not predicted or guaranteed spend/completion. Fixture usage is synthetic and real cumulative totals remain null.",
+    "No inference, SDK construction, socket call, provider request, credential lookup, source mutation or test rerun was performed by this independent final audit. Only this acceptance record was created."
+  ],
+  "offline_gate_file_sha256": "5634ccd5f30ed4f68e9bdf88a24c7ca03db4afc96acbecfd3e6f726ee45fd75d",
+  "offline_gate_seal_sha256": "479d72aab3d2832abb6b0a0ec01d4e72ec6cfa77a05d778bc0ef3d8e3137d74a",
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "resolved_review_findings": [
+    {
+      "finding": "readiness early empty/unfinished editor could otherwise fall through native fallback/probes",
+      "resolution": "ReadinessProposer holds existing serial editor lock through observation and latches a durable known stop; actual empty case proves13 known calls, no probe/other-editor follow-up; eighth control is intercepted before intent; invalid-harvest stock shape repair and true unknown holds remain distinct"
+    },
+    {
+      "finding": "missing explicit source-policy-launcher bindings could bypass the delegated optional parameter",
+      "resolution": "completion wrapper rejects missing bindings before journal creation; source-bound negative regression retained"
+    },
+    {
+      "finding": "host acceptance expected wrong runtime filename",
+      "resolution": "current verifier checks actual .result.json; test_verify covers lifecycle argv and naming; failed v1/v2 are not acceptance evidence"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-29T20:17:19.945629+00:00",
+  "reviewed_source_sha256": {
+    "followups/phase3a_c1_completion_v1/accounting.py": "dbd60e8b07990d9e327d2b6107286f76d767f36229abdf2adbdaa39f34e5d78f",
+    "followups/phase3a_c1_completion_v1/evidence.py": "e14f63c66c35d313595f0c158572a4fcc1f88849c6c186543f194c8958da0fa9",
+    "followups/phase3a_c1_completion_v1/launch.py": "ae47a31976f59c09cf3f482be882d6a0391aa651bad6c6a8de822ffe2875b156",
+    "followups/phase3a_c1_completion_v1/report.py": "039867e0db552c9847716d85fe765384226b0fc00a7c242fdccb1216932bbdb9",
+    "followups/phase3a_c1_completion_v1/support.py": "2b06fdcdda4a0d304fd39dc433e0d9659de57d6aabf7cac28903203c8829fd41",
+    "followups/phase3a_c1_completion_v1/verify.py": "b13a466c76e387924c947387933ea6eea84d7249d7352caa7c7629cb506a9525",
+    "followups/phase3a_c1_completion_v1/workflow.py": "eb9d38e966cf2258f066eff7d823b724f67105489ac39611a73bbc4b7aaa4051",
+    "phase3a-c1-completion.ps1": "c7837a7e39967a597d667d38cb3ab0380577c1c179ef758e10088ee41740b0b3"
+  },
+  "reviewer": "independent release_launcher agent; stdlib-only read-only verification, no test reruns",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "sha256": "bbb9552465ed711b575555b24db281de0a7e0a5249106e7ecbc17fff8161b178",
+  "source_sha256": "e2471ad9e38171cabc2d32615bac797739f378c3f6c7ebc64f8b95f8632d9d26",
+  "study_sha256": "1e7edf24a9ac3dff4735c8d7af2b5843d86278830d697b2b8260a6da8528de57",
+  "verification": {
+    "C1_normal_role_sessions": 12,
+    "byte_identical_report_replay_files": 8,
+    "contained_host_skips": 2,
+    "contained_tests_executed": 103,
+    "diagnostic_scored_fixture": 1,
+    "live_study_claim_created": false,
+    "new_calls_actual_host_replay": 0,
+    "paired_seals": 4,
+    "primary_scored_fixture": 8,
+    "real_credentials_used": false,
+    "real_provider_calls": 0,
+    "separate_Windows_checks_passed": 2,
+    "source_files_current_and_retained": 192,
+    "unique_checks_covered": 105
+  }
+}

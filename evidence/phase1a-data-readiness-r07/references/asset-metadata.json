@@ -1,0 +1,1037 @@
+{
+  "schema_version": 1,
+  "kind": "phase1a-public-measurement-asset-metadata",
+  "created_at_utc": "2026-10-25T09:48:21.678484+00:00",
+  "project_root": "C:\\Users\\arvik\\code\\research\\Buddha2",
+  "scope": {
+    "experiment_model_calls": 0,
+    "provider_token_count_requests": 0,
+    "weight_downloads": 0,
+    "new_row_corpora_downloads": 0,
+    "heldout_answer_or_label_access": 0,
+    "dependency_installs": 0,
+    "experiment_spend_usd": 0,
+    "read_or_write_original_buddha2": false,
+    "unique_successful_metadata_http_captures": 35,
+    "failed_public_metadata_gets": 1
+  },
+  "crpo_code": {
+    "repository": "https://github.com/mismayil/creative-preference-optimization",
+    "revision": "9c0d71438687255b355216481064b1ced471ceeb",
+    "commit_author": {
+      "name": "Mete Ismayilzada",
+      "email": "mismayil@users.noreply.github.com",
+      "date": "2026-03-18T10:13:06Z"
+    },
+    "commit_committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-03-18T10:13:06Z"
+    },
+    "source_checkout_modified": false
+  },
+  "original_muce_dataset": {
+    "id": "CNCL-Penn-State/MuCE",
+    "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "configuration": "full_agreement",
+    "used_split": "train",
+    "metadata_revision_returned": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "row_contents_read_by_this_subtask": false
+  },
+  "assets": {
+    "quality-adapter": {
+      "id": "CNCL-Penn-State/CrPO-RM-gemma-2-9b-it",
+      "revision": "a32828b8279a98065dba47da627e0cafcce8960b",
+      "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/tree/a32828b8279a98065dba47da627e0cafcce8960b",
+      "metadata_url": "https://huggingface.co/api/models/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it",
+      "private": false,
+      "gated": false,
+      "library_name": "peft",
+      "license_metadata": "mit",
+      "base_model_metadata": "google/gemma-2-9b-it",
+      "dataset_metadata": [
+        "CNCL-Penn-State/MuCE"
+      ],
+      "weight_files_listed": [
+        "adapter_model.safetensors"
+      ],
+      "card_capture": {
+        "status": "captured",
+        "file": "assets/hf-quality-adapter-README.md"
+      },
+      "availability_scope": "Public metadata/cards/config only; no weights downloaded, license agreement accepted, authentication attempted, inference endpoint called or local execution attempted.",
+      "adapter_configuration": {
+        "base_model_name_or_path": "google/gemma-2-9b-it",
+        "revision": null,
+        "task_type": "SEQ_CLS",
+        "peft_type": "LORA",
+        "r": 32,
+        "lora_alpha": 16,
+        "target_modules": [
+          "v_proj",
+          "q_proj"
+        ],
+        "modules_to_save": [
+          "classifier",
+          "score"
+        ]
+      }
+    },
+    "quality-base": {
+      "id": "google/gemma-2-9b-it",
+      "revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/tree/11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "metadata_url": "https://huggingface.co/api/models/google/gemma-2-9b-it",
+      "private": false,
+      "gated": "manual",
+      "library_name": "transformers",
+      "license_metadata": "gemma",
+      "base_model_metadata": "google/gemma-2-9b",
+      "dataset_metadata": null,
+      "weight_files_listed": [
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors"
+      ],
+      "card_capture": {
+        "status": "not_fetched",
+        "reason": "Public model metadata marks manual gating; authentication/terms acceptance outside checkpoint. Quality-base README attempt in initial capture returned HTTP401."
+      },
+      "availability_scope": "Public metadata/cards/config only; no weights downloaded, license agreement accepted, authentication attempted, inference endpoint called or local execution attempted."
+    },
+    "embedding-reference": {
+      "id": "jinaai/jina-embeddings-v3",
+      "revision": "ab036b023d30b4d1138c4c3bfa9f0c445ab455d6",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v3/tree/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6",
+      "metadata_url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3",
+      "private": false,
+      "gated": false,
+      "library_name": "transformers",
+      "license_metadata": "cc-by-nc-4.0",
+      "base_model_metadata": null,
+      "dataset_metadata": null,
+      "weight_files_listed": [
+        "model.safetensors",
+        "pytorch_model.bin"
+      ],
+      "card_capture": {
+        "status": "captured",
+        "file": "assets/hf-embedding-reference-README.md"
+      },
+      "availability_scope": "Public metadata/cards/config only; no weights downloaded, license agreement accepted, authentication attempted, inference endpoint called or local execution attempted."
+    },
+    "surprise-reference": {
+      "id": "google/gemma-2-27b-it",
+      "revision": "aaf20e6b9f4c0fcf043f6fb2a2068419086d77b0",
+      "url": "https://huggingface.co/google/gemma-2-27b-it/tree/aaf20e6b9f4c0fcf043f6fb2a2068419086d77b0",
+      "metadata_url": "https://huggingface.co/api/models/google/gemma-2-27b-it",
+      "private": false,
+      "gated": "manual",
+      "library_name": "transformers",
+      "license_metadata": "gemma",
+      "base_model_metadata": "google/gemma-2-27b",
+      "dataset_metadata": null,
+      "weight_files_listed": [
+        "model-00001-of-00012.safetensors",
+        "model-00002-of-00012.safetensors",
+        "model-00003-of-00012.safetensors",
+        "model-00004-of-00012.safetensors",
+        "model-00005-of-00012.safetensors",
+        "model-00006-of-00012.safetensors",
+        "model-00007-of-00012.safetensors",
+        "model-00008-of-00012.safetensors",
+        "model-00009-of-00012.safetensors",
+        "model-00010-of-00012.safetensors",
+        "model-00011-of-00012.safetensors",
+        "model-00012-of-00012.safetensors"
+      ],
+      "card_capture": {
+        "status": "not_fetched",
+        "reason": "Public model metadata marks manual gating; authentication/terms acceptance outside checkpoint. Quality-base README attempt in initial capture returned HTTP401."
+      },
+      "availability_scope": "Public metadata/cards/config only; no weights downloaded, license agreement accepted, authentication attempted, inference endpoint called or local execution attempted."
+    },
+    "quality-injection-reference": {
+      "id": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+      "revision": "a92f2ec997c806de469ff287ef3b71982e886fc2",
+      "url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/tree/a92f2ec997c806de469ff287ef3b71982e886fc2",
+      "metadata_url": "https://huggingface.co/api/models/Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+      "private": false,
+      "gated": false,
+      "library_name": "transformers",
+      "license_metadata": null,
+      "base_model_metadata": "google/gemma-2-27b-it",
+      "dataset_metadata": [
+        "Skywork/Skywork-Reward-Preference-80K-v0.2"
+      ],
+      "weight_files_listed": [
+        "model-00001-of-00012.safetensors",
+        "model-00002-of-00012.safetensors",
+        "model-00003-of-00012.safetensors",
+        "model-00004-of-00012.safetensors",
+        "model-00005-of-00012.safetensors",
+        "model-00006-of-00012.safetensors",
+        "model-00007-of-00012.safetensors",
+        "model-00008-of-00012.safetensors",
+        "model-00009-of-00012.safetensors",
+        "model-00010-of-00012.safetensors",
+        "model-00011-of-00012.safetensors",
+        "model-00012-of-00012.safetensors"
+      ],
+      "card_capture": {
+        "status": "captured",
+        "file": "assets/hf-quality-injection-reference-README.md"
+      },
+      "availability_scope": "Public metadata/cards/config only; no weights downloaded, license agreement accepted, authentication attempted, inference endpoint called or local execution attempted."
+    },
+    "muce-pref": {
+      "id": "CNCL-Penn-State/MuCE-Pref",
+      "revision": "c586b786a08d29ef959bf5d4c3a3be67250842cd",
+      "url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-Pref/tree/c586b786a08d29ef959bf5d4c3a3be67250842cd",
+      "scope": "Metadata and card only. No parquet, row inventory, answers, scores or labels fetched."
+    },
+    "muce-sft": {
+      "id": "CNCL-Penn-State/MuCE-SFT",
+      "revision": "9b14581063a5e5fe2eb25bd78d94af790ca29166",
+      "url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-SFT/tree/9b14581063a5e5fe2eb25bd78d94af790ca29166",
+      "scope": "Metadata and card only. No parquet, row inventory, answers, scores or labels fetched."
+    }
+  },
+  "source_captures": [
+    {
+      "id": "crpo-main-ref.json",
+      "requested_url": "https://api.github.com/repos/mismayil/creative-preference-optimization/git/ref/heads/main",
+      "retrieved_at_utc": "2026-10-25T09:46:47.621092+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 380,
+      "sha256": "1b9f9a9f2399ad4e9efbdb237a88055630e93ddefac7ad979d60b9c9bf7ccd44",
+      "file": "assets/crpo-main-ref.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-commit.json",
+      "requested_url": "https://api.github.com/repos/mismayil/creative-preference-optimization/git/commits/9c0d71438687255b355216481064b1ced471ceeb",
+      "retrieved_at_utc": "2026-10-25T09:46:47.852623+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 2354,
+      "sha256": "b1f77d6fa101db8c64c78b5485cc5a235d46392658dbaa7b8d45a730b17f9e3e",
+      "file": "assets/crpo-commit.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-LICENSE.txt",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/LICENSE",
+      "retrieved_at_utc": "2026-10-25T09:46:48.037915+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 1073,
+      "sha256": "eaf549be0c1a9882302fc8e090f09cb732cad49b8606a2eff5ab07ea0fa81222",
+      "file": "assets/crpo-LICENSE.txt",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-data.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/data.py",
+      "retrieved_at_utc": "2026-10-25T09:46:48.206320+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 23591,
+      "sha256": "641483b24e6191387b78bec6cb7de700db510507214b1e593bc01218d9c98d98",
+      "file": "assets/crpo-data.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-metrics.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/metrics.py",
+      "retrieved_at_utc": "2026-10-25T09:46:48.369004+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 19717,
+      "sha256": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+      "file": "assets/crpo-metrics.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-utils.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/utils.py",
+      "retrieved_at_utc": "2026-10-25T09:46:48.537808+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 18547,
+      "sha256": "060db1796c820debbf3d0a28f2e5a2c05286ab9cfc81ac5341822b6866e77539",
+      "file": "assets/crpo-utils.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-evaluate-lm.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm.py",
+      "retrieved_at_utc": "2026-10-25T09:46:48.693464+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 32413,
+      "sha256": "ded7e1063c09b708fb9e50ed93aa388a8a8a12added557f1da02b4867d87c8cb",
+      "file": "assets/crpo-evaluate-lm.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-evaluate-lm-by-rm.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm_by_rm.py",
+      "retrieved_at_utc": "2026-10-25T09:46:48.874987+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 5872,
+      "sha256": "107648b1e7489a2251def87c3e599326cd50f46e6875fb6004147be89a8b8b5c",
+      "file": "assets/crpo-evaluate-lm-by-rm.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-prepare-crpo-data.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_crpo_data.py",
+      "retrieved_at_utc": "2026-10-25T09:46:49.053470+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 6129,
+      "sha256": "df4ef9139c4c2c3c6f887e2f3ce9eedce55359e71d04515d36c222c843295e4b",
+      "file": "assets/crpo-prepare-crpo-data.py",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-prepare-crpo-data.sh",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/data/prepare_crpo_data.sh",
+      "retrieved_at_utc": "2026-10-25T09:46:49.205789+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 2512,
+      "sha256": "667925eec3dc5345dd873e819e478f2a8fac3258fc4c5a1d7a62829f91c7dd4d",
+      "file": "assets/crpo-prepare-crpo-data.sh",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-prepare-raw-data.py",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_raw_data.py",
+      "resolved_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_raw_data.py",
+      "retrieved_at_utc": "2026-10-25T09:48:19.636597+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"764cd2f8e229d4b0117f2355d25473542d5df4c59c417eaf6b77a0887867bb41\"",
+      "bytes": 5072,
+      "sha256": "448ee6a3b35f625fcc582339cc392674ca7d6518bb8af2c9f4ca95632a425b80",
+      "file": "assets/crpo-prepare-raw-data.py"
+    },
+    {
+      "id": "crpo-prepare-raw-data.sh",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/data/prepare_raw_data.sh",
+      "retrieved_at_utc": "2026-10-25T09:46:49.368956+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 244,
+      "sha256": "cc39721c2be9e7e095916c6fdd5f919396e7517597fd98231d9cc08385d61411",
+      "file": "assets/crpo-prepare-raw-data.sh",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-lm-eval-config.json",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/configs/lm_eval_config.json",
+      "retrieved_at_utc": "2026-10-25T09:46:49.530637+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 414,
+      "sha256": "913933e92bd50d64deae89aa0bbf55b9c77af6aa7f9bc598c995ec0dda97dff7",
+      "file": "assets/crpo-lm-eval-config.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-evaluate-lm.sh",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/evaluation/evaluate_lm.sh",
+      "retrieved_at_utc": "2026-10-25T09:46:49.671573+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 9788,
+      "sha256": "88d2c2f4a3d5405cfac158505f9e825a15f2e3db8a7ef20a3ff2de2cb018cac2",
+      "file": "assets/crpo-evaluate-lm.sh",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "crpo-evaluate-lm-by-rm.sh",
+      "requested_url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/evaluation/evaluate_lm_by_rm.sh",
+      "retrieved_at_utc": "2026-10-25T09:46:49.811981+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 10062,
+      "sha256": "69959e852c7fa115f107f5f7973212365833df5cf58c7480299dbb32b0737a4d",
+      "file": "assets/crpo-evaluate-lm-by-rm.sh",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-adapter-metadata.json",
+      "requested_url": "https://huggingface.co/api/models/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it",
+      "retrieved_at_utc": "2026-10-25T09:46:49.933262+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 1956,
+      "sha256": "18f89d9528772533fc45cc0cdcc7051d64dc75b7d3b287c0c55a9928339f50ff",
+      "file": "assets/hf-quality-adapter-metadata.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-adapter-README.md",
+      "requested_url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md",
+      "retrieved_at_utc": "2026-10-25T09:46:50.061513+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 840,
+      "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+      "file": "assets/hf-quality-adapter-README.md",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-adapter-adapter_config.json",
+      "requested_url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/adapter_config.json",
+      "retrieved_at_utc": "2026-10-25T09:46:50.197867+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 805,
+      "sha256": "6da61a8a923a12ea8420d82cccb535736868b8b8132441653727036358dbbb9a",
+      "file": "assets/hf-quality-adapter-adapter_config.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-adapter-all_results.json",
+      "requested_url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/all_results.json",
+      "retrieved_at_utc": "2026-10-25T09:46:50.350148+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 337,
+      "sha256": "82badf9061b009083b3f45292023ba44fb86d6c29d87bc9fb7587dc5ca86c025",
+      "file": "assets/hf-quality-adapter-all_results.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-adapter-eval_results.json",
+      "requested_url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/eval_results.json",
+      "retrieved_at_utc": "2026-10-25T09:46:50.462783+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 337,
+      "sha256": "82badf9061b009083b3f45292023ba44fb86d6c29d87bc9fb7587dc5ca86c025",
+      "file": "assets/hf-quality-adapter-eval_results.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-quality-base-metadata.json",
+      "requested_url": "https://huggingface.co/api/models/google/gemma-2-9b-it",
+      "retrieved_at_utc": "2026-10-25T09:46:50.594339+00:00",
+      "retrieval_time_basis": "File write timestamp of successful HTTP capture in this checkpoint; resumed after one public gated-card HTTP401.",
+      "http_status": 200,
+      "bytes": 6421,
+      "sha256": "b36790ac2eeed0e602d89b771113af7d8da439e64cfd8645bf6b5c0f585d9e7b",
+      "file": "assets/hf-quality-base-metadata.json",
+      "reused_checkpoint_capture": true
+    },
+    {
+      "id": "hf-embedding-reference-metadata.json",
+      "requested_url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3",
+      "resolved_url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3",
+      "retrieved_at_utc": "2026-10-25T09:48:19.914680+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"19b0d0-z8YoFTwYdnQstfyPW2/7UxAiTdk\"",
+      "bytes": 1683664,
+      "sha256": "58a4af0667d02708d3f453916bd341b1b4487d362d21dc3f30a0ac8532b47dd7",
+      "file": "assets/hf-embedding-reference-metadata.json"
+    },
+    {
+      "id": "hf-embedding-reference-README.md",
+      "requested_url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6/README.md",
+      "resolved_url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6/README.md",
+      "retrieved_at_utc": "2026-10-25T09:48:20.237140+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"5fbc8cddd923280c8c6a7cea4870ce448ad1fced\"",
+      "bytes": 734278,
+      "sha256": "e573f7395798fe3d78d2e3e92da64814a6ec130494280f7b91ea8b0acb0284ed",
+      "file": "assets/hf-embedding-reference-README.md"
+    },
+    {
+      "id": "hf-embedding-reference-config.json",
+      "requested_url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6/config.json",
+      "resolved_url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6/config.json",
+      "retrieved_at_utc": "2026-10-25T09:48:20.365688+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"f18804ccf37932b05a75e55c915cf9731b9f77f8\"",
+      "bytes": 1799,
+      "sha256": "556941599709401b3dc94acf775526f1c4670abe5e123cb53cca8eb5250b0cb5",
+      "file": "assets/hf-embedding-reference-config.json"
+    },
+    {
+      "id": "hf-surprise-reference-metadata.json",
+      "requested_url": "https://huggingface.co/api/models/google/gemma-2-27b-it",
+      "resolved_url": "https://huggingface.co/api/models/google/gemma-2-27b-it",
+      "retrieved_at_utc": "2026-10-25T09:48:20.496071+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"19b4-BFoS0AoYGVWalSDycnfWlN7Y+b0\"",
+      "bytes": 6580,
+      "sha256": "d549b23974ff61130fb9ba8803e2dfb8e199a20ab3e4ab96970a47b4f6539455",
+      "file": "assets/hf-surprise-reference-metadata.json"
+    },
+    {
+      "id": "hf-quality-injection-reference-metadata.json",
+      "requested_url": "https://huggingface.co/api/models/Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+      "resolved_url": "https://huggingface.co/api/models/Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+      "retrieved_at_utc": "2026-10-25T09:48:20.608217+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"bd3-N5FmXnmKfwZzrTO/w4wOnMP62wM\"",
+      "bytes": 3027,
+      "sha256": "7bce497ed2ea4c774a5c76263f47765353417c1844552711a875533ca06190a6",
+      "file": "assets/hf-quality-injection-reference-metadata.json"
+    },
+    {
+      "id": "hf-quality-injection-reference-README.md",
+      "requested_url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/raw/a92f2ec997c806de469ff287ef3b71982e886fc2/README.md",
+      "resolved_url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/raw/a92f2ec997c806de469ff287ef3b71982e886fc2/README.md",
+      "retrieved_at_utc": "2026-10-25T09:48:20.727809+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"c673eb8f020b76ed003d373df11ba6a835f458c2\"",
+      "bytes": 12095,
+      "sha256": "9e9eeda09d1da9f78b2bd45a05a4436ad2d5f779170efb4478cb997dcd32f5b3",
+      "file": "assets/hf-quality-injection-reference-README.md"
+    },
+    {
+      "id": "hf-quality-injection-reference-config.json",
+      "requested_url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/raw/a92f2ec997c806de469ff287ef3b71982e886fc2/config.json",
+      "resolved_url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/raw/a92f2ec997c806de469ff287ef3b71982e886fc2/config.json",
+      "retrieved_at_utc": "2026-10-25T09:48:20.844274+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"a4c37494fe07609920fac9fa906d1f499c512645\"",
+      "bytes": 1013,
+      "sha256": "d73ab618623c7df30a5528d537ff034b5e65c11e21c08d47a01c98578fb0acd9",
+      "file": "assets/hf-quality-injection-reference-config.json"
+    },
+    {
+      "id": "hf-muce-pref-metadata.json",
+      "requested_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE-Pref",
+      "resolved_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE-Pref",
+      "retrieved_at_utc": "2026-10-25T09:48:20.958806+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"e71-ACa48ZcgpNULfe3N+lnbUSx2FIg\"",
+      "bytes": 3697,
+      "sha256": "ff8bb519f717bff01f6ed9c7520513eb006f0c9da77c0e65ad411cda087d0cba",
+      "file": "assets/hf-muce-pref-metadata.json"
+    },
+    {
+      "id": "hf-muce-pref-README.md",
+      "requested_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-Pref/raw/c586b786a08d29ef959bf5d4c3a3be67250842cd/README.md",
+      "resolved_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-Pref/raw/c586b786a08d29ef959bf5d4c3a3be67250842cd/README.md",
+      "retrieved_at_utc": "2026-10-25T09:48:21.074190+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"c9b301e103f9cb86887f5cb38c167c5e0b741544\"",
+      "bytes": 2915,
+      "sha256": "c90cb59ccee8fdfb27c4ab75109722e390c098afff756ebe33ab3e0f01ca89b3",
+      "file": "assets/hf-muce-pref-README.md"
+    },
+    {
+      "id": "hf-muce-sft-metadata.json",
+      "requested_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE-SFT",
+      "resolved_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE-SFT",
+      "retrieved_at_utc": "2026-10-25T09:48:21.217941+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"9e2-fEFpuC0hNsATusxsZRUIbJPLyHg\"",
+      "bytes": 2530,
+      "sha256": "d335edd7c70c9b2ddbcd447b6130fb0772b18147e226a158ebe1f9ef73d53a42",
+      "file": "assets/hf-muce-sft-metadata.json"
+    },
+    {
+      "id": "hf-muce-sft-README.md",
+      "requested_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-SFT/raw/9b14581063a5e5fe2eb25bd78d94af790ca29166/README.md",
+      "resolved_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-SFT/raw/9b14581063a5e5fe2eb25bd78d94af790ca29166/README.md",
+      "retrieved_at_utc": "2026-10-25T09:48:21.339304+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"ccd594792770199bfc98714bd0483e9f6afa696f\"",
+      "bytes": 1999,
+      "sha256": "27422f1706575daa38bfd88fb9d390d1866d3845d440e081c58d6d3dc5fa720e",
+      "file": "assets/hf-muce-sft-README.md"
+    },
+    {
+      "id": "hf-muce-original-pinned-metadata.json",
+      "requested_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+      "resolved_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+      "retrieved_at_utc": "2026-10-25T09:48:21.474613+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "etag": "W/\"b02-uqgJ2CYh1z2PExaGRMM0TilPrWU\"",
+      "bytes": 2818,
+      "sha256": "8f07f66f048a3e81b9588da931a340d11abe99a9161a0289f17769423b9484a7",
+      "file": "assets/hf-muce-original-pinned-metadata.json"
+    },
+    {
+      "id": "hf-muce-original-pinned-README.md",
+      "requested_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+      "resolved_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+      "retrieved_at_utc": "2026-10-25T09:48:21.582182+00:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "etag": "\"e4c23d9929985e85e0e6d14e44487f79d0b07f4c\"",
+      "bytes": 2040,
+      "sha256": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+      "file": "assets/hf-muce-original-pinned-README.md"
+    },
+    {
+      "id": "crpo-paper-v2.html",
+      "requested_url": "https://arxiv.org/html/2505.14442v2",
+      "resolved_url": "https://arxiv.org/html/2505.14442v2",
+      "retrieved_at_utc": "2026-10-25T09:48:21.677144+00:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "etag": "\"CNyx6/r+uZYDEAE=\"",
+      "bytes": 413570,
+      "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+      "file": "assets/crpo-paper-v2.html"
+    }
+  ],
+  "unavailable_metadata": [
+    {
+      "id": "hf-quality-base-README.md",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/raw/11c9b309abf73637e4b6f9a3fa1e92e615547819/README.md",
+      "http_status": 401,
+      "scope": "Public gated-card GET failed; no authentication or weight request attempted.",
+      "observed_between_utc": [
+        "2026-10-25T09:46:50.594339+00:00",
+        "2026-10-25T09:48:19.635427+00:00"
+      ]
+    }
+  ],
+  "measurement_roles": [
+    {
+      "role": "Evaluation quality",
+      "asset": "quality-adapter",
+      "required_base": "quality-base",
+      "fact": "Released PEFT sequence-classification adapter is explicitly identified by its card as the CrPO paper quality evaluator. Adapter task_type SEQ_CLS, LoRA rank32, target_modules q_proj/v_proj, modules_to_save classifier/score. Base-only generation is not the trained score function.",
+      "sources": [
+        {
+          "capture_file": "assets/hf-quality-adapter-README.md",
+          "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+          "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md"
+        },
+        {
+          "capture_file": "assets/hf-quality-adapter-adapter_config.json",
+          "sha256": "6da61a8a923a12ea8420d82cccb535736868b8b8132441653727036358dbbb9a",
+          "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/adapter_config.json"
+        }
+      ]
+    },
+    {
+      "role": "Novelty and diversity",
+      "asset": "embedding-reference",
+      "fact": "Pinned metric/config source uses jinaai/jina-embeddings-v3, cosine distance, lowercase/punctuation removal, unique words, no lemmatization or stopword removal by default; novelty/reference sets and diversity require multiple compatible texts and declared grouping.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-lm-eval-config.json",
+          "sha256": "913933e92bd50d64deae89aa0bbf55b9c77af6aa7f9bc598c995ec0dda97dff7",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/configs/lm_eval_config.json"
+        },
+        {
+          "capture_file": "assets/crpo-metrics.py",
+          "sha256": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/metrics.py",
+          "lines": [
+            264,
+            309
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-evaluate-lm.py",
+          "sha256": "ded7e1063c09b708fb9e50ed93aa388a8a8a12added557f1da02b4867d87c8cb",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm.py",
+          "lines": [
+            125,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Surprise",
+      "asset": "surprise-reference",
+      "fact": "Reference-model perplexity is a model/tokenizer-specific measurement; it is not an instruction-prompted creativity judgment or Bayesian surprise. Paper names instruction-tuned Gemma-2-27B.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-metrics.py",
+          "sha256": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/metrics.py",
+          "lines": [
+            47,
+            48
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-paper-v2.html",
+          "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+          "url": "https://arxiv.org/html/2505.14442v2"
+        }
+      ]
+    },
+    {
+      "role": "Training quality injection / evaluator CLI default",
+      "asset": "quality-injection-reference",
+      "fact": "Skywork-Reward-Gemma-2-27B-v0.2 is the external quality signal described for training; evaluate_lm_by_rm CLI also defaults to it. Selecting that default is not selecting the paper MuCE-trained reward evaluator.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-evaluate-lm-by-rm.py",
+          "sha256": "107648b1e7489a2251def87c3e599326cd50f46e6875fb6004147be89a8b8b5c",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm_by_rm.py",
+          "lines": [
+            143,
+            150
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-paper-v2.html",
+          "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+          "url": "https://arxiv.org/html/2505.14442v2"
+        }
+      ]
+    }
+  ],
+  "paper_code_default_differences": [
+    {
+      "id": "quality-model-selection",
+      "finding": "Paper evaluation uses the trained Gemma-2-9B MuCE reward model. CLI defaults to Skywork27B; authors shell examples explicitly pass a local cpo-rm-gemma-2-9b-it-lora-msd5-mm10-ms20 path. Public adapter replaces that inaccessible local path by declared identity; no equivalence is inferred from the default.",
+      "sources": [
+        {
+          "capture_file": "assets/hf-quality-adapter-README.md",
+          "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+          "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md"
+        },
+        {
+          "capture_file": "assets/crpo-evaluate-lm-by-rm.py",
+          "sha256": "107648b1e7489a2251def87c3e599326cd50f46e6875fb6004147be89a8b8b5c",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm_by_rm.py"
+        },
+        {
+          "capture_file": "assets/crpo-evaluate-lm-by-rm.sh",
+          "sha256": "69959e852c7fa115f107f5f7973212365833df5cf58c7480299dbb32b0737a4d",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/evaluation/evaluate_lm_by_rm.sh"
+        }
+      ]
+    },
+    {
+      "id": "surprise-conditioning",
+      "finding": "Paper describes response surprisal conditional on the prompt. Pinned evaluation source constructs the whole prompt/response conversation and compute_perplexity uses every attention-unmasked shifted token as a label, with no assistant-only loss mask. Code-faithful whole-conversation perplexity must not be silently described as an exact implementation of response-only conditional surprisal.",
+      "status": "Static source observation; not executed or empirically quantified.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-evaluate-lm.py",
+          "sha256": "ded7e1063c09b708fb9e50ed93aa388a8a8a12added557f1da02b4867d87c8cb",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/evaluate_lm.py"
+        },
+        {
+          "capture_file": "assets/crpo-metrics.py",
+          "sha256": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/metrics.py",
+          "lines": [
+            500,
+            606
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-paper-v2.html",
+          "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+          "url": "https://arxiv.org/html/2505.14442v2"
+        }
+      ]
+    },
+    {
+      "id": "novelty-scale",
+      "finding": "Paper novelty equation gives absolute DSI difference; pinned compute_novelty multiplies the absolute difference by2. A later reproduction must declare code-faithful versus formula-faithful choices.",
+      "status": "Static source observation; not executed or corrected.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-metrics.py",
+          "sha256": "433c97ca57f6099c5c9290c910169daae91721a5895e84e9d88cd1207d415ff0",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/metrics.py",
+          "lines": [
+            285,
+            309
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-paper-v2.html",
+          "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+          "url": "https://arxiv.org/html/2505.14442v2"
+        }
+      ]
+    },
+    {
+      "id": "policy-comparison-not-pref-reproduction",
+      "finding": "Upstream groups by task and FullPrompt and optionally checks rating-label equality. Minimum20 and margin5 are inclusive; maximum10 limits accepted pair appearances per response index in greedy input order, not10pairs total per prompt. Stricter source-context grouping and uncapped compatible counts are a comparative eligibility policy, not a byte-identical reconstruction of MuCE-Pref.",
+      "sources": [
+        {
+          "capture_file": "assets/crpo-data.py",
+          "sha256": "641483b24e6191387b78bec6cb7de700db510507214b1e593bc01218d9c98d98",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/data.py",
+          "lines": [
+            196,
+            208
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-data.py",
+          "sha256": "641483b24e6191387b78bec6cb7de700db510507214b1e593bc01218d9c98d98",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/data.py",
+          "lines": [
+            253,
+            339
+          ]
+        },
+        {
+          "capture_file": "assets/crpo-prepare-crpo-data.py",
+          "sha256": "df4ef9139c4c2c3c6f887e2f3ce9eedce55359e71d04515d36c222c843295e4b",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_crpo_data.py"
+        },
+        {
+          "capture_file": "assets/crpo-prepare-crpo-data.sh",
+          "sha256": "667925eec3dc5345dd873e819e478f2a8fac3258fc4c5a1d7a62829f91c7dd4d",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/experiments/data/prepare_crpo_data.sh"
+        }
+      ]
+    }
+  ],
+  "training_overlap": {
+    "classification": "unknown",
+    "scope": "Membership overlap between each cached original MuCE train response/prompt group and the exact released quality-adapter training members.",
+    "proven_facts": [
+      {
+        "fact": "Released adapter card names MuCE as its fine-tuning dataset. Paper describes reward-model training on MuCE preference data.",
+        "sources": [
+          {
+            "capture_file": "assets/hf-quality-adapter-README.md",
+            "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+            "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md"
+          },
+          {
+            "capture_file": "assets/crpo-paper-v2.html",
+            "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+            "url": "https://arxiv.org/html/2505.14442v2"
+          }
+        ]
+      },
+      {
+        "fact": "Adapter config base revision is null and card does not identify a frozen dataset revision, per-response/per-prompt training-membership manifest or training exclusion list.",
+        "sources": [
+          {
+            "capture_file": "assets/hf-quality-adapter-adapter_config.json",
+            "sha256": "6da61a8a923a12ea8420d82cccb535736868b8b8132441653727036358dbbb9a",
+            "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/adapter_config.json"
+          },
+          {
+            "capture_file": "assets/hf-quality-adapter-README.md",
+            "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+            "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md"
+          }
+        ]
+      },
+      {
+        "fact": "MuCE-Pref metadata/card identifies a train split of42058 examples and separate val/test/heldout_item/heldout_task splits; no row contents or row inventories were fetched. Public split names and counts do not by themselves identify the adapter training members.",
+        "sources": [
+          {
+            "capture_file": "assets/hf-muce-pref-README.md",
+            "sha256": "c90cb59ccee8fdfb27c4ab75109722e390c098afff756ebe33ab3e0f01ca89b3",
+            "url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE-Pref/raw/c586b786a08d29ef959bf5d4c3a3be67250842cd/README.md"
+          }
+        ]
+      },
+      {
+        "fact": "Original MuCE raw preparation maps Set values Training/Validation/Test/HeldoutItem/HeldoutTask/HeldoutLanguage into named splits. This metadata path does not prove independent prompt separation for ordinary response splits.",
+        "sources": [
+          {
+            "capture_file": "assets/crpo-prepare-raw-data.py",
+            "sha256": "448ee6a3b35f625fcc582339cc392674ca7d6518bb8af2c9f4ca95632a425b80",
+            "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_raw_data.py",
+            "lines": [
+              24,
+              84
+            ]
+          }
+        ]
+      },
+      {
+        "fact": "Source prepare_crpo_data has optional rm_split handling. It does not bind the published adapter to an executed membership manifest; current CLI defaults rm_split0.0, distinct from the Python function default0.8.",
+        "sources": [
+          {
+            "capture_file": "assets/crpo-prepare-crpo-data.py",
+            "sha256": "df4ef9139c4c2c3c6f887e2f3ce9eedce55359e71d04515d36c222c843295e4b",
+            "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/src/crpo/prepare_crpo_data.py"
+          }
+        ]
+      }
+    ],
+    "not_established": [
+      "Exact training inclusion of any particular Phase1 pair or candidate group",
+      "Exact training exclusion for remaining cached train groups or published heldout splits",
+      "Model-pretraining or other external fine-tuning exclusion",
+      "Human-label validity on new generated outputs"
+    ],
+    "permitted_claim": "Cached MuCE train can support development-only agreement with published labels. Without verified membership exclusion, it cannot support a fresh held-out human-alignment claim for the MuCE-trained reward adapter.",
+    "authors_saved_eval_metric": {
+      "reported_eval_accuracy": 0.9005376344086021,
+      "source": {
+        "capture_file": "assets/hf-quality-adapter-all_results.json",
+        "sha256": "82badf9061b009083b3f45292023ba44fb86d6c29d87bc9fb7587dc5ca86c025",
+        "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/all_results.json"
+      },
+      "limitation": "Authors saved training-evaluation metadata with unspecified member manifest; not our independent reproduction, not evidence of validation on current candidate groups."
+    }
+  },
+  "access_license_and_feasibility": {
+    "verified": "Public repository/model/dataset metadata, available cards/configs and file listings only.",
+    "not_verified": [
+      "Any model weight download or authentication authorization",
+      "Acceptance or scope of Gemma terms",
+      "Successful load of PEFT adapter/tokenizer or dependency compatibility",
+      "Hardware capacity, runtime, quantization effects or dollar estimate",
+      "Scientific equivalence of any substitute"
+    ],
+    "license_observations": [
+      {
+        "asset": "CrPO code",
+        "metadata": "MIT",
+        "source": {
+          "capture_file": "assets/crpo-LICENSE.txt",
+          "sha256": "eaf549be0c1a9882302fc8e090f09cb732cad49b8606a2eff5ab07ea0fa81222",
+          "url": "https://raw.githubusercontent.com/mismayil/creative-preference-optimization/9c0d71438687255b355216481064b1ced471ceeb/LICENSE"
+        }
+      },
+      {
+        "asset": "quality-adapter",
+        "metadata": "MIT in adapter card; required Gemma base has its own terms",
+        "source": {
+          "capture_file": "assets/hf-quality-adapter-README.md",
+          "sha256": "de7dbcc5b9c90ec01dbb4417a20d282a95fc6448601f5e325fd8a120551ebb70",
+          "url": "https://huggingface.co/CNCL-Penn-State/CrPO-RM-gemma-2-9b-it/raw/a32828b8279a98065dba47da627e0cafcce8960b/README.md"
+        }
+      },
+      {
+        "asset": "quality-base and surprise-reference",
+        "metadata": "gemma; manual gated according to API metadata",
+        "source_files": [
+          "assets/hf-quality-base-metadata.json",
+          "assets/hf-surprise-reference-metadata.json"
+        ]
+      },
+      {
+        "asset": "embedding-reference",
+        "metadata": "cc-by-nc-4.0; this checkpoint only fetched metadata, not enabled or added a dependency",
+        "source": {
+          "capture_file": "assets/hf-embedding-reference-metadata.json",
+          "sha256": "58a4af0667d02708d3f453916bd341b1b4487d362d21dc3f30a0ac8532b47dd7",
+          "url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3"
+        }
+      },
+      {
+        "asset": "quality-injection-reference",
+        "metadata": "API license field absent; card links custom Skywork community license. Not needed for measurement-only quality if using the released CrPO reward adapter.",
+        "source": {
+          "capture_file": "assets/hf-quality-injection-reference-README.md",
+          "sha256": "9e9eeda09d1da9f78b2bd45a05a4436ad2d5f779170efb4478cb997dcd32f5b3",
+          "url": "https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2/raw/a92f2ec997c806de469ff287ef3b71982e886fc2/README.md"
+        }
+      }
+    ],
+    "publication_not_access_proof": "A public model card or listed weight filename is availability metadata, not proof of accessible weights or local execution readiness."
+  },
+  "measurement_only_reproduction_prerequisites": [
+    "Choose and freeze whether the target is the pinned published implementation or equations; record known discrepancies rather than silently fixing them.",
+    "Obtain separately authorized access to the exact quality adapter and required base, Jina embeddings reference, and Gemma27B surprise reference; keep checkpoint revisions and tokenizer/chat-template identities.",
+    "Check local/authorized compute and license compatibility before weights/downloads or inference. No checkpoint feasibility claim is supplied here.",
+    "Define task/output schema, preprocessing, corpus/reference grouping, minimum texts per group, invalid/outlier handling and aggregation; saved outputs can be assessed without new generation if compatible.",
+    "Choose development versus validation role and establish training-membership exclusion before interpreting a reward-model result as fresh held-out calibration.",
+    "Calibrate any substitution as a new measurement variant; a newer/bigger base or instruction model cannot reproduce learned reward weights, embedding geometry or reference surprisal solely through model-card similarity."
+  ],
+  "frontier_route_capability_requirements_only": {
+    "shortlist_selected": false,
+    "requirements": [
+      "Provider/endpoint and exact model/snapshot identity, response-reported identity and availability evidence",
+      "Supported thinking/reasoning mode and effort settings; requested versus observed values or explicit unsupported/unobservable state",
+      "Effective rubric/system/user serialization and context/output limits; treatment of tie/abstain/refusal/truncation/malformed outputs",
+      "Actual input/output/thinking/cache usage reporting and dated pricing; planned counts, bounded attempts, reservations and unresolved liabilities",
+      "Immutable inputs, pair/order IDs, blinded labels and development-selection-confirmation separation; no reuse of consumed audit as fresh confirmation",
+      "Independent definition of target construct and human-reference validity, rather than choosing the configuration that happens to match exposed anomalies"
+    ],
+    "not_claimed": [
+      "Cross-provider reasoning-effort labels imply equivalent compute",
+      "Frontier model + generic prompt equals CrPO reward evaluator",
+      "Reasoning control support or pricing verified for a specific frontier model"
+    ]
+  },
+  "capture_validation": {
+    "validated_at_utc": "2026-10-25T09:50:20.117938+00:00",
+    "captures": 35,
+    "all_hashes_match": true,
+    "bytes_total": 3020889,
+    "no_weights_or_row_corpus_files": true,
+    "finalized_at_utc": "2026-10-25T09:51:33.247227+00:00"
+  },
+  "dataset_population_metadata_only": {
+    "muce_pref": {
+      "revision": "c586b786a08d29ef959bf5d4c3a3be67250842cd",
+      "row_unit": "Preference-pair record; chosen/rejected responses may recur across records. Counts are not unique human responses or independent prompt counts.",
+      "card_split_counts": {
+        "train": 42058,
+        "val": 4880,
+        "test": 4533,
+        "heldout_item": 3521,
+        "heldout_task": 52,
+        "val_sample1024": 744,
+        "val_sample4096": 2356,
+        "test_sample1024": 720,
+        "test_sample4096": 2373
+      },
+      "source_file": "assets/hf-muce-pref-README.md",
+      "caution": "Sample-named splits may overlap parent splits; do not sum all advertised split rows as unique examples.",
+      "sum_five_primary_split_rows": 55044,
+      "sum_four_auxiliary_sample_split_rows": 6193,
+      "sum_all_named_split_rows": 61237,
+      "unique_primary_pair_count": "unknown; primary split metadata are not a cross-split identity inventory"
+    },
+    "muce_sft": {
+      "revision": "9b14581063a5e5fe2eb25bd78d94af790ca29166",
+      "row_unit": "Prompt/response supervised-fine-tuning record according to card features; unique response/group counts are not established by card metadata.",
+      "source_file": "assets/hf-muce-sft-README.md",
+      "card_split_counts": {
+        "train": 5285,
+        "val": 669,
+        "test": 660,
+        "heldout_item": 415,
+        "heldout_task": 150
+      },
+      "sum_named_split_rows": 7179
+    },
+    "source_pinned_muce": {
+      "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+      "source_file": "assets/hf-muce-original-pinned-README.md",
+      "caution": "Use pinned card split metadata plus root cached train reconciliation; viewer top-line counts and feature class counts must retain their exact split/config scope.",
+      "row_unit": "Individual response-rating record, not a pairwise preference ballot.",
+      "card_split_counts": {
+        "train": 16948,
+        "val": 2180,
+        "test": 2004,
+        "heldout_item": 1940,
+        "heldout_task": 187
+      },
+      "sum_named_split_rows": 23259
+    },
+    "scope": "Cards/API metadata only; no split rows or heldout inventories opened."
+  }
+}

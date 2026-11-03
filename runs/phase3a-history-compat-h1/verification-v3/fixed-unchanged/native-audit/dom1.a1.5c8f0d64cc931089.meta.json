@@ -1,0 +1,11 @@
+{
+  "label": "dom1.a1",
+  "ok": true,
+  "channel": "opencode",
+  "model": "anthropic/claude-opus-5",
+  "effort": "high",
+  "attempts": 1,
+  "wall_s": 7.3,
+  "cost_usd": 0.01,
+  "error": ""
+}

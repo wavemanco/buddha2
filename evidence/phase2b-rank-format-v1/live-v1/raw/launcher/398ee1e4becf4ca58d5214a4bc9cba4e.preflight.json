@@ -1,0 +1,28 @@
+{
+  "billing_profile": "public-payg-envelope-v1",
+  "cap_micro_usd": 30000000,
+  "configuration_only": false,
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "credential_access": false,
+  "credentials_read": false,
+  "fixture": false,
+  "grant_path": "/results/phase2b-rank-format-v1/release-r2/grant-live.json",
+  "grant_sha256": "1ec88376aaee918e3783a57883d9c20cfdbd1105d0ca82283c4181f45ef9ddbb",
+  "journal": "/results/phase2-am1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/first-block/journal",
+  "journal_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "kind": "p2bn-nonsending-preflight-v1",
+  "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+  "mode": "provider",
+  "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+  "provider_calls": 0,
+  "provider_requests": 0,
+  "role_counts": {
+    "group": 4,
+    "quality": 40
+  },
+  "run": "/results/phase2-am1/0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e/first-block",
+  "slot_count": 44,
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_path": "/results/phase2b-rank-format-v1/release-r2/study.json",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

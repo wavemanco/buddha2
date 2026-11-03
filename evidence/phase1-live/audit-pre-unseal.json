@@ -1,0 +1,35 @@
+{
+  "audit_assessment_absent": true,
+  "audit_labels_read": false,
+  "audit_prediction_count": 24,
+  "audit_predictions_file_sha256": "9fc2bbe789158c04738c3c6f65e7647064c0074595219394088a9d0879bc39ee",
+  "freeze_sha256": "311f0c744214a1b7d406c5c17a6a5d809cec3c2b6959d4bd0f90568df5dfd13e",
+  "judgments_sha256": "d5e57bb9da6b3a6ae03f517a3ae27d2ef4c432187ac87641cc05f8033d7c7435",
+  "kind": "audit-pre-unseal",
+  "next_action": "Commit this record and audit predictions to Git before invoking offline audit analysis.",
+  "readiness_exception": "evidence/phase1-live/readiness-exception-approved.json",
+  "recorded_at_utc": "2026-10-25T08:35:21.290508+00:00",
+  "replay": {
+    "attempts": 48,
+    "count_incomplete": false,
+    "finalized_presentations": 48,
+    "fixture": false,
+    "provider_calls": 48,
+    "reserved_micro_usd": 0,
+    "retries": 0,
+    "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+    "spent_micro_usd": 112696,
+    "stage_statuses": {
+      "audit": {
+        "ok": 24
+      },
+      "calibration": {
+        "malformed": 13,
+        "ok": 11
+      }
+    },
+    "status": "ready",
+    "token_count_requests": 48
+  },
+  "schema_version": 1
+}

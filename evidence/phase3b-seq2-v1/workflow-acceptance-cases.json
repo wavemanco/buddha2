@@ -1,0 +1,130 @@
+{
+  "kind": "phase3b-seq2-workflow-acceptance-v1",
+  "definition": "PHASE3B_DEFINITION.md",
+  "frozen_before_product_edits": true,
+  "scope": [
+    "accounting",
+    "worklist",
+    "seals",
+    "coverage",
+    "analysis",
+    "saved_replay"
+  ],
+  "expected": {
+    "pilots": [
+      "p3b-01",
+      "p3b-02",
+      "p3b-03",
+      "p3b-04"
+    ],
+    "arms": [
+      "fixed",
+      "adaptive"
+    ],
+    "inference_slots_per_prompt": {
+      "adaptive": 408,
+      "fixed": 145
+    },
+    "assessment_targets": 12,
+    "assessment_slots": 132,
+    "total_slots": 2344,
+    "maximum_admitted_attempts": 2344,
+    "native_selector_sessions_per_prompt": 1,
+    "global_micro_usd": 180000000,
+    "cell_micro_usd": 35000000,
+    "assessment_micro_usd": 70000000,
+    "first_micro_usd": 55000000,
+    "first_assessment_micro_usd": 25000000,
+    "cell_http": 448,
+    "cell_input": 12000000,
+    "cell_output": 6291456,
+    "editor_turns": 24,
+    "editor_payload_bytes": 2097152,
+    "prior_known_micro_usd": 46044365,
+    "prior_held_micro_usd": 22880000,
+    "prior_attempts": 1997,
+    "assessment_targets_per_prompt": [
+      "fixed",
+      "c1",
+      "c2"
+    ],
+    "new_duplicate_assessments": 0,
+    "primary_aliases": 8,
+    "mean_primary": "only when all eight delivered aliases scored and readiness/accounting valid",
+    "mean_checkpoint": "only when all eight native checkpoint targets scored"
+  },
+  "cases": [
+    {
+      "id": "W01",
+      "case": "exact full worklist accepted; role/cell/pair/name mismatch rejected"
+    },
+    {
+      "id": "W02",
+      "case": "missing or added slot; skipped provider turn; undeclared selector conversation rejected"
+    },
+    {
+      "id": "W03",
+      "case": "native_selector role uses full quality reserve and tool-using editor validation; fixed selector remains no-tools"
+    },
+    {
+      "id": "W04",
+      "case": "1MiB to2MiB editor/selector boundary exact; over-limit pre-intent rejected"
+    },
+    {
+      "id": "W05",
+      "case": "global/cell/first/assessment/token/call limits independently bind; no borrowing"
+    },
+    {
+      "id": "W06",
+      "case": "unknown/pending liability held; same slot replay cannot resend or change request"
+    },
+    {
+      "id": "W07",
+      "case": "first readiness allows only p3b01 native including selector; fixed/judge blocked until review"
+    },
+    {
+      "id": "W08",
+      "case": "seal covers both choices plus c1/c2 identities; any earlier judge or later inference rejected"
+    },
+    {
+      "id": "W09",
+      "case": "selected final aliases c1/c2 once; twelve targets require at most132 assessment calls"
+    },
+    {
+      "id": "W10",
+      "case": "zero utility difference/c1 selection/KEEP strategy can complete with full authentic evidence"
+    },
+    {
+      "id": "W11",
+      "case": "missing checkpoint makes phase incomplete despite eight primary aliases; no complete-case winner"
+    },
+    {
+      "id": "W12",
+      "case": "four paired differences reported; mean only with complete eight primary aliases; no pooling prior attempts"
+    },
+    {
+      "id": "W13",
+      "case": "c2-c1 and selected-c1 separate; byte-identical candidates retain run identity"
+    },
+    {
+      "id": "W14",
+      "case": "irrecoverable required assessment/primary stops further paid admissions"
+    },
+    {
+      "id": "W15",
+      "case": "saved replay requires no SDK/network/process and reproduces exact canonical output bytes"
+    },
+    {
+      "id": "W16",
+      "case": "historical cost+heldcarry exactly once; mock accounting never becomes real cost"
+    },
+    {
+      "id": "W17",
+      "case": "new grant binds full current source/policy/runtime/launcher and refuses old phase grants"
+    },
+    {
+      "id": "W18",
+      "case": "all planned request slots classified with shaped attempts/terminal/fallback/discarded costs"
+    }
+  ]
+}

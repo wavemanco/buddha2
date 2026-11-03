@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "1abe96e47ceaae4101ba5e4b6d7e793740f94f9f54c382effbfabc6ba89149d3",
+  "decision": "User-approved operator exception: route/model/controls/usage/accounting verified with one valid JSON and one correctly classified malformed outcome. Both are immutable; malformed earns zero, with no extraction, retry or replacement. Continue original fixed population, parser, model/settings and shared $5 cap. Original automatic two-valid-results gate did not pass.",
+  "exception_authorization_sha256": "6ac9f2a29a42aac8632cd00974252975c4c2aa521bc52469e0dd0de9096e693c",
+  "fixture": false,
+  "judgments_sha256": "64f7e5722179c9ffb5a84b2eea575bafc021e031757886b8030edaa7cba2ccaf",
+  "kind": "phase1-readiness-review",
+  "operator_exception": true,
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "schema_version": 1
+}

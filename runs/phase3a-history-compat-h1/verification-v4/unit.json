@@ -1,0 +1,33 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp:rw,exec,size=1073741824",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--mount",
+    "type=bind,source=C:\\Users\\arvik\\code\\research\\Buddha2,target=/workspace,readonly",
+    "-e",
+    "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2:/workspace",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "--workdir",
+    "/workspace",
+    "--entrypoint",
+    "python",
+    "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "-B",
+    "-m",
+    "followups.phase3a_history_compat_h1.tests"
+  ],
+  "exit_code": 0,
+  "stderr": "test_all_history_tampering_stops_before_second_admission (__main__.HistoryTests.test_all_history_tampering_stops_before_second_admission) ... ok\ntest_empty_visible_redacted_and_direct_caller_preserved (__main__.HistoryTests.test_empty_visible_redacted_and_direct_caller_preserved) ... ok\ntest_identical_local_request_replays_without_admission (__main__.HistoryTests.test_identical_local_request_replays_without_admission) ... ok\ntest_incomplete_provider_result_cannot_advance (__main__.HistoryTests.test_incomplete_provider_result_cannot_advance) ... ok\ntest_inventory_private_files_and_directories_are_filtered_before_metadata (__main__.HistoryTests.test_inventory_private_files_and_directories_are_filtered_before_metadata) ... ok\ntest_terminal_sixteen_is_outside_ordinary_guard (__main__.HistoryTests.test_terminal_sixteen_is_outside_ordinary_guard) ... ok\ntest_authenticated_map_rejects_link_ancestor_before_leaf_access (__main__.PreservationTests.test_authenticated_map_rejects_link_ancestor_before_leaf_access) ... ok\ntest_unauthenticated_maps_cannot_touch_any_map_path (__main__.PreservationTests.test_unauthenticated_maps_cannot_touch_any_map_path) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.616s\n\nOK\n",
+  "stdout": ""
+}

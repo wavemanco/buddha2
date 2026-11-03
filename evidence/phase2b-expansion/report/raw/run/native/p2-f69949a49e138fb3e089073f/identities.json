@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "a132de49c9ba80edac54dc11a70a395264426c9233473e0dbb6b489ac570d8d5",
+  "portfolio_id": "portfolio-9b988f922fed1bef23121fd1f45766aac1bf2176d1cd85e492a7bcd9ff0e2ac3",
+  "portfolio_sha256": "fee8160840040552d226c1bb6467216af163d0d5b02fd4d16d8e06277f793ef9",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-f69949a49e138fb3e089073f.plan",
+      "p2-f69949a49e138fb3e089073f.answer.00",
+      "p2-f69949a49e138fb3e089073f.answer.01",
+      "p2-f69949a49e138fb3e089073f.answer.02",
+      "p2-f69949a49e138fb3e089073f.answer.03",
+      "p2-f69949a49e138fb3e089073f.answer.04",
+      "p2-f69949a49e138fb3e089073f.answer.05",
+      "p2-f69949a49e138fb3e089073f.answer.06",
+      "p2-f69949a49e138fb3e089073f.answer.07",
+      "p2-f69949a49e138fb3e089073f.answer.08",
+      "p2-f69949a49e138fb3e089073f.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-7de982da1f2d0a27a7dcb814",
+      "index": 0,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.00",
+      "status": "ok",
+      "text_sha256": "41ba90ca8829d146dd4381fdbca3f7a0042ac1b1bb1880b58b475e8186d593b9"
+    },
+    {
+      "id": "response-ec6cae37332431f633dac25c",
+      "index": 1,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.01",
+      "status": "ok",
+      "text_sha256": "0a41fd5611533782abb80e9c5aa55cd3d03905129f0ac0b6b46f5136d80ce62d"
+    },
+    {
+      "id": "response-8ac979cb61a157a0d606ede1",
+      "index": 2,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.02",
+      "status": "ok",
+      "text_sha256": "11ab5257014647d79d77a5ca0cdfc8976f85134f073c644074b79adeb8959aca"
+    },
+    {
+      "id": "response-1b350142842654078cbc7e78",
+      "index": 3,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.03",
+      "status": "ok",
+      "text_sha256": "ed5be7f0e51812bb268ed935a16e3a25583a4141cb82118e5f1cd6529b496b17"
+    },
+    {
+      "id": "response-638cc2ab0e9a56d5caff2b22",
+      "index": 4,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.04",
+      "status": "ok",
+      "text_sha256": "558bfb9e5ad38f321f4ccf2735980547f3d6a6e179343f602ff2eb3c6d7e109e"
+    },
+    {
+      "id": "response-5e7cf43c450ea29b708437b9",
+      "index": 5,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.05",
+      "status": "ok",
+      "text_sha256": "6be9a7de4a01f1196dee0a7e219e70b225c424f910d0f10dd24dda06c8a4fad2"
+    },
+    {
+      "id": "response-01140eab422f9fa767f3bf31",
+      "index": 6,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.06",
+      "status": "ok",
+      "text_sha256": "0a553e2433eb7f7996f056c87601d4c89135edf250b48ba3a704b5ae3b61de22"
+    },
+    {
+      "id": "response-48703dfd277cd60735f6819d",
+      "index": 7,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.07",
+      "status": "ok",
+      "text_sha256": "6b816a531812a937ed1f1e5bb7663e0894e77cb109d3729ad037ce20752249b0"
+    },
+    {
+      "id": "response-39341607e5c3422329db25eb",
+      "index": 8,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.08",
+      "status": "ok",
+      "text_sha256": "532ea9b5f1030a7895969b743b43ec6bddf209e1588d7b0aaf56b9225a464636"
+    },
+    {
+      "id": "response-90d2578939a9d75419ce3220",
+      "index": 9,
+      "request_id": "p2-f69949a49e138fb3e089073f.answer.09",
+      "status": "ok",
+      "text_sha256": "36411ad2b66b7234379bd9faeed82a3d1fedd866e9d8522b29f0b52c9abe0281"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-b1b0aa2062fdabf30542",
+    "prompt": "Name the dog character in my story about a loyal dog.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-21"
+    }
+  }
+}

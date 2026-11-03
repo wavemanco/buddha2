@@ -1,0 +1,43 @@
+{
+  "control_review": {
+    "agent": "release_launcher",
+    "verdict": "pass with resolved checkpoint-unlock rule",
+    "verified": "best6 control; joint equal allowance;220/65splits; matrix; diagnostic; fallback and realized-compute limits; no authority"
+  },
+  "cost_review": {
+    "agent": "release_journal",
+    "verdict": "Decimal totals verified and typed first-pair fields added",
+    "verified_scenarios": [
+      {
+        "all_second_shapes_usd": "9.46489",
+        "clean_usd": "6.89089",
+        "first_pair_usd": "1.75663",
+        "scenario": "lean"
+      },
+      {
+        "all_second_shapes_usd": "22.62589",
+        "clean_usd": "15.89389",
+        "first_pair_usd": "4.13113",
+        "scenario": "working"
+      },
+      {
+        "all_second_shapes_usd": "68.34628",
+        "clean_usd": "47.75428",
+        "first_pair_usd": "12.97576",
+        "scenario": "heavier"
+      }
+    ]
+  },
+  "files": {
+    "CURRENT_SPEC.md": "193a26ebe8eb548d7152ac0963b555f0fad0449b5a749f72077be78f97e941d5",
+    "PHASE3A_DEFINITION.md": "e66ef31ec7841285d07cfdb452ff863ec68be8e5a70af42ac9baab047d01629a",
+    "specifications/phase3a-v1.json": "d3a45d249f6fdf8a596ae82e096d0fb5c77406896447fbc10f22de9d237239ed"
+  },
+  "kind": "phase3a-definition-independent-review-v1",
+  "native_review": {
+    "agent": "release_runner",
+    "verdict": "pass with resolved parent-ID and full-authentic-path clarifications",
+    "verified": "native finals semantics; stage/transport counters; actual portfolio API seam; consumed JSON surface; exact empty files/raw README validation"
+  },
+  "runtime_or_experiment_verification_claimed": false
+}

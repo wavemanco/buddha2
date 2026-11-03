@@ -1,0 +1,224 @@
+{
+  "kind": "phase3b-s2-independent-preacceptance-review-v1",
+  "reviewer": "/root/s2_preacceptance",
+  "created_at_utc": "2026-11-03T01:43:59.0121386+00:00",
+  "status": "provisional_change_required",
+  "passed": false,
+  "final_acceptance": false,
+  "source_frozen": false,
+  "reviewed_sha256": {
+    "AGENTS.md": "c02ce76018beb2b5cd7ea0b0a33443f807f6e0465ce843d828b07baeef96eb29",
+    "DECISIONS.md": "a7ab0957c6b423239421ed7ff759cbdd3c1c36e324644ce78e5e306946f72412",
+    "PHASE3B_DEFINITION.md": "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e",
+    "evidence/phase3b-seq2-v1/authorization.json": "40847db84f9312e69c0fa3679d6d6bb12da35f3dccf3b183fd140b6b8cbfe284",
+    "evidence/phase3b-seq2-v1/acceptance-cases.json": "1fca4fd08b348e1b38b5e8d5b415975a8cf2b0bf31a3a6b904292ecb102b8f46",
+    "evidence/phase3b-seq2-v1/native-acceptance-cases.json": "f66abd7746b7686bb69788ffb5c2167039f8f3afc10b2ee61bfa4b95bf223068",
+    "evidence/phase3b-seq2-v1/workflow-acceptance-cases.json": "28059176c66403ec163076f334c244deddec814cab63648957fb0ba1c4e720a2",
+    "evidence/phase3b-seq2-v1/runtime-acceptance-cases.json": "23e0b0663bec5914a90a7372210b73815dd0a56d3cf9c67105d3a1a9b7b025ad",
+    "evidence/phase3b-seq2-v1/public-billing-review-v1.json": "966b6ee5e2b570e03c6141374771f864e49eb92141a79c5bb2023f532e70936c",
+    "evidence/phase3b-seq2-v1/provider-documentation.json": "ba40e44b2378ea6692c5176aba4e901bfbf64137db436dc6ea7cd200e274cbba",
+    "evidence/phase3b-seq2-v1/package_public.py": "b867c9f2c0c3e7a8acf6aa77ca254bca9ca6a005bb5c7dc1852512599c352470",
+    "phase3b-seq2.ps1": "848b06d9d89bb07db351c10c79565f5636b7428476cc7772a82a268b57ae3272",
+    "phase3b-seq2-core.ps1": "eb13abbb38bf0b1a93365e64474f747fba79e6ee538b56f080c938a0fbe8c199",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    ".upstream/harness2/harness2/config.py": "0db5ba0c42b87f5b14cbff2d11aaecddda1cd45500903c1d61741232bd1e0a88",
+    ".upstream/harness2/harness2/core/schedule.py": "6e46c5ab1e4ac111818ff3acd6b636e39d650898189ac0c21802a8233ad4cd38",
+    ".upstream/harness2/harness2/core/recursion.py": "b299813b5334f2c0f89024a7f14162f0fdd5418ebd4413be93920b5334a204c1",
+    "followups/phase3a_readiness_recovery_v1/support.py": "75d7754ad5a8356756c4eb4ffc21fa11b0b43f863653ce7e5a733775d2b90cec",
+    "followups/phase3a_c1_completion_v3/support.py": "2a489c63a564967fba4d2ad1f61d1a3212f170d382c4164b8868a8193fc8e9c8",
+    "followups/phase3b_seq2_v1/__init__.py": "6d77ce2f9dd5f7df3806aa5b87466f94ad9b3c0ee4f0345b6e6c1bd170d591c5",
+    "followups/phase3b_seq2_v1/support.py": "9bc9df29b953061f72f358f94120eac9b1c261cd3cde121afd3bb736c565d751",
+    "followups/phase3b_seq2_v1/contract.py": "deee293b142a91c47e568c2a3b11eacc1a145dbae5c17f4a02a09c051d5198b3",
+    "followups/phase3b_seq2_v1/native.py": "d5f8f27a1d2657d4de30c8e5484a527ea2b76c20d431695f08f0b350188d0b51",
+    "followups/phase3b_seq2_v1/strategy.py": "3c6b8f3bd58562e7836cbf3db1195cb0c98ea5d90aff66df33d699dbc8f740f1",
+    "followups/phase3b_seq2_v1/adapter.py": "d8b9267d131729e5868422a12368fa0df57bb59f03dda84f36ebbfa520542590",
+    "followups/phase3b_seq2_v1/editor.py": "0050945dcac46ffde79eae9b90acd30b05f8298d62266c497296064d78afc976",
+    "followups/phase3b_seq2_v1/history.py": "55e9d904d167fb1e1ad40b558da3bf55e324da9837886a88fa74a8f2323ad669",
+    "followups/phase3b_seq2_v1/ledger_core.py": "48dab289b10fbca2668ec668740fd3a8429f0f7149598ebbc741f90b9e060b6a",
+    "followups/phase3b_seq2_v1/accounting.py": "6756e4a923895125f87b1717943e9d2aea1fd3473bceb28ed2fcd9db2b357ec9",
+    "followups/phase3b_seq2_v1/transport.py": "58a0616cf82c3591a4ccf0f7e0aead15c9bd335b938ff2595f66e5b1e9e44442",
+    "followups/phase3b_seq2_v1/supervision.py": "29976ca659f5d43dd5ca78427e4d6fd245c4b4398e52b4b8aa04199d5341c041",
+    "followups/phase3b_seq2_v1/launch.py": "6465e319bc6a20f8aec03ce4611b9f1c4a16e9a2651eb68931c615dd31eb9bcc",
+    "followups/phase3b_seq2_v1/workflow.py": "21fa7a16ce4c9048e294c515205d006802c378efcb42c2328531b177d092f544",
+    "followups/phase3b_seq2_v1/report.py": "bf15b7e686dcb08a6ecb83e02545fd6a34c975cd0c4712e6128130fabb9aff3d",
+    "followups/phase3b_seq2_v1/core_view.py": "ae19d5eabca90a3e5824058041f692a2b27dd988b985e1dee9675c00380cfb0c",
+    "followups/phase3b_seq2_v1/native_fixture.py": "ea2829b34143b578d9a6ee1bab1c35ea5de8b6b0eef7905d1c8c7b0e97644bc3",
+    "followups/phase3b_seq2_v1/mocks.py": "e91acce33fffbe0813b27c236e628fd566af332799fc0b75d41d94aa9c68a34e",
+    "followups/phase3b_seq2_v1/regression.py": "e52bf4e8dc7e4f9ed210fb984a67e157f668cfddecc47d0d97c92290c26a4439",
+    "followups/phase3b_seq2_v1/verify.py": "1bc578cbdd8a24e873a901ebc1340c31b00bacd33501a1ae3bf9d0a3981b8b86",
+    "followups/phase3b_seq2_v1/test_bootstrap.py": "6dfa8e9cbaad8891b26b06b8cf842bd5e342f73e102af45457faa699f8807592",
+    "followups/phase3b_seq2_v1/test_native_s2.py": "d207b0a8a7880c38c2b29afd06fa6d9fb9540ebe27db06cd04d54f79996dae73",
+    "followups/phase3b_seq2_v1/test_workflow_s2.py": "ce0e96f96dbfdc7d0d9c9fd6b983c4ffdaed073fe7e7d570d4f0be3b5b777903",
+    "followups/phase3b_seq2_v1/test_launch_s2.py": "18de398a50d062f032f7017d299a7fb23a1286731b60e48415e55712caa2452d",
+    "followups/phase3b_seq2_v1/test_runtime_s2.py": "1fb4682f5390eb8eb48a53e575c2128a2d5d8d05e7e8a40a161eb9f530d0c5c8",
+    "followups/phase3b_seq2_v1/test_package_s2.py": "0b5999f3028064935085ace5bc8d46cc2f8e94858faf5dfd5255b705c5a779a1"
+  },
+  "reviewed_hash_note": "Hashes are the mutable candidate snapshot captured at audit close. Review findings identify the observed source lines before coordinated fixes; any later hash change requires a fresh independent recheck. The packager cache fix and its new trap test were reread at close; no test was executed by this reviewer.",
+  "scope": {
+    "real_credentials_accessed": false,
+    "provider_calls": 0,
+    "sdk_constructors": 0,
+    "experiments_run": 0,
+    "tests_run_by_this_reviewer": 0,
+    "audit_execution": "Read-only static source and public official documentation review; one new audit note only",
+    "private_cache_or_provider_stream_paths_read_or_statted": false,
+    "containers_run": 0,
+    "account_or_token_count_probes": 0,
+    "protected_original_accessed": false,
+    "product_files_edited": false
+  },
+  "findings": [
+    {
+      "title": "Packager cache exclusion missing before metadata",
+      "observed": "Initial PRIVATE lacked cache names, walk omitted .cache and direct safe/include references permitted caches.",
+      "paths": [
+        "evidence/phase3b-seq2-v1/package_public.py:16",
+        "evidence/phase3b-seq2-v1/package_public.py:33",
+        "evidence/phase3b-seq2-v1/package_public.py:139"
+      ],
+      "minimal_fix": "Use the complete S2 cache/private set in public(), before all metadata, for both direct and walked inputs.",
+      "status": "Corrected by root during review; current PRIVATE and test_package_s2.py trap reread. Runtime test result remains pending.",
+      "priority": "P1",
+      "id": "F01"
+    },
+    {
+      "title": "Fixed best-of-twelve silently reduces its selection population after candidate failure",
+      "observed": "KnownOutcomeError becomes failed candidate, valid filters to fewer than twelve full portfolios, selection can succeed and report completion only requires selected outputs and assessment targets.",
+      "paths": [
+        "followups/phase3b_seq2_v1/strategy.py:356",
+        "followups/phase3b_seq2_v1/strategy.py:374",
+        "followups/phase3b_seq2_v1/report.py:375",
+        "PHASE3B_DEFINITION.md:114"
+      ],
+      "minimal_fix": "Preserve failed records, require twelve complete portfolios before fixed selection, and stop/classify mandatory fixed-pool failure. Add malformed-plan/rank negative fixture.",
+      "status": "Open at review; root assigned workflow correction.",
+      "priority": "P1",
+      "id": "F02"
+    },
+    {
+      "title": "Whole matrix requires live authenticity from an explicitly synthetic fixture",
+      "observed": "Fixture adaptation authentic is necessarily false, while whole matrix requires branch authentic truthy; the gate cannot pass honestly.",
+      "paths": [
+        "followups/phase3b_seq2_v1/verify.py:181",
+        "followups/phase3b_seq2_v1/native.py:274",
+        "followups/phase3b_seq2_v1/test_native_s2.py:147"
+      ],
+      "minimal_fix": "Derive fixture normality from all six source/delivery/session proofs and normal native selector without changing fixture authentic=False.",
+      "status": "Open at review; root correcting gate.",
+      "priority": "P1",
+      "id": "F03"
+    },
+    {
+      "title": "Full cumulative evidence and candidate read proofs only enforced on first native pilot",
+      "observed": "Later branches validate persisted hashes/harvests and basic session status, but the full author delivery proof and selector candidate delivery proof are only called through p3b-01 readiness. A later valid immediate choice or normal harvest can omit mandatory evidence reads.",
+      "paths": [
+        "followups/phase3b_seq2_v1/workflow.py:494",
+        "followups/phase3b_seq2_v1/native.py:219",
+        "followups/phase3b_seq2_v1/native.py:301",
+        "followups/phase3b_seq2_v1/evidence.py:310",
+        "followups/phase3b_seq2_v1/editor.py:475"
+      ],
+      "minimal_fix": "Generalize and enforce existing full source/delivery/history proof for each pilot and accepted author/selector session before accepting that branch or further paid admission; preserve terminal/fallback distinctions. Add later-pilot omitted-read fixture.",
+      "status": "Open at review; root assigned runtime correction.",
+      "priority": "P1",
+      "id": "F04"
+    },
+    {
+      "title": "Engineering review removes frozen first-prompt dollar sublimits",
+      "observed": "First $55 and first-assessment $25 checks are conditional on no engineering_review. The first barrier can record a review with first_assessments_closed=false and run_all resumes first assessments after review, bypassing the retained first-prompt caps.",
+      "paths": [
+        "followups/phase3b_seq2_v1/ledger_core.py:367",
+        "followups/phase3b_seq2_v1/ledger_core.py:379",
+        "followups/phase3b_seq2_v1/workflow.py:799",
+        "followups/phase3b_seq2_v1/workflow.py:1612"
+      ],
+      "minimal_fix": "Always enforce $55 and $25 on p3b-01 admissions regardless of review. An irrecoverable mandatory first-assessment cap stop must close the attempt. Add post-review limit boundary tests.",
+      "status": "Open at review; reported to root.",
+      "priority": "P1",
+      "id": "F05"
+    }
+  ],
+  "acceptance_evidence_gaps": [
+    {
+      "observation": "Current matrix mock answers are short and usage is synthetic 80 input/24 output for editor responses; exact 2MiB boundary uses repeated x. No realistic large full round-2 cumulative context plus signed history and both-selector capacity fixture identified in reviewed S2 sources.",
+      "id": "G01",
+      "status": "Pending root capacity fixture work.",
+      "requirement": "S2-5",
+      "requested_evidence": "Large realistic complete native artifacts/notes and both full selector packets; preserve bytes/history unchanged or reject over-limit before intent. Independent 1M-context dollar liability is separate and passes."
+    },
+    {
+      "observation": "Final whole-gate identity, actual fresh keyless supervisor rehearsal, extracted-only cold replay, physical archive/inventory/CRC and final independent source/packet acceptance not available at review time.",
+      "id": "G02",
+      "status": "Cannot accept keys or final kit until complete source-bound evidence and fresh non-author recheck.",
+      "requirement": "S2-7 and S2-8"
+    }
+  ],
+  "static_passes": [
+    "Actual native.py invokes pinned schedule.run_task(task,2,modes=(seq,),pool_policy=finals,seed=None,library=None,libraries=None,selector_prop=prop) and enforces prop.attempts=1.",
+    "Pinned recursion carries current_harness=c1 into round2 and native contract requires both base views and full declared cumulative pool; changed-c1 KEEP regression is present.",
+    "Twelve assessment targets fixed/c1/c2 per four prompts map to eight delivered aliases without extra selected-final judgments; missing checkpoint suppresses recursive completeness.",
+    "No favorable quality threshold found in readiness/first continuation; zero/unchanged/KEEP and c1 choice remain legitimate.",
+    "HistoryGuard preserves exact previous message prefix and all signed thinking/redacted/tool blocks; unknown liability remains held and blocks resend/admission.",
+    "Transport consumes source/grant/controller-bound startup attachment before live transport and SDK construction; one-shot trusted host attestation is point-in-time presence, not cryptographic orchestrator authentication.",
+    "Resource constants and worklist match 180 global,35 cell,70 assessment,55 first,25 first-assessment,448 calls/12M input/6291456 output per cell,24 turns and2344 maximum new attempts, subject to F05."
+  ],
+  "arithmetic": {
+    "independent_of_serialized_byte_capacity": true,
+    "fixed_output_max": 605824,
+    "sonnet_formula": "1000000*2.50/1000000 +4096*10/1000000",
+    "verified": true,
+    "opus_reservation_usd": "11.44",
+    "common_output_cap": 6291456,
+    "luna_formula": "1050000*1.10/1000000 +128000*3.96/1000000",
+    "cumulative_max_attempts": 4341,
+    "luna_reservation_usd": "1.661880",
+    "opus_formula": "(1000000*10/1000000 +16000*25/1000000)*1.1",
+    "fixed_attempts_per_prompt": 145,
+    "cumulative_max_exposure_micro_usd": 248924365,
+    "assessment_max": 132,
+    "sonnet_reservation_usd": "2.540960",
+    "native_output_max": 5385216,
+    "native_attempts_per_prompt": 408,
+    "new_max": 2344
+  },
+  "official_public_sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "supports": "Exact model ID,1050000 context,128000 output,0.20 input/1.20 output,2x long input/1.5x long output,1.25x write."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "supports": "Explicit Luna Standard and Fast long-context table; Fast long write1.00/output3.60 USD perM;10% regional/FedRAMP allowance."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "supports": "Native Chat requests may inherit project Fast; GPT5.6 returns priority in response even for fast input."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview",
+      "supports": "Exact claude-opus-5;1M context;5/25 base and10 perM one-hour writes."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+      "supports": "Exact claude-sonnet-5-5;1M context;2/10 base."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "supports": "Sonnet5.5 five-minute write2.50;Opus5 one-hour write10;full1M normal context pricing."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/api/service-tiers",
+      "supports": "standard_only control;Opus5/Sonnet5.5 excluded from Priority Tier."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md",
+      "supports": "Explicit global default and inherited workspace geography;US-only1.1x across token categories."
+    }
+  ],
+  "limitations": [
+    "Static review and official public documentation establish engineering defects and conservative contractual arithmetic, not live provider access, token fit, authenticity or scientific effectiveness.",
+    "Source changed during coordinated repair; this note is provisional and cannot be used as independent-acceptance.json or packet-acceptance.json.",
+    "No initial failed billing format record was rewritten; the corrected URL-keyed public review was retained separately."
+  ],
+  "next_required": "Root completes in-scope fixes and large-context evidence, freezes a new exact identity, runs whole offline gate and keyless operational rehearsal, then fresh independent source/evidence/extracted-packet recheck before keys."
+}

@@ -1,0 +1,239 @@
+{
+  "actions": {
+    "SDK_constructions": 0,
+    "credential_access": false,
+    "historical_file_changes": 0,
+    "only_write": "evidence/phase3a-v1/prior-evidence-audit.json",
+    "original_folder_access": false,
+    "provider_calls": 0
+  },
+  "archive_verifications": [
+    {
+      "crc": "pass",
+      "members": 189,
+      "path": "evidence/phase0-example.zip",
+      "sha256": "937f0f6f81cf380c676687085dcbfa88f62dcfc03f61c360d45037ebef5a9e5a",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 34,
+      "path": "evidence/phase1/runtime-source.zip",
+      "sha256": "0c1f2d62312a831bd8325380434be827ef14a084b9ee916f4c3111921272a822",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 477,
+      "path": "evidence/phase2-am1-r016/am1-offline-kit.zip",
+      "sha256": "af66d22c26c7498c0f98bfb0b584aae1ca65c205c9b6543ad52bb37631df08a6",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 2290,
+      "path": "evidence/phase2-r010/packaging-before-normalization/phase2a-kit.zip",
+      "sha256": "334b01caead80b0efaf540924793b52255fbb36f8ad11eb2e6c4d9b6fe05e3d5",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 2290,
+      "path": "evidence/phase2-r010/phase2a-kit.zip",
+      "sha256": "54ae99efa70c513da92578a0edad4a2f26b2581ac9466c38dace83630f5f3084",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 2373,
+      "path": "evidence/phase2-r012/packaging-before-encoding-correction/phase2-policy-kit.zip",
+      "sha256": "501fbfcf6b4f1227ba5d1c59c764ee31d33dd43716b5dec3d30f9a99c7183cdb",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 2378,
+      "path": "evidence/phase2-r012/phase2-policy-kit.zip",
+      "sha256": "a163a81fac7754ff910515b4106dcc1a528d2812ae9642fc85cda6c54d4a94ae",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 2006,
+      "path": "evidence/phase2-release-r018/p2r-execution-kit.zip",
+      "sha256": "5f553c51396f6787d641ed85b6a1fd686fdc56125802b9684f6aa92e047ea9b3",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 314,
+      "path": "evidence/phase2b-expansion/report/phase2b-report.zip",
+      "sha256": "8364bc3a0c4d8f98aa1d60890c92c37b6135bcf47c63ba454623a99441201d2e",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 30,
+      "path": "evidence/phase2b-f1/report/phase2b-f1-report.zip",
+      "sha256": "ce6c0448be71da1456b0a2232395de86cf167019c594d2a14b7a65a6d0e3549a",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 165,
+      "path": "evidence/phase2b-rank-format-v1/live-v1/evidence.zip",
+      "sha256": "ea7dd4afc6a47157e578ebd2ed32e4d220a8810eab6867f09c0653395ad3f1ac",
+      "tracked": true
+    },
+    {
+      "crc": "pass",
+      "members": 356,
+      "path": "evidence/phase2b-rank-format-v1/offline-checkpoint.zip",
+      "sha256": "90b33d3fe7015923f39ecac4a03ab3c1724d8fc4bec5d55ebb07a1fb950f51eb",
+      "tracked": true
+    }
+  ],
+  "audit_sha256": "555c409054694b60da19626341ef6537e2a00f8e60699529062c72b954825126",
+  "audited_at_utc": "2026-10-28T22:37:40Z",
+  "auditor": "/root/release_launcher",
+  "committed_reports": [
+    "PHASE0_REPORT.md",
+    "PHASE1A_DATA_READINESS_REPORT.md",
+    "PHASE1_PREPARATION_REPORT.md",
+    "PHASE1_REPORT.md",
+    "PHASE2B_EXECUTION_KIT_REPORT.md",
+    "PHASE2B_F1_REPORT.md",
+    "PHASE2B_RANK_FORMAT_LIVE_REPORT.md",
+    "PHASE2B_RANK_FORMAT_REPORT.md",
+    "PHASE2B_REPORT.md",
+    "PHASE2_AM1_REPORT.md",
+    "PHASE2_LIVE_READINESS_REPORT.md",
+    "PHASE2_POLICY_UPDATE_REPORT.md",
+    "PHASE2_PREPARATION_REPORT.md"
+  ],
+  "gaps": [],
+  "git_head": "a2eed26fde5bcfbdaba0afb3aba6ed39f87d4158",
+  "git_head_subject": "docs(phase3): define four-prompt native pilot and matched control",
+  "historical_preservation": {
+    "baseline": "evidence/phase3a-definition-v1/preservation-before.json",
+    "baseline_sha256": "a1595667b2235905a0d711999a2468e9f3c3691b2886c28edfcaca68111fb884",
+    "changed": [],
+    "files_checked": 1130,
+    "git_parent": "954ccae47108118db0d787b69398916eb09fb835"
+  },
+  "kind": "phase3a-prior-evidence-audit-v1",
+  "limits": [
+    "Audit verifies committed reports, byte/hash preservation, archive CRC/member identities and manifest references; it does not rerun historical provider requests or certify invoices.",
+    "Historical manifest source hashes are verified against their retained archives/commits where later authorized source revisions differ; old manifests are not rewritten.",
+    "No unopened confirmation data or new corpus was selected."
+  ],
+  "manifest_verifications": [
+    {
+      "entries": 34,
+      "manifest_commit": "35cc481cdc25f0e0de98e2969e7d97062d39a08f",
+      "manifest_sha256": "6a702b1ca4a9500d22081854c77771049f063a460938fba6616f3dbcb3a63335",
+      "path": "evidence/phase1-live/closeout-manifest.json",
+      "verified_by": {
+        "current_unchanged": 30,
+        "historical_commit": 4
+      }
+    },
+    {
+      "entries": 79,
+      "manifest_commit": "bed346567bb2d4cdb110e2ad61a7bebd11b0d123",
+      "manifest_sha256": "d67e94171ad35aad34e6dc7ca5f915bfd2f905fbce862f8e117363cec6131683",
+      "path": "evidence/phase1a-data-readiness-r07/manifest.json",
+      "verified_by": {
+        "current_unchanged": 75,
+        "historical_commit": 4
+      }
+    },
+    {
+      "entries": 2314,
+      "manifest_commit": "9ef4024ed2a2a87133ed7b1991c44acc5a98086a",
+      "manifest_sha256": "3012fdc25866a94322c2c99b58326ee7e2f370d01e83b91d9c2efc72d50832ba",
+      "path": "evidence/phase2-r010/manifest.json",
+      "verified_by": {
+        "current_unchanged": 2308,
+        "retained_archive": 6
+      }
+    },
+    {
+      "entries": 2380,
+      "manifest_commit": "c71b0c8f60e109435635627ce858f80fe0403de6",
+      "manifest_sha256": "454df5db525d5ec29216f784849863b2441cf2e37f6b83d4fa294a17b7896ff8",
+      "path": "evidence/phase2-r012/manifest.json",
+      "verified_by": {
+        "current_unchanged": 2373,
+        "retained_archive": 7
+      }
+    },
+    {
+      "entries": 476,
+      "manifest_commit": "b8640566c458b255f0f6172963e8f2867070dae3",
+      "manifest_sha256": "836f1da29527aed983ac3a8c51db86b46b668b62945022359738ad0f08aff983",
+      "path": "evidence/phase2-am1-r016/manifest.json",
+      "verified_by": {
+        "current_unchanged": 472,
+        "retained_archive": 4
+      }
+    },
+    {
+      "entries": 2005,
+      "manifest_commit": "20da5ee986332b9a1a7a15d655407fa35f7482e9",
+      "manifest_sha256": "bd6064dba05961e07a2094f1478234e9b5c17ce83c6f0d03ccb63ce1fe51d896",
+      "path": "evidence/phase2-release-r018/manifest.json",
+      "verified_by": {
+        "current_unchanged": 2005
+      }
+    },
+    {
+      "entries": 29,
+      "manifest_commit": "eb0a3b3fadc586852456182127d9e3985d39b228",
+      "manifest_sha256": "aad42e5bafed71127d688a97bcd97bddcf8c9b66f155e9c608bf8f4144a07e1e",
+      "path": "evidence/phase2b-f1/report/manifest.json",
+      "verified_by": {
+        "current_unchanged": 29
+      }
+    },
+    {
+      "entries": 313,
+      "manifest_commit": "95ac4e2e2bdc3ceb5c6749d0eaabd3d22eb5c799",
+      "manifest_sha256": "932e280b781edce72b3b73c6d7087ea5008fb65ee60c7e15ee370387a41f3fbb",
+      "path": "evidence/phase2b-expansion/report/manifest.json",
+      "verified_by": {
+        "current_unchanged": 313
+      }
+    },
+    {
+      "entries": 355,
+      "manifest_commit": "02120702807f17751f970d33c10bbdeba9a7f48e",
+      "manifest_sha256": "fe4b344d0a9e7a10f37e976c60bc2b588f86eb6054bf301ce50e9833492e865e",
+      "path": "evidence/phase2b-rank-format-v1/packet-manifest.json",
+      "verified_by": {
+        "current_unchanged": 355
+      }
+    },
+    {
+      "entries": 164,
+      "manifest_commit": "954ccae47108118db0d787b69398916eb09fb835",
+      "manifest_sha256": "2cf4e569a83507f31ba67e151476a88f88f71b5bdf7c4cbfbfeaeaee794e53dd",
+      "path": "evidence/phase2b-rank-format-v1/live-v1/manifest.json",
+      "verified_by": {
+        "current_unchanged": 164
+      }
+    }
+  ],
+  "parent_lineage": {
+    "C_N_followup": "complete post-hoc development comparison; 68 reused +4 newly scored",
+    "historical_combined_accounted_micro_usd": 6350952,
+    "invoice_reconciliation": "not established",
+    "parent_decision_sha256": "5c2ddcbd434f53209f4245c519f9479229c6b06e6dec2b9043669c5a4f338dea",
+    "parent_selected_procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+    "parent_study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+    "strict_phase2b": "inconclusive with four rank failures; not rewritten"
+  },
+  "status": "pass",
+  "tracked_files": 1137,
+  "tracked_worktree_matches_HEAD": true
+}

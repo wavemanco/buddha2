@@ -1,0 +1,10 @@
+{
+  "all_member_hashes_match": true,
+  "archive_bytes": 502681,
+  "archive_sha256": "ea7dd4afc6a47157e578ebd2ed32e4d220a8810eab6867f09c0653395ad3f1ac",
+  "kind": "p2bn-live-evidence-archive-verification-v1",
+  "manifest_sha256": "2cf4e569a83507f31ba67e151476a88f88f71b5bdf7c4cbfbfeaeaee794e53dd",
+  "members": 165,
+  "report_sha256": "49717d0139ab69e6cf774d14090bd096aadf4a00b7819943bc2374490088ed0b",
+  "zip_crc_pass": true
+}

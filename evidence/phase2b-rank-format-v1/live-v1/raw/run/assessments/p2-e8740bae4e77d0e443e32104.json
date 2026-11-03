@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "0042b7fb25870dcb48ceaf8751217aa8116b57d5e6f8a359b579b241a976bd2b",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 8.097576714321555
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        9,
+        8,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        8,
+        7
+      ],
+      "partition_scores": [
+        9,
+        8,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        8,
+        7
+      ],
+      "utility": 8.097576714321555
+    },
+    "generation_row": {
+      "generations": [
+        "Here are three influential figures from the nineteenth century, drawn from politics and statecraft:\n\n1. **Abraham Lincoln (1809–1865):** As U.S. president, he led the Union through the Civil War, issued the Emancipation Proclamation, and helped set the country on the path to abolishing slavery.\n\n2. **Otto von Bismarck (1815–1898):** As Prussian minister-president and later German chancellor, he engineered the unification of Germany in 1871 and reshaped the European balance of power.\n\n3. **Queen Victoria (1819–1901):** Her 63-year reign gave its name to an era in which Britain expanded its empire, industrialized, and developed a modern constitutional monarchy.",
+        "Here are three influential figures from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: His theory of evolution by natural selection, presented in *On the Origin of Species* (1859), transformed biology and our understanding of how life develops and diversifies.\n\n2. **Michael Faraday (1791-1867)**: His discoveries in electromagnetic induction and electrochemistry laid the groundwork for electric motors, generators, and modern electrical technology.\n\n3. **Louis Pasteur (1822-1895)**: He established germ theory's practical foundations, developed vaccines for rabies and anthrax, and created pasteurization, greatly advancing public health and medicine.",
+        "Here are three influential nineteenth-century figures, each of whom changed how people thought about society and the economy:\n\n1. **Karl Marx (1818-1883)**: A philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital* (1867), analyzed capitalism through class struggle. He sparked the socialist and communist movements and long-running debates over labor, ownership, and inequality.\n\n2. **John Stuart Mill (1806-1873)**: A British philosopher and economist who refined utilitarianism and defended individual liberty in *On Liberty* (1859). He also argued for women's suffrage in *The Subjection of Women* (1869), fueling debates over free speech, the limits of state power, and gender equality.\n\n3. **Friedrich Engels (1820-1895)**: Marx's collaborator and co-author of *The Communist Manifesto*. His book *The Condition of the Working Class in England* (1845) documented industrial poverty, and he edited the later volumes of *Das Kapital*, helping shape socialist thought and the labor movement.",
+        "Here are three influential figures from the nineteenth century, each of whom shaped culture in a lasting way:\n\n1. **Charles Dickens (1812-1870)**: The English novelist, author of *Oliver Twist*, *A Christmas Carol*, and *Great Expectations*, brought the harsh realities of poverty, child labor, and social inequality to a mass readership. His serialized storytelling helped shape public conscience in Victorian Britain and set a template for popular fiction.\n\n2. **Leo Tolstoy (1828-1910)**: The Russian writer of *War and Peace* and *Anna Karenina* helped define the realist novel with his psychological depth and sweeping historical vision. His later writings on nonviolence and moral philosophy influenced figures such as Gandhi and Martin Luther King Jr.\n\n3. **Claude Monet (1840-1926)**: The French painter was a founder of Impressionism, and his work *Impression, Sunrise* gave the movement its name. By emphasizing light, color, and fleeting moments over precise detail, he changed how artists approached painting and paved the way for modern art.",
+        "Here are three influential figures from the nineteenth century, all reformers who advanced human rights:\n\n1. **Frederick Douglass (1818-1895)**: Born into slavery in Maryland, he escaped in 1838 and became one of the most powerful voices in the American abolitionist movement. His autobiographies, speeches, and newspaper, *The North Star*, exposed the brutality of slavery and argued for equality under the law. He later advocated for Black citizenship and voting rights during and after Reconstruction, and also supported women's suffrage.\n\n2. **Florence Nightingale (1820-1910)**: A British nurse and statistician, she became famous for improving care for soldiers during the Crimean War. She championed sanitation, hospital reform, and professional training for nurses, founding the Nightingale School of Nursing in 1860. Her use of statistical charts to demonstrate preventable deaths helped drive public health reforms and established nursing as a respected profession, particularly for women.\n\n3. **Susan B. Anthony (1820-1906)**: An American activist, she was a central leader of the women's suffrage movement. She co-founded the National Woman Suffrage Association with Elizabeth Cady Stanton in 1869, traveled widely to lecture, and was arrested in 1872 for voting illegally. She also worked in the abolition and temperance movements. Though she died before women won the vote nationally in 1920, her efforts laid essential groundwork.",
+        "Here are three influential inventors from the nineteenth century whose work transformed daily life:\n\n1. **Samuel Morse (1791-1872)**: He developed the single-wire telegraph and co-created Morse code. Sending messages across long distances in minutes, rather than days or weeks, changed communication, news reporting, business, and railroad coordination.\n\n2. **Alexander Graham Bell (1847-1922)**: He was awarded the first U.S. patent for the telephone in 1876. It made real-time voice communication possible and eventually reshaped how people worked, socialized, and handled emergencies.\n\n3. **Thomas Edison (1847-1931)**: Often called the most prolific inventor of the era, he developed a practical incandescent light bulb, a commercial electric power distribution system, and the phonograph. His work helped bring electric lighting and recorded sound into homes and businesses.",
+        "Here are three influential figures from the nineteenth century, drawn from outside Europe and North America:\n\n1. **Simón Bolívar (1783-1830, South America):** Known as \"El Libertador,\" he led independence movements that freed present-day Venezuela, Colombia, Ecuador, Peru, Panama, and Bolivia from Spanish rule. His vision of a unified Latin America shaped the region's political identity.\n\n2. **Emperor Meiji (1852-1912, Japan):** His reign (1867-1912) saw the Meiji Restoration, which ended the feudal shogunate and rapidly modernized Japan through industrialization, a new constitution, and military reform. Japan emerged as a major world power, altering the balance of power in Asia.\n\n3. **Muhammad Ali of Egypt (c. 1769-1849, Africa/Middle East):** As the ruler of Egypt from 1805, he built a modern army, expanded irrigation and agriculture, and set up factories and schools. His reforms made Egypt a regional power and influenced modernization efforts across the Ottoman world.",
+        "1. Charles Darwin\n2. Abraham Lincoln\n3. Karl Marx",
+        "Here are three influential figures of the nineteenth century, chosen from philosophy and intellectual leadership:\n\n1. **Friedrich Nietzsche (1844-1900)**: The German philosopher declared that \"God is dead,\" meaning that traditional religious and moral foundations were losing their hold on European culture. His ideas about the \"will to power,\" the \"Übermensch,\" and the revaluation of values shaped existentialism, psychology, postmodern thought, and literature throughout the twentieth century.\n\n2. **Søren Kierkegaard (1813-1855)**: The Danish thinker is often called the father of existentialism. He emphasized individual choice, subjective experience, anxiety, and the \"leap of faith,\" in opposition to abstract systems like Hegel's. His work influenced later theologians, such as Karl Barth, and philosophers, including Heidegger and Sartre, and it continues to inform discussions of authenticity and personal responsibility.\n\n3. **Herbert Spencer (1820-1903)**: The English philosopher and sociologist applied evolutionary ideas to society, ethics, and psychology, and he coined the phrase \"survival of the fittest.\" His thinking helped found modern sociology and influenced debates over individualism and laissez-faire economics. His \"Social Darwinism\" was later widely criticized, and it serves as a cautionary example of how scientific ideas can be misapplied to justify social policy.",
+        "Here are three influential women of the nineteenth century:\n\n1. **Queen Victoria (1819-1901)**: Her 63-year reign gave its name to an era and made Britain the center of a global empire, shaping the politics, culture, and social norms of the age.\n\n2. **Ada Lovelace (1815-1852)**: She wrote what is widely regarded as the first computer program, for Charles Babbage's Analytical Engine, and foresaw that machines could go beyond arithmetic.\n\n3. **Florence Nightingale (1820-1910)**: She founded modern nursing and used statistics to reform hospital sanitation and public health.\n\nMarie Curie, who began her groundbreaking radioactivity research in the 1890s, is another strong candidate, though her major impact extended into the twentieth century."
+      ],
+      "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Can you list 3 influential persons from the nineteenth century?"
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        9,
+        8,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        8,
+        7
+      ],
+      "generations": [
+        "Here are three influential figures from the nineteenth century, drawn from politics and statecraft:\n\n1. **Abraham Lincoln (1809–1865):** As U.S. president, he led the Union through the Civil War, issued the Emancipation Proclamation, and helped set the country on the path to abolishing slavery.\n\n2. **Otto von Bismarck (1815–1898):** As Prussian minister-president and later German chancellor, he engineered the unification of Germany in 1871 and reshaped the European balance of power.\n\n3. **Queen Victoria (1819–1901):** Her 63-year reign gave its name to an era in which Britain expanded its empire, industrialized, and developed a modern constitutional monarchy.",
+        "Here are three influential figures from the nineteenth century:\n\n1. **Charles Darwin (1809-1882)**: His theory of evolution by natural selection, presented in *On the Origin of Species* (1859), transformed biology and our understanding of how life develops and diversifies.\n\n2. **Michael Faraday (1791-1867)**: His discoveries in electromagnetic induction and electrochemistry laid the groundwork for electric motors, generators, and modern electrical technology.\n\n3. **Louis Pasteur (1822-1895)**: He established germ theory's practical foundations, developed vaccines for rabies and anthrax, and created pasteurization, greatly advancing public health and medicine.",
+        "Here are three influential nineteenth-century figures, each of whom changed how people thought about society and the economy:\n\n1. **Karl Marx (1818-1883)**: A philosopher and economist whose works, including *The Communist Manifesto* (1848) and *Das Kapital* (1867), analyzed capitalism through class struggle. He sparked the socialist and communist movements and long-running debates over labor, ownership, and inequality.\n\n2. **John Stuart Mill (1806-1873)**: A British philosopher and economist who refined utilitarianism and defended individual liberty in *On Liberty* (1859). He also argued for women's suffrage in *The Subjection of Women* (1869), fueling debates over free speech, the limits of state power, and gender equality.\n\n3. **Friedrich Engels (1820-1895)**: Marx's collaborator and co-author of *The Communist Manifesto*. His book *The Condition of the Working Class in England* (1845) documented industrial poverty, and he edited the later volumes of *Das Kapital*, helping shape socialist thought and the labor movement.",
+        "Here are three influential figures from the nineteenth century, each of whom shaped culture in a lasting way:\n\n1. **Charles Dickens (1812-1870)**: The English novelist, author of *Oliver Twist*, *A Christmas Carol*, and *Great Expectations*, brought the harsh realities of poverty, child labor, and social inequality to a mass readership. His serialized storytelling helped shape public conscience in Victorian Britain and set a template for popular fiction.\n\n2. **Leo Tolstoy (1828-1910)**: The Russian writer of *War and Peace* and *Anna Karenina* helped define the realist novel with his psychological depth and sweeping historical vision. His later writings on nonviolence and moral philosophy influenced figures such as Gandhi and Martin Luther King Jr.\n\n3. **Claude Monet (1840-1926)**: The French painter was a founder of Impressionism, and his work *Impression, Sunrise* gave the movement its name. By emphasizing light, color, and fleeting moments over precise detail, he changed how artists approached painting and paved the way for modern art.",
+        "Here are three influential figures from the nineteenth century, all reformers who advanced human rights:\n\n1. **Frederick Douglass (1818-1895)**: Born into slavery in Maryland, he escaped in 1838 and became one of the most powerful voices in the American abolitionist movement. His autobiographies, speeches, and newspaper, *The North Star*, exposed the brutality of slavery and argued for equality under the law. He later advocated for Black citizenship and voting rights during and after Reconstruction, and also supported women's suffrage.\n\n2. **Florence Nightingale (1820-1910)**: A British nurse and statistician, she became famous for improving care for soldiers during the Crimean War. She championed sanitation, hospital reform, and professional training for nurses, founding the Nightingale School of Nursing in 1860. Her use of statistical charts to demonstrate preventable deaths helped drive public health reforms and established nursing as a respected profession, particularly for women.\n\n3. **Susan B. Anthony (1820-1906)**: An American activist, she was a central leader of the women's suffrage movement. She co-founded the National Woman Suffrage Association with Elizabeth Cady Stanton in 1869, traveled widely to lecture, and was arrested in 1872 for voting illegally. She also worked in the abolition and temperance movements. Though she died before women won the vote nationally in 1920, her efforts laid essential groundwork.",
+        "Here are three influential inventors from the nineteenth century whose work transformed daily life:\n\n1. **Samuel Morse (1791-1872)**: He developed the single-wire telegraph and co-created Morse code. Sending messages across long distances in minutes, rather than days or weeks, changed communication, news reporting, business, and railroad coordination.\n\n2. **Alexander Graham Bell (1847-1922)**: He was awarded the first U.S. patent for the telephone in 1876. It made real-time voice communication possible and eventually reshaped how people worked, socialized, and handled emergencies.\n\n3. **Thomas Edison (1847-1931)**: Often called the most prolific inventor of the era, he developed a practical incandescent light bulb, a commercial electric power distribution system, and the phonograph. His work helped bring electric lighting and recorded sound into homes and businesses.",
+        "Here are three influential figures from the nineteenth century, drawn from outside Europe and North America:\n\n1. **Simón Bolívar (1783-1830, South America):** Known as \"El Libertador,\" he led independence movements that freed present-day Venezuela, Colombia, Ecuador, Peru, Panama, and Bolivia from Spanish rule. His vision of a unified Latin America shaped the region's political identity.\n\n2. **Emperor Meiji (1852-1912, Japan):** His reign (1867-1912) saw the Meiji Restoration, which ended the feudal shogunate and rapidly modernized Japan through industrialization, a new constitution, and military reform. Japan emerged as a major world power, altering the balance of power in Asia.\n\n3. **Muhammad Ali of Egypt (c. 1769-1849, Africa/Middle East):** As the ruler of Egypt from 1805, he built a modern army, expanded irrigation and agriculture, and set up factories and schools. His reforms made Egypt a regional power and influenced modernization efforts across the Ottoman world.",
+        "1. Charles Darwin\n2. Abraham Lincoln\n3. Karl Marx",
+        "Here are three influential figures of the nineteenth century, chosen from philosophy and intellectual leadership:\n\n1. **Friedrich Nietzsche (1844-1900)**: The German philosopher declared that \"God is dead,\" meaning that traditional religious and moral foundations were losing their hold on European culture. His ideas about the \"will to power,\" the \"Übermensch,\" and the revaluation of values shaped existentialism, psychology, postmodern thought, and literature throughout the twentieth century.\n\n2. **Søren Kierkegaard (1813-1855)**: The Danish thinker is often called the father of existentialism. He emphasized individual choice, subjective experience, anxiety, and the \"leap of faith,\" in opposition to abstract systems like Hegel's. His work influenced later theologians, such as Karl Barth, and philosophers, including Heidegger and Sartre, and it continues to inform discussions of authenticity and personal responsibility.\n\n3. **Herbert Spencer (1820-1903)**: The English philosopher and sociologist applied evolutionary ideas to society, ethics, and psychology, and he coined the phrase \"survival of the fittest.\" His thinking helped found modern sociology and influenced debates over individualism and laissez-faire economics. His \"Social Darwinism\" was later widely criticized, and it serves as a cautionary example of how scientific ideas can be misapplied to justify social policy.",
+        "Here are three influential women of the nineteenth century:\n\n1. **Queen Victoria (1819-1901)**: Her 63-year reign gave its name to an era and made Britain the center of a global empire, shaping the politics, culture, and social norms of the age.\n\n2. **Ada Lovelace (1815-1852)**: She wrote what is widely regarded as the first computer program, for Charles Babbage's Analytical Engine, and foresaw that machines could go beyond arithmetic.\n\n3. **Florence Nightingale (1820-1910)**: She founded modern nursing and used statistics to reform hospital sanitation and public health.\n\nMarie Curie, who began her groundbreaking radioactivity research in the 1890s, is another strong candidate, though her major impact extended into the twentieth century."
+      ],
+      "id": "nb-curated-8e36a11f5d71bf4e3dc6",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "3727b6bf2c4b08d4c7fbbfdbdea9258617834b2d05126e6f62b25bda6a623cfc",
+      "partition_scores": [
+        9,
+        8,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        8,
+        7
+      ],
+      "prompt": "Can you list 3 influential persons from the nineteenth century?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "d0a0c0ab065e561b7231870faf1fcd847a1e2195e8c6ad5b21d96b6453b4a4f6",
+      "utility": 8.097576714321555
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 8.097576714321555,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "22df9d0ce835edeacedbc2403bf66dcd78ec90e81f1c815ddb8e935839bc7f33",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0011",
+      "fixture": false,
+      "intent_sha256": "4b74441d2a74354c1916f6082bb5c37cc69535f642707e11ea5e5909cc6b847f",
+      "request_sha256": "836918d8a9a68f3cb367a75d62beb7bfde72b8256ab7c477b3d6880ddbe796f6",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.151560046011582,
+        "message_id": "chatcmpl-Ee3464REaeK7dL5XwROQjdMsnD7Fs",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 143,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 106,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 2154,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 2151,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2297
+        },
+        "refusal": null,
+        "request_id": "req_9b6ee0255ba349019f224f15abb846c2",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 2151,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 2151,
+            "cached_tokens": 0
+          },
+          "output_tokens": 143,
+          "output_tokens_details": {
+            "reasoning_tokens": 106
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.group",
+      "spent_micro_usd": 781,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0012",
+      "fixture": false,
+      "intent_sha256": "7b0db98a8272e9d3b281ba02ec6ea424afba82b13e49b55b3ef7e1590672a6fe",
+      "request_sha256": "03d2504494f99ebeb7aabc8102a9ca5e577042e925a328025951104f248bfc5d",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.1641951659985352,
+        "message_id": "msg_011CgV9AQNK3H85NXzRyK7Se",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9AQ3DegzsXc5PU5BWP",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 668,
+          "output_tokens": 144,
+          "output_tokens_details": {
+            "thinking_tokens": 135
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.00",
+      "spent_micro_usd": 7634,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0013",
+      "fixture": false,
+      "intent_sha256": "0b51b501f2db317a82a9a538d627ab5b999f05b37aec5892e07d75272d1f9c96",
+      "request_sha256": "8f3ecbaa273afc604a9587ce2a7023b0bf8ba18cb826575d76d8283adbfa7712",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9883892679936253,
+        "message_id": "msg_011CgV9AefJ39Vq4NASWRXuQ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9AeJDKDsse5f6EZtLA",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 660,
+          "output_tokens": 121,
+          "output_tokens_details": {
+            "thinking_tokens": 112
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.01",
+      "spent_micro_usd": 6958,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0014",
+      "fixture": false,
+      "intent_sha256": "a0c16939298ccf0521e065a09162520c1862e55d0162e21b2c3eeca94fcd0dd5",
+      "request_sha256": "daf3a9cf97bb4d5584f3c7a7519f56e983fe9f1fdbae261ede3d4ff844cc6076",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.8510356600017985,
+        "message_id": "msg_011CgV9AtGbUtUPUaz1yAHvt",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9AsuWxLGMfogbAGR8D",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 792,
+          "output_tokens": 205,
+          "output_tokens_details": {
+            "thinking_tokens": 196
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.02",
+      "spent_micro_usd": 9994,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0015",
+      "fixture": false,
+      "intent_sha256": "63189514e112b271801a8a05e8d8506168e49cb06d81aba484da097406cb27d4",
+      "request_sha256": "f4cd073c91c9582c7d23df32e4cf4214073bfaaedb662ce52b7a2d262aa05741",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.2017761769966455,
+        "message_id": "msg_011CgV9BBkaKriR2TmsYpA33",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9BBNk4jALnZ2nTZVPg",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 802,
+          "output_tokens": 293,
+          "output_tokens_details": {
+            "thinking_tokens": 284
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.03",
+      "spent_micro_usd": 12469,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0016",
+      "fixture": false,
+      "intent_sha256": "53151c93dd3c02eda29832c8460a1d134b2f9f0f1f3d259c38704929551c2415",
+      "request_sha256": "ea84bee93e380c01856e7a01c316dafa00259dd1ebcc7aec6b6982d387e2382b",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.245925968993106,
+        "message_id": "msg_011CgV9Bau6sYR596kXrkGzr",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9BaakhCPfSV6dqZNt8",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 907,
+          "output_tokens": 286,
+          "output_tokens_details": {
+            "thinking_tokens": 277
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.04",
+      "spent_micro_usd": 12854,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0017",
+      "fixture": false,
+      "intent_sha256": "a71cf66fe89ffb9107ae7f0d598dddeab8d9487a240fa8eedb91eb9207cd44f7",
+      "request_sha256": "9e201d9066353debba738ca985380e6bbf7721df8f350080ec00ec82ded1273c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.398373397998512,
+        "message_id": "msg_011CgV9Bv3Hnieor8BFZnean",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9BuihDNU4E3JsosNBw",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 722,
+          "output_tokens": 145,
+          "output_tokens_details": {
+            "thinking_tokens": 136
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.05",
+      "spent_micro_usd": 7959,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0018",
+      "fixture": false,
+      "intent_sha256": "3ceec69ed3fae919754512e554ea3a307cd16e015c93f503ff3c6bc12f1920f2",
+      "request_sha256": "1ecea9aee20cea02bc67489aebc901e5ee7673da283ff8f1d74ea98c6ff6c93f",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.058437155006686,
+        "message_id": "msg_011CgV9C7VrevKMAi9KiN1Eq",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9C7AX15kyftWhNkK2c",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 792,
+          "output_tokens": 209,
+          "output_tokens_details": {
+            "thinking_tokens": 200
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.06",
+      "spent_micro_usd": 10104,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0019",
+      "fixture": false,
+      "intent_sha256": "df37b678c2251620fb8755ac8397727ccac819fd702aab16dd6105d556897daa",
+      "request_sha256": "b18d2e91cd051701cfc9665d88402e40d43d26384dc6141be2950086b830e7bb",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.0781551229883917,
+        "message_id": "msg_011CgV9CS5KRSpwAwArGHkAN",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9CRembwSc2TwTEvArg",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 465,
+          "output_tokens": 149,
+          "output_tokens_details": {
+            "thinking_tokens": 140
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.07",
+      "spent_micro_usd": 6655,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0020",
+      "fixture": false,
+      "intent_sha256": "3ad9236356a1415fa5bf3bb0689823c38fde3fe6a2112098a7814e34aa92b7da",
+      "request_sha256": "1f582f69e9aff8df8c69c4d9a11075c848eda413dcaa6aaccf00e78dff11f9c0",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.1857522429927485,
+        "message_id": "msg_011CgV9CgBd59awB59vyy2zQ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9Cfqnqkbxj5pYUm9vn",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 894,
+          "output_tokens": 253,
+          "output_tokens_details": {
+            "thinking_tokens": 244
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.08",
+      "spent_micro_usd": 11875,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0021",
+      "fixture": false,
+      "intent_sha256": "1bf914e4345401a566eab682306777dafd32575c84bf6c9f119dd18cc476c695",
+      "request_sha256": "612383a82baf929a9d5e429ec451f65b1c11720cd1f8971875e0233e7f8436ab",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.459404182009166,
+        "message_id": "msg_011CgV9D1KKoNoZAbsULZ4FQ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9CzzxdbXvM7wssMU6P",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 693,
+          "output_tokens": 187,
+          "output_tokens_details": {
+            "thinking_tokens": 178
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e8740bae4e77d0e443e32104.quality.09",
+      "spent_micro_usd": 8954,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+}

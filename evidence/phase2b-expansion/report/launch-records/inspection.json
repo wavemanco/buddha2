@@ -1,0 +1,114 @@
+{
+  "container": {
+    "cap_drop": [
+      "ALL"
+    ],
+    "command": [
+      "-B",
+      "-m",
+      "buddha2.phase2_release_launch",
+      "execute",
+      "--study",
+      "/results/phase2-release-r018/release/study.json",
+      "--grant",
+      "/results/phase2-release-r018/grants/live-expansion-001/grant.json",
+      "--stage",
+      "expansion",
+      "--mode",
+      "provider",
+      "--inspection",
+      "/results/phase2-release-r018/launcher/fb73008b1a264f3db04c1aa0cadb7c8b.inspection.json"
+    ],
+    "container_id": "6f5cc421567ef6ecef0997972b9baa2ffc07ebaf0537f9a9b7d72282ff8e5619",
+    "entrypoint": [
+      "python"
+    ],
+    "environment_names": [
+      "BUDDHA2_IMAGE_ID",
+      "BUDDHA2_NB_UPSTREAM",
+      "BUDDHA2_OFFLINE",
+      "BUDDHA2_OUTPUT_ROOT",
+      "BUDDHA2_RELEASE_LAUNCH_MODE",
+      "BUDDHA2_TEST_OUTPUT_ROOT",
+      "GPG_KEY",
+      "HARNESS2_ROOT",
+      "HF_DATASETS_OFFLINE",
+      "HF_HUB_OFFLINE",
+      "LANG",
+      "NOVELTYBENCH_ROOT",
+      "OMP_NUM_THREADS",
+      "PATH",
+      "PYTHON_SHA256",
+      "PYTHON_VERSION",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "PYTHONPATH",
+      "PYTHONUNBUFFERED",
+      "TMPDIR",
+      "TOKENIZERS_PARALLELISM",
+      "TRANSFORMERS_OFFLINE"
+    ],
+    "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "image_architecture": "amd64",
+    "image_os": "linux",
+    "log_driver": "none",
+    "memory": 4294967296,
+    "mounts": [
+      {
+        "destination": "/workspace",
+        "rw": false,
+        "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+        "type": "bind"
+      },
+      {
+        "destination": "/results",
+        "rw": true,
+        "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+        "type": "bind"
+      }
+    ],
+    "nano_cpus": 2000000000,
+    "network_mode": "bridge",
+    "open_stdin": true,
+    "pids_limit": 256,
+    "port_bindings": {},
+    "privileged": false,
+    "publish_all_ports": false,
+    "read_only_rootfs": true,
+    "security_opt": [
+      "no-new-privileges"
+    ],
+    "state_at_inspection": "created",
+    "tmpfs": {
+      "/tmp": "rw,nosuid,nodev,size=536870912"
+    },
+    "tty": false,
+    "working_dir": "/workspace"
+  },
+  "inspection_sha256": "6c5b353688e8459398808bc77acef2159fdd1be163326d5677cb26458a6ef59a",
+  "kind": "phase2-release-host-inspection-v1",
+  "preflight": {
+    "authority_checked": true,
+    "billing_profile": "public-payg-envelope-v1",
+    "budget_policy_sha256": "3718e2ce3f31d29f9824a339bbfd0c77fc60bdea8d9fbd42f8366e7794077336",
+    "configuration_only": false,
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "credential_access": false,
+    "credentials_read": false,
+    "fixture": false,
+    "grant_path": "/results/phase2-release-r018/grants/live-expansion-001/grant.json",
+    "grant_sha256": "27d948aaa2a5200a62d6dee16ccb1aad980bc6c724065b8bcd53659c694d3bbe",
+    "journal_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b",
+    "kind": "p2r-nonsending-preflight",
+    "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+    "mode": "provider",
+    "provider_calls": 0,
+    "provider_requests": 0,
+    "run": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live",
+    "source_checked": true,
+    "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+    "stage": "expansion",
+    "study_path": "/results/phase2-release-r018/release/study.json",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "canonical_live_file_count": 108,
+  "canonical_live_files_unchanged": true,
+  "decision_sha256": "5c2ddcbd434f53209f4245c519f9479229c6b06e6dec2b9043669c5a4f338dea",
+  "kind": "p2bn-live-saved-evidence-replay-v1",
+  "mean_utility": {
+    "A": 2.747011259200218,
+    "B": 6.658121902836613,
+    "C-N": 6.797187351858792
+  },
+  "new_provider_calls": 0,
+  "provider_transport_constructions": 0,
+  "report_byte_equal": true,
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+  "summary": {
+    "attempts": 43,
+    "combined_micro_usd": 6350952,
+    "cutoff": "2026-10-28T18:55:44Z",
+    "decision_status": "complete-development",
+    "evidence_sha256": "ed7f030a3b260b65832aceca9ac4450d9a7691a321d97059d7dd5b40c7d14b87",
+    "fixture": false,
+    "historical_shared_micro_usd": 5983504,
+    "journal_status": "ready",
+    "new_assessments": 4,
+    "new_provider_calls_for_reporting": 0,
+    "new_spent_micro_usd": 367448,
+    "provider_calls": 43,
+    "report_output": "/results/phase2b-rank-format-v1/live-report-v1",
+    "reserved_micro_usd": 0,
+    "retries": 0,
+    "reused_assessments": 68,
+    "scored_new_assessments": 4,
+    "selected_method": "C-N",
+    "status": "complete",
+    "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+    "synthetic_selected_method": null
+  }
+}

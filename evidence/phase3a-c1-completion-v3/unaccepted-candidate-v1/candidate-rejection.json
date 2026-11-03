@@ -1,0 +1,26 @@
+{
+  "accepted": false,
+  "fixture_only": true,
+  "frozen_code_was_unchanged_during_run": true,
+  "journal_ends_newline": true,
+  "journal_sha256": "ab95833d190225d0338ea1e6ddeb20ae49b61719ea436490fdb5be9af4808fb0",
+  "kind": "phase3a-r2-unaccepted-offline-candidate-v1",
+  "original_folder_accessed": false,
+  "owned_verifier_container": "04f09e01e180acb59133a4f19d8cffbd6a4f6518bba2e02519327b37163e77ba",
+  "partial_fixture_events": 1088,
+  "partial_fixture_intents": 544,
+  "partial_fixture_results": 543,
+  "partial_fixture_statuses": {
+    "response": 543
+  },
+  "prior_real_liabilities_released": false,
+  "provider_calls": 0,
+  "real_API_cost_micro_usd": 0,
+  "reason": "Confirmed Ledger.state same-instance lock omission exposes recovery-projected unknown during a valid active intent; normal full-matrix success cannot validate that invariant.",
+  "recorded_at_utc": "2026-10-30T04:27:22.959389+00:00",
+  "remaining_gate_steps_not_accepted": true,
+  "reproduction_path": "runs\\phase3a-c1-completion-v3\\verification-v1\\concurrency-state-repro.json",
+  "source_sha256": "66779bdaef1b2fd55e54997184eae71e07d2f57a50a2239c8d1e41930ae0a555",
+  "study_sha256": "fcfa299b8ecb4c447bb8b573148f1ddca2466beb6a290c9180622eb18685387b",
+  "termination": "Deliberately stopped only the source-identified network-none verifier after independent actual-SDK reproduction."
+}

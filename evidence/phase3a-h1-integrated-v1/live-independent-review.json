@@ -1,0 +1,73 @@
+{
+  "all_eight_report_bytes_replayed": true,
+  "canonical_files_modified_by_reviewer": false,
+  "checker_sha256": "1ffc0b1450705a3633cc0b8322c15ce0b700c0c2bac975fcd4d38d4f0e03b473",
+  "closed_owner_proof_sha256": "9539cdd66e7c5bfcae13f8a5e95e89ce2dfae0ea29af76375857e229d2b91c5a",
+  "cold_audit_retention_map_sha256": "43b658d64e266394fe7298fa18a5197ce33652d3af066055a62c734468c9906d",
+  "cold_replay_cleanup_sha256": "d77b16cb8c7dbec4eea574fffcf33dfae8d3114bbe55e2572394e19b68f34a0d",
+  "cold_replay_helper_sha256": "a036ee97744106442c3a9990cea414a7c792e70b52e9a130df22725b2ccdf418",
+  "cold_replay_mechanical_sha256": "36d5eb4aeaa198dc6e99772cc7b80f4311209e43d2f66db0dd8138a8e98f7370",
+  "counted_attempts": 256,
+  "created_utc": "2026-10-31T17:26:48.075399+00:00",
+  "cumulative_known_micro_usd": 24463235,
+  "failure_diagnostic_sha256": "64b0593ce3cfa1c133500f9c5f5036b0fe5e99c73e2d8ea27e30d590ce387cf8",
+  "faithful_failed_attempt_closure": true,
+  "first_original_timeout_preserved": true,
+  "fixture": false,
+  "frozen_N1_rejection_independently_replayed": true,
+  "historical_reference_sha256_verified": {
+    "evidence/inspect-visibility-i1/independent-acceptance.json": "61d4c90a441f8bf2b474add9203b1cf21c89d2b41fb3cc3e5c2a83f1ff929344",
+    "evidence/phase3a-c1-completion-v4/live-outcome-v1.manifest.json": "555741b110d42f8282769144080fc5c976a5c4eb8bf6e5f9093b83475f88d91f",
+    "evidence/phase3a-c1-completion-v4/live-outcome-v1.zip": "f1fb9bd222ff31d7addaef0fa1e6556522cb8d62470a68b89c4669bbe6d255e5",
+    "evidence/phase3a-c1-completion-v4/live-outcome.json": "243c29222736d21624022e036f3a1f158725db3aa4d9fdeb4d76141aef0d3283",
+    "evidence/phase3a-c1-completion-v4/live-packet-acceptance.json": "96e00d4179252ddf3370af34ca2cf30ff536e9198cc5b5e5279d431b839ee075",
+    "evidence/phase3a-history-compat-h1/independent-acceptance.json": "a999c33b4584a6c1a94d0fda45078fca09db0e98b29f662eafd7396cdc7ff4f6"
+  },
+  "historical_reserved_micro_usd_retained": 22880000,
+  "kind": "phase3a-hi-independent-live-outcome-review-v1",
+  "known_spent_micro_usd": 7882971,
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "new_reserved_micro_usd": 0,
+  "operator_incident_sha256": "bc5996b33f36e37c3aca5ba00feca699cbfb1cb91cfc7ec813a18a570578cf04",
+  "original_folder_accessed": false,
+  "outcome_file_sha256": "01346fc1ddbbb2e37e695eb9d8aea402c3b1f36a3fe539dd075368a4a88c9e1d",
+  "packet_acceptance_still_required": true,
+  "passed": true,
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "primary_scored": 2,
+  "provider_calls_by_reviewer": 0,
+  "report_sha256": {
+    "PHASE3A_REPORT.md": "a16cdee880f02ef3ac745282f66b9b3edad552c775292bd8f8a12e6453627c47",
+    "accounting.json": "e446d02ab332b2bf5c9131dd861e8dab3b67d675fed0de0ef94cbdea8591102d",
+    "analysis.json": "abf1eaa476d09dcecc79ee9626e8aff14230cf83f884e74aa11ad40157d683ee",
+    "coverage.json": "31843ea973f043997049d6fcd9b404dc928d8fc169a0a54eb9b170999b3a83fc",
+    "protocol.json": "fe03ac2040f81d8cb9864acc2aa150ec5575b220799e0e07a6e377b442517bdf",
+    "readiness.json": "4366a3cd62afcb623447fee06a01bdb110ddf732bb786784a0dda66bb580db19",
+    "rows.json": "fa426500057bc95245040176e86165c750b851d3ca401ea2bf0226f9198d9afc",
+    "summary.json": "3c27cec5d31eaff77586d1f318d461ffab44bd6273ef91cf4d721a2ad99faa32"
+  },
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "scientific_complete": false,
+  "scientific_milestone_achieved": false,
+  "source_files_verified": 356,
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
+  "visibility_exports": [
+    {
+      "checkpoint": "closure",
+      "cleanup_sha256": "1000d1588478dd4b2896658ada071da372fb28593aa06510c4fa7d457783ca24",
+      "export_result_sha256": "6e5469a8cb6f739a5b8b552b812ef9b8e2f3ea6d1b3ea4547fcfe1ad0f99a7f7",
+      "original_status": "complete",
+      "semantic_sha256": "d8dc1c49969b972038cc8cea36bb09dba0470bc014f9dc97eed5f99a16684512",
+      "snapshot_sha256": "d090ae47101ffee4d17e62afe602fcd4f19d43707c3f429ba8a7f56d1917623c"
+    },
+    {
+      "checkpoint": "first-pair",
+      "cleanup_sha256": "192415c2958c23c64f2acb75cfb96bc0cbf15bea81d2d7a5d939fa2c25df736d",
+      "export_result_sha256": "2684bc10ca43725fba286e77f594842f88570e74ed113dcd4e32caa8234bfe5f",
+      "original_status": "timeout",
+      "semantic_sha256": "8110ba8ee3199f486670db5c8f02fe585aec43d36541fa02e545d82f4ca523c9",
+      "snapshot_sha256": "175c0d765517d524e12daca8f4dfe9f0952c80163d293e2484e0427a55fdcae7"
+    }
+  ]
+}

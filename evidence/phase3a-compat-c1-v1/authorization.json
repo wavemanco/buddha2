@@ -1,0 +1,15 @@
+{
+  "authorized": true,
+  "definition_sha256": "d3e3844a161d3d4262adcbb69e30c22e3dfdbd1870eb8b4ae24d68178ea56462",
+  "hard_work_review_deadline_utc": "2026-10-29T20:19:11Z",
+  "instruction": "complete C1",
+  "kind": "phase3a-c1-offline-user-authority-v1",
+  "live_repeat_authorized": false,
+  "objective": "complete C1",
+  "original_folder_access_authorized": false,
+  "provider_calls_authorized": false,
+  "provider_cap_micro_usd": 0,
+  "real_credential_access_authorized": false,
+  "scope": "complete definition 1.0 offline implementation, feasibility, correction, verification and handoff",
+  "start_utc": "2026-10-29T16:19:11Z"
+}

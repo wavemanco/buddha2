@@ -1,0 +1,56 @@
+{
+  "id": "ad73001af2ff376b9e4bf475badc45101ed617aab23a93cac0df5514af59f759",
+  "image": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d",
+  "network": "none",
+  "read_only": true,
+  "mounts": [
+    {
+      "Destination": "/code/followups/inspect_display_v2/display.py",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_display_v2\\display.py",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/inspect_visibility_i1/importer.py",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1\\importer.py",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/inspect_visibility_i1/paths.py",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1\\paths.py",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/input/closure.eval",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\visibility-exports\\a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a\\live\\closure\\export-v1\\export\\logs\\closure.eval",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/input/provenance.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\inspect-display-v2\\inputs-v1\\provenance.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/out",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\inspect-display-v2\\verification-v2",
+      "Type": "bind"
+    }
+  ]
+}

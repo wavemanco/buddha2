@@ -1,0 +1,90 @@
+[
+  {
+    "requested_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+    "retrieved_at_utc": "2026-10-25T09:46:22.687358+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://huggingface.co/datasets/CNCL-Penn-State/MuCE/raw/a02181e394c41602a95d0678b0ce9d880e994289/README.md",
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "etag": "\"e4c23d9929985e85e0e6d14e44487f79d0b07f4c\"",
+    "last_modified": null,
+    "bytes": 2040,
+    "sha256": "6df633265496dcc64622efac6150973914fde8e7c11bcd340a316988bb80e0f0",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-card.md"
+  },
+  {
+    "requested_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+    "retrieved_at_utc": "2026-10-25T09:46:22.874223+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://huggingface.co/api/datasets/CNCL-Penn-State/MuCE/revision/a02181e394c41602a95d0678b0ce9d880e994289",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "etag": "W/\"b02-uqgJ2CYh1z2PExaGRMM0TilPrWU\"",
+    "last_modified": null,
+    "bytes": 2818,
+    "sha256": "8f07f66f048a3e81b9588da931a340d11abe99a9161a0289f17769423b9484a7",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/original-muce-revision.json"
+  },
+  {
+    "requested_url": "https://aclanthology.org/2025.findings-emnlp.509.pdf",
+    "retrieved_at_utc": "2026-10-25T09:46:23.035950+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://aclanthology.org/2025.findings-emnlp.509.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": "\"96da2-642799f31952d\"",
+    "last_modified": "Fri, 31 Oct 2025 19:46:29 GMT",
+    "bytes": 617890,
+    "sha256": "ae43e11b0ca006d82480d2c945aad22cc498340b366c2ed4e0fd3a7c1fa9be0c",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/crpo-published.pdf"
+  },
+  {
+    "requested_url": "https://arxiv.org/html/2505.14442v2",
+    "retrieved_at_utc": "2026-10-25T09:46:23.685156+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://arxiv.org/html/2505.14442v2",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "\"CNyx6/r+uZYDEAE=\"",
+    "last_modified": "Mon, 24 Aug 2026 19:24:29 GMT",
+    "bytes": 413570,
+    "sha256": "f31563f61be770977bcdd7f018fbe911daf12bba92e0be0fdedf618a538aa557",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/crpo-arxiv-v2.html"
+  },
+  {
+    "requested_url": "https://www.tandfonline.com/doi/pdf/10.1080/10400419.2024.2326343",
+    "retrieved_at_utc": "2026-10-25T09:46:23.807071+00:00",
+    "status": "unavailable",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "requested_url": "https://www.tandfonline.com/doi/abs/10.1080/10400419.2024.2326343",
+    "retrieved_at_utc": "2026-10-25T09:46:23.870492+00:00",
+    "status": "unavailable",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "requested_url": "https://api.crossref.org/works/10.1080/10400419.2024.2326343",
+    "retrieved_at_utc": "2026-10-25T09:48:07.738164+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://api.crossref.org/works/10.1080/10400419.2024.2326343",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 11724,
+    "sha256": "0fea25a98ef599ad0e3ccc3be49c6108975e5541a65df0e1400203cd2a2ab7f5",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/distefano-crossref.json"
+  },
+  {
+    "requested_url": "https://api.osf.io/v2/nodes/2dqpj/",
+    "retrieved_at_utc": "2026-10-25T09:48:08.098719+00:00",
+    "status": "retrieved",
+    "resolved_url": "https://api.osf.io/v2/nodes/2dqpj/",
+    "http_status": 200,
+    "content_type": "application/vnd.api+json; charset=utf-8",
+    "bytes": 4234,
+    "sha256": "94a86750a0046cf81d44709fd41dcb26ffde91e1d8396791e6121a2094cd8bfc",
+    "snapshot": "evidence/phase1a-data-readiness-r07/references/semantics/distefano-osf-project.json"
+  }
+]

@@ -1,0 +1,326 @@
+{
+  "access_and_authority_limits": [
+    "Public documentation lists the exact models as available; Opus 5 is active legacy with no retirement before July 24, 2027. This does not establish this account's current access, credits, quotas, regional eligibility or acceptance of every body.",
+    "An earlier public-PAYG operator attestation may be carried forward only if the same organization/project/accounts and billing profile remain in scope. This review does not read credentials or attest account continuity.",
+    "The user's new budget scope does not itself prove account access or change the native judge parameters. No alternative model, upgrade, fallback or source-policy change is authorized by this dossier.",
+    "The historical $11.44 unresolved reservation remains untouched and is not charged or released again by this review."
+  ],
+  "account_access_confirmed_by_this_review": false,
+  "billing_bound_interpretation": [
+    "These are conditional public-PAYG operational maximum-liability reservations, not prompt-token estimates, eventual-spend predictions, invoices or protection against provider misbilling.",
+    "The full-window input bound is an inference from each documented single-request context and its usage categories. Payload limits are separate local safety guards, not certified byte-to-provider-token conversions.",
+    "Anthropic ordinary input, cache reads and cache writes all count toward context. Reasoning is billed within output and bounded by max_tokens. OpenAI prompt/cache accounting uses unadjusted token counts; reported cache-write tokens are not added a second time.",
+    "Usage/model/tier/geography categories outside the frozen accounting policy require a hold, not a cheaper assumption. Unknown delivery retains the full reservation. No fee-bearing provider server tool is requested by these profiles.",
+    "Editor turns each repeat and bill their own inputs/output; a request reservation is not an entire conversation budget. Global phase/cell/token/HTTP ceilings still apply."
+  ],
+  "credentials_read": false,
+  "exact_models_retained": true,
+  "fresh_openai_pricing_html_observation": {
+    "bytes": 583504,
+    "embedded_luna_rows_input_read_write_output": [
+      [
+        "0.20",
+        "0.02",
+        "0.25",
+        "1.20"
+      ],
+      [
+        "0.10",
+        "0.01",
+        "0.125",
+        "0.60"
+      ],
+      [
+        "0.10",
+        "0.01",
+        "0.125",
+        "0.60"
+      ],
+      [
+        "0.40",
+        "0.04",
+        "0.50",
+        "2.40"
+      ]
+    ],
+    "note": "Standard, batch/flex discounted, and Fast rows support the frozen maximum two-times tier envelope. Dynamically collapsed rows are present in official HTML even when the rendered text view omits them.",
+    "retrieval": "Unauthenticated documentation HTTP GET after opening the same official page with web tools; no API endpoint.",
+    "sha256": "75b566c26387851cf7108539ec6e42103c686ea0a00e4560c0baf32a6f201ab8",
+    "url": "https://developers.openai.com/api/docs/pricing"
+  },
+  "independent_decimal_arithmetic_checked": true,
+  "invoice_or_private_contract_certified": false,
+  "kind": "phase3a-c1-completion-primary-provider-documentation-v1",
+  "local_reviewed_sources": [
+    "src/buddha2/phase2_am1_controls.py",
+    "src/buddha2/phase2_dispatch.py",
+    "followups/phase3a_v1/accounting.py",
+    "followups/phase3a_v1/transport.py",
+    "evidence/phase2-release-r018/pricing-profile-review.json",
+    "evidence/phase3a-r2-v1/price-profile-check.json"
+  ],
+  "local_source_sha256": {
+    "evidence/phase2-release-r018/pricing-profile-review.json": "c5a4a0463afa0541f79eb7f67c655c65ee6fc3f39a3fbaca60b4aab3108272db",
+    "evidence/phase3a-r2-v1/price-profile-check.json": "dc00877558d23d4eed08fd0d5ddc4b48f76668967857ae65258501a1aef55d53",
+    "followups/phase3a_v1/accounting.py": "436438a6e7bddc79c668e6aa668238ddd228529f750451c445bc9af46e4fb2bd",
+    "followups/phase3a_v1/transport.py": "921223c9b4ed55cbee93e5a76d7e60e87aa8ee3adb03995ed3ac727fa3d3108d",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593"
+  },
+  "operational_reservations": {
+    "editor_selector_quality": {
+      "basis": "Full context at the most expensive allowed cache category (one-hour write), plus all output/thinking, with a conservative 1.1 geographic allowance. The allowance is retained for the shared role policy even where global routing is explicit; it is not a claim of an actual global surcharge. Priority Tier excludes the exact Opus 5 model; Fast mode is not requested.",
+      "calculation": "(1000000*10*1.1 + 16000*25*1.1)/1000000",
+      "maximum_billable_input_tokens": 1000000,
+      "maximum_input_rate_usd_per_million": "11",
+      "maximum_output_rate_usd_per_million": "27.50",
+      "micro_usd": 11440000,
+      "reserved_total_output_tokens": 16000,
+      "sources": [
+        "anthropic-opus",
+        "anthropic-context",
+        "anthropic-thinking",
+        "anthropic-tiers",
+        "anthropic-pricing"
+      ],
+      "usd": "11.440000"
+    },
+    "group": {
+      "basis": "Reserve the whole 1.05M context independently of maximum output, conservatively overstating a shared input/output window. Apply the documented >272K long-input rates, maximum supported inherited public tier, default cache-write price, and geographic allowance. A longer 12h write is a Responses-only opt-in, not part of this native Chat request.",
+      "calculation": "(1050000*1.10 + 128000*3.96)/1000000",
+      "input_rate_calculation": "0.20*1.25(cache write)*2(long input)*2(Fast/priority)*1.1(geography)",
+      "maximum_billable_input_tokens": 1050000,
+      "maximum_input_rate_usd_per_million": "1.10",
+      "maximum_output_rate_usd_per_million": "3.96",
+      "micro_usd": 1661880,
+      "output_rate_calculation": "1.20*1.5(long output)*2(Fast/priority)*1.1(geography)",
+      "reserved_total_output_tokens": 128000,
+      "sources": [
+        "openai-luna",
+        "openai-pricing",
+        "openai-fast",
+        "openai-cache",
+        "openai-chat",
+        "openai-context"
+      ],
+      "usd": "1.661880"
+    },
+    "strategy": {
+      "basis": "Full documented context reserved at the five-minute write rate, plus every allowed output/thinking token. Global standard controls are explicit. One-hour writes require an explicit extended TTL; the strategy body does not request one.",
+      "calculation": "(1000000*2.50 + 4096*10)/1000000",
+      "maximum_billable_input_tokens": 1000000,
+      "maximum_input_rate_usd_per_million": "2.50",
+      "maximum_output_rate_usd_per_million": "10",
+      "micro_usd": 2540960,
+      "reserved_total_output_tokens": 4096,
+      "sources": [
+        "anthropic-sonnet",
+        "anthropic-context",
+        "anthropic-cache",
+        "anthropic-pricing"
+      ],
+      "usd": "2.540960"
+    }
+  },
+  "original_folder_accessed": false,
+  "profiles": {
+    "editor_and_fixed_selector": {
+      "api": "Anthropic Messages",
+      "context_tokens": 1000000,
+      "documented_model_max_output_tokens": 128000,
+      "inference_geo": "global",
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "note": "The fixed selector additionally retains its frozen structured-output schema. This review does not add or alter it.",
+      "output_config": {
+        "effort": "high"
+      },
+      "service_tier": "standard_only",
+      "sources": [
+        "anthropic-opus",
+        "anthropic-effort",
+        "anthropic-thinking",
+        "anthropic-tiers",
+        "anthropic-pricing"
+      ],
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "native_group": {
+      "api": "OpenAI Chat Completions",
+      "cache_policy": "omitted; no extended Responses-only 12h cache-write request",
+      "context_tokens": 1050000,
+      "documented_model_max_output_tokens": 128000,
+      "maximum_output_parameter": "omitted; reserve documented model maximum",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "omitted; documented model default is medium, not an explicit request setting",
+      "service_tier": "omitted; API default auto inherits project configuration",
+      "sources": [
+        "openai-luna",
+        "openai-chat",
+        "openai-cache",
+        "openai-pricing",
+        "openai-fast",
+        "openai-context"
+      ]
+    },
+    "native_quality": {
+      "api": "Anthropic Messages",
+      "context_tokens": 1000000,
+      "documented_model_max_output_tokens": 128000,
+      "inference_geo": "omitted by the established native protocol",
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "output_config": {
+        "effort": "high"
+      },
+      "service_tier": "omitted by the established native protocol",
+      "sources": [
+        "anthropic-opus",
+        "anthropic-effort",
+        "anthropic-thinking",
+        "anthropic-tiers",
+        "anthropic-pricing"
+      ],
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "strategy_answer_plan_rank": {
+      "api": "Anthropic Messages",
+      "context_tokens": 1000000,
+      "documented_model_max_output_tokens": 128000,
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "output_config": {
+        "effort": "low"
+      },
+      "service_tier": "standard_only",
+      "sources": [
+        "anthropic-sonnet",
+        "anthropic-effort",
+        "anthropic-thinking",
+        "anthropic-tiers",
+        "anthropic-pricing"
+      ],
+      "thinking": {
+        "type": "adaptive"
+      }
+    }
+  },
+  "provider_calls": 0,
+  "rates_usd_per_million": {
+    "claude-opus-5": {
+      "1h_write": "10",
+      "5m_write": "6.25",
+      "cache_read": "0.50",
+      "ordinary_input": "5",
+      "output": "25"
+    },
+    "claude-sonnet-5-5": {
+      "1h_write": "4",
+      "5m_write": "2.50",
+      "cache_read": "0.10",
+      "ordinary_input": "2",
+      "output": "10"
+    },
+    "gpt-5.6-luna": {
+      "30m_write": "0.25",
+      "cache_read": "0.02",
+      "ordinary_input": "0.20",
+      "output": "1.20"
+    }
+  },
+  "reservation_policy_changed": false,
+  "reviewed_at_utc": "2026-10-29T18:23:24Z",
+  "scope": "Documentation and local source review only. No source changes, SDK construction, authenticated model listing, account probe, token counting, model inference or credential access.",
+  "sources": [
+    {
+      "id": "anthropic-sonnet",
+      "opened": true,
+      "supports": "Exact API ID, 1M context, 128K output and $2/$10 ordinary rates.",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+    },
+    {
+      "id": "anthropic-opus",
+      "opened": true,
+      "supports": "Exact API ID, active legacy availability, 1M context, 128K output, adaptive thinking and $5/$25 rates.",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview"
+    },
+    {
+      "id": "anthropic-pricing",
+      "opened": true,
+      "supports": "Exact cache categories; US-only 1.1 multiplier; global standard pricing; no full-1M long-context premium for these models.",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "id": "anthropic-effort",
+      "opened": true,
+      "supports": "Both exact models support the declared low/high effort controls; these are token-use guidance, not output guarantees.",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort"
+    },
+    {
+      "id": "anthropic-thinking",
+      "opened": true,
+      "supports": "Adaptive is accepted on both exact models; thinking is billed as output and shares max_tokens with response text.",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking"
+    },
+    {
+      "id": "anthropic-tiers",
+      "opened": true,
+      "supports": "standard_only excludes priority; exact Sonnet 5.5/Opus 5 models are excluded from Priority Tier.",
+      "url": "https://platform.claude.com/docs/en/api/service-tiers"
+    },
+    {
+      "id": "anthropic-context",
+      "opened": true,
+      "supports": "Uncached input, cache reads and cache writes all consume the documented context window.",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows"
+    },
+    {
+      "id": "anthropic-cache",
+      "opened": true,
+      "supports": "Five-minute default lifetime, one-hour explicit TTL, and disjoint cache write/read usage accounting.",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+    },
+    {
+      "id": "openai-luna",
+      "opened": true,
+      "supports": "Exact model, Chat Completions, 1.05M context, 128K output, default medium reasoning, $0.20/$1.20, 1.25 cache writes and >272K multipliers.",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+    },
+    {
+      "id": "openai-pricing",
+      "opened": true,
+      "supports": "Public Standard/Fast Luna embedded price rows and 10-percent regional-processing allowance.",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "id": "openai-chat",
+      "opened": true,
+      "supports": "Omitted service_tier defaults to auto/project setting; usage exposes unadjusted cache_write_tokens and actual returned tier.",
+      "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create"
+    },
+    {
+      "id": "openai-cache",
+      "opened": true,
+      "supports": "GPT-5.6 default 30m writes cost 1.25 times input; 12h writes are Responses-only opt-in; each input token is billed once in its cache category.",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+    },
+    {
+      "id": "openai-fast",
+      "opened": true,
+      "supports": "GPT-5.6 returns priority for Fast mode and supports long context; model-specific public premium comes from pricing rows.",
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode"
+    },
+    {
+      "id": "openai-context",
+      "opened": true,
+      "supports": "Single-request context accounting includes input/output and reasoning; reserving the full context as input is conservative.",
+      "url": "https://developers.openai.com/api/docs/guides/conversation-state"
+    }
+  ],
+  "status": "unchanged-public-payg-envelope-supported-conditionally"
+}

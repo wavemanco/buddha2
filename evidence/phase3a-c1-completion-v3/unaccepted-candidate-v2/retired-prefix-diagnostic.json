@@ -1,0 +1,45 @@
+{
+  "accepted": false,
+  "artifact_sha256": {
+    "runs/phase3a-c1-completion-v3/diagnostic-prefix-v1/selection.json": {
+      "bytes": 13230,
+      "sha256": "08b2abdb4056f0dda9266cff42e4deb11123118e14848f10c42c5f141388f540"
+    },
+    "runs/phase3a-c1-completion-v3/diagnostic-prefix-v1/tests.log": {
+      "bytes": 9353,
+      "sha256": "a208ab260c2d5fdbb7221d5c4a4b95f0cdcbe7f0c2e9bb5a45c5996decc5e044"
+    }
+  },
+  "completed_ok_markers": 44,
+  "completed_skip_markers": 0,
+  "completed_test_suite": false,
+  "container_absence_verified_after_stop": true,
+  "container_id": "c5ec79e75307d4f42a409ea95f51c73aa771fd45be6b5f0094bbddb15a31cfea",
+  "controlled_docker_stop_timeout_seconds": 5,
+  "created_utc": "2026-10-30T05:26:22.088208+00:00",
+  "docker_stop_exit_code": 0,
+  "exact_verified_command": [
+    "-B",
+    "/workspace/runs/phase3a-c1-completion-v3/diagnose-prefix.py"
+  ],
+  "explicit_verifier_cpu_memory_pids_limits_applied": false,
+  "failure_or_error_markers_so_far": [],
+  "fixture": true,
+  "frozen_source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89",
+  "image": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+  "kind": "retired-offline-prefix-diagnostic-v1",
+  "last_partial_test_line": "test_positive_normal_readiness_and_stable_scope (followups.phase3a_c1_completion_v3.tests.test_evidence.EvidenceTests.test_positive_normal_readiness_and_stable_scope) ... ",
+  "network": "none",
+  "original_exec_exit_code_observed": 1,
+  "original_exec_session": 78478,
+  "positive_workflow_test_reached": false,
+  "preservation": "All partial diagnostic output and the independent positive68-call diagnostic remain unchanged; no evidence was deleted or retagged.",
+  "project_read_only": true,
+  "provider_calls": 0,
+  "real_spend_micro_usd": 0,
+  "scientific_result": false,
+  "source_after_matches_exact254_before_files": true,
+  "source_before_reference": "runs/phase3a-c1-completion-v3/verification-v2/source-before.json",
+  "source_before_verified_by_diagnostic_before_execution": true,
+  "stop_reason": "Root retired this incomplete diagnostic after a separate deterministic fixture proved the premature0.3s post-done worker-exit problem. This diagnostic omitted verifier resource limits and was not needed to justify the reproduced correction."
+}

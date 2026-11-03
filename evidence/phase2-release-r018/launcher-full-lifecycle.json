@@ -1,0 +1,693 @@
+{
+  "api_spend_micro_usd": 0,
+  "authority_chain": {
+    "approved_first_review": {
+      "path": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal/reviews/first.json",
+      "sha256": "836cdf3113c268a095fe11ed7b70c7e0dd8e0d6eaecf365295b02829d0d1cc57"
+    },
+    "canonical_journal": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal",
+    "events_closed_file": {
+      "path": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal/events.jsonl",
+      "sha256": "5154c51df3df79b7d63d4fe046ef17be38bcae623434c836527075e6dba5d4a3"
+    },
+    "expansion_authority": {
+      "path": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal/authority/0002.grant.json",
+      "sha256": "ad4836bebfbd668e3f0cde2184d8c0bc92be70f97cb5ea37909f1a66ae07dfff"
+    },
+    "expansion_authority_sha256": "dd1630e8dc2f00f23da2f1251d58e02364a869155ced0d9435eff969c360be4e",
+    "expansion_cumulative_cap_micro_usd": 125000000,
+    "expansion_grant_sha256": "8d20c0501221787493a5287c1fbdd915778e521838ac255e10c7e76428ab9154",
+    "expansion_previous_authority_sha256": "72cff1bf5c8a5307f0486c82d62f2743bab624462c411458708bf2fc8bf5692a",
+    "first_authority": {
+      "path": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal/authority/0001.grant.json",
+      "sha256": "4c5a83e64d66b2c2506007e854367414eadfb117ecf5585a1a13e1bea432ab1b"
+    },
+    "first_authority_sha256": "72cff1bf5c8a5307f0486c82d62f2743bab624462c411458708bf2fc8bf5692a",
+    "first_cumulative_cap_micro_usd": 20000000,
+    "first_grant_sha256": "467f0fef37804b215857be9e4d5f9138ba192614ff3360e17c220c6de0072668",
+    "first_review_sha256": "bae23cc21ff50aee0b7c19bcc523c90faa2b015aaf3c12d08da823b7a3e72f70",
+    "fixture_grants_authorize_live": false,
+    "manifest": {
+      "path": "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/journal/manifest.json",
+      "sha256": "7c9e357cd55a15779cdde747acd2a840b9542dd0ec222915b2e66ad6d325b6f3"
+    },
+    "predecessor_and_review_links_verified": true,
+    "same_journal_verified": true
+  },
+  "bindings": {
+    "billing_profile": "public-payg-envelope-v1",
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "fixture": true,
+    "journal_id": "7c8f992c0a27547ce33c138ed2b5d52f2c2fed6e743152bd481b4bc65dfe0129",
+    "launcher_sha256": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+    "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "canonical_run_mutations_while_assembling_this_evidence": false,
+  "development_candidate_same_study": {
+    "path": "runs/phase2-release-r018/development-candidate-3/study.json",
+    "sha256": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514"
+  },
+  "evidence_scope": "Actual PowerShell/Docker launch lifecycle with pinned SDK MockTransports and fake keys; all dispatch containers network none. Software verification only.",
+  "evidence_sha256": "9bc0d12e36d070c0cd3aa40ead455d64a2ccd1e0fb9b8c92ee8ed6edb19fcd40",
+  "first_block": {
+    "actual_container": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "command": [
+        "-B",
+        "-m",
+        "buddha2.phase2_release_launch",
+        "execute",
+        "--study",
+        "/results/phase2-release-r018/development-candidate-3/study.json",
+        "--grant",
+        "/results/phase2-release-r018/grants/development-first-3/grant.json",
+        "--stage",
+        "first",
+        "--mode",
+        "mock",
+        "--inspection",
+        "/results/phase2-release-r018/launcher/89f337ee2b314d4abdc232ae848ae26e.inspection.json"
+      ],
+      "container_id": "70bb4f11cf8d7cb5615e6bcbf1d70183c964e46c8761f33266511f20f7e4b8e2",
+      "entrypoint": [
+        "python"
+      ],
+      "environment_names": [
+        "BUDDHA2_IMAGE_ID",
+        "BUDDHA2_NB_UPSTREAM",
+        "BUDDHA2_OFFLINE",
+        "BUDDHA2_OUTPUT_ROOT",
+        "BUDDHA2_RELEASE_LAUNCH_MODE",
+        "BUDDHA2_TEST_OUTPUT_ROOT",
+        "GPG_KEY",
+        "HARNESS2_ROOT",
+        "HF_DATASETS_OFFLINE",
+        "HF_HUB_OFFLINE",
+        "LANG",
+        "NOVELTYBENCH_ROOT",
+        "OMP_NUM_THREADS",
+        "PATH",
+        "PYTHON_SHA256",
+        "PYTHON_VERSION",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONNOUSERSITE",
+        "PYTHONPATH",
+        "PYTHONUNBUFFERED",
+        "TMPDIR",
+        "TOKENIZERS_PARALLELISM",
+        "TRANSFORMERS_OFFLINE"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "image_architecture": "amd64",
+      "image_os": "linux",
+      "log_driver": "none",
+      "memory": 4294967296,
+      "mounts": [
+        {
+          "destination": "/workspace",
+          "rw": false,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+          "type": "bind"
+        },
+        {
+          "destination": "/results",
+          "rw": true,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+          "type": "bind"
+        }
+      ],
+      "nano_cpus": 2000000000,
+      "network_mode": "none",
+      "open_stdin": true,
+      "pids_limit": 256,
+      "port_bindings": {},
+      "privileged": false,
+      "publish_all_ports": false,
+      "read_only_rootfs": true,
+      "security_opt": [
+        "no-new-privileges"
+      ],
+      "state_at_inspection": "created",
+      "tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=536870912"
+      },
+      "tty": false,
+      "working_dir": "/workspace"
+    },
+    "assessment_orders": 3,
+    "cumulative_attempts": 55,
+    "inspection": {
+      "path": "runs/phase2-release-r018/launcher/89f337ee2b314d4abdc232ae848ae26e.inspection.json",
+      "sha256": "86191f601ca40aff3204a800bc1ee1e1dfef4e4b3417f9328f0d3de125ede205"
+    },
+    "inspection_sha256": "4026f812f62ec76083c830fd2cadf85bf78355df4aa3b87c8f446458bd56a8f2",
+    "new_mock_http_calls": 55,
+    "result": {
+      "path": "runs/phase2-release-r018/launcher/89f337ee2b314d4abdc232ae848ae26e.result.json",
+      "sha256": "c9175853bb7c43e2ca3ae2b971b7d9b75170bf1501ff0664ee833a716144ca86"
+    },
+    "snapshot_sha256": "16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+    "status": "first-block-complete",
+    "stderr": {
+      "path": "runs/phase2-release-r018/launcher/89f337ee2b314d4abdc232ae848ae26e.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "runs/phase2-release-r018/launcher/89f337ee2b314d4abdc232ae848ae26e.stdout.log",
+      "sha256": "0a06dbb76b417f08d32332170a23684169aa4b625fa460fa96b60c3b64dc42c4"
+    },
+    "summary": {
+      "attempts": 55,
+      "cutoff": "2026-10-27T07:33:13Z",
+      "decision_status": "inconclusive",
+      "experiment_api_spend_micro_usd": 0,
+      "first_block_ready_for_review": true,
+      "fixture": true,
+      "host_inspection_sha256": "4026f812f62ec76083c830fd2cadf85bf78355df4aa3b87c8f446458bd56a8f2",
+      "missing_assessments": 69,
+      "new_mock_http_calls": 55,
+      "orders": 3,
+      "portfolios": 3,
+      "provider_calls": 0,
+      "recoverable_export_orders": 0,
+      "reserved_micro_usd": 0,
+      "selected_method": null,
+      "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/snapshots/16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+      "snapshot_sha256": "16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+      "spent_micro_usd": 42873,
+      "status": "first-block-complete",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+      "synthetic_selected_method": null
+    }
+  },
+  "first_block_unchanged_resume": {
+    "actual_container": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "command": [
+        "-B",
+        "-m",
+        "buddha2.phase2_release_launch",
+        "execute",
+        "--study",
+        "/results/phase2-release-r018/development-candidate-3/study.json",
+        "--grant",
+        "/results/phase2-release-r018/grants/development-first-3/grant.json",
+        "--stage",
+        "first",
+        "--mode",
+        "mock",
+        "--inspection",
+        "/results/phase2-release-r018/launcher/7647f19a8b9e46519070ed95fc23a7f1.inspection.json"
+      ],
+      "container_id": "8cf53350531f739735697839e60dc24cea07716637b0555080c0efda439c4039",
+      "entrypoint": [
+        "python"
+      ],
+      "environment_names": [
+        "BUDDHA2_IMAGE_ID",
+        "BUDDHA2_NB_UPSTREAM",
+        "BUDDHA2_OFFLINE",
+        "BUDDHA2_OUTPUT_ROOT",
+        "BUDDHA2_RELEASE_LAUNCH_MODE",
+        "BUDDHA2_TEST_OUTPUT_ROOT",
+        "GPG_KEY",
+        "HARNESS2_ROOT",
+        "HF_DATASETS_OFFLINE",
+        "HF_HUB_OFFLINE",
+        "LANG",
+        "NOVELTYBENCH_ROOT",
+        "OMP_NUM_THREADS",
+        "PATH",
+        "PYTHON_SHA256",
+        "PYTHON_VERSION",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONNOUSERSITE",
+        "PYTHONPATH",
+        "PYTHONUNBUFFERED",
+        "TMPDIR",
+        "TOKENIZERS_PARALLELISM",
+        "TRANSFORMERS_OFFLINE"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "image_architecture": "amd64",
+      "image_os": "linux",
+      "log_driver": "none",
+      "memory": 4294967296,
+      "mounts": [
+        {
+          "destination": "/workspace",
+          "rw": false,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+          "type": "bind"
+        },
+        {
+          "destination": "/results",
+          "rw": true,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+          "type": "bind"
+        }
+      ],
+      "nano_cpus": 2000000000,
+      "network_mode": "none",
+      "open_stdin": true,
+      "pids_limit": 256,
+      "port_bindings": {},
+      "privileged": false,
+      "publish_all_ports": false,
+      "read_only_rootfs": true,
+      "security_opt": [
+        "no-new-privileges"
+      ],
+      "state_at_inspection": "created",
+      "tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=536870912"
+      },
+      "tty": false,
+      "working_dir": "/workspace"
+    },
+    "assessment_orders": 3,
+    "cumulative_attempts": 55,
+    "inspection": {
+      "path": "runs/phase2-release-r018/launcher/7647f19a8b9e46519070ed95fc23a7f1.inspection.json",
+      "sha256": "620dc497dfb7c55655566ce5eedc8ed781a134c67520e721d0798f7bc68fb3e4"
+    },
+    "inspection_sha256": "7c4227e26e0e7fb1289c91f72ebb6826e20ee5985c435e7e1a572ace32cbd933",
+    "new_mock_http_calls": 0,
+    "result": {
+      "path": "runs/phase2-release-r018/launcher/7647f19a8b9e46519070ed95fc23a7f1.result.json",
+      "sha256": "36eabe84475825dee7ff027eadd6d6e4337437b26ae94336180cf7c990d8a06d"
+    },
+    "snapshot_sha256": "16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+    "status": "first-block-complete",
+    "stderr": {
+      "path": "runs/phase2-release-r018/launcher/7647f19a8b9e46519070ed95fc23a7f1.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "runs/phase2-release-r018/launcher/7647f19a8b9e46519070ed95fc23a7f1.stdout.log",
+      "sha256": "112b0aa848da362937a813d09b668c204e656a01977fd49ca9574a200730a9f7"
+    },
+    "summary": {
+      "attempts": 55,
+      "cutoff": "2026-10-27T07:33:13Z",
+      "decision_status": "inconclusive",
+      "experiment_api_spend_micro_usd": 0,
+      "first_block_ready_for_review": true,
+      "fixture": true,
+      "host_inspection_sha256": "7c4227e26e0e7fb1289c91f72ebb6826e20ee5985c435e7e1a572ace32cbd933",
+      "missing_assessments": 69,
+      "new_mock_http_calls": 0,
+      "orders": 3,
+      "portfolios": 3,
+      "provider_calls": 0,
+      "recoverable_export_orders": 0,
+      "reserved_micro_usd": 0,
+      "selected_method": null,
+      "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/snapshots/16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+      "snapshot_sha256": "16bef4b8f9e187015b7db9887b8b3fc50bffc5250210038573308954bedb5659",
+      "spent_micro_usd": 42873,
+      "status": "first-block-complete",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+      "synthetic_selected_method": null
+    }
+  },
+  "first_boundary_evidence": {
+    "path": "evidence/phase2-release-r018/launcher-host-integration.json",
+    "sha256": "29b8f70ac9b6c3c9a2e0b278466813f093ef6cc47f0094389f9a86716185764c"
+  },
+  "full_unchanged_resume": {
+    "actual_container": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "command": [
+        "-B",
+        "-m",
+        "buddha2.phase2_release_launch",
+        "execute",
+        "--study",
+        "/results/phase2-release-r018/release/study.json",
+        "--grant",
+        "/results/phase2-release-r018/grants/expansion/grant.json",
+        "--stage",
+        "expansion",
+        "--mode",
+        "mock",
+        "--inspection",
+        "/results/phase2-release-r018/launcher/fb70954864fd4c519794bc2a6a998076.inspection.json"
+      ],
+      "container_id": "68cc0ccfe3f5ecd16c97156257d41838344e68586f914dc3ccaa112099be4114",
+      "entrypoint": [
+        "python"
+      ],
+      "environment_names": [
+        "BUDDHA2_IMAGE_ID",
+        "BUDDHA2_NB_UPSTREAM",
+        "BUDDHA2_OFFLINE",
+        "BUDDHA2_OUTPUT_ROOT",
+        "BUDDHA2_RELEASE_LAUNCH_MODE",
+        "BUDDHA2_TEST_OUTPUT_ROOT",
+        "GPG_KEY",
+        "HARNESS2_ROOT",
+        "HF_DATASETS_OFFLINE",
+        "HF_HUB_OFFLINE",
+        "LANG",
+        "NOVELTYBENCH_ROOT",
+        "OMP_NUM_THREADS",
+        "PATH",
+        "PYTHON_SHA256",
+        "PYTHON_VERSION",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONNOUSERSITE",
+        "PYTHONPATH",
+        "PYTHONUNBUFFERED",
+        "TMPDIR",
+        "TOKENIZERS_PARALLELISM",
+        "TRANSFORMERS_OFFLINE"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "image_architecture": "amd64",
+      "image_os": "linux",
+      "log_driver": "none",
+      "memory": 4294967296,
+      "mounts": [
+        {
+          "destination": "/workspace",
+          "rw": false,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+          "type": "bind"
+        },
+        {
+          "destination": "/results",
+          "rw": true,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+          "type": "bind"
+        }
+      ],
+      "nano_cpus": 2000000000,
+      "network_mode": "none",
+      "open_stdin": true,
+      "pids_limit": 256,
+      "port_bindings": {},
+      "privileged": false,
+      "publish_all_ports": false,
+      "read_only_rootfs": true,
+      "security_opt": [
+        "no-new-privileges"
+      ],
+      "state_at_inspection": "created",
+      "tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=536870912"
+      },
+      "tty": false,
+      "working_dir": "/workspace"
+    },
+    "assessment_orders": 72,
+    "cumulative_attempts": 1320,
+    "inspection": {
+      "path": "runs/phase2-release-r018/launcher/fb70954864fd4c519794bc2a6a998076.inspection.json",
+      "sha256": "fb1066807197ccac569cc965d41d36cc5865cac264c4bb1d5e3e41aa23cef62e"
+    },
+    "inspection_sha256": "d63ee68238cf56cb8277577d3002b36ea7d5b5207707794b5f129fa201377117",
+    "new_mock_http_calls": 0,
+    "result": {
+      "path": "runs/phase2-release-r018/launcher/fb70954864fd4c519794bc2a6a998076.result.json",
+      "sha256": "7a4237bd19b40c5fb36ce34298e09f7ef242302a239a26f22aee500ee5503e1b"
+    },
+    "snapshot_sha256": "90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+    "status": "mock-pilot-complete",
+    "stderr": {
+      "path": "runs/phase2-release-r018/launcher/fb70954864fd4c519794bc2a6a998076.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "runs/phase2-release-r018/launcher/fb70954864fd4c519794bc2a6a998076.stdout.log",
+      "sha256": "228fb66d00294187d7b295d0c53f3a1416bb27c00761fbeeb2a2307de047296c"
+    },
+    "summary": {
+      "attempts": 1320,
+      "cutoff": "2026-10-27T07:53:54Z",
+      "decision_status": "complete-development",
+      "experiment_api_spend_micro_usd": 0,
+      "first_block_ready_for_review": true,
+      "fixture": true,
+      "host_inspection_sha256": "d63ee68238cf56cb8277577d3002b36ea7d5b5207707794b5f129fa201377117",
+      "missing_assessments": 0,
+      "new_mock_http_calls": 0,
+      "orders": 72,
+      "portfolios": 72,
+      "provider_calls": 0,
+      "recoverable_export_orders": 0,
+      "reserved_micro_usd": 0,
+      "selected_method": null,
+      "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/snapshots/90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+      "snapshot_sha256": "90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+      "spent_micro_usd": 1028952,
+      "status": "mock-pilot-complete",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+      "synthetic_selected_method": "A"
+    }
+  },
+  "kind": "p2r-actual-host-full-lifecycle-v1",
+  "limitations": [
+    "Synthetic outcomes exercise the full declared worklist but do not establish method effectiveness or select a real seed.",
+    "No provider access, model availability, live usage/invoice acceptance or live cancellation is demonstrated.",
+    "Provider-configuration create-only and cancellation boundary evidence remain in the earlier first-boundary record; this record complements it."
+  ],
+  "provider_requests": 0,
+  "real_credential_access": false,
+  "release_study": {
+    "path": "runs/phase2-release-r018/release/study.json",
+    "sha256": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514"
+  },
+  "reports": {
+    "cutoff": "2026-10-27T07:53:54Z",
+    "decision_sha256": "e90fa9c8ec55313ae022e5c438d821fec4107a6ddbae14bdebe83c31259b14f1",
+    "files": {
+      "PHASE2_REPORT.md": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/PHASE2_REPORT.md",
+          "sha256": "7e39e68fa545edb71864d961ef9eb1de540d7c968466eb826e0d6b0616576ea3"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/PHASE2_REPORT.md",
+          "sha256": "7e39e68fa545edb71864d961ef9eb1de540d7c968466eb826e0d6b0616576ea3"
+        }
+      },
+      "analysis.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/analysis.json",
+          "sha256": "0dfc1603c90b79868df46970736b0a3951e251a987411bc0fe85c46d3404d86d"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/analysis.json",
+          "sha256": "0dfc1603c90b79868df46970736b0a3951e251a987411bc0fe85c46d3404d86d"
+        }
+      },
+      "coverage.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/coverage.json",
+          "sha256": "c1eb0ccb3533a9cc9c89e4ef49bf7e2020851dca7d1fd4c14aedc8d9685107c3"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/coverage.json",
+          "sha256": "c1eb0ccb3533a9cc9c89e4ef49bf7e2020851dca7d1fd4c14aedc8d9685107c3"
+        }
+      },
+      "decision.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/decision.json",
+          "sha256": "c0f062ec30ecc460e00530ae62d21ebc99f18cd4f4ca45507c82829f2a3e62e4"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/decision.json",
+          "sha256": "c0f062ec30ecc460e00530ae62d21ebc99f18cd4f4ca45507c82829f2a3e62e4"
+        }
+      },
+      "execution.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/execution.json",
+          "sha256": "82e41a97c8ebff4b4971807f70c0b1527590874d18a9660facc0d1755ba8e923"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/execution.json",
+          "sha256": "82e41a97c8ebff4b4971807f70c0b1527590874d18a9660facc0d1755ba8e923"
+        }
+      },
+      "native_assessment.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/native_assessment.json",
+          "sha256": "73d6c0f896061dd318d299fd2d5ff1d8ce3c846c28c4864379646eaa0878aa3c"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/native_assessment.json",
+          "sha256": "73d6c0f896061dd318d299fd2d5ff1d8ce3c846c28c4864379646eaa0878aa3c"
+        }
+      },
+      "summary.json": {
+        "byte_identical": true,
+        "full": {
+          "path": "runs/phase2-release-r018/reports/full/summary.json",
+          "sha256": "bec623a49239ed2f9d23cb4dccba0069003033469fb9e53f1e8a5267df814693"
+        },
+        "replay": {
+          "path": "runs/phase2-release-r018/reports/replay/summary.json",
+          "sha256": "bec623a49239ed2f9d23cb4dccba0069003033469fb9e53f1e8a5267df814693"
+        }
+      }
+    },
+    "full_and_replay_decision_equal": true
+  },
+  "reviewed_expansion": {
+    "actual_container": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "command": [
+        "-B",
+        "-m",
+        "buddha2.phase2_release_launch",
+        "execute",
+        "--study",
+        "/results/phase2-release-r018/release/study.json",
+        "--grant",
+        "/results/phase2-release-r018/grants/expansion/grant.json",
+        "--stage",
+        "expansion",
+        "--mode",
+        "mock",
+        "--inspection",
+        "/results/phase2-release-r018/launcher/fb47d029fbc74f289515cce8f8831d55.inspection.json"
+      ],
+      "container_id": "ce5cc7bb4099083ce2f3bf72d68d5035b37cc193c7e9f78072891f7621ef1271",
+      "entrypoint": [
+        "python"
+      ],
+      "environment_names": [
+        "BUDDHA2_IMAGE_ID",
+        "BUDDHA2_NB_UPSTREAM",
+        "BUDDHA2_OFFLINE",
+        "BUDDHA2_OUTPUT_ROOT",
+        "BUDDHA2_RELEASE_LAUNCH_MODE",
+        "BUDDHA2_TEST_OUTPUT_ROOT",
+        "GPG_KEY",
+        "HARNESS2_ROOT",
+        "HF_DATASETS_OFFLINE",
+        "HF_HUB_OFFLINE",
+        "LANG",
+        "NOVELTYBENCH_ROOT",
+        "OMP_NUM_THREADS",
+        "PATH",
+        "PYTHON_SHA256",
+        "PYTHON_VERSION",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONNOUSERSITE",
+        "PYTHONPATH",
+        "PYTHONUNBUFFERED",
+        "TMPDIR",
+        "TOKENIZERS_PARALLELISM",
+        "TRANSFORMERS_OFFLINE"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "image_architecture": "amd64",
+      "image_os": "linux",
+      "log_driver": "none",
+      "memory": 4294967296,
+      "mounts": [
+        {
+          "destination": "/workspace",
+          "rw": false,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+          "type": "bind"
+        },
+        {
+          "destination": "/results",
+          "rw": true,
+          "source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs",
+          "type": "bind"
+        }
+      ],
+      "nano_cpus": 2000000000,
+      "network_mode": "none",
+      "open_stdin": true,
+      "pids_limit": 256,
+      "port_bindings": {},
+      "privileged": false,
+      "publish_all_ports": false,
+      "read_only_rootfs": true,
+      "security_opt": [
+        "no-new-privileges"
+      ],
+      "state_at_inspection": "created",
+      "tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=536870912"
+      },
+      "tty": false,
+      "working_dir": "/workspace"
+    },
+    "assessment_orders": 72,
+    "cumulative_attempts": 1320,
+    "inspection": {
+      "path": "runs/phase2-release-r018/launcher/fb47d029fbc74f289515cce8f8831d55.inspection.json",
+      "sha256": "0bf025dc7c9bd7e7829fa1c201410b07d369a44c13f2b32b68b05359de1e8928"
+    },
+    "inspection_sha256": "948d27442251ecc9fb9362af41d0c6ee850c15a343707ed0beab532bc7c3971f",
+    "new_mock_http_calls": 1265,
+    "result": {
+      "path": "runs/phase2-release-r018/launcher/fb47d029fbc74f289515cce8f8831d55.result.json",
+      "sha256": "4a2739199bd4ab85f3834115353cf70acabea8ec6a66f573ec907da88e167c8b"
+    },
+    "snapshot_sha256": "90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+    "status": "mock-pilot-complete",
+    "stderr": {
+      "path": "runs/phase2-release-r018/launcher/fb47d029fbc74f289515cce8f8831d55.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "runs/phase2-release-r018/launcher/fb47d029fbc74f289515cce8f8831d55.stdout.log",
+      "sha256": "fe0a48c7dd717a9a76841b1a701c5d2b041880951353e0a8fb3679ccbca1d023"
+    },
+    "summary": {
+      "attempts": 1320,
+      "cutoff": "2026-10-27T07:53:54Z",
+      "decision_status": "complete-development",
+      "experiment_api_spend_micro_usd": 0,
+      "first_block_ready_for_review": true,
+      "fixture": true,
+      "host_inspection_sha256": "948d27442251ecc9fb9362af41d0c6ee850c15a343707ed0beab532bc7c3971f",
+      "missing_assessments": 0,
+      "new_mock_http_calls": 1265,
+      "orders": 72,
+      "portfolios": 72,
+      "provider_calls": 0,
+      "recoverable_export_orders": 0,
+      "reserved_micro_usd": 0,
+      "selected_method": null,
+      "snapshot": "/results/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/mock/snapshots/90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+      "snapshot_sha256": "90594f24458f937a0e061ba022059d2bba6e04dacc4e176805e24d8ed2a97fe3",
+      "spent_micro_usd": 1028952,
+      "status": "mock-pilot-complete",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+      "synthetic_selected_method": "A"
+    }
+  },
+  "source_changes_during_lifecycle": false,
+  "status": "pass",
+  "verified_source_file_hashes": {
+    "phase2-release.ps1": "489e7df6edf0bbd610e60c99b5bd6a17b38c78bd86d97cd58fed2bff02e4c479",
+    "src/buddha2/phase2_release_launch.py": "abd77810219e83f029e08eef67efa0fc02f26e14fa4587188331c7272fb78ded",
+    "tests/test_phase2_release_launch.py": "4236f9c59e98856fee1534341469f0af2c3ca82f9fda9547fcfaa61377ad831b",
+    "tests/test_phase2_release_launcher.ps1": "bc36b2b481fc9e3bac7b17084cb977f51986dc0a40d8746ee590a33123972446"
+  }
+}

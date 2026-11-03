@@ -1,0 +1,43 @@
+{
+  "activity": {
+    "graph_available": false,
+    "synthetic_model_or_tool_events_added": false,
+    "timed_native_audits_in_info_and_csv": 256,
+    "visible_title_disclaimer": "imported audit; Activity graph unavailable"
+  },
+  "checked_at_utc": "2026-10-31T18:03:00.097603+00:00",
+  "kind": "inspect-display-v2-browser-check",
+  "method": "CUA actual Inspect accessibility state",
+  "models": {
+    "config_details_visible": true,
+    "default_models_view_limitation": "Stock view deduplicates by model ID and displays one role profile; Roles view preserves distinct role-specific configurations.",
+    "models_seen": [
+      "claude-sonnet-5-5",
+      "claude-opus-5",
+      "gpt-5.6-luna"
+    ],
+    "origin_label": "IMPORTED native model configuration; Inspect made no calls",
+    "role_counts": {
+      "answer": 140,
+      "editor": 54,
+      "fixed_selector": 1,
+      "group": 3,
+      "plan": 14,
+      "quality": 30,
+      "rank": 14
+    },
+    "roles_view_selected": true
+  },
+  "provider_calls": 0,
+  "saved_log_sha256": "ae69d14e45fdbf370c87e660bd93fc38f87cf47320702004350323528a873e63",
+  "source_display_sha256": "7b7f1bfc6ced0ae7d4137ade03e47ae30068bfb1737c9f75fc6f70726ceed963",
+  "task": {
+    "dates_basis": "controller lifetime includes validation/key wait/reviews/display",
+    "duration": "2 hr 18 min 49 sec",
+    "end": "2026-10-31 10:11:43",
+    "start": "2026-10-31 07:52:53",
+    "status": "TASK FAILED (8 SAMPLES)"
+  },
+  "timezone": "America/Los_Angeles",
+  "url": "http://127.0.0.1:8772/viewer/#/tasks/closure-v2.eval/models"
+}

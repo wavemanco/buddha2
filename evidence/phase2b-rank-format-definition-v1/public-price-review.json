@@ -1,0 +1,28 @@
+{
+  "account_or_invoice_verified": false,
+  "credential_reads": 0,
+  "existing_AM1_envelope_retained": true,
+  "kind": "p2bn-public-price-review-v1",
+  "method": "Official-domain search then opened pages; public documents only",
+  "model_profiles_changed": false,
+  "ordinary_input_output_usd_per_million": {
+    "claude-opus-5": [
+      "5",
+      "25"
+    ],
+    "gpt-5.6-luna": [
+      "0.20",
+      "1.20"
+    ]
+  },
+  "paid_authority": false,
+  "provider_calls": 0,
+  "requires_future_prelaunch_refresh": true,
+  "reviewed_at_utc": "2026-10-28T16:14:18Z",
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "https://platform.claude.com/docs/en/models/opus-5/overview",
+    "https://platform.claude.com/docs/en/about-claude/pricing",
+    "https://developers.openai.com/api/docs/pricing"
+  ]
+}

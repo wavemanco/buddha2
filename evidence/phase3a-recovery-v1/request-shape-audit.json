@@ -1,0 +1,43 @@
+{
+  "SDK_constructions": 0,
+  "actual_exception_or_charge_established": false,
+  "credential_or_lock_contents_read": false,
+  "docs_checked_utc_date": "2026-10-29",
+  "documented_prefill_incompatibility": true,
+  "event_count": 182,
+  "intent_event_sha256": "5d5f6d037422580a24dcffc9e97bc059823cb8e0b13fe9b94e5e4e910a2eff34",
+  "journal_sha256": "86f4af3164aed3c09e20c0f21695f9515318d1d24eb2cc6f284b27e29251c6e5",
+  "kind": "phase3a-r1-terminal-request-shape-audit-v1",
+  "last_content_types": [
+    "text"
+  ],
+  "last_role": "assistant",
+  "limitation": "Observed request shape plus documented API rule; no real replay or recovered failure. Does not settle or release the unknown.",
+  "message_count": 12,
+  "model": "claude-opus-5",
+  "original_folder_accessed": false,
+  "passed": true,
+  "preceding_direct_read_tool_blocks": 13,
+  "preceding_known_editor_responses": 5,
+  "preceding_known_latency_seconds": [
+    1.7658077939995565,
+    2.257311742985621,
+    2.255771136988187,
+    4.0563365450070705,
+    4.839400374010438
+  ],
+  "primary_source": "https://platform.claude.com/docs/en/api/errors#prefill-not-supported",
+  "provider_calls": 0,
+  "request_sha256": "0e136a2a2a92b9d6be91b41eef2288352b3d53ba038b86b9cf46eca63f29815e",
+  "response_retained": false,
+  "slot_id": "p3a-01.adaptive.editor.dom1.a1.t06",
+  "source_files_verified_unchanged": 149,
+  "study_sha256": "44d12d6ff196a9481bd6106541ad62d8161fff50fa7a1fd6eef899df4f627012",
+  "terminal_note_characters": 765,
+  "terminal_note_prefix": "CRITICAL - MAXIMUM STEPS REACHED",
+  "terminal_note_utf8_sha256": "dd27eb87f2347972e29af2187fea9fa8498fdd012044a60c23179083806b685f",
+  "thinking": {
+    "type": "adaptive"
+  },
+  "unknown_reserved_micro_usd": 11440000
+}

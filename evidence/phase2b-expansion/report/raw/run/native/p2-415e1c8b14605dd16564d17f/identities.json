@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "dacf2939437dc4678c89ef17669f85345412eef865ad8f32929760454ea6a685",
+  "portfolio_id": "portfolio-c1f3b6b25381f7395ba9cfafa37e3e3614d0a3bb20c5a28dd3ed4d90bb83aa2c",
+  "portfolio_sha256": "393e2c34828cafd12c51244015d7247e4970baf2976f48dd482167d0becef4e4",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-415e1c8b14605dd16564d17f.answer.00",
+      "p2-415e1c8b14605dd16564d17f.answer.01",
+      "p2-415e1c8b14605dd16564d17f.answer.02",
+      "p2-415e1c8b14605dd16564d17f.answer.03",
+      "p2-415e1c8b14605dd16564d17f.answer.04",
+      "p2-415e1c8b14605dd16564d17f.answer.05",
+      "p2-415e1c8b14605dd16564d17f.answer.06",
+      "p2-415e1c8b14605dd16564d17f.answer.07",
+      "p2-415e1c8b14605dd16564d17f.answer.08",
+      "p2-415e1c8b14605dd16564d17f.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-f8015a4addc308967e074314",
+      "index": 0,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.00",
+      "status": "ok",
+      "text_sha256": "725ddbe819433e3c341e2b8405c0a70c5ef1ab8bd97bad45dbbbbae325730422"
+    },
+    {
+      "id": "response-22b1f35254cffe098cf1ad78",
+      "index": 1,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.01",
+      "status": "ok",
+      "text_sha256": "54953be2c16c16047a0c545ce674a231abd64830a62d942b91dc1367b14ee270"
+    },
+    {
+      "id": "response-1ca5f95b951e7b2c8a6112da",
+      "index": 2,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.02",
+      "status": "ok",
+      "text_sha256": "f250f9f0ebcfd658de540ce5e2552db3569363bbe91d4ec57659b59dac54f744"
+    },
+    {
+      "id": "response-2d97bad2cd052bb9a7b9f3fb",
+      "index": 3,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.03",
+      "status": "ok",
+      "text_sha256": "725ddbe819433e3c341e2b8405c0a70c5ef1ab8bd97bad45dbbbbae325730422"
+    },
+    {
+      "id": "response-2b05b0bcd62fe7dd06983b9a",
+      "index": 4,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.04",
+      "status": "ok",
+      "text_sha256": "71fbca6f6ed54097bb25a43567f0381ca99f0ffe00af6d235520349a6203a8db"
+    },
+    {
+      "id": "response-2920a58f5d22e9ed265e3c98",
+      "index": 5,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.05",
+      "status": "ok",
+      "text_sha256": "7785dbe58a75a3a37f8df8818ca14064230dc847a607f129a92c1a3ca29a7990"
+    },
+    {
+      "id": "response-781b715ee8b1fa5de2d7e5f6",
+      "index": 6,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.06",
+      "status": "ok",
+      "text_sha256": "f6ff533d57304a8ec97a5b41b786cc6b08a2d345352b470da379cc2634908206"
+    },
+    {
+      "id": "response-0851628805d9293db2d62542",
+      "index": 7,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.07",
+      "status": "ok",
+      "text_sha256": "f250f9f0ebcfd658de540ce5e2552db3569363bbe91d4ec57659b59dac54f744"
+    },
+    {
+      "id": "response-23f674546384b60f35c0f6d3",
+      "index": 8,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.08",
+      "status": "ok",
+      "text_sha256": "7627ce56e625a037f47da2601113b1b0f0cec75d74cae41266888bc5e5e45fe2"
+    },
+    {
+      "id": "response-881b25e7596ded77544b8a1a",
+      "index": 9,
+      "request_id": "p2-415e1c8b14605dd16564d17f.answer.09",
+      "status": "ok",
+      "text_sha256": "f250f9f0ebcfd658de540ce5e2552db3569363bbe91d4ec57659b59dac54f744"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-7a77e85421d12bca8653",
+    "prompt": "Name one well received book that often appears in top book lists.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-80"
+    }
+  }
+}

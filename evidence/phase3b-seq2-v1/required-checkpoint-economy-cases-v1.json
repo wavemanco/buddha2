@@ -1,0 +1,37 @@
+{
+  "kind": "phase3b-seq2-required-checkpoint-economy-expectations-v1",
+  "definition": "PHASE3B_DEFINITION.md",
+  "section": "S2-6; section7 irrecoverable mandatory coverage stop",
+  "frozen_before_product_edits": true,
+  "method_models_caps_changed": false,
+  "cases": [
+    {
+      "id": "RC01",
+      "expected": "known c1 solverfailure observesonce immediately, savesoriginalfailure, blocksnextsolver/editor/selectorpaidintent; no integritymislabel"
+    },
+    {
+      "id": "RC02",
+      "expected": "known c2 solverfailure observesonce immediately, no native selectorpaidintent aftermissingrequiredcheckpoint"
+    },
+    {
+      "id": "RC03",
+      "expected": "requiredcheckpoint preintentbudgetstop observesonce andclosescoverage beforefurtheradmissions"
+    },
+    {
+      "id": "RC04",
+      "expected": "authenticatedsavedrequiredfailure/missingrequiredportfolio invokesobserverbeforefreshdispatch; unstarted/settledpartialresumeprefixnotinventedfailure"
+    },
+    {
+      "id": "RC05",
+      "expected": "INV/DOM probe failures retainnativebehavior; callbackdoesnotfireforprobe"
+    },
+    {
+      "id": "RC06",
+      "expected": "unknownliabilities retainexistinghold/halt; callbackneverreleasesorclassifiesunknownaszero-knownfailure"
+    },
+    {
+      "id": "RC07",
+      "expected": "actualupstream_roll swallowingExceptionscannotbypassworkflowstoplatch; rootcodeunchanged"
+    }
+  ]
+}

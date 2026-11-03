@@ -1,0 +1,25 @@
+{
+  "assessment_mapping": {
+    "('adaptive', False)": 11,
+    "('fixed', False)": 11,
+    "('fixed', True)": 11
+  },
+  "frozen_functions_patched": false,
+  "helper_sha256": "1a2194b16c5a3945989f9ba817afec482ef01466b3ae20dfd3d440dd6e06c2a9",
+  "kind": "inspect-display-v2-provenance-validation-v1",
+  "negative_checks": {
+    "cost_mismatch": true,
+    "lexical:.env": true,
+    "lexical:.writer.lock": true,
+    "lexical:auth.json": true,
+    "lexical:credential-binding.json": true,
+    "lexical:credentials.json": true,
+    "lexical:provider.stderr.log": true,
+    "lexical:provider.stdout.log": true,
+    "naive_time": true,
+    "reversed_time": true
+  },
+  "passed": true,
+  "provenance_sha256": "12862b8493de14371b5c1fe15ed8490a261cf8cc3c5af4480c79307a56b49ba4",
+  "provider_calls": 0
+}

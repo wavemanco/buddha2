@@ -1,0 +1,25 @@
+{
+  "kind": "I1-actual-browser-check-v1",
+  "date": "2026-10-31",
+  "observer": "root using CUA browser, actual DOM and screenshots",
+  "bundle": "runs/inspect-visibility-i1/verification-v6/replay-1/viewer",
+  "loopback_url": "http://127.0.0.1:8766/",
+  "passed": true,
+  "observations": {
+    "listing": "Two rows, one success and one error; model none and scientific score columns absent.",
+    "baseline": "baseline-loss/inv1.a1; TASK FAILED (1 SAMPLE); IMPORTED, NO_MODEL_CALLS, SYNTHETIC tags.",
+    "error_pane": "Imported native failure summary (not a recorded Python stack trace):\nnative result: native editor stopped after rejected history\nnative relay error: ContractError\nnative relay detail: history omitted or changed provider-returned assistant blocks",
+    "success": "fixed-changed/inv1.a1; eleven imported InfoEvents available, including empty signed and redacted synthetic history.",
+    "success_info": "native_final_text contains the exact notes block; assessment_presence absent; scientific_eligibility false.",
+    "final_browser_view": "baseline-loss error tab, exact imported failure summary visible"
+  },
+  "limitations": [
+    "Success header displays NaN duration because native execution timing was not supplied; no invented timing was inserted.",
+    "Messages tab is empty by design: native wire is imported as InfoEvents and raw metadata, rather than a reconstructed Inspect conversation; final text is available under Info/output/JSON.",
+    "This is a static saved-evidence viewer, not a live progress or provider-path test.",
+    "Browser screenshots were inspected in tool output; no standalone screenshot file is claimed."
+  ],
+  "provider_calls": 0,
+  "api_spend": 0,
+  "source_evidence_modified": false
+}

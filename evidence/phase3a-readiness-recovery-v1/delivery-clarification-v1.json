@@ -1,0 +1,21 @@
+{
+  "additional_paid_attempts": 0,
+  "all_other_required_views_remain_required": true,
+  "allowed_predecision_route": "exact_raw_or_complete_authenticated_declared_current_strategy_view",
+  "approved_interface": "RP2 3A; routine in-interface correction under RP2 section7 before live observations",
+  "authorization_sha256": "08912c34559990e0b70763de5b1feac37746a86db93301394b4ac7be71525fe3",
+  "clarification": "PHASE3A_RP2_DELIVERY_CLARIFICATION.md",
+  "clarification_sha256": "5139a699563a46c69bd69ffa799ed87b5d214260c637c4a01b4e81c15f368be4",
+  "contradictory_raw_reads_rejected": true,
+  "definition_sha256": "65be2f2dbb592ec625823bebdd8786640f49b1f8bc07c38bb58e1caec68d77cd",
+  "frozen_before_implementation_utc": "2026-11-01T08:00:36.404563+00:00",
+  "global_history_checks_unchanged": true,
+  "independent_review": "runs/phase3a-readiness-recovery-v1/reviewer/agg-lossless-original-content-review-v1.json",
+  "independent_review_sha256": "78a04454acbfe6a118a3c451a5abea733812202093e1cf645ce57069237779b0",
+  "kind": "phase3a-rp2-original-source-delivery-clarification-v1",
+  "new_strategy_information_or_prompt": false,
+  "old_eligibility_or_results_may_change": false,
+  "original_source": "harness/systemprompt.md",
+  "post_mutation_route": "exact_raw_target_only_after_last_successful_mutation",
+  "provider_calls": 0
+}

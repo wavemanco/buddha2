@@ -1,0 +1,49 @@
+{
+  "accept": "Single pass in rank order; accept only if group unused and stratum quota<4; no redistribution or new groups",
+  "construct": "creativity",
+  "context_fields": [
+    "Dataset",
+    "Set",
+    "DatasetsSplit",
+    "Language",
+    "TasksNamesFull",
+    "TaskType",
+    "RatingLabel",
+    "normalized_prompt_group",
+    "normalized_effective_prompt"
+  ],
+  "distinct_responses": "NFKC/casefold/whitespace normalized inequality",
+  "eligible_prompt_groups": "Only24alreadyexposedPhase1groups; originalnormalizedraw/effectivealiasclustering reused",
+  "heldout_row_contents": "unopened",
+  "kind": "phase1a-frozen-inspection-policy",
+  "language": "english",
+  "minimum_gap": 5,
+  "model_training_overlap_default": "unknown",
+  "namespace": "phase1a-inspection-v1",
+  "new_data_corpora": 0,
+  "new_experiment_calls": 0,
+  "orientation": "Accepted-pair hash order; lexical smaller responseID at A on even zero-based index, at B on odd",
+  "outcome_selection_information_prohibited": [
+    "Sonnet choices",
+    "Sonnet correctness",
+    "Sonnet reasons",
+    "analyst preference"
+  ],
+  "rank": "canonical_SHA256({namespace,seed,sorted_response_ids}); ascending hex digest; tie-break sorted response IDs",
+  "schema_version": 1,
+  "seed": 20261025,
+  "shortage": "Publish exact shortfall; never expand or resample",
+  "source": {
+    "configuration": "full_agreement",
+    "dataset": "CNCL-Penn-State/MuCE",
+    "revision": "a02181e394c41602a95d0678b0ce9d880e994289",
+    "split": "train"
+  },
+  "specification_revision": "0.7",
+  "strata": {
+    "both_at_least20": 4,
+    "both_below20": 4,
+    "straddling20": 4
+  },
+  "task_type": "Text"
+}

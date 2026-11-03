@@ -1,0 +1,155 @@
+{
+  "kind": "am1-acceptance-review",
+  "specification": "0.16",
+  "reviewer": "/root/am1_acceptance",
+  "review_scope": "Acceptance verification of frozen identities, scope, preservation and runtime evidence. This reviewer also implemented the control correction; separate admission and billing reviewers supplied independent financial-contract reviews.",
+  "status": "pass-offline-candidate-complete",
+  "candidate_study_sha256": "d4287971e712a15a08ffba0e8e1de3b1bcd89e8f5c7e049c860fde02e1910475",
+  "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+  "checks": {
+    "AM1-1": {
+      "status": "pass-for-declared-public-payg-envelope",
+      "evidence": [
+        "admission-review.json",
+        "billing-review.json",
+        "gate-decision.json"
+      ],
+      "limits": "Source-supported conservative inference, not provider indemnity, account access or actual billing certification. Public PAYG profile is a future live precondition; unsupported/private contracts remain blocked."
+    },
+    "AM1-2": {
+      "status": "pass",
+      "evidence": [
+        "tests/test_phase2_am1_controls.py",
+        "tests/test_phase2_dispatch.py",
+        "tests/test_phase2_am1_sdk.py",
+        "billing-review.json"
+      ],
+      "findings": "Exact payload-boundary equivalence, independently checked Decimal arithmetic, explicit input/cache categories, real SDK cache-write preservation, strict unknown-liability retention and conservative geographic cost labels verified. Legacy defaults remain distinct."
+    },
+    "AM1-3": {
+      "status": "pass-offline",
+      "distinct": {
+        "mock_http_attempts": 55,
+        "native_assessments": 3,
+        "not_attempted_slots": 1265,
+        "not_attempted_orders": 69
+      },
+      "pairs": {
+        "mock_http_attempts": 40,
+        "native_assessments": 3,
+        "not_needed_nonheads": 15,
+        "not_attempted_slots": 1265
+      },
+      "findings": "Both saved traces are fixtures with zero provider calls, no unresolved reservation, full 1320-slot/72-order denominators, inconclusive decision and no selected seed. Actual pinned SDKs use in-memory HTTP transports with sockets blocked in network-none containers."
+    },
+    "AM1-4": {
+      "status": "pass-offline",
+      "evidence": [
+        "tests/test_phase2_am1.py",
+        "tests/test_phase2_am1_controls.py",
+        "tests/test_phase2_am1_sdk.py",
+        "runtime/missing-credentials.json",
+        "runtime/missing-credentials.stdout.log"
+      ],
+      "missing_credentials_cases": 4,
+      "sdk_clients_constructed_for_missing_credentials": 0,
+      "findings": "Bound grants, canonical live journal, owner/journal locks, expansion rejection, durable interrupted intent, unknown delivery/usage, saved-artifact tampering and zero-new-attempt resume are exercised. Missing/whitespace keys reject before any SDK constructor. Preflight constructs no transport."
+    },
+    "AM1-5": {
+      "status": "pass-with-disclosed-working-report-exception",
+      "source_identity_files_verified": 22,
+      "parent_scientific_fields_identical": 18,
+      "gate_evidence_hashes_verified": 3,
+      "historical_replay": "runtime/historical-replay.json and stdout verify successful public policy decision using exact retained r012 source with original r010 study/output identities; current-source hash rejection remains strict.",
+      "static_checks": "runtime/final-checks.json exit0; Ruff, mypy22 source files, Bandit, pip check and five upstream tests passed.",
+      "project_suite": {
+        "tests": 230,
+        "seconds": 698.445,
+        "exit_code": 0,
+        "evidence": "runtime/full-suite.json",
+        "record_log_hashes_verified": true
+      },
+      "focused_suite": {
+        "tests": 34,
+        "exit_code": 0,
+        "evidence": "runtime/am1-and-policy-tests.json"
+      }
+    },
+    "AM1-6": {
+      "status": "pass-offline-handoff",
+      "limits": "Usable offline first-block candidate only. Public CLI exposes prepare/inspect/preflight/mock-first-block. A provider-enabled host launcher is excluded and unbuilt; no live grant, account/model access, current account billing verification or live effectiveness result is supplied.",
+      "report": "PHASE2_AM1_REPORT.md",
+      "frozen_definition_0_16_exactly_archived": true,
+      "current_definition_revision": "0.17",
+      "local_document_links_verified": 91,
+      "strict_utf8_documents_verified": [
+        "AGENTS.md",
+        "README.md",
+        "EXPERIMENT_PLAN.md",
+        "PHASE_DEFINITIONS.md",
+        "PHASE2_AM1_REPORT.md"
+      ],
+      "archive_packaging": "Root packages the manifest/ZIP after this final acceptance write; packaging verification remains separately recorded."
+    }
+  },
+  "preservation": {
+    "baseline_files_checked": 10553,
+    "baseline_files_missing": 0,
+    "changed_preexisting_paths": [
+      "src/buddha2/phase2_dispatch.py",
+      "src/buddha2/__main__.py",
+      "tests/test_phase2_policy.py",
+      "runs/checks/bandit.json",
+      "AGENTS.md",
+      "EXPERIMENT_PLAN.md",
+      "PHASE_DEFINITIONS.md",
+      "README.md"
+    ],
+    "frozen_groups_unchanged": {
+      "runs/phase2-r010": 7014,
+      "runs/phase2-r012": 65,
+      "evidence/phase2-r010": 48,
+      "evidence/phase2-r012": 32,
+      "evidence/phase2-readiness-r014": 12
+    },
+    "upstreams_clean_at_pins": {
+      "harness2": {
+        "tracked_files": 114,
+        "commit": "1cfe254e8d25b15f37048c3730134686abe60335"
+      },
+      "novelty-bench": {
+        "tracked_files": 169,
+        "commit": "64a23be6b18ec1dacc298830aab276061b6e143c"
+      }
+    },
+    "dependency_locks_unchanged": true,
+    "exact_revision_0_15_archived": true,
+    "mutable_working_report_exception": {
+      "path": "runs/checks/bandit.json",
+      "before_sha256": "d7ddcae403b49aba514c41f0d66844bb792f4bfc26a02da666284f26109124cf",
+      "after_sha256": "abbd3c84158159c4605484ac858046d53d871caa5b22b19b27b319c67e343c62",
+      "classification": "Working verification report overwritten by the early standard check launcher. Not listed in the r010, r012 or r014 handoff manifest; frozen evidence unchanged. Do not claim every preexisting file was unchanged."
+    },
+    "original_folder_used_for_audit": false,
+    "final_changed_preexisting_paths_verified": [
+      "src/buddha2/phase2_dispatch.py",
+      "src/buddha2/__main__.py",
+      "tests/test_phase2_policy.py",
+      "runs/checks/bandit.json",
+      "AGENTS.md",
+      "EXPERIMENT_PLAN.md",
+      "PHASE_DEFINITIONS.md",
+      "README.md"
+    ]
+  },
+  "pending": [],
+  "provider_requests_by_this_review": 0,
+  "real_credentials_accessed_by_this_review": false,
+  "phase2b_authorized": false,
+  "finalized_at_utc": "2026-10-27T06:07:18.097699+00:00",
+  "limits": [
+    "Offline source/contract/mock acceptance only; real provider/account/billing certification and scientific effectiveness remain unverified.",
+    "Provider-enabled host launcher is excluded and unbuilt; no grant, credential collection, Phase2B run or expansion follows automatically.",
+    "Global working Bandit report exception is disclosed; frozen historical source/results/verification evidence were unchanged."
+  ]
+}

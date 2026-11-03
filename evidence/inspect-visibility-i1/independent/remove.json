@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "rm",
+    "-f",
+    "buddha2-inspect-i1-final-independent-reader"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "buddha2-inspect-i1-final-independent-reader\n"
+}

@@ -1,0 +1,20 @@
+{
+  "attempts": 2,
+  "bundle_sha256": "1abe96e47ceaae4101ba5e4b6d7e793740f94f9f54c382effbfabc6ba89149d3",
+  "count_incomplete": false,
+  "finalized_presentations": 2,
+  "fixture": false,
+  "judgment_statuses": [
+    "ok",
+    "malformed"
+  ],
+  "judgments_sha256": "64f7e5722179c9ffb5a84b2eea575bafc021e031757886b8030edaa7cba2ccaf",
+  "provider_calls": 2,
+  "readiness_gate": "stopped: original automatic writer requires both statuses ok",
+  "reserved_micro_usd": 0,
+  "retries": 0,
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "spent_micro_usd": 4754,
+  "status": "ready",
+  "token_count_requests": 2
+}

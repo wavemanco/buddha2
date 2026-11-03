@@ -1,0 +1,95 @@
+{
+  "kind": "phase3b-s2-source-snapshot-correction-cases-v1",
+  "created_at_utc": "2026-11-03T05:44:28.3149195+00:00",
+  "reviewer": "/root/s2_preacceptance",
+  "status": "prospective_frozen_before_product_edits",
+  "scope": "Routine source-snapshot privacy and selective offline orchestration correction inside the authorized full P3B-S2 block",
+  "definition": "PHASE3B_DEFINITION.md:34 and S2-4/S2-7/S2-8",
+  "no_scientific_method_amendment": true,
+  "originals_only_policy": {
+    "retained_stream_copies": "No metadata/stat/read/write/exists access to any stream name beneath any retained source-copy root; no new copies or auxiliary/main-copy allowance.",
+    "classification": "Reuse the existing pinned receipt and exact canonical14 classifier before any stream metadata/content access. No global patch, widened roots, caller-supplied path allowance or blanket skip of source verification.",
+    "retained_snapshot": "Declare and strictly validate one source-bound originals-only snapshot policy: authenticated streams resolve only to canonical original locations; every other public source file is retained and hash verified.",
+    "archive": "Include canonical original14 once with pinned classification receipt; include ordinary public retained copies; never inspect/include omitted retained stream copies. Extracted-only load and replay must use the canonical archived originals.",
+    "logical_source_map": "Retain every logical source entry and its true hash, including all14 authenticated canonical original offline streams. Do not drop entries to hide source history. Changed product/code entries receive truthful new hashes under a new effective source identity.",
+    "uniform_for": "Every main,supervised,negative-fixture or other auxiliary prepare/load/packager route"
+  },
+  "cases": [
+    {
+      "id": "SS01",
+      "expect": "Freeze a precise snapshot policy in each new study before its study digest. Main and supervised/auxiliary studies use the identical policy schema and canonical classification; tampered,missing,extra or foreign policy fields fail before any retained stream path access."
+    },
+    {
+      "id": "SS02",
+      "expect": "For MAIN prepare, classify source names first,authenticate canonical original14 through existing classifier,skip all14 before constructing or touching retained-copy paths,copy every other public source file unchanged; prospective path-call traps show0retained-stream stat/read/write calls."
+    },
+    {
+      "id": "SS03",
+      "expect": "Repeat SS02 for actual supervised prepare and at least one auxiliary/native-fixture preparation route; no hidden route copies or inspects retained streams. make_grant->load_study remains covered."
+    },
+    {
+      "id": "SS04",
+      "expect": "MAIN and auxiliary load_study authenticate the logical source map/current canonical originals and strictly verify every ordinary public retained copy. The absence or accidental presence of a retained stream copy never prompts metadata/content access."
+    },
+    {
+      "id": "SS05",
+      "expect": "Missing or tampered ordinary retained source copy fails; changed canonical original or pinned classification receipt fails; no substitution with an untrusted retained stream hash or path is allowed."
+    },
+    {
+      "id": "SS06",
+      "expect": "Unknown/unclassified stream,private,cache,path-traversal or malformed source/policy name rejects lexically before metadata/content. This applies to direct inputs and traversal in prepare/load/packager."
+    },
+    {
+      "id": "SS07",
+      "expect": "Source/copy/packet symlink or reparse escape fails before escaped content access; exact canonical originals use existing ordinary-path checks. No protected original/common-parent access or mount is introduced."
+    },
+    {
+      "id": "SS08",
+      "expect": "Packager removes all retained-copy stream allowlist construction and explicit include/hash calls. It includes canonical14 once and no main or auxiliary retained copies, with lexical skip before any metadata."
+    },
+    {
+      "id": "SS09",
+      "expect": "Physical archive inventory/raw hashes/CRC independently confirm canonical14 exactly once,0retained stream copies,and unchanged ordinary source members. Extracted-only load and saved replay pass with no host original-source dependency or provider activity."
+    },
+    {
+      "id": "SS10",
+      "expect": "Acceptance tests prove nonaccess using traps before stat/read/write. Do not prove omitted-copy absence using exists/stat on excluded names. A lexical directory-name inventory or prospective call trace is acceptable."
+    },
+    {
+      "id": "SS11",
+      "expect": "New source/study/grant/output roots are required after correction; old source A0/results/manifests/failed preparations stay unchanged and labelled unaccepted. No retagging or old-matrix reuse as the corrected full-gate matrix."
+    },
+    {
+      "id": "SS12",
+      "expect": "Run a complete new actual four-prompt mocked matrix and all12 gate groups on the corrected source,including actual Windows cases,fresh real-supervisor S13 lifecycle,both original600s Inspect windows,and physical extracted-only cold replay. No final acceptance from component tests alone."
+    }
+  ],
+  "offline_orchestration_cases": [
+    {
+      "id": "OT01",
+      "expect": "Only the outer H1 whole-offline-mock container docker-start-attach wait may use an explicit10800-second timeout. It remains actual network-none,fake-key-only and exact-owner contained; source and helper defaults are not globally altered."
+    },
+    {
+      "id": "OT02",
+      "expect": "Only the outer Windows Action=mock complete operational-lifecycle wait may use an explicit10800-second timeout. Action=config,provider,preflight and other roles do not inherit this extension."
+    },
+    {
+      "id": "OT03",
+      "expect": "verify.execute default remains7200; unrelated calls and explicit shorter timeouts remain unchanged. Test captured call arguments for allowed whole-mock/mock-lifecycle callsites and disallowed roles/modes."
+    },
+    {
+      "id": "OT04",
+      "expect": "Every experimental live/model/HTTP/author/native-selector/fixed-selector/cleanup/export/startup/review deadline remains byte/value-identical to the prior accepted controls:600-second native conversations,240-second completion clamped to remaining-minus30,60-second provider cleanup,600-second first/closure exports,and existing startup/review bounds. PowerShell provider credential/ready waits are unchanged."
+    },
+    {
+      "id": "OT05",
+      "expect": "All model IDs,prompts,reasoning settings,24turns,two shape attempts,2344newattempt maximum,448calls/12Minput/6291456output per inference cell,and180global/35cell/70assessment/55first/25first-assessment dollar caps remain unchanged."
+    },
+    {
+      "id": "OT06",
+      "expect": "A new10800 orchestration timeout still fails visibly,retains original exception and exact-owner stop/remove proof,and never auto-retries/regenerates. Preserve the old7200 A0 timeout unchanged; it is not retroactively extended or passed."
+    }
+  ],
+  "effort_policy": "Existing four-focused-hour progress review and twelve-focused-hour stop/review remain unchanged; this correction supplies no new phase or effort allowance.",
+  "execution_and_acceptance": "These are prospective cases only. No provider/key/account/token-count/experiment activity is authorized by this file. New complete source-bound offline acceptance remains required before keys."
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "phase3b-s2-read-footer-compatibility-cases-v1",
+  "status": "expected_cases_frozen_before_parser_edits",
+  "basis": "Compatibility with the actual pinned Read paged footer observed in capacity-component-v4; complete source delivery remains mandatory",
+  "provider_calls": 0,
+  "cases": [
+    {"id": "RF01", "expect": "accept an exact Showing lines footer with canonical positive integers, matching declared offset, contiguous returned rows, final row, larger total and next offset end+1; exclude footer from content"},
+    {"id": "RF02", "expect": "reject wrong start, end, total, next offset, noncanonical integers, duplicate footer, mixed footer and rows after footer"},
+    {"id": "RF03", "expect": "reject duplicate or missing numbered rows inside a claimed paged range and undeclared row ranges"},
+    {"id": "RF04", "expect": "a valid partial page alone cannot satisfy complete delivery; every original source line must remain present and byte-equal"},
+    {"id": "RF05", "expect": "the exact saved capacity-v4 pre-first-mutation request passes the shared information guard; dropping a mandatory view still rejects"}
+  ]
+}

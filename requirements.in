@@ -1,0 +1,17 @@
+# Direct offline subset from the pinned NoveltyBench lock; CPU Torch is deliberate.
+numpy==2.2.6
+pandas==2.3.2
+pydantic==2.11.7
+tqdm==4.67.1
+openai==1.107.0
+anthropic==1.4.0
+sacrebleu==2.5.1
+rouge-score==0.1.2
+# Security refresh of runtime packages only; native benchmark source stays pinned.
+transformers==5.20.2
+torch==2.14.1+cpu
+# Development checks: their exact versions/transitives are frozen in requirements.lock.
+ruff
+mypy
+bandit
+pip-audit

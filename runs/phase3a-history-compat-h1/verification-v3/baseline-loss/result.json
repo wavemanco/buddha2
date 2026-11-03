@@ -1,0 +1,43 @@
+{
+  "api_spend": 0,
+  "baseline_loss_expected": true,
+  "component_only_no_scientific_claim": true,
+  "failure": "native editor stopped after rejected history",
+  "fixture": true,
+  "history_guard_audits": [
+    {
+      "history_preserved": true,
+      "history_restored": false,
+      "request_sha256": "acc5a02e4f70ceaaa625f159908a7c4332b19213516a87d7667057007f3552bc",
+      "response_content_sha256": "15dd115d2c8eae6319d2241894512743c1d1cc2d2e261a40eb605863664bcd32",
+      "slot_id": "p3a-01.adaptive.editor.inv1.a1.t01"
+    }
+  ],
+  "invalid_ending_thinking": false,
+  "label": "inv1.a1",
+  "mock_http_calls": 1,
+  "native_proof": {
+    "R1_final_verbatim_rule_visible": true,
+    "R3_deliberately_inefficient_evidence_reading": true,
+    "actual_system_sha256": "9b3afd9285f02d01dbbf3f3c383f4a425731b58c64ad144fef142f6ba1d68735",
+    "authoring_system_sha256": "37801570b6611ee29cd1b927cf63da7e1fba61160d79ee0c2ff8719c4cf97077",
+    "configured_system_visible_before_mission": true,
+    "decision": "EDIT",
+    "decision_after_complete_evidence": false,
+    "fixture": true,
+    "manifest_sha256": "75a01267aa8c023be07d76d1b99bc23db44c60533801cad8849242cd0ab15478",
+    "mission_visible_before_evidence": false,
+    "ordinary_rounds": 1,
+    "source_evidence": {},
+    "terminal_note_used": false,
+    "verification_after_write": false
+  },
+  "native_reply_ok": false,
+  "native_scope": "actual unchanged Harness2 Proposer.call/OpenCode; no scheduler matrix or scientific effect",
+  "passed": true,
+  "provider_calls": 0,
+  "response_content_sha256": [
+    "15dd115d2c8eae6319d2241894512743c1d1cc2d2e261a40eb605863664bcd32"
+  ],
+  "within_response_interleaving": true
+}

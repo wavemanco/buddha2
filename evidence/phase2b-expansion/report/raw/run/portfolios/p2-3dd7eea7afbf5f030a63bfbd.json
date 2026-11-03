@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-ab5642fe625ed0ff7e64281578f91160e9f8f79cc95eaf04af490cec3e61706a",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.00",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.01",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.02",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.03",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.04",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.05",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.06",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.07",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.08",
+      "p2-3dd7eea7afbf5f030a63bfbd.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-572fa4e435af7464374461e5",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.00",
+      "status": "ok",
+      "text": "**Biscuit** is a warm, memorable name for a loyal dog. It suggests a friendly, goldenhearted companion who sticks by his person through everything.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Scout**: for an adventurous, watchful dog\n- **Murphy**: for a classic, steadfast companion\n- **Juniper**: for a gentle, quietly devoted dog\n- **Ranger**: for a brave, protective hero"
+    },
+    {
+      "id": "response-dc30a1a9ccba1a6439aab76b",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.01",
+      "status": "ok",
+      "text": "**Barley** is a great name for your loyal dog character. It's warm, earthy, and friendly, and it suits a steadfast companion who sticks by his person through everything.\n\nIf you'd like alternatives with a similar feel:\n\n- **Juniper**: for a gentle, devoted female dog\n- **Atlas**: for a dog who \"carries\" his family's burdens\n- **Wren**: small but fiercely loyal\n- **Moss**: quiet, steady, and always nearby\n\nIf you tell me the dog's breed, personality, or the story's setting, I can tailor the name more closely."
+    },
+    {
+      "id": "response-3289a93bc79743140ec6f0f7",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.02",
+      "status": "ok",
+      "text": "**Bramble**\n\nIt's a warm, earthy name that suits a loyal, steadfast dog. It also has a bit of scrappy charm, like a dog who sticks close through thick and thorny times.\n\nIf you'd like alternatives, here are a few depending on tone:\n- **Juniper** (gentle, heartfelt)\n- **Moss** (quiet, dependable)\n- **Captain** (classic, heroic)"
+    },
+    {
+      "id": "response-522a72c3f2272773319f7d85",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.03",
+      "status": "ok",
+      "text": "**Barnaby**\n\nIt's warm and a little old-fashioned, and it suits a faithful companion who sticks by his person through everything. It also shortens nicely to \"Barn\" or \"Barney\" for affectionate moments.\n\nIf you'd like other options, here are a few with different feels:\n\n- **Juniper** – gentle and nature-minded\n- **Ranger** – rugged, adventurous\n- **Biscuit** – playful and endearing\n- **Hachi** – a nod to the famously loyal Akita, Hachikō\n\nIf you tell me the dog's breed, the setting, or the tone of your story, I can tailor the name more closely."
+    },
+    {
+      "id": "response-ba32be8fc5a5d17763e14a70",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.04",
+      "status": "ok",
+      "text": "**Bram**\n\nIt's short, sturdy, and warm, which suits a loyal dog. If you'd like other options with a different feel:\n\n- **Scout**: for an adventurous, watchful dog\n- **Juniper**: for a gentle, soft-hearted one\n- **Moss**: for a quiet, steady companion\n\nIf you tell me the dog's breed, setting, or era, I can tailor the name more closely."
+    },
+    {
+      "id": "response-64f46c163ceea778326766ed",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.05",
+      "status": "ok",
+      "text": "**Biscuit** is a great name for your loyal dog character. It's warm and approachable, and it suits a faithful companion who's always at someone's side.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Gus**: sturdy and old-fashioned, good for a classic tale\n- **Juniper**: gentle and a little unexpected\n- **Ranger**: fits an adventure or working-dog story\n- **Ash**: quiet and dignified, suited to a more emotional story\n\nIf you tell me the dog's breed, the era, or the mood of the story, I can suggest something more tailored."
+    },
+    {
+      "id": "response-558eb0fd4ca2430428dff66a",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.06",
+      "status": "ok",
+      "text": "**Biscuit** is a great fit: warm, friendly, and a little humble, which suits a loyal dog.\n\nIf you'd like other options depending on the tone of your story:\n\n- **Gentle or heartwarming:** Willow, Clover, Barley\n- **Classic and timeless:** Rusty, Scout, Duke\n- **Heroic or noble:** Atlas, Kodiak, Sergeant\n- **Whimsical:** Pickles, Waffles, Bean\n\nIf you tell me the dog's breed, the setting, or the mood of the story, I can narrow it down further."
+    },
+    {
+      "id": "response-95d7d65b578aab8ba7d4de5e",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.07",
+      "status": "ok",
+      "text": "**Barnaby**\n\nIt's a warm, sturdy name that suits a loyal companion. If you'd like a different feel, here are a few alternatives:\n\n- **Scout**, for an adventurous, watchful dog\n- **Murphy**, for a friendly, easygoing one\n- **Juniper**, for a gentle, devoted female dog\n- **Ash**, for a quiet, steadfast one\n\nIf you tell me the dog's breed, the setting, or the tone of your story, I can tailor the name more closely."
+    },
+    {
+      "id": "response-d951b5d97314ddc2344e67ec",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.08",
+      "status": "ok",
+      "text": "**Barnaby**\n\nIt's a warm, sturdy name that suits a loyal dog, one who waits by the door, follows his person everywhere, and never gives up on them.\n\nIf you'd like other options with a different feel:\n\n- **Ember** (warm, devoted)\n- **Scout** (faithful, adventurous)\n- **Hank** (dependable, gruff)"
+    },
+    {
+      "id": "response-4179bcf9acd772f099bbe4fb",
+      "request_id": "p2-3dd7eea7afbf5f030a63bfbd.answer.09",
+      "status": "ok",
+      "text": "**Biscuit** is a good name for your loyal dog character. It's warm and friendly, and it suits a faithful companion.\n\nIf you'd like other options, depending on the tone of your story:\n\n- **Hachi** (a nod to the famously loyal Akita)\n- **Scout** (adventurous, dependable)\n- **Murphy** (classic and affectionate)\n- **Juniper** (gentle, a bit unexpected)\n\nIf you tell me the dog's breed, the setting, or the mood of the story, I can narrow it down further."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-b1b0aa2062fdabf30542",
+    "prompt": "Name the dog character in my story about a loyal dog.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-21"
+    }
+  }
+}

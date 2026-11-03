@@ -1,0 +1,86 @@
+{
+  "all_original_readiness_and_startup_cases_remain_required": true,
+  "cases": [
+    {
+      "case": "actual_agg_original1211_bytes18lines_complete_predecision_view",
+      "expected": "pass_prospective_original_input_only",
+      "id": "D01"
+    },
+    {
+      "case": "exact_raw_plus_required_views",
+      "expected": "pass",
+      "id": "D02"
+    },
+    {
+      "case": "wrong_original_source_path",
+      "expected": "reject",
+      "id": "D03"
+    },
+    {
+      "case": "wrong_source_hash",
+      "expected": "reject",
+      "id": "D04"
+    },
+    {
+      "case": "missing_declared_chunk",
+      "expected": "reject",
+      "id": "D05"
+    },
+    {
+      "case": "out_of_order_or_noncontiguous_character_ranges",
+      "expected": "reject",
+      "id": "D06"
+    },
+    {
+      "case": "truncated_model_visible_view",
+      "expected": "reject",
+      "id": "D07"
+    },
+    {
+      "case": "view_delivered_only_after_decision",
+      "expected": "reject",
+      "id": "D08"
+    },
+    {
+      "case": "original_view_used_as_changed_output_proof",
+      "expected": "reject",
+      "id": "D09"
+    },
+    {
+      "case": "contradictory_raw_read_with_valid_view",
+      "expected": "reject",
+      "id": "D10"
+    },
+    {
+      "case": "same_text_undeclared_copy",
+      "expected": "reject",
+      "id": "D11"
+    },
+    {
+      "case": "forged_or_wrong_caller_result_ownership",
+      "expected": "reject",
+      "id": "D12"
+    },
+    {
+      "case": "unicode_character_ranges_and_exact_UTF8_hash",
+      "expected": "valid_pass_byte_offset_confusion_reject",
+      "id": "D13"
+    },
+    {
+      "case": "other_required_view_missing",
+      "expected": "reject",
+      "id": "D14"
+    },
+    {
+      "case": "normal_keep_base_complete_declared_input",
+      "expected": "pass_no_forced_edit",
+      "id": "D15"
+    }
+  ],
+  "clarification_file_sha256": "a5904c25fe8f10a5c9e0d26c5221c7218708f28922774a9076e862cbf6111e30",
+  "frozen_before_implementation_utc": "2026-11-01T08:00:36.404563+00:00",
+  "kind": "phase3a-rp2-delivery-supplemental-cases-v1",
+  "old_results_may_change": false,
+  "original_inventory_unchanged_sha256": "39e74492adeb00669c5ce18fad03dbf6211b2698685794d18d70c028d0816fb0",
+  "provider_calls": 0
+}

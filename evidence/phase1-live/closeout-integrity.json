@@ -1,0 +1,22 @@
+{
+  "evaluator_outcome": "diagnostic-only",
+  "historical_archives_unchanged": {
+    "phase-definitions-0.3.md": "7c09f9c1ff727f4e6d52ad9b9224dec8f622a5998affcd2bbe8728f77c74e8e2",
+    "phase-definitions-0.4.md": "ee735798095c6ecb63afacd46121150de0d54b0b3ccb2fe0d84d6a131af8b1f4",
+    "phase-definitions-0.5.md": "67167486a587d2ee4f05810ac30e91009013a0002aa2cd41099acbdc6063ef85",
+    "phase0-decisions-0.3.md": "a7ab0957c6b423239421ed7ff759cbdd3c1c36e324644ce78e5e306946f72412"
+  },
+  "later_phases_started": false,
+  "local_document_links_checked": 64,
+  "package_hashes_match_frozen_bundle": true,
+  "phase_execution_complete": true,
+  "protected_source_launchers_evidence_and_existing_suite_unchanged_since": "68feb6a",
+  "recorded_at_utc": "2026-10-25T08:42:09.539191+00:00",
+  "schema_version": 1,
+  "separately_added_and_verified_helper_test": "tests/test_phase1_key.ps1",
+  "upstream_revisions": {
+    "harness2": "1cfe254e8d25b15f37048c3730134686abe60335",
+    "novelty-bench": "64a23be6b18ec1dacc298830aab276061b6e143c"
+  },
+  "upstream_worktrees_clean": true
+}

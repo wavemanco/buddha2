@@ -1,0 +1,129 @@
+{
+  "kind": "phase3b-s2-independent-preacceptance-recheck-v2",
+  "reviewer": "/root/s2_preacceptance",
+  "created_at_utc": "2026-11-03T01:57:24.4915540+00:00",
+  "status": "corrected_seams_pass_final_gate_pending",
+  "passed": false,
+  "corrected_seams_pass": true,
+  "final_acceptance": false,
+  "source_frozen": false,
+  "predecessor": "evidence/phase3b-seq2-v1/preacceptance-review-v1.json",
+  "predecessor_file_sha256": "ce40adcc8e3ed3365c5eaee3360dcd13ab29f9d43dfd75faf70dcd598b79c4a2",
+  "reviewed_sha256": {
+    "evidence/phase3b-seq2-v1/preacceptance-review-v1.json": "ce40adcc8e3ed3365c5eaee3360dcd13ab29f9d43dfd75faf70dcd598b79c4a2",
+    "evidence/phase3b-seq2-v1/package_public.py": "b867c9f2c0c3e7a8acf6aa77ca254bca9ca6a005bb5c7dc1852512599c352470",
+    "followups/phase3b_seq2_v1/accounting.py": "6756e4a923895125f87b1717943e9d2aea1fd3473bceb28ed2fcd9db2b357ec9",
+    "followups/phase3b_seq2_v1/strategy.py": "f2d941c19199044c8990a43d760021616377ed91df85cfae91f7b809cf217ac3",
+    "followups/phase3b_seq2_v1/ledger_core.py": "5cdf04d7418a228d897d79e32c456fc9a2c2069dc503ad46d96ff4a4b55ecc02",
+    "followups/phase3b_seq2_v1/workflow.py": "79ed41d9a25e35247935b0ef2e2818e4e6532246fce8e0be302b4bc501d3e244",
+    "followups/phase3b_seq2_v1/report.py": "c58fa908a893e6f5935b2530af72e5c21576700d7d1b36383cb8f20a6fd22e0b",
+    "followups/phase3b_seq2_v1/verify.py": "37c883b2129d633246d0ce9ba9f749641ab04734e23707e6861d2f9a013fa748",
+    "followups/phase3b_seq2_v1/test_workflow_s2.py": "22cf5b66e34ffde00f9758210800aa1cb5686f429acc2dcbea2bbb2d018bb937",
+    "followups/phase3b_seq2_v1/test_fixed_pool_s2.py": "656ddf2b94e6f5f89667ffb938c8d5cf91b93d14a26bea617e26bea6ceb4c1e1",
+    "followups/phase3b_seq2_v1/test_package_s2.py": "0b5999f3028064935085ace5bc8d46cc2f8e94858faf5dfd5255b705c5a779a1",
+    "followups/phase3b_seq2_v1/test_verify_s2.py": "a9347e63a40892935d18330f1a4289e9b9878ebc53949e03d303569d3a7eb2fc",
+    "runs/phase3b-seq2-v1/component-workflow-corrections-v2/final-confirmation.json": "11e6620656317ca81f65fbde18bdd8b12537182f4cf59a497da598bdf061a1cc",
+    "runs/phase3b-seq2-v1/component-workflow-corrections-v2/check-result.json": "271f277508be62742ffa7958460d3ad4cf47536bcf241c846ad08ed4f0098a83",
+    "runs/phase3b-seq2-v1/component-workflow-corrections-v2/result.json": "9f946c74b3e9ee200321dbd12e70e24226a402a05776779305489dfec6998fa8",
+    "runs/phase3b-seq2-v1/component-root-v2/execution.json": "e5a5f9fe4657b12be15d8292f9d53808d54a58fc57dc5fbef57c88d38b9d178a"
+  },
+  "workflow_component_hash_matches": {
+    "accounting.py": true,
+    "ledger_core.py": true,
+    "workflow.py": true,
+    "report.py": true,
+    "strategy.py": true,
+    "test_workflow_s2.py": true,
+    "test_fixed_pool_s2.py": true
+  },
+  "review_method": "Read-only source, test-source and saved component evidence review. Reviewer did not run tests, imports, containers, SDKs, provider or account probes.",
+  "resolved_findings": [
+    {
+      "evidence": [
+        "package_public.py:16 complete private/cache set used by public and safe before lstat",
+        "test_package_s2.py traps Path.lstat for private/cache direct paths",
+        "component-root-v2/execution.json contains passing privacy trap test"
+      ],
+      "id": "F01",
+      "status": "Corrected in current source; saved root test record passes metadata trap"
+    },
+    {
+      "evidence": [
+        "strategy.py:349-360 rejects later partial requests or selector after incomplete pool",
+        "strategy.py:379-392 preserves failure and remaining not_attempted, aborts before selector unless all12 full portfolios",
+        "workflow.py:1244-1255 blocks further paid work on missing method or required checkpoint",
+        "report.py:142-180 and416-425 require allfour full fixed pools and allfour normal native selectors",
+        "test_fixed_pool_s2.py first/seventh malformed actual-SDK plan tests stop at exact attempt, preserve failures and zero-call replay; first/later workflow stops covered"
+      ],
+      "id": "F02",
+      "status": "Corrected in source and source-matched saved component tests"
+    },
+    {
+      "evidence": [
+        "verify.py:139-151 requires fixture=True/authentic=False, six normal stages and native selector",
+        "verify.py:196-200 requires scientific_complete=False and authentic_live_path=False for matrix",
+        "test_verify_s2.py rejects claimed live authenticity, missing stage, terminal, fallback and missing selector"
+      ],
+      "id": "F03",
+      "status": "Corrected in source and saved root tests"
+    },
+    {
+      "evidence": [
+        "ledger_core.py:367-384 applies permanent55/25 caps to p3b-01 regardless engineering review",
+        "workflow.py:1290-1296 converts assessment CheckpointStop to primary-stop, cannot reopen for further work",
+        "test_workflow_s2.py:238-255 covers exact55/25 reservation boundaries plus1 microUSD before and after review",
+        "test_fixed_pool_s2.py known first assessment checkpoint stop cannot continue"
+      ],
+      "id": "F05",
+      "status": "Corrected in source and source-matched saved component tests"
+    }
+  ],
+  "saved_validation_evidence": {
+    "workflow_corrections": {
+      "all_checks_passed": true,
+      "network": "none",
+      "static_checks": "ruff,mypy7files,bandit saved exit0",
+      "source_hashes_all_match_current": true,
+      "path": "runs/phase3b-seq2-v1/component-workflow-corrections-v2/final-confirmation.json",
+      "tests": 20,
+      "provider_calls": 0,
+      "owner_absent": true
+    },
+    "root_component": {
+      "path": "runs/phase3b-seq2-v1/component-root-v2/execution.json",
+      "not_whole_gate": true,
+      "windows_only_skips": 2,
+      "exit_code": 0,
+      "passed": 9,
+      "methods_run": 11
+    }
+  },
+  "remaining": [
+    {
+      "id": "F04",
+      "status": "Pending; runtime agent still implementing/revalidating all-path mandatory source/read/delivery proof; not accepted by this recheck"
+    },
+    {
+      "id": "G01",
+      "status": "Pending; realistic large cumulative round2/history/both-selector capacity proof still being implemented; not accepted by this recheck"
+    },
+    {
+      "id": "G02",
+      "status": "Pending; final exact source-bound whole gate, fresh keyless supervisor rehearsal, cold extracted-only replay, archive/CRC/source acceptance and final independent review"
+    }
+  ],
+  "new_material_findings_in_rechecked_corrected_seams": [],
+  "pricing_and_arithmetic": "Independent official-document and liability/worklist arithmetic pass from immutable v1 note remains applicable; no additional provider/account verification performed.",
+  "scope": {
+    "private_cache_or_provider_stream_paths_read_or_statted": false,
+    "provider_calls": 0,
+    "tests_executed_by_reviewer": 0,
+    "product_edits": false,
+    "protected_original_accessed": false,
+    "sdk_imports_or_constructors": 0,
+    "only_write": "This new append-only v2 audit note",
+    "containers_run_by_reviewer": 0,
+    "real_credentials_accessed": false
+  },
+  "next_required": "Complete pending all-path proof and capacity work, freeze final source identity, run final whole gate/keyless operational rehearsal and cold extracted packet acceptance, then a fresh independent review. This note grants no key/live acceptance."
+}

@@ -1,0 +1,30 @@
+{
+  "closed_archive_sha256": "efaefbda81e12fe12f1a443acbdc1a37aeb423746e10605cbbee085bfef9fa16",
+  "closed_live_cost_micro_usd": 1293437,
+  "closed_live_requests": 86,
+  "cumulative_max_attempts_including_closed": 813,
+  "definition": "PHASE3A_R1_DEFINITION.md",
+  "definition_sha256": "311518f41f18a56e6e7e9c48ad65172dcd4ce9cc41a684cca0a001597b9d4d8d",
+  "existing_included_checkpoint_micro_usd": 65000000,
+  "existing_phase_cap_micro_usd": 220000000,
+  "kind": "phase3a-r1-budget-proposal-v1",
+  "max_combined_first_checkpoint_micro_usd": 64993437,
+  "max_combined_phase_micro_usd": 219993437,
+  "new_assessment_pool_micro_usd": 58700000,
+  "new_first_assessment_sublimit_micro_usd": 23700000,
+  "new_inference_cap_per_cell_micro_usd": 20000000,
+  "new_inference_cells": 8,
+  "new_paid_calls_authorized": false,
+  "new_pilot_authorized": false,
+  "new_worklist_max_attempts": 727,
+  "proposed_new_first_checkpoint_micro_usd": 63700000,
+  "proposed_new_phase_cap_micro_usd": 218700000,
+  "request_reservations_micro_usd": {
+    "group": 1661880,
+    "opus": 11440000,
+    "sonnet": 2540960
+  },
+  "status": "proposed-not-authorized",
+  "working_combined_demand_micro_usd": 17187327,
+  "working_new_demand_micro_usd": 15893890
+}

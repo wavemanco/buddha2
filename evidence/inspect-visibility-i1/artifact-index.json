@@ -1,0 +1,147 @@
+{
+  "files": {
+    "environment/image-inspect.json": {
+      "bytes": 2812,
+      "sha256": "7da3e8b38ff86c96b7a72fe4db9c913d7876ef95354213453ce5a43357c4ed51",
+      "source": "runs/inspect-visibility-i1/setup-v3/image-inspect.json"
+    },
+    "environment/installed.json": {
+      "bytes": 1770,
+      "sha256": "059aa83bc9f51ca6a397c0633003804584b2142365129fe1eee67e4e7c52cb0c",
+      "source": "runs/inspect-visibility-i1/setup-v3/installed.json"
+    },
+    "environment/license-review.json": {
+      "bytes": 25729,
+      "sha256": "779467112a803f048c28acb3d301b03667219756e6e2b7ebaba120c4c85fcd5f",
+      "source": "runs/inspect-visibility-i1/setup-v3/license-review.json"
+    },
+    "environment/requirements.lock": {
+      "bytes": 7856,
+      "sha256": "5715e99398c6ae2ac56189f77f3341ef4ea53e1d111b503a015b62326843d8a0",
+      "source": "runs/inspect-visibility-i1/setup-v3/requirements.lock"
+    },
+    "environment/resolution.json": {
+      "bytes": 1050257,
+      "sha256": "72e4c3171027fd952615ad471f5dd9c58593dcff98f824f438f41e52c0ad1890",
+      "source": "runs/inspect-visibility-i1/setup-v3/resolution.json"
+    },
+    "environment/wheel-manifest.json": {
+      "bytes": 38504,
+      "sha256": "9b5100c6830bf06ec8d307cd11686ff1d04ffa53e5fbb7d0a629d56bc17b5638",
+      "source": "runs/inspect-visibility-i1/setup-v3/wheel-manifest.json"
+    },
+    "logs/baseline-loss.eval": {
+      "bytes": 13837,
+      "sha256": "a20f3852d4cc50461223641124f647c63ff62eb4d7b2c4dfe20c526f4f120857",
+      "source": "runs/inspect-visibility-i1/verification-v6/replay-1/logs/baseline-loss.eval"
+    },
+    "logs/fixed-changed.eval": {
+      "bytes": 29474,
+      "sha256": "8fbbaf2835dae05af0c4b4d9f52956d2aa20160829ff68bc00c0ab05c65acb4f",
+      "source": "runs/inspect-visibility-i1/verification-v6/replay-1/logs/fixed-changed.eval"
+    },
+    "verification/0-actual-container.json": {
+      "bytes": 12075,
+      "sha256": "cc13c60bcad33be8e7cfc81657b8fc8789e17e073bec51327f1986c9a235c11d",
+      "source": "runs/inspect-visibility-i1/verification-v7/0-actual-container.json"
+    },
+    "verification/0-execution.json": {
+      "bytes": 1070,
+      "sha256": "70e5c36ab54bf0879d9203945038c7e5c64ee1d8d1868e65c932fd50aef5d23b",
+      "source": "runs/inspect-visibility-i1/verification-v7/0-execution.json"
+    },
+    "verification/0-remove.json": {
+      "bytes": 188,
+      "sha256": "5fdd5da2b2f3986e2aa84cf170803752ffc34ffb711e4959b96d2566178d8156",
+      "source": "runs/inspect-visibility-i1/verification-v7/0-remove.json"
+    },
+    "verification/0-terminal.json": {
+      "bytes": 12622,
+      "sha256": "fbfd123a4b56cf56f8e1011f8ad8f6905b2f4c7c078515a4243d12ea5bddc2f9",
+      "source": "runs/inspect-visibility-i1/verification-v7/0-terminal.json"
+    },
+    "verification/1-actual-container.json": {
+      "bytes": 12321,
+      "sha256": "3a965f085bb45641fc639b691998041cb9e84af723e4b938369f3c8c28ca251c",
+      "source": "runs/inspect-visibility-i1/verification-v7/1-actual-container.json"
+    },
+    "verification/1-execution.json": {
+      "bytes": 400,
+      "sha256": "0ed8ff37bb3e7ee5b1bf1969f07ecb8341792c45ec388fa74132ac56a01f3749",
+      "source": "runs/inspect-visibility-i1/verification-v7/1-execution.json"
+    },
+    "verification/1-remove.json": {
+      "bytes": 188,
+      "sha256": "3a5ac2dfad7e65baa99cad9e8a263f06aacd9d77d8e20f8afac814d3f1325ab7",
+      "source": "runs/inspect-visibility-i1/verification-v7/1-remove.json"
+    },
+    "verification/1-terminal.json": {
+      "bytes": 12866,
+      "sha256": "5c88174133a3f71de2b38a9781bcf51fdf05584e5acafd7c03050772b63231ad",
+      "source": "runs/inspect-visibility-i1/verification-v7/1-terminal.json"
+    },
+    "verification/2-actual-container.json": {
+      "bytes": 12320,
+      "sha256": "e190da694dc0750eb5f79330707c3fb5783907b7efa57df8ceaf16bdef642409",
+      "source": "runs/inspect-visibility-i1/verification-v7/2-actual-container.json"
+    },
+    "verification/2-execution.json": {
+      "bytes": 400,
+      "sha256": "f8fe2a176aa68aa1ce7e30c48d03cb73a0ed9c4dfc35744b2e1ca032dc9934b8",
+      "source": "runs/inspect-visibility-i1/verification-v7/2-execution.json"
+    },
+    "verification/2-remove.json": {
+      "bytes": 188,
+      "sha256": "63ef909a84e921ed4eed4c78f93efcb499786efe7552a9a0525f8862ce0e92a5",
+      "source": "runs/inspect-visibility-i1/verification-v7/2-remove.json"
+    },
+    "verification/2-terminal.json": {
+      "bytes": 12867,
+      "sha256": "e25620dc3ab9c15cee16a1945dcb91c045f61dbfe18e0b33b03f57347e0d110d",
+      "source": "runs/inspect-visibility-i1/verification-v7/2-terminal.json"
+    },
+    "verification/bandit.json": {
+      "bytes": 7433,
+      "sha256": "527826b0a420c5e3d30b48f357a5131b82d00d763720a8695b10d8204f4a1dec",
+      "source": "runs/inspect-visibility-i1/verification-v7/bandit.json"
+    },
+    "verification/containment-negative.json": {
+      "bytes": 251,
+      "sha256": "70a0955f17e5a3c54cb23ffe3c42485e308f04247de84698b8917723e8abedfa",
+      "source": "runs/inspect-visibility-i1/verification-v7/containment-negative.json"
+    },
+    "verification/mypy.json": {
+      "bytes": 660,
+      "sha256": "393e857aa015054e6631fd168cbda01bcfe9f1d9b92083c0d13fd3ff6669effc",
+      "source": "runs/inspect-visibility-i1/verification-v7/mypy.json"
+    },
+    "verification/replay-1-fidelity.json": {
+      "bytes": 663,
+      "sha256": "0dde1270f0c0b8c14578043261cb85337823f42f2c5a52f67176f56bfc530152",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-1/fidelity.json"
+    },
+    "verification/replay-2-fidelity.json": {
+      "bytes": 663,
+      "sha256": "0dde1270f0c0b8c14578043261cb85337823f42f2c5a52f67176f56bfc530152",
+      "source": "runs/inspect-visibility-i1/verification-v7/replay-2/fidelity.json"
+    },
+    "verification/ruff.json": {
+      "bytes": 604,
+      "sha256": "f7a5ee091ae815352f7b9abd37d5953a0fcef560f6817510877ea7236586b1d7",
+      "source": "runs/inspect-visibility-i1/verification-v7/ruff.json"
+    },
+    "verification/source-identity.json": {
+      "bytes": 833,
+      "sha256": "27c66bd7d50ab182a8f18b2ccb898c79d48810f42d785442fdb85796dc09875e",
+      "source": "runs/inspect-visibility-i1/verification-v7/source-identity.json"
+    },
+    "verification/summary.json": {
+      "bytes": 1126,
+      "sha256": "906943299c4f7845be8e78e2f6d5c81fdf97fa54e95ed3551e40c5e5b0b7a9da",
+      "source": "runs/inspect-visibility-i1/verification-v7/summary.json"
+    }
+  },
+  "kind": "I1-selected-public-evidence-v1",
+  "omitted": "wheel archives and generated viewer assets stay locally retained; exact wheel hashes and license decisions are committed",
+  "saved_logs": "actual browser-checked v6 logs; same importer/image/semantic payload as final v7; no provider activity"
+}

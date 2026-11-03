@@ -1,0 +1,244 @@
+{
+  "authority": {
+    "file_sha256": "5890fc0fb0c91dd8e3395953d72ff60af3429ae83c2dbb09877f1e1e166cf057",
+    "path": "evidence/phase3a-rank-contract-v1/authorization.json"
+  },
+  "definition": {
+    "file_sha256": "d317a6b60adc5d2b36b89c278080124955c1efbbd3548520e0c8199f4aa9da79",
+    "path": "PHASE3A_RANKING_CONTRACT_DEFINITION.md"
+  },
+  "external_acceptance": "evidence/phase3a-rank-contract-v1/independent-acceptance.json",
+  "files": {
+    "inputs/fixture-inventory.json": {
+      "bytes": 7391,
+      "file_sha256": "c4ccc6f2830f7122f604febfdf33028a0902e307e371aa9ad1bf75ad976dc878",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/fixture-inventory.json"
+    },
+    "inputs/historical_failure.json": {
+      "bytes": 1880,
+      "file_sha256": "e19d5b5c16f327ee1146b46ac00e326553baf4f1fc9ecb560d71ac5232994a90",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/historical_failure.json"
+    },
+    "inputs/lineage.json": {
+      "bytes": 1313,
+      "file_sha256": "9383e0d1d58bcdd9615f6a3e218840f3ad0a037ada244034083369eb675c5ef9",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/lineage.json"
+    },
+    "inputs/manifest.json": {
+      "bytes": 1146,
+      "file_sha256": "18c192a24fa41284aa1dba23b09981d17318712940de7c077a450f15471cc48d",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/manifest.json"
+    },
+    "inputs/saved_parent.json": {
+      "bytes": 28622,
+      "file_sha256": "733e6628c0441131643ebddbc8c74db7e1d7227dc43b9f9d9a4ad8295cf551ef",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/saved_parent.json"
+    },
+    "inputs/strategy.json": {
+      "bytes": 1198,
+      "file_sha256": "faef587853c34db39492ed97169a7a54c6d6ce1f8b96cb447c4cca1b836a06e7",
+      "source": "runs/phase3a-rank-contract-v1/inputs-v1/strategy.json"
+    },
+    "reviewer/independent-replay-v1/preparation-error.json": {
+      "bytes": 409,
+      "file_sha256": "aa856e5a2a9470eacd0bc84469f6ef1f8843efbc776b2ac898940930ecbf883e",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/independent-replay-v1/preparation-error.json"
+    },
+    "reviewer/independent-replay-v2/actual-container.json": {
+      "bytes": 4640,
+      "file_sha256": "423001d76bf5b833e77639ee8b6e44b9a31cc4eb8496fc9bd0d00e35bc6e63a1",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/independent-replay-v2/actual-container.json"
+    },
+    "reviewer/independent-replay-v2/execution.json": {
+      "bytes": 4289,
+      "file_sha256": "6531e4937a066127f5480e41ced919a156d407dbc71163a391b9f51314055e20",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/independent-replay-v2/execution.json"
+    },
+    "reviewer/independent-replay-v2/replay.json": {
+      "bytes": 1206,
+      "file_sha256": "7d04b7d8419c46aaeaa4ffdd1c685d46085dd7c27db7a395d8b83a8c9f28d32b",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/independent-replay-v2/replay.json"
+    },
+    "reviewer/independent_replay.py": {
+      "bytes": 3329,
+      "file_sha256": "82edc46e20130983742ab8abdb5f121653741e54b4a9a3a15df813b062947579",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/independent_replay.py"
+    },
+    "reviewer/input-review-v1.json": {
+      "bytes": 2090,
+      "file_sha256": "1ab615e523c1316a7689da26106552438dbbd2bf717f9d8ce5da229b064bb58a",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/input-review-v1.json"
+    },
+    "reviewer/preservation-after-v1.json": {
+      "bytes": 1537,
+      "file_sha256": "4a8ef0f2fb170c696385973b279346b94e6df7f853525989f6e5d77ddc5ddd91",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/preservation-after-v1.json"
+    },
+    "reviewer/preservation-before-v1.json": {
+      "bytes": 50240,
+      "file_sha256": "4f27a53bf7e7caaaed3b3b5e281435270112a4dc3cc0423d54b56f1e63443553",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/preservation-before-v1.json"
+    },
+    "reviewer/upstream-source-before-v1.json": {
+      "bytes": 5061,
+      "file_sha256": "afc5553c593bf263f24a2de98383ddce0e7ee635827dc2e13b615c4f193cbb45",
+      "source": "runs/phase3a-rank-contract-v1/reviewer/upstream-source-before-v1.json"
+    },
+    "static/bandit.json": {
+      "bytes": 2106,
+      "file_sha256": "17e9da5638c71e40f32c86da06e610d12da2ee139fb6f8461c113b593d0b571b",
+      "source": "runs/phase3a-rank-contract-v1/static-v1/bandit.json"
+    },
+    "static/mypy.json": {
+      "bytes": 2357,
+      "file_sha256": "ad7eb5ff945c7c7815c270517eb249caffa73af496f878937a0080d7f2b1d356",
+      "source": "runs/phase3a-rank-contract-v1/static-v1/mypy.json"
+    },
+    "static/ruff.json": {
+      "bytes": 2275,
+      "file_sha256": "f0972a0e63c866ef15fbd8955b2cadf2980edb15c9f70b69b356a49a6a431c01",
+      "source": "runs/phase3a-rank-contract-v1/static-v1/ruff.json"
+    },
+    "verification/actual-container.json": {
+      "bytes": 4041,
+      "file_sha256": "748b3686c78c3f3f6dc4abd6fbdec55c37cbb9b7d69d0a9556b3b304516f992a",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/actual-container.json"
+    },
+    "verification/cases.json": {
+      "bytes": 27972,
+      "file_sha256": "5d00c6800026cf25c974fc2c53f79c20474dc53981722824def61518f2de0675",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/cases.json"
+    },
+    "verification/container-run.json": {
+      "bytes": 4341,
+      "file_sha256": "410257ff6f0a8bee657a9253ac3d2617eccf64ad41a7ce7a1c96f38b4c77867a",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/container-run.json"
+    },
+    "verification/demonstration.json": {
+      "bytes": 64848,
+      "file_sha256": "238906ae631d447cb2169d8e252517b592665d1ce65280401040c3d44e20e7ae",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/demonstration.json"
+    },
+    "verification/executed-fixtures.json": {
+      "bytes": 341229,
+      "file_sha256": "7db94b00e466e84285794b347892d9bfe0dd5090f5859371c7a77082d4a5aa69",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/executed-fixtures.json"
+    },
+    "verification/historical-replay.json": {
+      "bytes": 439,
+      "file_sha256": "cea1d836b4efb206a3cc48b9d0d298aa1cf753fb9293d8269dca654fcaaff466",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/historical-replay.json"
+    },
+    "verification/replay.json": {
+      "bytes": 231,
+      "file_sha256": "48a47709cd2797d87fd04f3895a197bda3ac1809435d2c58f966f985a5aaa131",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/replay.json"
+    },
+    "verification/source/adapter.py": {
+      "bytes": 8643,
+      "file_sha256": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/source/adapter.py"
+    },
+    "verification/source/test_adapter.py": {
+      "bytes": 17548,
+      "file_sha256": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/source/test_adapter.py"
+    },
+    "verification/source/verify.py": {
+      "bytes": 5832,
+      "file_sha256": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/source/verify.py"
+    },
+    "verification/verification.json": {
+      "bytes": 34192,
+      "file_sha256": "a61824d90fc55df65e40959f68e019f5cdb89af3b7d97539cfde43fe7bb26d25",
+      "source": "runs/phase3a-rank-contract-v1/verification-v1/verification.json"
+    }
+  },
+  "frozen_cases": 76,
+  "historical_controls": 1,
+  "kind": "phase3a-rc1-retained-artifacts-v1",
+  "phase3a_scientific_complete": false,
+  "provider_calls": 0,
+  "report_runbook_handoff": {
+    "file_sha256": "cada390053c69480a765283dd67ece7aa72248ff07157a0578cb1fab5db60d2f",
+    "path": "PHASE3A_RC1_REPORT.md"
+  },
+  "source": [
+    {
+      "file_sha256": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "path": "followups/phase3a_rank_contract_v1/adapter.py"
+    },
+    {
+      "file_sha256": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+      "path": "followups/phase3a_rank_contract_v1/test_adapter.py"
+    },
+    {
+      "file_sha256": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935",
+      "path": "followups/phase3a_rank_contract_v1/verify.py"
+    }
+  ],
+  "standalone_live_ready": false,
+  "support_sources": [
+    {
+      "file_sha256": "e908915f394c261ef4369f4a2a2255e609015f6bd5e196e998dc4e19a0e84090",
+      "path": "src/buddha2/__init__.py"
+    },
+    {
+      "file_sha256": "156e2aabc91d1a6388b43ab682100d0a4197e0f4b6980d2c9d34594936c2a5ed",
+      "path": "src/buddha2/artifacts.py"
+    },
+    {
+      "file_sha256": "e5e6a3f42077b5658207b32b15cd7645d7ba6686a9046045958b88a4f24b6b13",
+      "path": "src/buddha2/nb_worker.py"
+    },
+    {
+      "file_sha256": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+      "path": "src/buddha2/phase2.py"
+    },
+    {
+      "file_sha256": "bbc95a5ea1328a5a14dbeb4b6847da9d5a2d991d33ffe416020d97ab02ef8232",
+      "path": "src/buddha2/pairs.py"
+    },
+    {
+      "file_sha256": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+      "path": "src/buddha2/phase2_contracts.py"
+    },
+    {
+      "file_sha256": "1f104482c10ffd2ca33f1f21ec7a2b556341f9b0cbe612d52dbec929f334f4ef",
+      "path": "src/buddha2/phase2_coverage.py"
+    },
+    {
+      "file_sha256": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+      "path": "src/buddha2/phase2_dispatch.py"
+    },
+    {
+      "file_sha256": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+      "path": "src/buddha2/phase2_am1_controls.py"
+    },
+    {
+      "file_sha256": "427529f0533553bfeaa899464ef6806825c4c694db7a6639b1814cfcd336d3f9",
+      "path": "followups/phase3a_v1/strategy.py"
+    },
+    {
+      "file_sha256": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+      "path": "followups/rank_format_v1/normalizer.py"
+    },
+    {
+      "file_sha256": "b430f0dbd4b3d42e38fc9d750f4dc7064809b39ab228d39e56f17c5a7d92448e",
+      "path": "followups/inspect_visibility_i1/importer.py"
+    },
+    {
+      "file_sha256": "abdf2710b5c807553714e02c081b940b89f7a89111249205caf236b317388be2",
+      "path": "followups/inspect_visibility_i1/paths.py"
+    },
+    {
+      "file_sha256": "a845a38d445033489c0f2aefba32288c21e07f99bd192bc42cfd17a75c543f3c",
+      "path": "strategies/fixed/phase2.json"
+    },
+    {
+      "file_sha256": "4880e9a96c041ab9cebfa0e495c64b6f5a5d13cd456a92d3c20db8f4e4546b77",
+      "path": "pyproject.toml"
+    }
+  ]
+}

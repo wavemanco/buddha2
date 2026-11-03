@@ -1,0 +1,122 @@
+{
+  "authorship_disclosure": "Root participated in implementation and launch integration. This is a scope-owner review; separate non-author launch and admission cross-reviews are required.",
+  "created_at_utc": "2026-10-30T18:21:02.055895+00:00",
+  "gate_evidence": {
+    "launcher": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/launcher.json",
+      "sha256": "45cfbd5c444c6d32fdb0b83bdf4e6811d82035850f9a595df9a7e8f3e5353243"
+    },
+    "matrix": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/matrix.json",
+      "sha256": "42247aed0c017546b3459e4f0bd205b1a54f645fc7ef83a6afc3c41e37698fa0"
+    },
+    "preservation": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/preservation.json",
+      "sha256": "eed6a29fedd842631c470086953015a7a232d8eafd8478cd7cc55641663983ea"
+    },
+    "replay": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/replay.json",
+      "sha256": "308140c39f4d591a5a88cfdd4ec21b44ebf982c6acdd5c7f2f2c2fd7a799a6ad"
+    },
+    "static": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/static.json",
+      "sha256": "cf5e1dd218eb2479c783c56c42f45a0c517728d20f18247ec9280199e686d2db"
+    },
+    "tests": {
+      "path": "/results/phase3a-c1-completion-v4/verification-v3/tests.json",
+      "sha256": "b22800288b5023c718a38a751dbb24b3a1048a935dc1526b82f33392b0ca5df2"
+    }
+  },
+  "gate_sha256": "eecc48c0396335e9d446a8b74de3aa429e55a96dcba353653fc797a96e6192b9",
+  "host_actions": [
+    {
+      "action": "mock",
+      "container_metadata_keys": [
+        "cap_drop",
+        "command",
+        "container_id",
+        "entrypoint",
+        "environment_names",
+        "image",
+        "image_architecture",
+        "image_os",
+        "log_driver",
+        "memory",
+        "mounts",
+        "nano_cpus",
+        "network_mode",
+        "open_stdin",
+        "pids_limit",
+        "port_bindings",
+        "privileged",
+        "publish_all_ports",
+        "read_only_rootfs",
+        "security_opt",
+        "state_at_inspection",
+        "tmpfs",
+        "tty",
+        "working_dir"
+      ],
+      "inspection_path": "/results/phase3a-c1-completion-v4/launcher/7583e4e2a50741128d2ef60a25126568.inspection.json",
+      "inspection_sha256": "355353b577b0368c5df30079ba6c0f0b048ba5d4e2d515d0bb7b276298775a6e"
+    },
+    {
+      "action": "config",
+      "container_metadata_keys": [
+        "cap_drop",
+        "command",
+        "container_id",
+        "entrypoint",
+        "environment_names",
+        "image",
+        "image_architecture",
+        "image_os",
+        "log_driver",
+        "memory",
+        "mounts",
+        "nano_cpus",
+        "network_mode",
+        "open_stdin",
+        "pids_limit",
+        "port_bindings",
+        "privileged",
+        "publish_all_ports",
+        "read_only_rootfs",
+        "security_opt",
+        "state_at_inspection",
+        "tmpfs",
+        "tty",
+        "working_dir"
+      ],
+      "inspection_path": "/results/phase3a-c1-completion-v4/launcher/12046f8b072043ebb524cd16b97c19e3.inspection.json",
+      "inspection_sha256": "0fb1f6f49c603d3d95bcadc4db7f58d84da6c88a657c9dbec352107248b8ce1f"
+    }
+  ],
+  "kind": "r3-launch-scope-acceptance-v1",
+  "launcher_sha256": "0149a21063a6b394e460a01885ff332e1f5fdc575093936da6a01bf85ee75dbb",
+  "limitations": [
+    "Physical Windows file-symlink creation was unavailable; actual junction and missing-descendant rejection were verified.",
+    "This certifies offline engineering evidence, not live model authenticity, semantic grounding, account access, invoice settlement or comparative effectiveness.",
+    "Historical13101271microUSD known and22880000microUSD held remain retained; no historical hold is released."
+  ],
+  "offline_gate_seal_sha256": "5a58a241f9ee7b8cd0a2b5840452e80700171913e226891b0a6b66d86c338b4e",
+  "packet_acceptance_required_separately": true,
+  "passed": true,
+  "policy_sha256": "a43e580d1d3cd9ad49f10d5633c5895e87d97be1a6af5571bc21e66c9871918e",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "reviewer": "/root",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scope": [
+    "exact six-group gate and actual terminal exit0",
+    "all294 current and retained source hashes",
+    "actual PowerShell mock resume with zero additional calls and no real credentials",
+    "exact release paths and created-only provider configuration",
+    "packet/source/review acceptance interlock before key handshake"
+  ],
+  "source_files_verified_current_and_retained": 294,
+  "source_sha256": "5c592fdf7724fe7371491ab3b2ec2c5d223bcaf7bede091485789d5050a5ecfb",
+  "study_sha256": "080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34",
+  "terminal_evidence_sha256": "c1958c2a088d492afd93410706954425cf14fba511f29a4ed214380066bf0a72",
+  "windows_evidence_sha256": "a75d67ba05c481a9e8d0de0e2cdfe14283ccc8a4086a7ae742fecbbcea12971e"
+}

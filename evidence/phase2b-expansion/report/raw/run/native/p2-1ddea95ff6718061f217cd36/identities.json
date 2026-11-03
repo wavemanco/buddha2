@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "c0ecbb837f4dfc2473622ca5ae1615737b72a209f4f6a1e2ead0f006a2821ac0",
+  "portfolio_id": "portfolio-362876913da66d6a6b1ffbe804c7475b42c26856fbe3f02833b738ac5bea15c9",
+  "portfolio_sha256": "ec76d001af4871acdd606f3b82c258ec5125b91b5803caf245c49210647793a3",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-1ddea95ff6718061f217cd36.plan",
+      "p2-1ddea95ff6718061f217cd36.answer.00",
+      "p2-1ddea95ff6718061f217cd36.answer.01",
+      "p2-1ddea95ff6718061f217cd36.answer.02",
+      "p2-1ddea95ff6718061f217cd36.answer.03",
+      "p2-1ddea95ff6718061f217cd36.answer.04",
+      "p2-1ddea95ff6718061f217cd36.answer.05",
+      "p2-1ddea95ff6718061f217cd36.answer.06",
+      "p2-1ddea95ff6718061f217cd36.answer.07",
+      "p2-1ddea95ff6718061f217cd36.answer.08",
+      "p2-1ddea95ff6718061f217cd36.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-51ba4a7876a8f8bd935a2092",
+      "index": 0,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.00",
+      "status": "ok",
+      "text_sha256": "ad462b0cfc22c72612728262db6e020a027b0f199f19bdf692071ed885606675"
+    },
+    {
+      "id": "response-63a32962e74b1a78c6d8760e",
+      "index": 1,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.01",
+      "status": "ok",
+      "text_sha256": "483f4e60ab79d4c88d6d559942d8294ec525df2c0a20a159e622bc21f2fb84fd"
+    },
+    {
+      "id": "response-becc0dbb590b53743c7e1a41",
+      "index": 2,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.02",
+      "status": "ok",
+      "text_sha256": "3896d912002d2533d0190d216efadadd4ef6e8f805086ecb67ad8db231a1c975"
+    },
+    {
+      "id": "response-adebf5e578e9d86b91413ee9",
+      "index": 3,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.03",
+      "status": "ok",
+      "text_sha256": "0dd3f13831f978e03f11f2a4a4eb4b6aae9a8c0c9ad40ef4704dca42966b5509"
+    },
+    {
+      "id": "response-a4491c717ab61320bba28c32",
+      "index": 4,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.04",
+      "status": "ok",
+      "text_sha256": "73a943f887945c4a9da956233495028e84402db64027fcb7931fa020c3dc6a92"
+    },
+    {
+      "id": "response-8d7d5c1a3686090ebb836aa7",
+      "index": 5,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.05",
+      "status": "ok",
+      "text_sha256": "8caa41969fcf10b65c0bbc4bd5fb289519f0b30f234eeb558d94ee3fe04a2a1e"
+    },
+    {
+      "id": "response-08c8c4fb76361159e5c558fa",
+      "index": 6,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.06",
+      "status": "ok",
+      "text_sha256": "71c87d09a1ce600001f2a471be11572dc792d831d8c221fb4a1cbccfd3e25ac8"
+    },
+    {
+      "id": "response-bb43b23d9180d95d17604000",
+      "index": 7,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.07",
+      "status": "ok",
+      "text_sha256": "2e914e1a7fcd952cb1b6d26634400bf6294210f72e0e3f977babafe152e22927"
+    },
+    {
+      "id": "response-0b6fc4086bd7723597aea6fb",
+      "index": 8,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.08",
+      "status": "ok",
+      "text_sha256": "3811c4a045afd16a903e1f40b0e3251961488daee51c033329558477bd0316d2"
+    },
+    {
+      "id": "response-e616a335874c32f6fc2b0b8f",
+      "index": 9,
+      "request_id": "p2-1ddea95ff6718061f217cd36.answer.09",
+      "status": "ok",
+      "text_sha256": "7722408eff737eab41f9d2131cb1dee87d691537a1ea8c8ee2cd4e9371df8bb6"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-0589e47205e5256cc5b3",
+    "prompt": "What would you invent to make the world a more interesting place to live in?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-15"
+    }
+  }
+}

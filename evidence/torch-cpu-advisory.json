@@ -1,0 +1,6 @@
+{
+  "installed_version": "2.14.1+cpu",
+  "advisory_version": "2.14.1",
+  "metadata_url": "https://pypi.org/pypi/torch/2.14.1/json",
+  "vulnerabilities": []
+}

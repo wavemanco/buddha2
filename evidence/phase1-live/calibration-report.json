@@ -1,0 +1,246 @@
+{
+  "analysis_revision": "phase1-v1",
+  "applicability": "Supplementary pairwise comparison on the declared population only; no absolute or portfolio validation.",
+  "choices": {
+    "A": 5,
+    "B": 6,
+    "abstain": 0,
+    "tie": 0
+  },
+  "cost": {
+    "complete_total_usd": 0.06045999999999999,
+    "known_total_usd": 0.06045999999999999,
+    "scope": "final presentation records; attempt ledger additionally includes retries/liabilities",
+    "unit": "USD",
+    "unknown_usage_presentations": 0,
+    "unreported_presentations": 0
+  },
+  "coverage": {
+    "agreement_among_decisive": 1.0,
+    "decisive_fraction": 0.4583333333333333,
+    "decisive_presentations": 11,
+    "human_agreeing_presentations": 11,
+    "scheduled_presentations": 24
+  },
+  "evaluator": {
+    "requested_model": "claude-sonnet-5-5",
+    "returned_models": [
+      "claude-sonnet-5-5"
+    ],
+    "rubric_sha256": "892e9656c07b6f08c26b8902732f911e6d57d87e1a03bed32916a750b518591a",
+    "settings_sha256": "812e7e45d639c17f1b0903a0098176a3384d882b5534f23c0833d7ef409f9b75"
+  },
+  "execution": {
+    "attempts": 24,
+    "finalized_presentations": 24,
+    "fixture": false,
+    "provider_calls": 24,
+    "reserved_micro_usd": 0,
+    "retries": 0,
+    "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+    "scope": "calibration",
+    "spent_micro_usd": 60460,
+    "status": "ready",
+    "token_count_requests": 24
+  },
+  "expected_prompts": 12,
+  "families": {
+    "Metaphors": {
+      "human_agreement": 3,
+      "order_consistency": 3,
+      "prompts": 12
+    }
+  },
+  "first_position_preference": {
+    "A_choices": 5,
+    "decisive_presentations": 11,
+    "fraction": 0.45454545454545453,
+    "unit": "presentation; two dependent presentations per prompt"
+  },
+  "fixture": false,
+  "human_agreement": {
+    "denominator": 12,
+    "minimum": 9,
+    "proportion": 0.25,
+    "successes": 3,
+    "wilson95": [
+      0.08894166839405471,
+      0.5323053349335657
+    ]
+  },
+  "independent_prompts": 12,
+  "interpretation": "Development diagnostics; acceptance floors apply only to the audit.",
+  "kind": "pair-evaluator-analysis",
+  "length_diagnostics": {
+    "equal_length_choices": 0,
+    "longer_choices": 10,
+    "shorter_choices": 1,
+    "unit": "Unicode code points in original response text",
+    "wrong_equal_length_choices": 0,
+    "wrong_longer_choices": 0,
+    "wrong_shorter_choices": 0
+  },
+  "limitations": [
+    "Operational floors are a small-sample screen, not high-confidence validation.",
+    "Order, length and family diagnostics are descriptive; no additional acceptance gates.",
+    "Analysis requires separate access control and a committed prediction set before audit labels."
+  ],
+  "order_consistency": {
+    "denominator": 12,
+    "minimum": 11,
+    "proportion": 0.25,
+    "successes": 3,
+    "wilson95": [
+      0.08894166839405471,
+      0.5323053349335657
+    ]
+  },
+  "outcome": "diagnostic-only",
+  "presentations": 24,
+  "prompts": [
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-4c6d02b8b4c12e0fd00ba415381f5a860c9f698ea5c3bd754fbfb90aa1bb4f13",
+      "prompt_id": "muce-prompt-8ef89169dcd7ec5ced1756fe5db5a7573a91b703d1bd8cf9f45c5a664c97389c",
+      "selected_response_ids": [
+        "muce-response-af55d3fc896f2c58c931c44176dd74ef90b5074665ab2cc74f36662c23337768",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-b681402f689a0058a3cba05d3f71379d57eb448f8ccfb996802dfceff44fe17c",
+      "prompt_id": "muce-prompt-c629706e1128bec1ed33ca5cd2b021704b03d0c8ba7e24eb3949b5315ed0ce5b",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-623770cf02833277dbdfffa2423a5c29b7386360b4d318b59d57d9ed645830c3",
+      "prompt_id": "muce-prompt-1a4e9684afed8355020cb48fe7b5467ca65aaa5049699fc715cef2b666d902fb",
+      "selected_response_ids": [
+        "muce-response-2fa96960849ab91d9ca57939c4c4721270228a03bff0ec40b5db619cb88afb7d",
+        "muce-response-2fa96960849ab91d9ca57939c4c4721270228a03bff0ec40b5db619cb88afb7d"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-bdf584375addc0f711020eedb17ef4efcb8ca68a6b99b06a350d7408b620f9dc",
+      "prompt_id": "muce-prompt-4066b7ecf310f4b50c13fa02e952d05bf13a7afd477c231a945392f6407d3e1d",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-674497f94e1628812c047f234688b65f2cbd4398f6d81e4b707022e31eb2e0d3",
+      "prompt_id": "muce-prompt-1330af04f7336ffc077c3330bb1126949eecd19687347539c8be798588dad732",
+      "selected_response_ids": [
+        "muce-response-0a242c1a0639ff741d941d912699ce6d608f53650e7b6f293c27ec4f3a774a79",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-2ded21a2276b313561ccba45a1af5141657abd8588cf8e960b0f0f84d68b12ad",
+      "prompt_id": "muce-prompt-7950d2e5602216aee4ca52e036b4816d5bb97af16ece4af57718d1345572221f",
+      "selected_response_ids": [
+        "muce-response-f49417ca094f19b9ab6e3f099d40188c9c77eb6ab77a79edf08691e09f86dbd3",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-ef2b586b9e28b2a0d68c750c28cffa4e7cb0601e93b26dfd9c80de5108d3b070",
+      "prompt_id": "muce-prompt-be585f17c6e19ecf67f8ce0793122b348f6544f1f2b3391f9fd76308cc434a0f",
+      "selected_response_ids": [
+        "muce-response-d5f106b0fcdb6d0a3ac0e76e69365502dc54a749e9749683e4366d4359bcd8fe",
+        "muce-response-d5f106b0fcdb6d0a3ac0e76e69365502dc54a749e9749683e4366d4359bcd8fe"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-b58e2f14c65a58208416b20afd1ed5140f16dd03638aa58b23a82d7de9cb6bcd",
+      "prompt_id": "muce-prompt-9c54782c396d9aa95dab7adaa85537e0a6a33aa6bbfffc0de4c396830bb6e0d8",
+      "selected_response_ids": [
+        "muce-response-664d7650a77b9b74ec7d237d3ff9fb125fbb03a08103e338a17611528ef1c293",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-48b9b93cf848f289ffb240065a5ebd1e7e544443796bd129bd06a10975aa03d3",
+      "prompt_id": "muce-prompt-c5710e249cdab4b31fd94b59604f7c61764e728e709b978628b6ba93b7173dc3",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-6af96f9f822117b8041c3f207850e5f66e238ef52215309cf11c3c597e45e443",
+      "prompt_id": "muce-prompt-c3985fbd8108a9521d68a1623d8b38f157254a1aa1ac1afabbedb6b03117eab6",
+      "selected_response_ids": [
+        "muce-response-dde1648019dbc042e9e86fa6a7803555c61e93b063afd96fc249dfd99ef54faa",
+        null
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": true,
+      "order_consistency": true,
+      "pair_id": "pair-0f85ca22290ce1179e72a497ad4aa7180e3001f5ccbf8a3eb68941ffe6fba286",
+      "prompt_id": "muce-prompt-9637779605c41687a888ca40c61490853842ff6d6f87fc555358d9be95fee947",
+      "selected_response_ids": [
+        "muce-response-0eae8aa4d67caca6facf9dabb19ae0610f9b3d0e5f170273070c3058e4b3bad6",
+        "muce-response-0eae8aa4d67caca6facf9dabb19ae0610f9b3d0e5f170273070c3058e4b3bad6"
+      ]
+    },
+    {
+      "family": "Metaphors",
+      "human_agreement": false,
+      "order_consistency": false,
+      "pair_id": "pair-0359e1851c19f8714cccce025e48adb24e9b5badf01ffdfce63daea2f4ebd150",
+      "prompt_id": "muce-prompt-6094b17dae4d3541ee03c8fa1831e6e5f60e0b876bbe67e8e80eded84c4e453a",
+      "selected_response_ids": [
+        null,
+        null
+      ]
+    }
+  ],
+  "saved_judgments": 24,
+  "schema_version": 1,
+  "stage": "calibration",
+  "statuses": {
+    "malformed": 13,
+    "missing": 0,
+    "ok": 11,
+    "refused": 0,
+    "transport_error": 0,
+    "truncated": 0,
+    "unknown": 0
+  }
+}

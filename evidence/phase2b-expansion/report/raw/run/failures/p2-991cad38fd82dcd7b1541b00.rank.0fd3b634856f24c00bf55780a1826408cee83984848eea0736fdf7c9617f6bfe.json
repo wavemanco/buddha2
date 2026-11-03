@@ -1,0 +1,11 @@
+{
+  "attempts": 432,
+  "authority_sha256": "d2635bd1c0bea5793f3b98bcdbaebee4b66215d2e6b4bf8ffc180960f4ab7ffd",
+  "error": "strategy response is not a complete JSON object",
+  "failed_slot": "p2-e8740bae4e77d0e443e32104.rank",
+  "kind": "phase2-release-failure-v2",
+  "prefix_sha256": "3433084713cc1d85d770cea7567f3a35c45485563ff36057d75e375b77e1cfdb",
+  "repeat": 1,
+  "stage": "rank",
+  "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "specification-0.14-no-go-acceptance",
+  "outcome": "checkpoint-complete-change-required",
+  "checkpoint_complete": true,
+  "launch_candidate_ready": false,
+  "gate1_passed": false,
+  "gate2_built": false,
+  "requirements": {
+    "LR-1": {
+      "status": "verified",
+      "evidence": [
+        "execution-start.json",
+        "preservation.json",
+        "specification-0.14.md"
+      ]
+    },
+    "LR-2": {
+      "status": "review-complete-change-required",
+      "admission_bound_established": false,
+      "evidence": [
+        "sources.json",
+        "request-contracts.json",
+        "gate1-decision.json",
+        "../../PHASE2_LIVE_READINESS_AMENDMENT.md"
+      ]
+    },
+    "LR-3": {
+      "status": "review-complete-change-required",
+      "arithmetic_verified": true,
+      "live_reservation_certified": false,
+      "evidence": [
+        "sources.json",
+        "cost-sheet.json",
+        "cost-review.json"
+      ]
+    },
+    "LR-4": {
+      "status": "not-built-after-feasibility-no-go",
+      "required_for_this_no_go_branch": false,
+      "reason": "Frozen definition prohibits Gate2 build after Gate1 fails; no SDK/mock/runner/preflight execution."
+    },
+    "LR-5": {
+      "status": "not-built-after-feasibility-no-go",
+      "existing_live_block_preserved": true,
+      "evidence": [
+        "preservation.json",
+        "draft-launch-conditions.json"
+      ]
+    },
+    "LR-6": {
+      "status": "complete-no-go-handoff",
+      "evidence": [
+        "../../PHASE2_LIVE_READINESS_REPORT.md",
+        "../../PHASE2_LIVE_READINESS_AMENDMENT.md",
+        "draft-launch-conditions.json",
+        "preservation.json",
+        "closeout.json",
+        "manifest.json"
+      ]
+    }
+  },
+  "phase_document_updated": {
+    "revision": "0.15",
+    "execution_revision_preserved": "0.14",
+    "phase_sequence_table": true,
+    "ai_only_track": "benchmark",
+    "ai_plus_human_track": "human-augmented",
+    "same_code_and_archive": true,
+    "human_optional_for_benchmark": true,
+    "separate_amended_followup_required": true
+  },
+  "independent_reviews": {
+    "admission_and_amendment": "no critical issue",
+    "billing_arithmetic": "verified with independent Decimal",
+    "no_go_requirement_review": "no critical substantive issue"
+  },
+  "provider_calls": 0,
+  "token_count_calls": 0,
+  "sdk_calls": 0,
+  "actual_human_ratings": 0,
+  "phase2b_experiments": 0,
+  "experiment_api_spend_usd": 0,
+  "tests_rerun": false,
+  "test_scope": "No production/runtime changes; only document/evidence/cost checks. Historical203project/fiveupstream tests remain historical."
+}

@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-27T00:21:32.915677+00:00",
+  "runtime_records": {
+    "exercise": "evidence/phase2-r012/exercise-runtime.json",
+    "full_tests": "runs/runtime/3e376bcc518f4e6c8b88b47248bf8e4f.json",
+    "checks": "runs/runtime/95960409692d44af8556787421f4a34f.json",
+    "historical_replay": "evidence/phase2-r012/historical-replay-runtime.json"
+  },
+  "checks": {
+    "project_tests": 203,
+    "phase2_tests_included": 105,
+    "upstream_harness2_tests": 5,
+    "ruff": "pass",
+    "mypy": "pass",
+    "bandit_medium_high": "pass",
+    "pip_check": "pass"
+  }
+}

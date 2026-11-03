@@ -1,0 +1,18 @@
+{
+  "authority": "Explicit user reply in the current Codex conversation",
+  "authorization_micro_usd": 5000000,
+  "bundle_sha256": "1abe96e47ceaae4101ba5e4b6d7e793740f94f9f54c382effbfabc6ba89149d3",
+  "date_local": "2026-10-25",
+  "generation_attempt_ceiling": 52,
+  "includes_unresolved_reservations": true,
+  "kind": "phase1-user-spending-authorization",
+  "later_phases_authorized": false,
+  "question_item_id": "[\"request_user_input_async\",\"call_5e381f326559452b9417c75c22cc3239\",0]",
+  "readiness_checkpoint_presentations": 2,
+  "scheduled_presentations": 48,
+  "schema_version": 1,
+  "scope": "Frozen Sonnet 5.5 Phase 1 Metaphors evaluator calibration and audit",
+  "staged_run": "runs/phase1-live-r05",
+  "timezone": "America/Los_Angeles",
+  "user_reply": "Authorize up to $5 for Phase 1 (Recommended)"
+}

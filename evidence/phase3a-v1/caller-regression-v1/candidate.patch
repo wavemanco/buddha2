@@ -1,0 +1,14 @@
+--- a/followups/phase3a_v1/accounting.py
++++ b/followups/phase3a_v1/accounting.py
+@@ -241,7 +241,10 @@
+             if kind == "text":
+                 _require(_text([block]), "invalid editor text block")
+             elif kind == "tool_use":
+-                _require(set(block) == {"type", "id", "name", "input"} | cache_keys and block["name"] in names
++                caller_keys = {"caller"} if "caller" in block else set()
++                _require(not caller_keys or block["caller"] == {"type": "direct"},
++                         "only direct client-tool caller metadata is supported")
++                _require(set(block) == {"type", "id", "name", "input"} | cache_keys | caller_keys and block["name"] in names
+                          and isinstance(block["id"], str) and block["id"] not in tool_ids and
+                          message["role"] == "assistant" and isinstance(block["input"], dict), "invalid client tool call")
+                 tool_ids.add(block["id"])

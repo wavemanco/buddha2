@@ -1,0 +1,9 @@
+{
+  "kind": "rc1-reviewer-preparation-error-v1",
+  "stage": "before docker create",
+  "error": "Incorrect replacement of the four-token python -B -m module suffix failed the explicit planned-command assertion",
+  "container_created": false,
+  "provider_calls": 0,
+  "production_source_changed": false,
+  "retry": "fresh independent-replay-v2 output; exact python -B script suffix built explicitly"
+}

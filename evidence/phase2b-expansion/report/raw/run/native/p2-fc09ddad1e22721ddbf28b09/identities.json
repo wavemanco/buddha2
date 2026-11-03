@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "c42e0ea193a55c93f16e9e64d0937d5a6a81ad99d3a65d78a479b10f0b1319b1",
+  "portfolio_id": "portfolio-553d7aea4e2f7f9f1419cb9ff34ee2d71a622f6a60df9f68f130e8289b8f8fd5",
+  "portfolio_sha256": "211bd57e73eccd2e08193d9433cf012462e7faf024fd8553580251a2211d938b",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-fc09ddad1e22721ddbf28b09.answer.00",
+      "p2-fc09ddad1e22721ddbf28b09.answer.01",
+      "p2-fc09ddad1e22721ddbf28b09.answer.02",
+      "p2-fc09ddad1e22721ddbf28b09.answer.03",
+      "p2-fc09ddad1e22721ddbf28b09.answer.04",
+      "p2-fc09ddad1e22721ddbf28b09.answer.05",
+      "p2-fc09ddad1e22721ddbf28b09.answer.06",
+      "p2-fc09ddad1e22721ddbf28b09.answer.07",
+      "p2-fc09ddad1e22721ddbf28b09.answer.08",
+      "p2-fc09ddad1e22721ddbf28b09.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-545e6609a85a3e61f50c82eb",
+      "index": 0,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.00",
+      "status": "ok",
+      "text_sha256": "86866366398f4de8b4ce1c448df65faeefbb0c5f635204dd94b7c86ca8a78976"
+    },
+    {
+      "id": "response-80d3c40bf79b98e905f7ffa6",
+      "index": 1,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.01",
+      "status": "ok",
+      "text_sha256": "b2e5c2ec3967cf79a8a77a8ca58fda984b06d03ff1b9e768227ff8a1affa933c"
+    },
+    {
+      "id": "response-b434b7d8202a58e5945f42cf",
+      "index": 2,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.02",
+      "status": "ok",
+      "text_sha256": "f2fc10226ebad5d689c4c08dbd143b8617cf4e0d4da0d465396e6ed8e006ed8a"
+    },
+    {
+      "id": "response-fd5b9b4e4e3106604960ceb2",
+      "index": 3,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.03",
+      "status": "ok",
+      "text_sha256": "4b95c35de46662e847b378c16cf04ebe3645d9175343497582d9aed4d8db4827"
+    },
+    {
+      "id": "response-037067c19ef57ae54c222f56",
+      "index": 4,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.04",
+      "status": "ok",
+      "text_sha256": "8e27ecf411ffc88e75bbd6e4ed3f39855cdd43e0e3200b8f8ec0b4047b9822d4"
+    },
+    {
+      "id": "response-9345569708864f262a81b809",
+      "index": 5,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.05",
+      "status": "ok",
+      "text_sha256": "af8f1bb29581b89decd36261735f235902012cb4c29a664b0bb841387ef17904"
+    },
+    {
+      "id": "response-18ff85af9d4ecfdef96897c9",
+      "index": 6,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.06",
+      "status": "ok",
+      "text_sha256": "0c621f2a1494242c8024204f94f78c172d107ada9bd79acdb519c824a8ae0ae5"
+    },
+    {
+      "id": "response-d3e8c1395156a6ad42db126a",
+      "index": 7,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.07",
+      "status": "ok",
+      "text_sha256": "f69830ae7e218d304a3c62befdf839d5a7a38151a868eddd218d84d603bf69f3"
+    },
+    {
+      "id": "response-56992484a63517f44a90e79d",
+      "index": 8,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.08",
+      "status": "ok",
+      "text_sha256": "5a173557d98678761cf6cc50c6bb7003729f7cad8aa4e716d6052c01901b528b"
+    },
+    {
+      "id": "response-3236b8bfad607b0f6118f968",
+      "index": 9,
+      "request_id": "p2-fc09ddad1e22721ddbf28b09.answer.09",
+      "status": "ok",
+      "text_sha256": "d74642a87f968538eb0a5a3cae9e7fcf8b1380b99a028d68d15102cff8b5c774"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-6584de30a11a0e08ca32",
+    "prompt": "Suggest a strong 4 character password.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-96"
+    }
+  }
+}

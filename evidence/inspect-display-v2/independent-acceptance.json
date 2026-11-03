@@ -1,0 +1,64 @@
+{
+  "activity_graph_available": false,
+  "actual_ui_proof_sha256": "d262e7f4255d9bb5b031d2a1a960883da80421d7f0e7307ddf711fde13bcf315",
+  "added_timed_info_events": 256,
+  "all_native_evidence_and_raw_attachments_preserved": true,
+  "api_activity_dates": {
+    "first_request_started_at_utc": "2026-10-31T15:40:21.939065+00:00",
+    "last_request_finished_at_utc": "2026-10-31T17:08:51.757731+00:00"
+  },
+  "authoritative_configuration_view": "Roles",
+  "canonical_source_files_unchanged": 356,
+  "checker_sha256": "b1b1bd21c125851697a3d2e988f7a8b1b69c9ba38f4fc4645295bfc59eb9cc9b",
+  "controller_dates": {
+    "elapsed_wall_seconds": 8329.9547632,
+    "finished_at_utc": "2026-10-31T17:11:43.151029952Z",
+    "source": {
+      "file_sha256": "fa5d0d78a50493eb0b265b49364108772a474ddf2a7ec162d185b3bc62833903",
+      "path": "runs/phase3a-h1-integrated-v1/launcher/41ee14d9027344938abe33743d5d3bfe.result.json"
+    },
+    "started_at_utc": "2026-10-31T14:52:53.196266787Z"
+  },
+  "created_utc": "2026-10-31T18:10:45.167548+00:00",
+  "diagnostic_requests": 11,
+  "export_result_sha256": "b7fcbaed6d37df82c18a58149bad40b7661a3a3ac9c8c95f28a8616c47ce3037",
+  "fabricated_model_or_tool_events": 0,
+  "independent_reader_code_sha256": "e43d2f0094f35b65b11d5eecf4656ab90b558c950f69d723039bfdd81749a459",
+  "independent_saved_reader_sha256": "92ebde4f7aca583292054175e14e80eb1a733692456ca17e7d6cd869a0212fb4",
+  "kind": "inspect-display-v2-independent-acceptance-v1",
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "models_view_limitation": "Stock view deduplicates by model ID and displays one role profile; Roles view preserves distinct role-specific configurations.",
+  "native_requests": 256,
+  "native_spent_micro_usd": 7882971,
+  "new_saved_log_sha256": "ae69d14e45fdbf370c87e660bd93fc38f87cf47320702004350323528a873e63",
+  "new_scientific_claims": false,
+  "old_archives_snapshots_eight_reports_unchanged": true,
+  "old_saved_log_sha256": "b1968f4ac850ded211517e4e90c15024a1add34a5fde6e4075c96df4ef303b7a",
+  "original_folder_accessed": false,
+  "passed": true,
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "provenance_sha256": "12862b8493de14371b5c1fe15ed8490a261cf8cc3c5af4480c79307a56b49ba4",
+  "provider_calls_by_fix_or_verifier": 0,
+  "retained_evidence_map_sha256": "fa7806922ec475f09f41f0f509ed2fb0518f085004c57e4d83cdcbfa5fe81e09",
+  "retained_files_verified": 24,
+  "role_counts": {
+    "answer": 140,
+    "editor": 54,
+    "fixed_selector": 1,
+    "group": 3,
+    "plan": 14,
+    "quality": 30,
+    "rank": 14
+  },
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "scientific_complete": false,
+  "source_code_sha256": {
+    "followups/inspect_display_v2/display.py": "7b7f1bfc6ced0ae7d4137ade03e47ae30068bfb1737c9f75fc6f70726ceed963",
+    "followups/inspect_display_v2/provenance.py": "1a2194b16c5a3945989f9ba817afec482ef01466b3ae20dfd3d440dd6e06c2a9",
+    "followups/inspect_display_v2/test_display.py": "77ba4055d6a5c9e0bced2ee0daa24550de5e5fe3c14579a841b50d03cc6f5320"
+  },
+  "source_references_verified": 272,
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
+  "ui_proof_observer": "root CUA actual viewer; independently checked against saved data"
+}

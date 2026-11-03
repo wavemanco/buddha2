@@ -1,0 +1,26 @@
+{
+  "kind": "readiness-no-go-handoff-manifest",
+  "specification": "0.14",
+  "closure_revision": "0.15",
+  "parent_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "files": {
+    "AGENTS.md": "0f975bfb3f576536638b5ae477302256b60b0f954fe987acb8cc2b43de49f9cf",
+    "evidence/phase2-readiness-r014/acceptance.json": "0be2faed9e86d1fd41b64087e4d14c5b1907abd8cb55f992b22b24b40063376d",
+    "evidence/phase2-readiness-r014/closeout.json": "28aa7986c19225baba35fd724d9d432d2bdf7fe08b3a2040569d1d1d099b508b",
+    "evidence/phase2-readiness-r014/cost-review.json": "3567bf800f51d5f2a7a10113a5acd9bb86795a79ae8499597420ec7b4c2d927a",
+    "evidence/phase2-readiness-r014/cost-sheet.json": "510e189b58a862e68890c6697e6b73477ac30e9946f9c0748ecb0ff85df6f412",
+    "evidence/phase2-readiness-r014/draft-launch-conditions.json": "6a6d5ea57d62b20daf46672a5e19188f40adf4160a04b0f0ad2a2b49ab349c0e",
+    "evidence/phase2-readiness-r014/execution-start.json": "53196137b523a7c930959befda5f91dd4e20693ab464cdd43c0fc051b5057b46",
+    "evidence/phase2-readiness-r014/gate1-decision.json": "f8ce384af47b6ea20d79cb7be75567bfc8e0602108f2efb55e25ad854010d70f",
+    "evidence/phase2-readiness-r014/preservation.json": "3f2103b05543ddc181c53d6a90e771416216c8a213011613c0b2ef097387bd59",
+    "evidence/phase2-readiness-r014/request-contracts.json": "1c86bd8e2ae42efd5a1dd9e7021f3f3b2cb990de2b1562446f9e20fa1b81eaa1",
+    "evidence/phase2-readiness-r014/sources.json": "f16c310bb46c329816c91d6d97f2647a6aad869198efc8193c5d39788cce2b93",
+    "evidence/phase2-readiness-r014/specification-0.14.md": "fe4b730714dfd8b619c6f0e07104c8dd5a0e86443ec230414a69458785f09a3d",
+    "EXPERIMENT_PLAN.md": "9da02bb3bbf37eb950944385a0ed5cf3d13ff7f9610d0fcde69e8868cdc74c6f",
+    "PHASE2_LIVE_READINESS_AMENDMENT.md": "9c5afe9d94229ec386c70b84a8007d6b98aa06c5e78e65b012683d25ce666451",
+    "PHASE2_LIVE_READINESS_REPORT.md": "b14298965ccbfe8971acf4f064f80ae1f1c4d42538c7fea613817d01b3a4bbd6",
+    "PHASE_DEFINITIONS.md": "167c347d0244a379b093bc173fbed39b4cd67d9bbb56fa352a602722e698457a",
+    "README.md": "2e51434766c67b7d2ab0ceae77c54d32a6c31cef76e955bd7bbe6d7889c0e241",
+    "specifications/archive/phase-definitions-0.14.md": "fe4b730714dfd8b619c6f0e07104c8dd5a0e86443ec230414a69458785f09a3d"
+  }
+}

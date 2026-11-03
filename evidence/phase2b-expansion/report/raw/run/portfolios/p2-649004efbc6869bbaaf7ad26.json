@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-724f09a0cac60d500ebe31ee16d2004a184d4c087a3e9261221e3fb1c9e4178f",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-649004efbc6869bbaaf7ad26.answer.00",
+      "p2-649004efbc6869bbaaf7ad26.answer.01",
+      "p2-649004efbc6869bbaaf7ad26.answer.02",
+      "p2-649004efbc6869bbaaf7ad26.answer.03",
+      "p2-649004efbc6869bbaaf7ad26.answer.04",
+      "p2-649004efbc6869bbaaf7ad26.answer.05",
+      "p2-649004efbc6869bbaaf7ad26.answer.06",
+      "p2-649004efbc6869bbaaf7ad26.answer.07",
+      "p2-649004efbc6869bbaaf7ad26.answer.08",
+      "p2-649004efbc6869bbaaf7ad26.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-7943672cb3d63fc532100805",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.00",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being over-the-top, and works for almost any personality and décor style."
+    },
+    {
+      "id": "response-ccd3f5012b0ac53b751214c7",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.01",
+      "status": "ok",
+      "text": "A personalized star map print showing the night sky as it appeared on the day and in the place where your friend was born. It's a thoughtful, sentimental keepsake that marks the 25th milestone without being overly expensive, and it looks great framed on a wall or shelf."
+    },
+    {
+      "id": "response-abc368724f41796365b6d33f",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.02",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the day they were born, framed. It marks a milestone, feels thoughtful without being overly sentimental, and works for almost any friend. You can order one online by entering their birth date and location, and many services let you add a short custom message at the bottom."
+    },
+    {
+      "id": "response-d7a728c81a88c0bcf1901f07",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.03",
+      "status": "ok",
+      "text": "A personalized star map print showing the night sky as it appeared on the day and location of their birth (or another meaningful date, like when you two met). It's thoughtful, looks good framed on a wall, and marks the 25th as a milestone without being overly sentimental or expensive."
+    },
+    {
+      "id": "response-9cfc3abdfed814df125f1ccf",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.04",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the date and location of something meaningful to them, such as the night they were born or the city where you two met. It's thoughtful and works for almost anyone. Frame it so it's ready to hang."
+    },
+    {
+      "id": "response-b9f39583642977bac71fdcbf",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.05",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom framed. It's thoughtful, looks great on a wall, and marks the milestone in a memorable way."
+    },
+    {
+      "id": "response-4e5fd65b010ded863674b93f",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.06",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the day they were born (or a meaningful date to your friendship), custom-framed. It's thoughtful, looks great on a wall, and marks the 25th as a milestone without being overly sentimental or expensive."
+    },
+    {
+      "id": "response-10dc77eb600175e8d41b3544",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.07",
+      "status": "ok",
+      "text": "A personalized star map print showing the night sky as it appeared on the day and place they were born (or another meaningful location, like where you two met). It's thoughtful, looks great framed, and marks the milestone of 25 years in a memorable way."
+    },
+    {
+      "id": "response-41da42bee90f741e97df7618",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.08",
+      "status": "ok",
+      "text": "A personalized star map print of the night sky from the date and place they were born, framed. It's a meaningful, visually striking gift that marks the milestone of 25 years without being tied to a specific hobby, so it works for almost any friend."
+    },
+    {
+      "id": "response-d6fb53d035ffe2d74126ccff",
+      "request_id": "p2-649004efbc6869bbaaf7ad26.answer.09",
+      "status": "ok",
+      "text": "A personalized star map print showing the night sky as it appeared on the day and in the place they were born (or a place meaningful to your friendship). It's thoughtful, looks great framed, and marks the milestone of 25 years in a unique way."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-af7dc61fe1eeaa81cd93",
+    "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-29"
+    }
+  }
+}

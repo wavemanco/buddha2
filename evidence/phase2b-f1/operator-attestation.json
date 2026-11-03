@@ -1,0 +1,13 @@
+{
+  "kind": "p2bf1-operator-profile-attestation-v1",
+  "confirmed_at_utc": "2026-10-28T10:08:38Z",
+  "authorization_file_sha256": "862a95943ed8ac32ff5b59181ffc346bfa13e1e242abef1fc0b63c32c764fedd",
+  "price_refresh_file_sha256": "a938dfdda216a4d01f384095a4cfb2e75d35c8b0bc218c5acebff96ac82e9dcf",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "direct_public_payg_standard_profile_confirmed": true,
+  "current_public_prices_confirmed": true,
+  "named_models_intended_available": true,
+  "independent_account_access_verified": false,
+  "api_keys_stored": false,
+  "scope": "first block only; cumulative $20; no expansion or extra probes"
+}

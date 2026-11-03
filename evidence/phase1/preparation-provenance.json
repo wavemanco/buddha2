@@ -1,0 +1,56 @@
+{
+  "conversion_command": "python -B tools/muce_source.py --source runs/phase1-preparation/muce-full_agreement-train.parquet --output runs/phase1-source",
+  "environment": {
+    "environment_forwarded_to_models": false,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.12"
+  },
+  "human_label_access": "Source ratings were read only by preparation and eligibility functions. Separate audit label artifact contents were not opened or displayed after preparation.",
+  "kind": "phase1-preparation-provenance-observation",
+  "model_requests": 0,
+  "observation_limit": "Code hashes are a post-hoc observation retained alongside immutable preparation evidence, not a claim that a pre-call source-code lock existed. The data source and user-approved policy were fixed before allocation. The current implementation was re-run against the saved population and accepted identical artifacts; no manifest or label file was rewritten. A later staged execution bundle must bind its effective code and inputs independently.",
+  "observed_at_utc": "2026-10-25T07:03:41.142799+00:00",
+  "observed_code_files": {
+    "src/buddha2/artifacts.py": "156e2aabc91d1a6388b43ab682100d0a4197e0f4b6980d2c9d34594936c2a5ed",
+    "src/buddha2/muce.py": "34a7320c4449dfe14eae938501b86a5a384cbf52d3e5f8f051fb9e52a12094be",
+    "src/buddha2/pairs.py": "bbc95a5ea1328a5a14dbeb4b6847da9d5a2d991d33ffe416020d97ab02ef8232",
+    "tests/test_muce.py": "71955bf7cc5e0ac2e1a6c0a62f42974bfc79a7a47944282b13b35b1143ab96fa",
+    "tools/muce_source.py": "b816bb0de4b8f199fbe33f17e4a330c3d858f26cc18092b24e6d12550dbdfd1c"
+  },
+  "policy": {
+    "file_sha256": "4075371942d3d10c4f198595c609302d88916f02e02dbff1bb49308c94f65e0d",
+    "path": "configs/phase1/selection.json"
+  },
+  "preparation_command": "PYTHONPATH=src; prepare_muce(Path('runs/phase1-source/muce-full_agreement-train.canonical.jsonl'), read_json(Path('runs/phase1-source/conversion.json')), read_json(Path('configs/phase1/selection.json')), Path('runs/phase1-prepared'))",
+  "prepared_manifest": {
+    "path": "runs/phase1-prepared/manifest.json",
+    "sha256": "45f5fabb5d284bf87a5e90614e1b6a559ceb8beec71ef7e8299de79b5d7bdc20"
+  },
+  "previous_observation": {
+    "path": "runs/phase1-preparation/preparation-provenance.json",
+    "reason": "Preserved earlier post-hoc observation; superseded by this code-check observation after effective-prompt blank-value correction.",
+    "sha256": "b7c6b5482bf520a87dd218833fa2953013da76edcef12b8694cc604afe5130ed"
+  },
+  "review_correction": "Exact normalized effective-prompt aliases cluster before allocation, and whitespace-only FullPrompt uses the declared raw Prompt fallback. Both defects have failing-then-passing synthetic regressions. Neither changes the approved selected population.",
+  "schema_version": 1,
+  "source_conversion_metadata": {
+    "path": "runs/phase1-source/conversion.json",
+    "sha256": "5850b5143d4bf137e4cd8a7566c16966fae02007f19a1c7f7496e67a43a23e1f"
+  },
+  "verification": {
+    "bandit": "no medium or high findings",
+    "host_muce_unit_tests": 11,
+    "linux_image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "linux_muce_unit_tests": 11,
+    "linux_test_bind_mounts": {
+      "project": "read-only new project root",
+      "results": "new project runs read-write"
+    },
+    "linux_test_log": "runs/phase1-preparation/muce-docker-tests-final.log",
+    "linux_test_log_sha256": "83152a2d9d5b9813e98bb56c223bd4002997f5353fad81db1450473702222a56",
+    "linux_test_network": "none",
+    "mypy": "passed",
+    "prepared_artifacts_revalidated_unchanged": true,
+    "ruff": "passed"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-d07bb43f47e16ea214d01028ae6652e0b4edfcb409f98fad442cadf843c771ed",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "903ee30ab6af664ea4682d534b6dfc13acad435fde41a5715967edaac9056b02",
+    "procedure_sha256": "a92be680a10987ebe5c26a4b03173842f6a558dce77bdee91a00c739e63fb8a1",
+    "repeat": 2,
+    "request_ids": [
+      "p2-859539046126626ffb2ace28.plan",
+      "p2-859539046126626ffb2ace28.answer.00",
+      "p2-859539046126626ffb2ace28.answer.01",
+      "p2-859539046126626ffb2ace28.answer.02",
+      "p2-859539046126626ffb2ace28.answer.03",
+      "p2-859539046126626ffb2ace28.answer.04",
+      "p2-859539046126626ffb2ace28.answer.05",
+      "p2-859539046126626ffb2ace28.answer.06",
+      "p2-859539046126626ffb2ace28.answer.07",
+      "p2-859539046126626ffb2ace28.answer.08",
+      "p2-859539046126626ffb2ace28.answer.09",
+      "p2-2050adf6a3ab0f16b721f722.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-0cee3e55534024d60a1256f6",
+      "request_id": "p2-859539046126626ffb2ace28.answer.00",
+      "status": "ok",
+      "text": "**To Kill a Mockingbird** by Harper Lee is a well-received book that often appears on top book lists. It recurs on best-of lists because of its powerful treatment of moral themes like justice, empathy, and racial prejudice, and its enduring use in classrooms has kept it widely read across generations."
+    },
+    {
+      "id": "response-2792f3e6b8346cd61d4d6780",
+      "request_id": "p2-859539046126626ffb2ace28.answer.02",
+      "status": "ok",
+      "text": "**1984** by George Orwell (1949) is a well-received novel that appears often on lists of the greatest books. Its depiction of totalitarian surveillance and propaganda gave the language terms like \"Big Brother,\" \"doublethink,\" and \"Orwellian,\" and it is still widely cited in discussions of politics, privacy, and truth."
+    },
+    {
+      "id": "response-4d233b55e34b0873809da60e",
+      "request_id": "p2-859539046126626ffb2ace28.answer.03",
+      "status": "ok",
+      "text": "**The Great Gatsby** by F. Scott Fitzgerald (1925) is a well-received novel that regularly appears on top book lists, including the Modern Library's list of the best 20th-century English-language novels. It's a concise book, and its rich symbolism, such as the green light and the eyes of Dr. T. J. Eckleburg, has helped it endure as a classic of American literature."
+    },
+    {
+      "id": "response-3cc1857bcc908ae903e9b73f",
+      "request_id": "p2-859539046126626ffb2ace28.answer.05",
+      "status": "ok",
+      "text": "**Don Quixote** by Miguel de Cervantes. It's often called the first modern novel and regularly tops \"best book of all time\" lists, including a famous 2002 poll of 100 authors from around the world."
+    },
+    {
+      "id": "response-f0a7735242b07b030200e69d",
+      "request_id": "p2-859539046126626ffb2ace28.answer.04",
+      "status": "ok",
+      "text": "**One Hundred Years of Solitude** by Gabriel García Márquez is a well-received book that often appears on top book lists. Originally published in Spanish in 1967 and translated into English by Gregory Rabassa, it follows seven generations of the Buendía family in the fictional town of Macondo. It is a landmark of magical realism and has earned global acclaim."
+    },
+    {
+      "id": "response-e711cb35cb7234c396d47407",
+      "request_id": "p2-859539046126626ffb2ace28.answer.07",
+      "status": "ok",
+      "text": "**Beloved** by Toni Morrison (1987) is a well-received novel that often appears on lists of the best late-20th-century fiction. It won the Pulitzer Prize for Fiction in 1988 and was cited when Morrison received the Nobel Prize in Literature in 1993. A 2006 *New York Times* survey of writers and critics also named it the best American novel of the previous 25 years."
+    },
+    {
+      "id": "response-2f01bec807c1e21f48e5b5f4",
+      "request_id": "p2-859539046126626ffb2ace28.answer.06",
+      "status": "ok",
+      "text": "**The Lord of the Rings** by J.R.R. Tolkien is a well-received book that often appears on top book lists. Readers and critics alike have praised it for its richly detailed world-building, epic scope, and lasting influence on the fantasy genre."
+    },
+    {
+      "id": "response-e701a0caeec620448c13e317",
+      "request_id": "p2-859539046126626ffb2ace28.answer.08",
+      "status": "ok",
+      "text": "**The Diary of a Young Girl** by Anne Frank is a widely acclaimed nonfiction book that regularly appears on essential-reading lists because its intimate, honest voice gives a personal view of life in hiding during the Holocaust."
+    },
+    {
+      "id": "response-b2ec02ed2cf4f72f8a9fcbe7",
+      "request_id": "p2-859539046126626ffb2ace28.answer.09",
+      "status": "ok",
+      "text": "**Charlotte's Web** by E.B. White is a widely beloved children's classic that regularly appears on top book lists. Published in 1952, it tells the story of Wilbur the pig and his friendship with Charlotte, a clever barn spider who saves his life by weaving words into her web. It has been praised for its warmth, humor, and honest treatment of friendship and loss, and it frequently ranks among the best-selling and best-loved children's books of all time."
+    },
+    {
+      "id": "response-e14c3b8a7ba3531d46aa9d23",
+      "request_id": "p2-859539046126626ffb2ace28.answer.01",
+      "status": "ok",
+      "text": "**Pride and Prejudice** by Jane Austen (1813) is a staple of top book lists. Its sharp social wit, memorable characters like Elizabeth Bennet and Mr. Darcy, and timeless themes of class, marriage, and first impressions have kept it admired by critics and loved by readers for over two centuries.\n\n(Strictly speaking, it was published in 1813, so it's an early 19th-century classic.)"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-7a77e85421d12bca8653",
+    "prompt": "Name one well received book that often appears in top book lists.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-80"
+    }
+  }
+}

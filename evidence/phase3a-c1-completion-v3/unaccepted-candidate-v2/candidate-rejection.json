@@ -1,0 +1,74 @@
+{
+  "candidate": "verification-v2",
+  "code_commit": "eb609e5",
+  "evidence": {
+    "matrix.json": {
+      "bytes": 81706,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/matrix.json",
+      "sha256": "931142e57d141179ec3f452a1f033362ae809c2d3bc52204e996a75efaa3eab9"
+    },
+    "preservation.json": {
+      "bytes": 599,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/preservation.json",
+      "sha256": "24abea821b670a815fd37105833527b785c496088db1129954ad47714c4cefbb"
+    },
+    "replay.json": {
+      "bytes": 794,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/replay.json",
+      "sha256": "385d6a9d4edf613c4a5e18ba12c1cb21bd6f99cd96bf8a44f7e7d211b3ab2a83"
+    },
+    "source-after.json": {
+      "bytes": 31291,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/source-after.json",
+      "sha256": "9026218b1914bde6094c4bcf8687b962103eeba5d249be2c1617797baff8e417"
+    },
+    "source-before.json": {
+      "bytes": 31291,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/source-before.json",
+      "sha256": "9026218b1914bde6094c4bcf8687b962103eeba5d249be2c1617797baff8e417"
+    },
+    "static.json": {
+      "bytes": 1406,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/static.json",
+      "sha256": "a324c659a9c897be803f12b994260ff1f81a3e32614199d5576bc8b2b541e4a3"
+    },
+    "tests.json": {
+      "bytes": 1421,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/tests.json",
+      "sha256": "5f7fe8be58d6308f6db1e5e69e80ebdc9b85121e320ce625f9c70ed7ae6ea223"
+    },
+    "tests.log": {
+      "bytes": 33154,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/tests.log",
+      "sha256": "846a87749f80fe7c4a15f7a308aea8b63affbee959709f79eb21c8c07e38b81e"
+    },
+    "windows-tests.json": {
+      "bytes": 3256,
+      "original_path": "runs/phase3a-c1-completion-v3/verification-v2/windows-tests.json",
+      "sha256": "f4b636c13cd1c9d99afd742278d3e01e452ff3a13fb29bd79df1425e3a571a58"
+    }
+  },
+  "full_gate_accepted": false,
+  "kind": "phase3a-c1-completion-r2-candidate-rejection-v1",
+  "matrix_mock_calls": 663,
+  "new_real_provider_calls": 0,
+  "passed": false,
+  "preservation_passed": true,
+  "reasons": [
+    "First-pair readiness integration expected 68 admitted attempts and observed 41; retained reproduction is required before classifying the cause.",
+    "Pinned-eighth-control test supplied a plain NoCalls fake, which the required owned-worker transport boundary correctly rejects before reaching its native fixture."
+  ],
+  "recorded_at_utc": "2026-10-30T05:18:06.153210+00:00",
+  "replay_passed": true,
+  "source_file_count": 254,
+  "source_or_old_evidence_retagged": false,
+  "source_sha256": "59a5f129f51da661aee20f9939141bef1a6af683ef68148300586a775c5b5a89",
+  "study_sha256": "8889603f3720753e0543b0c8dd714c384fc173822d0d3899d8131506121c20bc",
+  "tests": {
+    "count": 150,
+    "errors": 1,
+    "failures": 1,
+    "linux_platform_skips": 3
+  },
+  "verifier_exit_code": 1
+}

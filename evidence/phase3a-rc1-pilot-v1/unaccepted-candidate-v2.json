@@ -1,0 +1,35 @@
+{
+  "kind": "phase3a-rp1-unaccepted-candidate-v2",
+  "candidate_commit": "d812ced",
+  "created_utc": "2026-10-31T22:30:17.206698+00:00",
+  "status": "stopped_unaccepted_by_independent_source_review",
+  "study_sha256": "9c661e9c7bb2fe84b701e4b782a756af673e746b8d2d39160eed3886e311aca8",
+  "source_sha256": "475b59f63e0227543d50293fe44ef63e31c600b2cab0489f0bc1e70f01a23055",
+  "reason": "Exporter finally block removed deterministic name after failed/ambiguous docker create without proving container ownership. Independent reviewP1; no known collision occurred. Stop owned offline candidate before narrow CID ownership correction.",
+  "source_review": "runs/phase3a-rc1-pilot-v1/reviewer/inspect-source-review-v1.json",
+  "source_review_sha256": "b4ba16d9441286dfc1c8e6f1c3c41b2f8537a35d4d5d8cba7fd442d749f4e414",
+  "full_gate_passed": false,
+  "real_provider_calls": 0,
+  "owned_container_removed": true,
+  "science_method_cap_threshold_change": false,
+  "final_preservation_recheck": "Not completed after operator stop; exact candidate commit/source copy and read-only inspected source mount retained. Final independent preservation remains required.",
+  "evidence": {
+    "reviewer-stop.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v2/reviewer-stop.json",
+      "sha256": "6247bf248f650d03924c0625ebc4bf4710cb91bd0087cf8228fab0e70a825348"
+    },
+    "inside-execution.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v2/inside-execution.json",
+      "sha256": "30e3f4ad7a309ea115d0abee16b049904ec76f6e3ed4558a00ffec3ba6a0633f"
+    },
+    "inside-remove.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v2/inside-remove.json",
+      "sha256": "d79ba966bc0b11cf0bca541aa936efa9094bb9ae7307676d775bca0b4322d110"
+    },
+    "driver-exit.json": {
+      "path": "runs/phase3a-rc1-pilot-v1/verification-v2/driver-exit.json",
+      "sha256": "1441385e2d15552652932dbc257310c654ddd1faf7aebaccd8e91b6c27c826c9"
+    }
+  },
+  "next": "Narrow owned-CID exporter correction and negative ownership tests, then a fresh complete offline gate/source identity."
+}

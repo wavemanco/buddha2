@@ -1,0 +1,10 @@
+{
+  "acceptance_inventory_sha256": "39e74492adeb00669c5ce18fad03dbf6211b2698685794d18d70c028d0816fb0",
+  "created_utc": "2026-11-01T07:34:14.813308+00:00",
+  "current_files_verified": 419,
+  "kind": "phase3a-rp2-before-product-edit-preservation-v1",
+  "old_source_sha256": "64b839d569e3ddefa3d56e06fc5b431760aef15cdfb3fd38256e04f8565f519a",
+  "original_folder_accessed": false,
+  "provider_calls": 0,
+  "retained_files_verified": 419
+}

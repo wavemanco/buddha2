@@ -1,0 +1,192 @@
+[
+  {
+    "attempts": 68,
+    "omitted_controls": [
+      "temperature",
+      "top_p",
+      "top_k",
+      "seed",
+      "max_tokens",
+      "max_completion_tokens",
+      "reasoning_effort",
+      "service_tier",
+      "inference_geo",
+      "thinking",
+      "output_config"
+    ],
+    "requested_settings": {
+      "model": "gpt-5.6-luna",
+      "response_format": {
+        "json_schema": {
+          "name": "Partition",
+          "schema": {
+            "additionalProperties": false,
+            "properties": {
+              "groups": {
+                "items": {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "title": "Groups",
+                "type": "array"
+              }
+            },
+            "required": [
+              "groups"
+            ],
+            "title": "Partition",
+            "type": "object"
+          },
+          "strict": true
+        },
+        "type": "json_schema"
+      }
+    },
+    "returned_models": [
+      "gpt-5.6-luna"
+    ],
+    "returned_stop_reasons": [
+      "stop"
+    ],
+    "role": "group"
+  },
+  {
+    "attempts": 395,
+    "omitted_controls": [
+      "temperature",
+      "top_p",
+      "top_k",
+      "seed",
+      "max_completion_tokens",
+      "reasoning_effort",
+      "service_tier",
+      "inference_geo"
+    ],
+    "requested_settings": {
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "output_config": {
+        "effort": "high",
+        "format": {
+          "schema": {
+            "additionalProperties": false,
+            "properties": {
+              "score": {
+                "title": "Score",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "score"
+            ],
+            "title": "Score",
+            "type": "object"
+          },
+          "type": "json_schema"
+        }
+      },
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "returned_models": [
+      "claude-opus-5"
+    ],
+    "returned_stop_reasons": [
+      "end_turn"
+    ],
+    "role": "quality"
+  },
+  {
+    "attempts": 24,
+    "omitted_controls": [
+      "temperature",
+      "top_p",
+      "top_k",
+      "seed",
+      "max_completion_tokens",
+      "reasoning_effort"
+    ],
+    "requested_settings": {
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "output_config": {
+        "effort": "low"
+      },
+      "service_tier": "standard_only",
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "returned_models": [
+      "claude-sonnet-5-5"
+    ],
+    "returned_stop_reasons": [
+      "end_turn"
+    ],
+    "role": "rank"
+  },
+  {
+    "attempts": 480,
+    "omitted_controls": [
+      "temperature",
+      "top_p",
+      "top_k",
+      "seed",
+      "max_completion_tokens",
+      "reasoning_effort"
+    ],
+    "requested_settings": {
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "output_config": {
+        "effort": "low"
+      },
+      "service_tier": "standard_only",
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "returned_models": [
+      "claude-sonnet-5-5"
+    ],
+    "returned_stop_reasons": [
+      "end_turn"
+    ],
+    "role": "answer"
+  },
+  {
+    "attempts": 24,
+    "omitted_controls": [
+      "temperature",
+      "top_p",
+      "top_k",
+      "seed",
+      "max_completion_tokens",
+      "reasoning_effort"
+    ],
+    "requested_settings": {
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "output_config": {
+        "effort": "low"
+      },
+      "service_tier": "standard_only",
+      "thinking": {
+        "type": "adaptive"
+      }
+    },
+    "returned_models": [
+      "claude-sonnet-5-5"
+    ],
+    "returned_stop_reasons": [
+      "end_turn"
+    ],
+    "role": "plan"
+  }
+]

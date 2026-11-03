@@ -1,0 +1,120 @@
+{
+  "id": "11432b7a54b826fc175bd7dba4a4381a90d8fff766086b6c3f92fbb8e31e5ee4",
+  "image": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d",
+  "network": "none",
+  "read_only": true,
+  "mounts": [
+    {
+      "Destination": "/inputs/strategy.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\strategy.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/inputs/historical_failure.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\historical_failure.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/phase3a_rank_contract_v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\phase3a_rank_contract_v1",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/phase3a_v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\phase3a_v1",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/inputs/manifest.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\manifest.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/inputs/lineage.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\lineage.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/inputs/fixture-inventory.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\fixture-inventory.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/out",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\verification-v1",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/src/buddha2",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\src\\buddha2",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/rank_format_v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\rank_format_v1",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/inspect_visibility_i1/importer.py",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1\\importer.py",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/followups/inspect_visibility_i1/paths.py",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\followups\\inspect_visibility_i1\\paths.py",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/code/strategies/fixed/phase2.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\strategies\\fixed\\phase2.json",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/inputs/saved_parent.json",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-rank-contract-v1\\inputs-v1\\saved_parent.json",
+      "Type": "bind"
+    }
+  ]
+}

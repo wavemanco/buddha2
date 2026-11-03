@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "033d4ac5b607a3adecc79751b34b39c91b05f5702bc4382c160a7051233affc1",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 7.1134458461802845
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6,
+        8,
+        6,
+        6,
+        4
+      ],
+      "partition_scores": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6,
+        8,
+        6,
+        6,
+        4
+      ],
+      "utility": 7.1134458461802845
+    },
+    "generation_row": {
+      "generations": [
+        "**Gift: A hands-on pottery class for two (you and your friend).**\n\nBook a evening or weekend wheel-throwing session at a local studio, where you each make your own bowl or mug and take it home after it's been fired and glazed.\n\n**Why it suits a 25th:** Turning 25 is a quiet milestone, young enough to still be playful and old enough to appreciate time spent well. A shared experience gives you both a story to retell, and the finished piece becomes a keepsake that reminds them of the day every time they use it. It's also low-pressure and social, so even if neither of you is any good, the laughing is part of the fun.\n\n**Tip:** Bring a small card saying \"Pottery night is on me,\" and let them pick the date so it fits their schedule.",
+        "**A custom star map of the night they were born.**\n\nFor a 25th birthday, a star map marks a quarter-century by showing the exact sky over their birthplace on the day they arrived. Choose a framed print with their name, birth date, and city, plus a short line underneath that fits your friendship. It could be an inside joke, a lyric they love, or something like \"25 years of you.\"\n\nTo make it more personal, you can:\n- Choose a color scheme that matches their home or favorite color.\n- Add a handwritten note on the back about what you've appreciated about them over the years.\n- Use the sky from another meaningful date, like the day you met, if you'd prefer something about your friendship.\n\nServices like Etsy sellers, The Night Sky, or Under Lucky Stars can produce these in a few days, and a frame is easy to find locally.",
+        "**A quality cast-iron skillet (a 10- or 12-inch Lodge or, if you want to splurge, a Smithey).**\n\nAt 25, your friend is likely settling into adult life: cooking more, hosting friends, maybe moving into a place that's really theirs. A cast-iron pan is a gift that grows with them. It sears steak, bakes cornbread, roasts vegetables, and makes a great weekend breakfast. With basic care it lasts decades, and it even gets better with age, which makes it a nice symbol for the next chapter.\n\n**Make it feel personal:** Tuck in a small bottle of seasoning oil or a chain-mail scrubber, and add a handwritten note like, \"Here's to the next 25 years of good meals.\"",
+        "**A \"25 Memories\" jar.** Fill a glass jar with 25 handwritten notes, one for each year of your friend's life or each year you've known each other. Each note can hold a favorite memory, an inside joke, a thing you admire about them, or a small wish for the year ahead. Add a ribbon and a label with their name and \"25.\"\n\nIt costs almost nothing, and it's the kind of gift people keep and reread, especially on a milestone birthday. For an extra touch, tuck in a few photos or print one memory on a small card to hang from the lid.",
+        "**A high-quality insulated travel mug (like a Fellow Carter or Zojirushi stainless steel mug).**\n\nAt 25, many people are settling into daily work routines, and a good mug quietly improves every morning. It keeps coffee or tea hot for hours, doesn't leak in a bag, and feels much nicer than the free mug or cheap tumbler most people make do with. It's the kind of item your friend will use constantly but probably wouldn't spend $25-40 on for themselves.\n\nTo make it feel more personal, you could pair it with a bag of locally roasted coffee or a favorite tea, and add a short handwritten note.",
+        "**Gift: a hardcover copy of a book that fits your friend's curiosities, with a short handwritten note inside the cover.**\n\nSince I don't know your friend, here's how to choose well:\n\n- **Pick based on something they've recently gotten excited about.** If they've been talking about cooking, travel, psychology, or music, choose a beautifully made book on that topic. For example, *Salt Fat Acid Heat* by Samin Nosrat for a budding cook, or *Braiding Sweetgrass* by Robin Wall Kimmerer for someone drawn to nature and big ideas.\n- **Choose a book that suits turning 25.** If you're unsure, *The Alchemist* or *Big Magic* by Elizabeth Gilbert are warm, encouraging reads for a milestone birthday.\n\n**The handwritten note** is what makes it personal. Keep it to 2-3 sentences, something like:\n\n*\"Happy 25th! I picked this because you always light up when you talk about [topic], and it made me think of you. Can't wait to hear what you think of it.\"*\n\nMention a specific memory or quality if you can. That detail turns a book into a gift they'll keep.",
+        "Give your friend a **spa or massage gift voucher**, ideally for a 60-minute massage at a well-reviewed local spa.\n\nIt suits a 25th birthday because that age often comes with a stressful mix of work, money pressure, and big life decisions. A massage gives them a real excuse to slow down, and it's something most people enjoy but rarely book for themselves. Choose a voucher with a flexible expiry date so they can use it when it actually fits their schedule.\n\nTo make it feel more personal, add a handwritten card that says something like, \"Your only job this month is to relax.\"",
+        "**Gift: A framed photo collage of your best memories together**\n\nFor a 25th birthday, a framed photo gift feels like a milestone marker without costing much.\n\n**How to make it:**\n1. **Pick 5-8 photos** that span your friendship: a silly one, a recent one, and one from way back if you have it.\n2. **Print them** at a drugstore or online (about $5-10 total). Mixed sizes look more designed.\n3. **Get a simple frame** with a multi-photo mat, or a plain frame at a thrift store or dollar store ($5-15).\n4. **Add a handwritten touch.** Write a short note on the back, such as \"25 things I love about you\" or one favorite memory per photo. It will mean more than the frame itself.\n5. **Wrap it thoughtfully.** Use brown paper and twine, or tuck a small treat like their favorite candy under the ribbon.\n\n**Total cost:** roughly $15-25, and it's the kind of gift people keep on a desk or wall for years.",
+        "Give them a **year-long MasterClass subscription** (or a similar learning platform membership) tied to something they've said they want to get better at, like cooking, writing, photography, or music.\n\nAt 25, many people are building skills and figuring out what they want their next chapter to look like, so a gift that supports that growth feels thoughtful and lasting. To personalize it, pick the class that matches their goals and include a handwritten note naming the first lesson you think they'd love.\n\nIf they care more about a cause than a skill, a donation in their name to a charity they support is a great alternative, but if you want just one pick, go with the learning subscription.",
+        "**Gift: A quality hobby-specific tool, such as a Fujifilm Instax Mini 12 (if they like photography or capturing memories).**\n\nIf you don't know their hobby well, this is a fun, low-risk pick. But if you know their interest, here's how to choose the right version:\n\n- **Photography:** A Peak Design Everyday Sling or a 50mm f/1.8 lens for their camera brand (check whether they shoot Canon, Nikon, Sony, etc.).\n- **Baking:** A Lodge cast-iron Dutch oven for bread, or a digital kitchen scale if they already own the basics.\n- **Climbing:** A well-fitting chalk bag and brush set, or a quality belay device like the Petzl GriGri if they're an experienced lead climber (confirm their skill level first).\n- **Gaming:** A good headset (such as the SteelSeries Arctis) matched to their platform: PC, PlayStation, Xbox, or Switch.\n\n**Quick tip:** Ask a mutual friend what they currently use, or check what they post about, so you buy something that upgrades their setup rather than duplicates it. Add a handwritten note about a favorite memory to make a 25th feel special."
+      ],
+      "id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one"
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6,
+        8,
+        6,
+        6,
+        4
+      ],
+      "generations": [
+        "**Gift: A hands-on pottery class for two (you and your friend).**\n\nBook a evening or weekend wheel-throwing session at a local studio, where you each make your own bowl or mug and take it home after it's been fired and glazed.\n\n**Why it suits a 25th:** Turning 25 is a quiet milestone, young enough to still be playful and old enough to appreciate time spent well. A shared experience gives you both a story to retell, and the finished piece becomes a keepsake that reminds them of the day every time they use it. It's also low-pressure and social, so even if neither of you is any good, the laughing is part of the fun.\n\n**Tip:** Bring a small card saying \"Pottery night is on me,\" and let them pick the date so it fits their schedule.",
+        "**A custom star map of the night they were born.**\n\nFor a 25th birthday, a star map marks a quarter-century by showing the exact sky over their birthplace on the day they arrived. Choose a framed print with their name, birth date, and city, plus a short line underneath that fits your friendship. It could be an inside joke, a lyric they love, or something like \"25 years of you.\"\n\nTo make it more personal, you can:\n- Choose a color scheme that matches their home or favorite color.\n- Add a handwritten note on the back about what you've appreciated about them over the years.\n- Use the sky from another meaningful date, like the day you met, if you'd prefer something about your friendship.\n\nServices like Etsy sellers, The Night Sky, or Under Lucky Stars can produce these in a few days, and a frame is easy to find locally.",
+        "**A quality cast-iron skillet (a 10- or 12-inch Lodge or, if you want to splurge, a Smithey).**\n\nAt 25, your friend is likely settling into adult life: cooking more, hosting friends, maybe moving into a place that's really theirs. A cast-iron pan is a gift that grows with them. It sears steak, bakes cornbread, roasts vegetables, and makes a great weekend breakfast. With basic care it lasts decades, and it even gets better with age, which makes it a nice symbol for the next chapter.\n\n**Make it feel personal:** Tuck in a small bottle of seasoning oil or a chain-mail scrubber, and add a handwritten note like, \"Here's to the next 25 years of good meals.\"",
+        "**A \"25 Memories\" jar.** Fill a glass jar with 25 handwritten notes, one for each year of your friend's life or each year you've known each other. Each note can hold a favorite memory, an inside joke, a thing you admire about them, or a small wish for the year ahead. Add a ribbon and a label with their name and \"25.\"\n\nIt costs almost nothing, and it's the kind of gift people keep and reread, especially on a milestone birthday. For an extra touch, tuck in a few photos or print one memory on a small card to hang from the lid.",
+        "**A high-quality insulated travel mug (like a Fellow Carter or Zojirushi stainless steel mug).**\n\nAt 25, many people are settling into daily work routines, and a good mug quietly improves every morning. It keeps coffee or tea hot for hours, doesn't leak in a bag, and feels much nicer than the free mug or cheap tumbler most people make do with. It's the kind of item your friend will use constantly but probably wouldn't spend $25-40 on for themselves.\n\nTo make it feel more personal, you could pair it with a bag of locally roasted coffee or a favorite tea, and add a short handwritten note.",
+        "**Gift: a hardcover copy of a book that fits your friend's curiosities, with a short handwritten note inside the cover.**\n\nSince I don't know your friend, here's how to choose well:\n\n- **Pick based on something they've recently gotten excited about.** If they've been talking about cooking, travel, psychology, or music, choose a beautifully made book on that topic. For example, *Salt Fat Acid Heat* by Samin Nosrat for a budding cook, or *Braiding Sweetgrass* by Robin Wall Kimmerer for someone drawn to nature and big ideas.\n- **Choose a book that suits turning 25.** If you're unsure, *The Alchemist* or *Big Magic* by Elizabeth Gilbert are warm, encouraging reads for a milestone birthday.\n\n**The handwritten note** is what makes it personal. Keep it to 2-3 sentences, something like:\n\n*\"Happy 25th! I picked this because you always light up when you talk about [topic], and it made me think of you. Can't wait to hear what you think of it.\"*\n\nMention a specific memory or quality if you can. That detail turns a book into a gift they'll keep.",
+        "Give your friend a **spa or massage gift voucher**, ideally for a 60-minute massage at a well-reviewed local spa.\n\nIt suits a 25th birthday because that age often comes with a stressful mix of work, money pressure, and big life decisions. A massage gives them a real excuse to slow down, and it's something most people enjoy but rarely book for themselves. Choose a voucher with a flexible expiry date so they can use it when it actually fits their schedule.\n\nTo make it feel more personal, add a handwritten card that says something like, \"Your only job this month is to relax.\"",
+        "**Gift: A framed photo collage of your best memories together**\n\nFor a 25th birthday, a framed photo gift feels like a milestone marker without costing much.\n\n**How to make it:**\n1. **Pick 5-8 photos** that span your friendship: a silly one, a recent one, and one from way back if you have it.\n2. **Print them** at a drugstore or online (about $5-10 total). Mixed sizes look more designed.\n3. **Get a simple frame** with a multi-photo mat, or a plain frame at a thrift store or dollar store ($5-15).\n4. **Add a handwritten touch.** Write a short note on the back, such as \"25 things I love about you\" or one favorite memory per photo. It will mean more than the frame itself.\n5. **Wrap it thoughtfully.** Use brown paper and twine, or tuck a small treat like their favorite candy under the ribbon.\n\n**Total cost:** roughly $15-25, and it's the kind of gift people keep on a desk or wall for years.",
+        "Give them a **year-long MasterClass subscription** (or a similar learning platform membership) tied to something they've said they want to get better at, like cooking, writing, photography, or music.\n\nAt 25, many people are building skills and figuring out what they want their next chapter to look like, so a gift that supports that growth feels thoughtful and lasting. To personalize it, pick the class that matches their goals and include a handwritten note naming the first lesson you think they'd love.\n\nIf they care more about a cause than a skill, a donation in their name to a charity they support is a great alternative, but if you want just one pick, go with the learning subscription.",
+        "**Gift: A quality hobby-specific tool, such as a Fujifilm Instax Mini 12 (if they like photography or capturing memories).**\n\nIf you don't know their hobby well, this is a fun, low-risk pick. But if you know their interest, here's how to choose the right version:\n\n- **Photography:** A Peak Design Everyday Sling or a 50mm f/1.8 lens for their camera brand (check whether they shoot Canon, Nikon, Sony, etc.).\n- **Baking:** A Lodge cast-iron Dutch oven for bread, or a digital kitchen scale if they already own the basics.\n- **Climbing:** A well-fitting chalk bag and brush set, or a quality belay device like the Petzl GriGri if they're an experienced lead climber (confirm their skill level first).\n- **Gaming:** A good headset (such as the SteelSeries Arctis) matched to their platform: PC, PlayStation, Xbox, or Switch.\n\n**Quick tip:** Ask a mutual friend what they currently use, or check what they post about, so you buy something that upgrades their setup rather than duplicates it. Add a handwritten note about a favorite memory to make a 25th feel special."
+      ],
+      "id": "nb-curated-af7dc61fe1eeaa81cd93",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "4ec9e40363ee7687816acf649fd6d8e92b59fbe59ede61496dfea18a6cf0cc4a",
+      "partition_scores": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6,
+        8,
+        6,
+        6,
+        4
+      ],
+      "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "289d8f268c3dd6f1f0cd08bfe360edec12fa0eae79b43e45ad88e69b586816f5",
+      "utility": 7.1134458461802845
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 7.1134458461802845,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "47e8fd04ef84a99d5f1b91fa70e78e4c7f0f99522e4704edeb0bde159fa01ce6",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0033",
+      "fixture": false,
+      "intent_sha256": "87c3214632f80c7cc5bf081eba27907baf44a199b15537ace5748ea47910b6b4",
+      "request_sha256": "d1b0da2622dea05f73fc019344f0981d1ac1fed9d21dc41dbe9868508fcc078f",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.2720569859957322,
+        "message_id": "chatcmpl-Ee35X3nuMglX5zhQBPdTQhbyFfX9Y",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 79,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 42,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 1999,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 1996,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2078
+        },
+        "refusal": null,
+        "request_id": "req_454aefc8308d4e2ba24043958e295427",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 1996,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 1996,
+            "cached_tokens": 0
+          },
+          "output_tokens": 79,
+          "output_tokens_details": {
+            "reasoning_tokens": 42
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.group",
+      "spent_micro_usd": 654,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0034",
+      "fixture": false,
+      "intent_sha256": "0d0ca7b9ada02423a908d1c4868e89fb6b7571c1ce41151251d86e5177c32344",
+      "request_sha256": "aff628e20310381f96daccdd7c1c9a74570d52a8b72cd8a71725c55c85286cbc",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9460574359982274,
+        "message_id": "msg_011CgV9GwPJFvPihMVVHaXz1",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9GvcAFo4QvH1oCYNDG",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 682,
+          "output_tokens": 119,
+          "output_tokens_details": {
+            "thinking_tokens": 110
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.00",
+      "spent_micro_usd": 7024,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0035",
+      "fixture": false,
+      "intent_sha256": "509afeb90b225ef3eb740365e59d5f0d9bc70b84e436a99b610e736b53e9fb81",
+      "request_sha256": "ff1481c94320adcae1c88f6f0e3c42627b5b90e780361ecbf9d594b41531ea91",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.176188922996516,
+        "message_id": "msg_011CgV9HCQfjiku53oxBzXUp",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9HC55oRUMEoV2CLjNy",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 701,
+          "output_tokens": 214,
+          "output_tokens_details": {
+            "thinking_tokens": 205
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.01",
+      "spent_micro_usd": 9741,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0036",
+      "fixture": false,
+      "intent_sha256": "e30d33381ad7e413aea0074a9a5802cbc7983310df867f2d4953db76c0c7e851",
+      "request_sha256": "65165ba57364ce61cd8ce454f7a90a1248684d3d5d5b49c42d43f7aa81bbd796",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.656374925005366,
+        "message_id": "msg_011CgV9HZPUzciZMXbDwMgjs",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9HZ4PMN7GbGM61gPxm",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 684,
+          "output_tokens": 159,
+          "output_tokens_details": {
+            "thinking_tokens": 150
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.02",
+      "spent_micro_usd": 8135,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0037",
+      "fixture": false,
+      "intent_sha256": "c12c4428eec0a9478260127325afb8eecda3318ee505dc09cc5d60ad31d1c4b9",
+      "request_sha256": "05163761924e90adb5d9c02f4a4f67cb212ceab9fbce200e5c3fb8d16edb6634",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.010275961001753,
+        "message_id": "msg_011CgV9Hsbcg33RNgXkBTgax",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9HsApHZbWnrLnK541B",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 617,
+          "output_tokens": 147,
+          "output_tokens_details": {
+            "thinking_tokens": 138
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.03",
+      "spent_micro_usd": 7436,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0038",
+      "fixture": false,
+      "intent_sha256": "a9a4326b4f1f2efdbc2aba69706fa6919106d14f992a28c3f521caec5a82d289",
+      "request_sha256": "1d82d454b65e6c5be0d5e1b5a17cec9410dd6acdebd9df8cf47d1aa71e8c09ec",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.4844465920032235,
+        "message_id": "msg_011CgV9JA4JrTUjvv6XEEXGd",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9J9ijRH9v4Rvz2isbn",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 645,
+          "output_tokens": 171,
+          "output_tokens_details": {
+            "thinking_tokens": 162
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.04",
+      "spent_micro_usd": 8250,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0039",
+      "fixture": false,
+      "intent_sha256": "9816226c8f355720efdd9927087a67801cf4b5b400f8df949efaa66156451762",
+      "request_sha256": "0dda078610d5b91a4c733ad71af8957bd4c6bb9eb95118160676182ffae5059a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.4160653819999425,
+        "message_id": "msg_011CgV9JTre5mF1JCcjAsA6b",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9JTXYP3km8c4KzuniH",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 821,
+          "output_tokens": 167,
+          "output_tokens_details": {
+            "thinking_tokens": 158
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.05",
+      "spent_micro_usd": 9108,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0040",
+      "fixture": false,
+      "intent_sha256": "6a806e770ae0c8979fe36a6cfdb0e617a623f8f27e3390d1a733732450a00b23",
+      "request_sha256": "7f60c927352f1051db60c920d0af350a36dcf2ef12eca8c7856778a55a635d6c",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.10328919699532,
+        "message_id": "msg_011CgV9JmFPnqszgJVih8DZu",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9JkpqyKrgXFEdewdMt",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 624,
+          "output_tokens": 164,
+          "output_tokens_details": {
+            "thinking_tokens": 155
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.06",
+      "spent_micro_usd": 7942,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0041",
+      "fixture": false,
+      "intent_sha256": "80e5fb4dad7bb43248902ca409220cf1ee64430bcb37b740981d6555547834b8",
+      "request_sha256": "9ba77b08d277309e14280e31f648d8c89650d9d6394ca6586d7cf3204cd0e96b",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.940194067006814,
+        "message_id": "msg_011CgV9K4VinBYME3eYdxTta",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9K49dxZQxWpMhpHwcQ",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 767,
+          "output_tokens": 249,
+          "output_tokens_details": {
+            "thinking_tokens": 240
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.07",
+      "spent_micro_usd": 11066,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0042",
+      "fixture": false,
+      "intent_sha256": "23ebeba624d81ce3c0c8e199b37adc792bdd8f839f9dc05193cefe45859715cf",
+      "request_sha256": "9808acfd253279b24fb8b7120ccdb9bda79ce476575ef5dfc863eca3b850a7d3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.2328313210018678,
+        "message_id": "msg_011CgV9KUTd6eWenkte7E6oZ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9KU8HGSDs8MphUk2q3",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 6}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 636,
+          "output_tokens": 168,
+          "output_tokens_details": {
+            "thinking_tokens": 159
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.08",
+      "spent_micro_usd": 8118,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0043",
+      "fixture": false,
+      "intent_sha256": "b11d59dd88bfb9a300b66962006b529af63f3da63b43f9444f01a43ad0f13504",
+      "request_sha256": "3219325a4d24515c5e83acb0920136b5afa0f5cc0120229582498d9976366534",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9816318189987214,
+        "message_id": "msg_011CgV9KmU5UAuE3xt9qypL5",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgV9KmBDYhLFGK7JGq86F",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 4}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 839,
+          "output_tokens": 153,
+          "output_tokens_details": {
+            "thinking_tokens": 144
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-ee9c05c3f5ed94c379d9249d.quality.09",
+      "spent_micro_usd": 8822,
+      "status": "response",
+      "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+}

@@ -1,0 +1,55 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1000000,
+    "payload_limit_utf8_bytes": 5952,
+    "provider_token_estimate": null,
+    "request_sha256": "c218e389b5fe799b79741355b2b66a360590694f545f6145a71154c733d0edea",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 2771
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0032",
+  "fixture": false,
+  "profile_sha256": "d02c968c93f0f9cb373e0ea25daac24b8cb9d874d714014168876a6f90becaac",
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response>\n**Gift: A quality hobby-specific tool that upgrades something they already use, such as a Fellow Stagg EKG electric kettle for a coffee lover.**\n\nIf your friend's passion is something else, the same approach works. Here's how to pick the exact item:\n\n1. **Notice what they already use constantly.** Think about the thing they reach for every week, like a camera body, climbing shoes, or a stand mixer. The best gift upgrades that item or complements it, rather than replacing something they love.\n\n2. **Look for the \"I'd never buy this for myself\" tier.** People often use budget gear for years out of frugality. A step up in quality (a better lens, a precision scale, a sturdier chalk bag and brush set) feels special without being outrageous.\n\n3. **Check for compatibility.** Ask a mutual friend, or look at their gear in photos or at their place, to confirm brand, size, or system (lens mount, shoe size, grinder type). Gifting something that doesn't fit is the biggest risk.\n\n4. **Pick something consumable or accessory-based if you're unsure.** If you can't verify specifics, choose something universally useful within the hobby: a good camera strap, a premium chalk bag, or high-end baking ingredients like quality vanilla and chocolate.\n\n5. **Include a gift receipt.** This lets them swap size or model without awkwardness.\n\n**Quick example:** If your friend bakes bread, a digital scale accurate to 0.1 g (like the Escali Primo or Etekcity) or a Lodge cast-iron Dutch combo cooker is a thoughtful, practical choice, especially if you've seen them struggling with a flimsy pan or measuring by cups.\n\nBudget roughly $40-$100 for something meaningful at the 25th-birthday mark, and add a handwritten note about why you thought of them when you saw it.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5",
+    "output_config": {
+      "effort": "high",
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "title": "Score",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "title": "Score",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Score the response to the prompt, 1-10, by how well it serves what the prompt asked for.\n\nA prompt that asks for one thing is best served by one thing; elaboration beyond the ask earns nothing, and craft counts where the prompt calls for it.\n10: the best response an expert could give to this prompt.\n7: good, with clear room to improve.\n4: a weak attempt that still answers the prompt.\n1-3: fails the ask: wrong form or scope, off-topic, empty, or a substantive error.\n\nAn unusual angle or format is fine if it answers the prompt.",
+    "thinking": {
+      "type": "adaptive"
+    }
+  },
+  "request_sha256": "c218e389b5fe799b79741355b2b66a360590694f545f6145a71154c733d0edea",
+  "reservation_micro_usd": 11440000,
+  "role": "quality",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-718a1781795dd29b5ebe57e4.quality.09",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

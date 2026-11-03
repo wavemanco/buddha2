@@ -1,0 +1,26 @@
+{
+  "all_response_fields_unchanged": true,
+  "canonical_output_sha256": "816dcb5f682258c606864afc13f4c4581bf1248b31027483b1cf34a6b91fdc06",
+  "derivation_sha256": "698f691514104f1d9c041ef3af262fb8ae234efceaae351f95ec822579ff1a0e",
+  "exact_saved_derivation_and_repeat": true,
+  "input_sha256": {
+    "demonstration.json": "238906ae631d447cb2169d8e252517b592665d1ce65280401040c3d44e20e7ae",
+    "saved_parent.json": "733e6628c0441131643ebddbc8c74db7e1d7227dc43b9f9d9a4ad8295cf551ef",
+    "strategy.json": "faef587853c34db39492ed97169a7a54c6d6ce1f8b96cb447c4cca1b836a06e7"
+  },
+  "inputs_unchanged": true,
+  "kind": "p3a-rc1-independent-saved-replay-v1",
+  "live_execution_ready": false,
+  "map_sha256": "89b48b2dff0fa07b8ba0f03a824a046e8411d5a6d608ff16ecaff9f5d5e4b48d",
+  "model_network_attempts": {
+    "external_socket_attempts": [],
+    "model_constructor_attempts": []
+  },
+  "passed": true,
+  "phase3a_scientific_complete": false,
+  "profile_sha256": "f4f73be203fc729ff697e70a62de2200f492caeb74db44336601a7fa21aeb9ff",
+  "provider_calls": 0,
+  "renderer_delta_only_id_values": true,
+  "request_sha256": "069ffb96f84fa01a00e2ffa1d4d36ab3a6d25d842bdcf89b6a892a7aa2560083",
+  "subprocess_attempts": []
+}

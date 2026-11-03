@@ -1,0 +1,33 @@
+{
+  "kind": "no-go-draft-launch-conditions",
+  "specification": "0.14",
+  "status": "not-launchable-change-required",
+  "parent_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92",
+  "source_commit": "d09ebebaf255fb1b52fee3483ada52765d750dcb",
+  "authorized": false,
+  "live_access_verified": false,
+  "launch_candidate_ready": false,
+  "grant_ready_packet": false,
+  "gate1_passed": false,
+  "gate2_built": false,
+  "amendment": "AM-1-separate-payload-and-liability-controls",
+  "amendment_accepted": false,
+  "provider_calls_authorized": 0,
+  "phase2b_authorized": false,
+  "remaining_conditions": [
+    "Review and accept a bounded control amendment; AM-1 is preferred but not adopted.",
+    "Establish each role's maximum billable input envelope and every applicable price/category, or remain blocked.",
+    "Freeze a new source/control/study identity, preserving old generation and evidence identities.",
+    "Build and verify only the narrow first-block Gate 2 candidate offline under a separately defined amended follow-up.",
+    "Recheck access and prices at future launch; obtain an applicable explicit ceiling grant. The Phase 1 authorization does not carry forward.",
+    "Execute only the separately authorized counted first block, then stop for review before any expansion."
+  ],
+  "readers_required_for_benchmark": false,
+  "human_collection_authorized": false,
+  "cost_sheet_usable_for_dispatch": false,
+  "old_proposed_caps_not_granted_micro_usd": {
+    "first_block": 5000000,
+    "full_pilot": 125000000
+  },
+  "limits": "This is a missing-conditions/amendment record, not an executable launch packet or permission request."
+}

@@ -1,0 +1,84 @@
+{
+  "reviewed_at_utc": "2026-10-27T01:22:56.653258+00:00",
+  "date_local": "2026-10-26 America/Los_Angeles",
+  "public_documentation_only": true,
+  "provider_endpoint_requests": 0,
+  "records": [
+    {
+      "id": "OA-COUNT",
+      "url": "https://developers.openai.com/api/docs/guides/token-counting",
+      "observations": [
+        "Counting covers request framing absent from locally tokenized fields.",
+        "Documented counting input format is Responses; equivalence to this native Chat Completions body is not established."
+      ],
+      "implication": "No certified bound on provider expansion for local bytes+2048."
+    },
+    {
+      "id": "OA-LUNA",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "observations": [
+        "Input0.20 cachedinput0.02 output1.20 USD/M at shortcontext standard prices.",
+        "Cache writes1.25 times ordinary input; model maximum output128000.",
+        "Above272000 input tokens,2xinput and1.5xoutput fullrequest rates."
+      ],
+      "implication": "Groupingwrite cost cannot be assumed zero; conditional oldlimit arithmetic is not a financial guarantee."
+    },
+    {
+      "id": "OA-CACHE",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "observations": [
+        "GPT5.6andlater default30minute cachewrite rate1.25x ordinaryinput.",
+        "The guide describes hidden rendered context and distinct input/read/write categories.",
+        "Detailed usage examples shown for Responses do not prove Chat Completions field equivalence."
+      ],
+      "implication": "Need exact route/pinnedSDK usage mapping before settlement; do not transplant a different endpoint schema."
+    },
+    {
+      "id": "AN-COUNT",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/token-counting",
+      "observations": [
+        "Structured counting endpoint exists; FAQ calls counting an estimate.",
+        "Counting described as free does not authorize an endpoint request in this checkpoint."
+      ],
+      "implication": "Counting is neither used nor accepted as a certified offline bound."
+    },
+    {
+      "id": "AN-STRUCTURED",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "observations": [
+        "Structured output injects an additional system prompt whose input tokens are billable."
+      ],
+      "implication": "Quality schema/framing overhead is not certified by serialization bytes."
+    },
+    {
+      "id": "AN-PRICING",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "observations": [
+        "Sonnet5.5 input2 output10,5minute write2.5,read0.10 USD/M.",
+        "Opus5 input5 output25,5minute write6.25,1hour write10,read0.50 USD/M.",
+        "Globalstandard rates differ from regional/fast tiers; ordinary tool-free token categories only assumed here."
+      ],
+      "implication": "Scenario prices observed, not actual bills; unsupported tiers and categories remain no-go."
+    }
+  ],
+  "code_references": {
+    "admission": "src/buddha2/phase2_dispatch.py:71",
+    "body_controls": "src/buddha2/phase2_dispatch.py:60",
+    "accounting": "src/buddha2/phase2_dispatch.py:201",
+    "real_dispatch_block": "src/buddha2/phase2_dispatch.py:370",
+    "transport": "src/buddha2/phase2_dispatch.py:405",
+    "sdk_test_substitution": "tests/test_phase2_dispatch.py:316",
+    "generator": "src/buddha2/phase2.py:184",
+    "native_group": "src/buddha2/phase2_native.py:135",
+    "native_quality": "src/buddha2/phase2_native.py:158",
+    "upstream_quality": ".upstream/novelty-bench/src/judge.py:66"
+  },
+  "source_file_sha256": {
+    ".upstream/novelty-bench/src/judge.py": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902",
+    "src/buddha2/phase2.py": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+    "src/buddha2/phase2_dispatch.py": "5a21fff4f22fdc3cf67085d88d09256b8d4b55f56886cd7a4c69af6320753a66",
+    "src/buddha2/phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+    "tests/test_phase2_dispatch.py": "0f03eab104b0c326921dd85d2f04120e2bc0e4a94bee2632538730c4df05613b"
+  },
+  "limit": "Paraphrased observations and exact code hashes; full external webpages are not archived and may change."
+}

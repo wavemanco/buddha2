@@ -1,0 +1,58 @@
+{
+  "accounting_multiplier": {
+    "editor": "1.1",
+    "fixed_selector": "1.1",
+    "native_group": "1.1",
+    "native_quality": "1.1",
+    "strategy": "1"
+  },
+  "credential_access": false,
+  "date": "2026-10-28",
+  "kind": "phase3a-public-pricing-review-v1",
+  "limits": "public rates only; account/backend availability and enforceable new-role bounds unproved untilofflinegate;1.1allowance is not an actualglobalfee claim",
+  "ordinary_rates": {
+    "claude-opus-5": {
+      "cache_1h_write": "10",
+      "cache_5m_write": "6.25",
+      "cache_read": ".5",
+      "ordinary_input": "5",
+      "output": "25"
+    },
+    "claude-sonnet-5-5": {
+      "cache_1h_write": "4",
+      "cache_5m_write": "2.5",
+      "cache_read": ".1",
+      "ordinary_input": "2",
+      "output": "10"
+    },
+    "gpt-5.6-luna": {
+      "cache_read": ".02",
+      "cache_write": ".25",
+      "ordinary_input": ".2",
+      "output": "1.2"
+    }
+  },
+  "provider_calls": 0,
+  "sources": [
+    {
+      "opened": "2026-10-28",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview"
+    },
+    {
+      "opened": "2026-10-28",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    }
+  ]
+}

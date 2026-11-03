@@ -1,0 +1,117 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "588facff86d0dd70a496d817d31ef61a91f149c74e3ccbce89d8accd4526689a",
+  "portfolio_id": "portfolio-6566f1b12dbfc665d491b9c1eb0186f418d2a2d7f26d5a13692fa67a3a6bbb2c",
+  "portfolio_sha256": "f68473a15be471eb05a54ec2be20445c16d39e6e9c3082ee40ea03002181db6a",
+  "provenance": {
+    "method": "C",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": "5f0d63edff4f2add2000c2b65e0c6bacc067d716145e7e1358aa9ec7f50aeee3",
+    "procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+    "repeat": 1,
+    "request_ids": [
+      "p2-5f85b6fc1d9f0b3c4f00d95e.plan",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.00",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.01",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.02",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.03",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.04",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.05",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.06",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.07",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.08",
+      "p2-5f85b6fc1d9f0b3c4f00d95e.answer.09",
+      "p2-718a1781795dd29b5ebe57e4.rank"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+  },
+  "responses": [
+    {
+      "id": "response-5e54eb2c38be60c793574441",
+      "index": 0,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.00",
+      "status": "ok",
+      "text_sha256": "e278644fd1885457474c8004008ae098b890777863896235cf2d1f8fa2a00ab9"
+    },
+    {
+      "id": "response-296397ecf9e0fee2de336430",
+      "index": 1,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.01",
+      "status": "ok",
+      "text_sha256": "7dd12217a2fdb3248327a31bc0162907b0743812ead6f7a88fd2ba58596d71d4"
+    },
+    {
+      "id": "response-8602c062fb5c4b24c11a933e",
+      "index": 2,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.08",
+      "status": "ok",
+      "text_sha256": "4fe303dd6b6f76c295a0d1c5a8ba3a7ec54aae69636a8e8d53d207e8028de642"
+    },
+    {
+      "id": "response-df5527ff87140faf8b787bde",
+      "index": 3,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.04",
+      "status": "ok",
+      "text_sha256": "70fbb0bc9d54e2df1966036b62fb3c633360fd80d1ca5bb1f2c228cea511e9a8"
+    },
+    {
+      "id": "response-0099769c08afa3bd54ecb20f",
+      "index": 4,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.07",
+      "status": "ok",
+      "text_sha256": "9b805a1226cbc2bd3407584ded5076508988d3c67336de7f58c0f2a46e94ce30"
+    },
+    {
+      "id": "response-7c47934f9f17cd82ef7d797c",
+      "index": 5,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.06",
+      "status": "ok",
+      "text_sha256": "9cd3ce1f4b62c74317c0acaf69293f48c2279ecf1e1fdfdb83509262ebf331e6"
+    },
+    {
+      "id": "response-df9a28efac461c88a260b260",
+      "index": 6,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.05",
+      "status": "ok",
+      "text_sha256": "7982c7067f34200aa72886837b8127a237cb21b1bffb243c9555be6ad1cc9d8c"
+    },
+    {
+      "id": "response-da8debb07a2e38e792650588",
+      "index": 7,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.09",
+      "status": "ok",
+      "text_sha256": "22950600ed4e7e6b1e8c7d40f244e297c4d2c8e820010de3def5fb97d17d6545"
+    },
+    {
+      "id": "response-a6cb75c553f0bbf456b8d725",
+      "index": 8,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.02",
+      "status": "ok",
+      "text_sha256": "79d514656932a73a99844f4208cd577a73c282d6031e4d3dc6bb145cb490314f"
+    },
+    {
+      "id": "response-0b6d036f4eeae23ec8bcc549",
+      "index": 9,
+      "request_id": "p2-5f85b6fc1d9f0b3c4f00d95e.answer.03",
+      "status": "ok",
+      "text_sha256": "d8c17060044b8fca78a7f1b24d62ccd3eb8def9503c181db75e6a28bbfcaf2d8"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-af7dc61fe1eeaa81cd93",
+    "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-29"
+    }
+  }
+}

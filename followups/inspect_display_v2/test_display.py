@@ -1,0 +1,139 @@
+"""Offline checks against the explicitly mounted closed public log and provenance."""
+from __future__ import annotations
+
+import copy
+import csv
+import io
+import json
+import unittest
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, ClassVar
+
+from . import display
+
+if TYPE_CHECKING:
+    from inspect_ai.log import EvalLog
+
+IMPORT_TIME = "2026-10-31T18:00:00+00:00"
+
+
+class DisplayChecks(unittest.TestCase):
+    blocks: ClassVar[dict[str, list]]
+    log: ClassVar[EvalLog]
+    provenance: ClassVar[dict[str, Any]]
+    @classmethod
+    def setUpClass(cls):
+        cls.blocks = display.block_execution()
+        from inspect_ai.log import read_eval_log
+
+        cls.log = read_eval_log(Path("/input/closure.eval"), resolve_attachments=False)
+        cls.provenance = json.loads(Path("/input/provenance.json").read_bytes())
+
+    def test_native_evidence_is_exact_and_input_is_unchanged(self):
+        self.assertTrue(any(sample.attachments for sample in self.log.samples))
+        before = self.log.model_dump(mode="json")
+        new = display.project(self.log, self.provenance, IMPORT_TIME)
+        self.assertEqual(self.log.model_dump(mode="json"), before)
+        self.assertEqual(new.status, self.log.status)
+        self.assertEqual(new.error, self.log.error)
+        self.assertEqual(new.results, self.log.results)
+        self.assertEqual(new.eval.metadata["snapshot"], self.log.eval.metadata["snapshot"])
+        self.assertFalse(new.eval.metadata["snapshot"]["summary"]["scientific_complete"])
+        for old, saved in zip(self.log.samples, new.samples, strict=True):
+            self.assertEqual(old.attachments, saved.attachments)
+            self.assertEqual(old.output, saved.output)
+            self.assertEqual(old.scores, saved.scores)
+            self.assertEqual(old.error, saved.error)
+            for key, value in old.metadata.items():
+                self.assertEqual(saved.metadata[key], value)
+
+    def test_dates_separate_controller_activity_and_import(self):
+        new = display.project(self.log, self.provenance, IMPORT_TIME)
+        self.assertEqual(new.eval.created, IMPORT_TIME)
+        self.assertEqual(display.utc(new.stats.started_at), display.utc("2026-10-31T14:52:53.196266787Z"))
+        self.assertEqual(display.utc(new.stats.completed_at), display.utc("2026-10-31T17:11:43.151029952Z"))
+        meta = new.eval.metadata["presentation_v2"]
+        self.assertEqual(meta["api_activity"], self.provenance["activity"])
+        self.assertEqual(meta["task_dates_basis"], "native controller lifetime")
+        self.assertEqual(meta["controller"], self.provenance["controller"])
+        self.assertLess(display.utc(new.stats.started_at),
+                        display.utc(meta["api_activity"]["first_request_started_at_utc"]))
+        self.assertEqual(meta["exported_at_utc"], IMPORT_TIME)
+
+    def test_model_profiles_reconcile_once_without_inspect_usage(self):
+        new = display.project(self.log, self.provenance, IMPORT_TIME)
+        counts: dict[tuple[str, str, str], int] = {}
+        for role, models in new.eval.model_roles.items():
+            native_role = role.removeprefix("imported_native/")
+            for model in models:
+                for profile in model.args["profiles"]:
+                    self.assertEqual(profile["role"], native_role)
+                    key = (native_role, model.model, json.dumps(profile["parameters"], sort_keys=True))
+                    self.assertNotIn(key, counts)
+                    counts[key] = profile["native_call_count"]
+        self.assertEqual(sum(counts.values()), 256)
+        self.assertEqual({model for _, model, _ in counts},
+                         {"claude-sonnet-5-5", "claude-opus-5", "gpt-5.6-luna"})
+        self.assertFalse(new.stats.model_usage)
+        self.assertFalse(new.stats.role_usage)
+
+    def test_no_fabricated_model_or_tool_events_and_no_unattempted_times(self):
+        new = display.project(self.log, self.provenance, IMPORT_TIME)
+        added_events: list[int] = [len(a.events) - len(b.events)
+                                  for a, b in zip(new.samples, self.log.samples, strict=True)]
+        self.assertEqual(sum(added_events), 256)
+        self.assertTrue(all(e.event == "info" for s in new.samples for e in s.events))
+        for sample in new.samples:
+            calls = sample.metadata["native_audit"]
+            if calls:
+                self.assertIsNotNone(sample.started_at)
+                self.assertIsNotNone(sample.completed_at)
+            else:
+                self.assertIsNone(sample.started_at)
+                self.assertIsNone(sample.completed_at)
+        self.assertIn("Activity graph", display.NOTICE)
+
+    def test_audit_csv_includes_diagnostic_without_an_extra_primary(self):
+        rows = list(csv.DictReader(io.StringIO(display.audit_csv(self.provenance))))
+        self.assertEqual(len(rows), 256)
+        self.assertEqual(sum(int(r["spent_micro_usd"]) for r in rows), 7_882_971)
+        self.assertEqual(sum(r["diagnostic"] == "True" for r in rows), 11)
+        self.assertEqual(len({r["slot_id"] for r in rows}), 256)
+        self.assertTrue(all(r["started_at_utc"] and r["finished_at_utc"] for r in rows))
+
+    def test_rejects_changed_native_facts(self):
+        for mutate in (
+            lambda p: p.update(spent_micro_usd=0),
+            lambda p: p.update(scientific_complete=True),
+            lambda p: p["requests"][0].update(returned_model="replacement-model"),
+            lambda p: p["requests"][0]["declared_config"].update(max_tokens=1),
+            lambda p: p["requests"].append(copy.deepcopy(p["requests"][0])),
+            lambda p: p["old_snapshots"]["closure"]["payload"].update(file_sha256="0" * 64),
+        ):
+            changed = copy.deepcopy(self.provenance)
+            mutate(changed)
+            with self.assertRaises((ValueError, KeyError)):
+                display.project(self.log, changed, IMPORT_TIME)
+
+    def test_rejects_naive_reversed_and_escaped_provenance(self):
+        for mutate in (
+            lambda p: p["requests"][0].update(started_at_utc="2026-10-31T15:40:21"),
+            lambda p: p["requests"][0].update(finished_at_utc="2026-10-30T00:00:00Z"),
+            lambda p: p["controller"].update(finished_at_utc="2026-10-30T00:00:00Z"),
+            lambda p: p["requests"][0]["source"]["audit"].update(path="../escape.json"),
+            lambda p: p["requests"][0]["source"]["audit"].update(path="runs/provider.stderr.log"),
+            lambda p: p["requests"][0]["source"]["audit"].update(path="runs/.env"),
+        ):
+            changed = copy.deepcopy(self.provenance)
+            mutate(changed)
+            with self.assertRaises((ValueError, KeyError)):
+                display.project(self.log, changed, IMPORT_TIME)
+
+    @classmethod
+    def tearDownClass(cls):
+        if any(cls.blocks.values()):
+            raise AssertionError(f"model/network attempts during display checks: {cls.blocks}")
+
+
+if __name__ == "__main__":
+    unittest.main()

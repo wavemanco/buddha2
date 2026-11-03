@@ -1,0 +1,50 @@
+{
+  "container_id": "6662d109510d5f4444a7c498772a703689bc130fb09c492e31ee8d1146c4e354",
+  "environment_names": [
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONPATH",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_IMAGE_ID",
+    "BUDDHA2_OFFLINE",
+    "PHASE3A_OPENCODE",
+    "PHASE3A_BUN",
+    "PATH",
+    "LANG",
+    "GPG_KEY",
+    "PYTHON_VERSION",
+    "PYTHON_SHA256",
+    "PYTHONUNBUFFERED",
+    "PYTHONNOUSERSITE",
+    "HF_HUB_OFFLINE",
+    "HF_DATASETS_OFFLINE",
+    "TRANSFORMERS_OFFLINE",
+    "TOKENIZERS_PARALLELISM",
+    "OMP_NUM_THREADS",
+    "NOVELTYBENCH_ROOT",
+    "BUDDHA2_NB_UPSTREAM",
+    "HARNESS2_ROOT",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "TMPDIR"
+  ],
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "mounts": [
+    {
+      "Destination": "/workspace",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/results/phase3a-h1-integrated-v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1",
+      "Type": "bind"
+    }
+  ],
+  "network": "none",
+  "read_only_rootfs": true
+}

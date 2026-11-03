@@ -1,0 +1,81 @@
+{
+  "artifact_sha256": {
+    "seals/p3a-01.json": "5cbc904d73e7a9c7f710d028262bd27b83d5b3a45caf6c80a633cd73f310acee",
+    "search/p3a-01/adaptive/adaptation.json": "f23a09114124d945a5afb97afca9ac4f900317ab3935ddb9522af1d4c001d70a"
+  },
+  "cumulative_known_micro_usd": 5659054,
+  "cumulative_max_exposure_micro_usd": 17099054,
+  "duplicate_diagnostic_scored": 1,
+  "engineering_acceptance": "pass",
+  "first_prompt_authentic_path": false,
+  "first_terminal_prefix_events": 356,
+  "first_terminal_prefix_sha256": "3bfebaf795e30a18fb806c54c072dca1152e183d9e182406d37d27851e08fea5",
+  "historical_known_micro_usd": 2695297,
+  "historical_reserved_micro_usd": 11440000,
+  "historical_unknown_released": false,
+  "kind": "phase3a-r2-first-independent-audit-v1",
+  "known": 178,
+  "limitations": [
+    "First prompt is scoreable but cannot establish an authentic adaptation path.",
+    "Historical accounting remains unresolved; provider envelope cost is not an invoice.",
+    "Host lifetime includes long masked-key wait and is not inference latency."
+  ],
+  "native_review": {
+    "authentic_eligible_stages": 0,
+    "cap_limited_unchanged_stages": [
+      "inv1",
+      "dom1",
+      "agg1"
+    ],
+    "editor_requests": 24,
+    "editor_sessions": 3,
+    "judge_requests_after_seal": 33,
+    "native_artifact_hashes_verified": 171,
+    "native_fell_back": [
+      false,
+      false,
+      false
+    ],
+    "native_k": 1,
+    "native_kept_base": [
+      true,
+      true,
+      true
+    ],
+    "native_modes": [
+      "agg"
+    ],
+    "pair_seal_prefix_events": 290,
+    "read_tools": 54,
+    "rollouts": 4,
+    "terminal_role_translations": 3,
+    "tool_results_flagged_error": 0,
+    "write_edit_tools": 0
+  },
+  "new_reserved_micro_usd": 0,
+  "new_unknown": 0,
+  "pending": 0,
+  "primary_scored": 2,
+  "provider_profiles_request_response_ids_decimal_costs_caps": "independent accounting reviewer verified all178; source157 exact",
+  "requests": 178,
+  "reviewed_at_utc": "2026-10-29T11:01:30.569531+00:00",
+  "roles": {
+    "answer": 100,
+    "editor": 24,
+    "fixed_selector": 1,
+    "group": 3,
+    "plan": 10,
+    "quality": 30,
+    "rank": 10
+  },
+  "root_verification": [
+    "All157 current and retained source files byte-identical",
+    "Both owned first-launch containers absent",
+    "Guarded network-none frozen CLI inspect passes with ready/new-accounting-settled state"
+  ],
+  "scientific_phase_complete": false,
+  "source_sha256": "a3b9403d6bc0a144d0bb74e74a330ccf057850da0d23dcb2d9059d94a20883e3",
+  "spent_micro_usd": 2963757,
+  "study_sha256": "17f35cf72cad95351e726cd9f02824be78db35a0a16c3f83db9e7bae9d762032",
+  "utility_used_as_continuation_gate": false
+}

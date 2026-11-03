@@ -1,0 +1,44 @@
+{
+  "kind": "p2bf1-technical-review-v1",
+  "reviewed_at_utc": "2026-10-28T10:18:27Z",
+  "reviewer": "Codex /root, with independent agent checks; technical saved-evidence review, not human creativity ratings",
+  "technical_result": "pass",
+  "journal_review_id": "live-first-review-001",
+  "journal_review_sha256": "061dc60298827ef9bc43ccd3d6dfd59f8ea9a167278ebe3680cf3d42590ce004",
+  "evidence_cutoff": "2026-10-28T10:16:14Z",
+  "objective_result": "First counted task/repeat completed through actual declared provider path and native scoring",
+  "attempts": 28,
+  "max_slots": 55,
+  "slot_classification": {
+    "ok": 28,
+    "missing": 0,
+    "not_needed_nonhead": 27
+  },
+  "scored_orders": 3,
+  "settled_public_price_upper_bound_micro_usd": 210174,
+  "reserved_micro_usd": 0,
+  "unknown_results": 0,
+  "retries": 0,
+  "replacements": 0,
+  "expansion_authorized": false,
+  "next_action": "Stop. Refresh and review the concrete remaining-pilot definition and cost scenarios before any separately authorized expansion.",
+  "whole_pilot_status": "inconclusive; 69 assessments missing; no selected seed",
+  "scope_limit": "One development prompt/repeat only; recursive adaptation, model comparisons, held-out confirmation and optional human review were not run",
+  "criteria": {
+    "frozen_source_unchanged": true,
+    "declared_settings_retained": true,
+    "c_is_unchanged_b_text_permutation": true,
+    "independent_authority_and_outcome_checks": true,
+    "requested_and_returned_model_identity_checked": true,
+    "all_first_slots_classified": true,
+    "all_three_portfolios_and_native_assessments": true,
+    "no_unresolved_usage_or_delivery": true
+  },
+  "billing_limit": "Usage-derived conservative public-price accounting, not independent provider invoice reconciliation",
+  "evidence_refs": [
+    "evidence/phase2b-f1/live-authority-review.json",
+    "evidence/phase2b-f1/live-outcome-review.json"
+  ],
+  "human_readers_required": false,
+  "new_provider_calls": 0
+}

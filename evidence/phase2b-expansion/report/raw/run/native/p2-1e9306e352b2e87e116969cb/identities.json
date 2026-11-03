@@ -1,0 +1,116 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "ba4bdc0c7fa04e25bbb81f34d76873d260a9fcd15b04f6ee0fdd98ec04b20af2",
+  "portfolio_id": "portfolio-35f237b003d8e01e8b0d45484634486e04d4c7f769321451d1278cbf8d8ab789",
+  "portfolio_sha256": "ce162c8c01bd31f509b89dfd6d240d454379e717c4a96ceef0cc659ddb31d7b7",
+  "provenance": {
+    "method": "B",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "3aea68237b07b5cbefba1f455f751a34cdd06fe0b812df16f2502f3fc069c62b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-1e9306e352b2e87e116969cb.plan",
+      "p2-1e9306e352b2e87e116969cb.answer.00",
+      "p2-1e9306e352b2e87e116969cb.answer.01",
+      "p2-1e9306e352b2e87e116969cb.answer.02",
+      "p2-1e9306e352b2e87e116969cb.answer.03",
+      "p2-1e9306e352b2e87e116969cb.answer.04",
+      "p2-1e9306e352b2e87e116969cb.answer.05",
+      "p2-1e9306e352b2e87e116969cb.answer.06",
+      "p2-1e9306e352b2e87e116969cb.answer.07",
+      "p2-1e9306e352b2e87e116969cb.answer.08",
+      "p2-1e9306e352b2e87e116969cb.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-0c380bfec8e924d505190c21",
+      "index": 0,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.00",
+      "status": "ok",
+      "text_sha256": "f46885e3c1aa668206050290b251b5cee5d0ecb50dbbc07454927888be91b62f"
+    },
+    {
+      "id": "response-7adf47fa67ae4f7537c1952f",
+      "index": 1,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.01",
+      "status": "ok",
+      "text_sha256": "5767deadc488498caf7d0e0d50d30278a4ca652509015b2da16fe92b122e126a"
+    },
+    {
+      "id": "response-ddf1fe3cfa8868e48b81c0a5",
+      "index": 2,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.02",
+      "status": "ok",
+      "text_sha256": "e1a54a2df2d0d7a0a95c4cf65a2518c4f3543bba58a7724ccbed4b4bda8e87b6"
+    },
+    {
+      "id": "response-3a90924582dcc92512826b55",
+      "index": 3,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.03",
+      "status": "ok",
+      "text_sha256": "7c467225fa18e2288155069ad197112c49d3682fba99c0017d87f04cdae6726d"
+    },
+    {
+      "id": "response-b31c2efeade7e28b1ac5c258",
+      "index": 4,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.04",
+      "status": "ok",
+      "text_sha256": "bbef5139073ab515991aed21db3d323ce1ecde4fef7d4d2501d5455928a0bdf0"
+    },
+    {
+      "id": "response-f762663721aa99d35edb906c",
+      "index": 5,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.05",
+      "status": "ok",
+      "text_sha256": "b949d4483e8da3c1d7c25848453c3c76ad9301fdce7955485654e77fa969be5b"
+    },
+    {
+      "id": "response-1d9ea8287ee2fc68f107340b",
+      "index": 6,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.06",
+      "status": "ok",
+      "text_sha256": "33d5fc70a29e5ff1ac69f0de60cf37b17ce01aba86e078d482eb394f2cd9e538"
+    },
+    {
+      "id": "response-0340f4385d5efba6643bc865",
+      "index": 7,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.07",
+      "status": "ok",
+      "text_sha256": "597eff86c48611c7c9cd21c47a8fcd7af0394482c48f33204b1f82468b6e09b7"
+    },
+    {
+      "id": "response-70ec8054a7c8a76e2f6aecfd",
+      "index": 8,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.08",
+      "status": "ok",
+      "text_sha256": "5d3178ce0776dacd41d1042455c450c8e6dd2d06e42b674e0cfb43e0f0274118"
+    },
+    {
+      "id": "response-a541010623c06c195b4d724b",
+      "index": 9,
+      "request_id": "p2-1e9306e352b2e87e116969cb.answer.09",
+      "status": "ok",
+      "text_sha256": "b6a92323f8edefd368ab4dc6a5690932163b9183dd7ac4bc64d9a5620cf150db"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-4b5afc9736f082c708eb",
+    "prompt": "What's the one best thing about going on a vacation?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-36"
+    }
+  }
+}

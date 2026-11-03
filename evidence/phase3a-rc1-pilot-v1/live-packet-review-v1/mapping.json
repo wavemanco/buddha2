@@ -1,0 +1,14 @@
+{
+  "runs/phase3a-rc1-pilot-v1/reviewer/live-packet-audit-v1-execution.json": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/live-packet-review-v1/live-packet-audit-v1-execution.json",
+    "sha256": "2beb138444bf1d53aa426a36c046455c99649fd7ceabe439d37beb4bc08fc87f"
+  },
+  "runs/phase3a-rc1-pilot-v1/reviewer/live-packet-audit-v1.json": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/live-packet-review-v1/live-packet-audit-v1.json",
+    "sha256": "593ecb00c8925c130a0f673eae1a61e92d539a16e8677246bbe1dcf33d4ab13d"
+  },
+  "runs/phase3a-rc1-pilot-v1/reviewer/packet_reader_v3.py": {
+    "copy": "evidence/phase3a-rc1-pilot-v1/packet-review-v1/packet_reader_v3.py",
+    "sha256": "ccd91ad10d3b68bb55290c540bc98a6569369e52bf5abb98e00debe752357ab5"
+  }
+}

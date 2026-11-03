@@ -1,0 +1,600 @@
+{
+  "assessment_identity_sha256": "93b67f2d039b5a08fa217eeed3bbaecf90205849eda7133cb64e7127bbe3cc2f",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 9,
+    "utility": 7.729363457748144
+  },
+  "native": {
+    "fields": {
+      "distinct": 9,
+      "generation_scores": [
+        8,
+        8,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        8,
+        null
+      ],
+      "partition_scores": [
+        8,
+        8,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        8
+      ],
+      "utility": 7.729363457748144
+    },
+    "generation_row": {
+      "generations": [
+        "I'd invent **Shiftground**: a programmable street surface made of interlocking, load-bearing hexagonal tiles that can raise, lower, tilt, and change texture on a schedule or on request.\n\n**How it works**\n\n- Each tile is about a meter wide and sits on a motorized column, like a very sturdy piston. Columns can move up to about 1.5 meters, enough for steps, benches, ramps, and low walls.\n- Tiles are topped with a durable composite skin. Beneath it, small heating and cooling channels can warm a surface in winter or cool it in summer, and the top layer can switch between grippy, smooth, or slightly springy textures.\n- Rainwater is collected in the substructure. Tiles can drop to form shallow channels or ponds, then lift again to drain them.\n- Safety comes first. Pressure sensors detect anything on a tile and lock its position. Movement happens slowly, with light and sound cues, and never under a person, a stroller, or a wheelchair. Power is local, drawn from solar canopies and from kinetic energy harvested from footsteps.\n- Rule-setting is democratic. A neighborhood council sets the allowed \"modes,\" and residents vote on new ones through a simple app or a physical kiosk. Fixed zones keep emergency access and accessible routes constant.\n\n**What daily life looks like**\n\n- **Morning:** The street forms a smooth commuter lane with gentle ramps for bikes, scooters, and wheelchairs. Tiles near the bus stop rise into warm benches.\n- **Midday:** A school-adjacent block becomes a playground, with rolling hills, a shallow splash basin, and climbing steps. Office workers get a terraced lunch amphitheater next door.\n- **Evening:** The main plaza rearranges into a stage with tiered seating for a local band, or a market grid with stall platforms at exactly the right spacing.\n- **Weekends:** Residents can book a block for a skate park, a seasonal ice-rink-like surface in cold climates, a labyrinth, or a community dance floor.\n- **Rainy days:** The surface tilts subtly to channel water to gardens and creates dry, raised walkways.\n- **Festivals and one-offs:** A neighborhood can design a one-day landscape, such as a miniature mountain range for a kite festival, and then restore it afterward.\n\n**Why it makes the world more interesting**\n\nMost cities are fixed: a street is a street, a plaza is a plaza. Shiftground turns public space into something you can renegotiate. The same corner is a different place on Tuesday than on Saturday, so people notice their surroundings, linger, and meet each other. It also makes space use efficient, since one block can serve many purposes instead of sitting idle most of the day.\n\nThe real challenge is cost and maintenance, so I'd start with a single plaza, learn what people actually use, and expand outward from there.",
+        "# The Serendipity Exchange\n\n**The idea:** A neighborhood-based civic institution that pairs strangers for short, low-stakes shared experiences: a 45-minute walk, a skill swap, a tasting, a \"show me your favorite spot\" tour. It's part public library, part pen-pal system, part dinner-party roulette.\n\n## Why this, not a gadget\nMost of what makes a place interesting is people you wouldn't otherwise meet. Technology has made it easy to find people like us and easy to avoid everyone else. An institution can deliberately reverse that, the way libraries and public parks once did.\n\n## How it works\n1. **Sign up with a \"offer\" and a \"curiosity.\"** Example: *I can teach you to bake sourdough. I'm curious about how bus routes get planned.*\n2. **Get matched** by a mix of complementary interests and deliberate randomness. One slot in every five is a wildcard with no shared logic.\n3. **Meet in a public \"Exchange Spot\"**: partner cafés, libraries, community gardens, laundromats, and parks with a recognizable sign.\n4. **Do the experience** (capped at 60 minutes), then go your separate ways. No obligation to exchange numbers.\n5. **Leave a \"postcard,\"** a short, optional note about what surprised you, which is displayed (anonymously) at the Spot.\n\n## Design rules\n- **Low stakes by default.** Short, public, daytime, and free or nearly free. Ending early is always acceptable, with no explanation.\n- **No profiles to browse.** You can't shop for people. Matching happens on offers and curiosities, which reduces dating-app dynamics and appearance-based filtering.\n- **Mix across the usual lines.** Matching intentionally spans age, occupation, and background, while avoiding pairings that would feel like a power imbalance (e.g., a manager and their direct report).\n- **Reciprocity.** Everyone both gives and receives, so no one is just a \"helper\" or a \"beneficiary.\"\n- **No ratings.** Public scores turn encounters into performances. Feedback goes only to program staff.\n\n## Safeguards\n- **Identity verification** and a short code-of-conduct acknowledgment at sign-up.\n- **Public venues only** for first meetings, with staff or hosts who know the program.\n- **Check-in and check-out** via a simple text so someone always knows you arrived and left safely.\n- **Easy block and report tools**, with human review and removal for violations.\n- **Opt-out filters** for logistical needs (accessibility, language, mobility), not for demographic preferences.\n- **Minimal data collection**, with data deleted after the match period.\n- **Youth and vulnerable-adult tracks** with separate rules, such as intergenerational pairings run through schools or senior centers with supervision.\n\n## Funding and governance\n- Run as a **nonprofit or municipal service**, funded by city arts and public health budgets, local business sponsorship of Spots, and optional donations.\n- Governed by a **neighborhood council** so each locale shapes its own flavor: a fishing town's Exchange will look different from a college district's.\n\n## Measuring success\nNot by sign-ups or time spent, but by:\n- How many people report meeting someone outside their usual circles\n- Repeat participation after six months\n- Self-reported sense of belonging and neighborhood trust\n- Unplanned follow-on connections (a book club, a repaired fence, a new business partnership)\n\n## What could go wrong, and fixes\n- **Self-selection toward the already social.** Counter with outreach through libraries, workplaces, faith groups, and housing complexes.\n- **Awkwardness.** Provide optional conversation prompts and an easy exit script.\n- **Commercialization.** Keep it non-profit with a charter that prohibits selling attention or data.\n\n## The payoff\nA city where the person next to you on the bus might be someone who taught you to fix a bike, where neighborhoods have shared stories, and where \"I'd never have met you otherwise\" becomes a normal sentence.",
+        "I'd invent the **Umwelt Lens**, a lightweight wearable (a pair of glasses, an earpiece, and a thin wristband) that translates the hidden signals of the world into things you can see, hear, and feel.\n\nThe name comes from the biologist Jakob von Uexküll's idea of the *umwelt*: the bubble of the world that each creature can actually perceive. A tick lives in a world of warmth and butyric acid, a bat in echoes. Humans just happen to be stuck with ours. The Lens lets you borrow other ones.\n\n**What it would do**\n\n- **Air as color.** Particulates, pollen, ozone, and humidity show up as a soft, translucent wash over your view. Walking past a bakery, you see a golden plume drifting out the door. Near a highway, a dull haze clings to the road. Cities would suddenly have visible weather at the scale of a single street.\n- **Plants as sound.** Trees and plants exchange chemical and electrical signals, and shift their behavior under drought, insect attack, or the arrival of rain. The Lens turns these into gentle tones and textures. A stressed oak sounds thin and brittle, and a forest after rain hums like a choir warming up. It wouldn't claim plants are \"talking\" in a human sense, only that you'd hear real data about their state.\n- **Tides and planetary motion as touch.** The wristband pulses slowly with the pull of the moon: a swelling pressure as the tide rises, even if you're a hundred miles inland. You'd feel the rotation of the Earth the way you feel a heartbeat.\n- **Scale shifts.** A dial lets you hear at a beetle's time scale, or see a day compressed so you can watch shadows sweep and flowers turn. A sidewalk crack becomes a landscape, and a mountain's slow erosion becomes a visible drift.\n\n**Why it makes the world more interesting**\n\nBoredom is mostly a failure of perception, not a lack of things happening. A walk to the corner store is the same walk every day only because we're sensing about one percent of it. The Lens would make every place newly layered. Kids would grow up knowing their backyard is full of conversations and weather they'd never noticed, and that would change what they care about. People are more likely to protect what they can perceive: a river you can *feel* struggling is harder to ignore.\n\nIt would also be humbling in a good way. Experiencing the world through other senses is a reminder that our default view is one narrow slice, and that reality is much larger and stranger than it looks. I'd want the experience to be shared, too: a mode where two people can tune into the same signal and compare notes, turning an ordinary hike into an expedition.",
+        "I'd invent a new rhythm for the year: **The Odd Calendar**, a set of small, shared, low-cost events that give ordinary weeks some texture. It isn't one big holiday. It's a handful of recurring moments, each simple enough that no organization is needed to run it.\n\n**The events**\n\n1. **Unplugged Dusk (first Friday of every month).** At sunset, everyone in a neighborhood turns off screens for one hour. People step outside, light a candle or porch lamp, and stay put. The only rule is that you can't be alone with a device. Origin: it began as a single apartment building's habit of leaving the stairwell lights off and meeting on the roof.\n\n2. **Story Night (the first rainy night of each season).** Rain is the trigger. Neighbors gather in kitchens, stoops, and laundromats, and each person tells a true story in under five minutes, on a theme chosen by whoever hosts. The theme rotates: \"the worst job I ever had,\" \"a stranger who helped me,\" \"something I got wrong for years.\"\n\n3. **Swap Day (the spring equinox).** People bring one object they love but no longer need, along with a note about its history. Objects are exchanged by drawing lots, so you leave with someone else's story attached to something useful.\n\n4. **The Long Table (midsummer).** Streets close, and households carry out whatever food they have. Seating is assigned by lottery so you sit next to people you don't already know. Nobody cooks for the whole table; the food is a mix of everyone's contributions.\n\n5. **Thanks Out Loud (late autumn).** You deliver a spoken or handwritten thank-you to someone who never expected one: a bus driver, a former teacher, the person who fixes the elevator. No gifts, just specifics about what they did.\n\n6. **The Dark Day (midwinter).** Communities gather for an evening of lanterns, soup, and music played without amplification. Everyone also names one thing they're letting go of and one thing they're starting.\n\n**How it would spread**\n\n- **Starter kits, not rules.** Each event comes with a one-page card with the idea, a simple script, and a suggested theme. Cards are printed free at libraries and cafés, so anyone can run an event without permission.\n- **Local variation is encouraged.** Every town adds its own twist, such as a signature dish, song, or toast. The core stays recognizable while the details become local identity.\n- **Visible signals.** A specific porch light color on Unplugged Dusk, or a ribbon on your door for Story Night, shows participation and invites curiosity from people who haven't joined yet.\n- **Schools and workplaces adopt them.** The events are short and nonreligious, so they fit anywhere. A school can hold Thanks Out Loud in a single class period.\n- **Photographs are discouraged during events.** The point is presence, and word of mouth does the spreading instead.\n\n**Why this over a gadget**\n\nMost inventions add capability. This adds anticipation, shared memory, and reasons to knock on a neighbor's door. A calendar with these anchor points makes time feel less like a blur and more like a sequence of occasions you look forward to, and it costs almost nothing to start: pick a Friday, turn off the lights, and invite the people next door.",
+        "I'd invent **Palimpsest**, a planet-scale, real-world alternate reality game in which every city is a layered puzzle and the whole world collaborates to solve it.\n\n**The core idea**\nEvery place has buried stories: forgotten streets, local legends, vanished businesses, disputed histories. Palimpsest turns these into mysteries that players uncover by walking, asking, archiving, and building. The name comes from manuscripts scraped clean and rewritten, with the older text still faintly visible. The game makes the older layers of your city visible again.\n\n**How it works**\n\n1. **Seeds.** Locals, historians, librarians, and artists submit \"seeds\": a verified fragment of lore, such as a photo of a demolished theater, an oral history about a river that was buried, or a rumor about a hidden room in a library. A volunteer review guild checks them for accuracy and for safety (no private property hazards, no harm to living people).\n\n2. **Threads.** Seeds are woven into multi-step puzzles. One might send you to a street corner to find a worn inscription, then to a municipal archive to find the name it references, then to a bakery whose owner knows what that family did next.\n\n3. **Bridges.** The key mechanic is that no city can finish its mystery alone. The final clue in Lisbon might only make sense with a translation from a player in Recife, or a ship's manifest held by an archive in Rotterdam. Cities must trade information, which forces cross-cultural collaboration.\n\n4. **Works.** Solving a thread unlocks a collective creation: a mural, a walking tour, a sound map, a small plaque, a community play. Each city's solved threads become permanent public art or heritage trails, so the game leaves something real behind.\n\n**Incentives**\n- **Reputation, not currency.** Players earn titles like Cartographer, Archivist, or Translator, based on the type of contribution. Titles are visible on a profile but can't be bought.\n- **Seasonal city rankings** measure collaboration (how many bridges were built), not just speed, so cooperation beats racing.\n- **Local sponsorship.** Cafés, museums, and libraries become \"waypoints\" that host clues and get foot traffic. Municipalities can fund seasons because the output is tourism and civic pride.\n- **Quiet-mode challenges** reward noticing: sketching a building, interviewing an elder, recording a street's sounds at dawn.\n\n**Safeguards**\n- Every clue is vetted for physical safety, accessibility, and legality, and always has a non-physical route (remote archive work) so people with limited mobility can fully take part.\n- Privacy rules prevent doxxing or digging into living people's lives.\n- Disputed histories are presented with multiple perspectives rather than a single \"answer.\"\n\n**Why it makes the world more interesting**\nIt teaches people to look at where they live as something deep and strange rather than background. It gives history a reason to be gathered from the people who hold it. And it connects strangers across the globe through a shared sense of discovery. Someone walking to work would know that the odd brass marker on the corner is the start of a story, and that a stranger on another continent may hold the next piece.",
+        "I'd invent **the Apprenticeship Commons**: a lifelong marketplace where anyone can spend a short, structured stretch apprenticing in an unusual craft or profession, whether that's glassblowing, beekeeping, cartography, bookbinding, lock-picking, or tide-table forecasting.\n\n**How it works**\n\n- **Short, real apprenticeships.** Placements last from a single weekend to six weeks, often part-time. You work alongside a practitioner on actual jobs, not a demo class. You might help extract honey, pull a glass gather, or hand-draw a trail map that will be used.\n- **A two-sided marketplace.** Experts list what they do, what a beginner could realistically contribute, and what they'd like in return. That could be modest fees, extra hands, or simply the satisfaction of passing on knowledge. Learners build a \"practice record\" of what they've tried.\n- **Matching by curiosity, not career.** The system asks what you've always wondered about, then suggests neighboring crafts. If you like baking, it might point you toward millwork or fermentation.\n- **Mentor-of-a-mentor chains.** After completing an apprenticeship, you can offer a \"first-timer's guide\" to the next newcomer, which keeps knowledge circulating and gives learners a way to give back early.\n- **Local anchoring.** Every region gets a map of its vanishing trades: the last cooper, the one remaining net-mender. This protects endangered skills and makes the place you live feel deeper.\n\n**Why it makes the world more interesting**\n\n1. **People become more interesting.** A dinner conversation changes when someone has actually kept bees for a month. Ordinary lives pick up odd, specific stories and skills.\n2. **Expertise becomes accessible.** Most fascinating work is hidden behind credentials, cost, or simply not knowing it exists. This lowers the door without cheapening the craft.\n3. **Dying skills get a lifeline.** Even brief exposure draws in a few people who stay, and it gives masters an audience and an income.\n4. **Careers and hobbies get unstuck.** Trying something for two weeks is far cheaper than a career change, so people can discover fits they'd never have risked pursuing.\n5. **Communities get more connected.** Strangers of different ages and backgrounds work side by side on tangible things.\n\n**Safeguards**\n\nPractitioners would be vetted for safety, apprentices would get clear expectations and insurance coverage, and the work would be set up so it benefits the master rather than burdening them.\n\nThe aim is simple: a world where everyone has a few strange competencies, and curiosity is something you can act on by Tuesday.",
+        "I'd invent the **Living City Kit**: a modular set of biological infrastructure that lets any city quietly turn itself into a richer, stranger, more alive habitat. It has three parts.\n\n**1. Glow-Moss Streetlights**\nPanels and planters of moss and bioluminescent microbes (or engineered plants like the light-emitting tobacco prototypes already built) that give off a soft green-blue glow along paths, stairwells, and parks.\n- *Feasibility:* Today's glow is faint, closer to a night-light than a lamp. The realistic near-term use is wayfinding and ambiance, not replacing streetlights. Brightness, lifespan, and keeping the organisms fed and alive outdoors are the main engineering challenges. Moss walls already work in cities, so the housing and irrigation side is mostly solved.\n- *Benefits:* Less light pollution, lower energy use for low-traffic areas, better air quality from the moss, and the simple pleasure of walking home through a softly glowing garden.\n\n**2. Urban Migration Corridors**\nConnected strips of native planting, green roofs, small ponds, underpass tunnels, and \"stepping-stone\" gardens that link parks and rivers, so hedgehogs, amphibians, pollinators, and birds can move through the city instead of being stranded in fragments.\n- *Feasibility:* High. Cities like London, Singapore, and Utrecht already have wildlife bridges, bee highways, and hedgehog gaps in fences. The kit would standardize the pieces (fence-gap templates, pocket-pond liners, native seed mixes by region) so neighborhoods and schools could install them cheaply.\n- *Benefits:* Higher biodiversity, natural pest control, pollination for urban food gardens, and flood absorption from permeable green strips.\n\n**3. Rewilding Plots**\nSmall \"let it go\" squares, from a parking space to a vacant lot, seeded with regionally appropriate plants and left mostly unmanaged, with simple sensors and a phone app to log species that show up.\n- *Feasibility:* Very high. The cost is mainly permission and patience. Challenges include public perception of \"messy\" land, invasive species management, and local regulations.\n- *Benefits:* Residents get a constantly changing neighborhood: foxes, owls, fireflies, wildflowers, and unexpected visitors. Kids get daily contact with nature, and cities get citizen-science data on what's thriving.\n\n**Why this makes the world more interesting**\nMost cities feel the same everywhere: concrete, glass, and a few trimmed trees. A Living City would differ by region and season. Your street might glow differently from the next one, host different species, and surprise you on any given night. It also improves resilience through cooler temperatures, cleaner air, and healthier ecosystems.\n\n**Rollout idea:** Start with pilot neighborhoods and school grounds, use open-source designs, and let communities customize their own kit. Within a decade, a city could go from gray grid to a living map of habitats you can explore at night by moss-light.",
+        "I'd invent the **Wonder Protocol**: a daily, opt-in \"slow layer\" of the internet that replaces doomscrolling with one unpredictable, human-curated discovery at a time.\n\n**How it works**\n\nOnce a day, at a time that shifts slightly so it never becomes a rote habit, your device delivers a single \"wonder.\" It might be a 90-second recording of a luthier tuning a hand-built instrument, a map of a village that only exists in a 1700s survey, an unsolved math problem with a gentle on-ramp, a field recording from a rainforest at 4 a.m., or a stranger's explanation of how they repair watches. Then it stops. There is no \"next\" button, no infinite feed, and no autoplay.\n\n**Design principles**\n\n- **Finite by default.** One item, a clear ending, and a small closing ritual such as a prompt to note one thought or share it with a single person. Satisfaction comes from completion rather than from the next hit.\n- **Unpredictable but not random.** Pure randomness yields junk. Instead, a network of human curators (librarians, hobbyists, scientists, tradespeople) submits items, and the system picks across categories you haven't touched recently. It deliberately avoids optimizing for your past clicks, because that is how filter bubbles form.\n- **No engagement metrics.** No likes, view counts, or comment threads. The only feedback is a private \"this stayed with me\" mark that influences curators' reputations, not your own profile.\n- **Slow sharing.** You can send a wonder to one person, who receives it the next day, which turns it into a small gift rather than content.\n- **Seasonal depth.** Every so often, a wonder opens a \"rabbit hole week\" with optional deeper material, so curiosity can grow without being forced.\n\n**Effects on attention**\n\nDoomscrolling works because rewards are variable, endless, and emotionally charged. The Wonder Protocol keeps the variable reward, which is the part that makes discovery feel alive, but removes the endlessness and the outrage. Over time I'd expect:\n\n1. **Longer attention spans**, since you practice staying with one thing for several minutes.\n2. **Restored anticipation.** Waiting for tomorrow's wonder makes it feel like an event rather than a commodity.\n3. **Broader taste.** Being nudged toward unfamiliar domains widens what you find interesting.\n4. **Shared conversation.** Because people receive items as gifts, they'd talk about them in person, creating small bonds around genuine curiosity rather than shared anger.\n\n**Risks and safeguards**\n\nCuration can become elitist or biased, so curator pools should be diverse, rotating, and open to public nomination. The system also needs to resist being bought: no ads, funded by subscriptions or public libraries, with open standards so anyone can run their own wonder feed.\n\nThe goal is modest but meaningful: make the internet occasionally feel like a museum you stumble into on a quiet afternoon, rather than a slot machine you can't leave.",
+        "I'd invent the **Story Bench**: an ordinary-looking park bench that quietly holds the memories of the place it sits.\n\nSit down and it plays, in a low voice that doesn't interrupt your thoughts, a short story about that spot. A woman recalls the afternoon she got engaged right there. A kid describes the day he buried a toy under the nearby tree. A former shopkeeper explains what stood across the street thirty years ago. Anyone in the neighborhood can add to it by speaking into a small brass grille, and the bench keeps only what people choose to give it. No tracking, no ads, no profiles. Just voices attached to places.\n\nI'd choose this over something grander because of what I think makes life interesting. It isn't novelty or spectacle, which wear off quickly. It's depth: the sense that the ordinary world is layered with other people's lives, and that you're one of them. A street you walk daily becomes a different street once you know someone proposed on that corner or cried there or learned to ride a bike. Attention is what turns a place into somewhere, and most of us are too busy to pay it.\n\nI also like that it's small and humane. It doesn't try to optimize anything or make anyone more productive. It rewards sitting still, which is rare now. It would nudge strangers into a gentle kind of kinship, since you'd be listening to a neighbor you'll never meet, and eventually you might leave a story of your own. Over decades, a town would build a living, shifting archive of itself, authored by the people who actually lived there rather than by a plaque.\n\nThere's a quiet value in that for me: the belief that everyone's small moments are worth keeping, and that curiosity about each other is the cheapest, most renewable source of wonder we have. The world doesn't need to be made louder or faster to be more interesting. It might just need places willing to say, \"Here, let me tell you what happened here.\"",
+        "**The invention: a \"Serendipity Commons,\" a city-scale system that occasionally nudges people toward unplanned, low-stakes novelty.**\n\n**How it works:** An opt-in app and a set of physical installations. Once or twice a week, it offers a small invitation: a street closed for an afternoon for a neighborhood experiment, a \"swap a skill for an hour\" pairing with a stranger, a hidden room in the library opened for a one-off performance, or a walking route that sends you somewhere you've never been. Local people, not corporations, propose the invitations. The system only schedules them and matches willing participants.\n\n**Stress test 1: Surveillance.** To personalize nudges, it would be tempting to track movement and habits. That would turn a tool for freedom into a map of everyone's routines.\n*Design fix:* Do the matching on-device. Store no location history. Use coarse preferences you set yourself (\"I'm up for something physical, social, quiet\"). Make the system useless to advertisers by design, with no behavioral data to sell.\n\n**Stress test 2: Inequality.** Novelty could cluster in wealthy, well-connected neighborhoods, and people with time, mobility, or confidence would benefit most.\n*Design fix:* Fund it publicly, with a rule that invitations be distributed per neighborhood, not by popularity. Include free options, accessible venues, and times that work for shift workers and caregivers. Pay local organizers a small stipend so participation isn't limited to people with spare time.\n\n**Stress test 3: Novelty fatigue and hedonic treadmill.** Constant newness can become exhausting or shallow, with experiences consumed like content.\n*Design fix:* Cap the frequency. Weekly is plenty. Build in repetition on purpose: let people return to the same place or group if they liked it. Interesting lives need depth as well as variety, so the system should reward second visits as much as first ones.\n\n**Stress test 4: Manufactured spontaneity.** If a system schedules serendipity, it may stop feeling spontaneous, and algorithmic nudges may homogenize what counts as \"interesting.\"\n*Design fix:* Keep the human proposals messy and unranked, with no engagement metrics or leaderboards. Include a random element that isn't optimized. Make declining easy and guilt-free, with no streaks or notifications that punish ignoring it.\n\n**Stress test 5: Safety and consent.** Meeting strangers carries risk, and some people feel pressure to participate.\n*Design fix:* Public venues by default, group formats over one-on-one, clear opt-outs, and community moderation with real accountability.\n\n**The principle:** Interestingness should be a byproduct of freedom, connection, and local creativity, not a product to maximize. If the system ever starts measuring success by time spent or engagement, it has failed. The right measure is whether people report feeling more curious and more connected to where they live, and whether they'd miss it only gently if it vanished, because it left behind habits and friendships that no longer need it."
+      ],
+      "id": "nb-curated-0589e47205e5256cc5b3",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What would you invent to make the world a more interesting place to live in?"
+    },
+    "partition_fields": {
+      "distinct": 9,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        1
+      ]
+    },
+    "score_row": {
+      "distinct": 9,
+      "generation_scores": [
+        8,
+        8,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        8,
+        null
+      ],
+      "generations": [
+        "I'd invent **Shiftground**: a programmable street surface made of interlocking, load-bearing hexagonal tiles that can raise, lower, tilt, and change texture on a schedule or on request.\n\n**How it works**\n\n- Each tile is about a meter wide and sits on a motorized column, like a very sturdy piston. Columns can move up to about 1.5 meters, enough for steps, benches, ramps, and low walls.\n- Tiles are topped with a durable composite skin. Beneath it, small heating and cooling channels can warm a surface in winter or cool it in summer, and the top layer can switch between grippy, smooth, or slightly springy textures.\n- Rainwater is collected in the substructure. Tiles can drop to form shallow channels or ponds, then lift again to drain them.\n- Safety comes first. Pressure sensors detect anything on a tile and lock its position. Movement happens slowly, with light and sound cues, and never under a person, a stroller, or a wheelchair. Power is local, drawn from solar canopies and from kinetic energy harvested from footsteps.\n- Rule-setting is democratic. A neighborhood council sets the allowed \"modes,\" and residents vote on new ones through a simple app or a physical kiosk. Fixed zones keep emergency access and accessible routes constant.\n\n**What daily life looks like**\n\n- **Morning:** The street forms a smooth commuter lane with gentle ramps for bikes, scooters, and wheelchairs. Tiles near the bus stop rise into warm benches.\n- **Midday:** A school-adjacent block becomes a playground, with rolling hills, a shallow splash basin, and climbing steps. Office workers get a terraced lunch amphitheater next door.\n- **Evening:** The main plaza rearranges into a stage with tiered seating for a local band, or a market grid with stall platforms at exactly the right spacing.\n- **Weekends:** Residents can book a block for a skate park, a seasonal ice-rink-like surface in cold climates, a labyrinth, or a community dance floor.\n- **Rainy days:** The surface tilts subtly to channel water to gardens and creates dry, raised walkways.\n- **Festivals and one-offs:** A neighborhood can design a one-day landscape, such as a miniature mountain range for a kite festival, and then restore it afterward.\n\n**Why it makes the world more interesting**\n\nMost cities are fixed: a street is a street, a plaza is a plaza. Shiftground turns public space into something you can renegotiate. The same corner is a different place on Tuesday than on Saturday, so people notice their surroundings, linger, and meet each other. It also makes space use efficient, since one block can serve many purposes instead of sitting idle most of the day.\n\nThe real challenge is cost and maintenance, so I'd start with a single plaza, learn what people actually use, and expand outward from there.",
+        "# The Serendipity Exchange\n\n**The idea:** A neighborhood-based civic institution that pairs strangers for short, low-stakes shared experiences: a 45-minute walk, a skill swap, a tasting, a \"show me your favorite spot\" tour. It's part public library, part pen-pal system, part dinner-party roulette.\n\n## Why this, not a gadget\nMost of what makes a place interesting is people you wouldn't otherwise meet. Technology has made it easy to find people like us and easy to avoid everyone else. An institution can deliberately reverse that, the way libraries and public parks once did.\n\n## How it works\n1. **Sign up with a \"offer\" and a \"curiosity.\"** Example: *I can teach you to bake sourdough. I'm curious about how bus routes get planned.*\n2. **Get matched** by a mix of complementary interests and deliberate randomness. One slot in every five is a wildcard with no shared logic.\n3. **Meet in a public \"Exchange Spot\"**: partner cafés, libraries, community gardens, laundromats, and parks with a recognizable sign.\n4. **Do the experience** (capped at 60 minutes), then go your separate ways. No obligation to exchange numbers.\n5. **Leave a \"postcard,\"** a short, optional note about what surprised you, which is displayed (anonymously) at the Spot.\n\n## Design rules\n- **Low stakes by default.** Short, public, daytime, and free or nearly free. Ending early is always acceptable, with no explanation.\n- **No profiles to browse.** You can't shop for people. Matching happens on offers and curiosities, which reduces dating-app dynamics and appearance-based filtering.\n- **Mix across the usual lines.** Matching intentionally spans age, occupation, and background, while avoiding pairings that would feel like a power imbalance (e.g., a manager and their direct report).\n- **Reciprocity.** Everyone both gives and receives, so no one is just a \"helper\" or a \"beneficiary.\"\n- **No ratings.** Public scores turn encounters into performances. Feedback goes only to program staff.\n\n## Safeguards\n- **Identity verification** and a short code-of-conduct acknowledgment at sign-up.\n- **Public venues only** for first meetings, with staff or hosts who know the program.\n- **Check-in and check-out** via a simple text so someone always knows you arrived and left safely.\n- **Easy block and report tools**, with human review and removal for violations.\n- **Opt-out filters** for logistical needs (accessibility, language, mobility), not for demographic preferences.\n- **Minimal data collection**, with data deleted after the match period.\n- **Youth and vulnerable-adult tracks** with separate rules, such as intergenerational pairings run through schools or senior centers with supervision.\n\n## Funding and governance\n- Run as a **nonprofit or municipal service**, funded by city arts and public health budgets, local business sponsorship of Spots, and optional donations.\n- Governed by a **neighborhood council** so each locale shapes its own flavor: a fishing town's Exchange will look different from a college district's.\n\n## Measuring success\nNot by sign-ups or time spent, but by:\n- How many people report meeting someone outside their usual circles\n- Repeat participation after six months\n- Self-reported sense of belonging and neighborhood trust\n- Unplanned follow-on connections (a book club, a repaired fence, a new business partnership)\n\n## What could go wrong, and fixes\n- **Self-selection toward the already social.** Counter with outreach through libraries, workplaces, faith groups, and housing complexes.\n- **Awkwardness.** Provide optional conversation prompts and an easy exit script.\n- **Commercialization.** Keep it non-profit with a charter that prohibits selling attention or data.\n\n## The payoff\nA city where the person next to you on the bus might be someone who taught you to fix a bike, where neighborhoods have shared stories, and where \"I'd never have met you otherwise\" becomes a normal sentence.",
+        "I'd invent the **Umwelt Lens**, a lightweight wearable (a pair of glasses, an earpiece, and a thin wristband) that translates the hidden signals of the world into things you can see, hear, and feel.\n\nThe name comes from the biologist Jakob von Uexküll's idea of the *umwelt*: the bubble of the world that each creature can actually perceive. A tick lives in a world of warmth and butyric acid, a bat in echoes. Humans just happen to be stuck with ours. The Lens lets you borrow other ones.\n\n**What it would do**\n\n- **Air as color.** Particulates, pollen, ozone, and humidity show up as a soft, translucent wash over your view. Walking past a bakery, you see a golden plume drifting out the door. Near a highway, a dull haze clings to the road. Cities would suddenly have visible weather at the scale of a single street.\n- **Plants as sound.** Trees and plants exchange chemical and electrical signals, and shift their behavior under drought, insect attack, or the arrival of rain. The Lens turns these into gentle tones and textures. A stressed oak sounds thin and brittle, and a forest after rain hums like a choir warming up. It wouldn't claim plants are \"talking\" in a human sense, only that you'd hear real data about their state.\n- **Tides and planetary motion as touch.** The wristband pulses slowly with the pull of the moon: a swelling pressure as the tide rises, even if you're a hundred miles inland. You'd feel the rotation of the Earth the way you feel a heartbeat.\n- **Scale shifts.** A dial lets you hear at a beetle's time scale, or see a day compressed so you can watch shadows sweep and flowers turn. A sidewalk crack becomes a landscape, and a mountain's slow erosion becomes a visible drift.\n\n**Why it makes the world more interesting**\n\nBoredom is mostly a failure of perception, not a lack of things happening. A walk to the corner store is the same walk every day only because we're sensing about one percent of it. The Lens would make every place newly layered. Kids would grow up knowing their backyard is full of conversations and weather they'd never noticed, and that would change what they care about. People are more likely to protect what they can perceive: a river you can *feel* struggling is harder to ignore.\n\nIt would also be humbling in a good way. Experiencing the world through other senses is a reminder that our default view is one narrow slice, and that reality is much larger and stranger than it looks. I'd want the experience to be shared, too: a mode where two people can tune into the same signal and compare notes, turning an ordinary hike into an expedition.",
+        "I'd invent a new rhythm for the year: **The Odd Calendar**, a set of small, shared, low-cost events that give ordinary weeks some texture. It isn't one big holiday. It's a handful of recurring moments, each simple enough that no organization is needed to run it.\n\n**The events**\n\n1. **Unplugged Dusk (first Friday of every month).** At sunset, everyone in a neighborhood turns off screens for one hour. People step outside, light a candle or porch lamp, and stay put. The only rule is that you can't be alone with a device. Origin: it began as a single apartment building's habit of leaving the stairwell lights off and meeting on the roof.\n\n2. **Story Night (the first rainy night of each season).** Rain is the trigger. Neighbors gather in kitchens, stoops, and laundromats, and each person tells a true story in under five minutes, on a theme chosen by whoever hosts. The theme rotates: \"the worst job I ever had,\" \"a stranger who helped me,\" \"something I got wrong for years.\"\n\n3. **Swap Day (the spring equinox).** People bring one object they love but no longer need, along with a note about its history. Objects are exchanged by drawing lots, so you leave with someone else's story attached to something useful.\n\n4. **The Long Table (midsummer).** Streets close, and households carry out whatever food they have. Seating is assigned by lottery so you sit next to people you don't already know. Nobody cooks for the whole table; the food is a mix of everyone's contributions.\n\n5. **Thanks Out Loud (late autumn).** You deliver a spoken or handwritten thank-you to someone who never expected one: a bus driver, a former teacher, the person who fixes the elevator. No gifts, just specifics about what they did.\n\n6. **The Dark Day (midwinter).** Communities gather for an evening of lanterns, soup, and music played without amplification. Everyone also names one thing they're letting go of and one thing they're starting.\n\n**How it would spread**\n\n- **Starter kits, not rules.** Each event comes with a one-page card with the idea, a simple script, and a suggested theme. Cards are printed free at libraries and cafés, so anyone can run an event without permission.\n- **Local variation is encouraged.** Every town adds its own twist, such as a signature dish, song, or toast. The core stays recognizable while the details become local identity.\n- **Visible signals.** A specific porch light color on Unplugged Dusk, or a ribbon on your door for Story Night, shows participation and invites curiosity from people who haven't joined yet.\n- **Schools and workplaces adopt them.** The events are short and nonreligious, so they fit anywhere. A school can hold Thanks Out Loud in a single class period.\n- **Photographs are discouraged during events.** The point is presence, and word of mouth does the spreading instead.\n\n**Why this over a gadget**\n\nMost inventions add capability. This adds anticipation, shared memory, and reasons to knock on a neighbor's door. A calendar with these anchor points makes time feel less like a blur and more like a sequence of occasions you look forward to, and it costs almost nothing to start: pick a Friday, turn off the lights, and invite the people next door.",
+        "I'd invent **Palimpsest**, a planet-scale, real-world alternate reality game in which every city is a layered puzzle and the whole world collaborates to solve it.\n\n**The core idea**\nEvery place has buried stories: forgotten streets, local legends, vanished businesses, disputed histories. Palimpsest turns these into mysteries that players uncover by walking, asking, archiving, and building. The name comes from manuscripts scraped clean and rewritten, with the older text still faintly visible. The game makes the older layers of your city visible again.\n\n**How it works**\n\n1. **Seeds.** Locals, historians, librarians, and artists submit \"seeds\": a verified fragment of lore, such as a photo of a demolished theater, an oral history about a river that was buried, or a rumor about a hidden room in a library. A volunteer review guild checks them for accuracy and for safety (no private property hazards, no harm to living people).\n\n2. **Threads.** Seeds are woven into multi-step puzzles. One might send you to a street corner to find a worn inscription, then to a municipal archive to find the name it references, then to a bakery whose owner knows what that family did next.\n\n3. **Bridges.** The key mechanic is that no city can finish its mystery alone. The final clue in Lisbon might only make sense with a translation from a player in Recife, or a ship's manifest held by an archive in Rotterdam. Cities must trade information, which forces cross-cultural collaboration.\n\n4. **Works.** Solving a thread unlocks a collective creation: a mural, a walking tour, a sound map, a small plaque, a community play. Each city's solved threads become permanent public art or heritage trails, so the game leaves something real behind.\n\n**Incentives**\n- **Reputation, not currency.** Players earn titles like Cartographer, Archivist, or Translator, based on the type of contribution. Titles are visible on a profile but can't be bought.\n- **Seasonal city rankings** measure collaboration (how many bridges were built), not just speed, so cooperation beats racing.\n- **Local sponsorship.** Cafés, museums, and libraries become \"waypoints\" that host clues and get foot traffic. Municipalities can fund seasons because the output is tourism and civic pride.\n- **Quiet-mode challenges** reward noticing: sketching a building, interviewing an elder, recording a street's sounds at dawn.\n\n**Safeguards**\n- Every clue is vetted for physical safety, accessibility, and legality, and always has a non-physical route (remote archive work) so people with limited mobility can fully take part.\n- Privacy rules prevent doxxing or digging into living people's lives.\n- Disputed histories are presented with multiple perspectives rather than a single \"answer.\"\n\n**Why it makes the world more interesting**\nIt teaches people to look at where they live as something deep and strange rather than background. It gives history a reason to be gathered from the people who hold it. And it connects strangers across the globe through a shared sense of discovery. Someone walking to work would know that the odd brass marker on the corner is the start of a story, and that a stranger on another continent may hold the next piece.",
+        "I'd invent **the Apprenticeship Commons**: a lifelong marketplace where anyone can spend a short, structured stretch apprenticing in an unusual craft or profession, whether that's glassblowing, beekeeping, cartography, bookbinding, lock-picking, or tide-table forecasting.\n\n**How it works**\n\n- **Short, real apprenticeships.** Placements last from a single weekend to six weeks, often part-time. You work alongside a practitioner on actual jobs, not a demo class. You might help extract honey, pull a glass gather, or hand-draw a trail map that will be used.\n- **A two-sided marketplace.** Experts list what they do, what a beginner could realistically contribute, and what they'd like in return. That could be modest fees, extra hands, or simply the satisfaction of passing on knowledge. Learners build a \"practice record\" of what they've tried.\n- **Matching by curiosity, not career.** The system asks what you've always wondered about, then suggests neighboring crafts. If you like baking, it might point you toward millwork or fermentation.\n- **Mentor-of-a-mentor chains.** After completing an apprenticeship, you can offer a \"first-timer's guide\" to the next newcomer, which keeps knowledge circulating and gives learners a way to give back early.\n- **Local anchoring.** Every region gets a map of its vanishing trades: the last cooper, the one remaining net-mender. This protects endangered skills and makes the place you live feel deeper.\n\n**Why it makes the world more interesting**\n\n1. **People become more interesting.** A dinner conversation changes when someone has actually kept bees for a month. Ordinary lives pick up odd, specific stories and skills.\n2. **Expertise becomes accessible.** Most fascinating work is hidden behind credentials, cost, or simply not knowing it exists. This lowers the door without cheapening the craft.\n3. **Dying skills get a lifeline.** Even brief exposure draws in a few people who stay, and it gives masters an audience and an income.\n4. **Careers and hobbies get unstuck.** Trying something for two weeks is far cheaper than a career change, so people can discover fits they'd never have risked pursuing.\n5. **Communities get more connected.** Strangers of different ages and backgrounds work side by side on tangible things.\n\n**Safeguards**\n\nPractitioners would be vetted for safety, apprentices would get clear expectations and insurance coverage, and the work would be set up so it benefits the master rather than burdening them.\n\nThe aim is simple: a world where everyone has a few strange competencies, and curiosity is something you can act on by Tuesday.",
+        "I'd invent the **Living City Kit**: a modular set of biological infrastructure that lets any city quietly turn itself into a richer, stranger, more alive habitat. It has three parts.\n\n**1. Glow-Moss Streetlights**\nPanels and planters of moss and bioluminescent microbes (or engineered plants like the light-emitting tobacco prototypes already built) that give off a soft green-blue glow along paths, stairwells, and parks.\n- *Feasibility:* Today's glow is faint, closer to a night-light than a lamp. The realistic near-term use is wayfinding and ambiance, not replacing streetlights. Brightness, lifespan, and keeping the organisms fed and alive outdoors are the main engineering challenges. Moss walls already work in cities, so the housing and irrigation side is mostly solved.\n- *Benefits:* Less light pollution, lower energy use for low-traffic areas, better air quality from the moss, and the simple pleasure of walking home through a softly glowing garden.\n\n**2. Urban Migration Corridors**\nConnected strips of native planting, green roofs, small ponds, underpass tunnels, and \"stepping-stone\" gardens that link parks and rivers, so hedgehogs, amphibians, pollinators, and birds can move through the city instead of being stranded in fragments.\n- *Feasibility:* High. Cities like London, Singapore, and Utrecht already have wildlife bridges, bee highways, and hedgehog gaps in fences. The kit would standardize the pieces (fence-gap templates, pocket-pond liners, native seed mixes by region) so neighborhoods and schools could install them cheaply.\n- *Benefits:* Higher biodiversity, natural pest control, pollination for urban food gardens, and flood absorption from permeable green strips.\n\n**3. Rewilding Plots**\nSmall \"let it go\" squares, from a parking space to a vacant lot, seeded with regionally appropriate plants and left mostly unmanaged, with simple sensors and a phone app to log species that show up.\n- *Feasibility:* Very high. The cost is mainly permission and patience. Challenges include public perception of \"messy\" land, invasive species management, and local regulations.\n- *Benefits:* Residents get a constantly changing neighborhood: foxes, owls, fireflies, wildflowers, and unexpected visitors. Kids get daily contact with nature, and cities get citizen-science data on what's thriving.\n\n**Why this makes the world more interesting**\nMost cities feel the same everywhere: concrete, glass, and a few trimmed trees. A Living City would differ by region and season. Your street might glow differently from the next one, host different species, and surprise you on any given night. It also improves resilience through cooler temperatures, cleaner air, and healthier ecosystems.\n\n**Rollout idea:** Start with pilot neighborhoods and school grounds, use open-source designs, and let communities customize their own kit. Within a decade, a city could go from gray grid to a living map of habitats you can explore at night by moss-light.",
+        "I'd invent the **Wonder Protocol**: a daily, opt-in \"slow layer\" of the internet that replaces doomscrolling with one unpredictable, human-curated discovery at a time.\n\n**How it works**\n\nOnce a day, at a time that shifts slightly so it never becomes a rote habit, your device delivers a single \"wonder.\" It might be a 90-second recording of a luthier tuning a hand-built instrument, a map of a village that only exists in a 1700s survey, an unsolved math problem with a gentle on-ramp, a field recording from a rainforest at 4 a.m., or a stranger's explanation of how they repair watches. Then it stops. There is no \"next\" button, no infinite feed, and no autoplay.\n\n**Design principles**\n\n- **Finite by default.** One item, a clear ending, and a small closing ritual such as a prompt to note one thought or share it with a single person. Satisfaction comes from completion rather than from the next hit.\n- **Unpredictable but not random.** Pure randomness yields junk. Instead, a network of human curators (librarians, hobbyists, scientists, tradespeople) submits items, and the system picks across categories you haven't touched recently. It deliberately avoids optimizing for your past clicks, because that is how filter bubbles form.\n- **No engagement metrics.** No likes, view counts, or comment threads. The only feedback is a private \"this stayed with me\" mark that influences curators' reputations, not your own profile.\n- **Slow sharing.** You can send a wonder to one person, who receives it the next day, which turns it into a small gift rather than content.\n- **Seasonal depth.** Every so often, a wonder opens a \"rabbit hole week\" with optional deeper material, so curiosity can grow without being forced.\n\n**Effects on attention**\n\nDoomscrolling works because rewards are variable, endless, and emotionally charged. The Wonder Protocol keeps the variable reward, which is the part that makes discovery feel alive, but removes the endlessness and the outrage. Over time I'd expect:\n\n1. **Longer attention spans**, since you practice staying with one thing for several minutes.\n2. **Restored anticipation.** Waiting for tomorrow's wonder makes it feel like an event rather than a commodity.\n3. **Broader taste.** Being nudged toward unfamiliar domains widens what you find interesting.\n4. **Shared conversation.** Because people receive items as gifts, they'd talk about them in person, creating small bonds around genuine curiosity rather than shared anger.\n\n**Risks and safeguards**\n\nCuration can become elitist or biased, so curator pools should be diverse, rotating, and open to public nomination. The system also needs to resist being bought: no ads, funded by subscriptions or public libraries, with open standards so anyone can run their own wonder feed.\n\nThe goal is modest but meaningful: make the internet occasionally feel like a museum you stumble into on a quiet afternoon, rather than a slot machine you can't leave.",
+        "I'd invent the **Story Bench**: an ordinary-looking park bench that quietly holds the memories of the place it sits.\n\nSit down and it plays, in a low voice that doesn't interrupt your thoughts, a short story about that spot. A woman recalls the afternoon she got engaged right there. A kid describes the day he buried a toy under the nearby tree. A former shopkeeper explains what stood across the street thirty years ago. Anyone in the neighborhood can add to it by speaking into a small brass grille, and the bench keeps only what people choose to give it. No tracking, no ads, no profiles. Just voices attached to places.\n\nI'd choose this over something grander because of what I think makes life interesting. It isn't novelty or spectacle, which wear off quickly. It's depth: the sense that the ordinary world is layered with other people's lives, and that you're one of them. A street you walk daily becomes a different street once you know someone proposed on that corner or cried there or learned to ride a bike. Attention is what turns a place into somewhere, and most of us are too busy to pay it.\n\nI also like that it's small and humane. It doesn't try to optimize anything or make anyone more productive. It rewards sitting still, which is rare now. It would nudge strangers into a gentle kind of kinship, since you'd be listening to a neighbor you'll never meet, and eventually you might leave a story of your own. Over decades, a town would build a living, shifting archive of itself, authored by the people who actually lived there rather than by a plaque.\n\nThere's a quiet value in that for me: the belief that everyone's small moments are worth keeping, and that curiosity about each other is the cheapest, most renewable source of wonder we have. The world doesn't need to be made louder or faster to be more interesting. It might just need places willing to say, \"Here, let me tell you what happened here.\"",
+        "**The invention: a \"Serendipity Commons,\" a city-scale system that occasionally nudges people toward unplanned, low-stakes novelty.**\n\n**How it works:** An opt-in app and a set of physical installations. Once or twice a week, it offers a small invitation: a street closed for an afternoon for a neighborhood experiment, a \"swap a skill for an hour\" pairing with a stranger, a hidden room in the library opened for a one-off performance, or a walking route that sends you somewhere you've never been. Local people, not corporations, propose the invitations. The system only schedules them and matches willing participants.\n\n**Stress test 1: Surveillance.** To personalize nudges, it would be tempting to track movement and habits. That would turn a tool for freedom into a map of everyone's routines.\n*Design fix:* Do the matching on-device. Store no location history. Use coarse preferences you set yourself (\"I'm up for something physical, social, quiet\"). Make the system useless to advertisers by design, with no behavioral data to sell.\n\n**Stress test 2: Inequality.** Novelty could cluster in wealthy, well-connected neighborhoods, and people with time, mobility, or confidence would benefit most.\n*Design fix:* Fund it publicly, with a rule that invitations be distributed per neighborhood, not by popularity. Include free options, accessible venues, and times that work for shift workers and caregivers. Pay local organizers a small stipend so participation isn't limited to people with spare time.\n\n**Stress test 3: Novelty fatigue and hedonic treadmill.** Constant newness can become exhausting or shallow, with experiences consumed like content.\n*Design fix:* Cap the frequency. Weekly is plenty. Build in repetition on purpose: let people return to the same place or group if they liked it. Interesting lives need depth as well as variety, so the system should reward second visits as much as first ones.\n\n**Stress test 4: Manufactured spontaneity.** If a system schedules serendipity, it may stop feeling spontaneous, and algorithmic nudges may homogenize what counts as \"interesting.\"\n*Design fix:* Keep the human proposals messy and unranked, with no engagement metrics or leaderboards. Include a random element that isn't optimized. Make declining easy and guilt-free, with no streaks or notifications that punish ignoring it.\n\n**Stress test 5: Safety and consent.** Meeting strangers carries risk, and some people feel pressure to participate.\n*Design fix:* Public venues by default, group formats over one-on-one, clear opt-outs, and community moderation with real accountability.\n\n**The principle:** Interestingness should be a byproduct of freedom, connection, and local creativity, not a product to maximize. If the system ever starts measuring success by time spent or engagement, it has failed. The right measure is whether people report feeling more curious and more connected to where they live, and whether they'd miss it only gently if it vanished, because it left behind habits and friendships that no longer need it."
+      ],
+      "id": "nb-curated-0589e47205e5256cc5b3",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        1
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "20479170c876f686b39a540ca0cfaa31c95daf11e4f4cdca913b1707fae9674f",
+      "partition_scores": [
+        8,
+        8,
+        9,
+        7,
+        8,
+        8,
+        7,
+        8,
+        8
+      ],
+      "prompt": "What would you invent to make the world a more interesting place to live in?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "029ddaa01aa44fe235ade6e399cc128b17f2c1506b1909fae4eaa45b31707da9",
+      "utility": 7.729363457748144
+    },
+    "summary": {
+      "mean_distinct": 9.0,
+      "mean_utility": 7.729363457748144,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "31ded33416017e437382c9eec1fb9fd9dd2072877ba24c081269bdbd2947198c",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0769",
+      "fixture": false,
+      "intent_sha256": "7d17b62bb5985d9de4496f3169e1332f10f1e81d19f674376cd0fa321ba73e34",
+      "request_sha256": "899ccb69b4f7c95fde275b18ca58b9d9e2a57c45cd6c86f667e27900b3562bd4",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9726318640023237,
+        "message_id": "chatcmpl-EdwTIjFfqMEJzUGtM9r4VDrGnkpT8",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 180,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 143,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 6403,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 6400,
+            "cached_tokens": 0
+          },
+          "total_tokens": 6583
+        },
+        "refusal": null,
+        "request_id": "req_3a3cb02bf0dc45589b7a77aa20ad76db",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1,9],[2],[3],[4],[5],[6],[7],[8]]}",
+        "usage": {
+          "cache_creation_input_tokens": 6400,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 3,
+          "input_tokens_details": {
+            "cache_write_tokens": 6400,
+            "cached_tokens": 0
+          },
+          "output_tokens": 180,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.group",
+      "spent_micro_usd": 1999,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0770",
+      "fixture": false,
+      "intent_sha256": "73a0f3b94c7c3850ab74f53f5ccdb739a66434e1a23a1bb286b0ffaf14892e2e",
+      "request_sha256": "7387cc6411fadabaad3cfa502f70d62e31365b348b3882597599ce2d0ae0b385",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.2797438289999263,
+        "message_id": "msg_011CgUax5t1VWoH822XQw2nd",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUax5frt4Wrs19WYthNx",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1382,
+          "output_tokens": 149,
+          "output_tokens_details": {
+            "thinking_tokens": 140
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.00",
+      "spent_micro_usd": 11699,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0771",
+      "fixture": false,
+      "intent_sha256": "940ec69b92008db65a1f73817c9e34fa513bd0aa586ef38cb7193882b00cec70",
+      "request_sha256": "e2e3bcfc9b86319900cc5fee85290bb77efed7c41a4d2c3f6681a89e7228133b",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.959430484988843,
+        "message_id": "msg_011CgUaxNuCAuCU1E3tQes3c",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaxNf52GzYa5SwLu3vY",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1759,
+          "output_tokens": 314,
+          "output_tokens_details": {
+            "thinking_tokens": 305
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.01",
+      "spent_micro_usd": 18310,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0772",
+      "fixture": false,
+      "intent_sha256": "eddef5ffef16b72ef55e91376e7644eb09d2515f6dd19950fefd77ad22a70187",
+      "request_sha256": "caa910b2a5bde19a202837b4aa6a213b4094b10a9c08562f46096dd89dba1b61",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.891801788995508,
+        "message_id": "msg_011CgUaxs2sYAoeqkFYZjCCm",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaxroUhF6HDQvMX2qsF",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1304,
+          "output_tokens": 103,
+          "output_tokens_details": {
+            "thinking_tokens": 94
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.02",
+      "spent_micro_usd": 10005,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0773",
+      "fixture": false,
+      "intent_sha256": "0a5f0fbbcb06a0a7263551b50f088f54bdeec9fe19a25b6cd5626ea7d9ac4e17",
+      "request_sha256": "b268d02f6c2ac8d6c2d16323aa0f4c5e5a24f46761a6c16ff3b744889bad394e",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.008407443005126,
+        "message_id": "msg_011CgUay7sqXW9raDsvtNPQs",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUay7ex6QPzswEamZswM",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1488,
+          "output_tokens": 292,
+          "output_tokens_details": {
+            "thinking_tokens": 283
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.03",
+      "spent_micro_usd": 16214,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0774",
+      "fixture": false,
+      "intent_sha256": "23b1f00cae5485a849d8144ff38fcef7afac85aadf17cd56633c05b47b3c5fa3",
+      "request_sha256": "08909aeceac69e86ec1057532fbf799e1ca93d3b8ec3d1e5cc3afb8a3c83fb10",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.959688744987943,
+        "message_id": "msg_011CgUayXo1iyGWUhd5qidPS",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUayXbrdr3RCBsbswgUf",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1459,
+          "output_tokens": 169,
+          "output_tokens_details": {
+            "thinking_tokens": 160
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.04",
+      "spent_micro_usd": 12672,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0775",
+      "fixture": false,
+      "intent_sha256": "618434278bf13a350e1fe0c7a69444f4f6d77f97c53a2ffb054b5f3df1b2ce76",
+      "request_sha256": "5703a2cdae789d312e4473a71bb77aaf6a5e5089897d8f45c17723c02cb2c143",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.797129613987636,
+        "message_id": "msg_011CgUaysbeC4ueuj7nMqcW8",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaysEZJwXc8GXUCEAAT",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1303,
+          "output_tokens": 190,
+          "output_tokens_details": {
+            "thinking_tokens": 181
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.05",
+      "spent_micro_usd": 12392,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0776",
+      "fixture": false,
+      "intent_sha256": "b158fd3b4f656d79708ad983ed69a0ff575f09c6ad98e948eaf44d0d97f61f97",
+      "request_sha256": "8a02278157f3fa7be6e52c8076d740eb59524bcc2e70a1574f369262d61a9c81",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 5.532985960991937,
+        "message_id": "msg_011CgUazCQEKrNXxVvVSbFNq",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUazCCZrWUtKXpEKpWNT",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 7}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1445,
+          "output_tokens": 306,
+          "output_tokens_details": {
+            "thinking_tokens": 297
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.06",
+      "spent_micro_usd": 16363,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0777",
+      "fixture": false,
+      "intent_sha256": "990bd3f47bccfcd6c858762e55d87a81d207f6f0d863982b38af682c1067e4fb",
+      "request_sha256": "5a662c75919a1b0c49488aa3670e984b52478186cb9fe10cd2591e7cd3ecb1b3",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.948087980999844,
+        "message_id": "msg_011CgUazej1oG3emRc8cJNbK",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUazeWNNmcDMq3BdVnSr",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1416,
+          "output_tokens": 196,
+          "output_tokens_details": {
+            "thinking_tokens": 187
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.07",
+      "spent_micro_usd": 13178,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0778",
+      "fixture": false,
+      "intent_sha256": "971f3afb01e303aaeacc33f210bd6a0189626c64ddbd12f4aef279cc50533907",
+      "request_sha256": "20c489827043c38f6ad2f0c483667f3a3d692e4a7033cc4532f1d2f9ca05d2b6",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 4.596827123008552,
+        "message_id": "msg_011CgUazzRRu3GxbphcTznaV",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUazymzUU67keXRuUPrB",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 1034,
+          "output_tokens": 139,
+          "output_tokens_details": {
+            "thinking_tokens": 130
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-e81fbabfa699d8ee3c9ec860.quality.08",
+      "spent_micro_usd": 9510,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-0589e47205e5256cc5b3"
+}

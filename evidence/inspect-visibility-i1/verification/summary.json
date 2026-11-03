@@ -1,0 +1,20 @@
+{
+  "api_spend": 0,
+  "image_id": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d",
+  "input_after": {
+    "baseline-loss/result.json": "5f8386074c8841179a9c56282cf7ff1e1eb15920b369885e55b6ab9ec6ab47d7",
+    "baseline-loss/synthetic-wire.json": "de748c8de154f463bbd3e866e619617daef033f4edb85c85b78896ccb75ef342",
+    "fixed-changed/result.json": "e8fe7baeea34943fccd1e45c3a57b13f527f128c0cda705ef4250453f6401b6f",
+    "fixed-changed/synthetic-wire.json": "b296dd8a889c8560ea215d0b36192e39adc3dd3028455625cdf1e7659125e91f"
+  },
+  "input_before": {
+    "baseline-loss/result.json": "5f8386074c8841179a9c56282cf7ff1e1eb15920b369885e55b6ab9ec6ab47d7",
+    "baseline-loss/synthetic-wire.json": "de748c8de154f463bbd3e866e619617daef033f4edb85c85b78896ccb75ef342",
+    "fixed-changed/result.json": "e8fe7baeea34943fccd1e45c3a57b13f527f128c0cda705ef4250453f6401b6f",
+    "fixed-changed/synthetic-wire.json": "b296dd8a889c8560ea215d0b36192e39adc3dd3028455625cdf1e7659125e91f"
+  },
+  "passed": true,
+  "provider_calls": 0,
+  "two_replays_semantically_identical": true,
+  "viewer": "replay-1/viewer/index.html"
+}

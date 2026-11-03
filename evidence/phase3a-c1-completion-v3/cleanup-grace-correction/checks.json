@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "bandit": {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "bandit",
+        "-q",
+        "/workspace/followups/phase3a_c1_completion_v3/transport.py"
+      ],
+      "elapsed_seconds": 0.5978821689786855,
+      "exit_code": 0
+    },
+    "mypy": {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "mypy",
+        "--explicit-package-bases",
+        "--follow-imports",
+        "silent",
+        "--no-incremental",
+        "--cache-dir",
+        "/tmp/cleanup-grace-mypy",
+        "followups/phase3a_c1_completion_v3/transport.py",
+        "followups/phase3a_c1_completion_v3/tests/test_deadline.py"
+      ],
+      "elapsed_seconds": 6.4929010389896575,
+      "exit_code": 0
+    },
+    "ruff": {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "followups/phase3a_c1_completion_v3/transport.py",
+        "followups/phase3a_c1_completion_v3/tests/test_deadline.py"
+      ],
+      "elapsed_seconds": 0.24857452799915336,
+      "exit_code": 0
+    },
+    "tests": {
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "followups.phase3a_c1_completion_v3.tests.test_deadline",
+        "followups.phase3a_c1_completion_v3.tests.test_accounting",
+        "followups.phase3a_c1_completion_v3.tests.test_workflow.WorkflowTests.test_pinned_eighth_control_is_known_stop_before_intent_and_blocks_queued_plan"
+      ],
+      "elapsed_seconds": 96.51261665200582,
+      "exit_code": 0
+    }
+  },
+  "passed": true,
+  "real_credentials_used": false,
+  "real_provider_calls": 0,
+  "source_after": {
+    "followups/phase3a_c1_completion_v3/tests/test_deadline.py": "fb282a58fc2b2079aded7d5c8671a510d52191cb5c3c2deb5d5648fd0ee731df",
+    "followups/phase3a_c1_completion_v3/tests/test_workflow.py": "8de7c72ae8f05e59b7bfbb66d01536e110413502a2fcb1154546edb0d9f1869f",
+    "followups/phase3a_c1_completion_v3/transport.py": "18c91303896c8bbad85cd58a6ab02648c5f63973d44941411587ad80a22a76d7"
+  },
+  "source_before": {
+    "followups/phase3a_c1_completion_v3/tests/test_deadline.py": "fb282a58fc2b2079aded7d5c8671a510d52191cb5c3c2deb5d5648fd0ee731df",
+    "followups/phase3a_c1_completion_v3/tests/test_workflow.py": "8de7c72ae8f05e59b7bfbb66d01536e110413502a2fcb1154546edb0d9f1869f",
+    "followups/phase3a_c1_completion_v3/transport.py": "18c91303896c8bbad85cd58a6ab02648c5f63973d44941411587ad80a22a76d7"
+  },
+  "source_unchanged_during_checks": true
+}

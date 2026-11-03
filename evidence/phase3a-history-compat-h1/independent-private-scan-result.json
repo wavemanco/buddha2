@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3a-history-compat-h1\\independent-private-scan-check.py"
+  ],
+  "exit_code": 0,
+  "kind": "h1-independent-private-scan-check-v1",
+  "real_credentials_or_provider_streams_read": false,
+  "result": {
+    "api_spend": 0,
+    "fixture": true,
+    "independent_acceptance": false,
+    "known_bad_os_walk_denied": true,
+    "new_scanner_private_classifications": 0,
+    "passed": true,
+    "private_content_reads": 0,
+    "private_lstat_calls": 0,
+    "private_names_excluded": 2,
+    "provider_calls": 0,
+    "runtime_source_sha256": "37f0a89c8f47b84afaa088a272800d2657d217327c148558cfdd9872bed5356d"
+  },
+  "script_sha256": "44e1c751153d048b95323393bddc49977c011dabe29655784a15f02846c189ea",
+  "source_tree_writes": false
+}

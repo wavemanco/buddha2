@@ -1,0 +1,82 @@
+{
+  "kind": "p2r-dated-pricing-profile-review",
+  "status": "public-payg-envelope-confirmed",
+  "reviewed_at_utc": "2026-10-27T06:52:54Z",
+  "planning_date_local": "2026-10-26 America/Los_Angeles",
+  "no_provider_requests": true,
+  "no_account_or_credentials_access": true,
+  "scientific_profiles_unchanged": true,
+  "parent_am1_billing_review_sha256": "0695ce1ed32cea9a0d87b5f3a87ffa2d30319641117053728fe2dfb0e7393d71",
+  "openai_pricing_html_sha256": "074dd1bc03f656bab6dc895a36527fde7dfc28df013e4165057b38c7bf6d9324",
+  "luna_rows_order_input_read_write_output": [
+    [
+      "0.2",
+      "0.02",
+      "0.25",
+      "1.2"
+    ],
+    [
+      "0.1",
+      "0.01",
+      "0.125",
+      "0.6"
+    ],
+    [
+      "0.1",
+      "0.01",
+      "0.125",
+      "0.6"
+    ],
+    [
+      "0.4",
+      "0.04",
+      "0.5",
+      "2.4"
+    ]
+  ],
+  "independent_decimal_reservations_micro_usd": {
+    "sonnet": 2540960,
+    "group": 1661880,
+    "quality": 11440000
+  },
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "observation": "Current embedded Luna Standard and Fast rows retain the reviewed public prices; regional uplift remains10percent."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "observation": "Context1050000; output128000; input above272000 doubles input and multiplies output1.5; 30m write1.25times ordinary."
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+      "observation": "Exact Chat route exposes cache_write_tokens; omitted tier inherits project default."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "observation": "Sonnet5.5 ordinary/write5m/read/output2/2.5/.1/10; Opus5 ordinary/write5m/write1h/read/output5/6.25/10/.5/25 USDperM. USgeography1.1; full1M standardcontext."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/api/service-tiers",
+      "observation": "Priority exclusion list retains exact Sonnet5.5 and Opus5."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode",
+      "observation": "Fast is opt-in; scientific body and pinned transport do not request speed or beta opt-in."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "observation": "Ordinary, cache-read and cache-write inputs share fullcontext; maximum-input reservation remains conservative."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/conversation-state",
+      "observation": "Context is the single-request token limit including input/output/reasoning."
+    }
+  ],
+  "limitations": [
+    "Public PAYG operational envelope, not invoice or account certification.",
+    "Source-supported full-context inference retained from AM1; model/account/settings acceptance remains live-only.",
+    "Future grant/profile/currentprice confirmation required; no private or unknown contract supported.",
+    "Amounts include conservative inherited geographic premiums."
+  ]
+}

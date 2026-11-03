@@ -1,0 +1,25 @@
+{
+  "kind": "live-readiness-feasibility-decision",
+  "specification": "0.14",
+  "status": "no-go-change-required",
+  "gate1_passed": false,
+  "gate2_started": false,
+  "decided_at_utc": "2026-10-27T01:22:56.653258+00:00",
+  "decision_basis": [
+    "No conservative provider-token upper bound established for canonical JSONUTF8bytes+2048 on any of the five exact roles.",
+    "Outputschema can add billable provider content; roleinput limits are local controls, not transmitted provider limits.",
+    "Default groupingwrites have documented pricing but no supported exact-route settlement in current code."
+  ],
+  "negative_scope": "This does not prove no possible bound exists. It establishes no-go for the unchanged controls from reviewed code and current primary documentation.",
+  "preferred_amendment": "AM-1-separate-payload-and-liability-controls",
+  "launch_candidate_ready": false,
+  "authorized": false,
+  "live_access_verified": false,
+  "provider_calls": 0,
+  "token_count_calls": 0,
+  "phase2b_experiments": 0,
+  "experiment_api_spend_usd": 0,
+  "gate1_within_two_hours": true,
+  "source_identity": "d09ebebaf255fb1b52fee3483ada52765d750dcb",
+  "parent_study_sha256": "84fcfa743a45ac8dd2cf2e4b4d7ecec1e76b9e8b42b633c90a0325ff0623df92"
+}

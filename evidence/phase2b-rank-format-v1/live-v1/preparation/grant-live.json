@@ -1,0 +1,19 @@
+{
+  "authorization": {
+    "authorization_id": "p2bn-0bbe532dd0b5e065f88d-live",
+    "authorized": true,
+    "billing_profile": "public-payg-envelope-v1",
+    "canary_cap_micro_usd": 30000000,
+    "cap_micro_usd": 30000000,
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "expansion_authorized": false,
+    "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+  },
+  "fixture": false,
+  "grant_sha256": "1ec88376aaee918e3783a57883d9c20cfdbd1105d0ca82283c4181f45ef9ddbb",
+  "kind": "p2bn-grant-v1",
+  "launcher_sha256": "d494edf77c7ac803265a7ead5e4db20455bae0dcacc44b915a08c0f3e1d2bb76",
+  "policy_sha256": "ca2452d540ca774c12c64d2400c60062a1af4c297549cba148e17cd95f377f05",
+  "source_sha256": "c60b28e81e905fd6ac0a5bae3cc1b95d65e197482710927dd7135f79ed145b03",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

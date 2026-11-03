@@ -1,0 +1,52 @@
+{
+  "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0001",
+  "fixture": false,
+  "intent_sha256": "b83dab2d237a3cfcd0d61b286493baf0cbae0761fef1446d1ca0dbb69ef86d57",
+  "request_sha256": "116e4b27fb3cdf689e281038226bd84e64ae1d067715f9c87b1a941d664066ab",
+  "reserved_micro_usd": 0,
+  "response": {
+    "latency_seconds": 6.611882044991944,
+    "message_id": "chatcmpl-Ee33UMEHt65JT2vsz4a4vYaZKfhAI",
+    "model": "gpt-5.6-luna",
+    "provider_usage": {
+      "completion_tokens": 442,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 405,
+        "rejected_prediction_tokens": 0
+      },
+      "prompt_tokens": 2662,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cache_write_tokens": 2659,
+        "cached_tokens": 0
+      },
+      "total_tokens": 3104
+    },
+    "refusal": null,
+    "request_id": "req_b1bdaed89fb14591b73489f1f598bb7b",
+    "stop_reason": "stop",
+    "text": "{\"groups\":[[0,9],[1],[2],[3],[4],[5],[6],[7],[8]]}",
+    "usage": {
+      "cache_creation_input_tokens": 2659,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3,
+      "input_tokens_details": {
+        "cache_write_tokens": 2659,
+        "cached_tokens": 0
+      },
+      "output_tokens": 442,
+      "output_tokens_details": {
+        "reasoning_tokens": 405
+      },
+      "service_tier": "default"
+    }
+  },
+  "role": "group",
+  "slot_id": "p2-cce2c41315048eab5ffb1d45.group",
+  "spent_micro_usd": 1316,
+  "status": "response",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

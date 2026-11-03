@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-f86103ed33238cb3115341e6931b478eef742919601a91226cec1ca5c90ec849",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-1b84a86aa2187851542c950f.answer.00",
+      "p2-1b84a86aa2187851542c950f.answer.01",
+      "p2-1b84a86aa2187851542c950f.answer.02",
+      "p2-1b84a86aa2187851542c950f.answer.03",
+      "p2-1b84a86aa2187851542c950f.answer.04",
+      "p2-1b84a86aa2187851542c950f.answer.05",
+      "p2-1b84a86aa2187851542c950f.answer.06",
+      "p2-1b84a86aa2187851542c950f.answer.07",
+      "p2-1b84a86aa2187851542c950f.answer.08",
+      "p2-1b84a86aa2187851542c950f.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-a677b9a9335baedc6f64c976",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.00",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself."
+    },
+    {
+      "id": "response-1d46809cbdc461e3a4ef3a3e",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.01",
+      "status": "ok",
+      "text": "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**.\n\nWhen you leave behind your usual responsibilities and surroundings, your mind gets room to breathe. You notice things more, feel more present, and often return with fresh perspective, renewed energy, and a clearer sense of what matters to you. Everything else, whether it's the food, the sights, or the time with people you care about, is made richer by that shift."
+    },
+    {
+      "id": "response-d35232743896c6a9e4e7ece1",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.02",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. You come back with fresh energy, a clearer perspective, and often a renewed appreciation for both your everyday life and the new experiences you had along the way."
+    },
+    {
+      "id": "response-4cd3df94814f427c1cf70bb3",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.03",
+      "status": "ok",
+      "text": "The one best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. That shift often brings renewed energy, fresh perspective, and a stronger appreciation for both the new experiences you have and the life you return to."
+    },
+    {
+      "id": "response-005b2105f23258cbcdee13ae",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.04",
+      "status": "ok",
+      "text": "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**. Away from your usual responsibilities and surroundings, your mind gets room to breathe. You notice more, feel more present, and often return with fresh energy, perspective, and a clearer sense of what matters to you."
+    },
+    {
+      "id": "response-52e6b5cd852096cc8b927610",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.05",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, wonder, and see things fresh. That break often leaves you more relaxed, creative, and appreciative of both the new places you've seen and the life you return to."
+    },
+    {
+      "id": "response-85e006693302249d8d21cfbe",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.06",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, gain perspective, and come back refreshed, often with new energy and ideas."
+    },
+    {
+      "id": "response-3065a08ffa8ab317a899d39f",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.07",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge, so you come back with fresh energy, clearer perspective, and often a renewed appreciation for your everyday life."
+    },
+    {
+      "id": "response-d26517c7743c0be10e87176e",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.08",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself."
+    },
+    {
+      "id": "response-03c1f998568381915c519a38",
+      "request_id": "p2-1b84a86aa2187851542c950f.answer.09",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind space to rest, gain perspective, and come back feeling refreshed and more like yourself."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-4b5afc9736f082c708eb",
+    "prompt": "What's the one best thing about going on a vacation?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-36"
+    }
+  }
+}

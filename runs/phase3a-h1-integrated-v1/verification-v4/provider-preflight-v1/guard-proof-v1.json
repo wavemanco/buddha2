@@ -1,0 +1,9 @@
+{
+  "actual_network_or_subprocess_started": false,
+  "artifact_guard_functions_exercised": true,
+  "frozen_functions_patched": false,
+  "kind": "phase3a-hi-keyless-preflight-guards-v1",
+  "passed": true,
+  "provider_calls": 0,
+  "tests": 5
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-28T10:47:20Z",
+  "current_paid_authority": "first-stage only; one record",
+  "definition_sha256": "ff1edb0f65437adc3a97ae55aa1e2ff95c4f5cd72be00c697c5b35c8d599ef74",
+  "first_review_equals_closed_F1_archive": true,
+  "frozen_gate_files_matching": 70,
+  "frozen_source_files_matching": 26,
+  "kind": "p2be-definition-validation-v1",
+  "limits": "Definition and arithmetic validation only; no future outcomes or completion guaranteed",
+  "live_events_equal_closed_F1_archive": true,
+  "local_markdown_links_checked": 2,
+  "new_credential_reads": 0,
+  "new_expansion_grants": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "original_folder_access": false,
+  "public_price_refresh_sha256": "466137bb7e5239ac87284b9e74630c2af661b5949bccc51ad9449bc820703bea",
+  "requirements": {
+    "all_18_scenarios_recomputed_with_independent_fraction_arithmetic": true,
+    "all_local_markdown_links_resolve": true,
+    "complete_vs_limited_closure_distinguished": true,
+    "exact_remaining_worklist_bound": true,
+    "no_post_observation_method_or_selection_change": true,
+    "objective_scope_deliverables_exclusions_completion_and_cost_present": true,
+    "proposed_cap_not_a_grant": true,
+    "same_canonical_journal_and_first_prefix_required": true
+  },
+  "status": "pass",
+  "study_equals_closed_F1_archive": true,
+  "worksheet_sha256": "e19c7c14572bf369edba90cbd927975109d26d8fec9e02b3b5ac8980c155479b"
+}

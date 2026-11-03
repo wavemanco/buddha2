@@ -1,0 +1,37 @@
+{
+  "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0018",
+  "fixture": false,
+  "intent_sha256": "3ceec69ed3fae919754512e554ea3a307cd16e015c93f503ff3c6bc12f1920f2",
+  "request_sha256": "1ecea9aee20cea02bc67489aebc901e5ee7673da283ff8f1d74ea98c6ff6c93f",
+  "reserved_micro_usd": 0,
+  "response": {
+    "latency_seconds": 4.058437155006686,
+    "message_id": "msg_011CgV9C7VrevKMAi9KiN1Eq",
+    "model": "claude-opus-5",
+    "request_id": "req_011CgV9C7AX15kyftWhNkK2c",
+    "stop_reason": "end_turn",
+    "text": "{\"score\": 8}",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 792,
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "thinking_tokens": 200
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "role": "quality",
+  "slot_id": "p2-e8740bae4e77d0e443e32104.quality.06",
+  "spent_micro_usd": 10104,
+  "status": "response",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}

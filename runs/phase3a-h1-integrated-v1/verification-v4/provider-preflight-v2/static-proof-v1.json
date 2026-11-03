@@ -1,0 +1,62 @@
+{
+  "artifact_sha256": {
+    "RUNBOOK.md": "476f0b7459cbf83cef0705dfbfbfee6dfa487b6def92d32ec315a141b3a2185d",
+    "bundle-check-v1.json": "5cdab687001d2aca81e1b416a6887551f9dc3ed3613822b3ad53326707e7aea3",
+    "guard-proof-v1.json": "85e1ca2a6709bda5d908c93c7229c4a82da314715704c66a7e00bde584895870",
+    "provider_preflight.py": "ea490b0318d301c6be87c2f64ff0c32eeed2d475681f06b7ba8b1d2c5e691a5f",
+    "test_guards.py": "3f08f3e5d92114955c7b94c3e670f76db7d5e4e3f99ae7c2e4ece7f112b64e57"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\provider_preflight.py",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\test_guards.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "mypy",
+        "--follow-imports",
+        "silent",
+        "--ignore-missing-imports",
+        "--no-incremental",
+        "--cache-dir",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\mypy-cache",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\provider_preflight.py",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\test_guards.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Success: no issues found in 2 source files\n"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "bandit",
+        "-q",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3a-h1-integrated-v1\\verification-v4\\provider-preflight-v2\\provider_preflight.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "kind": "phase3a-hi-keyless-preflight-v2-statics-v1",
+  "passed": true,
+  "production_source_changed": false,
+  "provider_calls": 0
+}

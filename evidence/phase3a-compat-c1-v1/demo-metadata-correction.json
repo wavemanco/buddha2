@@ -1,0 +1,18 @@
+{
+  "correction": "Deterministic SHA256-derived40hex fixture revision; explicit synthetic dataset; actual task validation before ledger/client creation; direct regression check.",
+  "correction_commit": "9c1b1d4",
+  "failure": "Synthetic revision c1-v1 was not a40hex identity required by the unchanged portfolio contract.",
+  "final_completion_requires_fresh_frozen_verification": true,
+  "guard_weakened": false,
+  "history_retagged": false,
+  "kind": "phase3a-c1-demo-metadata-correction-v1",
+  "native_path_accepted": false,
+  "prior_gate_results": {
+    "errors": 0,
+    "exposed_contexts": 12,
+    "failures": 0,
+    "tests": 106
+  },
+  "retained_journal_intent_events": 0,
+  "unaccepted_verification": "v5"
+}

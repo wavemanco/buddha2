@@ -1,0 +1,32 @@
+{
+  "H1_complete": true,
+  "R3_closure_commit": "45c8a22",
+  "R3_outcomes_changed": false,
+  "api_spend": 0,
+  "artifact_sha256": {
+    "PHASE3A_HISTORY_COMPAT_H1_DEFINITION.md": "3375060b7252941a1aa9c8860232231c7edbe8af836e5940111c075b2a9bbf1a",
+    "PHASE3A_HISTORY_COMPAT_H1_REPORT.md": "4cd40578111e55c91c7a7147b7d9ddd28c8ce24b1d877e280dd3df0e04b00426",
+    "evidence/phase3a-history-compat-h1/independent-acceptance.json": "a999c33b4584a6c1a94d0fda45078fca09db0e98b29f662eafd7396cdc7ff4f6",
+    "evidence/phase3a-history-compat-h1/terminal-execution.json": "ddc4f9422c19fa4d4a366626d58310e7a742e80b866f0a41025e86aa776619f0",
+    "runs/phase3a-history-compat-h1/verification-v3/summary.json": "f7b24da3daeeb0da645e94483035447d658f8a747a5c4d0204919f5fe275aca8",
+    "runs/phase3a-history-compat-h1/verification-v4/summary.json": "d67a8a09e6df89d3863e84f0c53b43225a3d7e64023ed316db625a8289df41d9"
+  },
+  "kind": "phase3a-history-compat-h1-outcome-v1",
+  "limits": [
+    "tested Anthropic profile only",
+    "serialized ordinary turns1-15",
+    "live signature authentication untested",
+    "terminal16 and paid kit not certified",
+    "truncation checks compositional, not native recovery"
+  ],
+  "original_folder_accessed": false,
+  "paid_launcher_readiness": false,
+  "real_provider_calls": 0,
+  "research_commits": [
+    "c635ff9",
+    "83e5d5c"
+  ],
+  "runtime_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "scientific_complete": false,
+  "source_sha256": "0ab7775b63193b5de354f33ffa46ad8086e6a080bae6bd757090d0003769f813"
+}

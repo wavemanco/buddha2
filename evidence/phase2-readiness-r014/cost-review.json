@@ -1,0 +1,51 @@
+{
+  "kind": "independent-conditional-cost-arithmetic-review",
+  "reviewed_at_utc": "2026-10-27T01:26:07.939829+00:00",
+  "reviewer": "gate_billing independent agent",
+  "checked_file": "evidence/phase2-readiness-r014/cost-sheet.json",
+  "checked_file_sha256": "510e189b58a862e68890c6697e6b73477ac30e9946f9c0748ecb0ff85df6f412",
+  "status": "arithmetic-verified-conditional-not-live-certified",
+  "algorithm": "Python standard-library Decimal only. For each role take the maximum listed base/write/read input rate, multiply by assumed input ceiling; add total-output ceiling times output rate; divide hundredths-of-microUSD by 100 and round upward to integer microUSD. Sum independent per-request integers by stored counts. Scenarios price aggregate role tokens at the same conditional rates.",
+  "per_request_micro_usd": {
+    "answer": 60960,
+    "plan": 60960,
+    "rank": 200960,
+    "group": 169600,
+    "quality": 440000
+  },
+  "full_counts_total": 1320,
+  "first_block_counts_total": 55,
+  "recomputed_full_micro_usd": 364558080,
+  "recomputed_first_block_micro_usd": 15189920,
+  "recomputed_scenarios_micro_usd": {
+    "working": 21722400,
+    "higher": 106444800
+  },
+  "recomputed_historical_group_micro_usd": 166400,
+  "recomputed_historical_full_micro_usd": 364327680,
+  "recomputed_historical_first_block_micro_usd": 15180320,
+  "group_write_only_delta_micro_usd": {
+    "per_group_request": 3200,
+    "full": 230400,
+    "first_block": 9600,
+    "working": 43200,
+    "higher": 86400
+  },
+  "quality_write_zero_interpretation_verified": "The zero is a no-write-request assumption for this arithmetic case, not a free-write price or evidence that the current live settlement supports quality writes. The sheet separately states documented 5m/1h prices and unsupported current settlement.",
+  "limits": [
+    "Independent review verifies arithmetic and consistency using stored token/rate inputs; root researched official current rate documentation. No separate rate-currency, endpoint-default or provider-billing certification is claimed by this arithmetic review.",
+    "The 8k/64k provider input ceilings remain unproved. Standard/global service and the declared output ceilings are conditional assumptions.",
+    "Group usage mapping/write categories remain unsupported by current production code.",
+    "Quality write-zero is a no-write assumption; writes are neither priced free nor supported by current settlement.",
+    "This review does not certify a current maximum liability, dispatch reservation, actual experiment cost or AM1 proposal.",
+    "Neither the proposed $5 first-block cap nor the proposed $125 full cap is granted or guarantees completion."
+  ],
+  "live_cap_certified": false,
+  "usable_for_dispatch": false,
+  "provider_calls": 0,
+  "sdk_calls": 0,
+  "credential_access": false,
+  "production_files_changed": false,
+  "original_folder_accessed": false,
+  "verification_method": "Read stored JSON and run independent standard-library Decimal assertions. No project modules or SDK imports."
+}

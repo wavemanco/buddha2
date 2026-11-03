@@ -1,0 +1,33 @@
+{
+  "canonical_validation_failed": false,
+  "classification": "operator_display_handoff_missed",
+  "created_utc": "2026-10-31T16:59:30.981923+00:00",
+  "deadline_at_utc": "2026-10-31T16:51:24.924771+00:00",
+  "fixture": false,
+  "kind": "p3a-hi-operational-export-handoff-miss-v1",
+  "new_provider_calls_for_repair": 0,
+  "paid_repeat": false,
+  "reason": "Root missed the host export handoff while investigating absent worker; the canonical worker had completed and the controller was waiting for the exporter. Public request was available for about five minutes thirty-five seconds.",
+  "recovery": "After provider/controller closure, fresh standalone Inspect export of same immutable first-pair snapshot, without late acknowledgment or model regeneration. Preserve original timeout. Dedicated watcher assigned to actual closure export.",
+  "references": {
+    "core-started.json": {
+      "file_modified_utc": "2026-10-31T16:41:24.949145+00:00",
+      "path": "runs/phase3a-h1-integrated-v1/native/a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a/live/visibility/first-pair/core-started.json",
+      "sha256": "efec7186d12c66aa761ad4050ba2b35ed4c6344bdb31318fb8a96afc5777c0af"
+    },
+    "request.json": {
+      "file_modified_utc": "2026-10-31T16:45:49.836959+00:00",
+      "path": "runs/phase3a-h1-integrated-v1/native/a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a/live/visibility/first-pair/request.json",
+      "sha256": "ea25e6d2a5d38b3d49e709f512921efbc0e4f6a1751c1d18c383934ec08c9797"
+    },
+    "status.json": {
+      "file_modified_utc": "2026-10-31T16:51:20.771556+00:00",
+      "path": "runs/phase3a-h1-integrated-v1/native/a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a/live/visibility/first-pair/status.json",
+      "sha256": "112b4f7171995672e4a4d24be39a29beeb8593daf615a83f62d32c851f5bb68a"
+    }
+  },
+  "scientific_stop": false,
+  "snapshot_sha256": "175c0d765517d524e12daca8f4dfe9f0952c80163d293e2484e0427a55fdcae7",
+  "source_changed": false,
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a"
+}

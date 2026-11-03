@@ -1,0 +1,639 @@
+{
+  "assessment_identity_sha256": "ef1fa6f0674f540002f119d3593cfda848bc3194c206f524f50d01203a64a9ca",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 10,
+    "utility": 8.487883571607776
+  },
+  "native": {
+    "fields": {
+      "distinct": 10,
+      "generation_scores": [
+        9,
+        9,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        8
+      ],
+      "partition_scores": [
+        9,
+        9,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        8
+      ],
+      "utility": 8.487883571607776
+    },
+    "generation_row": {
+      "generations": [
+        "**Nature** is a flagship multidisciplinary weekly journal, first published in 1869. It is known for its rigorous peer review and has a long history of publishing landmark discoveries across the sciences.",
+        "**Science**, the flagship journal of the American Association for the Advancement of Science (AAAS), is a leading multidisciplinary publication known for peer-reviewed research across the natural and social sciences.",
+        "**Proceedings of the National Academy of Sciences (PNAS)** is a reputed science publication. It covers a broad range of fields, including biology, physics, chemistry, and the social sciences. Its credibility comes from its backing by the U.S. National Academy of Sciences and its rigorous peer review.",
+        "**Cell** is a leading peer-reviewed journal in biology, especially molecular and cellular research. It is known for its rigorous editorial standards and for publishing influential findings in areas such as genetics, cell biology, and molecular biology.",
+        "**The New England Journal of Medicine (NEJM)** is a highly reputed scientific publication. It is a peer-reviewed medical journal that has published influential clinical trials and research for over 200 years, and it plays a central role in evidence-based medicine by shaping how clinicians diagnose and treat disease.",
+        "**Journal of the American Chemical Society (JACS)** is a highly reputed scientific publication. Published by the American Chemical Society since 1879, it is one of the most authoritative and influential journals in chemistry. It covers a wide range of areas, including organic, inorganic, physical, and biological chemistry, and it is among the most cited journals in the field.",
+        "**Physical Review Letters** is a highly reputed science publication. Published by the American Physical Society, it is known for rapidly publishing high-impact physics findings, and many landmark discoveries have appeared in its pages, including work on gravitational waves and fundamental particle physics.",
+        "**Philosophical Transactions of the Royal Society** is one of the oldest continuously published scientific journals in the world. It was first issued in 1665 and has been published ever since.",
+        "**The Lancet** is a highly reputed publication in science, particularly in medical science and clinical research.",
+        "**Scientific American** is a reputed science publication. Founded in 1845, it is one of the oldest continuously published magazines in the United States. It is written for general audiences rather than as a research journal, and it covers developments in science and technology in an accessible way."
+      ],
+      "id": "nb-curated-510dc2800c595827238e",
+      "model": "claude-sonnet-5-5",
+      "prompt": "Name one reputed publication in science."
+    },
+    "partition_fields": {
+      "distinct": 10,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "score_row": {
+      "distinct": 10,
+      "generation_scores": [
+        9,
+        9,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        8
+      ],
+      "generations": [
+        "**Nature** is a flagship multidisciplinary weekly journal, first published in 1869. It is known for its rigorous peer review and has a long history of publishing landmark discoveries across the sciences.",
+        "**Science**, the flagship journal of the American Association for the Advancement of Science (AAAS), is a leading multidisciplinary publication known for peer-reviewed research across the natural and social sciences.",
+        "**Proceedings of the National Academy of Sciences (PNAS)** is a reputed science publication. It covers a broad range of fields, including biology, physics, chemistry, and the social sciences. Its credibility comes from its backing by the U.S. National Academy of Sciences and its rigorous peer review.",
+        "**Cell** is a leading peer-reviewed journal in biology, especially molecular and cellular research. It is known for its rigorous editorial standards and for publishing influential findings in areas such as genetics, cell biology, and molecular biology.",
+        "**The New England Journal of Medicine (NEJM)** is a highly reputed scientific publication. It is a peer-reviewed medical journal that has published influential clinical trials and research for over 200 years, and it plays a central role in evidence-based medicine by shaping how clinicians diagnose and treat disease.",
+        "**Journal of the American Chemical Society (JACS)** is a highly reputed scientific publication. Published by the American Chemical Society since 1879, it is one of the most authoritative and influential journals in chemistry. It covers a wide range of areas, including organic, inorganic, physical, and biological chemistry, and it is among the most cited journals in the field.",
+        "**Physical Review Letters** is a highly reputed science publication. Published by the American Physical Society, it is known for rapidly publishing high-impact physics findings, and many landmark discoveries have appeared in its pages, including work on gravitational waves and fundamental particle physics.",
+        "**Philosophical Transactions of the Royal Society** is one of the oldest continuously published scientific journals in the world. It was first issued in 1665 and has been published ever since.",
+        "**The Lancet** is a highly reputed publication in science, particularly in medical science and clinical research.",
+        "**Scientific American** is a reputed science publication. Founded in 1845, it is one of the oldest continuously published magazines in the United States. It is written for general audiences rather than as a research journal, and it covers developments in science and technology in an accessible way."
+      ],
+      "id": "nb-curated-510dc2800c595827238e",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "a93ae50b5a341d6d74e7adddef1021b2aaadbf606b3446c93d5ea44cfeef2f0f",
+      "partition_scores": [
+        9,
+        9,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        8
+      ],
+      "prompt": "Name one reputed publication in science.",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "7f5dd139e353d29aeb1b4a1aafbf3a668b8154a1cb304143a278fe512eb64d27",
+      "utility": 8.487883571607776
+    },
+    "summary": {
+      "mean_distinct": 10.0,
+      "mean_utility": 8.487883571607776,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "c6f0120d4bab17226493ec4c236fa04709ded53305c6e476cab58dfdfb10a364",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0400",
+      "fixture": false,
+      "intent_sha256": "7984756708d117a9203b9ab217e58a10f468105da91d6ed295b2f472cc0847ba",
+      "request_sha256": "676cde8b2c2a98d13b221afc043ec3b948814e75991a269482c3a22e6a637e04",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.8342584630008787,
+        "message_id": "chatcmpl-Edw5JaoMB2xWb3bElxe5XaJIuEdlS",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 83,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 46,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 729,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 812
+        },
+        "refusal": null,
+        "request_id": "req_653ac06d365d45fe90d77c9fbaaec4c5",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 729,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 83,
+          "output_tokens_details": {
+            "reasoning_tokens": 46
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.group",
+      "spent_micro_usd": 270,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0401",
+      "fixture": false,
+      "intent_sha256": "3dd5b5af14befb5ab0884b11d5eb8d3d1f6cd68c7a2596a29a630641868f79dc",
+      "request_sha256": "cdfb25ae6cf7efa1bc2a9472851ef75d8a3d861b1d797e412fb9c7223d0b9e30",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.1774414909887128,
+        "message_id": "msg_011CgUZ4Lv5Ad9diu92vERPy",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ4LWGXh2Z7UUPJTkkE",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 490,
+          "output_tokens": 78,
+          "output_tokens_details": {
+            "thinking_tokens": 69
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.00",
+      "spent_micro_usd": 4840,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0402",
+      "fixture": false,
+      "intent_sha256": "8b0a70d4a88a77db6d0dd942154b46070d459fd2fb82b7a45d2b6bf9b749c6d2",
+      "request_sha256": "71d094a48f7b21b8e3993282ed92defbcd2ee6873bc045e8d0e4fea6b5358179",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.392879657985759,
+        "message_id": "msg_011CgUZ4Y52vmxWLJpjCGyV7",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ4XrPobXtLcMpc54wq",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 490,
+          "output_tokens": 77,
+          "output_tokens_details": {
+            "thinking_tokens": 68
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.01",
+      "spent_micro_usd": 4813,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0403",
+      "fixture": false,
+      "intent_sha256": "110a1c7805214b6537e00a3c4972392b9196c404da1f3bde9d0e17e0fd9a12a0",
+      "request_sha256": "46e8ec8ca685913adfdcb543e3642e4c8bea4793e176d66e17c9939407b99fae",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.4907599549915176,
+        "message_id": "msg_011CgUZ4kkHxqSFuyzJ1cW9J",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ4kYsrEEQv92QjdMrC",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 525,
+          "output_tokens": 151,
+          "output_tokens_details": {
+            "thinking_tokens": 142
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.02",
+      "spent_micro_usd": 7040,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0404",
+      "fixture": false,
+      "intent_sha256": "2628c642c0e51c41d4471075604f2a189a14cb1354d78fe3d67da4b7eda012f3",
+      "request_sha256": "c3371dd18590dd3e95640f663b003fe7866412fbd50d452e21d5486f3a5c8dec",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.8471352599881357,
+        "message_id": "msg_011CgUZ53mj4TVUM9cBznBFE",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ53ZLAu8SrTkDD7Rzk",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 503,
+          "output_tokens": 130,
+          "output_tokens_details": {
+            "thinking_tokens": 121
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.03",
+      "spent_micro_usd": 6342,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0405",
+      "fixture": false,
+      "intent_sha256": "53718ec32ad4b64539037e9d9042894bbd1abf3710ec2ff4766fe0dd0704665e",
+      "request_sha256": "d8397c2f19e9acb9fd488865ce303d4f9a18f8ccb98807620a89036c194bacc7",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.044524855999043,
+        "message_id": "msg_011CgUZ5HnLYGxkm4wJ78ixX",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ5HZhFw67qP7giiYxs",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 526,
+          "output_tokens": 157,
+          "output_tokens_details": {
+            "thinking_tokens": 148
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.04",
+      "spent_micro_usd": 7211,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0406",
+      "fixture": false,
+      "intent_sha256": "f8c6e268f578fadb633eeaee5a48a7eb606303485bc8688b32ed6b6734f8cb08",
+      "request_sha256": "173c7155db998ad6f6c9218e2e6941432c9062cd4e47ad99f02404d62d7a95a2",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.9786617389909225,
+        "message_id": "msg_011CgUZ5YiGMkRErwTsA1q14",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ5YWrNLLMqPFp5xdre",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 540,
+          "output_tokens": 150,
+          "output_tokens_details": {
+            "thinking_tokens": 141
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.05",
+      "spent_micro_usd": 7095,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0407",
+      "fixture": false,
+      "intent_sha256": "755e66427147e1030362d968f90af2f1dda5a6b5886c5889c0fa7f4caa751698",
+      "request_sha256": "16d78cc1f09c0446ba06ddd910ba0b4e3f904ce886d067bca2ff72c59f2b59dd",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 2.893207254994195,
+        "message_id": "msg_011CgUZ5oUX2HZigs9qh7y8T",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ5oHcjAZFMtDp8py77",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 515,
+          "output_tokens": 134,
+          "output_tokens_details": {
+            "thinking_tokens": 125
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.06",
+      "spent_micro_usd": 6518,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0408",
+      "fixture": false,
+      "intent_sha256": "765782993c6b7256e17073b438b63b992d87db7bec84d851018f2f3a6efa80fb",
+      "request_sha256": "da9401b3bc1f17e3c7a9364bbe6c263478675dbfd550e883c69c8ad71bf868c8",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.2962906890024897,
+        "message_id": "msg_011CgUZ63rxmeDhpt5AeeHAB",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ63cpitviU3fRK2sbL",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 482,
+          "output_tokens": 135,
+          "output_tokens_details": {
+            "thinking_tokens": 126
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.07",
+      "spent_micro_usd": 6364,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0409",
+      "fixture": false,
+      "intent_sha256": "e72fc24749ff29e7c0ea76113a57b60c0f4f34a7d87a7a5e5fbc94272dc61859",
+      "request_sha256": "08ed04c9add3e369522e83e25638b3287de6d330e863c02ca6dea75415f59104",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.284429024992278,
+        "message_id": "msg_011CgUZ6L5XuAjJpWJj9FwLZ",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ6Ksscc8TWzdVjauH4",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 9}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 458,
+          "output_tokens": 147,
+          "output_tokens_details": {
+            "thinking_tokens": 138
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.08",
+      "spent_micro_usd": 6562,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0410",
+      "fixture": false,
+      "intent_sha256": "4f59eaf48ad0e6d6239accb94c2e54fc64109dfc79592a3e5e6365049cf46000",
+      "request_sha256": "380e2cd993124bd497e2178316496117aa5908421f43bed08c317311fa9d343a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.3785454080061754,
+        "message_id": "msg_011CgUZ6c5x3F9WFaaTZVqAi",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUZ6bt3dB6exWCBgVVe2",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 505,
+          "output_tokens": 181,
+          "output_tokens_details": {
+            "thinking_tokens": 172
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-71e1816d0f7c45de734c48fa.quality.09",
+      "spent_micro_usd": 7755,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-510dc2800c595827238e"
+}

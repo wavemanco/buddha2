@@ -1,0 +1,46 @@
+{
+  "activity_attempts": {
+    "sdk": 0,
+    "socket": 0,
+    "subprocess": 0
+  },
+  "actual_container_id": "6662d109510d5f4444a7c498772a703689bc130fb09c492e31ee8d1146c4e354",
+  "actual_container_removed": true,
+  "actual_network": "none",
+  "actual_script_argv_verified": [
+    "-B",
+    "/workspace/runs/phase3a-h1-integrated-v1/verification-v4/provider-preflight-v2/provider_preflight.py",
+    "--inside"
+  ],
+  "artifact_review_sha256": "ff7ce7580600deb9c9574b00b294ddf41d9793db104b2e56f4061534bfcafb8a",
+  "created_utc": "2026-10-31T14:47:57.184077+00:00",
+  "credentials_read": false,
+  "evidence_sha256": {
+    "actual-container": "223b72d3694a90fa6193cadee77cceedea21b12d226a908d535d7cddaa1873c8",
+    "completion": "e41957f8cbbec1a42e6bf2bc2b58a486f6e2516d7679a04a3074d51bf8c9eeeb",
+    "create": "afcf50d670ba0420fbe89c5bcefcc96413757504ec46774e0f96b9e78d2b4e22",
+    "execution": "9383499fa5b8b922c87e7077164b364db7eecab7da65ac4750acc1ea32d9581f",
+    "preflight": "ca8f3753618d50612b73d84e9baac98c3f8ab7e74dc67a462425be7eccc62142",
+    "remove": "b40cba5cd9816d48c438cdf90c3bc535db8a62142b5b7325fa30b84628ce88a2",
+    "terminal": "5b359d18ed6ea0471d2ca162597dd6ba972ba2728f5b8ae90c2bd987d3b0cc2a"
+  },
+  "helper_sha256": "ea490b0318d301c6be87c2f64ff0c32eeed2d475681f06b7ba8b1d2c5e691a5f",
+  "kind": "p3a-hi-independent-keyless-provider-preflight-result-review-v2",
+  "launcher_sha256": "3555dac7edb6a58ac6100c85ca38405d369693f919bcd95a3d8dbf4c7bc5e08b",
+  "limits": {
+    "included_first_micro_usd": 50860000,
+    "total_micro_usd": 205860000
+  },
+  "new_global_claim_or_journal_published": false,
+  "packet_acceptance_sha256": "31fdee4427f4e4609b82209d9d312201004fba019e32d13c68d27a235b47e32c",
+  "passed": true,
+  "policy_sha256": "f94f53003eef0c6bb41fc7d98fe42da27cd7b23bcf8d52bf23a50e9c9deb92ab",
+  "provider_calls": 0,
+  "reviewer": "hi_final_acceptance: nonauthor",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "scope": "Accepted unchanged provider-mode preflight and exact artifact bundle readiness; no live access, paid request, scientific result or completion claim. Fresh keys may follow under the existing authorization and exact ownership inventory.",
+  "source_and_two_part_bundle_unchanged": true,
+  "source_files_verified": 356,
+  "source_sha256": "2440535e5274c106a44efb28cf9533308b7dbea8fd8768649a089145cbc150a3",
+  "study_sha256": "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a"
+}

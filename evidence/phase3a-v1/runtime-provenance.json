@@ -1,0 +1,26 @@
+{
+  "base_image_id": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+  "bun_image": "oven/bun:1.3.11-slim@sha256:478281fdd196871c7e51ba6a820b7803a8ae97042ec86cdbc2e1c6b6626442d9",
+  "declared_patch_sha256": "c9a8a0e826d48f3fcfc7d818321d128c28e1f7f7c594954c19453dfca4946dc8",
+  "editor_transport_note": "Full non-streamed SDK message is durably accounted and tool-checked before re-exposing the message as SSE to OpenCode. Eager input streaming fields are retained; Anthropic documents them as ignored for non-streaming requests.",
+  "image_id": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+  "inventory_sha256": "0ebab6253e52766cd9e986161c36021279e3f2bf40fa29f15561c9739306ac1d",
+  "kind": "phase3a-runtime-provenance-v1",
+  "licenses": {
+    "Bun": "MIT",
+    "OpenCode": "MIT",
+    "build_tools": "Debian Git/GCC/make include GPL components; build/research tools, not a distributed product",
+    "bundled_libvips": "LGPL-3.0-or-later; internal text-only research image; no redistribution or image processing in this pilot"
+  },
+  "opencode_commit": "23fb5e0516c99ac04a1aa46c193efda2e1b9bb24",
+  "opencode_diff_sha256": "0c536f198bceb1e8e596ac56f1deb186c81dd0b659297191144dad3efec39048",
+  "primary_reference": "https://github.com/anthropics/skills/blob/main/skills/claude-api/shared/tool-use-concepts.md",
+  "provider_calls": 0,
+  "real_credentials": false,
+  "runtime_files": {
+    "/opt/phase3a-opencode/LICENSE": "b5c625d157735f04e1b2b7ceccee849130b554bdb23cd58db55a38a257efbbdd",
+    "/opt/phase3a-opencode/bun.lock": "44e84b33709d5d74bbe17a67e2442d0f8f6ee06ff5415f302f59a4c54e360543",
+    "/opt/phase3a-opencode/packages/opencode/src/provider/transform.ts": "13eeb2824f9455f216a6f948c1718e53d4a148a2108fc1d13fa32858fb63b462",
+    "/usr/local/bin/bun": "45598a2814020c231575487a560e47d397d6902355d7e08171a2e56221a6d675"
+  }
+}

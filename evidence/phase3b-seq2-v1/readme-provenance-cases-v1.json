@@ -1,0 +1,48 @@
+{
+  "kind": "phase3b-seq2-readme-provenance-expectations-v1",
+  "authority": "evidence/phase3b-seq2-v1/readme-refresh-authority-v1.json",
+  "frozen_before_support_edits": true,
+  "scientific_conditions_changed": false,
+  "cases": [
+    {
+      "id": "RD01",
+      "expected": "onlyREADME.md\u2192README_LEGACY.md alias authorized; retainedbytesmatchacceptedold549sourcehash"
+    },
+    {
+      "id": "RD02",
+      "expected": "allother548parentfilesretaincurrentexacthashes; newREADMEhashedasnewS2source"
+    },
+    {
+      "id": "RD03",
+      "expected": "tamperedlegacyorothercurrentparentfilefails; noextraaliasaccepted"
+    },
+    {
+      "id": "RD04",
+      "expected": "currentREADMEeditchangesnewsourcehashandinvalidatesfrozennewsource, neverfakesoldparenthash"
+    },
+    {
+      "id": "RD05",
+      "expected": "pinnedclosedRP2receipt/manifestauthenticateoldstudyandcapturedpreservationinventory"
+    },
+    {
+      "id": "RD06",
+      "expected": "oldpreservationarchivechecksremain: closedRP1offline/live,R3andcurrentRP2archiveshashed"
+    },
+    {
+      "id": "RD07",
+      "expected": "exact14originalofflinefixturestreamsclassifiedfrompinnedphase2receiptbeforemetadata; noextra/cached/private/real/unknownstreamaccess"
+    },
+    {
+      "id": "RD08",
+      "expected": "oldmodules/manifests/retainedsourceREADMEunchanged; historicalreplayusesretainedsource"
+    },
+    {
+      "id": "RD09",
+      "expected": "newsourceincludesREADME,README_LEGACY,ATTRIBUTIONS,RESEARCH_METHODanddocauthority"
+    },
+    {
+      "id": "RD10",
+      "expected": "actualpostrefreshsource_identity/preservepositiveandrepeatedstable; temporalbefore-refreshclaimsnotfabricated"
+    }
+  ]
+}

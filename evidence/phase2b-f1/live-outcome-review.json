@@ -1,0 +1,492 @@
+{
+  "C_permutation": {
+    "B01_remains_first": true,
+    "all_B_texts_preserved_exactly": true,
+    "interpretation": "C reordered later answers but retained the sole first head. B and C independently received the same head score7 and one-class grouping; these saved outcomes therefore produce identical utility.",
+    "order_changed": true,
+    "original_B_positions_1_based": [
+      1,
+      2,
+      5,
+      9,
+      6,
+      3,
+      10,
+      4,
+      7,
+      8
+    ]
+  },
+  "accounted_public_price_upper_bound_micro_usd": 210174,
+  "all_three_assessments_scored": true,
+  "exact_texts": {
+    "A_and_B_unique_full_texts": 20,
+    "A_unique": 10,
+    "B_C_same_id_to_complete_response_mapping": true,
+    "B_unique": 10,
+    "C_creates_new_answer_texts": false,
+    "cross_arm_joint_partition_performed": false,
+    "interpretation": "All20 generated full texts differ byte-for-byte; each ten-answer portfolio was separately classified as one semantic equivalence class. This is semantic grouping, not exact-text duplicate detection.",
+    "within_each_order_semantic_classes": {
+      "A": 1,
+      "B": 1,
+      "C": 1
+    }
+  },
+  "kind": "phase2b-f1-independent-live-outcome-review-v1",
+  "measurement_interpretation": {
+    "local_descriptive_B_minus_A": -0.2240580499203344,
+    "local_descriptive_C_minus_B": 0.0,
+    "not_whole_study_contrasts": true,
+    "observation": "The low utility numbers are caused by the single credited head spread over ten weighted positions, not by head-quality scores of1.6-1.8.",
+    "utility_formula_for_this_observed_partition": "head_score / sum(0.8**i for i in range(10)); later duplicate positions contribute zero credited utility but retain null individual quality scores.",
+    "weight_denominator": 4.4631290880000005
+  },
+  "observed_arms": {
+    "A": {
+      "distinct": 1,
+      "failure": null,
+      "generated_response_statuses": {
+        "ok": 10
+      },
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "head_positions_1_based": [
+        1
+      ],
+      "head_scores": [
+        8
+      ],
+      "order_id": "p2-82276b972aa39c5491c83143",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "requested_returned_generator": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "status": "scored",
+      "utility": 1.792464399362674
+    },
+    "B": {
+      "distinct": 1,
+      "failure": null,
+      "generated_response_statuses": {
+        "ok": 10
+      },
+      "generation_scores": [
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "head_positions_1_based": [
+        1
+      ],
+      "head_scores": [
+        7
+      ],
+      "order_id": "p2-85bd10cb49b2f7c8b5f10946",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "requested_returned_generator": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "status": "scored",
+      "utility": 1.5684063494423397
+    },
+    "C": {
+      "distinct": 1,
+      "failure": null,
+      "generated_response_statuses": {
+        "ok": 10
+      },
+      "generation_scores": [
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "head_positions_1_based": [
+        1
+      ],
+      "head_scores": [
+        7
+      ],
+      "order_id": "p2-66a2d4cb8703e6fa273999dd",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "requested_returned_generator": {
+        "requested": "claude-sonnet-5-5",
+        "returned": "claude-sonnet-5-5"
+      },
+      "status": "scored",
+      "utility": 1.5684063494423397
+    }
+  },
+  "observed_provider_attempts": 28,
+  "observed_request_counts": {
+    "answer": 20,
+    "group": 3,
+    "plan": 1,
+    "quality": 3,
+    "rank": 1
+  },
+  "pending_intents": 0,
+  "rationale_and_provenance_limits": [
+    "Native quality visible outputs contain only score JSON; no explanatory judge rationale is saved.",
+    "Usage includes thinking/reasoning token counts, but Anthropic thinking text and signatures were not retained by the canonical transport.",
+    "Canonical saved outcomes are not complete raw SDK/API response objects.",
+    "Requested controls and returned model/usage fields are observed. Omitted sampling controls and provider defaults cannot be reconstructed as measured settings."
+  ],
+  "repeat": 1,
+  "requested_and_returned_settings": {
+    "answer": {
+      "attempts": 20,
+      "omitted_request_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "reported_usage_geographies": [
+        "global"
+      ],
+      "reported_usage_service_tiers": [
+        "standard"
+      ],
+      "reported_usage_speeds": [
+        "standard"
+      ],
+      "requested_settings_excluding_prompt_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": [
+        "end_turn"
+      ]
+    },
+    "group": {
+      "attempts": 3,
+      "omitted_request_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_tokens",
+        "max_completion_tokens",
+        "service_tier",
+        "inference_geo",
+        "thinking",
+        "output_config"
+      ],
+      "reported_usage_geographies": [],
+      "reported_usage_service_tiers": [
+        "default"
+      ],
+      "reported_usage_speeds": [],
+      "requested_settings_excluding_prompt_messages": {
+        "model": "gpt-5.6-luna",
+        "response_format": {
+          "json_schema": {
+            "name": "Partition",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "groups": {
+                  "items": {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "title": "Groups",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "groups"
+              ],
+              "title": "Partition",
+              "type": "object"
+            },
+            "strict": true
+          },
+          "type": "json_schema"
+        }
+      },
+      "returned_models": [
+        "gpt-5.6-luna"
+      ],
+      "returned_stop_reasons": [
+        "stop"
+      ]
+    },
+    "plan": {
+      "attempts": 1,
+      "omitted_request_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "reported_usage_geographies": [
+        "global"
+      ],
+      "reported_usage_service_tiers": [
+        "standard"
+      ],
+      "reported_usage_speeds": [
+        "standard"
+      ],
+      "requested_settings_excluding_prompt_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": [
+        "end_turn"
+      ]
+    },
+    "quality": {
+      "attempts": 3,
+      "omitted_request_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens",
+        "service_tier",
+        "inference_geo"
+      ],
+      "reported_usage_geographies": [
+        "global"
+      ],
+      "reported_usage_service_tiers": [
+        "standard"
+      ],
+      "reported_usage_speeds": [
+        "standard"
+      ],
+      "requested_settings_excluding_prompt_messages": {
+        "max_tokens": 16000,
+        "model": "claude-opus-5",
+        "output_config": {
+          "effort": "high",
+          "format": {
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "score": {
+                  "title": "Score",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "score"
+              ],
+              "title": "Score",
+              "type": "object"
+            },
+            "type": "json_schema"
+          }
+        },
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "returned_models": [
+        "claude-opus-5"
+      ],
+      "returned_stop_reasons": [
+        "end_turn"
+      ]
+    },
+    "rank": {
+      "attempts": 1,
+      "omitted_request_controls": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "seed",
+        "reasoning_effort",
+        "max_completion_tokens"
+      ],
+      "reported_usage_geographies": [
+        "global"
+      ],
+      "reported_usage_service_tiers": [
+        "standard"
+      ],
+      "reported_usage_speeds": [
+        "standard"
+      ],
+      "requested_settings_excluding_prompt_messages": {
+        "inference_geo": "global",
+        "max_tokens": 4096,
+        "model": "claude-sonnet-5-5",
+        "output_config": {
+          "effort": "low"
+        },
+        "service_tier": "standard_only",
+        "thinking": {
+          "type": "adaptive"
+        }
+      },
+      "returned_models": [
+        "claude-sonnet-5-5"
+      ],
+      "returned_stop_reasons": [
+        "end_turn"
+      ]
+    }
+  },
+  "reserved_micro_usd": 0,
+  "review_actions": {
+    "api_spend_micro_usd": 0,
+    "journal_edits": 0,
+    "new_credential_reads": 0,
+    "new_provider_calls": 0,
+    "original_folder_accessed": false,
+    "source_edits": 0
+  },
+  "reviewed_at_utc": "2026-10-28T10:18:00Z",
+  "reviewer": "/root/release_runner",
+  "reviewer_interpretation": {
+    "evidence_status": "Interpretation of saved visible text, not a saved judge rationale.",
+    "grouping_limit": "One-class grouping reports this benchmark judge's central-answer equivalence. It does not establish that every explanation or practical detail is identical or valueless to a human.",
+    "planner_observation": "The plan spans randomness, common PINs, pattern avoidance, code-generation procedure, brute-force math, threat models, physical weaknesses, memory, stronger locks and myths. Generated B answers add those emphases but retain the central recommendation that no fixed code is inherently safest and a random unpredictable code is preferable. Luna classified these treatments as equivalent within B.",
+    "visible_content_caution": "B01 includes an incoherent six-sided-die instruction mentioning rerolling7-9 equivalents. This is a visible reviewer concern; the saved Opus output does not establish that it caused score7."
+  },
+  "scientific_scope": {
+    "conclusion": "The fixed planner and reranker provided no observed diversity or utility gain on this prompt under these native judgments. One prompt/repeat cannot establish that planning or reranking fails generally, nor select a full-study seed.",
+    "expansion_authorized_by_this_review": false,
+    "generalization_established": false,
+    "generated_answer_texts": 20,
+    "human_alignment_established": false,
+    "independent_prompts": 1,
+    "model_or_strategy_winner_established": false,
+    "ordered_answer_presentations": 30,
+    "ordered_assessments": 3,
+    "recursive_adaptation_tested": false,
+    "repeats_observed": 1,
+    "whole_study_selection": "inconclusive;69 of72 scheduled assessments remain missing"
+  },
+  "source_evidence_sha256": {
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-66a2d4cb8703e6fa273999dd.json": "f2d4bc9cbcdd22825098dcf9d5e3cddeef494ece66bb76f29df09c9952cabc63",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-82276b972aa39c5491c83143.json": "b05a86ffb71f57a9f2e3df5916a1efe1e0cb85061afa141e4344e7457b5d8577",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/assessments/p2-85bd10cb49b2f7c8b5f10946.json": "8b47e8fff0180095f15a2e7b0e8b20a11856d50c54b1d04451ee8bfd23c9763c",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/events.jsonl": "d4795ae8f6b52dc17b843dd5968e896c39d1ff69563a866d5e605640a3db1656",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-66a2d4cb8703e6fa273999dd.json": "908a147cc3d924f880538138bf5eb1ec83a8cd5f621a1be22a8780277681af83",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-82276b972aa39c5491c83143.json": "adad8cd56aa06d70ea7b33e936a3a0cdd3e4a1ebcd257a362afdcab0f5b874fd",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/portfolios/p2-85bd10cb49b2f7c8b5f10946.json": "cb4c4a8f6552697844d764e8fd37c48ae9644e0778529c0d2811b5236c07b9f0",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514"
+  },
+  "status": "reviewed-first-block-evidence",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b",
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-9c418f063bc433264d29",
+    "prompt": "Which 4-digit lock combination is the safest?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-95"
+    }
+  },
+  "unknown_results": 0,
+  "visible_quality_outputs": [
+    {
+      "slot_id": "p2-82276b972aa39c5491c83143.quality.00",
+      "visible_output": "{\"score\": 8}"
+    },
+    {
+      "slot_id": "p2-85bd10cb49b2f7c8b5f10946.quality.00",
+      "visible_output": "{\"score\": 7}"
+    },
+    {
+      "slot_id": "p2-66a2d4cb8703e6fa273999dd.quality.00",
+      "visible_output": "{\"score\": 7}"
+    }
+  ]
+}

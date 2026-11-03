@@ -1,0 +1,24 @@
+{
+  "kind": "phase3b-s2-runtime-acceptance-cases-v1",
+  "status": "expected_cases_frozen_before_runtime_product_edits",
+  "definition": "PHASE3B_DEFINITION.md",
+  "provider_calls": 0,
+  "cases": [
+    {"id": "RT01", "expect": "live transport rejects absent, stale, foreign or unconsumed startup attachment before SDK construction"},
+    {"id": "RT02", "expect": "supervisor observation is fresh after startup request, exact running agent and owner, source/grant bound, one-shot and nonrenewable"},
+    {"id": "RT03", "expect": "native_selector retains full provider tool and thinking response; uses same Opus high settings as editors"},
+    {"id": "RT04", "expect": "native_selector requires registered absolute 600-second conversation clock and clamps each provider request to min(240, remaining minus30), without renewing"},
+    {"id": "RT05", "expect": "fixed selector retains240-second completion and60-second cleanup, no native conversation clock"},
+    {"id": "RT06", "expect": "unknown, late, unclean or wrong-owner provider dispositions stop admissions with liabilities held and no resend"},
+    {"id": "RT07", "expect": "readiness proves96 normal solver requests, six normal authoring sessions, normal native selector, all exact source/read/delivery/history and physical transport audits"},
+    {"id": "RT08", "expect": "readiness rejects old k1 path, missing cumulative views, omitted signed history, forced terminal, fallback, stale proofs or missing normal selector"},
+    {"id": "RT09", "expect": "public snapshot has12 fixed/c1/c2 targets and8 delivered aliases; aliases refer existing checkpoint assessment without new judgment"},
+    {"id": "RT10", "expect": "snapshot rejects changed portfolio/assessment hashes, duplicate target, foreign prompt, unknown role or selected alias mismatch"},
+    {"id": "RT11", "expect": "Inspect imports12 separately labelled targets and selected-checkpoint metadata with real UTC dates/configuration/audits, without invented model-call events"},
+    {"id": "RT12", "expect": "each first-prompt/closure export retains its original600-second outcome; missing/late export cannot pass through a display limitation"},
+    {"id": "RT13", "expect": "SDK-free exporter and bounded canonical worker cannot construct provider clients, open sockets or run provider processes"},
+    {"id": "RT14", "expect": "actual Inspect saved-log roundtrip and zero-call replay preserve native values and ordered answers"},
+    {"id": "RT15", "expect": "private/cache/provider-stream/original-folder paths reject lexically before metadata; output paths remain fresh and scoped"},
+    {"id": "RT16", "expect": "selected public operator records including superseded service/attachment evidence retained losslessly for closure, no secrets or provider streams"}
+  ]
+}

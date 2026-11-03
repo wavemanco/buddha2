@@ -1,0 +1,21 @@
+{
+  "attempts": 43,
+  "combined_micro_usd": 6350952,
+  "cutoff": "2026-10-28T18:55:44Z",
+  "decision_status": "complete-development",
+  "evidence_sha256": "ed7f030a3b260b65832aceca9ac4450d9a7691a321d97059d7dd5b40c7d14b87",
+  "fixture": false,
+  "historical_shared_micro_usd": 5983504,
+  "journal_status": "ready",
+  "new_assessments": 4,
+  "new_spent_micro_usd": 367448,
+  "provider_calls": 43,
+  "reserved_micro_usd": 0,
+  "retries": 0,
+  "reused_assessments": 68,
+  "scored_new_assessments": 4,
+  "selected_method": "C-N",
+  "status": "complete",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e",
+  "synthetic_selected_method": null
+}

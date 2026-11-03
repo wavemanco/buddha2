@@ -1,0 +1,110 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--mount",
+    "type=bind,source=C:\\Users\\arvik\\code\\research\\Buddha2,target=/workspace,readonly",
+    "--workdir",
+    "/opt/phase3a-opencode/packages/opencode",
+    "--entrypoint",
+    "/usr/local/bin/bun",
+    "buddha2-h1-filter-only:retained",
+    "run",
+    "/workspace/followups/phase3a_history_compat_h1/probe.ts"
+  ],
+  "exit_code": 0,
+  "probe_sha256": "3ac7d312c26e1f8f6bb0e1a164a4f78a009f32c3ce9b0d5d0aa018134c747ddd",
+  "result": {
+    "fetch_invocations": 0,
+    "fixture": true,
+    "order": {
+      "actual": [
+        "thinking",
+        "thinking",
+        "tool1",
+        "tool2"
+      ],
+      "expected": [
+        "thinking",
+        "tool1",
+        "thinking",
+        "tool2"
+      ],
+      "valid_ends_in_tool": true
+    },
+    "rows": [
+      {
+        "after_OpenCode": {
+          "empty_exact": true,
+          "opaque_blocks": 1,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "before_OpenCode": {
+          "empty_exact": true,
+          "opaque_blocks": 1,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "case": "signed-empty"
+      },
+      {
+        "after_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 1,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": true
+        },
+        "before_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 1,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": true
+        },
+        "case": "signed-visible"
+      },
+      {
+        "after_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 1,
+          "redacted_exact": true,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "before_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 1,
+          "redacted_exact": true,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "case": "redacted"
+      },
+      {
+        "after_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 0,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "before_OpenCode": {
+          "empty_exact": false,
+          "opaque_blocks": 0,
+          "redacted_exact": false,
+          "tool_preserved": true,
+          "visible_exact": false
+        },
+        "case": "absent"
+      }
+    ]
+  }
+}

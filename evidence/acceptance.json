@@ -1,0 +1,230 @@
+{
+  "phase": 0,
+  "status": "complete",
+  "specification_revision": "0.3",
+  "captured_at": "2026-10-25T05:58:54.696097+00:00",
+  "project_root": "C:\\Users\\arvik\\code\\research\\Buddha2",
+  "provider_calls": 0,
+  "scientific_experiments": 0,
+  "project_tests": {
+    "record": "evidence/runtime/bbafe040de724dfaa43309b3ef64eeca.json",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "exit_code": 0,
+    "stdout": "evidence/runtime/bbafe040de724dfaa43309b3ef64eeca.stdout.log",
+    "stderr": "evidence/runtime/bbafe040de724dfaa43309b3ef64eeca.stderr.log",
+    "tests_passed": 43
+  },
+  "checks_and_upstream_tests": {
+    "record": "evidence/runtime/613affdab62c4daf8ea30ffc545a917c.json",
+    "command": [
+      "python",
+      "-B",
+      "tools/checks.py"
+    ],
+    "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "exit_code": 0,
+    "stdout": "evidence/runtime/613affdab62c4daf8ea30ffc545a917c.stdout.log",
+    "stderr": "evidence/runtime/613affdab62c4daf8ea30ffc545a917c.stderr.log",
+    "tests_passed": 5
+  },
+  "workflow_commands": [
+    {
+      "record": "evidence/runtime/0a9a99357ad24ea6af6228bbc85d9f82.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "demo",
+        "--output",
+        "/results/checkpoint",
+        "--stop-after-output"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/0a9a99357ad24ea6af6228bbc85d9f82.stdout.log",
+      "stderr": "evidence/runtime/0a9a99357ad24ea6af6228bbc85d9f82.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/37c46a34990e40e4a58c7987fa233453.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "assess",
+        "--portfolio",
+        "/results/imported/portfolio.json",
+        "--output",
+        "/results/mechanical"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/37c46a34990e40e4a58c7987fa233453.stdout.log",
+      "stderr": "evidence/runtime/37c46a34990e40e4a58c7987fa233453.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/55e4a8b131944be6a1dfe91a47f5aeb6.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "demo",
+        "--output",
+        "/results/example",
+        "--resume"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/55e4a8b131944be6a1dfe91a47f5aeb6.stdout.log",
+      "stderr": "evidence/runtime/55e4a8b131944be6a1dfe91a47f5aeb6.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/5bf285cd6c3d4ddb828955fff079de75.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "demo",
+        "--output",
+        "/results/example"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/5bf285cd6c3d4ddb828955fff079de75.stdout.log",
+      "stderr": "evidence/runtime/5bf285cd6c3d4ddb828955fff079de75.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/792122fe61f04f23a0a0bc369f9bfc8a.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "demo",
+        "--output",
+        "/results/checkpoint",
+        "--resume"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/792122fe61f04f23a0a0bc369f9bfc8a.stdout.log",
+      "stderr": "evidence/runtime/792122fe61f04f23a0a0bc369f9bfc8a.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/81e7c1aeed754269b4f71565d9e4d7da.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "export",
+        "--portfolio",
+        "/results/example/portfolio.json",
+        "--output",
+        "/results/exported"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/81e7c1aeed754269b4f71565d9e4d7da.stdout.log",
+      "stderr": "evidence/runtime/81e7c1aeed754269b4f71565d9e4d7da.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/91c226ff44394973a50aae975c260f9d.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "inspect",
+        "--run",
+        "/results/example"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/91c226ff44394973a50aae975c260f9d.stdout.log",
+      "stderr": "evidence/runtime/91c226ff44394973a50aae975c260f9d.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/f284abec74fa4694b7bf0e4051bc9c29.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "import",
+        "--source",
+        "/results/exported",
+        "--output",
+        "/results/imported"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/f284abec74fa4694b7bf0e4051bc9c29.stdout.log",
+      "stderr": "evidence/runtime/f284abec74fa4694b7bf0e4051bc9c29.stderr.log"
+    },
+    {
+      "record": "evidence/runtime/fe89895a711142aa81a375565beac057.json",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "buddha2",
+        "assess",
+        "--portfolio",
+        "/results/imported/portfolio.json",
+        "--output",
+        "/results/reassessed",
+        "--grading",
+        "/results/example/grading.json",
+        "--noveltybench",
+        "/workspace/.upstream/novelty-bench"
+      ],
+      "image": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+      "exit_code": 0,
+      "stdout": "evidence/runtime/fe89895a711142aa81a375565beac057.stdout.log",
+      "stderr": "evidence/runtime/fe89895a711142aa81a375565beac057.stderr.log"
+    }
+  ],
+  "source_verification": {
+    "harness2": {
+      "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+      "tracked_files_verified": 114,
+      "git_clean": true
+    },
+    "novelty-bench": {
+      "commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "tracked_files_verified": 169,
+      "git_clean": true
+    }
+  },
+  "upstreams_lock_sha256": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1",
+  "dependency_audit_matches_installed_versions": true,
+  "torch_audit_limitation": "CPU local version skipped by pip-audit; underlying 2.14.1 advisory metadata queried separately.",
+  "example": {
+    "run_id": "7b097430ed1f8972444239887a00a1c3695d7bf085f7e65b2290dfe343797f0f",
+    "portfolio_sha256": "5f64c9ae713ec30e1f1ebf94c06f05718babfacdc505decd119b407b54058594",
+    "responses": 10,
+    "metrics": {
+      "distinct": 5,
+      "utility": 4.346485261239211
+    },
+    "image_id": "sha256:585a5539c6091592258ec19d0bf8e216b189405f95766b167df0d2e88e251366",
+    "archive": "evidence/phase0-example.zip",
+    "archive_sha256": "937f0f6f81cf380c676687085dcbfa88f62dcfc03f61c360d45037ebef5a9e5a",
+    "archive_files": 189
+  },
+  "original_folder_protection": "No work commands, writes, copying or mounts in protected original. Actual runtime binds verified. No before/after hash audit of original."
+}

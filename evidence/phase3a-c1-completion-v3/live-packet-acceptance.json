@@ -1,0 +1,122 @@
+{
+  "archive": "evidence/phase3a-c1-completion-v3/live-outcome-v1.zip",
+  "archive_bytes": 11031048,
+  "archive_sha256": "7b026fbe76282269149e34e507651dbd6da3693a68ce261e943ec2689952dd05",
+  "automatic_repeat_authorized": false,
+  "checks": {
+    "CRC_all_member_hashes_inventory_current_bytes": true,
+    "actual_provider_host_exited0_and_owned_container_absence": true,
+    "all254_frozen_source_and_retained_bundle": true,
+    "all33_outcome_bound_artifacts_present": true,
+    "all485_protected_input_hashes_unchanged": true,
+    "eight_report_files_byte_identical_to_replay": true,
+    "entire15_file_closure_driver_proof_replay_subtree_present": true,
+    "exact38_event_chain19_unique_known_results_and_audits": true,
+    "five_offline_scope_and_cross_reviews_unchanged": true,
+    "historical22_88_hold_preserved_no_new_unknown_or_pending": true,
+    "honest_missing_scores_null_mean_no_repeat_authority": true,
+    "integer_usage_category_cost_recomputed_without_account_function": true,
+    "negative_readiness_review_preserved": true,
+    "no_HTML_or_known_provider_private_key_pattern_detected": true,
+    "no_normal_final_notes_reread_or_accepted_native_harvest": true,
+    "no_t08_probe_fixed_or_judge_calls": true,
+    "private_and_provider_stream_names_excluded_before_metadata": true,
+    "retained_offline_packet_and_R1_refs_verified": true,
+    "root_compiled_arithmetic_not_misattributed_as_signed_agent_review": true
+  },
+  "cumulative_accounting": {
+    "attempts": 904,
+    "current_max_exposure_micro_usd": 35981271,
+    "held_micro_usd": 22880000,
+    "historical_unknowns": 2,
+    "known_micro_usd": 13101271,
+    "known_responses": 902,
+    "liability_released": false
+  },
+  "external_manifest": "evidence/phase3a-c1-completion-v3/live-outcome-v1.manifest.json",
+  "external_manifest_sha256": "0a59e2e9b51ea7992eaa732a11fddfd3c2ec15a798b2d2b012a2251c0ee64129",
+  "kind": "phase3a-c1-completion-r2-independent-closed-failure-packet-acceptance-v1",
+  "launcher_sha256": "fad1fe4ebf94bd291a29d5a31d9f026514e2771721995eb5353e3b12d082963a",
+  "limitations": [
+    "Known provider/private-key pattern checks do not prove absence of arbitrary unknown secrets; no credential stores or provider streams were read.",
+    "Usage-based public-price upper bounds are not verified invoices; both historical unknown liabilities remain held.",
+    "Acceptance verifies a faithfully closed failure, not live readiness, adaptation efficacy, Phase3A completion, another round or a fresh pilot grant."
+  ],
+  "member_count": 2484,
+  "negative_semantic_review_file_sha256": "bf2c8a37653d3deefe15392fcd5e164ca3da6dbc82cd06198a621399af6fc9a4",
+  "new_live_accounting": {
+    "attempts": 19,
+    "known_results": 19,
+    "pending_intents": 0,
+    "reserved_micro_usd": 0,
+    "role_spent_micro_usd": {
+      "answer": 104588,
+      "editor": 731349,
+      "plan": 9870,
+      "rank": 24020
+    },
+    "roles": {
+      "answer": 10,
+      "editor": 7,
+      "plan": 1,
+      "rank": 1
+    },
+    "spent_micro_usd": 869827,
+    "transport_audits": 19,
+    "unknown_results": 0
+  },
+  "new_provider_calls_by_this_audit": 0,
+  "offline_gate_file_sha256": "508042415b29e69a18f53b79aac1bb407f27ee2ebe2947443ebd35684413be2a",
+  "original_folder_or_private_bindings_accessed": false,
+  "outcome_artifacts_verified": 33,
+  "outcome_file_sha256": "89ca3d733c3ee1db5a998fdf0bb021ef5ca6879b5df38335adea5a84e28e4cc6",
+  "parent_R1_references": {
+    "evidence/phase3a-c1-completion-v2/live-outcome-v1.manifest.json": {
+      "bytes": 432775,
+      "sha256": "2681b60e90ff1fe1638429687f8f125f090aab29a6d2d395b7660306c8c0b271"
+    },
+    "evidence/phase3a-c1-completion-v2/live-outcome-v1.zip": {
+      "bytes": 8801462,
+      "sha256": "baf5b8413e5f45305c6e1df306542e04a314039312de3ed66b138284b2798527"
+    },
+    "evidence/phase3a-c1-completion-v2/live-packet-acceptance.json": {
+      "bytes": 2879,
+      "sha256": "26774f595761211862830b0763af0383785bb1e80c8b348055e8694c5d5b9777"
+    }
+  },
+  "passed": true,
+  "policy_sha256": "2aeea7f68f3c170a2003a7628d315014bb323dd76c007ad40f758e242a1c7f95",
+  "pooled_mean_adaptive_minus_fixed": null,
+  "primary_scored": 0,
+  "private_or_stream_names_skipped_without_metadata": [
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/credential-binding.json",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/launch-owner/.writer.lock",
+    "runs/phase3a-compat-c1-v1/completion-v3/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/owner/.writer.lock",
+    "runs/phase3a-r2-v1/544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4/live/journal/.writer.lock"
+  ],
+  "publication_cutoff_utc": "2026-10-30T08:09:47.875686+00:00",
+  "readiness_passed": false,
+  "required_public_tree_file_count": 537,
+  "retained_offline_packet_reference": {
+    "included_by_reference_not_recopied": true,
+    "independent_acceptance_path": "evidence/phase3a-c1-completion-v3/packet-acceptance.json",
+    "independent_acceptance_sha256": "e111d9d673df47a434d9945c9ae245b9561ecbb1950d779f7327e0f2545f3062",
+    "manifest_path": "evidence/phase3a-c1-completion-v3/offline-kit-v1.manifest.json",
+    "manifest_sha256": "d620609be3c74696c413e672d2f899a7f56ae73abfb4396d4436dfb7baa1bb05",
+    "path": "evidence/phase3a-c1-completion-v3/offline-kit-v1.zip",
+    "sha256": "076749622f4f421fb447a1055bd51220fca536775537ad855a58e5377eb1c11d"
+  },
+  "reviewed_at_utc": "2026-10-30T08:20:51.901751+00:00",
+  "reviewer_disclosure": "Reviewer contributed the R2 integration/launcher and offline launch/packet checks. This is separate standard-library verification of the immutable root-built failure archive, with independently recomputed integer costs; the archived arithmetic record remains explicitly root-compiled, not signed by the two agents who reached capacity.",
+  "root_compiled_accounting_review_file_sha256": "d1c25f8e34f6a426b9ffe1ac8619538d5b0ea90621a3ef0068b8464612fd4f86",
+  "runtime_sha256": "d47b169086b07b17f62825d2265f0227aa8d07cc0e53fc98ef8272e7db88e87d",
+  "scientific_complete": false,
+  "selected_method": null,
+  "sha256": "a6d67fa030604862e6c1844bdd94c6df726b213cf861572540f728308d8b3512",
+  "source_or_publication_documents_changed": false,
+  "source_sha256": "b17f977af8c893989870216aa8e92e09a4538f7d63555cceae73095998b37e9d",
+  "study_sha256": "544d83fbfd8154466aefa04d4adc39ece204c8331d920adb08562bb1edb97da4",
+  "supplies_no_new_authority": true,
+  "tests_or_sdk_calls_by_this_audit": 0,
+  "verdict": "closed-failure-publication-accepted; readiness and scientific criteria unmet; no automatic repeat"
+}

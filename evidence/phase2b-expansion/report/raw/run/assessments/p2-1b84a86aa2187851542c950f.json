@@ -1,0 +1,288 @@
+{
+  "assessment_identity_sha256": "778bf07b7ee86664e4b3949fad86f0f2d31809235de2feede07dbc56374e2aa0",
+  "evaluator": {
+    "execution_departures": {
+      "concurrency": 1,
+      "empty_summary_means": "native nonfinite means serialized as null",
+      "fallback": null,
+      "group_effort_and_output_cap": "omitted exactly as native; provider defaults",
+      "lenient_partition_repair": false,
+      "sdk_retries": 0,
+      "stage_retries": 0,
+      "strict_input_types": true,
+      "transport": "injected accounted dispatcher; no native clients"
+    },
+    "id": "noveltybench-native-accounted-v2",
+    "native_calls": [
+      "src.partition.partition_calls",
+      "src.partition.partition_fold",
+      "src.partition.load_instances",
+      "src.judge.strict_schema",
+      "src.judge.anthropic_params",
+      "src.judge.parse_message",
+      "src.score.score_calls",
+      "src.score.score_fold",
+      "src.score.score_refused",
+      "src.evaluation_io.evaluation_key",
+      "src.evaluation_io.stamp",
+      "src.summarize.summarize"
+    ],
+    "patience": 0.8,
+    "revision": 1,
+    "sources": {
+      "__init__": {
+        "path": "/workspace/.upstream/novelty-bench/src/__init__.py",
+        "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      },
+      "common": {
+        "path": "/workspace/.upstream/novelty-bench/src/common.py",
+        "sha256": "ba60bf0f2a409c3774d75880f305325a28ed34320610667542a4596c41f424af"
+      },
+      "evaluation_io": {
+        "path": "/workspace/.upstream/novelty-bench/src/evaluation_io.py",
+        "sha256": "8a34e01308677469d984dd59e36412c2994baf2554fd3a5f026be9ef98a3a5c7"
+      },
+      "judge": {
+        "path": "/workspace/.upstream/novelty-bench/src/judge.py",
+        "sha256": "4decf04790b90a03368eb792dfe29045435914a73ab83a52185d9dd0d1613902"
+      },
+      "partition": {
+        "path": "/workspace/.upstream/novelty-bench/src/partition.py",
+        "sha256": "263970891ff3ee1cc8df369a33beefe5cb5de618b5dd146a5234536d97954aca"
+      },
+      "score": {
+        "path": "/workspace/.upstream/novelty-bench/src/score.py",
+        "sha256": "418985a40e9e159cfeffe9a43ab2c727010d7a7a29407f4e14cab3c81b77cbae"
+      },
+      "summarize": {
+        "path": "/workspace/.upstream/novelty-bench/src/summarize.py",
+        "sha256": "0a8bd1eb7f317584f579eaa827e580f9cefe4177a1abdc35b2cb06ef96eeea9e"
+      }
+    },
+    "upstream_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "version": "1.1"
+  },
+  "failure": null,
+  "fixture": false,
+  "kind": "phase2-assessment-live-v2",
+  "metrics": {
+    "distinct": 1,
+    "utility": 1.792464399362674
+  },
+  "native": {
+    "fields": {
+      "distinct": 1,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "partition_scores": [
+        8
+      ],
+      "utility": 1.792464399362674
+    },
+    "generation_row": {
+      "generations": [
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself.",
+        "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**.\n\nWhen you leave behind your usual responsibilities and surroundings, your mind gets room to breathe. You notice things more, feel more present, and often return with fresh perspective, renewed energy, and a clearer sense of what matters to you. Everything else, whether it's the food, the sights, or the time with people you care about, is made richer by that shift.",
+        "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. You come back with fresh energy, a clearer perspective, and often a renewed appreciation for both your everyday life and the new experiences you had along the way.",
+        "The one best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. That shift often brings renewed energy, fresh perspective, and a stronger appreciation for both the new experiences you have and the life you return to.",
+        "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**. Away from your usual responsibilities and surroundings, your mind gets room to breathe. You notice more, feel more present, and often return with fresh energy, perspective, and a clearer sense of what matters to you.",
+        "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, wonder, and see things fresh. That break often leaves you more relaxed, creative, and appreciative of both the new places you've seen and the life you return to.",
+        "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, gain perspective, and come back refreshed, often with new energy and ideas.",
+        "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge, so you come back with fresh energy, clearer perspective, and often a renewed appreciation for your everyday life.",
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself.",
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind space to rest, gain perspective, and come back feeling refreshed and more like yourself."
+      ],
+      "id": "nb-curated-4b5afc9736f082c708eb",
+      "model": "claude-sonnet-5-5",
+      "prompt": "What's the one best thing about going on a vacation?"
+    },
+    "partition_fields": {
+      "distinct": 1,
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "score_row": {
+      "distinct": 1,
+      "generation_scores": [
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "generations": [
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself.",
+        "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**.\n\nWhen you leave behind your usual responsibilities and surroundings, your mind gets room to breathe. You notice things more, feel more present, and often return with fresh perspective, renewed energy, and a clearer sense of what matters to you. Everything else, whether it's the food, the sights, or the time with people you care about, is made richer by that shift.",
+        "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. You come back with fresh energy, a clearer perspective, and often a renewed appreciation for both your everyday life and the new experiences you had along the way.",
+        "The one best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge. That shift often brings renewed energy, fresh perspective, and a stronger appreciation for both the new experiences you have and the life you return to.",
+        "The best thing about going on vacation is **the mental reset that comes from stepping out of your routine**. Away from your usual responsibilities and surroundings, your mind gets room to breathe. You notice more, feel more present, and often return with fresh energy, perspective, and a clearer sense of what matters to you.",
+        "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, wonder, and see things fresh. That break often leaves you more relaxed, creative, and appreciative of both the new places you've seen and the life you return to.",
+        "The best thing about going on a vacation is the **mental reset**: stepping away from your routine and responsibilities gives your mind room to rest, gain perspective, and come back refreshed, often with new energy and ideas.",
+        "The best thing about going on a vacation is the **mental reset**. Stepping away from your routine, responsibilities, and usual surroundings gives your mind room to rest and recharge, so you come back with fresh energy, clearer perspective, and often a renewed appreciation for your everyday life.",
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself.",
+        "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind space to rest, gain perspective, and come back feeling refreshed and more like yourself."
+      ],
+      "id": "nb-curated-4b5afc9736f082c708eb",
+      "model": "claude-sonnet-5-5",
+      "partition": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition_config": {
+        "alg": "llm",
+        "judge_model": "gpt-5.6-luna",
+        "seed": null,
+        "stage": "partition",
+        "version": "1.1"
+      },
+      "partition_key": "f4605e002eb9ab448d3e8cb79e16d497043660fba57cc9e7e9baf5a81bc03007",
+      "partition_scores": [
+        8
+      ],
+      "prompt": "What's the one best thing about going on a vacation?",
+      "score_config": {
+        "effort": "high",
+        "judge_model": "claude-opus-5",
+        "patience": 0.8,
+        "scorer": "llm",
+        "stage": "score",
+        "version": "1.1"
+      },
+      "score_key": "5c297dc3ad003b72f09c0600b55380b6e87f6fa0e8347b7ff023c27b1e6fe51a",
+      "utility": 1.792464399362674
+    },
+    "summary": {
+      "mean_distinct": 1.0,
+      "mean_utility": 1.792464399362674,
+      "version": "1.1"
+    }
+  },
+  "portfolio_sha256": "db2dcaa9a76f32bb81afe18701e00f8283c5699a2399f76f4e044b6db667d0c5",
+  "requests": [
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0678",
+      "fixture": false,
+      "intent_sha256": "8e430eab1263592f427303515ce72e6018e9490f130831cac93577e887bd7727",
+      "request_sha256": "b1ca98a329ec8b6e46d636c675c8335d1e23a3a6fd0a9439befa1836bfc5746a",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 1.7146733620029408,
+        "message_id": "chatcmpl-EdwLrORkonR9wxDh7658ClGp1AZvt",
+        "model": "gpt-5.6-luna",
+        "provider_usage": {
+          "completion_tokens": 56,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 19,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens": 833,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 889
+        },
+        "refusal": null,
+        "request_id": "req_d0320e0d9a8b4860a88b961835f8f6c0",
+        "stop_reason": "stop",
+        "text": "{\"groups\":[[0,1,2,3,4,5,6,7,8,9]]}",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 833,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 56,
+          "output_tokens_details": {
+            "reasoning_tokens": 19
+          },
+          "service_tier": "default"
+        }
+      },
+      "role": "group",
+      "slot_id": "p2-1b84a86aa2187851542c950f.group",
+      "spent_micro_usd": 258,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    },
+    {
+      "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+      "dispatch_id": "4a15a694bd1fe63745ec2dd0ecda8bcbda1e0eb4239ec3140c2bb5bc30616f4b:0679",
+      "fixture": false,
+      "intent_sha256": "eaed9d453fb77e466d5b149d6dc70328d2152ca2f416e0a03e790c9a06e0fff8",
+      "request_sha256": "e0fad8e6eda1c7fe1e5764b3c8302891c9f60181e76fbc95734b934d35369202",
+      "reserved_micro_usd": 0,
+      "response": {
+        "latency_seconds": 3.27368833500077,
+        "message_id": "msg_011CgUaN15atyhhUHdvzWUpH",
+        "model": "claude-opus-5",
+        "request_id": "req_011CgUaMzqSueygZFqs1rX6k",
+        "stop_reason": "end_turn",
+        "text": "{\"score\": 8}",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 492,
+          "output_tokens": 159,
+          "output_tokens_details": {
+            "thinking_tokens": 150
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      },
+      "role": "quality",
+      "slot_id": "p2-1b84a86aa2187851542c950f.quality.00",
+      "spent_micro_usd": 7079,
+      "status": "response",
+      "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+    }
+  ],
+  "schema_version": 2,
+  "status": "scored",
+  "task_id": "nb-curated-4b5afc9736f082c708eb"
+}

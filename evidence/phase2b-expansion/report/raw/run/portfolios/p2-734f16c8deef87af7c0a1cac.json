@@ -1,0 +1,103 @@
+{
+  "fixture": false,
+  "kind": "phase2-portfolio-live-v2",
+  "portfolio_id": "portfolio-cca809b64f35a1bfc97def6b55f35967a8cf56d2c2a6cc646ca8987aac78c221",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-734f16c8deef87af7c0a1cac.answer.00",
+      "p2-734f16c8deef87af7c0a1cac.answer.01",
+      "p2-734f16c8deef87af7c0a1cac.answer.02",
+      "p2-734f16c8deef87af7c0a1cac.answer.03",
+      "p2-734f16c8deef87af7c0a1cac.answer.04",
+      "p2-734f16c8deef87af7c0a1cac.answer.05",
+      "p2-734f16c8deef87af7c0a1cac.answer.06",
+      "p2-734f16c8deef87af7c0a1cac.answer.07",
+      "p2-734f16c8deef87af7c0a1cac.answer.08",
+      "p2-734f16c8deef87af7c0a1cac.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-befd646e297657d7573a6f9b",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.00",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is the **mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return with renewed energy and clarity."
+    },
+    {
+      "id": "response-fcd348c6138837eff6cac0ba",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.01",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed and more like yourself."
+    },
+    {
+      "id": "response-8df4d48966ae6005c53d1f03",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.02",
+      "status": "ok",
+      "text": "The best thing about a vacation is the **mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and return feeling refreshed. Everything else people love about vacations, such as new places, quality time with loved ones, and relaxation, flows from that break from the usual grind."
+    },
+    {
+      "id": "response-b863b729dfdb21be521ba14a",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.03",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping away from your routine and obligations gives your mind room to rest, see things differently, and return with fresh energy and perspective."
+    },
+    {
+      "id": "response-6cbb93c0ad8bcce8d6588f93",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.04",
+      "status": "ok",
+      "text": "The single best thing about a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, wander, and see things fresh. That break from obligations and autopilot habits often leaves you feeling more present, more creative, and more appreciative of both the new places you visit and the life you return to."
+    },
+    {
+      "id": "response-de2ada694158120b49541942",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.05",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain fresh perspective, and come back feeling renewed."
+    },
+    {
+      "id": "response-371ad47719521b5f60b1756c",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.06",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to breathe, so you return with fresh perspective, renewed energy, and a clearer sense of what matters to you."
+    },
+    {
+      "id": "response-ab0b5ffcb9e744abb9445774",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.07",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain fresh perspective, and come back feeling renewed."
+    },
+    {
+      "id": "response-55cd1448ac979d0fcfbdad88",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.08",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and feel present again. That break from obligations and habits often leaves you more refreshed, creative, and appreciative of both the new experiences and the life you return to."
+    },
+    {
+      "id": "response-b35202737689708bd23ff44c",
+      "request_id": "p2-734f16c8deef87af7c0a1cac.answer.09",
+      "status": "ok",
+      "text": "The best thing about going on a vacation is **the mental reset**: stepping out of your daily routine gives your mind room to rest, gain perspective, and feel present again. Whether you're relaxing on a beach or exploring a new city, that break from familiar demands often leaves you more refreshed, creative, and appreciative of both the trip and the life you return to."
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-4b5afc9736f082c708eb",
+    "prompt": "What's the one best thing about going on a vacation?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-36"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "24160d3db5d5133548589725604d5a8c75ff97bf9fc650f2b244b3e94c3e5b02",
+  "portfolio_id": "portfolio-b2a69278761292b6a7a6968632cdedf73e95f4b71d024a045e428be2a19f6993",
+  "portfolio_sha256": "669b0edb64b0acc9522f925d065a55e0993addcf896cd809d0ccf5dd8fedf977",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 2,
+    "request_ids": [
+      "p2-5265ec58afdb03aeee6333d0.answer.00",
+      "p2-5265ec58afdb03aeee6333d0.answer.01",
+      "p2-5265ec58afdb03aeee6333d0.answer.02",
+      "p2-5265ec58afdb03aeee6333d0.answer.03",
+      "p2-5265ec58afdb03aeee6333d0.answer.04",
+      "p2-5265ec58afdb03aeee6333d0.answer.05",
+      "p2-5265ec58afdb03aeee6333d0.answer.06",
+      "p2-5265ec58afdb03aeee6333d0.answer.07",
+      "p2-5265ec58afdb03aeee6333d0.answer.08",
+      "p2-5265ec58afdb03aeee6333d0.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-937922d8e4f8b9e4b21e44d0",
+      "index": 0,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.00",
+      "status": "ok",
+      "text_sha256": "3408bf9952c202033cb0fd953a2544f58b4464aa030334965aa5aa0737dda023"
+    },
+    {
+      "id": "response-247a6b5b4e0f5d8924c0e982",
+      "index": 1,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.01",
+      "status": "ok",
+      "text_sha256": "7e4fb874f691767c671d1a05b3e439a2bdf8480022378abdbb7dd9f6baa7e659"
+    },
+    {
+      "id": "response-11a31638ecbad3bc4048d9fa",
+      "index": 2,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.02",
+      "status": "ok",
+      "text_sha256": "6f2fcbee820906ddd3607711cef0465caa26245f677bf7f8d24b0efe397fd954"
+    },
+    {
+      "id": "response-e80848cf63d984e4424ae432",
+      "index": 3,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.03",
+      "status": "ok",
+      "text_sha256": "96887ec9ab901c4ac1d54ad99ac4941a5d21a6ee92a6a31e059c4e65be154b31"
+    },
+    {
+      "id": "response-cdfb840995241556b5ef1aef",
+      "index": 4,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.04",
+      "status": "ok",
+      "text_sha256": "18f455cd76f30f9fb844e83249410a5dec080255df2f60df87caeb8e8cecb40e"
+    },
+    {
+      "id": "response-5ecf4d1b4cc0c27d3379b898",
+      "index": 5,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.05",
+      "status": "ok",
+      "text_sha256": "dc29ecf326b0fbfeeefb539062948c65fc8dff9fd7beab7920f8cd4293bca2bd"
+    },
+    {
+      "id": "response-02a99f46af6a4bff589097e3",
+      "index": 6,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.06",
+      "status": "ok",
+      "text_sha256": "8cdd192441126e69bedea96c1abceaff7b4d6b125f427e38fa56e6d8176dce39"
+    },
+    {
+      "id": "response-7b1dd935515ccc27187f69ff",
+      "index": 7,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.07",
+      "status": "ok",
+      "text_sha256": "ddf5f9c737574634eb763e7a50fab6c803d9b170a9f219f45a783258ff92395a"
+    },
+    {
+      "id": "response-58f7b2a3f5e742ef6f4c1c52",
+      "index": 8,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.08",
+      "status": "ok",
+      "text_sha256": "cbf824e7c1bcf217445dc79c2437106e7230130786e4e99ccee448de88a0e3ba"
+    },
+    {
+      "id": "response-c1a9b6f0dddd0caee6001507",
+      "index": 9,
+      "request_id": "p2-5265ec58afdb03aeee6333d0.answer.09",
+      "status": "ok",
+      "text_sha256": "476c7ac3f2b71b0e378bcc544e041b2edb3809efaf26bca71460714aa58e9eb0"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-9c418f063bc433264d29",
+    "prompt": "Which 4-digit lock combination is the safest?",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-95"
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "calls": 0,
+  "definition_sha256": "65be2f2dbb592ec625823bebdd8786640f49b1f8bc07c38bb58e1caec68d77cd",
+  "frozen_before_product_edits_utc": "2026-11-01T07:34:14.813308+00:00",
+  "historical_eligibility_may_change": false,
+  "kind": "phase3a-rp2-frozen-acceptance-inventory-v1",
+  "readiness_cases": [
+    {
+      "case": "saved_rp1_strategy_and_revised_notes",
+      "expected": "prospective_full_readiness_pass_diagnostic_only",
+      "id": "R01"
+    },
+    {
+      "case": "unrelated_notes_revisions",
+      "expected": "strategy_proof_pass",
+      "id": "R02"
+    },
+    {
+      "case": "exact_partial_target_reads",
+      "expected": "pass",
+      "id": "R03"
+    },
+    {
+      "case": "missing_target_read",
+      "expected": "reject",
+      "id": "R04"
+    },
+    {
+      "case": "truncated_target_read",
+      "expected": "reject",
+      "id": "R05"
+    },
+    {
+      "case": "wrong_path",
+      "expected": "reject",
+      "id": "R06"
+    },
+    {
+      "case": "failed_write",
+      "expected": "reject",
+      "id": "R07"
+    },
+    {
+      "case": "stale_prewrite_read",
+      "expected": "reject",
+      "id": "R08"
+    },
+    {
+      "case": "harvested_strategy_mismatch",
+      "expected": "reject",
+      "id": "R09"
+    },
+    {
+      "case": "final_notes_mismatch",
+      "expected": "reject",
+      "id": "R10"
+    },
+    {
+      "case": "same_target_epoch_conflict",
+      "expected": "reject",
+      "id": "R11"
+    },
+    {
+      "case": "forged_tool_result_owner",
+      "expected": "reject",
+      "id": "R12A"
+    },
+    {
+      "case": "duplicate_tool_result",
+      "expected": "reject",
+      "id": "R12B"
+    },
+    {
+      "case": "missing_tool_result",
+      "expected": "reject",
+      "id": "R12C"
+    },
+    {
+      "case": "multiple_legitimate_target_revisions",
+      "expected": "pass_exact_last_mutation_epoch",
+      "id": "R13"
+    },
+    {
+      "case": "normal_keep_base",
+      "expected": "pass",
+      "id": "R14"
+    },
+    {
+      "case": "malformed_unrelated_tool_history",
+      "expected": "reject_global_history_validation",
+      "id": "R15"
+    },
+    {
+      "case": "unchanged_original_validator",
+      "expected": "same_fixture_read_history_conflicts_rejection",
+      "id": "R16"
+    },
+    {
+      "case": "remaining_saved_readiness_predicates",
+      "expected": "all_run_and_pass_prospectively_no_old_approval",
+      "id": "R17"
+    },
+    {
+      "case": "saved_source_journal_branch_reports",
+      "expected": "all_bytes_unchanged",
+      "id": "R18"
+    }
+  ],
+  "saved_input_sha256": {
+    "evidence/phase3a-rc1-pilot-v1/live-outcome-v1.json": "e07b6c8dfaf1e0cd92389265af87875a452e9f6b4c638448eb00c70db4de024a",
+    "evidence/phase3a-rc1-pilot-v1/live-packet-acceptance.json": "716b32f2d7bd8edcb0f68383d690ce88590eef9fe1bb24f38ef42cc2d8692f31",
+    "runs/phase3a-rc1-pilot-v1/e2fd01fab453fdbe4a30297f282301738a42484f238d6a52afe1105f93f62cca/live/journal/events.jsonl": "17b752b84289651f747ab1c16d5e52aa95e4eca28e443bac01dc93a7387a52a0",
+    "runs/phase3a-rc1-pilot-v1/native/e2fd01fab453fdbe4a30297f282301738a42484f238d6a52afe1105f93f62cca/live/branches/p3a-01-adaptive.json": "747880556ea5d35ad0d3621ddf0bb4d4a454813debdc330028c108d4b911017a",
+    "runs/phase3a-rc1-pilot-v1/reviewer/live-replay-v1/result.json": "9c7ec72f760487356c5a345d875a44146491d9bc2dafa2f34b4aa5c60ab6ab4b",
+    "runs/phase3a-rc1-pilot-v1/reviewer/native-audit-live-v1.json": "8bac061c8e941de111f11e545e5df762adfcd71a451c6b39d19df4c2f982615b"
+  },
+  "startup_cases": [
+    {
+      "case": "fresh_bound_live_supervisor_ack",
+      "expected": "zero_calls_before_ack_then_only_declared_flow",
+      "id": "S01"
+    },
+    {
+      "case": "missing_ack",
+      "expected": "timeout_zero_intents",
+      "id": "S02"
+    },
+    {
+      "case": "wrong_nonce",
+      "expected": "reject_zero_intents",
+      "id": "S03"
+    },
+    {
+      "case": "wrong_controller_owner",
+      "expected": "reject_zero_intents",
+      "id": "S04"
+    },
+    {
+      "case": "wrong_release_binding",
+      "expected": "reject_each_study_source_runtime_policy_launcher_grant_inspection_change",
+      "id": "S05"
+    },
+    {
+      "case": "stale_request",
+      "expected": "reject_zero_intents",
+      "id": "S06"
+    },
+    {
+      "case": "late_ack",
+      "expected": "reject_zero_intents",
+      "id": "S07"
+    },
+    {
+      "case": "replayed_ack",
+      "expected": "reject_zero_intents",
+      "id": "S08"
+    },
+    {
+      "case": "wrong_fixture",
+      "expected": "reject_zero_intents",
+      "id": "S09"
+    },
+    {
+      "case": "supervisor_absent",
+      "expected": "publisher_reject_zero_intents",
+      "id": "S10A"
+    },
+    {
+      "case": "supervisor_exits_after_request_before_ack",
+      "expected": "publisher_live_handle_recheck_reject_zero_intents",
+      "id": "S10B"
+    },
+    {
+      "case": "startup_timeout",
+      "expected": "keys_cleared_owned_cleanup",
+      "id": "S11"
+    },
+    {
+      "case": "deadline_reset",
+      "expected": "reject_nonrenewable",
+      "id": "S12"
+    },
+    {
+      "case": "actual_fake_key_agent_supervised_rehearsal",
+      "expected": "attachment_reviews_both_exports_serviced_without_parent_reply",
+      "id": "S13"
+    },
+    {
+      "case": "pre_ack_sdk_construction_or_intent",
+      "expected": "blocked",
+      "id": "S14"
+    },
+    {
+      "case": "owned_cancellation",
+      "expected": "exact_owner_settled_no_resend",
+      "id": "S15"
+    }
+  ]
+}

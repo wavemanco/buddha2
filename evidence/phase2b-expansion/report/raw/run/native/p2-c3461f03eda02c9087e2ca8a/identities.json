@@ -1,0 +1,115 @@
+{
+  "fixture": false,
+  "kind": "phase2-native-identities-v2",
+  "native_row_sha256": "f951e9b3cd53d59d3ef5060f0e46d13e1a33143bb3457355c6f44fa1815be2f0",
+  "portfolio_id": "portfolio-52bb50becb54c2ef6b1c8f433a53aff79c3cbef418785af3cff27f64e7e1e2c6",
+  "portfolio_sha256": "474d14b1a0c0a7c4263b44097550aa565bfbd2c139443508b8c93cebe265f5fd",
+  "provenance": {
+    "method": "A",
+    "model": {
+      "requested": "claude-sonnet-5-5",
+      "returned": "claude-sonnet-5-5"
+    },
+    "parent_sha256": null,
+    "procedure_sha256": "ceae467e347f4bbbea7f2996e813d7af065f4dbc622c5468962f3046082b045b",
+    "repeat": 1,
+    "request_ids": [
+      "p2-c3461f03eda02c9087e2ca8a.answer.00",
+      "p2-c3461f03eda02c9087e2ca8a.answer.01",
+      "p2-c3461f03eda02c9087e2ca8a.answer.02",
+      "p2-c3461f03eda02c9087e2ca8a.answer.03",
+      "p2-c3461f03eda02c9087e2ca8a.answer.04",
+      "p2-c3461f03eda02c9087e2ca8a.answer.05",
+      "p2-c3461f03eda02c9087e2ca8a.answer.06",
+      "p2-c3461f03eda02c9087e2ca8a.answer.07",
+      "p2-c3461f03eda02c9087e2ca8a.answer.08",
+      "p2-c3461f03eda02c9087e2ca8a.answer.09"
+    ],
+    "settings_sha256": "7d2451b622045964ce1d7934bda82bf121e0d81a8faa6cfb954d63847ebb891c",
+    "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+  },
+  "responses": [
+    {
+      "id": "response-297bc8db019dba1ebe9667c8",
+      "index": 0,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.00",
+      "status": "ok",
+      "text_sha256": "f6c29fbf9a503b5a70c3509e00bf75fede094efcfbfc8daf4a9b245dd83a2559"
+    },
+    {
+      "id": "response-f9440d23effd3e54c1ca4d26",
+      "index": 1,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.01",
+      "status": "ok",
+      "text_sha256": "5f6584f3d4503db347b36143773aabe39d354e4cf14def13d069379aa0ecec16"
+    },
+    {
+      "id": "response-f099c8cd4bb36e19dfcb1f2c",
+      "index": 2,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.02",
+      "status": "ok",
+      "text_sha256": "cc5cc61d7c651d2604367e4d1b4e9bca1efae7e7564fa54f5a4ab4b1ce059f44"
+    },
+    {
+      "id": "response-f68f2cefb2b1749be4acfebe",
+      "index": 3,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.03",
+      "status": "ok",
+      "text_sha256": "ff210d536e7bdff58c1451cf1112bb05228b4714c9d82d8006c7a2469e798890"
+    },
+    {
+      "id": "response-5a021287861249f678054e6e",
+      "index": 4,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.04",
+      "status": "ok",
+      "text_sha256": "77fefefda419c7d6eca25ebe486b9bd2b49dcc5253cc8a05a4d579b3d25febd0"
+    },
+    {
+      "id": "response-49dcd8c124067e0e39018cb4",
+      "index": 5,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.05",
+      "status": "ok",
+      "text_sha256": "a35c8bf05649d2962124c2ab51763aefeb60e4f9c764f284aa51167f4c1019cf"
+    },
+    {
+      "id": "response-8d41975e22bbd0a6f81f706d",
+      "index": 6,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.06",
+      "status": "ok",
+      "text_sha256": "5e46f818e0f1c84bed962d8e82a5c722979e11b112b41690edb07ddc21a705cf"
+    },
+    {
+      "id": "response-e9827801d727abbf23f8133d",
+      "index": 7,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.07",
+      "status": "ok",
+      "text_sha256": "a2e31ccc9cb31a5c2f211622718826d4aa466fdb536fa9d039eeaf628c0b727b"
+    },
+    {
+      "id": "response-6e39ca6e112255e22ab50d66",
+      "index": 8,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.08",
+      "status": "ok",
+      "text_sha256": "038b6adb75e81345a6529d0038ddb6785463eca3670d7dbe70ef4ef54a522552"
+    },
+    {
+      "id": "response-5c727d33b4a56fc2578a9793",
+      "index": 9,
+      "request_id": "p2-c3461f03eda02c9087e2ca8a.answer.09",
+      "status": "ok",
+      "text_sha256": "b1615d93bd03a47a324c2d93e219f6aa884207083a344617567207f333033015"
+    }
+  ],
+  "schema_version": 2,
+  "task": {
+    "domain": "nb-curated-development",
+    "id": "nb-curated-b1b0aa2062fdabf30542",
+    "prompt": "Name the dog character in my story about a loyal dog.",
+    "source_context": {
+      "dataset": "NoveltyBench/curated",
+      "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+      "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+      "source_task_id": "curated-21"
+    }
+  }
+}

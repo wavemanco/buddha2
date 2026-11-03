@@ -1,0 +1,1202 @@
+[
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-63d4c2bc2b3bf82d29f4fe78",
+            "response-c0bc5bcace5ea53061022747",
+            "response-f7db0c5fb74b60abeaf4f3bc",
+            "response-b1597f830ca657fa73009979",
+            "response-57d245b8b2d5cbde6d874096",
+            "response-350a7a1097801e3f7d199156",
+            "response-14b2d93e7556f38f75615128",
+            "response-72eb2aa140cc89889160186b",
+            "response-2b698fedabd19004e324e2a9",
+            "response-4376fa61e67febceea70f432"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-63d4c2bc2b3bf82d29f4fe78",
+        "response-c0bc5bcace5ea53061022747",
+        "response-f7db0c5fb74b60abeaf4f3bc",
+        "response-b1597f830ca657fa73009979",
+        "response-57d245b8b2d5cbde6d874096",
+        "response-350a7a1097801e3f7d199156",
+        "response-14b2d93e7556f38f75615128",
+        "response-72eb2aa140cc89889160186b",
+        "response-2b698fedabd19004e324e2a9",
+        "response-4376fa61e67febceea70f432"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "5811b4c85b3264a6091e4f0299bc198e2fb932f3c1d76fc22dc86c0a208efd16",
+    "order_id": "p2-66a2d4cb8703e6fa273999dd",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-85bd10cb49b2f7c8b5f10946.json",
+    "parent_sha256": "ae9d83bc6430baf0a083518f1f1f098a1d41e3199ba9526119c58a0e42e7e28e",
+    "rank_result_sha256": "da854b7f0af176172cf0e5f656de316fbecd8900e1f7a477fbdc9c4c5475b377",
+    "rank_slot": "p2-66a2d4cb8703e6fa273999dd.rank",
+    "raw_text_sha256": "0001fd6c5f544aa7c1d0ab50aded2fe66862ce355edd9e37fba82d6cad4dedd3",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-9c418f063bc433264d29"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-5be17cf6606545b6546c56c0",
+            "response-e5c4db3d3014bdfa51aae7da",
+            "response-4a8dbc7b8c4e10b7f495b368",
+            "response-dbb19fd631f4806053051719",
+            "response-66e8495a651775322a88b69b",
+            "response-e9655f020cca0f38ec254d6d",
+            "response-e4106c39f9639420075c6923",
+            "response-6e34201ffc4e1cb1625eec54",
+            "response-754c491e82a80877b34fecf0",
+            "response-92594bcaf92bb8f11a47e334"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-5be17cf6606545b6546c56c0",
+        "response-e5c4db3d3014bdfa51aae7da",
+        "response-4a8dbc7b8c4e10b7f495b368",
+        "response-dbb19fd631f4806053051719",
+        "response-66e8495a651775322a88b69b",
+        "response-e9655f020cca0f38ec254d6d",
+        "response-e4106c39f9639420075c6923",
+        "response-6e34201ffc4e1cb1625eec54",
+        "response-754c491e82a80877b34fecf0",
+        "response-92594bcaf92bb8f11a47e334"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "1363bf9fc2c4f373ffeeab87b603651e998287a2cd3253074d2bac5f7e30be3f",
+    "order_id": "p2-d6b235d21f1367439fdf534c",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-ef086a74ab504310902f581e.json",
+    "parent_sha256": "25238757eb73556e211e2033f2ee216c7cd3625997fd4b3ba48c9cbf1d94874a",
+    "rank_result_sha256": "a391223ae623a7f7f1154a18ed47ac8f1bd555c290c20302e4ca62ec0bf40e85",
+    "rank_slot": "p2-d6b235d21f1367439fdf534c.rank",
+    "raw_text_sha256": "f4a37a5e5b8402efb5ca2f4acffb0634dd1746eced6be7f38528264641aa945b",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-9c418f063bc433264d29"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 1575,
+          "order": [
+            "response-b6d7a8f107315f9534a4d4a1",
+            "response-352cff5f8f8d164d4b105dda",
+            "response-f1964fc492d9e6b601dc8e55",
+            "response-8869f4e4120ab9bdfee32a86",
+            "response-5b4a1645ec544f5f2b0958da",
+            "response-3a534ea02b004b4623759145",
+            "response-fb26f59109b553980e1effa8",
+            "response-87217190f317515a14b754d9",
+            "response-e05be56f983c5830592dcf10",
+            "response-d920d67a741a13efada289e4"
+          ],
+          "start": 1204
+        }
+      ],
+      "order": [
+        "response-b6d7a8f107315f9534a4d4a1",
+        "response-352cff5f8f8d164d4b105dda",
+        "response-f1964fc492d9e6b601dc8e55",
+        "response-8869f4e4120ab9bdfee32a86",
+        "response-5b4a1645ec544f5f2b0958da",
+        "response-3a534ea02b004b4623759145",
+        "response-fb26f59109b553980e1effa8",
+        "response-87217190f317515a14b754d9",
+        "response-e05be56f983c5830592dcf10",
+        "response-d920d67a741a13efada289e4"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "1efd0ac175c8c6fa5263b74647aa35882568c922a3292ba37eb8ff3624db3239",
+    "order_id": "p2-cce2c41315048eab5ffb1d45",
+    "original_strict_status": "invalid_rank",
+    "parent_path": "raw/run/portfolios/p2-f667b5ddf7e4c7ca4b58244c.json",
+    "parent_sha256": "345415c1a2f0ed666dc730aa40072d977840d474150af3b4b284c0e1b5bec589",
+    "rank_result_sha256": "721bbe9b5c8b38c08f31c457cebc62f064973d3cfc28b377eb3428bec9ac792d",
+    "rank_slot": "p2-cce2c41315048eab5ffb1d45.rank",
+    "raw_text_sha256": "41722c9f3201d2b7534a5945124ffc6b71724985782cf7913839cdc56c1eaf2e",
+    "repeat": 1,
+    "reuse_original_C": false,
+    "task_id": "nb-curated-0ac59a48456661d0d8d5"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-479e74228eb29604f06dde02",
+            "response-cee2a9d0e16ac556e60bbce9",
+            "response-234ff95bc81e8f3ee6747e31",
+            "response-2ff82608d51a4cb2c0af39a3",
+            "response-be7962f19bfd9a718049ea43",
+            "response-8f12b505c91c6960da45e759",
+            "response-ff182c6d1413099c599c8dc0",
+            "response-8641ecf5a313d7acf8b5ac02",
+            "response-f8d842cd7f9ed82992d34bca",
+            "response-d450068230ba016dafec6dcd"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-479e74228eb29604f06dde02",
+        "response-cee2a9d0e16ac556e60bbce9",
+        "response-234ff95bc81e8f3ee6747e31",
+        "response-2ff82608d51a4cb2c0af39a3",
+        "response-be7962f19bfd9a718049ea43",
+        "response-8f12b505c91c6960da45e759",
+        "response-ff182c6d1413099c599c8dc0",
+        "response-8641ecf5a313d7acf8b5ac02",
+        "response-f8d842cd7f9ed82992d34bca",
+        "response-d450068230ba016dafec6dcd"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "50e46ccbb4e21a21488b960be50b8ab846993d6852b0031fc09fc4c4e99da4b7",
+    "order_id": "p2-e0ec5eba54d161710d99d53f",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-d8e673f3e914d38a27b7183d.json",
+    "parent_sha256": "a002db2c185f9d2fb31fb470e83b87688e88263d83aec3b59a8360771b18e0a2",
+    "rank_result_sha256": "844d8941b81d20fb737081a048e3d9164ea51ff6fefeb7e061489d0922194505",
+    "rank_slot": "p2-e0ec5eba54d161710d99d53f.rank",
+    "raw_text_sha256": "2a8982cd2871327ce8e61edcdda017e745dfc5d02fafea4a2a7d4aa85e378517",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-0ac59a48456661d0d8d5"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-f74b530b444b1604e494cca2",
+            "response-8ff6ea3da81bf01eb980bc1c",
+            "response-45f3af7ad37608ce9bedabec",
+            "response-f8101511e54ceaa9892a4337",
+            "response-f2341bb4e16bddcb550ce65b",
+            "response-aca934dd5cd7686798603581",
+            "response-025b6924d4934b83a074f081",
+            "response-04c3e7de5ea922aa3dfcbb0a",
+            "response-57ee2df793081b2144850807",
+            "response-d4cde5194be670349d3d3732"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-f74b530b444b1604e494cca2",
+        "response-8ff6ea3da81bf01eb980bc1c",
+        "response-45f3af7ad37608ce9bedabec",
+        "response-f8101511e54ceaa9892a4337",
+        "response-f2341bb4e16bddcb550ce65b",
+        "response-aca934dd5cd7686798603581",
+        "response-025b6924d4934b83a074f081",
+        "response-04c3e7de5ea922aa3dfcbb0a",
+        "response-57ee2df793081b2144850807",
+        "response-d4cde5194be670349d3d3732"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "6b49bdb20801b3a5d30bd9e19fbaed1fb1570db2bd0a6808402599569613b1d5",
+    "order_id": "p2-421a0084b30648d87fb21663",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-4d7fadf13219ec60dfd33e26.json",
+    "parent_sha256": "555c5ec4862bf9f61a9922a310de3b6c244b2dd41f07e5362daca2324a3b4673",
+    "rank_result_sha256": "49f41cd060867283d4910bd394055b9412e669a60843581bd65983df9047798e",
+    "rank_slot": "p2-421a0084b30648d87fb21663.rank",
+    "raw_text_sha256": "671f56771e6a801b92ecd73bf5428c1d12f069bc85e96d751f6f0bf7a9525e4c",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-7a77e85421d12bca8653"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-0cee3e55534024d60a1256f6",
+            "response-2792f3e6b8346cd61d4d6780",
+            "response-4d233b55e34b0873809da60e",
+            "response-3cc1857bcc908ae903e9b73f",
+            "response-f0a7735242b07b030200e69d",
+            "response-e711cb35cb7234c396d47407",
+            "response-2f01bec807c1e21f48e5b5f4",
+            "response-e701a0caeec620448c13e317",
+            "response-b2ec02ed2cf4f72f8a9fcbe7",
+            "response-e14c3b8a7ba3531d46aa9d23"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-0cee3e55534024d60a1256f6",
+        "response-2792f3e6b8346cd61d4d6780",
+        "response-4d233b55e34b0873809da60e",
+        "response-3cc1857bcc908ae903e9b73f",
+        "response-f0a7735242b07b030200e69d",
+        "response-e711cb35cb7234c396d47407",
+        "response-2f01bec807c1e21f48e5b5f4",
+        "response-e701a0caeec620448c13e317",
+        "response-b2ec02ed2cf4f72f8a9fcbe7",
+        "response-e14c3b8a7ba3531d46aa9d23"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "09a5fd92f9fedf584de3b7ea9ec8b985e6cf9cdd6fbc584ac16b1651341329b7",
+    "order_id": "p2-2050adf6a3ab0f16b721f722",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-859539046126626ffb2ace28.json",
+    "parent_sha256": "903ee30ab6af664ea4682d534b6dfc13acad435fde41a5715967edaac9056b02",
+    "rank_result_sha256": "12c23974aa06011d129d3dddf1a90acc9cc5d90ece5c190edfb21256b6413abe",
+    "rank_slot": "p2-2050adf6a3ab0f16b721f722.rank",
+    "raw_text_sha256": "7e440aa033b12ba5c5b05492e1d75a456d2ab26bb8c244655b0ce97d1184b849",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-7a77e85421d12bca8653"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-8ac979cb61a157a0d606ede1",
+            "response-7de982da1f2d0a27a7dcb814",
+            "response-48703dfd277cd60735f6819d",
+            "response-1b350142842654078cbc7e78",
+            "response-90d2578939a9d75419ce3220",
+            "response-39341607e5c3422329db25eb",
+            "response-638cc2ab0e9a56d5caff2b22",
+            "response-5e7cf43c450ea29b708437b9",
+            "response-ec6cae37332431f633dac25c",
+            "response-01140eab422f9fa767f3bf31"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-8ac979cb61a157a0d606ede1",
+        "response-7de982da1f2d0a27a7dcb814",
+        "response-48703dfd277cd60735f6819d",
+        "response-1b350142842654078cbc7e78",
+        "response-90d2578939a9d75419ce3220",
+        "response-39341607e5c3422329db25eb",
+        "response-638cc2ab0e9a56d5caff2b22",
+        "response-5e7cf43c450ea29b708437b9",
+        "response-ec6cae37332431f633dac25c",
+        "response-01140eab422f9fa767f3bf31"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "0e0ee5e3adb865fe8a2ec18dd2cbc5f546cc8837558a61c3a5b289e25f1e6b48",
+    "order_id": "p2-55aa768bfce64b40af8373e0",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-f69949a49e138fb3e089073f.json",
+    "parent_sha256": "fee8160840040552d226c1bb6467216af163d0d5b02fd4d16d8e06277f793ef9",
+    "rank_result_sha256": "dc91f1447bdc8ef141134a3ab9a45d4deb148647aab5c3ad9d43776fa38c27ec",
+    "rank_slot": "p2-55aa768bfce64b40af8373e0.rank",
+    "raw_text_sha256": "81a2164e1a296eca33dacc906f328e9846c6cf94766b874e166ab95b352136b1",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-b1b0aa2062fdabf30542"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-f6fe3dd7dcf5c1ef1795f9e2",
+            "response-6109140635c1767470c07494",
+            "response-ee46282a5379c3532f50d8ce",
+            "response-141685b04865375991309b01",
+            "response-07383e7c3c685d684446d639",
+            "response-42c3069a61adc521209f76e4",
+            "response-7117c78a78cac4fcb9f26d8d",
+            "response-15d13085a3637089bd8ac38b",
+            "response-2c224915ba1c23b55f448762",
+            "response-d0f191f1bd0a85d9f25c2a31"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-f6fe3dd7dcf5c1ef1795f9e2",
+        "response-6109140635c1767470c07494",
+        "response-ee46282a5379c3532f50d8ce",
+        "response-141685b04865375991309b01",
+        "response-07383e7c3c685d684446d639",
+        "response-42c3069a61adc521209f76e4",
+        "response-7117c78a78cac4fcb9f26d8d",
+        "response-15d13085a3637089bd8ac38b",
+        "response-2c224915ba1c23b55f448762",
+        "response-d0f191f1bd0a85d9f25c2a31"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "148ac905c03f6a5118541e2ec9ce1f5ce10bba4516fa5653989c71d01042ff5f",
+    "order_id": "p2-5aee953e2eb0c2f0ec72ff41",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-b8135e80727f14cfba9c3039.json",
+    "parent_sha256": "b28bc548db2f259dc59e3daaf049ec01b206a8cfc207780134110b44cb3fd0be",
+    "rank_result_sha256": "a1feb64be1c5fcc6f6933abeb3533dfb95db7a2949abfda6cddf6d29097304f4",
+    "rank_slot": "p2-5aee953e2eb0c2f0ec72ff41.rank",
+    "raw_text_sha256": "7256b5ae1fca9d7076af27425ba41eabfc27c78849d0a057a50aedd6c3ca7dd6",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-b1b0aa2062fdabf30542"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-ceae6f7f3259f841bc9ca7e4",
+            "response-3c8cba64d805f96f24d57251",
+            "response-4ccb9b8815bf0e563e5d0b66",
+            "response-d6b708c2cf00ef4b6d2d14fe",
+            "response-b27d544f004f0c3f5b6fb85e",
+            "response-17bae9fbc5b300c68491b24b",
+            "response-4903bcef714df20708dc14d8",
+            "response-7393ac93ea00239ff84ecdff",
+            "response-734c27c8194139650f25a028",
+            "response-a8541f368ade2b7c1d3f52a1"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-ceae6f7f3259f841bc9ca7e4",
+        "response-3c8cba64d805f96f24d57251",
+        "response-4ccb9b8815bf0e563e5d0b66",
+        "response-d6b708c2cf00ef4b6d2d14fe",
+        "response-b27d544f004f0c3f5b6fb85e",
+        "response-17bae9fbc5b300c68491b24b",
+        "response-4903bcef714df20708dc14d8",
+        "response-7393ac93ea00239ff84ecdff",
+        "response-734c27c8194139650f25a028",
+        "response-a8541f368ade2b7c1d3f52a1"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "25b2b2bf2b95cf2fa4be3e2fab9e7976085e97225b7a908294e5c5574fbdbf1f",
+    "order_id": "p2-c684d56e1497be4fe50bfdfc",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-cc241901bfeb7426ad87b00c.json",
+    "parent_sha256": "9d5444233fc6548dc0a678b3d89d59401b3672ca947e382498cd3a7a1d49dc14",
+    "rank_result_sha256": "552231ed240c4d5ad1864aaebdb911c307c4563b81dc5ebcb4949270974f9909",
+    "rank_slot": "p2-c684d56e1497be4fe50bfdfc.rank",
+    "raw_text_sha256": "f161e6f21e2353a8d6bddf383ac935c659893a0f052c7abd1a70f02697559c77",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-510dc2800c595827238e"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 381,
+          "order": [
+            "response-f69149ce173e25ff06455fe5",
+            "response-75154c42a41e950d98accad9",
+            "response-8a2cfa2135308c4c8e949092",
+            "response-51cece9967140818745138ef",
+            "response-22360765770539192bf8a2d9",
+            "response-fd6afc61b3761d44779e13e6",
+            "response-15696341483df41ce11aea3a",
+            "response-4555008464af66fd64d71ce8",
+            "response-b8d18dacf62df1b679662172",
+            "response-bec3e5a3a9a80e50604876f3"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-f69149ce173e25ff06455fe5",
+        "response-75154c42a41e950d98accad9",
+        "response-8a2cfa2135308c4c8e949092",
+        "response-51cece9967140818745138ef",
+        "response-22360765770539192bf8a2d9",
+        "response-fd6afc61b3761d44779e13e6",
+        "response-15696341483df41ce11aea3a",
+        "response-4555008464af66fd64d71ce8",
+        "response-b8d18dacf62df1b679662172",
+        "response-bec3e5a3a9a80e50604876f3"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "68fed0b1972aac5c0f5e55160052e79104199e22b28a21101dcb5dd7366aa5f3",
+    "order_id": "p2-71e1816d0f7c45de734c48fa",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-f81a8b09bb3849cfa6980e07.json",
+    "parent_sha256": "fbf3300953ebc60944db6bbf804edfeb50dd2a6331c06538f819f59dfc59ac4a",
+    "rank_result_sha256": "c02812c18b295c8f4ac3f99b409f49aa975a64614c92d27420be7f633701cf7d",
+    "rank_slot": "p2-71e1816d0f7c45de734c48fa.rank",
+    "raw_text_sha256": "929687ed7ba3cf50f7b255be57be567020dc48527c07b96cd1eaeb7235005f5b",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-510dc2800c595827238e"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-cd119fe3569c71585051e7c2",
+            "response-388084faa64f323d2f1cbdb3",
+            "response-9619d55a629844005e822839",
+            "response-2bcf8a3d801e4cc505f000aa",
+            "response-fd3afa27f8926752132a2c6a",
+            "response-87b74743d2fb3aa254cb8443",
+            "response-fc5b45db8f1db8141d232a46",
+            "response-9862bf0a401e60092fe25b7f",
+            "response-58253f3daf52daf1f5224d1e",
+            "response-6f0975f7180e38d03cc171f2"
+          ],
+          "start": 0
+        },
+        {
+          "end": 790,
+          "order": [
+            "response-cd119fe3569c71585051e7c2",
+            "response-388084faa64f323d2f1cbdb3",
+            "response-9619d55a629844005e822839",
+            "response-2bcf8a3d801e4cc505f000aa",
+            "response-fd3afa27f8926752132a2c6a",
+            "response-87b74743d2fb3aa254cb8443",
+            "response-fc5b45db8f1db8141d232a46",
+            "response-9862bf0a401e60092fe25b7f",
+            "response-58253f3daf52daf1f5224d1e",
+            "response-6f0975f7180e38d03cc171f2"
+          ],
+          "start": 419
+        }
+      ],
+      "order": [
+        "response-cd119fe3569c71585051e7c2",
+        "response-388084faa64f323d2f1cbdb3",
+        "response-9619d55a629844005e822839",
+        "response-2bcf8a3d801e4cc505f000aa",
+        "response-fd3afa27f8926752132a2c6a",
+        "response-87b74743d2fb3aa254cb8443",
+        "response-fc5b45db8f1db8141d232a46",
+        "response-9862bf0a401e60092fe25b7f",
+        "response-58253f3daf52daf1f5224d1e",
+        "response-6f0975f7180e38d03cc171f2"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "cafad1c8e1a559ecc908ea9f81cb35df8102c7f70f859299e0a501e21d9bf5f5",
+    "order_id": "p2-e8740bae4e77d0e443e32104",
+    "original_strict_status": "invalid_rank",
+    "parent_path": "raw/run/portfolios/p2-e3d1278efdba90cc87e87a19.json",
+    "parent_sha256": "475b164ea6006eddaa127294b29f04514f6c7279f128dd7509ccf161f92b78ec",
+    "rank_result_sha256": "166266dd15e29f070fa3bd9a68fd90d4cf37f70b590d5788b7ee311363b3297a",
+    "rank_slot": "p2-e8740bae4e77d0e443e32104.rank",
+    "raw_text_sha256": "ecfbf7d867f8373e6b839087004512b271f7c24be2d679e3ea80bf8099b2de1a",
+    "repeat": 1,
+    "reuse_original_C": false,
+    "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-99cc6c216924a40254f98e2d",
+            "response-8a2249b4ff1a58df2b2e46f0",
+            "response-7e308a4172221a0effba12bd",
+            "response-93f7e69269309ca1c7dbc748",
+            "response-b6d526f58089261e596e7e29",
+            "response-47c1ab47e2dbe2dfc0bb8daa",
+            "response-c64febd22095536274c3c1d4",
+            "response-91f5b0c74d0f351a1d6f7ce1",
+            "response-ec68478068dd8e58fb0262a0",
+            "response-79d7bbb444b31822dd63df85"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-99cc6c216924a40254f98e2d",
+        "response-8a2249b4ff1a58df2b2e46f0",
+        "response-7e308a4172221a0effba12bd",
+        "response-93f7e69269309ca1c7dbc748",
+        "response-b6d526f58089261e596e7e29",
+        "response-47c1ab47e2dbe2dfc0bb8daa",
+        "response-c64febd22095536274c3c1d4",
+        "response-91f5b0c74d0f351a1d6f7ce1",
+        "response-ec68478068dd8e58fb0262a0",
+        "response-79d7bbb444b31822dd63df85"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "877a14dc11ddc9967ceea147f536fcede8a1085bab01587c4f70a302ed9040b7",
+    "order_id": "p2-1a0dd3cbdf32fb05e189a5d9",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-327b26c47d6cf4ad043d9c70.json",
+    "parent_sha256": "a9d9dd4e90b16d439dfc6b2c3354a73f5f0602f965a2469c18b76a5c07545322",
+    "rank_result_sha256": "cd4217617fa65d7aa08d4904faeca0474819da63aa4cbe82703abfde8ef54dac",
+    "rank_slot": "p2-1a0dd3cbdf32fb05e189a5d9.rank",
+    "raw_text_sha256": "0978362a532a0f10291d753ba8962053b438bec8ea75d4de5d81298a4f1a9db2",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-cb902fe0e5a5c3434ed3c45a",
+            "response-e2ae7d561892d329e0e4934e",
+            "response-6053d288004aa3f14d127e39",
+            "response-2fe2d5a28af761eaad24642d",
+            "response-e6f90b04e9f1797166479b2e",
+            "response-757c147f699b9b2da71610dc",
+            "response-26ad01b4809e3b8af687fa04",
+            "response-022d281a9c94fb5c6d09b384",
+            "response-58831f412495e50241da6706",
+            "response-ff51385e5b0fc839c87c1381"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-cb902fe0e5a5c3434ed3c45a",
+        "response-e2ae7d561892d329e0e4934e",
+        "response-6053d288004aa3f14d127e39",
+        "response-2fe2d5a28af761eaad24642d",
+        "response-e6f90b04e9f1797166479b2e",
+        "response-757c147f699b9b2da71610dc",
+        "response-26ad01b4809e3b8af687fa04",
+        "response-022d281a9c94fb5c6d09b384",
+        "response-58831f412495e50241da6706",
+        "response-ff51385e5b0fc839c87c1381"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "7c2e1ecda78bcf04229e8782a375394609774899b2d67c23fb3cc6bc4d384d76",
+    "order_id": "p2-e4e5110b87ac3861c46a3fb2",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-64802cbe92f5fc880170a0fc.json",
+    "parent_sha256": "738535d447e3866c2d1aa12bdafacd68905210c87b91f39b2495807d120cf44b",
+    "rank_result_sha256": "dc07321a5eaf79a565f8272f797258b5b643cf59609341b519010b4a9ddb479b",
+    "rank_slot": "p2-e4e5110b87ac3861c46a3fb2.rank",
+    "raw_text_sha256": "6819ca230299614db6f90cef6ef70869e28213e943fce0b68e24096f0aba48c6",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-055c45e37c6c14cca664"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-f704e1aab867faec500aafc5",
+            "response-7032a5aab93101d04831baf0",
+            "response-4a83e20bf95c309d73f979dc",
+            "response-00f79407cbefb23dff2a6a9c",
+            "response-09b596523485e0fe05e340b6",
+            "response-c94d03608aa7261c969ef2e9",
+            "response-8590abf4672ddd2ff236428b",
+            "response-983ce10e8090b74b79b51dce",
+            "response-91c0f53a176a089025e58421",
+            "response-3e783f42941733218f953020"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-f704e1aab867faec500aafc5",
+        "response-7032a5aab93101d04831baf0",
+        "response-4a83e20bf95c309d73f979dc",
+        "response-00f79407cbefb23dff2a6a9c",
+        "response-09b596523485e0fe05e340b6",
+        "response-c94d03608aa7261c969ef2e9",
+        "response-8590abf4672ddd2ff236428b",
+        "response-983ce10e8090b74b79b51dce",
+        "response-91c0f53a176a089025e58421",
+        "response-3e783f42941733218f953020"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "ac16cb69bb64271e428dcf257dae8de31f7ca22158b453e31e335f3ea0b53116",
+    "order_id": "p2-f8d9f2dd85c409c3cfa2491b",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-3a024c1febb26cec05ace2f6.json",
+    "parent_sha256": "81f1aee8f6ad9a722db5fc954ba05ed7bc0014778ce13e2eec2967bf1fa3c11e",
+    "rank_result_sha256": "bd09b64dc80025f87c4c09dbd39765aac30f99ec0d6d71cd7f494ad92d26a28b",
+    "rank_slot": "p2-f8d9f2dd85c409c3cfa2491b.rank",
+    "raw_text_sha256": "7712de0219b6c731f9a5fedcaa85210cc6f0be9f498196cf7bc0d11c6435ba77",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-055c45e37c6c14cca664"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-5e54eb2c38be60c793574441",
+            "response-296397ecf9e0fee2de336430",
+            "response-8602c062fb5c4b24c11a933e",
+            "response-df5527ff87140faf8b787bde",
+            "response-0099769c08afa3bd54ecb20f",
+            "response-7c47934f9f17cd82ef7d797c",
+            "response-df9a28efac461c88a260b260",
+            "response-da8debb07a2e38e792650588",
+            "response-a6cb75c553f0bbf456b8d725",
+            "response-0b6d036f4eeae23ec8bcc549"
+          ],
+          "start": 0
+        },
+        {
+          "end": 818,
+          "order": [
+            "response-5e54eb2c38be60c793574441",
+            "response-296397ecf9e0fee2de336430",
+            "response-8602c062fb5c4b24c11a933e",
+            "response-df5527ff87140faf8b787bde",
+            "response-0099769c08afa3bd54ecb20f",
+            "response-7c47934f9f17cd82ef7d797c",
+            "response-df9a28efac461c88a260b260",
+            "response-da8debb07a2e38e792650588",
+            "response-a6cb75c553f0bbf456b8d725",
+            "response-0b6d036f4eeae23ec8bcc549"
+          ],
+          "start": 447
+        }
+      ],
+      "order": [
+        "response-5e54eb2c38be60c793574441",
+        "response-296397ecf9e0fee2de336430",
+        "response-8602c062fb5c4b24c11a933e",
+        "response-df5527ff87140faf8b787bde",
+        "response-0099769c08afa3bd54ecb20f",
+        "response-7c47934f9f17cd82ef7d797c",
+        "response-df9a28efac461c88a260b260",
+        "response-da8debb07a2e38e792650588",
+        "response-a6cb75c553f0bbf456b8d725",
+        "response-0b6d036f4eeae23ec8bcc549"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "483d5edc9e6d366360083a33e61fbb0f025a390ff6e30c98a4af17729e031566",
+    "order_id": "p2-718a1781795dd29b5ebe57e4",
+    "original_strict_status": "invalid_rank",
+    "parent_path": "raw/run/portfolios/p2-5f85b6fc1d9f0b3c4f00d95e.json",
+    "parent_sha256": "5f0d63edff4f2add2000c2b65e0c6bacc067d716145e7e1358aa9ec7f50aeee3",
+    "rank_result_sha256": "240a87f8e96c5ce8b806d4fba1aabe8c023c0ac2ad9e2378942623d3f5c0f1a7",
+    "rank_slot": "p2-718a1781795dd29b5ebe57e4.rank",
+    "raw_text_sha256": "6defa2400785ddcc0aca370b34dab16f15ca480477dcfb59bf0cff859b50b5bf",
+    "repeat": 1,
+    "reuse_original_C": false,
+    "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-44f4226b03a63e93a7430b64",
+            "response-c9b6f0f6a74e79615ed9c95c",
+            "response-f637602b08d13677e48b57e5",
+            "response-2c9f8bca66d7865930aa908f",
+            "response-c67d0eb51cd5dd2c2efd67f7",
+            "response-de6a53242de4ecb4e4a09b9b",
+            "response-c5376d4817ae56f5a44bd032",
+            "response-58a4e624944eea8e4413fa3e",
+            "response-f913d377abd750cf39edfeb0",
+            "response-b75c14d567d8d90b2efa577b"
+          ],
+          "start": 0
+        },
+        {
+          "end": 778,
+          "order": [
+            "response-44f4226b03a63e93a7430b64",
+            "response-c9b6f0f6a74e79615ed9c95c",
+            "response-f637602b08d13677e48b57e5",
+            "response-2c9f8bca66d7865930aa908f",
+            "response-c67d0eb51cd5dd2c2efd67f7",
+            "response-de6a53242de4ecb4e4a09b9b",
+            "response-c5376d4817ae56f5a44bd032",
+            "response-58a4e624944eea8e4413fa3e",
+            "response-f913d377abd750cf39edfeb0",
+            "response-b75c14d567d8d90b2efa577b"
+          ],
+          "start": 407
+        }
+      ],
+      "order": [
+        "response-44f4226b03a63e93a7430b64",
+        "response-c9b6f0f6a74e79615ed9c95c",
+        "response-f637602b08d13677e48b57e5",
+        "response-2c9f8bca66d7865930aa908f",
+        "response-c67d0eb51cd5dd2c2efd67f7",
+        "response-de6a53242de4ecb4e4a09b9b",
+        "response-c5376d4817ae56f5a44bd032",
+        "response-58a4e624944eea8e4413fa3e",
+        "response-f913d377abd750cf39edfeb0",
+        "response-b75c14d567d8d90b2efa577b"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "c25c97d00a65be2b7df7ef42ddb8974116fa1d735c07ddd142028cf12b0df404",
+    "order_id": "p2-ee9c05c3f5ed94c379d9249d",
+    "original_strict_status": "invalid_rank",
+    "parent_path": "raw/run/portfolios/p2-15a79ee7cc52faa2cb7b9649.json",
+    "parent_sha256": "c78fe9a1b26e91b52a804034f2198060a45948482ea4c37b0da7aea52523008d",
+    "rank_result_sha256": "f0d2fd834bbfc76885c15d898032d104d1f33a0cf811c801ac7224e125526fc1",
+    "rank_slot": "p2-ee9c05c3f5ed94c379d9249d.rank",
+    "raw_text_sha256": "f6f5e4a95d3e9b873b9865300414c2782327365f4d8a516387a0363571153d98",
+    "repeat": 2,
+    "reuse_original_C": false,
+    "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-0c380bfec8e924d505190c21",
+            "response-7adf47fa67ae4f7537c1952f",
+            "response-b31c2efeade7e28b1ac5c258",
+            "response-ddf1fe3cfa8868e48b81c0a5",
+            "response-70ec8054a7c8a76e2f6aecfd",
+            "response-f762663721aa99d35edb906c",
+            "response-3a90924582dcc92512826b55",
+            "response-1d9ea8287ee2fc68f107340b",
+            "response-0340f4385d5efba6643bc865",
+            "response-a541010623c06c195b4d724b"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-0c380bfec8e924d505190c21",
+        "response-7adf47fa67ae4f7537c1952f",
+        "response-b31c2efeade7e28b1ac5c258",
+        "response-ddf1fe3cfa8868e48b81c0a5",
+        "response-70ec8054a7c8a76e2f6aecfd",
+        "response-f762663721aa99d35edb906c",
+        "response-3a90924582dcc92512826b55",
+        "response-1d9ea8287ee2fc68f107340b",
+        "response-0340f4385d5efba6643bc865",
+        "response-a541010623c06c195b4d724b"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "33a25761216e25d5cc9e7649e16d2fdc83f3bc08e2a43aace5d0a1d1a7d129d2",
+    "order_id": "p2-53ad46ccd0b80441a8a013b0",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-1e9306e352b2e87e116969cb.json",
+    "parent_sha256": "ce162c8c01bd31f509b89dfd6d240d454379e717c4a96ceef0cc659ddb31d7b7",
+    "rank_result_sha256": "e93149fdfcf1917b06ba8cff7d13d27306812c99165a794a2351b1cb9219f484",
+    "rank_slot": "p2-53ad46ccd0b80441a8a013b0.rank",
+    "raw_text_sha256": "f4acb102d91e4b38354f3e5016a424a1d37fa43db9a1d79dbddeb6ef27dedebb",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-4b5afc9736f082c708eb"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-efc83a7592bdea16c9732d09",
+            "response-1f021dcc6ea74acb4455d2c2",
+            "response-c44c499e244fcb2ea1e06a43",
+            "response-bbfb1851e02c681f03f425e3",
+            "response-b0ed6313b2edb897b795a6ef",
+            "response-74445e31446114c4982c7bbb",
+            "response-5a5af1ac3c869804b55e1587",
+            "response-208de05ef7a9592817d25385",
+            "response-e49b341cb1d542d82e9429ce",
+            "response-090ef7b657fc73d934161e2b"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-efc83a7592bdea16c9732d09",
+        "response-1f021dcc6ea74acb4455d2c2",
+        "response-c44c499e244fcb2ea1e06a43",
+        "response-bbfb1851e02c681f03f425e3",
+        "response-b0ed6313b2edb897b795a6ef",
+        "response-74445e31446114c4982c7bbb",
+        "response-5a5af1ac3c869804b55e1587",
+        "response-208de05ef7a9592817d25385",
+        "response-e49b341cb1d542d82e9429ce",
+        "response-090ef7b657fc73d934161e2b"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "a8b3e12500acd280017a067089691ed2d03f0963b29f31388857b30f15f0485d",
+    "order_id": "p2-074bfbbbcc085c32599ae7fe",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-724dbfbb0d0be9e5e39dcbc3.json",
+    "parent_sha256": "a59be289341537bd18493ee88beba28a085cead7ef118d12ac7b9da3f80bf484",
+    "rank_result_sha256": "564bb9c38205c967c5e3e678bcabaa90cfdcf3387ae1f37b45336430a11b8125",
+    "rank_slot": "p2-074bfbbbcc085c32599ae7fe.rank",
+    "raw_text_sha256": "9c998c3a5126e0d2d88681743eeedc16f1ffedd9a83d41e55ebf3faa672f3e90",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-4b5afc9736f082c708eb"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-020fff52ef10e2f098a7f858",
+            "response-c1e74210dd54181a8f405b62",
+            "response-48b927d24f8429ab87d56fee",
+            "response-ac0e671c60f049097be99433",
+            "response-a18dce7c736b1d90d018eb16",
+            "response-240f7886aa6a50e621145f96",
+            "response-feb9dcc955623aecd59ee984",
+            "response-b8f8f58c6ec7f71c585d179d",
+            "response-adb69475b77d7ea6dd650a84",
+            "response-4dba7f66bfd969552e757abc"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-020fff52ef10e2f098a7f858",
+        "response-c1e74210dd54181a8f405b62",
+        "response-48b927d24f8429ab87d56fee",
+        "response-ac0e671c60f049097be99433",
+        "response-a18dce7c736b1d90d018eb16",
+        "response-240f7886aa6a50e621145f96",
+        "response-feb9dcc955623aecd59ee984",
+        "response-b8f8f58c6ec7f71c585d179d",
+        "response-adb69475b77d7ea6dd650a84",
+        "response-4dba7f66bfd969552e757abc"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "2541a254104846f2d1d841f06efbce66f0c2dc0947ad13f5ad7469bf3415c0e7",
+    "order_id": "p2-d60f3abfc8b373b80d0c37fe",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-e81fbabfa699d8ee3c9ec860.json",
+    "parent_sha256": "31ded33416017e437382c9eec1fb9fd9dd2072877ba24c081269bdbd2947198c",
+    "rank_result_sha256": "6e079dddf7d6ef87881af1776243473b8149b9abe5e24e54ee8ca4ef74a59900",
+    "rank_slot": "p2-d60f3abfc8b373b80d0c37fe.rank",
+    "raw_text_sha256": "c4472ca8b3521e55b3782925cab054221dc778c313b573d5fcc081108887c77d",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-0589e47205e5256cc5b3"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-51ba4a7876a8f8bd935a2092",
+            "response-63a32962e74b1a78c6d8760e",
+            "response-becc0dbb590b53743c7e1a41",
+            "response-8d7d5c1a3686090ebb836aa7",
+            "response-adebf5e578e9d86b91413ee9",
+            "response-a4491c717ab61320bba28c32",
+            "response-e616a335874c32f6fc2b0b8f",
+            "response-08c8c4fb76361159e5c558fa",
+            "response-0b6fc4086bd7723597aea6fb",
+            "response-bb43b23d9180d95d17604000"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-51ba4a7876a8f8bd935a2092",
+        "response-63a32962e74b1a78c6d8760e",
+        "response-becc0dbb590b53743c7e1a41",
+        "response-8d7d5c1a3686090ebb836aa7",
+        "response-adebf5e578e9d86b91413ee9",
+        "response-a4491c717ab61320bba28c32",
+        "response-e616a335874c32f6fc2b0b8f",
+        "response-08c8c4fb76361159e5c558fa",
+        "response-0b6fc4086bd7723597aea6fb",
+        "response-bb43b23d9180d95d17604000"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "fc1621d82feb199abb9eca44c683eb1e7906ad43460453f4664b8bb2e05fe91d",
+    "order_id": "p2-5cafd16f908efdebb047a14f",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-1ddea95ff6718061f217cd36.json",
+    "parent_sha256": "ec76d001af4871acdd606f3b82c258ec5125b91b5803caf245c49210647793a3",
+    "rank_result_sha256": "3eab454d2e4eec587359877943822498870cab245319afba08a7e4d2f758dbed",
+    "rank_slot": "p2-5cafd16f908efdebb047a14f.rank",
+    "raw_text_sha256": "9390e11663d186756eb07c3cfcabacdfeab1d43717ecd497a2635cbdc7c0ec35",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-0589e47205e5256cc5b3"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-06069eb2cf076f070922ac72",
+            "response-795eae17a670ee45d2f38e12",
+            "response-0418c9e578c5ececc6382295",
+            "response-ee1f5d92469e3f5a54e08a70",
+            "response-6a71d208a88042ce40476f70",
+            "response-81b2d2a9807d3ff0732bd099",
+            "response-71ac2a0f799bd19347eacfda",
+            "response-128987df4c684fe25a966a0a",
+            "response-e85d84919d9f3c4113b59a11",
+            "response-b1e587419f1b19835b8d3ecc"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-06069eb2cf076f070922ac72",
+        "response-795eae17a670ee45d2f38e12",
+        "response-0418c9e578c5ececc6382295",
+        "response-ee1f5d92469e3f5a54e08a70",
+        "response-6a71d208a88042ce40476f70",
+        "response-81b2d2a9807d3ff0732bd099",
+        "response-71ac2a0f799bd19347eacfda",
+        "response-128987df4c684fe25a966a0a",
+        "response-e85d84919d9f3c4113b59a11",
+        "response-b1e587419f1b19835b8d3ecc"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "0705bd031e608b6fdf8864da7a42af9a73eb4b2ce8212326c52f7754fcfd5202",
+    "order_id": "p2-f2499c2a8327dcbb58c664f4",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-bb4114325fac6e0f738f14ca.json",
+    "parent_sha256": "b685650f8f4b81cd754cf907da17729ed72f135fb1fe8ef15a38925e61705688",
+    "rank_result_sha256": "a559c45a07f422bc012012ccf2d65f890de11eb03ef53684501fedc89729fb3e",
+    "rank_slot": "p2-f2499c2a8327dcbb58c664f4.rank",
+    "raw_text_sha256": "a26ad90c53f4306b4977ed08b9354b7f859d49983c5d617b483ab54d96798542",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-6584de30a11a0e08ca32"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-392d51f5bd32e784634ac3aa",
+            "response-33f1ab814193c11065824365",
+            "response-87c8c7249d875d89717b402e",
+            "response-42a2ab0bdc6b32c83fc8c2d1",
+            "response-c6a37857f40cdcb58e2cf5a8",
+            "response-e36ae471d1b5326cfb4cbaf6",
+            "response-3da2a65d46911fc79eb6b0c8",
+            "response-3e811ab35aef6abb1f57b82e",
+            "response-7d07f81e464b6d54dfc58f49",
+            "response-a6ed23cb7bbc54e01bf5af92"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-392d51f5bd32e784634ac3aa",
+        "response-33f1ab814193c11065824365",
+        "response-87c8c7249d875d89717b402e",
+        "response-42a2ab0bdc6b32c83fc8c2d1",
+        "response-c6a37857f40cdcb58e2cf5a8",
+        "response-e36ae471d1b5326cfb4cbaf6",
+        "response-3da2a65d46911fc79eb6b0c8",
+        "response-3e811ab35aef6abb1f57b82e",
+        "response-7d07f81e464b6d54dfc58f49",
+        "response-a6ed23cb7bbc54e01bf5af92"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "983f2778c7d5c94bdbc94a1affa97f40673a6412d11e4a6b6d3aaee40b949a69",
+    "order_id": "p2-7d5681cbdd3ceeba32e845ce",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-3e69502c36a8f49c102f64ed.json",
+    "parent_sha256": "ed22404ad53e082816c725b272318708e640ff76d741c761287f4989a8d3741e",
+    "rank_result_sha256": "b3dc41d11a3f46ddc078c3351b3d8402cfebf0d1dc0a3922cf1e3fd05a32b1f4",
+    "rank_slot": "p2-7d5681cbdd3ceeba32e845ce.rank",
+    "raw_text_sha256": "de3d5206a3fbea217b3f20a95303c9c58653f4b9c15b2ddbb177bc5e0e23c2c0",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-6584de30a11a0e08ca32"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-428c14b95f9879e420dac9a1",
+            "response-5d6b9056ad1f3e59e4fde57d",
+            "response-fa975d7b53e4509eff34808e",
+            "response-ede5d9ff612807ae4b49936e",
+            "response-c628ebccf8909d978405bb0a",
+            "response-8f4437f05a44c5220e725276",
+            "response-8c0fe7634bdca2aa97671f3b",
+            "response-15fe04d5ead1e0ad19b5dd7c",
+            "response-7945baae21fe64923e0eb181",
+            "response-1e93ec320542f601898ee950"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-428c14b95f9879e420dac9a1",
+        "response-5d6b9056ad1f3e59e4fde57d",
+        "response-fa975d7b53e4509eff34808e",
+        "response-ede5d9ff612807ae4b49936e",
+        "response-c628ebccf8909d978405bb0a",
+        "response-8f4437f05a44c5220e725276",
+        "response-8c0fe7634bdca2aa97671f3b",
+        "response-15fe04d5ead1e0ad19b5dd7c",
+        "response-7945baae21fe64923e0eb181",
+        "response-1e93ec320542f601898ee950"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "47335f4826247eee3d0ea219754e13d6a480f3be08e3ca7ba304c7e869ca3dae",
+    "order_id": "p2-0ea9dc7bdab95db843a72535",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-f6e327cfd1f9d8d5d56ba0da.json",
+    "parent_sha256": "e47fc2b9c4a663f3881894f50f8fd3f525902f029cfe786107d01e4f6da0004c",
+    "rank_result_sha256": "8f9dbb1916fd9c8ffef5652627edf54d2c24b9d892364c195160af038d215e96",
+    "rank_slot": "p2-0ea9dc7bdab95db843a72535.rank",
+    "raw_text_sha256": "fe2fa526776c6a7ca9aac24ed2c0a12f7b3578632cdf1e58cf4b326603731493",
+    "repeat": 1,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+  },
+  {
+    "normalization": {
+      "candidates": [
+        {
+          "end": 371,
+          "order": [
+            "response-d584e0dac65965d67560e4b0",
+            "response-69b5830c63f08ee6cdbbdce9",
+            "response-5739327c7ef6184ec86cea10",
+            "response-96228e81f94257d8bc9e02f0",
+            "response-92f91bb39b554502376099e7",
+            "response-c05cdd332b40ba1e818d9f66",
+            "response-246e8dbab86e15f0661a69a1",
+            "response-bbdb83e8e2feb2b3e0138a4b",
+            "response-3e9c71b876ca9dd06d68906b",
+            "response-d25cbf4bb33847c8c4ae0f48"
+          ],
+          "start": 0
+        }
+      ],
+      "order": [
+        "response-d584e0dac65965d67560e4b0",
+        "response-69b5830c63f08ee6cdbbdce9",
+        "response-5739327c7ef6184ec86cea10",
+        "response-96228e81f94257d8bc9e02f0",
+        "response-92f91bb39b554502376099e7",
+        "response-c05cdd332b40ba1e818d9f66",
+        "response-246e8dbab86e15f0661a69a1",
+        "response-bbdb83e8e2feb2b3e0138a4b",
+        "response-3e9c71b876ca9dd06d68906b",
+        "response-d25cbf4bb33847c8c4ae0f48"
+      ],
+      "policy_id": "rank-format-N1",
+      "reason": null,
+      "status": "accepted"
+    },
+    "normalized_order_sha256": "cdd508d2a07998ba2926e8a95042270b62f80a885cf56b645cf9b19171305cc0",
+    "order_id": "p2-225925e518d890279cc53c43",
+    "original_strict_status": "ok",
+    "parent_path": "raw/run/portfolios/p2-f18f62263bd3b79f79e17ead.json",
+    "parent_sha256": "0750b7017462f7b1dac4707a1ea2849bc827a4abb2c199a408edbb783beb8516",
+    "rank_result_sha256": "329e2c05f19ed82d6184fa9cfebd41fe82f2c8c222a065f2f2fad08029cde2f0",
+    "rank_slot": "p2-225925e518d890279cc53c43.rank",
+    "raw_text_sha256": "c65a5bab2930b146e6ee5c9ae33b1b8585d0a6a4306f56ad52da925d687eb5e4",
+    "repeat": 2,
+    "reuse_original_C": true,
+    "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+  }
+]

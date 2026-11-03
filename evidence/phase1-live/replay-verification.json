@@ -1,0 +1,50 @@
+{
+  "assessment_bytes_unchanged": true,
+  "audit_prediction_commit": "8e5765d",
+  "audit_report_sha256": "86ca850697f0b1d2cedac811feea81143481532fc5ccf0d7ad875d8678c3f52a",
+  "execution_tree_unchanged": true,
+  "new_provider_calls": 0,
+  "offline_replays": [
+    "calibration",
+    "audit",
+    "inspect"
+  ],
+  "provider_calls_total": 48,
+  "recorded_at_utc": "2026-10-25T08:37:27.068493+00:00",
+  "reserved_micro_usd": 0,
+  "retries": 0,
+  "rubric_freeze_commit": "56f09d9",
+  "run_id": "7328a4c95367863bdb5b1cebafc0b9dc997b37431f274966352c48266265bf1b",
+  "runtime_records": [
+    "audit-analysis-runtime.json",
+    "calibration-replay-runtime.json",
+    "audit-replay-runtime.json",
+    "final-inspect-runtime.json"
+  ],
+  "schema_version": 1,
+  "spent_micro_usd": 112696,
+  "stages": {
+    "audit": {
+      "input_tokens": 12093,
+      "max_reason_words_for_ok": 61,
+      "output_tokens": 2805,
+      "presentations": 24,
+      "spent_micro_usd": 52236,
+      "statuses": {
+        "ok": 24
+      }
+    },
+    "calibration": {
+      "input_tokens": 10435,
+      "max_reason_words_for_ok": 64,
+      "output_tokens": 3959,
+      "presentations": 24,
+      "spent_micro_usd": 60460,
+      "statuses": {
+        "malformed": 13,
+        "ok": 11
+      }
+    }
+  },
+  "token_count_requests_total": 48
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "public-pricing-factual-observation-v1",
+  "model": "gpt-5.6-luna",
+  "no_api_or_account_probe": true,
+  "observed_at_utc": "2026-10-30T03:20:51.415077+00:00",
+  "raw_html_bytes": 583504,
+  "raw_html_retained": false,
+  "raw_html_sha256": "4d54c8c1bc96c3284bad1b7c126cb01bf52cf77d4715d533dc72d4ec1c1f7f3b",
+  "rows_input_cached_write_output": [
+    [
+      "0.2",
+      "0.02",
+      "0.25",
+      "1.2"
+    ],
+    [
+      "0.1",
+      "0.01",
+      "0.125",
+      "0.6"
+    ],
+    [
+      "0.1",
+      "0.01",
+      "0.125",
+      "0.6"
+    ],
+    [
+      "0.4",
+      "0.04",
+      "0.5",
+      "2.4"
+    ]
+  ],
+  "source": "https://developers.openai.com/api/docs/pricing"
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "phase3b-s2-unaccepted-candidate-v1",
+  "candidate": "A0",
+  "created_at_utc": "2026-11-03T05:44:28.4393035+00:00",
+  "reviewer": "/root/s2_preacceptance",
+  "status": "unaccepted_change_required_preserve_all_evidence",
+  "accepted": false,
+  "provider_keys_or_live_ready": false,
+  "source_sha256": "ba914c1c00376646cd3eaf29f4dd560d36edcfff731e419e5f631d010e6743c9",
+  "study_sha256": "7298302496c0ea5e4c96f5f29ac9e98b67a68a73f1819b1afed4bfec4c1300c3",
+  "source_file_count": 632,
+  "observed_completed_evidence": {
+    "windows": "Two actual canonical Windows bootstrap cases passed separately; no S13 operational acceptance is inferred.",
+    "static_and_unit": "Static checks and97unit/native methods passed with2Linux Windows-only skips subsequently covered by actual Windows cases.",
+    "matrix": "Actual full4prompt native2round mocked matrix passed with1364mockSDKcalls,all4normal paths,12assessmenttargets and8deliveredaliases,allsettled/no newholds; fixture only,not scientific effectiveness or provider-origin authenticity.",
+    "semantics": "Passed native/carry/selector and realistic capacity evidence under A0 source."
+  },
+  "incomplete_failed_evidence": {
+    "S13_and_auxiliary_path": "No supervised preparation or fresh S13/native-fixture auxiliary lifecycle started; no observed forbidden auxiliary stream-copy access occurred.",
+    "physical_packet": "Final physical archive,cold extracted replay and independent release acceptance not complete.",
+    "saved_replay_and_preservation": "Canonical replay/preservation groups absent/incomplete at A0 timeout; never infer pass.",
+    "outer_orchestration": "Original docker-start-attach helper timed out at7200seconds; exact TimeoutExpired and owned stop/remove exit0 retained."
+  },
+  "new_blocking_source_defect": {
+    "definition": "PHASE3B_DEFINITION.md:34",
+    "paths": [
+      "followups/phase3b_seq2_v1/verify.py:266",
+      "followups/phase3b_seq2_v1/workflow.py:325",
+      "followups/phase3b_seq2_v1/workflow.py:392",
+      "followups/phase3b_seq2_v1/support.py:183"
+    ],
+    "disposition": "Uniform originals-only source-snapshot correction required across MAIN and every auxiliary route before new acceptance. Do not run the known-invalid auxiliary path.",
+    "trace": "verify.prepare_supervised->workflow.prepare copies every source entry including14classified streams into auxiliary release/source; make_grant->load_study hashes those auxiliary copies. Canonical original classification does not authorize auxiliary paths."
+  },
+  "old_saved_continuation": {
+    "reason": "A0cannotqualifyrelease; no reason to execute saved tail probe for acceptance.",
+    "status": "cancelled_obsolete_unexecuted",
+    "v1": "Rejected prospectively because global fixed_best12 trap blocks legitimate saved reconstruction; no execution.",
+    "preserved_external_root": "runs/phase3b-seq2-v1/verification-v1/external-reviews/saved-continuation-v1",
+    "observed_record_sha256": {
+      "saved_probe.py": "96b9bc58d8ee0e5563bed0e1f24c2e4fc31b63ae63ea20807a0a3732a9e82b74",
+      "independent-probe-preexecution-review-v1.json": "ebebcc95c35e39f6192e326344a13dc137fd07006460a0f935fa76be6c82562e",
+      "independent-continuation-scope-v1.json": "37d4618355bbd81a9ab6284ece371ad177ea7fb8030c7705a9e44ddd76a5bd8f",
+      "baseline.json": "6a6404b6ba37ee9930e1ba1b26bc4a12bf1e7619eb05934f665034d30c51c3db",
+      "timeout-observation.json": "82edee1236923f22bb6dd5852a5a93f2e78b61b05e7a4ad80aee533a01338445",
+      "timeout-tool-record.json": "a5d8c5c305ca56d19d8dc3859c3dfd1a9f523983d829be2a739e027d3647a278",
+      "original-owner-absence.json": "c804985db09af0b99ee60477a9f2f32943b2137cbf4d08e5a52b35290198c023",
+      "baseline_prepare.py": "19a2757b1c953cefb6a44271d1140fbc6f6cdc311ca6a4ce0ae2ade81d90d2cc",
+      "baseline-preparation-initial-observation.json": "2ba8b16c4253451f3f188f98ac6e91fd61c3ef738cd582ac3b491877dec6b9fc"
+    },
+    "v2": "Any existing corrected draft and its hash/history remain preserved and unexecuted; no acceptance substitute.",
+    "no_probe_execution_observed": true
+  },
+  "paid_and_privacy": {
+    "real_provider_calls": 0,
+    "real_keys_accessed": false,
+    "original_folder_or_common_parent_accessed": false,
+    "observed_forbidden_auxiliary_access": false,
+    "no_new_scope_grant": true
+  },
+  "next_correction": {
+    "acceptance": "All12gate groups,unchanged model/resource/deadline criteria,actual Windows,freshS13,original600s exports,independent source review and physical cold packet remain required.",
+    "prospective_cases": "evidence/phase3b-seq2-v1/source-snapshot-correction-cases-v1.json",
+    "prospective_cases_file_sha256": "ec2d26a9b3965fe5b1c73b17eb272a677926c8d067979c35d1c7afcc0d2f4808",
+    "identity": "Truthful new effective source/study/grant/output identity and entirely new actual full gate required; no rebind or retag of A0results.",
+    "minimum": "Reuse canonical14 classifier,declare uniform originals-only snapshot policy,retain all logical hashes,copy/hash ordinary public source only,remove retained-stream allowances,selectively extend outer offline waits to10800 only."
+  },
+  "writes_by_reviewer": "Only this new disposition and prospective cases; no product or SOURCE_INPUTS edit."
+}

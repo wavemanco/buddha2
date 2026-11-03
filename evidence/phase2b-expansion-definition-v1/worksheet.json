@@ -1,0 +1,656 @@
+{
+  "cost_basis": {
+    "formula_micro_usd": "23 * (176382 + heads * sum(ceil(input_i*5.5 + output*27.5) for input_i in (977,931,931)))",
+    "nonquality_micro_usd_per_block": 176382,
+    "observed_first_role_cost_micro_usd": {
+      "answer": 141734,
+      "group": 4800,
+      "plan": 9894,
+      "quality": 33792,
+      "rank": 19954
+    },
+    "observed_row": "Use actual per-order quality costs (9636,11363,12793) instead of hypothetical fixed output",
+    "quality_cache_tokens": 0,
+    "quality_effective_input_micro_usd_per_token": "5.5",
+    "quality_effective_output_micro_usd_per_token": "27.5",
+    "quality_input_tokens_by_order": [
+      977,
+      931,
+      931
+    ],
+    "quality_mean_micro_usd_per_head": 11264,
+    "quality_output_tokens_by_order": [
+      155,
+      227,
+      279
+    ],
+    "quality_thinking_tokens_by_order": [
+      146,
+      218,
+      270
+    ],
+    "rounding": "ceil each hypothetical request to whole micro-USD, then sum"
+  },
+  "created_at_utc": "2026-10-28T10:44:41Z",
+  "definition": "PHASE2B_REMAINDER_DEFINITION.md",
+  "entry_state": {
+    "accounted_public_price_upper_bound_micro_usd": 210174,
+    "active_cap_micro_usd": 20000000,
+    "active_grant_stage": "first",
+    "existing_live_requests": 28,
+    "expansion_authorized": false,
+    "first_nonhead_slots_permanently_not_needed": 27,
+    "reserved_micro_usd": 0
+  },
+  "first_review_sha256": "061dc60298827ef9bc43ccd3d6dfd59f8ea9a167278ebe3680cf3d42590ce004",
+  "input_file_hashes": {
+    "PHASE2B_F1_REPORT.md": "9d49e7327a5d5f8343c7096e6f2df35d7bebd5438934706c3df8c0fe0c2b6d38",
+    "PHASE2B_REMAINDER_DEFINITION.md": "ff1edb0f65437adc3a97ae55aa1e2ff95c4f5cd72be00c697c5b35c8d599ef74",
+    "evidence/phase2b-f1/closeout.json": "1acd185547e2aa54d68aedd87f1fee8549c718fc4e18804b24289cbdd0ea292c",
+    "evidence/phase2b-f1/report/first-block-data.json": "35569252f503e8ed1f680d39e049ac6eac78d12f33b1705123d2f77a3de746d4",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/authority/0001.grant.json": "ddfe2a46110dab96e46642c94fa8887d3468fa3bc2103a845281c6acd4c3d366",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/events.jsonl": "d4795ae8f6b52dc17b843dd5968e896c39d1ff69563a866d5e605640a3db1656",
+    "runs/phase2-release-r018/38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b/live/journal/reviews/first.json": "ab722a0840861bf08c9fe6df3757ffc4c4b525871ac67037a136089c2d3d1b77",
+    "runs/phase2-release-r018/release/release-readiness.json": "8e9b5ce2fe826a4eb79934dd426cd5f8c4fab2ba01211797b33c7760c17d33ce",
+    "runs/phase2-release-r018/release/study.json": "d08731a2f51675b62b34cf37642b3ad656d5ac9b2395182ab653bc80c5a1a514",
+    "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+    "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+    "src/buddha2/phase2_release_journal.py": "a93b2b917e5cd7d10ce894806884c9fb41650e0c6a912ec63e8f9e4177be9c4e",
+    "src/buddha2/phase2_release_runner.py": "5468f40ae543284868c5348d414da05bef3d05cc8364576767bb6e1d0467e483"
+  },
+  "kind": "p2be-definition-cost-and-worklist-worksheet-v1",
+  "limitations": [
+    "One development prompt/three quality judgments cannot establish representative expected cost",
+    "Nonquality costs and quality input/cache mix held fixed; outputs and head counts vary only as shown",
+    "Cost scenarios are not bounds, completion guarantees, measured future outcomes or invoices",
+    "No study/method/scoring/selection change; no held-out data or human work"
+  ],
+  "new_credential_reads": 0,
+  "new_provider_calls": 0,
+  "new_sdk_constructions": 0,
+  "original_folder_access": false,
+  "predecessor_authority_sha256": "abf45dbabb5f9689fe8d2aa81273be654f5a87220317f804f337e2789ec81e39",
+  "preservation_checks": {
+    "first_journal_matches_closed_packet": true,
+    "gate_files_matching": 70,
+    "launcher_matching": true,
+    "source_files_matching": 26
+  },
+  "proposed_authority": {
+    "additional_headroom_micro_usd": 124789826,
+    "authorized": false,
+    "cumulative_cap_micro_usd": 125000000,
+    "minimum_supported_cumulative_expansion_cap_micro_usd": 20000000,
+    "new_grant_created": false,
+    "next_quality_reservation_micro_usd": 11440000,
+    "settled_threshold_for_next_quality_with_no_liability_micro_usd": 113560000
+  },
+  "remaining_work": {
+    "blocks": 23,
+    "blocks_in_order": [
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 1,
+        "prompt_sha256": "63efc21959bbcaff9900ed34842b4b0e087599c42fa59353dc7dce5ca4a08d15",
+        "repeat": 2,
+        "source_task_id": "curated-95",
+        "task_id": "nb-curated-9c418f063bc433264d29"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 2,
+        "prompt_sha256": "39bdde4da4581b41c819c0ebb98a0379b58f224089251fc8dbedb0a571070d81",
+        "repeat": 1,
+        "source_task_id": "curated-2",
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 3,
+        "prompt_sha256": "39bdde4da4581b41c819c0ebb98a0379b58f224089251fc8dbedb0a571070d81",
+        "repeat": 2,
+        "source_task_id": "curated-2",
+        "task_id": "nb-curated-0ac59a48456661d0d8d5"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 4,
+        "prompt_sha256": "5dde568c3c20e4fe008892ce0c45f21952a7b00d5f95c2a2afc944a27ffd957e",
+        "repeat": 1,
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 5,
+        "prompt_sha256": "5dde568c3c20e4fe008892ce0c45f21952a7b00d5f95c2a2afc944a27ffd957e",
+        "repeat": 2,
+        "source_task_id": "curated-80",
+        "task_id": "nb-curated-7a77e85421d12bca8653"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 6,
+        "prompt_sha256": "8282d7b42b36af108d9f19c25c51131bd0212f415a75b13b2ccab284b9c66f9c",
+        "repeat": 1,
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 7,
+        "prompt_sha256": "8282d7b42b36af108d9f19c25c51131bd0212f415a75b13b2ccab284b9c66f9c",
+        "repeat": 2,
+        "source_task_id": "curated-21",
+        "task_id": "nb-curated-b1b0aa2062fdabf30542"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 8,
+        "prompt_sha256": "b5de1206b6c12dd31ea4be0404e38736bbbf025419883869f2c1c3857ccd8c83",
+        "repeat": 1,
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 9,
+        "prompt_sha256": "b5de1206b6c12dd31ea4be0404e38736bbbf025419883869f2c1c3857ccd8c83",
+        "repeat": 2,
+        "source_task_id": "curated-62",
+        "task_id": "nb-curated-510dc2800c595827238e"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 10,
+        "prompt_sha256": "f2e05fd6edb69af3c6d7c3d82530b24d47451bc1f016a953b2c4576e047a3e6c",
+        "repeat": 1,
+        "source_task_id": "curated-63",
+        "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 11,
+        "prompt_sha256": "f2e05fd6edb69af3c6d7c3d82530b24d47451bc1f016a953b2c4576e047a3e6c",
+        "repeat": 2,
+        "source_task_id": "curated-63",
+        "task_id": "nb-curated-8e36a11f5d71bf4e3dc6"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 12,
+        "prompt_sha256": "964cd57c6de5fe8dff445606d5e4ec799ba0c67905246bf81e0f34d2b53b76c1",
+        "repeat": 1,
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 13,
+        "prompt_sha256": "964cd57c6de5fe8dff445606d5e4ec799ba0c67905246bf81e0f34d2b53b76c1",
+        "repeat": 2,
+        "source_task_id": "curated-17",
+        "task_id": "nb-curated-055c45e37c6c14cca664"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 14,
+        "prompt_sha256": "85cf52442cf412f046759306a3cf68e33a5780a3b55aadbb2191a75fdad826a1",
+        "repeat": 1,
+        "source_task_id": "curated-29",
+        "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 15,
+        "prompt_sha256": "85cf52442cf412f046759306a3cf68e33a5780a3b55aadbb2191a75fdad826a1",
+        "repeat": 2,
+        "source_task_id": "curated-29",
+        "task_id": "nb-curated-af7dc61fe1eeaa81cd93"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 16,
+        "prompt_sha256": "744d842a8547ce593c3c7fbb0a9f6b4a6530637e9f077038030f2e3f59b2596d",
+        "repeat": 1,
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 17,
+        "prompt_sha256": "744d842a8547ce593c3c7fbb0a9f6b4a6530637e9f077038030f2e3f59b2596d",
+        "repeat": 2,
+        "source_task_id": "curated-36",
+        "task_id": "nb-curated-4b5afc9736f082c708eb"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 18,
+        "prompt_sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+        "repeat": 1,
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 19,
+        "prompt_sha256": "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+        "repeat": 2,
+        "source_task_id": "curated-15",
+        "task_id": "nb-curated-0589e47205e5256cc5b3"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 20,
+        "prompt_sha256": "4e430205a08004e06c5ef48179d294fa61668de4181f49c8b9a2223b33a665ad",
+        "repeat": 1,
+        "source_task_id": "curated-96",
+        "task_id": "nb-curated-6584de30a11a0e08ca32"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 21,
+        "prompt_sha256": "4e430205a08004e06c5ef48179d294fa61668de4181f49c8b9a2223b33a665ad",
+        "repeat": 2,
+        "source_task_id": "curated-96",
+        "task_id": "nb-curated-6584de30a11a0e08ca32"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "A",
+          "B"
+        ],
+        "index_in_expansion": 22,
+        "prompt_sha256": "8fc07eddbe2787cf5678621c2b71891187112606f4c28226573d2f3fd4be8bd4",
+        "repeat": 1,
+        "source_task_id": "curated-41",
+        "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+      },
+      {
+        "checkpoint": "expansion",
+        "generation_order": [
+          "B",
+          "A"
+        ],
+        "index_in_expansion": 23,
+        "prompt_sha256": "8fc07eddbe2787cf5678621c2b71891187112606f4c28226573d2f3fd4be8bd4",
+        "repeat": 2,
+        "source_task_id": "curated-41",
+        "task_id": "nb-curated-fb55f67d0ac2a857ec0f"
+      }
+    ],
+    "full_logical_denominator": 1320,
+    "generated_portfolios": 46,
+    "logical_slots": 1265,
+    "ordered_assessments": 69,
+    "permutation_portfolios": 23,
+    "roles": {
+      "answer": 460,
+      "group": 69,
+      "plan": 23,
+      "quality": 690,
+      "rank": 23
+    },
+    "successful_full_calls_max": 1293,
+    "successful_full_calls_min": 672,
+    "successful_new_calls_max": 1265,
+    "successful_new_calls_min": 644
+  },
+  "scenarios": [
+    {
+      "additional_micro_usd": 4834002,
+      "additional_usd": "4.834002",
+      "cumulative_micro_usd": 5044176,
+      "cumulative_usd": "5.044176",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 7942866,
+      "additional_usd": "7.942866",
+      "cumulative_micro_usd": 8153040,
+      "cumulative_usd": "8.153040",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 11828946,
+      "additional_usd": "11.828946",
+      "cumulative_micro_usd": 12039120,
+      "cumulative_usd": "12.039120",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        9636,
+        11363,
+        12793
+      ],
+      "quality_output": "observed_155_227_279"
+    },
+    {
+      "additional_micro_usd": 6313454,
+      "additional_usd": "6.313454",
+      "cumulative_micro_usd": 6523628,
+      "cumulative_usd": "6.523628",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 15340126,
+      "additional_usd": "15.340126",
+      "cumulative_micro_usd": 15550300,
+      "cumulative_usd": "15.550300",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 26623466,
+      "additional_usd": "26.623466",
+      "cumulative_micro_usd": 26833640,
+      "cumulative_usd": "26.833640",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        32874,
+        32621,
+        32621
+      ],
+      "quality_output": 1000
+    },
+    {
+      "additional_micro_usd": 12005954,
+      "additional_usd": "12.005954",
+      "cumulative_micro_usd": 12216128,
+      "cumulative_usd": "12.216128",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 43802626,
+      "additional_usd": "43.802626",
+      "cumulative_micro_usd": 44012800,
+      "cumulative_usd": "44.012800",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 83548466,
+      "additional_usd": "83.548466",
+      "cumulative_micro_usd": 83758640,
+      "cumulative_usd": "83.758640",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        115374,
+        115121,
+        115121
+      ],
+      "quality_output": 4000
+    },
+    {
+      "additional_micro_usd": 15800954,
+      "additional_usd": "15.800954",
+      "cumulative_micro_usd": 16011128,
+      "cumulative_usd": "16.011128",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 62777626,
+      "additional_usd": "62.777626",
+      "cumulative_micro_usd": 62987800,
+      "cumulative_usd": "62.987800",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 121498466,
+      "additional_usd": "121.498466",
+      "cumulative_micro_usd": 121708640,
+      "cumulative_usd": "121.708640",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        170374,
+        170121,
+        170121
+      ],
+      "quality_output": 6000
+    },
+    {
+      "additional_micro_usd": 19595954,
+      "additional_usd": "19.595954",
+      "cumulative_micro_usd": 19806128,
+      "cumulative_usd": "19.806128",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 81752626,
+      "additional_usd": "81.752626",
+      "cumulative_micro_usd": 81962800,
+      "cumulative_usd": "81.962800",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 159448466,
+      "additional_usd": "159.448466",
+      "cumulative_micro_usd": 159658640,
+      "cumulative_usd": "159.658640",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        225374,
+        225121,
+        225121
+      ],
+      "quality_output": 8000
+    },
+    {
+      "additional_micro_usd": 34775954,
+      "additional_usd": "34.775954",
+      "cumulative_micro_usd": 34986128,
+      "cumulative_usd": "34.986128",
+      "heads_per_future_order": 1,
+      "new_requests": 644,
+      "quality_cost_micro_usd_per_order_pattern": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    },
+    {
+      "additional_micro_usd": 157652626,
+      "additional_usd": "157.652626",
+      "cumulative_micro_usd": 157862800,
+      "cumulative_usd": "157.862800",
+      "heads_per_future_order": 5,
+      "new_requests": 920,
+      "quality_cost_micro_usd_per_order_pattern": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    },
+    {
+      "additional_micro_usd": 311248466,
+      "additional_usd": "311.248466",
+      "cumulative_micro_usd": 311458640,
+      "cumulative_usd": "311.458640",
+      "heads_per_future_order": 10,
+      "new_requests": 1265,
+      "quality_cost_micro_usd_per_order_pattern": [
+        445374,
+        445121,
+        445121
+      ],
+      "quality_output": 16000
+    }
+  ],
+  "scope": "Planning only; no grant, SDK, key lookup or provider call",
+  "selection_policy": {
+    "human_required": false,
+    "id": "phase2-benchmark-v1",
+    "requires": [
+      "complete comparable native coverage",
+      "reconciled accounting"
+    ],
+    "sort": [
+      "highest mean utility",
+      "lowest actual generation/ranking cost",
+      "A then B then C"
+    ],
+    "version": 1
+  },
+  "source_sha256": "5909e90bc49a3251ba431c8ccf677cdc02a2827f36271d9b0abed3a5421ef22c",
+  "study_sha256": "38132ee3a935af4ac975c3fda84154d1a85b1bcb510925f409993a15d3103d8b"
+}

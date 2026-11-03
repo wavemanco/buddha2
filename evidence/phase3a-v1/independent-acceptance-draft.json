@@ -1,0 +1,96 @@
+{
+  "auditor": "/root/release_journal",
+  "authored_components_disclosure": [
+    "accounting.py",
+    "launch.py",
+    "phase3a.ps1",
+    "their tests and test_editor_attacks.py"
+  ],
+  "checks": {
+    "authority_gate_and_prekey_binding": "source pass; final actual host rehearsal pending",
+    "bounded_surface_and_consumption": "source pass; three decoded system fields consumed; inventory separate from shape validation",
+    "frozen_P2BN_source_113_files": "pass; hashes independently compared to release-r2 study",
+    "frozen_package_26_files": "pass; hashes independently compared to retained P2-R study",
+    "late_human_or_holdout_expansion": "excluded; human work, held-out inputs and sequential recursion remain deferred",
+    "liability_global_lifetime": "source pass; durable intent/results, no unknown resend, handler join before later conversation",
+    "native_agg_k1_control_flow": "source pass; actual unchanged schedule.run_task, finals-only/no selector, no library",
+    "primary_completion": "source pass; eight scored primary finals plus at least one authentic live path; fixtures cannot establish live authenticity",
+    "role_footprint": "source pass; 628 inference plus 99 assessment slots, maximum 727 provider attempts",
+    "runtime_diff_scope": "pass; only declared three-file compatibility patch observed",
+    "runtime_inventory_and_declared_patch_hashes": "pass",
+    "runtime_opencode_head": "pass; 23fb5e0516c99ac04a1aa46c193efda2e1b9bb24"
+  },
+  "credentials_accessed": false,
+  "financial_limits_micro_usd": {
+    "assessment_total": 60000000,
+    "first_checkpoint": 65000000,
+    "included_first_assessment_checkpoint": 25000000,
+    "per_inference_cell": 20000000,
+    "phase": 220000000
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "status": "resolved_in_source",
+      "summary": "Effective identity now binds upstreams.lock.json, requirements locks and fixed strategy templates."
+    },
+    {
+      "id": "F2",
+      "status": "resolved_in_source_regression_pending",
+      "summary": "Exact local HTTP request retries replay already-settled SSE under a relay lock instead of allocating another paid turn."
+    },
+    {
+      "id": "F3",
+      "status": "resolved_in_source_regression_pending",
+      "summary": "Ordinary invalid JSON harvest returns to actual native adapter validation for its second shape attempt; raw inventory/security violations halt."
+    },
+    {
+      "id": "F4",
+      "status": "resolved_in_source",
+      "summary": "Returned-model/provenance drift raises typed IntegrityStop and persists a global ledger halt."
+    },
+    {
+      "id": "F5",
+      "status": "resolved_in_source",
+      "summary": "Host result now retains started/finished timestamps and elapsed wall time; credential-entry-inclusive basis remains explicit."
+    }
+  ],
+  "independence_limit": "Peer-source review is independent of its implementation; this is not a third-party audit of the components authored by this agent.",
+  "kind": "phase3a-independent-acceptance-draft-v1",
+  "limitations": [
+    "Reviewed bytes may change before final freeze; this draft is not live-readiness approval.",
+    "Public PAYG/account availability is not independently audited.",
+    "Offline SDK responses and actual OpenCode tool execution do not measure model effectiveness."
+  ],
+  "pending_before_release_acceptance": [
+    "final stable source identity",
+    "actual full four-pair SDK/OpenCode mock rehearsal with engineering review and classified anchor",
+    "zero-call first/full resumes and native/analysis report replay",
+    "actual PowerShell/Docker lifecycle and create-only provider configuration with no real credentials",
+    "final complete tests, static checks and preservation evidence"
+  ],
+  "protected_original_accessed": false,
+  "real_provider_calls_by_this_review": 0,
+  "release_accepted": false,
+  "reviewed_artifact_hashes": {
+    "PHASE3A_DEFINITION.md": "e66ef31ec7841285d07cfdb452ff863ec68be8e5a70af42ac9baab047d01629a",
+    "evidence/phase3a-v1/runtime-provenance.json": "a089a8d4fc4c51eb222dad2cb6880a6414b214a5723430e9fb908507f4ed2cb2",
+    "followups/phase3a_v1/accounting.py": "82302c1fe1aa7b17b15a8a68c6ffccd8e41bad04871150e1b251a2d395b96d99",
+    "followups/phase3a_v1/editor.py": "93818b0a3e8c403ef10e8ab69d6989d5544c4403baa68cb1aef66962e45eb67c",
+    "followups/phase3a_v1/launch.py": "a417703c218dc64e5796bcf0b51c9a590a5e0d0cdfd1b212927a5e4e017d1334",
+    "followups/phase3a_v1/native.py": "1bdfeb84c61745768c076bdc678c7820935b91b3c16375475d60dffc791e3db1",
+    "followups/phase3a_v1/strategy.py": "def8992de87c3c54d82065a4c0ea8b9f17d6a62b9cb082f811f8c655e1db4704",
+    "followups/phase3a_v1/support.py": "5236c4d7b5d59c6d6e869c52b8a929eb1cf7e4f52e0f858ba6b95b8751fdabf6",
+    "followups/phase3a_v1/transport.py": "a90b11060bafc0cc92734b3d3fa9a87921964ab6f9af7070720f378b24d246e4",
+    "followups/phase3a_v1/workflow.py": "1acd174bb75628141fd54bd13c826fec43f189ab9346bff02835c8dc8995e4c2",
+    "phase3a.ps1": "d0240de362c4af5db66a8ae798202804c4bb772231f1801a31eb224745529925",
+    "specifications/phase3a-v1.json": "d3a45d249f6fdf8a596ae82e096d0fb5c77406896447fbc10f22de9d237239ed",
+    "upstreams.lock.json": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1"
+  },
+  "runtime_image": "sha256:8792a096b4881d47ab19cc7cbf6a74a232f9ff7cedc978fe93f902a71522d4f2",
+  "scope": "read_only_source_and_existing_evidence_checks_then_new_audit_record",
+  "status": "source_review_pass_pending_final_regressions_freeze_and_evidence",
+  "utc": "2026-10-28T23:19:27.518278+00:00",
+  "verified_declared_patch_sha256": "c9a8a0e826d48f3fcfc7d818321d128c28e1f7f7c594954c19453dfca4946dc8",
+  "verified_runtime_inventory_sha256": "0ebab6253e52766cd9e986161c36021279e3f2bf40fa29f15561c9739306ac1d"
+}

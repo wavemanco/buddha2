@@ -1,0 +1,35 @@
+{
+  "blocking_findings": [],
+  "checks": {
+    "all_offline_runtime_networks": "none",
+    "assessment_bytes_unchanged": true,
+    "human_agreement_prompts": "4/12; floor9",
+    "independently_recomputed_cost_micro_usd": 112696,
+    "offline_runtime_key_forwarding": false,
+    "order_consistency_prompts": "8/12; floor11",
+    "package_and_runtime_snapshot_identity": "match",
+    "prediction_commit": "8e5765d",
+    "provider_controls_and_accounting": "match declared profile",
+    "replacements": 0,
+    "retained_offline_evidence_hashes_rechecked": 45,
+    "retries": 0,
+    "rubric_freeze_commit": "56f09d9",
+    "scheduled_unique_presentations": 48,
+    "unchanged_execution_files_after_replay": 196,
+    "unresolved_reservations_micro_usd": 0,
+    "upstream_tracked_sources": "unchanged"
+  },
+  "decision": "P1-1 through P1-8 complete with a diagnostic-only evaluator under the explicit user-approved readiness exception.",
+  "limitations": [
+    "Raw source data, private human labels, credentials and original-folder contents were not opened in the independent audit.",
+    "Original-source preference ratings were not independently reconstructed.",
+    "Provider invoices/account statements were not inspected.",
+    "Cleanup status is evidenced by the root sanitized cleanup record; reviewer did not query credential environment.",
+    "First-two canonical judgment hash was independently unchanged; no separate pre-expansion raw-request/result hash baseline was inspected."
+  ],
+  "recommendation": "Close Phase1; no additional calls or tests warranted. Refresh Phase2 concretely before starting.",
+  "recorded_at_utc": "2026-10-25T08:41:49.990935+00:00",
+  "reviewer": "Independent Codex subagent /root/phase1_closeout_audit",
+  "schema_version": 1,
+  "scope": "Read-only cold review of frozen source/evidence, staged metadata, all live ledger metadata, committed predictions, final reports and offline replay; no provider requests, edits or credential access."
+}

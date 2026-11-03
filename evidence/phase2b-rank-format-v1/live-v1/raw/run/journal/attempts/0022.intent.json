@@ -1,0 +1,61 @@
+{
+  "admission": {
+    "control_policy_sha256": "159448f1025bdd60c5ed84ea524a7c9b4e73d2acb49def5081394736c39d339a",
+    "maximum_billable_input": 1050000,
+    "payload_limit_utf8_bytes": 61952,
+    "provider_token_estimate": null,
+    "request_sha256": "bfca32ad6bfb594db2dd36fe1cd5fef7509a814956eb2cbeadfcdacf6e125c6c",
+    "revision": "phase2-am1-payload-liability-v1",
+    "serialized_utf8_bytes": 10555
+  },
+  "checkpoint": "canary",
+  "dispatch_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c:0022",
+  "fixture": false,
+  "profile_sha256": "eb435860090dd6b6f167ca116dbad1644c4703a6297bf1a781e400e0be0d41ba",
+  "request": {
+    "messages": [
+      {
+        "content": "A language model was asked the same prompt several times. Partition its responses into groups of equivalent answers.\n\nTwo responses are equivalent if a user who had read one would gain essentially nothing from the other: the same central answer, recommendation, plot, argument or image, differing only in wording, formatting, length, ordering or minor detail. They are distinct if the central content differs, even when structure or register is shared. A list is distinct only if most of its items differ.",
+        "role": "system"
+      },
+      {
+        "content": "<prompt>\nSuggest a birthday gift for a friend's 25th birthday. Just one\n</prompt>\n\n<response index=\"0\">\n**Gift: A hands-on pottery class for two (you and your friend).**\n\nTurning 25 is a nice milestone to mark with a memory rather than another object. A pottery class gives you a few relaxed hours of making something together, laughing at lopsided mugs, and then picking up the finished, glazed pieces a couple of weeks later. That makes it a gift that keeps going: they get the experience and a keepsake from that day.\n\n**Tips:**\n- Book a \"date night\" or \"couples/friends\" session at a local studio, since these usually include materials and firing.\n- Pick a date in advance and put it on both calendars so it actually happens.\n- Add a small card saying something like, \"Here's to 25. Let's make something to remember it by.\"\n</response>\n\n<response index=\"1\">\n**A custom star map of the night sky from a meaningful date.**\n\nPick a date and place that matters to your friendship, such as the night you met, the day of a favorite trip, or the night of their 25th birthday itself. Services like The Night Sky or Under Lucky Stars will turn it into a framed print showing exactly how the stars appeared overhead at that moment.\n\nTo make it personal, add a short line at the bottom that only the two of you would understand, like an inside joke or a quote from that night. Pair it with a handwritten note explaining why you chose that date.\n\nIt's thoughtful and unique, and it gives them something to hang on their wall that is a reminder of your friendship.\n</response>\n\n<response index=\"2\">\n**Gift suggestion: a Fujifilm Instax Mini 12 instant camera**\n\nA 25th birthday is a nice milestone to capture, and this camera fits a social, on-the-go lifestyle well:\n\n- **Portable:** It's small and light enough to toss in a tote or backpack for trips, dinners, and weekend outings.\n- **Social by design:** Prints come out in seconds, so photos get passed around, stuck on a fridge, or handed to friends as keepsakes. That's a different experience from scrolling through a phone.\n- **Easy to use:** It has auto-exposure and a simple point-and-shoot design, so there's no learning curve or setup.\n- **Fun and personal:** Photos from the night of their 25th can become a small album or wall display.\n\nPair it with a pack of film, since a camera with no film is a letdown. Pastel colors like blossom pink or mint green are popular, but choose whatever suits your friend's style.\n</response>\n\n<response index=\"3\">\n**Gift: a copy of *Designing Your Life* by Bill Burnett and Dave Evans, with a handwritten note tucked inside.**\n\nTwenty-five is often a crossroads: early career choices are settling in, and big questions about direction, relationships, and where to live start to feel real. This book is practical rather than preachy. It offers hands-on exercises for exploring options and trying small experiments instead of agonizing over one \"right\" path.\n\n**The handwritten note (feel free to adapt):**\n\n*Happy 25th, [Name]!*\n\n*I picked this book because I've watched you [grow/take risks/figure things out] this past year, and I think you're at the start of something great. You don't need to have it all figured out, and this book is a good reminder that nobody does. Try things, stay curious, and know I'm in your corner for whatever comes next.*\n\n*Here's to your next chapter.*\n*[Your name]*\n\n**Tip:** Mark one page or exercise that made you think of them, and mention it in the note to make it feel personal.\n</response>\n\n<response index=\"4\">\n**A small-batch hot sauce set** is my pick for a 25th birthday.\n\nLook for a trio or foursome of sauces from an independent maker (Fly By Jing, Secret Aardvark, or a local producer). Choose a range of flavors, such as a fruity habanero, a smoky chipotle, and a garlicky chili crisp, so there's something for every heat level.\n\nWhy it works:\n- **Fun and a little cheeky:** it feels like a milestone gift without being sentimental or stuffy.\n- **Ready to share:** your friend can open it at a dinner or taco night and pass it around.\n- **Easy to personalize:** if they prefer milder flavors, go for sweet-heat or smoky blends. If they love spice, pick a hotter lineup.\n\nAdd a handwritten card with a note like \"Here's to another year that brings the heat,\" and it's ready to give.\n</response>\n\n<response index=\"5\">\n**A \"25 Moments\" memory jar**\n\nSince 25 is a milestone, this gift gives your friend one memory or note for each year. It costs very little, but it shows a lot of thought.\n\n**What you'll need:**\n- A large glass jar with a lid\n- 25 small slips of paper (colored or kraft paper looks nice)\n- A pen\n- Ribbon or twine, plus a tag\n\n**How to make it:**\n1. **Write 25 notes.** Each one can be a favorite memory you share, an inside joke, something you admire about them, or a wish for their next year. Mix funny and heartfelt ones.\n2. **Add a few extras.** Slip in a couple of printed photos, a ticket stub, or a \"redeemable for one coffee/dinner on me\" coupon.\n3. **Number or label the slips** if you'd like them read in order, or leave them unmarked so they can pull one at random.\n4. **Fill the jar,** then tie the ribbon around the lid and attach a tag such as \"Open one when you need a smile.\"\n\n**Tip:** Start writing a week or two ahead so you aren't rushing. If you're stuck, ask a few mutual friends to contribute a note or two.\n\nThey can read it all at once or save it and open one note a day, whichever suits them.\n</response>\n\n<response index=\"6\">\nA quality weighted blanket is a great pick for a 25th birthday. The mid-twenties tend to be busy with career building, social obligations, and figuring out adulthood, so a gift centered on rest and recovery is both thoughtful and practical.\n\nLook for one that's about 10% of your friend's body weight, made with breathable fabric like cotton or bamboo, and ideally with a removable, washable cover. It's a gift they'll use nightly, and it says \"I hope you get some real rest.\"\n</response>\n\n<response index=\"7\">\n**Gift idea: a \"Quarter-Century Starter\" investment contribution, paired with a handwritten note.**\n\nGive $50-$100 (or whatever fits your budget) deposited into a brokerage or Roth IRA account in your friend's name. If they don't have one yet, you can give a gift card from a platform like Fidelity or Schwab, or simply contribute to an account they already have, with their permission.\n\n**Why it works for a 25th:** Turning 25 is a natural moment to start thinking about the long term. A small contribution now has decades to grow, and it says, \"I'm invested in your future.\" It also stands out from the usual candles, mugs, and gift cards.\n\n**Make it feel personal:** Put a card with it saying something like, \"Here's to the first 25 years, and to the next 25 growing alongside you.\" If you like, add a small paper certificate or a tiny potted plant as a symbolic \"something that grows\" to unwrap on the day.\n</response>\n\n<response index=\"8\">\n**Gift: A Stanley Quencher or, better yet, a Hydro Flask 32 oz Wide Mouth insulated bottle**\n\nHere's why it works for a 25th birthday:\n\n- **Daily use:** It goes to work, the gym, errands, and trips, so they'll use it every day.\n- **Durability:** Stainless steel construction and a lifetime-style build mean it can last a decade or more.\n- **Practical for early adulthood:** It keeps drinks cold for 24 hours or hot for 12, saves money on bottled drinks, and cuts down on waste.\n- **Easy to personalize:** Choose their favorite color, or add an engraved name or a small custom detail to make it feel special rather than generic.\n\nA price range of roughly $35-$50 makes it thoughtful without being over the top.\n</response>\n\n<response index=\"9\">\n**Gift: A quality hobby-specific tool that upgrades something they already use, such as a Fellow Stagg EKG electric kettle for a coffee lover.**\n\nIf your friend's passion is something else, the same approach works. Here's how to pick the exact item:\n\n1. **Notice what they already use constantly.** Think about the thing they reach for every week, like a camera body, climbing shoes, or a stand mixer. The best gift upgrades that item or complements it, rather than replacing something they love.\n\n2. **Look for the \"I'd never buy this for myself\" tier.** People often use budget gear for years out of frugality. A step up in quality (a better lens, a precision scale, a sturdier chalk bag and brush set) feels special without being outrageous.\n\n3. **Check for compatibility.** Ask a mutual friend, or look at their gear in photos or at their place, to confirm brand, size, or system (lens mount, shoe size, grinder type). Gifting something that doesn't fit is the biggest risk.\n\n4. **Pick something consumable or accessory-based if you're unsure.** If you can't verify specifics, choose something universally useful within the hobby: a good camera strap, a premium chalk bag, or high-end baking ingredients like quality vanilla and chocolate.\n\n5. **Include a gift receipt.** This lets them swap size or model without awkwardness.\n\n**Quick example:** If your friend bakes bread, a digital scale accurate to 0.1 g (like the Escali Primo or Etekcity) or a Lodge cast-iron Dutch combo cooker is a thoughtful, practical choice, especially if you've seen them struggling with a flimsy pan or measuring by cups.\n\nBudget roughly $40-$100 for something meaningful at the 25th-birthday mark, and add a handwritten note about why you thought of them when you saw it.\n</response>",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.6-luna",
+    "response_format": {
+      "json_schema": {
+        "name": "Partition",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "groups": {
+              "items": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "title": "Groups",
+              "type": "array"
+            }
+          },
+          "required": [
+            "groups"
+          ],
+          "title": "Partition",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_sha256": "bfca32ad6bfb594db2dd36fe1cd5fef7509a814956eb2cbeadfcdacf6e125c6c",
+  "reservation_micro_usd": 1661880,
+  "role": "group",
+  "run_id": "2fc80477723b9fab044bd90ebc322e1a5c7c64d7771f2f037858f6d21508243c",
+  "slot_id": "p2-718a1781795dd29b5ebe57e4.group",
+  "study_sha256": "0bbe532dd0b5e065f88d0f352538a10dbe2d1b5c0816856f6c3b518a2a00d27e"
+}
