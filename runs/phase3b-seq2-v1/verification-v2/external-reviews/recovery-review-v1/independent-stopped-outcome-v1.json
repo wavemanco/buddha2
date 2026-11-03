@@ -1,0 +1,88 @@
+{
+  "created_at_utc": "2026-11-03T12:55:27.456816+00:00",
+  "findings": [
+    "The real producer emits p3b-rp2-visibility-request-v1 while the frozen S2 consumer requires p3b-s2-visibility-request-v1. The single intended first-pair exporter invocation rejected the actual request with ProjectionError before creating an I1 container, export directory or ACK.",
+    "The original 600-second first-export window, original A1 10800-second timeout failure, and successful separately guarded saved-only R1 outcome remain separately preserved. No failure has been relabeled a pass.",
+    "The fresh supervised fixture contains 341 intents, 341 fixture responses and one review, with three assessed mock targets. Every intent settled; no new reservation, unknown or pending intent remains. Simulated 213811 microUSD is not API spend.",
+    "Exactly seven current-source groups have genuine pass records; launcher, inspect, regression, native-fixtures and supervision have no passing final records. There is no final gate, source/kit acceptance, accepted archive or physical cold result.",
+    "The controller stopped the exact S13 owner, and the frozen launcher removed it. This reviewer independently observed no-such-object for the four exact known S13, R1, A1 and A0 owner IDs. Retained supervisor cleanup records establish its tool sessions ended; these session handles were not misinterpreted as OS process IDs.",
+    "Source verification authenticated the pinned P2 classification receipt before touching the exact fourteen canonical historical offline stream entries. All other private/cache/stream names were skipped lexically before metadata. No retained stream copy was used.",
+    "The available evidence supports zero real provider calls, zero paid pilot execution, no real credentials accessed in this block, and no new paid liabilities. Historical held amounts remain explicitly unresolved; this review does not clear them."
+  ],
+  "kind": "phase3b-s2-independent-stopped-outcome-v1",
+  "kit_accepted": false,
+  "known_owned_containers_independently_absent": [
+    {
+      "error": "error: no such object: 61a38afb1e20b36bb1d3f7d511113ef8a7b275269ad74af7ffe4bd818133b41f\n",
+      "exit_code": 1,
+      "owner": "61a38afb1e20b36bb1d3f7d511113ef8a7b275269ad74af7ffe4bd818133b41f"
+    },
+    {
+      "error": "error: no such object: 6fcb5ff3401b315c1cb6eac714ef78f5795eb8c9a6cad0d4c88fc1a81eec2666\n",
+      "exit_code": 1,
+      "owner": "6fcb5ff3401b315c1cb6eac714ef78f5795eb8c9a6cad0d4c88fc1a81eec2666"
+    },
+    {
+      "error": "error: no such object: d7df598dc35d90117f330780900c0114515f8e20ba98cc090cbfa87c76a1f165\n",
+      "exit_code": 1,
+      "owner": "d7df598dc35d90117f330780900c0114515f8e20ba98cc090cbfa87c76a1f165"
+    },
+    {
+      "error": "error: no such object: fd55d63bfc3646d2306fa7b49e739269f525157b321255e6aa0a30663c2b244e\n",
+      "exit_code": 1,
+      "owner": "fd55d63bfc3646d2306fa7b49e739269f525157b321255e6aa0a30663c2b244e"
+    }
+  ],
+  "launch_authorized_by_this_receipt": false,
+  "missing_groups": [
+    "launcher",
+    "inspect",
+    "regression",
+    "native-fixtures",
+    "supervision"
+  ],
+  "new_mock_holds_unknowns_pending": 0,
+  "next_permitted_work": "Read-only review of a concrete C2 source-change/new-mock-matrix amendment for a single user decision. No implementation, recovery, keys, paid run, archive or cold acceptance before the applicable new authorization and actual full new-source acceptance.",
+  "packet_accepted": false,
+  "paid_pilot_started": false,
+  "passed_groups": [
+    "matrix",
+    "preservation",
+    "replay",
+    "semantics",
+    "static",
+    "tests",
+    "windows-tests"
+  ],
+  "product_source_changed": false,
+  "real_provider_calls": 0,
+  "references": {
+    "failure-closeout-v1.json": {
+      "path": "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/failure-closeout-v1.json",
+      "sha256": "7307b4cfe447f81b304720777b759efc932eb16f2d85a6e1bdb30853c0ace660"
+    },
+    "independent-stopped-raw-verification-v1.json": {
+      "path": "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/independent-stopped-raw-verification-v1.json",
+      "sha256": "4cce219fa8adc0f69e235cc657fbde2dec2aa5cc562924e22b3d005136311e72"
+    },
+    "r1-outcome-acceptance-v1.json": {
+      "path": "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/r1-outcome-acceptance-v1.json",
+      "sha256": "aa62e1180a55d4b9543d26f83eef8d9d2e8edc95f41d79536cee847b5c1e400e"
+    }
+  },
+  "rehearsal_census": {
+    "intent": 341,
+    "result": 341,
+    "review": 1
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "scientific_complete": false,
+  "scope_and_limits": "Independent read-only stopped-outcome and provenance review only. Existing detailed raw verification is referenced without rerunning any workflow, exporter, model, main matrix or cold archive. Exact-owner absence is not a global Docker/process inventory. This receipt does not authorize implementation, repetition or funds.",
+  "source_accepted": false,
+  "source_and_four_closed_ancestor_archives_unchanged": true,
+  "source_files_verified": 649,
+  "source_sha256": "0b154f40fd0418b5d86a218abf23050d9b0db26a2195dbad828a6c6a3f4073aa",
+  "status": "stopped_incomplete_offline_preparation",
+  "stopped_outcome_classification_supported": true,
+  "study_sha256": "160fa663c793f3ac0878031f3ffaa9d6db57b4349069bc9460756e147b2b68ee"
+}
