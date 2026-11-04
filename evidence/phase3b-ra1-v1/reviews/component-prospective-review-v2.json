@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "actual_owner_config_required_before_start": true,
+    "check_effort_covered_by_statics": true,
+    "exact_owner_cleanup_required": true,
+    "no_positive_bootstrap_or_worklist": true,
+    "no_unit_or_candidate_admission": true,
+    "old_ledgers_untouched": true,
+    "source_copy_master_identity_in_source_capture": true,
+    "source_revision_bound_before_execution": true
+  },
+  "clocks_seconds": {
+    "cleanup_absolute": 60,
+    "container_execution": 600,
+    "create": 60,
+    "host_each": 20,
+    "inspect": 60
+  },
+  "command": [
+    "python",
+    "-B",
+    "evidence/phase3b-ra1-v1/component_checks.py"
+  ],
+  "kind": "phase3b-ra1-independent-prospective-component-review-v2",
+  "manifest": "evidence/phase3b-ra1-v1/component-manifest-v2.json",
+  "manifest_sha256": "d9016510a337c0d1b28123b767f026e943c0abafbcec1bd07e733233dca7941d",
+  "mounts": {
+    "/results/phase3b-seq2-v1": "fresh ra1-component-v1/runtime subtree writable",
+    "/workspace": "research checkout read-only"
+  },
+  "new_unit_preflight_or_release_admitted": false,
+  "observed_at_utc": "2026-11-04T04:34:06.300608+00:00",
+  "packet_accepted": false,
+  "passed": true,
+  "permitted_invocations_this_receipt": 1,
+  "real_provider_calls": 0,
+  "reviewed_file_count": 31,
+  "reviewer": "/root/ra1_path_review",
+  "reviewer_executed_command": false,
+  "scope": "Declared cheap host argument/direct-script checks, narrow H1 readonly/exclusive/path-domain checks, five pure RA1 regressions and shared affected statics only",
+  "workdir": "C:\\Users\\arvik\\code\\research\\Buddha2"
+}

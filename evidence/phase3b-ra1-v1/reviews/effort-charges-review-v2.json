@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "controller_pure_check_count": 5,
+    "controller_pure_checks_passed": true,
+    "controller_worker_campaign_container_provider_starts": 0,
+    "explicit_lexical_exclusions_before_metadata": true,
+    "ordinary_leaf_and_bounded_timestamp": true,
+    "positive_integer_charge_validation": true,
+    "target_remains_review_not_abort": true
+  },
+  "correction": "The prior version checked filename syntax but still admitted a syntactically valid stdout.json name before metadata. That privacy gap was missed in the prior static review; current explicit stream/private/cache rejection closes it. No excluded real path was opened.",
+  "files": {
+    "evidence/phase3b-ra1-v1/charges/root-transition-1.json": "9a88131471711730df920c06ca025d31ca546efc933a683219904ebaca856dc4",
+    "evidence/phase3b-ra1-v1/check_effort.py": "d0a65cb5aae5be36956f901c4a23e92ebaefec6bb612e651a671799a1e053a36",
+    "evidence/phase3b-ra1-v1/effort-component-plan-v1.json": "a01a27e2411c31cb3235b33ed3468b8e9d870c88a6146401e05e5a3bb6d686b4",
+    "evidence/phase3b-ra1-v1/effort-component-result-v1.json": "81db7fff2c150940c5d4ae4b5587199c59bd2e2483501efc14e931aa42f48fa7",
+    "evidence/phase3b-ra1-v1/effort.py": "245979fd26e1584e4e0a06c1033e2ceb58943c7534a1c2f7f6270cece9462073"
+  },
+  "kind": "phase3b-ra1-independent-effort-charge-review-v2",
+  "observed_at_utc": "2026-11-04T04:28:18.156327+00:00",
+  "real_provider_calls": 0,
+  "reviewer": "/root/ra1_path_review",
+  "reviewer_executed_runtime_or_tests": false,
+  "scope": "Amended charge lexical validation plus source-bound inspection of five controller-executed pure checks; no reviewer runtime execution",
+  "static_review_passed": true,
+  "supersedes_for_current_helper": "evidence/phase3b-ra1-v1/reviews/effort-charges-review-v1.json"
+}

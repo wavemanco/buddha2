@@ -71,7 +71,7 @@ class OR1AdmissionTests(unittest.TestCase):
 
     @unittest.skipUnless(os.name == "nt", "actual Windows host evidence writer")
     def test_host_evidence_writer_outside_runtime_base_is_exclusive(self):
-        parent = ROOT / "evidence/phase3b-bd1-v1/host-writer-unit"
+        parent = ROOT / "evidence/phase3b-ra1-v1/host-writer-unit"
         parent.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=parent) as directory:
             self.root = Path(directory)

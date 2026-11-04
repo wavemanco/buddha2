@@ -115,6 +115,28 @@ def validate_authority() -> dict:
 
 
 SOURCE_INPUTS = (
+    "specifications/amendments/phase3b-release-acceptance-1.0.md",
+    "evidence/phase3b-ra1-v1/authority.json", "evidence/phase3b-ra1-v1/effort.py",
+    "evidence/phase3b-ra1-v1/release-config.json", "evidence/phase3b-ra1-v1/ra1_operator.py",
+    "evidence/phase3b-ra1-v1/unit_preflight.py", "evidence/phase3b-ra1-v1/run_units.py",
+    "evidence/phase3b-ra1-v1/cases-v1.json", "evidence/phase3b-ra1-v1/cases-v2.json", "evidence/phase3b-ra1-v1/cases-v3.json", "evidence/phase3b-ra1-v1/cases-v4.json",
+    "evidence/phase3b-bd1-v1/run_units.py",
+    "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v1.json",
+    "evidence/phase3b-ra1-v1/component_checks.py", "evidence/phase3b-ra1-v1/check_effort.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/PLAN.md",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/plan.json",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/review_packet_ra1.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay_ra1.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/parameterization.diff",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/PLAN.md",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/plan.json",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/parameterization.diff",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/ast-delta-proof.json",
+    "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v2.json",
     "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md",
     "evidence/phase3b-or1-v1/authority.json", "evidence/phase3b-or1-v1/effort.py",
     "evidence/phase3b-or1-v1/release-config.json",
@@ -325,18 +347,50 @@ def source_snapshot_policy(files: dict) -> dict:
 
 
 def recovery_config() -> dict:
-    value = read(ROOT / "evidence/phase3b-or1-v1/release-config.json")
+    value = read(ROOT / "evidence/phase3b-ra1-v1/release-config.json")
     number = value.get("candidate")
-    require(value.get("kind") == "phase3b-or1-release-config-v1"
-        and type(number) is int and number in (1, 2, 3)
-        and value.get("verification") == "verification-v" + str(4 + number)
-        and value.get("authority") == "evidence/phase3b-or1-v1/authority.json",
-        "OR1 release configuration differs")
+    require(set(value) == {"kind", "candidate", "verification", "authority"}
+        and value.get("kind") == "phase3b-ra1-release-config-v1"
+        and type(number) is int and number in (1, 2)
+        and value.get("verification") == "verification-ra1-v" + str(number)
+        and value.get("authority") == "evidence/phase3b-ra1-v1/authority.json",
+        "RA1 release configuration differs")
     return value
 
 
+def release_authority() -> dict:
+    config = recovery_config()
+    value = read(ROOT / config["authority"])
+    definition = "specifications/amendments/phase3b-release-acceptance-1.0.md"
+    expected = {"aggregate_focused_engineering_target_seconds": 14400,
+        "minimum_closure_reserve_seconds": 2700, "max_preflight_sets": 3,
+        "max_candidates": 2, "max_main_entries": 2, "max_S13_starts": 2,
+        "max_saved_replays": 2, "max_cold_replays": 2, "real_API_cap_usd": 0}
+    require(value.get("kind") == "phase3b-ra1-direct-authority-v1"
+        and value.get("instruction") == "complete P3B-RA1"
+        and value.get("definition") == definition
+        and value.get("definition_sha256") == "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d"
+        and file_hash(ROOT / definition) == value["definition_sha256"]
+        and all(type(value.get(k)) is int and value[k] == v for k, v in expected.items())
+        and all(value.get(k) is False for k in ("target_is_hard_abort", "keys_authorized",
+            "original_folder_access_authorized", "frozen_control_edits_authorized", "old_ledgers_reopened")),
+        "RA1 direct offline authority differs")
+    return value
+
+
+def bootstrap_capture_path(raw: str) -> Path:
+    """A new post-collector sink, separate from the closed BD1 namespace."""
+    release_authority()
+    target = safe(Path(raw))
+    preflight = BASE / "ra1-unit-preflight-v1"
+    allowed_unit = target.parent == preflight and target.name in {"suite-1", "suite-2", "suite-3"}
+    require((allowed_unit or target == BASE / recovery_config()["verification"]) and target.is_dir(),
+        "RA1 diagnostic output escaped its admitted namespace")
+    return target
+
+
 def source_identity() -> dict:
-    recovery_config()
+    release_authority()
     or1_definition = "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md"
     or1 = read(ROOT / "evidence/phase3b-or1-v1/authority.json")
     require(or1.get("definition") == or1_definition
@@ -406,6 +460,16 @@ def source_identity() -> dict:
             files[target.relative_to(ROOT).as_posix()] = file_hash(target)
     for name in SOURCE_INPUTS:
         files[name] = file_hash(ROOT / name)
+    config = recovery_config()
+    copied = f"runs/{PREFIX}/{config['verification']}/external-reviews/packet-review-ra1-c{config['candidate']}-v2"
+    masters = {name: "evidence/phase3b-ra1-v1/packet-plan-v2/" + name for name in
+        ("PLAN.md", "plan.json", "review_packet_ra1.py", "cold_replay_ra1.py", "cold_replay.py", "parameterization.diff", "ast-delta-proof.json")}
+    masters["packet-plan-static-review-v2.json"] = "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v2.json"
+    for name, master in masters.items():
+        expected = file_hash(ROOT / master)
+        retained = copied + "/" + name
+        require(file_hash(ROOT / retained) == expected, "current candidate packet reviewer copy differs")
+        files[retained] = expected
     return {"kind": "phase3b-s2-source-v1", "parent_source_sha256": parent["sha256"],
             "H1_source_sha256": parent["H1_source_sha256"], "I1_source_sha256": parent["I1_source_sha256"],
             "historical_document_alias": aliases,

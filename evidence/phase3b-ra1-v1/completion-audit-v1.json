@@ -1,0 +1,85 @@
+{
+  "achieved": false,
+  "kind": "phase3b-ra1-completion-audit-v1",
+  "next_requirement_decision": "proposed RA1-AM1 changes one positive fixture budget plus explicit engineering continuation; no approval inferred",
+  "no_new_runtime_admission_authorized": true,
+  "objective": "complete P3B-RA1",
+  "real_API_spend_usd": 0,
+  "recorded_at_utc": "2026-11-04T07:41:21.752602+00:00",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/phase3b-ra1-v1/authority.json",
+        "evidence/phase3b-ra1-v1/preflight-admissions/suite-1.json"
+      ],
+      "item": "authority and bounded counters",
+      "status": "established; one preflight set consumed"
+    },
+    {
+      "evidence": [
+        "runs/phase3b-seq2-v1/ra1-component-v3",
+        "evidence/phase3b-ra1-v1/outcome-v1.json"
+      ],
+      "item": "current integration and component checks",
+      "status": "component checks passed; not a release gate"
+    },
+    {
+      "evidence": [
+        "evidence/phase3b-ra1-v1/preflight-failure-v1.json",
+        "evidence/phase3b-ra1-v1/reviews/unit-suite-1-failure-review-v1.json"
+      ],
+      "item": "complete current unprofiled Linux/Windows preflight",
+      "status": "FAILED Linux case4;122unrun;Windows notstarted"
+    },
+    {
+      "item": "prospective candidate admission and fresh execution namespaces",
+      "status": "not reached"
+    },
+    {
+      "item": "all twelve current release-gate groups",
+      "status": "missing"
+    },
+    {
+      "item": "full main native/fixed mock worklist",
+      "status": "not started"
+    },
+    {
+      "item": "saved resume and eight byte-identical reports",
+      "status": "not started"
+    },
+    {
+      "item": "distinct supervised S13 and both actual I1 handshakes",
+      "status": "not started"
+    },
+    {
+      "evidence": [
+        "evidence/phase3b-ra1-v1/reviews/component-static-failure-review-v1.json",
+        "evidence/phase3b-ra1-v1/reviews/unit-suite-1-failure-review-v1.json"
+      ],
+      "item": "actual invoked containment and owner cleanup",
+      "status": "reviewed for component/unit invocations only; no full campaign claim"
+    },
+    {
+      "item": "independent same-source complete gate acceptance",
+      "status": "missing"
+    },
+    {
+      "item": "actual archive manifest/member hashes/CRC/index acceptance",
+      "status": "not produced"
+    },
+    {
+      "item": "extracted-only zero-generation cold replay",
+      "status": "not started"
+    },
+    {
+      "item": "actual accepted-packet resolver positive/negative proof",
+      "status": "missing; pure fixture negatives do not substitute"
+    },
+    {
+      "item": "accepted-kit runbook/accounting/reviewed publication",
+      "status": "accepted-kit absent; stopped-product runbook and publication being completed"
+    }
+  ],
+  "scope_not_redefined": true,
+  "source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2"
+}

@@ -124,15 +124,18 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
     gate = read((release / "offline-gate.json").relative_to(ROOT).as_posix())
     acceptance_name = f"evidence/{PREFIX}/independent-acceptance.json"
     if acceptance is not None or packet_stem is not None:
-        config_name = "evidence/phase3b-or1-v1/release-config.json"
+        config_name = "evidence/phase3b-ra1-v1/release-config.json"
         config = read(config_name)
         number = config.get("candidate")
-        if (mode != "offline" or acceptance is None or type(number) is not int or number not in (1, 2, 3)
+        if (mode != "offline" or acceptance is None or type(number) is not int or number not in (1, 2)
+                or config.get("kind") != "phase3b-ra1-release-config-v1"
+                or config.get("authority") != "evidence/phase3b-ra1-v1/authority.json"
+                or config.get("verification") != "verification-ra1-v" + str(number)
                 or config.get("verification") != verification.name
                 or digest(safe(config_name).read_bytes()) != study["source"]["files"].get(config_name)
-                or packet_stem != f"offline-kit-or1-c{number}"
-                or acceptance != ROOT / f"evidence/phase3b-or1-v1/candidate-{number}-independent-acceptance.json"):
-            raise ValueError("OR1 versioned packet configuration differs")
+                or packet_stem != f"offline-kit-ra1-c{number}"
+                or acceptance != ROOT / f"evidence/phase3b-ra1-v1/candidate-{number}-independent-acceptance.json"):
+            raise ValueError("RA1 versioned packet configuration differs")
         acceptance_name = acceptance.relative_to(ROOT).as_posix()
     acceptance_receipt = read(acceptance_name)
     bindings = {key: study[key] for key in
@@ -211,7 +214,7 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
         include(OFFLINE_RECEIPT)
     include(acceptance_name)
     if packet_stem is not None:
-        walk(safe("evidence/phase3b-or1-v1/admissions"))
+        walk(safe("evidence/phase3b-ra1-v1/admissions"))
     # Navigation is a dated packet snapshot, separate from immutable code inputs.
     include("CURRENT_SPEC.md")
     include("PHASE3B_RUNBOOK.md")

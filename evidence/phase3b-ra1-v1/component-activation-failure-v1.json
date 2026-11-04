@@ -1,0 +1,13 @@
+{
+  "cause_observed": "new sibling operator.py was imported by stdlib collections in place of stdlib operator, producing re import circularity",
+  "charge_seconds": 40,
+  "correction": "controller renamed new file ra1_operator.py and its source-input binding",
+  "error_type": "AttributeError",
+  "failed_before_main": true,
+  "failed_entry": "python -B evidence/phase3b-ra1-v1/effort.py --mark active",
+  "financial_or_provider_activity": false,
+  "interim_observer_command": "python -P -B evidence/phase3b-ra1-v1/effort.py",
+  "kind": "phase3b-ra1-component-activation-failure-v1",
+  "phase": "cheap host integration before release/preflight",
+  "preflight_candidate_campaign_starts": 0
+}

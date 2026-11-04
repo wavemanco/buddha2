@@ -1,0 +1,42 @@
+{
+  "actual_independent_command": [
+    "docker",
+    "inspect",
+    "--format",
+    "{{json .State.Running}}",
+    "2904cc5d21804ca34741b8a22776fd61de53130955c6deecd10939bc5f2f0442"
+  ],
+  "actual_independent_exit_code": 1,
+  "actual_independent_output": "\nerror: no such object: 2904cc5d21804ca34741b8a22776fd61de53130955c6deecd10939bc5f2f0442\n",
+  "component_accepted": false,
+  "eligible_next_revision": "New immutable packet-plan-v2 plus specific format/type/import/comment corrections only, re-bound exact files and independent review before execution; old observer plan and old generic worker preserved",
+  "files": {
+    "evidence/phase3b-ra1-v1/component-manifest-v4.json": "538f2e5548262ba118f2e314c3ed6963a2ee12273055bd4772ed0d1b97e85544",
+    "runs/phase3b-seq2-v1/ra1-component-v2/cleanup.json": "03e36dd631d2058334f3e32ccd0be2be37093ca7e2ea72333e917bc9f460a231",
+    "runs/phase3b-seq2-v1/ra1-component-v2/result.json": "30364c319d757a34180a8dd9f5828b0f572e6528436c66b3e820462942b9923c",
+    "runs/phase3b-seq2-v1/ra1-component-v2/runtime/ra1-component-v2/statics.json": "949c52a7d7dc35aa1c96f0771aedd5493eea135716f656782c24a48df7b98834"
+  },
+  "kind": "phase3b-ra1-independent-component-static-failure-review-v1",
+  "observed_at_utc": "2026-11-04T04:39:39.757528+00:00",
+  "owner": "2904cc5d21804ca34741b8a22776fd61de53130955c6deecd10939bc5f2f0442",
+  "owner_absence_confirmed": true,
+  "passed": true,
+  "preflight_or_release_admissions": 0,
+  "real_provider_calls": 0,
+  "required_unchanged": [
+    "all24 A0 control bytes",
+    "all acceptance criteria",
+    "SDK/socket/process traps",
+    "snapshot and report algorithm",
+    "paths and containment",
+    "deadlines and cleanup",
+    "no real calls or credentials"
+  ],
+  "reviewer": "/root/ra1_path_review",
+  "scope": "Actual failed affected statics, eligibility of narrow pre-freeze correction and independent owner absence",
+  "static_exit_codes": [
+    1,
+    1,
+    1
+  ]
+}

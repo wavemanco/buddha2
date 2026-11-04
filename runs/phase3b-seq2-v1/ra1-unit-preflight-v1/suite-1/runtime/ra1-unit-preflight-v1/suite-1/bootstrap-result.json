@@ -1,0 +1,8 @@
+{
+  "canonical_error_type": "canonical_timeout",
+  "canonical_status": "failed",
+  "cleanup_proof": "stopped",
+  "report_status": "unavailable",
+  "visibility_status": "failed",
+  "worker_stopped": true
+}

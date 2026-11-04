@@ -1,0 +1,32 @@
+{
+  "AM1_approved": false,
+  "admissions_consistent_with_failed_first_preflight_and_no_candidate": true,
+  "arithmetic": {
+    "actor_sum_and_fixed_charge_addition_exact": true,
+    "conservative_total_hours": "7.2277711217",
+    "conservative_total_seconds": "26019.976038",
+    "original_target_seconds": 14400,
+    "remaining_to_target_seconds": "-11619.976038",
+    "retained_fixed_charges_seconds": 220,
+    "sum_of_raw_actor_ACTIVE_intervals_seconds": "25799.976038"
+  },
+  "certified_actual_focused_work_claimed": false,
+  "deduction_or_reset_claimed": false,
+  "input": "evidence/phase3b-ra1-v1/closure-accounting-v1.json",
+  "input_sha256": "ec09c60bb5b6f2fdefdf159bc9bffc3a3b56863390b0a673b16198ee1a9e9366",
+  "interpretation_correct": true,
+  "kind": "phase3b-ra1-independent-closure-accounting-snapshot-review-v1",
+  "limits": [
+    "Reviewed immutable snapshot arithmetic and its stated conservative interpretation; did not independently replay mutable effort ledgers",
+    "The unobserved historical ACTIVE gap remains fully retained rather than certified as focused work",
+    "Later finite closure/publication effort is outside this snapshot and must be retained in final closed-actor accounting",
+    "No project runtime, test, credential or provider call occurred for this review"
+  ],
+  "new_acceptance_authorized": false,
+  "observed_at_utc": "2026-11-04T07:45:08.987443+00:00",
+  "retroactive_milestone_reviews_claimed": false,
+  "review_milestones_reached_field_interpretation": "Arithmetic threshold crossings only; not evidence that progress reviews actually happened",
+  "review_passed": true,
+  "reviewer": "/root/ra1_closure_review",
+  "snapshot_is_final_actor_total": false
+}

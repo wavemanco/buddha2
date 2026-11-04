@@ -1,0 +1,41 @@
+{
+  "actual_delta_verified_against_preserved_v1": true,
+  "candidate_or_runtime_admitted": false,
+  "criteria_clock_trap_snapshot_report_io_logic_changes": false,
+  "definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "eligibility": "Unfrozen pre-admission packaging/observer correction under definition114; all current-source checks still required",
+  "files": {
+    "evidence/phase3b-ra1-v1/packet-plan-v2/PLAN.md": "6b459b8d2a31e07d4b592c4d64448aef9b56e1b9180a7ce0e9fdb8e4f7e87a64",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/ast-delta-proof.json": "e19c19d6ccf079d6db1a5fd2f18adc30e9ce36836ef83046998464cdab09b34e",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py": "2316f2305282e014221ae7c19c474e90b4691a31dac146095fd022df559537d7",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/parameterization.diff": "43a026b1a3a349f66f335888dd80547f0a271553b755beff4be3700e586bd56b",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/plan.json": "ed4918fafc0c0b22da5b7d1c2e79afcbb658cc2867f9f91fcaecc75d77963c2a",
+    "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py": "2713f3e8ee1979c1a825daa4abb2bbac50beba66981857eda508e4c7c6b60301"
+  },
+  "independently_reproduced_narrow_ast_checks": {
+    "cold_replay.py": true,
+    "cold_replay_ra1.py": true,
+    "review_packet_ra1.py": true
+  },
+  "kind": "phase3b-ra1-independent-packet-plan-static-review-v2",
+  "new_worker_sha256": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4",
+  "normalization_limit": "Only exact documented annotation, import, diagnostic provenance and copied-directory substitutions; no runtime/import-order equivalence claim",
+  "observed_at_utc": "2026-11-04T04:43:31.698431+00:00",
+  "packet_accepted": false,
+  "prior_v1_preserved": true,
+  "project_modules_imported": false,
+  "real_provider_calls": 0,
+  "required_before_execution": [
+    "Exact copied8files including this receipt bound before preflight/source freeze",
+    "Current all12 gate and nested supervision independent review",
+    "Actual packager/source/command/schema bindings",
+    "Physical archive hash/CRC/inventory and extraction",
+    "Exact cold owner config/admission/cleanup under unchanged7200runtime/absolute60cleanup",
+    "Final packet acceptance and readonly resolver proof"
+  ],
+  "reviewer": "/root/ra1_path_review",
+  "runtime_archive_or_extraction_executed": false,
+  "static_review_passed": true,
+  "worker_is_byte_identical_to_historical": false
+}

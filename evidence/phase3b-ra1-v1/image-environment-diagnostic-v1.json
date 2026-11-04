@@ -1,0 +1,31 @@
+{
+  "container_created_or_started": false,
+  "environment_variable_names": [
+    "BUDDHA2_NB_UPSTREAM",
+    "BUDDHA2_OFFLINE",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "GPG_KEY",
+    "HARNESS2_ROOT",
+    "HF_DATASETS_OFFLINE",
+    "HF_HUB_OFFLINE",
+    "LANG",
+    "NOVELTYBENCH_ROOT",
+    "OMP_NUM_THREADS",
+    "PATH",
+    "PHASE3A_BUN",
+    "PHASE3A_OPENCODE",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "PYTHONPATH",
+    "PYTHONUNBUFFERED",
+    "PYTHON_SHA256",
+    "PYTHON_VERSION",
+    "TMPDIR",
+    "TOKENIZERS_PARALLELISM",
+    "TRANSFORMERS_OFFLINE"
+  ],
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "kind": "phase3b-ra1-pinned-image-environment-name-diagnostic-v1",
+  "raw_values_retained": false
+}

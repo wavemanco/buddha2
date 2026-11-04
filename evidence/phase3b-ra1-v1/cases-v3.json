@@ -1,0 +1,130 @@
+{
+  "API_cap_usd": 0,
+  "actual_admission_counts_at_definition": {
+    "S13": 0,
+    "candidate": 0,
+    "cold": 0,
+    "main": 0,
+    "preflight": 0,
+    "saved": 0
+  },
+  "component_cases": [
+    "Actual managed-child executable path and Unicode/spaced argument propagation",
+    "Direct sibling effort.py script import regression after stdlib-operator shadowing failure",
+    "Actual H1 readonly source denial and runtime exclusive writer",
+    "Actual composed.runtime_output under fresh fixture-only verification-name patch; runtime accepts, host/base/sibling/traversal reject",
+    "Only RA1 pure regression module, no bootstrap/native/worklist",
+    "Current verify.static_commands Ruff/Mypy/Bandit across all owned RA1 seams and immutable worker code",
+    "Exact owned image/network/mount/resource/entrypoint/command/environment inspection before start and60-second cleanup"
+  ],
+  "component_cleanup_is_absolute": true,
+  "component_cleanup_seconds": 60,
+  "component_command": [
+    "python",
+    "-B",
+    "evidence/phase3b-ra1-v1/component_checks.py"
+  ],
+  "component_create_seconds": 60,
+  "component_execution_seconds": 600,
+  "component_inspect_seconds": 60,
+  "component_is_full_unit_preflight_or_worklist": false,
+  "component_mounts": {
+    "/results/phase3b-seq2-v1": "fresh component-only runtime subtree writable",
+    "/workspace": "research project readonly"
+  },
+  "component_output": "runs/phase3b-seq2-v1/ra1-component-v2",
+  "component_positive_bootstrap_calls": 0,
+  "component_prospective_packet_copy": "evidence/phase3b-ra1-v1/packet-copy-c1.json",
+  "definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "eligible_correction": "Replace guessed image environment-name whitelist with actual pinned credential-free H1 image names, retaining all mount/resource/source guards.",
+  "environment_diagnostic": "evidence/phase3b-ra1-v1/image-environment-diagnostic-v1.json",
+  "kind": "phase3b-ra1-integration-cases-v3",
+  "old_ledgers_reopened": false,
+  "preflight_commands": [
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/run_units.py",
+      "freeze",
+      "suite",
+      "<1..3>"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/run_units.py",
+      "freeze",
+      "windows",
+      "<1..3>"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/run_units.py",
+      "run",
+      "suite",
+      "<1..3>"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/run_units.py",
+      "run",
+      "windows",
+      "<1..3>"
+    ]
+  ],
+  "previous_component": "created/inspected/rejected before start; exact owner settled; no bootstrap/runtime/worklist",
+  "recorded_at_utc": "2026-11-04T04:29:45.479695+00:00",
+  "release_commands": [
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "candidate"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "main"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "replay"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "windows"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "supervised"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "seal"
+    ],
+    [
+      "python",
+      "-B",
+      "evidence/phase3b-ra1-v1/ra1_operator.py",
+      "host",
+      "--supervisor-agent",
+      "<actual-running-keyless-agent>"
+    ]
+  ],
+  "same_source_retry_until_green_authorized": false,
+  "scope": "preserve all121 existingIDs and add five pure RA1 regressionIDs, preserving allfrozencontrols",
+  "supersedes_component_cases": "evidence/phase3b-ra1-v1/cases-v2.json",
+  "supersedes_unexecuted_cases": "evidence/phase3b-ra1-v1/cases-v1.json",
+  "unit_mode_bootstrap_authorized": false
+}

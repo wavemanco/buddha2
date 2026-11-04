@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "authority_bounded_timestamps": true,
+    "engineering_transition_is_not_financial_or_runtime_uncertainty": true,
+    "filename_validation_before_metadata": true,
+    "ordinary_leaf_only": true,
+    "positive_integer_seconds": true,
+    "sum_charges_once_per_status": true,
+    "target_crossing_return_code": 0,
+    "target_is_hard_abort": false
+  },
+  "executed_runtime_or_tests": false,
+  "files": {
+    "evidence/phase3b-ra1-v1/authority.json": "26a3b2f3493ee1a5048803acbb3943a733f9924c756b864bb7c05d0240b7635e",
+    "evidence/phase3b-ra1-v1/charges/root-transition-1.json": "9a88131471711730df920c06ca025d31ca546efc933a683219904ebaca856dc4",
+    "evidence/phase3b-ra1-v1/effort.py": "c9c2877fb673164772cd4143de648bebd1e3f0a3cedd5162c291547e61aae606"
+  },
+  "kind": "phase3b-ra1-independent-effort-charge-review-v1",
+  "observed_at_utc": "2026-11-04T04:25:19.361526+00:00",
+  "real_provider_calls": 0,
+  "reviewer": "/root/ra1_path_review",
+  "scope": "Owned conservative charge validation and target policy only; no runtime acceptance",
+  "static_review_passed": true
+}

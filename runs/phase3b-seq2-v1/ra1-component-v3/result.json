@@ -1,0 +1,32 @@
+{
+  "container_environment": [
+    "BUDDHA2_IMAGE_ID=sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "BUDDHA2_NB_UPSTREAM=/workspace/.upstream/novelty-bench",
+    "BUDDHA2_OFFLINE=1",
+    "BUDDHA2_OUTPUT_ROOT=/results",
+    "BUDDHA2_TEST_OUTPUT_ROOT=/results/acceptance",
+    "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+    "HARNESS2_ROOT=/workspace/.upstream/harness2",
+    "HF_DATASETS_OFFLINE=1",
+    "HF_HUB_OFFLINE=1",
+    "LANG=C.UTF-8",
+    "NOVELTYBENCH_ROOT=/workspace/.upstream/novelty-bench",
+    "OMP_NUM_THREADS=1",
+    "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PHASE3A_BUN=/usr/local/bin/bun",
+    "PHASE3A_OPENCODE=/opt/phase3a-opencode",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "PYTHONNOUSERSITE=1",
+    "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2:/workspace",
+    "PYTHONUNBUFFERED=1",
+    "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+    "PYTHON_VERSION=3.12.15",
+    "TMPDIR=/tmp",
+    "TOKENIZERS_PARALLELISM=false",
+    "TRANSFORMERS_OFFLINE=1"
+  ],
+  "generation_calls": 0,
+  "passed": true,
+  "preflight_sets_or_release_admissions": 0,
+  "real_provider_calls": 0
+}

@@ -1,0 +1,70 @@
+{
+  "approval_needed_for": [
+    "Changing the positive bootstrap acceptance budget from4/1 to30/1",
+    "Fresh two-hour aggregate focused continuation target on top of retained prior effort",
+    "Resuming full remaining RA1 acceptance under the original preserved repetition and safety limits"
+  ],
+  "blocking_issues_found": [],
+  "checked_proposal_terms": {
+    "A0_24_controls_negative_and_historical_tests_unchanged_required": true,
+    "API_cap_usd": 0,
+    "SDK_guard_changes_excluded": true,
+    "additional_repetition_allowance": 0,
+    "all_original_counters_and_failures_carried_forward": true,
+    "candidate_main_S13_saved_cold_caps_each": 2,
+    "cleanup_reserve_seconds": 1,
+    "complete_remaining_RA1_acceptance_scope_retained": true,
+    "explicitly_changes_old_three_second_receipt_criterion": true,
+    "minimum_closure_seconds": 2700,
+    "new_prospective_aggregate_focus_target_seconds": 7200,
+    "new_reviews_at_additional_seconds": [
+      3600,
+      5400,
+      7200
+    ],
+    "new_target_added_on_top_of_retained_history": true,
+    "next_counted_full_preflight_set": 2,
+    "old_ACTIVE_gap_deduction_seconds": 0,
+    "old_failed_invocation_remains_failure": true,
+    "old_gap_not_certified_focus": true,
+    "original_hard_stops_retained_except_explicit_positive_fixture_budget": true,
+    "preflight_cap": 3,
+    "production_600_total_default15_cleanup_unchanged": true,
+    "profiling_warmup_positive_probes_and_unchanged_retries_excluded": true,
+    "proposed_receipt_window_approximately_seconds": 29,
+    "same_real_spawn_imports_and_three_assertions_required": true,
+    "single_positive_functional_privacy_test_total_seconds": 30
+  },
+  "disposition": "Coherent explicit amendment proposal for a user decision; not approval or runtime authority",
+  "failed_source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2",
+  "independent_static_inventory": {
+    "all24_A0_control_hashes_match_original_A0_source_map": true,
+    "all_current_ordinary_source_hashes_match_failed_manifest": 760,
+    "current_manifest_unit_ids": 126,
+    "current_source_still_uses_total4_cleanup1": true,
+    "current_unit_modules_AST_parsed_without_import": 21,
+    "direct_core_view_collect_calls": 1,
+    "last_three_assertions_unchanged_in_current_source": true,
+    "location": "followups/phase3b_seq2_v1/test_bootstrap.py:118",
+    "no_separate_elapsed_time_assertion_in_that_method": true
+  },
+  "kind": "phase3b-ra1-am1-independent-proposal-review-v1",
+  "limitations": [
+    "The 30-second allowance is prospective; no measured latency percentile, causal repair, reliability improvement or successful amended run is established",
+    "The new two-hour target is a planning request; remaining integrated acceptance feasibility and actual effort are not demonstrated by this static proposal review",
+    "Explicit user approval, amendment hash/source bindings, affected static checks and independent full-preflight prospective review are still required before set2",
+    "This review does not inspect retained capture payloads, canonical historical streams or final accounting/publication"
+  ],
+  "new_real_API_spend_usd": 0,
+  "new_runtime_admission_authorized": false,
+  "observed_at_utc": "2026-11-04T07:44:25.007443+00:00",
+  "original_definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "original_workspace_accessed": false,
+  "project_runtime_imports_or_tests_executed": false,
+  "proposal_approved": false,
+  "proposal_implemented": false,
+  "proposal_path": "specifications/amendments/phase3b-release-acceptance-am1-1.0.md",
+  "proposal_sha256": "5dfad6322a72f029cbbcd17824a384774a6787fa9ced969e6cc04b4b134ea1e1",
+  "review_passed": true,
+  "reviewer": "/root/ra1_closure_review"
+}

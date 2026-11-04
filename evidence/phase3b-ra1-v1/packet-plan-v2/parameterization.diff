@@ -1,0 +1,89 @@
+--- ra1-plan-v1/cold_replay.py
++++ ra1-plan-v2/cold_replay.py
+@@ -22,7 +22,7 @@
+ PRIVATE = {"credential-binding.json", ".writer.lock", ".env", "auth.json", "credentials.json", "__pycache__", ".cache", ".mypy_cache", ".ruff_cache", ".pytest_cache", ".git"}
+ STREAMS = {f"evidence/phase2-release-r018/runtime/{stem}.{stream}.log" for stem in
+            ("current-source-historical-rejected", "final-static-checks", "full-suite", "historical-am1-resume", "historical-r010-replay", "independent-full-rehearsal", "unreviewed-expansion-rejected") for stream in ("stdout", "stderr")}
+-attempts = []
++attempts: list[str] = []
+ 
+ 
+ def need(value, message):
+@@ -94,9 +94,9 @@
+                        "socket.create_connection", "socket.socket.connect", "socket.socket.connect_ex", "socket.getaddrinfo",
+                        "subprocess.Popen", "subprocess.run", "os.system"):
+             stack.enter_context(patch(target, side_effect=blocked(target)))
++        from buddha2 import phase2_native
+         from followups.phase3b_seq2_v1 import workflow
+         from followups.phase3b_seq2_v1.report import NAMES, write_report
+-        from buddha2 import phase2_native
+         native_import_origins = {}
+         original_import = phase2_native._native_modules
+         def observe_native_import(upstream):
+--- ra1-plan-v1/cold_replay_ra1.py
++++ ra1-plan-v2/cold_replay_ra1.py
+@@ -1,9 +1,11 @@
+-"""Bind the unchanged reviewed cold algorithm to the extracted RA1 identity."""
++"""Bind the reviewed cold algorithm with static repairs to the extracted RA1 identity."""
+ from __future__ import annotations
++
+ import argparse
+ import hashlib
+ import importlib.util
+ from pathlib import Path
++from typing import Any
+ 
+ p = argparse.ArgumentParser(__doc__)
+ p.add_argument("--index-sha256", required=True)
+@@ -15,12 +17,12 @@
+     if len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
+         raise ValueError("invalid frozen cold identity")
+ path = Path(__file__).resolve().with_name("cold_replay.py")
+-if not path.is_relative_to(Path("/workspace")) or hashlib.sha256(path.read_bytes()).hexdigest() != "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0":
+-    raise ValueError("extracted unchanged cold worker differs")
++if not path.is_relative_to(Path("/workspace")) or hashlib.sha256(path.read_bytes()).hexdigest() != "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4":
++    raise ValueError("extracted RA1 cold worker differs")
+ spec = importlib.util.spec_from_file_location("ra1_unchanged_cold", path)
+ if spec is None or spec.loader is None:
+     raise ValueError("cold worker unavailable")
+-worker = importlib.util.module_from_spec(spec)
++worker: Any = importlib.util.module_from_spec(spec)
+ spec.loader.exec_module(worker)
+ worker.SOURCE = a.source_sha256
+ worker.STUDY = a.study_sha256
+--- ra1-plan-v1/review_packet_ra1.py
++++ ra1-plan-v2/review_packet_ra1.py
+@@ -4,7 +4,6 @@
+ import argparse
+ import hashlib
+ import json
+-import os
+ import stat
+ import zipfile
+ from datetime import datetime, timezone
+@@ -199,13 +198,14 @@
+     output = ordinary(REVIEW / "cold-output-ra1", missing=True)
+     need(not output.exists(), "cold output must be fresh")
+     output.mkdir()
+-    script_name = f"runs/{PREFIX}/{VERIFICATION}/external-reviews/packet-review-ra1-c{CANDIDATE}/cold_replay_ra1.py"
++    script_name = f"runs/{PREFIX}/{VERIFICATION}/external-reviews/packet-review-ra1-c{CANDIDATE}-v2/cold_replay_ra1.py"
+     need(script_name in inventory, "frozen independent cold worker absent from archive")
+     command = ["docker", "create", "--pull=never", "--network", "none", "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges", "--pids-limit", "256", "--memory", "4g", "--cpus", "2", "--entrypoint", "python",
+                "--mount", f"type=bind,source={extracted},target=/workspace,readonly",
+                "--mount", f"type=bind,source={extracted / 'runs'},target=/results,readonly",
+                "--mount", f"type=bind,source={output},target=/results/{PREFIX}/packet-review-output",
+-               "--tmpfs", "/tmp:rw,nosuid,nodev,size=1073741824,mode=1777", "--workdir", "/workspace",
++               # The literal is the bounded isolated Docker tmpfs, not a host temp-file path.
++               "--tmpfs", "/tmp:rw,nosuid,nodev,size=1073741824,mode=1777", "--workdir", "/workspace",  # nosec B108
+                "-e", "PYTHONDONTWRITEBYTECODE=1", "-e", "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2:/workspace",
+                "-e", "BUDDHA2_OUTPUT_ROOT=/results", "-e", f"BUDDHA2_IMAGE_ID={H1}", "-e", "BUDDHA2_OFFLINE=1",
+                "-e", "PHASE3A_OPENCODE=/opt/phase3a-opencode", "-e", "PHASE3A_BUN=/usr/local/bin/bun", H1,
+@@ -236,7 +236,7 @@
+     CANDIDATE = args.candidate
+     VERIFICATION = "verification-ra1-v" + str(CANDIDATE)
+     PACKET_STEM = "offline-kit-ra1-c" + str(CANDIDATE)
+-    REVIEW = ROOT / "runs" / PREFIX / VERIFICATION / "external-reviews" / ("packet-review-ra1-c" + str(CANDIDATE))
++    REVIEW = ROOT / "runs" / PREFIX / VERIFICATION / "external-reviews" / ("packet-review-ra1-c" + str(CANDIDATE) + "-v2")
+     need(all(len(value) == 64 and all(c in "0123456789abcdef" for c in value) for value in (SOURCE, STUDY))
+          and SOURCE_COUNT > 0, "invalid prospective source/study binding")
+     review()

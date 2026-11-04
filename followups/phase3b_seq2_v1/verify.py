@@ -153,6 +153,30 @@ def normal_fixture_path(branch: dict, results: dict) -> bool:
         and native._selector_normal(branch.get("editor_evidence", {}), selection, results))
 
 
+def static_commands() -> list[list[str]]:
+    commands = [
+        [sys.executable, "-B", "-m", "ruff", "check", "--no-cache", "followups/phase3b_seq2_v1",
+         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
+         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py", "evidence/phase3b-ra1-v1/effort.py", "evidence/phase3b-ra1-v1/check_effort.py", "evidence/phase3b-ra1-v1/ra1_operator.py", "evidence/phase3b-ra1-v1/unit_preflight.py", "evidence/phase3b-ra1-v1/run_units.py", "evidence/phase3b-ra1-v1/component_checks.py", "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py"],
+        [sys.executable, "-B", "-m", "mypy", "--explicit-package-bases", "--follow-imports", "silent",
+         "--ignore-missing-imports", "--no-incremental", "--cache-dir", "/tmp/s2-mypy",  # nosec B108
+         "followups/phase3b_seq2_v1", "evidence/phase3b-seq2-v1/package_public.py",
+         "evidence/phase3b-seq2-c2-v1/composed_acceptance.py", "evidence/phase3b-seq2-c2-v1/run_boundary.py",
+         "evidence/phase3b-seq2-c2-v1/run_composed.py", "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+         "evidence/phase3b-la1-v1/host_acceptance.py", "evidence/phase3b-or1-v1/writer_domain_probe.py",
+         "evidence/phase3b-or1-v1/path_domain_probe.py", "evidence/phase3b-ra1-v1/effort.py", "evidence/phase3b-ra1-v1/check_effort.py", "evidence/phase3b-ra1-v1/ra1_operator.py", "evidence/phase3b-ra1-v1/unit_preflight.py", "evidence/phase3b-ra1-v1/run_units.py", "evidence/phase3b-ra1-v1/component_checks.py", "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py"],
+        [sys.executable, "-B", "-m", "bandit", "-q", "-r", "followups/phase3b_seq2_v1",
+         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
+         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py", "evidence/phase3b-ra1-v1/effort.py", "evidence/phase3b-ra1-v1/check_effort.py", "evidence/phase3b-ra1-v1/ra1_operator.py", "evidence/phase3b-ra1-v1/unit_preflight.py", "evidence/phase3b-ra1-v1/run_units.py", "evidence/phase3b-ra1-v1/component_checks.py", "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py", "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py", "--exclude",
+         ",".join(p.name for p in Path(__file__).parent.glob("test*.py")) + ",deadline_regression.py"],
+    ]
+    return commands
+
+
 def inside(output: Path, *, saved_replay: bool = True) -> int:
     from buddha2.artifacts import file_hash
 
@@ -170,26 +194,7 @@ def inside(output: Path, *, saved_replay: bool = True) -> int:
     for fixture in (True, False):
         save(output / "release" / ("mock-grant.json" if fixture else "live-grant.json"),
              workflow.make_grant(study_path, fixture))
-    commands = [
-        [sys.executable, "-B", "-m", "ruff", "check", "--no-cache", "followups/phase3b_seq2_v1",
-         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
-         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
-         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
-         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py"],
-        [sys.executable, "-B", "-m", "mypy", "--explicit-package-bases", "--follow-imports", "silent",
-         "--ignore-missing-imports", "--no-incremental", "--cache-dir", "/tmp/s2-mypy",  # nosec B108
-         "followups/phase3b_seq2_v1", "evidence/phase3b-seq2-v1/package_public.py",
-         "evidence/phase3b-seq2-c2-v1/composed_acceptance.py", "evidence/phase3b-seq2-c2-v1/run_boundary.py",
-         "evidence/phase3b-seq2-c2-v1/run_composed.py", "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
-         "evidence/phase3b-la1-v1/host_acceptance.py", "evidence/phase3b-or1-v1/writer_domain_probe.py",
-         "evidence/phase3b-or1-v1/path_domain_probe.py"],
-        [sys.executable, "-B", "-m", "bandit", "-q", "-r", "followups/phase3b_seq2_v1",
-         "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
-         "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
-         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
-         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py", "--exclude",
-         ",".join(p.name for p in Path(__file__).parent.glob("test*.py")) + ",deadline_regression.py"],
-    ]
+    commands = static_commands()
     statics = []
     for index, command in enumerate(commands):
         result = execute(command)

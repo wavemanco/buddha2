@@ -1,0 +1,92 @@
+{
+  "admissions": {
+    "S13": 0,
+    "Windows": 0,
+    "candidate": 0,
+    "cold": 0,
+    "main": 0,
+    "preflight_sets": 1,
+    "saved": 0
+  },
+  "admissions_stopped_before_target_crossing_for_test_failure": true,
+  "engineering_target_met": false,
+  "financial_or_runtime_uncertainty_from_this_gap": false,
+  "fixed_conservative_charges_retained_seconds": 220,
+  "interpretation": "All raw ACTIVE intervals plus conservative charges are retained. Across the unobserved continuation gap these sums are an upper bound, not certified actual focus. No time is deducted and no original-target compliance or retroactive milestone review is asserted. Final finite review/publication can add time; final local handoff will retain the closed-actor accounting.",
+  "kind": "phase3b-ra1-closure-accounting-v1",
+  "ledger_snapshot": {
+    "active_seconds": 26019.976038,
+    "actors": [
+      {
+        "active_seconds": 300.363291,
+        "actor": "/root/ra1_closure_review",
+        "file": "closure_reviewer.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 1791.258874,
+        "actor": "/root/ra1_controller",
+        "file": "controller.jsonl",
+        "mode": "done",
+        "records": 28
+      },
+      {
+        "active_seconds": 385.852751,
+        "actor": "/root/ra1_packet",
+        "file": "packet.jsonl",
+        "mode": "done",
+        "records": 6
+      },
+      {
+        "active_seconds": 101.009411,
+        "actor": "/root/bd1_publication",
+        "file": "publisher.jsonl",
+        "mode": "done",
+        "records": 2
+      },
+      {
+        "active_seconds": 278.723605,
+        "actor": "/root/ra1_publisher",
+        "file": "publisher2.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 11055.623041,
+        "actor": "/root/ra1_path_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 32
+      },
+      {
+        "active_seconds": 11887.145065,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 32
+      }
+    ],
+    "additional_charge_seconds": 40,
+    "bootstrap_charge_seconds": 180,
+    "conservative_charge_seconds": 220,
+    "measured_seconds": 25799.976038,
+    "observed_at_utc": "2026-11-04T07:44:16.200214+00:00",
+    "remaining_to_target_seconds": -11619.976038,
+    "review_due": true,
+    "review_milestones_reached": [
+      7200,
+      10800,
+      14400
+    ],
+    "target_is_hard_abort": false,
+    "target_seconds": 14400
+  },
+  "new_acceptance_work_authorized": false,
+  "proposed_continuation": "Unapproved RA1-AM1: one test requirement revision plus fresh prospective two-hour focused continuation target; original ledger/counters not reset.",
+  "real_API_spend_usd": 0,
+  "real_provider_calls": 0,
+  "reconciliation": "evidence/phase3b-ra1-v1/effort-continuation-reconciliation-v1.json",
+  "recorded_at_utc": "2026-11-04T07:44:16.201600+00:00",
+  "snapshot_not_final_actor_total": true
+}

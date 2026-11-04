@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "actual_owner_config_required_before_start": true,
+    "check_effort_covered_by_statics": true,
+    "exact_owner_cleanup_required": true,
+    "no_positive_bootstrap_or_worklist": true,
+    "no_unit_or_candidate_admission": true,
+    "old_ledgers_untouched": true,
+    "source_copy_master_identity_in_source_capture": true,
+    "source_revision_bound_before_execution": true
+  },
+  "clocks_seconds": {
+    "cleanup_absolute": 60,
+    "container_execution": 600,
+    "create": 60,
+    "host_each": 20,
+    "inspect": 60
+  },
+  "command": [
+    "python",
+    "-B",
+    "evidence/phase3b-ra1-v1/component_checks.py"
+  ],
+  "credential_prefix_names_allowed": false,
+  "eligible_correction": "Exact24 created-container variable names equal pinned-image23 plus explicit BUDDHA2_IMAGE_ID; unstarted prior owner independently absent; all prior clocks/containment/source guards retained",
+  "environment_names_count": 24,
+  "fresh_component_output": "runs/phase3b-seq2-v1/ra1-component-v2",
+  "kind": "phase3b-ra1-independent-prospective-component-review-v4",
+  "latest_check_effort_loader_guard_hash": "70d192603c1a9d415414d6f6bcc6c64eecafe5b19e67d44729a3fdb1629428dd",
+  "manifest": "evidence/phase3b-ra1-v1/component-manifest-v4.json",
+  "manifest_sha256": "538f2e5548262ba118f2e314c3ed6963a2ee12273055bd4772ed0d1b97e85544",
+  "mounts": {
+    "/results/phase3b-seq2-v1": "fresh ra1-component-v1/runtime subtree writable",
+    "/workspace": "research checkout read-only"
+  },
+  "new_unit_preflight_or_release_admitted": false,
+  "observed_at_utc": "2026-11-04T04:37:32.223789+00:00",
+  "packet_accepted": false,
+  "passed": true,
+  "permitted_invocations_this_receipt": 1,
+  "previous_failure_review": "evidence/phase3b-ra1-v1/reviews/component-failure-cleanup-review-v1.json",
+  "prior_manifest_v3_rejected_before_execution_for_check_effort_hash_drift": true,
+  "real_provider_calls": 0,
+  "reviewed_file_count": 32,
+  "reviewer": "/root/ra1_path_review",
+  "reviewer_executed_command": false,
+  "scope": "Declared cheap host argument/direct-script checks, narrow H1 readonly/exclusive/path-domain checks, five pure RA1 regressions and shared affected statics only",
+  "workdir": "C:\\Users\\arvik\\code\\research\\Buddha2"
+}

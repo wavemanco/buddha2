@@ -1,0 +1,25 @@
+{
+  "candidate_accepted": false,
+  "checks": {
+    "bootstrap180_included_once_in_aggregate": true,
+    "closure_reserve_45_minutes": true,
+    "definition_exact": true,
+    "engineering_target_not_hard_abort": true,
+    "hard_API_counter_and_frozen_edit_bounds_match": true,
+    "old_ledgers_not_reopened": true,
+    "reviews_at_2_3_4_focused_hours": true,
+    "synthetic_target_crossing_is_not_actual_effort_or_execution": true
+  },
+  "kind": "phase3b-ra1-independent-authority-effort-review-v1",
+  "observed_at_utc": "2026-11-04T04:21:47.102868+00:00",
+  "passed": true,
+  "review_scope": "Definition, parent-recorded direct authority and target-based effort policy only; no candidate or runtime acceptance.",
+  "reviewed_raw_sha256": {
+    "evidence/phase3b-ra1-v1/authority.json": "26a3b2f3493ee1a5048803acbb3943a733f9924c756b864bb7c05d0240b7635e",
+    "evidence/phase3b-ra1-v1/effort-policy-check-v1.json": "463fd27f16ec52dd645e8bc027c679992978873d2ee7552998cf415e18c445ad",
+    "evidence/phase3b-ra1-v1/effort.py": "f9fae14619d340345fda15cd59a0e259d6174faea5aec4014d588b8e0ba79efd",
+    "specifications/amendments/phase3b-release-acceptance-1.0.md": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d"
+  },
+  "reviewer": "/root/ra1_path_review",
+  "runtime_or_test_execution_by_reviewer": false
+}

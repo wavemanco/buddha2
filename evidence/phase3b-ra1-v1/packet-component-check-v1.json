@@ -1,0 +1,42 @@
+{
+  "archive_opened_or_extracted": false,
+  "author": "/root/ra1_packet",
+  "checked_files": {
+    "cold_replay.py": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+    "cold_replay_ra1.py": "1da773b9428b6e98d3e3c8129bd436b08e356d3045ff4c69d1845d0b4be7c517",
+    "plan.json": "38ffe5650d5b3333637a2e698269de1a044194d251fdfe7fed1de934ce8727e5",
+    "review_packet_ra1.py": "5aeb0b8d2d04dd0c4d4c2e8fcd3151a6a0d73286ea833547762cd1b166b060b8"
+  },
+  "checks": [
+    "syntax:review_packet_ra1.py",
+    "syntax:cold_replay_ra1.py",
+    "syntax:cold_replay.py",
+    "reject-member:../escape",
+    "reject-member:a/../b",
+    "reject-member:/absolute",
+    "reject-member:a\\b",
+    "reject-member:a:b",
+    "reject-member:a/.env",
+    "reject-member:a/__pycache__/b",
+    "reject-member:unknown.stdout.log",
+    "reject-member:retained/source/evidence/phase2-release-r018/runtime/full-suite.stdout.log",
+    "reject-member:a/./b",
+    "reject-member:a//b",
+    "reject-json:{\"duplicate\":1,\"duplicate\":2}",
+    "reject-json:{\"number\":NaN}",
+    "reject-json:{\"number\":Infinity}",
+    "reject-json:[]",
+    "allow-exact-fourteen-canonical-paths-without-opening",
+    "canonical14-all12-fivebindings",
+    "unchanged-cold-worker-raw-sha",
+    "prospective-plan-raw-inventory"
+  ],
+  "cold_replay_executed": false,
+  "container_started": false,
+  "kind": "phase3b-ra1-packet-component-check-v1",
+  "observed_at_utc": "2026-11-04T04:22:20.874311+00:00",
+  "packet_accepted": false,
+  "passed": true,
+  "prospectively_declared": "pure parser/path negatives, syntax and schema/hash checks only",
+  "provider_calls": 0
+}

@@ -1,0 +1,44 @@
+{
+  "actual_failure_receipt": "runs/phase3b-seq2-v1/ra1-component-v2/runtime/ra1-component-v2/statics.json",
+  "actual_failure_receipt_sha256": "949c52a7d7dc35aa1c96f0771aedd5493eea135716f656782c24a48df7b98834",
+  "allowed_physical_delta": [
+    "unused stdlib os import removed",
+    "new candidate-specific copied review dirname gains -v2 suffix",
+    "comment plus B108 marker for existing isolated bounded Docker tmpfs literal; literal/argv unchanged"
+  ],
+  "allowed_worker_delta": [
+    "attempts empty-list declaration annotated list[str]",
+    "same three local imports reordered within same block after trap-registration loop, buddha2 before followups"
+  ],
+  "allowed_wrapper_delta": [
+    "docstring/error text correct new worker provenance",
+    "blank line after future import",
+    "typing.Any import and worker annotation",
+    "expected worker raw digest changed to exact v2 worker hash"
+  ],
+  "ast_comparison": "ASTs match after only the exact allowlisted normalizations below; this does not establish runtime/import-order equivalence",
+  "author": "/root/ra1_packet",
+  "criteria_clocks_traps_report_snapshot_io_changes": false,
+  "historical_OR1_worker_sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+  "kind": "phase3b-ra1-packet-v2-narrow-static-ast-delta-proof-v1",
+  "new_scripts_sha256": {
+    "cold_replay.py": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4",
+    "cold_replay_ra1.py": "2316f2305282e014221ae7c19c474e90b4691a31dac146095fd022df559537d7",
+    "review_packet_ra1.py": "2713f3e8ee1979c1a825daa4abb2bbac50beba66981857eda508e4c7c6b60301"
+  },
+  "observed_at_utc": "2026-11-04T04:42:02.697484+00:00",
+  "old_v1_files_sha256": {
+    "PLAN.md": "ac1c4dedced20090be58d6275a66f44353eb3aea7476a2bd05e61a4f07d353ee",
+    "cold_replay.py": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+    "cold_replay_ra1.py": "1da773b9428b6e98d3e3c8129bd436b08e356d3045ff4c69d1845d0b4be7c517",
+    "parameterization.diff": "4415d065ba8f0cbdeb5d091e63f2916a814bf007f56418a7d43a13361790782c",
+    "plan.json": "38ffe5650d5b3333637a2e698269de1a044194d251fdfe7fed1de934ce8727e5",
+    "review_packet_ra1.py": "5aeb0b8d2d04dd0c4d4c2e8fcd3151a6a0d73286ea833547762cd1b166b060b8"
+  },
+  "passed": true,
+  "pre_admission_repair": true,
+  "runtime_container_archive_or_cold_execution": false,
+  "worker_is_byte_identical": false,
+  "worker_new_sha256": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4",
+  "worker_old_sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0"
+}

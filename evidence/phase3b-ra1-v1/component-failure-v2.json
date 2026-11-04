@@ -1,0 +1,17 @@
+{
+  "cleanup_passed": true,
+  "diagnostic_sha256": "949c52a7d7dc35aa1c96f0771aedd5493eea135716f656782c24a48df7b98834",
+  "eligible_correction": "Versioned pre-admission own-source type/format repairs; independently reviewed new observer plan revision; no static skip/ignore and no 24-control change.",
+  "exact_static_diagnostics": "runs/phase3b-seq2-v1/ra1-component-v2/runtime/ra1-component-v2/statics.json",
+  "exit_code": 1,
+  "kind": "phase3b-ra1-component-failure-v2",
+  "preflight_candidate_main_S13_saved_cold_admissions": 0,
+  "real_provider_calls": 0,
+  "source_manifest": "evidence/phase3b-ra1-v1/component-manifest-v4.json",
+  "stage": "affected statics after five pure RA1 regressions and actual readonly/domain/host checks passed",
+  "static_exit_codes": [
+    1,
+    1,
+    1
+  ]
+}

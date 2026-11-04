@@ -1,0 +1,87 @@
+{
+  "active_positive_core_collect_case_count": 1,
+  "code_or_clock_changes_authorized_by_this_review": false,
+  "current_active_positive_case": {
+    "assertions": [
+      "worker_stopped is true",
+      "canonical_status complete",
+      "summary.import_privacy.dotenv_open_denials equals1"
+    ],
+    "call_line": 118,
+    "canonical_frame_window_seconds": 3,
+    "cleanup_seconds": 1,
+    "id": "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary",
+    "separate_elapsed_assertion": false,
+    "source": "followups/phase3b_seq2_v1/test_bootstrap.py:116",
+    "total_seconds": 4
+  },
+  "files": {
+    "followups/phase3a_h1_integrated_v1/test_bootstrap.py": "9325bbee4f825a5d924956905ac2786dee8f20820f71fd5e302917989736b8b9",
+    "followups/phase3a_h1_integrated_v1/tests_core_view.py": "117a8e59f83a1f96f62ba34562d1f90a5878184ef457e4a55da7c745e4b42657",
+    "followups/phase3a_rc1_pilot_v1/test_bootstrap.py": "67372251b16611753d3ca152141587c93b428ac74a3978965db3275d72d8dff1",
+    "followups/phase3a_rc1_pilot_v1/tests_core_view.py": "f3c5ce567065c53257624e4df63b605cfd61eae93ecbad0d3f9df347e96c2399",
+    "followups/phase3a_readiness_recovery_v1/regression.py": "c97d4b507699fbdb9d30c8d641ff4d1bee65ed7e55c4b2211f0eee906707ee85",
+    "followups/phase3a_readiness_recovery_v1/test_bootstrap.py": "6a41452bffb8ff78f4391669510c121fa77a8710d903fcd6dba0df5fb8bca023",
+    "followups/phase3a_readiness_recovery_v1/tests_core_view.py": "967bd86cd4da535dea63023fb96bb3e06a8582c42ab5cbf25febd17f8dc48383",
+    "followups/phase3b_seq2_v1/core_view.py": "ae19d5eabca90a3e5824058041f692a2b27dd988b985e1dee9675c00380cfb0c",
+    "followups/phase3b_seq2_v1/regression.py": "e52bf4e8dc7e4f9ed210fb984a67e157f668cfddecc47d0d97c92290c26a4439",
+    "followups/phase3b_seq2_v1/test_bootstrap.py": "3fcb5c3a5398600ee164f1e393b822ac832239bf4248acd8847743d627d21c99",
+    "followups/phase3b_seq2_v1/verify.py": "4d16b1ba02c6864e3f4b4ed5bb03bfe151617fcbc128f22c7f51cac94aa109ea",
+    "followups/phase3b_seq2_v1/workflow.py": "3e7b02396ca25c94fc8ad55b26e4aa3b5c83450253af6dc25191904153953704",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/manifest.json": "5f002a47e2403cccee6ac4b0cf42751374c0da87e2a138501314444675298b07"
+  },
+  "historical_not_current_S2_discovery_or_regression": {
+    "WorkerTests_helper_total_cleanup_elapsed_assert_seconds": [
+      3,
+      0.7,
+      3.5
+    ],
+    "bootstrap_total_cleanup_seconds": [
+      4,
+      1
+    ],
+    "mixed_positive_and_negative_case": "test_projection_hang_after_validated_reports_is_visibility_only",
+    "other_negative_cases": [
+      "hang partial oversized frames",
+      "start stall and unproved cleanup",
+      "provider constructor socket subprocess activity"
+    ],
+    "packages": [
+      "phase3a_h1_integrated_v1",
+      "phase3a_rc1_pilot_v1",
+      "phase3a_readiness_recovery_v1"
+    ],
+    "positive_case": "test_actual_spawn_large_bounded_frame_is_received_and_worker_stops",
+    "preserve_all_historical_bytes_and_negative_clocks": true
+  },
+  "kind": "phase3b-ra1-static-positive-cold-case-inventory-v1",
+  "observed_at_utc": "2026-11-04T04:56:27.324680+00:00",
+  "production": {
+    "call_line": 1469,
+    "canonical_frame_window_seconds": 585,
+    "default_cleanup_seconds": 15,
+    "failed3second_fixture_establishes_production_failure": false,
+    "source": "followups/phase3b_seq2_v1/workflow.py:1427",
+    "total_window_seconds": 600
+  },
+  "proposal_assessment": {
+    "30_seconds_is_prospective_allocation_not_measured_requirement": true,
+    "all24_frozen_controls_and_production600_window_unchanged": true,
+    "changes_current_positive_call_only": true,
+    "current_bootstrap_total_cleanup_seconds": [
+      30,
+      1
+    ],
+    "new_canonical_frame_window_seconds": 29,
+    "next_execution_if_approved": "Next counted current-source full unit set; no standalone positive probe, profile, unchanged-source retry or old result retagging",
+    "open_requirement_change": "Relaxes former3-second positive receipt criterion while preserving functional/privacy/stop assertions; not a validated causal repair or restored3-second guarantee",
+    "postcollector_parent_elapsed_only": "May record finite numeric parent elapsed after collector returns without child instrumentation; it does not identify causal imports or establish runtime reliability",
+    "proposal_only": true,
+    "requires_explicit_requirement_amendment_and_user_decision": true
+  },
+  "real_provider_calls": 0,
+  "reviewer": "/root/ra1_path_review",
+  "scope": "Static direct core_view.collect callsites and explicit WorkerTests helpers under followups; active126-ID S2 manifest and named regression suites checked; no runtime inference",
+  "static_review_completed": true,
+  "worker_or_test_or_container_started": false
+}

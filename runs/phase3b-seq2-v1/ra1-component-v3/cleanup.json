@@ -1,0 +1,38 @@
+{
+  "absence": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43"
+    ],
+    "exit_code": 1,
+    "stderr": "error: no such object: f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43\n",
+    "stdout": "\n"
+  },
+  "owner": "f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43",
+  "passed": true,
+  "remove": {
+    "command": [
+      "docker",
+      "rm",
+      "f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43\n"
+  },
+  "terminal": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "f5e098569d1f709a7de509a58f4d8ed6176a201d4352a1f4f1b092e4b52f7b43"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "false\n"
+  }
+}

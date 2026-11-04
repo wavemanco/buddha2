@@ -1,0 +1,6 @@
+{
+  "basis": "Entire bounded root wait-to-successful-activation transition 04:22:03.138955\u201304:22:41.497462 UTC rounded up; activation initially failed because a newly added operator.py shadowed stdlib. Retained conservatively, not an execution/financial unknown.",
+  "kind": "phase3b-ra1-conservative-effort-charge-v1",
+  "recorded_at_utc": "2026-11-04T04:23:35.541541+00:00",
+  "seconds": 40
+}

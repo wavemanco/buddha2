@@ -126,6 +126,13 @@ print(json.dumps({'telemetry': module.IMPORT_PRIVACY, 'private_actual_io': len(p
             with (target / 'bootstrap-result.json').open('x', encoding='utf-8', newline='\n') as stream:
                 json.dump(observed, stream, sort_keys=True, indent=2)
                 stream.write('\n')
+        release_destination = os.environ.get('BUDDHA2_RA1_OUTPUT')
+        if release_destination:
+            from .support import bootstrap_capture_path
+            target = bootstrap_capture_path(release_destination)
+            with (target / 'bootstrap-result.json').open('x', encoding='utf-8', newline='\n') as stream:
+                json.dump(observed, stream, sort_keys=True, indent=2)
+                stream.write('\n')
         message = json.dumps(observed, sort_keys=True)
         self.assertTrue(result['worker_stopped'], message)
         self.assertEqual(result['canonical_status'], 'complete', message)

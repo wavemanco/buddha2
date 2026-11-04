@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-11-04T04:32:49.521052+00:00",
+  "candidate": 1,
+  "files": {
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/PLAN.md": "ac1c4dedced20090be58d6275a66f44353eb3aea7476a2bd05e61a4f07d353ee",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/cold_replay.py": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/cold_replay_ra1.py": "1da773b9428b6e98d3e3c8129bd436b08e356d3045ff4c69d1845d0b4be7c517",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/packet-plan-static-review-v1.json": "739ecc6393a1a9db2ac43fcbfa78ef9503dacaa047921c437cc1de2d00f74f8e",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/parameterization.diff": "4415d065ba8f0cbdeb5d091e63f2916a814bf007f56418a7d43a13361790782c",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/plan.json": "38ffe5650d5b3333637a2e698269de1a044194d251fdfe7fed1de934ce8727e5",
+    "runs/phase3b-seq2-v1/verification-ra1-v1/external-reviews/packet-review-ra1-c1/review_packet_ra1.py": "5aeb0b8d2d04dd0c4d4c2e8fcd3151a6a0d73286ea833547762cd1b166b060b8"
+  },
+  "kind": "phase3b-ra1-prospective-packet-copy-v1",
+  "only_static_review_plan_created": true,
+  "study_native_journal_capacity_S13_export_namespaces_created": false,
+  "verification_namespace_absent_before_copy": true
+}

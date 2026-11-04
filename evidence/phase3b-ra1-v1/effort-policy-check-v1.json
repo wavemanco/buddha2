@@ -1,0 +1,80 @@
+{
+  "actual_status": {
+    "active_seconds": 275.35639,
+    "actors": [
+      {
+        "active_seconds": 18.751552,
+        "actor": "/root/ra1_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 30.76647,
+        "actor": "/root/ra1_path_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 45.838368,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 1
+      }
+    ],
+    "conservative_charge_seconds": 180,
+    "measured_seconds": 95.35639,
+    "observed_at_utc": "2026-11-04T04:19:30.232061+00:00",
+    "remaining_to_target_seconds": 14124.64361,
+    "review_due": false,
+    "review_milestones_reached": [],
+    "target_is_hard_abort": false,
+    "target_seconds": 14400
+  },
+  "checked_at_utc": "2026-11-04T04:19:30.232061+00:00",
+  "kind": "phase3b-ra1-effort-policy-check-v1",
+  "passed": true,
+  "real_provider_calls": 0,
+  "synthetic_future_status": {
+    "active_seconds": 54275.35639,
+    "actors": [
+      {
+        "active_seconds": 18018.751552,
+        "actor": "/root/ra1_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 18030.76647,
+        "actor": "/root/ra1_path_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 18045.838368,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 1
+      }
+    ],
+    "conservative_charge_seconds": 180,
+    "measured_seconds": 54095.35639,
+    "observed_at_utc": "2026-11-04T09:19:30.232061+00:00",
+    "remaining_to_target_seconds": -39875.35639,
+    "review_due": true,
+    "review_milestones_reached": [
+      7200,
+      10800,
+      14400
+    ],
+    "target_is_hard_abort": false,
+    "target_seconds": 14400
+  },
+  "synthetic_projection_only": true,
+  "target_crossing_exit_code": 0
+}

@@ -1,0 +1,24 @@
+{
+  "actual_agent_inventory": [
+    "/root"
+  ],
+  "all_open_active_intervals_retained": true,
+  "conservative_fixed_charges_seconds": 220,
+  "continuation_observation_utc": "2026-11-04T07:35:05+00:00",
+  "current_allowed_work": "Finish finite already-authorized stopped-outcome review, navigation, accounting and publication; no code repair/test retry/experiment. Material acceptance continuation requires a new decision.",
+  "deducted_seconds": 0,
+  "engineering_gap_does_not_authorize_new_work": true,
+  "interpretation": "Raw ACTIVE-interval arithmetic is a conservative upper bound, not certified actual focused work across the unobserved gap. No retroactive milestone review or within-target claim is made.",
+  "kind": "phase3b-ra1-effort-continuation-reconciliation-v1",
+  "new_runtime_admissions_stopped": true,
+  "orphan_reviewer_clock_settled_by": "/root",
+  "previous_reviewer_missing_from_live_inventory": true,
+  "real_API_spend_usd": 0,
+  "real_provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T07:38:15.358902+00:00",
+  "reviewer_previous_open_active_since_utc": "2026-11-04T04:53:48.835404+00:00",
+  "root_previous_open_active_since_utc": "2026-11-04T04:48:09.050398+00:00",
+  "stop_originally_caused_by": "failed required bootstrap test without evidenced eligible correction",
+  "target_exceeded": true,
+  "target_seconds": 14400
+}

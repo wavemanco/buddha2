@@ -1,0 +1,113 @@
+{
+  "accepted_kit": false,
+  "actual_independent_failed_owner_absence": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "4f358b12e63435b06e1bc1fbc40e23b6005f412839583d60fb616d082c22dfe5"
+    ],
+    "exit_code": 1,
+    "output": "error: no such object: 4f358b12e63435b06e1bc1fbc40e23b6005f412839583d60fb616d082c22dfe5",
+    "scope": "Exact failed unit owner only; other owner cleanup relies on bound existing receipts"
+  },
+  "admissions_consumed": {
+    "S13": 0,
+    "Windows_sets": 0,
+    "candidate": 0,
+    "cold": 0,
+    "main": 0,
+    "preflight_sets": 1,
+    "saved": 0
+  },
+  "canonical_stream_contents_opened": false,
+  "closure_navigation_review": {
+    "AM1_remains_proposal_only": true,
+    "completion_audit_consistent_with_unachieved_goal": true,
+    "conservative_fixed_charges_seconds": 220,
+    "current_RA1_navigation_and_roadmap_reviewed": true,
+    "effort_gap_fully_retained_without_deduction": true,
+    "final_effort_snapshot_and_remote_publication_pending_parent": true,
+    "historical_navigation_reaudited": false,
+    "raw_ACTIVE_arithmetic_is_certified_focused_work": false,
+    "retroactive_milestone_compliance_claimed": false
+  },
+  "disposition": "Reviewed stopped dossier only; accepted-kit objective remains unachieved",
+  "failure_reconciled": {
+    "approximate_frame_receive_window_seconds": 3,
+    "canonical_error_type": "canonical_timeout",
+    "cleanup_reserve_seconds": 1,
+    "declared_ids": 126,
+    "errors": 0,
+    "failures": 1,
+    "passed": 3,
+    "specific_evidenced_eligible_correction_established": false,
+    "tests_started": 4,
+    "total_collector_budget_seconds": 4,
+    "unchanged_retry_permitted": false,
+    "unrun_ids": 122,
+    "whole_worker_over_four_seconds_proven": false,
+    "worker_stopped": true
+  },
+  "full_goal_achieved": false,
+  "independent_static_checks": {
+    "JSON_validation_scope": "UTF-8, duplicate-key rejection, finite numbers, object root; important outcome, manifest, preservation, counters and audit fields additionally checked; not a full release-schema proof",
+    "all24_A0_control_hashes_unchanged": true,
+    "canonical_offline_originals_authenticated_as_hash_entries_only": 14,
+    "complete_reconstructed_source_members": 774,
+    "dossier_references_hash_and_size_matched": 144,
+    "lexical_private_cache_stream_and_retained_source_tree_rejection_before_metadata": true,
+    "only_exact_declared_paths_accessed_no_recursive_inventory": true,
+    "ordinary_current_source_files_independently_rehashed": 760,
+    "ordinary_current_source_matches_failed_manifest": true,
+    "patch_format_parser": {
+      "applied": false,
+      "command": [
+        "git",
+        "apply",
+        "--numstat",
+        "evidence/phase3b-ra1-v1/packet-plan-v2/parameterization.diff"
+      ],
+      "exit_code": 0
+    },
+    "preservation_metadata_matches_complete_source_map": true,
+    "strict_JSON_object_roots_parsed": 73
+  },
+  "inputs_sha256": {
+    "CURRENT_SPEC.md": "3472168890faf4a5845bac8f15c81772a2bef8df5b3ee5341582484c7b5bf66b",
+    "evidence/phase2-release-r018/independent-acceptance.json": "f8c729dbbb23ab98efacb4a66e67a73189d830a3c837c6acf347a77036703ea7",
+    "evidence/phase3b-ra1-v1/RUNBOOK.md": "9c1898757eb60494e491a7f4ac054b112bf4c62444bd29a754acc4404f45e2e4",
+    "evidence/phase3b-ra1-v1/completion-audit-v1.json": "f18d2c3dc5247d6d8a7030aeb680904226115b2beaae29cad3545577017f7f83",
+    "evidence/phase3b-ra1-v1/dossier-index-v1.json": "cd1268589537239dce33b49517af42e5bcd24575a7431951be7730d802cd2d5d",
+    "evidence/phase3b-ra1-v1/effort-continuation-reconciliation-v1.json": "88101d712b7b647b75d2faf42978cf4120d57335b45d2181e095fffa7c2e78c3",
+    "evidence/phase3b-ra1-v1/failed-preflight-1/preservation-receipt.json": "ca900fc2681668aab30406e376b4ed623205790d5d9d26079efe155755333fe2",
+    "evidence/phase3b-ra1-v1/outcome-v1.json": "3dbf59dd63565ebdc905e8d77a3a229bd3c3e5e9f0494b33c55ad42ea707d695",
+    "evidence/phase3b-ra1-v1/reviews/failure-preservation-metadata-review-v1.json": "067ce401c5f7c09e77cfd034909dac7d7448695423f9ee540ab634dbbdde83f9",
+    "evidence/phase3b-ra1-v1/reviews/unit-suite-1-failure-review-v1.json": "d260fdfcc135471c0fd5c1007afe3ec14ecfc63a969ee2310f9588e1e9754357",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/manifest.json": "5f002a47e2403cccee6ac4b0cf42751374c0da87e2a138501314444675298b07",
+    "specifications/amendments/phase3b-release-acceptance-1.0.md": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+    "specifications/amendments/phase3b-release-acceptance-am1-1.0.md": "5dfad6322a72f029cbbcd17824a384774a6787fa9ced969e6cc04b4b134ea1e1",
+    "specifications/reports/phase3b-ra1-stop-1.0.md": "c1e917854533eec5e9d45865dab6c7df0f270367639bb2c56d19293a930e5006"
+  },
+  "kind": "phase3b-ra1-independent-stopped-review-v1",
+  "limitations": "Existing component and immutable review receipts are static evidence for their recorded scope. This receipt neither accepts a release kit nor approves AM1 or a new invocation.",
+  "new_real_API_spend_usd": 0,
+  "new_runtime_admission_authorized": false,
+  "not_independently_verified": [
+    "Retained/captured source payload tree; metadata only for its preservation receipt",
+    "The fourteen canonical stream payloads or stream metadata; authenticated stored hashes only",
+    "No runtime re-execution, project imports, tests, model calls or causal timing diagnosis",
+    "Complete current Linux/Windows preflight, twelve gate groups, main/S13 and both actual I1 handshakes",
+    "Saved replay, physical archive/inventory/CRC, extracted-only cold replay and actual accepted-packet resolver success",
+    "Live provider readiness, scientific efficacy, paid launch, final accounting or remote publication"
+  ],
+  "observed_at_utc": "2026-11-04T07:44:25.007443+00:00",
+  "original_workspace_accessed": false,
+  "project_runtime_imports_or_tests_executed": false,
+  "real_provider_calls_by_reviewer": 0,
+  "retained_source_tree_traversed": false,
+  "review_passed": true,
+  "reviewer": "/root/ra1_closure_review",
+  "source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2"
+}

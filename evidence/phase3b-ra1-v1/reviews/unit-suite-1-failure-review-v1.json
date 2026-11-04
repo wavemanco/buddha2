@@ -1,0 +1,64 @@
+{
+  "actual_independent_owner_absence": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "4f358b12e63435b06e1bc1fbc40e23b6005f412839583d60fb616d082c22dfe5"
+    ],
+    "exit_code": 1,
+    "output": "\nerror: no such object: 4f358b12e63435b06e1bc1fbc40e23b6005f412839583d60fb616d082c22dfe5\n"
+  },
+  "all24_A0_controls_remain_unchanged_from_reviewed_manifest": true,
+  "allowances_consumed": {
+    "S13": 0,
+    "candidate": 0,
+    "cold": 0,
+    "main": 0,
+    "preflight_sets": 1,
+    "saved": 0
+  },
+  "causal_repair_or_flakiness_rate_claimed": false,
+  "classification": "Counted unchanged bootstrap canonical-timeout failure; current source and contained cleanup intact",
+  "files": {
+    "evidence/phase3b-ra1-v1/preflight-admissions/suite-1.json": "0ad209f871ce4f2c6ee94002ae0bd38346fe59280e9ef518b0dc2b710fda78c2",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/cleanup.json": "618c738eef2984fc33866ecf1ddf1f5073f177a583d954616de5fe771f9b7ae8",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/inspection.json": "0f3f7a19630104b049c2f4065255164ce039650fd4f47662380cd9e93d73aece",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/manifest.json": "5f002a47e2403cccee6ac4b0cf42751374c0da87e2a138501314444675298b07",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/prospective-review.json": "b1e606df3b88bf2298e5b9c1de6908252f91f2bba1e5b217670121e4f951d394",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/runtime/ra1-unit-preflight-v1/suite-1/bootstrap-result.json": "85173169b67d8ada7d9bb8c8f58841cb496afcf7d67d2518472f6d0e33c83776",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/runtime/ra1-unit-preflight-v1/suite-1/result.json": "476247fd62165dbac29d8a3d609bd139e679d96ccccc6153f791c96e79cee29e"
+  },
+  "kind": "phase3b-ra1-independent-unit-suite-1-failure-review-v1",
+  "next_invocation_eligible": false,
+  "next_requirement": "Concrete evidenced eligible content correction and new prospective review; otherwise definition requires stopped incomplete or specific change required. No same-source/warmup/profiled retry.",
+  "no_project_runtime_import_or_test_executed_by_reviewer": true,
+  "observed_at_utc": "2026-11-04T04:51:20.599432+00:00",
+  "ordinary_source_files_unchanged_after_failure": 760,
+  "real_provider_calls": 0,
+  "review_passed": true,
+  "reviewer": "/root/ra1_path_review",
+  "source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2",
+  "source_trace_findings": [
+    "Frozen collector receives frames before deadline-cleanup:4s total with1s cleanup leaves3s for spawn/re-import/frame",
+    "Frozen worker bootstrap enters SDK constructor/socket/process blocks before emitting",
+    "Composed eager verify/support imports also occur through core_view; no concrete new cause shown",
+    "No specific eligible unfrozen correction established by this review"
+  ],
+  "test_counts": {
+    "errors": 0,
+    "failures": 1,
+    "tests": 4
+  },
+  "typed_bootstrap_observation": {
+    "canonical_error_type": "canonical_timeout",
+    "canonical_status": "failed",
+    "cleanup_proof": "stopped",
+    "report_status": "unavailable",
+    "visibility_status": "failed",
+    "worker_stopped": true
+  },
+  "unit_preflight_passed": false,
+  "unrun_ids": 122
+}

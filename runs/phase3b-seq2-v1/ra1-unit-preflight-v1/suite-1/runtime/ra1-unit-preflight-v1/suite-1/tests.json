@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-04T04:48:23.803982+00:00",
+  "errors": 0,
+  "failures": 1,
+  "kind": "phase3b-s2-tests-v1",
+  "launcher_sha256": "01ab8bd2660500cfd59490f98870c5af4cd48cdcb0fcdec44544851696577ed4",
+  "passed": false,
+  "policy_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "runtime_sha256": "ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "sha256": "a4b52a03d0a72351a784d7cc583c61c43b85515bd499dfd9c9d9da391df11b59",
+  "skipped_test_ids": [],
+  "source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2",
+  "study_sha256": "02316b921f4bc213d22648e097fb8be8f444c9aa3e5bcb4ffdb4a5fbcc57dce0",
+  "tests": 4
+}

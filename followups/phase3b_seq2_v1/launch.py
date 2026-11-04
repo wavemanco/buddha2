@@ -16,7 +16,7 @@ from buddha2.phase2_release_launch import _bind_credentials, _credentials, _host
 from followups.phase3a_v1 import launch as frozen
 
 from . import accounting, supervision
-from .support import BASE, NATIVE, ROOT, read, safe
+from .support import BASE, NATIVE, ROOT, read, recovery_config, safe
 
 MODULE = "followups.phase3b_seq2_v1.launch"
 _HASH = re.compile(r"[0-9a-f]{64}")
@@ -29,19 +29,31 @@ MODES = ("preflight", "mock", "provider-config", "provider")
 
 def _accepted_packet(study: Path, checked: dict) -> dict:
     """Require one independently reviewed, source-bound packet before key readiness."""
-    evidence = ROOT / "evidence/phase3b-seq2-v1"
+    config = recovery_config()
+    number = config["candidate"]
+    evidence = ROOT / "evidence/phase3b-ra1-v1"
+    if study != BASE / config["verification"] / "release/study.json":
+        raise ContractError("accepted RA1 packet must match its exact current release")
+    prepared = read(study)
+    config_name = "evidence/phase3b-ra1-v1/release-config.json"
+    source = prepared.get("source")
+    files = source.get("files") if isinstance(source, dict) else None
+    if (not isinstance(files, dict)
+            or any(prepared.get(k) != checked.get(k) for k in _BINDINGS if k != "grant_sha256")
+            or files.get(config_name) != file_hash(ROOT / config_name)):
+        raise ContractError("accepted RA1 packet source/configuration changed")
     gate = file_hash(_completion_path(study.parent / "offline-gate.json"))
     bindings = {key: checked[key] for key in _BINDINGS if key != "grant_sha256"}
-    review_path = safe(evidence / "independent-acceptance.json")
+    review_path = safe(evidence / f"candidate-{number}-independent-acceptance.json")
     review = read(review_path)
     if (review.get("passed") is not True or review.get("offline_gate_file_sha256") != gate
             or any(review.get(key) != value for key, value in bindings.items())):
         raise ContractError("independent HI source/gate review is missing or foreign")
     review_sha = file_hash(review_path)
-    manifest_path = safe(evidence / "offline-kit-v1.manifest.json")
-    receipt_path = safe(evidence / "packet-acceptance.json")
+    manifest_path = safe(ROOT / "evidence/phase3b-seq2-v1" / f"offline-kit-ra1-c{number}.manifest.json")
+    receipt_path = safe(evidence / f"packet-acceptance-c{number}.json")
     manifest, receipt = read(manifest_path), read(receipt_path)
-    archive = safe(evidence / "offline-kit-v1.zip")
+    archive = safe(ROOT / "evidence/phase3b-seq2-v1" / f"offline-kit-ra1-c{number}.zip")
     if not archive.is_file():
         raise ContractError("accepted HI archive is missing")
     archive_sha, manifest_sha = file_hash(archive), file_hash(manifest_path)

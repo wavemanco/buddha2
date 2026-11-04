@@ -1,0 +1,13 @@
+{
+  "cancelled": false,
+  "child_returncode": 0,
+  "error": "",
+  "error_bytes_base64": "",
+  "exit_code": 0,
+  "output": "{\"active_seconds\": 2672.912021, \"actors\": [{\"active_seconds\": 869.817564, \"actor\": \"/root/ra1_controller\", \"file\": \"controller.jsonl\", \"mode\": \"active\", \"records\": 7}, {\"active_seconds\": 222.992794, \"actor\": \"/root/ra1_packet\", \"file\": \"packet.jsonl\", \"mode\": \"done\", \"records\": 4}, {\"active_seconds\": 657.616488, \"actor\": \"/root/ra1_path_review\", \"file\": \"reviewer.jsonl\", \"mode\": \"active\", \"records\": 11}, {\"active_seconds\": 702.485175, \"actor\": \"/root\", \"file\": \"root.jsonl\", \"mode\": \"active\", \"records\": 15}], \"additional_charge_seconds\": 40, \"bootstrap_charge_seconds\": 180, \"conservative_charge_seconds\": 220, \"measured_seconds\": 2452.912021, \"observed_at_utc\": \"2026-11-04T04:34:19.403238+00:00\", \"remaining_to_target_seconds\": 11727.087979, \"review_due\": false, \"review_milestones_reached\": [], \"target_is_hard_abort\": false, \"target_seconds\": 14400}\r\n",
+  "output_bytes_base64": "eyJhY3RpdmVfc2Vjb25kcyI6IDI2NzIuOTEyMDIxLCAiYWN0b3JzIjogW3siYWN0aXZlX3NlY29uZHMiOiA4NjkuODE3NTY0LCAiYWN0b3IiOiAiL3Jvb3QvcmExX2NvbnRyb2xsZXIiLCAiZmlsZSI6ICJjb250cm9sbGVyLmpzb25sIiwgIm1vZGUiOiAiYWN0aXZlIiwgInJlY29yZHMiOiA3fSwgeyJhY3RpdmVfc2Vjb25kcyI6IDIyMi45OTI3OTQsICJhY3RvciI6ICIvcm9vdC9yYTFfcGFja2V0IiwgImZpbGUiOiAicGFja2V0Lmpzb25sIiwgIm1vZGUiOiAiZG9uZSIsICJyZWNvcmRzIjogNH0sIHsiYWN0aXZlX3NlY29uZHMiOiA2NTcuNjE2NDg4LCAiYWN0b3IiOiAiL3Jvb3QvcmExX3BhdGhfcmV2aWV3IiwgImZpbGUiOiAicmV2aWV3ZXIuanNvbmwiLCAibW9kZSI6ICJhY3RpdmUiLCAicmVjb3JkcyI6IDExfSwgeyJhY3RpdmVfc2Vjb25kcyI6IDcwMi40ODUxNzUsICJhY3RvciI6ICIvcm9vdCIsICJmaWxlIjogInJvb3QuanNvbmwiLCAibW9kZSI6ICJhY3RpdmUiLCAicmVjb3JkcyI6IDE1fV0sICJhZGRpdGlvbmFsX2NoYXJnZV9zZWNvbmRzIjogNDAsICJib290c3RyYXBfY2hhcmdlX3NlY29uZHMiOiAxODAsICJjb25zZXJ2YXRpdmVfY2hhcmdlX3NlY29uZHMiOiAyMjAsICJtZWFzdXJlZF9zZWNvbmRzIjogMjQ1Mi45MTIwMjEsICJvYnNlcnZlZF9hdF91dGMiOiAiMjAyNi0xMS0wNFQwNDozNDoxOS40MDMyMzgrMDA6MDAiLCAicmVtYWluaW5nX3RvX3RhcmdldF9zZWNvbmRzIjogMTE3MjcuMDg3OTc5LCAicmV2aWV3X2R1ZSI6IGZhbHNlLCAicmV2aWV3X21pbGVzdG9uZXNfcmVhY2hlZCI6IFtdLCAidGFyZ2V0X2lzX2hhcmRfYWJvcnQiOiBmYWxzZSwgInRhcmdldF9zZWNvbmRzIjogMTQ0MDB9DQo=",
+  "pid": 55988,
+  "settled": true,
+  "started": true,
+  "timed_out": false
+}

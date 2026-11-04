@@ -1,0 +1,13 @@
+{
+  "cases": [
+    "target crossing reports review due and main returns zero",
+    "all existing conservative charges counted exactly once",
+    "boolean or nonpositive charges rejected",
+    "stream/private names rejected before charge-path metadata",
+    "nonordinary or symlink charge path rejected"
+  ],
+  "declared_at_utc": "2026-11-04T04:26:57.280327+00:00",
+  "kind": "phase3b-ra1-effort-component-plan-v1",
+  "planned_invocations": 1,
+  "scope": "pure accounting helper checks; no worker, suite, campaign, container or provider"
+}

@@ -1,0 +1,56 @@
+{
+  "author": "/root/ra1_packet",
+  "candidate_mappings": {
+    "1": {
+      "packet_stem": "offline-kit-ra1-c1",
+      "verification": "verification-ra1-v1"
+    },
+    "2": {
+      "packet_stem": "offline-kit-ra1-c2",
+      "verification": "verification-ra1-v2"
+    }
+  },
+  "created_at_utc": "2026-11-04T04:21:44.771795+00:00",
+  "definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "files": {
+    "PLAN.md": {
+      "bytes": 5876,
+      "sha256": "ac1c4dedced20090be58d6275a66f44353eb3aea7476a2bd05e61a4f07d353ee"
+    },
+    "cold_replay.py": {
+      "bytes": 9082,
+      "sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0"
+    },
+    "cold_replay_ra1.py": {
+      "bytes": 1502,
+      "sha256": "1da773b9428b6e98d3e3c8129bd436b08e356d3045ff4c69d1845d0b4be7c517"
+    },
+    "parameterization.diff": {
+      "bytes": 7282,
+      "sha256": "4415d065ba8f0cbdeb5d091e63f2916a814bf007f56418a7d43a13361790782c"
+    },
+    "review_packet_ra1.py": {
+      "bytes": 15205,
+      "sha256": "5aeb0b8d2d04dd0c4d4c2e8fcd3151a6a0d73286ea833547762cd1b166b060b8"
+    }
+  },
+  "intended_actual_reviewer": "/root/ra1_path_review",
+  "kind": "phase3b-ra1-prospective-physical-cold-plan-v1",
+  "packet_accepted": false,
+  "prior_physical_algorithm_sha256": "1485ca765b3e9b8459102fff1f7d1b296a9af94f37de4a29e89edd5bd24a7cd8",
+  "prior_static_reviews": [
+    "runs/phase3b-or1-v1/packet-plan-v1/parent-plan-review-v1.json",
+    "runs/phase3b-or1-v1/packet-plan-v1/parent-schema-review-v1.json"
+  ],
+  "required_before_execution": [
+    "all12 actual current-source groups and final gate",
+    "independent source/gate acceptance",
+    "exact immutable archive/manifest",
+    "current independent script/schema/command review",
+    "exact actual candidate/source/count/mainstudy/copiedhash bindings",
+    "actual exact-owner configuration inspection before cold start"
+  ],
+  "runtime_archive_or_extraction_execution": false,
+  "status": "prospective-awaiting-independent-static-review-and-actual-candidate-bindings",
+  "unchanged_cold_worker_sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0"
+}

@@ -1,0 +1,21 @@
+{
+  "cleanup_passed": true,
+  "component_docker_start_count": 0,
+  "diagnostic_retains_only_public_environment_variable_names": true,
+  "exception_message": "actual RA1 component containment/command/environment differs",
+  "exception_type": "ValueError",
+  "kind": "phase3b-ra1-component-failure-v1",
+  "next_readonly_diagnostic": [
+    "docker",
+    "image",
+    "inspect",
+    "--format",
+    "{{json .Config.Env}}",
+    "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800"
+  ],
+  "owner": "84ed9b4f42c4f495dcec180f408d3e57cf1bcc29378ddc940f5cf715e2c9a071",
+  "source_manifest": "evidence/phase3b-ra1-v1/component-manifest-v2.json",
+  "source_manifest_sha256": "d9016510a337c0d1b28123b767f026e943c0abafbcec1bd07e733233dca7941d",
+  "stage": "actual created-container configuration guard before start",
+  "unit_preflight_or_release_admissions": 0
+}

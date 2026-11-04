@@ -1,0 +1,38 @@
+{
+  "author": "/root/ra1_packet",
+  "files": {
+    "evidence/phase3b-ra1-v1/packet-component-check-v1.json": "69775278126e80ec6b052eac72f4838cb83b2eb35104ec7a327217b2dc0079b9",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/PLAN.md": "ac1c4dedced20090be58d6275a66f44353eb3aea7476a2bd05e61a4f07d353ee",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay.py": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay_ra1.py": "1da773b9428b6e98d3e3c8129bd436b08e356d3045ff4c69d1845d0b4be7c517",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/plan.json": "38ffe5650d5b3333637a2e698269de1a044194d251fdfe7fed1de934ce8727e5",
+    "evidence/phase3b-ra1-v1/packet-plan-v1/review_packet_ra1.py": "5aeb0b8d2d04dd0c4d4c2e8fcd3151a6a0d73286ea833547762cd1b166b060b8",
+    "evidence/phase3b-ra1-v1/release-config.json": "17f4ab125942180e3e16aeb0ed872d7d367bcc4c600ee2a1cf037fb5c8657c3f",
+    "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v1.json": "739ecc6393a1a9db2ac43fcbfa78ef9503dacaa047921c437cc1de2d00f74f8e",
+    "evidence/phase3b-seq2-v1/package_public.py": "6835c3d8aeff54a2f7da3df233ca669c10df838c44f47588ca27738e0bb44621"
+  },
+  "kind": "phase3b-ra1-packet-schema-clarification-v1",
+  "limitations": [
+    "actual source map and copied plan bytes not yet inspected",
+    "actual main/S13/group/handshake records not yet available",
+    "archive manifest index CRC payload and extracted replay not yet executed",
+    "actual cold owner inspection/admission/deadlines/cleanup and final independent acceptance required"
+  ],
+  "nested_supervision_provenance": "PLAN statement describes required combined acceptance evidence. The physical checker itself validates top-level all12 group records/five bindings and the rehearsal source/snapshot policy. Nested actual supervision requests/owners/exports/ACKs and rehearsal_bindings must be proved by prior independent source/gate review; packager additionally authenticates prepared/supervision nested five bindings. The physical script alone does not prove actual handshake semantics. No reviewed plan or worker bytes changed to make this clarification.",
+  "observed_at_utc": "2026-11-04T04:31:37.721639+00:00",
+  "packet_accepted": false,
+  "provider_calls": 0,
+  "runtime_archive_or_extraction_executed": false,
+  "schema_checks": [
+    "config kind authority candidate1/2 verification-ra1-vN and source-bound config hash",
+    "offline-kit-ra1-cN under phase3b-seq2-v1 and candidate-N-independent-acceptance under RA1",
+    "mode offline archive rawSHA member_count/member_sha256 and five bindings",
+    "embedded index inventory excludes own index; external manifest inventory includes it",
+    "all12 exact current group record hashes and top-level five bindings",
+    "canonical14 classification receipt and hashes; two ordinary source snapshots without stream copies",
+    "separate S13 study source/runtime/policy/launcher equality and explicit prepared/supervision nested binding checked by packager",
+    "actual capacity and historical component ancestry included with raw identity",
+    "sourceplan copied under verification external-reviews before saved inventory"
+  ],
+  "static_schema_agreement": true
+}

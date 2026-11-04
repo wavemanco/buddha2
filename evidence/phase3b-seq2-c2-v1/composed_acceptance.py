@@ -116,12 +116,12 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--phase", choices=("main", "replay", "units"), required=True)
     parser.add_argument("--output", required=True)
-    parser.add_argument("--unit-mode", choices=("bootstrap", "suite", "windows"))
+    parser.add_argument("--unit-mode", choices=("suite", "windows"))
     args = parser.parse_args()
     if args.phase == "units":
-        spec = importlib.util.spec_from_file_location("bd1_unit_preflight", ROOT / "evidence/phase3b-bd1-v1/unit_preflight.py")
+        spec = importlib.util.spec_from_file_location("ra1_unit_preflight", ROOT / "evidence/phase3b-ra1-v1/unit_preflight.py")
         if spec is None or spec.loader is None:
-            raise ValueError("BD1 unit-only module cannot load")
+            raise ValueError("RA1 unit-only module cannot load")
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         return module.run(args.unit_mode, args.output)
@@ -131,6 +131,7 @@ def main() -> int:
     if args.phase == "replay":
         return saved_replay(output)
     require(not (output / "source-before.json").exists(), "main acceptance already attempted")
+    os.environ["BUDDHA2_RA1_OUTPUT"] = str(output)
     return verify.inside(output, saved_replay=False)
 
 

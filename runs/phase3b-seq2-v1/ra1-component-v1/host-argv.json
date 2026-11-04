@@ -1,0 +1,13 @@
+{
+  "cancelled": false,
+  "child_returncode": 0,
+  "error": "",
+  "error_bytes_base64": "",
+  "exit_code": 0,
+  "output": "[\"space argument\", \"\\u00fc\"]\r\n",
+  "output_bytes_base64": "WyJzcGFjZSBhcmd1bWVudCIsICJcdTAwZmMiXQ0K",
+  "pid": 4208,
+  "settled": true,
+  "started": true,
+  "timed_out": false
+}

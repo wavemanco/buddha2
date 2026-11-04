@@ -1,0 +1,56 @@
+{
+  "command_matches": true,
+  "entrypoint": [
+    "python"
+  ],
+  "environment_names": [
+    "BUDDHA2_IMAGE_ID",
+    "BUDDHA2_NB_UPSTREAM",
+    "BUDDHA2_OFFLINE",
+    "BUDDHA2_OUTPUT_ROOT",
+    "BUDDHA2_TEST_OUTPUT_ROOT",
+    "GPG_KEY",
+    "HARNESS2_ROOT",
+    "HF_DATASETS_OFFLINE",
+    "HF_HUB_OFFLINE",
+    "LANG",
+    "NOVELTYBENCH_ROOT",
+    "OMP_NUM_THREADS",
+    "PATH",
+    "PHASE3A_BUN",
+    "PHASE3A_OPENCODE",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "PYTHONPATH",
+    "PYTHONUNBUFFERED",
+    "PYTHON_SHA256",
+    "PYTHON_VERSION",
+    "TMPDIR",
+    "TOKENIZERS_PARALLELISM",
+    "TRANSFORMERS_OFFLINE"
+  ],
+  "environment_values_retained": false,
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "mounts": [
+    {
+      "Destination": "/workspace",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/results/phase3b-seq2-v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\ra1-component-v2\\runtime",
+      "Type": "bind"
+    }
+  ],
+  "network": "none",
+  "owner": "2904cc5d21804ca34741b8a22776fd61de53130955c6deecd10939bc5f2f0442",
+  "readonly_root": true,
+  "working_dir": "/workspace"
+}

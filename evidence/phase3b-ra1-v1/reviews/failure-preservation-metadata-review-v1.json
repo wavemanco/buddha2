@@ -1,0 +1,23 @@
+{
+  "canonical_stream_contents_opened_or_copied_by_reviewer": false,
+  "capture_reports_all_copied_bytes_match": true,
+  "classification": "Stopped before further admissions; first set failed;122unitIDs remain unrun; no evidenced eligible correction or causal timing claim",
+  "current_ordinary_payloads_previously_independently_rehashed": 760,
+  "files": {
+    "evidence/phase3b-ra1-v1/failed-preflight-1/preservation-receipt.json": "ca900fc2681668aab30406e376b4ed623205790d5d9d26079efe155755333fe2",
+    "evidence/phase3b-ra1-v1/preflight-failure-v1.json": "b463a6c0a5f7f711ea537ebd60dc40e72a56ba95becada52fad6d5b5f0380a75",
+    "evidence/phase3b-ra1-v1/reviews/unit-suite-1-failure-review-v1.json": "d260fdfcc135471c0fd5c1007afe3ec14ecfc63a969ee2310f9588e1e9754357",
+    "runs/phase3b-seq2-v1/ra1-unit-preflight-v1/suite-1/manifest.json": "5f002a47e2403cccee6ac4b0cf42751374c0da87e2a138501314444675298b07"
+  },
+  "kind": "phase3b-ra1-independent-failure-preservation-metadata-review-v1",
+  "next_invocation_eligible": false,
+  "observed_at_utc": "2026-11-04T04:52:22.069233+00:00",
+  "ordinary_copied_count_reported": 760,
+  "real_provider_calls": 0,
+  "retained_source_payloads_independently_read_by_reviewer": false,
+  "retained_source_tree_traversed_by_reviewer": false,
+  "review_passed": true,
+  "reviewer": "/root/ra1_path_review",
+  "source_preservation_inventory_matches_actual_unit_manifest_plus14hashonly_originals": true,
+  "source_sha256": "1bc052cbcdd1223e7c88bafc109b87fb754209c7acb836848dfb95a92d9e93f2"
+}

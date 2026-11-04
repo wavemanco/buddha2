@@ -1,0 +1,61 @@
+{
+  "author": "/root/ra1_packet",
+  "candidate_mappings": {
+    "1": {
+      "copied_plan_directory": "external-reviews/packet-review-ra1-c1-v2",
+      "packet_stem": "offline-kit-ra1-c1",
+      "verification": "verification-ra1-v1"
+    },
+    "2": {
+      "copied_plan_directory": "external-reviews/packet-review-ra1-c2-v2",
+      "packet_stem": "offline-kit-ra1-c2",
+      "verification": "verification-ra1-v2"
+    }
+  },
+  "cold_worker_sha256": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4",
+  "created_at_utc": "2026-11-04T04:42:02.719874+00:00",
+  "definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "files": {
+    "PLAN.md": {
+      "bytes": 6915,
+      "sha256": "6b459b8d2a31e07d4b592c4d64448aef9b56e1b9180a7ce0e9fdb8e4f7e87a64"
+    },
+    "ast-delta-proof.json": {
+      "bytes": 2587,
+      "sha256": "e19c19d6ccf079d6db1a5fd2f18adc30e9ce36836ef83046998464cdab09b34e"
+    },
+    "cold_replay.py": {
+      "bytes": 9093,
+      "sha256": "daab8abfa3797477ad8eb46cfcb030ab5b1cd5f02667f423929cff48c5ba5ae4"
+    },
+    "cold_replay_ra1.py": {
+      "bytes": 1535,
+      "sha256": "2316f2305282e014221ae7c19c474e90b4691a31dac146095fd022df559537d7"
+    },
+    "parameterization.diff": {
+      "bytes": 5331,
+      "sha256": "43a026b1a3a349f66f335888dd80547f0a271553b755beff4be3700e586bd56b"
+    },
+    "review_packet_ra1.py": {
+      "bytes": 15314,
+      "sha256": "2713f3e8ee1979c1a825daa4abb2bbac50beba66981857eda508e4c7c6b60301"
+    }
+  },
+  "historical_cold_worker_sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+  "intended_actual_reviewer": "/root/ra1_path_review",
+  "kind": "phase3b-ra1-prospective-physical-cold-plan-v2",
+  "packet_accepted": false,
+  "prior_plan_sha256": "38ffe5650d5b3333637a2e698269de1a044194d251fdfe7fed1de934ce8727e5",
+  "required_before_execution": [
+    "current v2 independent script/schema/AST-delta review",
+    "copied exact v2 plan+review bytes included in source before preflight/freeze",
+    "all12 actual current-source groups and final gate",
+    "independent source/gate acceptance",
+    "exact immutable archive/manifest",
+    "exact actual candidate/source/count/mainstudy/copiedhash bindings",
+    "actual exact-owner configuration inspection before cold start"
+  ],
+  "runtime_archive_or_extraction_execution": false,
+  "status": "prospective-awaiting-independent-v2-static-review-and-actual-candidate-bindings",
+  "worker_byte_identical_to_historical": false
+}

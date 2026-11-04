@@ -1,0 +1,6 @@
+{
+  "authority": "evidence/phase3b-ra1-v1/authority.json",
+  "candidate": 1,
+  "kind": "phase3b-ra1-release-config-v1",
+  "verification": "verification-ra1-v1"
+}

@@ -1,0 +1,29 @@
+{
+  "actual_independent_command": [
+    "docker",
+    "inspect",
+    "--format",
+    "{{json .State.Running}}",
+    "84ed9b4f42c4f495dcec180f408d3e57cf1bcc29378ddc940f5cf715e2c9a071"
+  ],
+  "actual_independent_exit_code": 1,
+  "actual_independent_output": "\nerror: no such object: 84ed9b4f42c4f495dcec180f408d3e57cf1bcc29378ddc940f5cf715e2c9a071\n",
+  "environment_name_correction_is_unfrozen_engineering_only": true,
+  "files": {
+    "evidence/phase3b-ra1-v1/component-failure-v1.json": "159588a9a553baa71e3b60c36b242916a569688f1ee26e2e6ea12bd3618c8f61",
+    "evidence/phase3b-ra1-v1/image-environment-diagnostic-v1.json": "4cd439983148029676cca558c692f8daba8ec32c29d16731ca3134f8de22e639",
+    "runs/phase3b-seq2-v1/ra1-component-v1/cleanup.json": "47dc0c481c054348e09fc9071a9c029fd37576568abc5f90de045ae05e3d3132",
+    "runs/phase3b-seq2-v1/ra1-component-v1/create.json": "85af81f76af434542eeeb4682da7eaba0efb673d9de8bf5c7c89da060e32d43a"
+  },
+  "kind": "phase3b-ra1-independent-component-failure-review-v1",
+  "observed_at_utc": "2026-11-04T04:35:36.727383+00:00",
+  "owner": "84ed9b4f42c4f495dcec180f408d3e57cf1bcc29378ddc940f5cf715e2c9a071",
+  "owner_absence_confirmed": true,
+  "passed": true,
+  "preflight_or_release_admissions": 0,
+  "real_provider_calls": 0,
+  "requires_new_bound_manifest_and_fresh_component_output": true,
+  "reviewer": "/root/ra1_path_review",
+  "scope": "Unstarted component failure preservation and exact-owner independent absence only",
+  "started_before_failure": false
+}

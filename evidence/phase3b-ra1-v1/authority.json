@@ -1,0 +1,30 @@
+{
+  "aggregate_focused_engineering_target_seconds": 14400,
+  "definition": "specifications/amendments/phase3b-release-acceptance-1.0.md",
+  "definition_sha256": "377b6dfdf4b3192a834f5fedfc0df7400f5f27128012ac6a245ef1b00925027d",
+  "frozen_control_edits_authorized": false,
+  "instruction": "complete P3B-RA1",
+  "instruction_source": "active user-provided thread goal",
+  "keys_authorized": false,
+  "kind": "phase3b-ra1-direct-authority-v1",
+  "max_S13_starts": 2,
+  "max_candidates": 2,
+  "max_cold_replays": 2,
+  "max_main_entries": 2,
+  "max_preflight_sets": 3,
+  "max_saved_replays": 2,
+  "minimum_closure_reserve_seconds": 2700,
+  "old_ledgers_reopened": false,
+  "original_folder_access_authorized": false,
+  "preledger_bootstrap_charge_seconds": 180,
+  "preledger_charge_basis": "Conservative initial activation/context and authority setup allowance; retained in every aggregate.",
+  "real_API_cap_usd": 0,
+  "recorded_at_utc": "2026-11-04T04:18:44.393693+00:00",
+  "review_at_seconds": [
+    7200,
+    10800,
+    14400
+  ],
+  "reviewed_outcome_publication_authorized": true,
+  "target_is_hard_abort": false
+}

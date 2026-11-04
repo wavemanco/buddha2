@@ -1,0 +1,105 @@
+--- prior-or1/review_packet_or1.py
++++ ra1/review_packet_ra1.py
+@@ -104,7 +104,7 @@
+     # Exact paths, no arbitrary file selection or original-checkout dependency.
+     archive = ordinary(ROOT / f"evidence/{PREFIX}/{PACKET_STEM}.zip")
+     manifest_path = ordinary(ROOT / f"evidence/{PREFIX}/{PACKET_STEM}.manifest.json")
+-    acceptance_path = ordinary(ROOT / f"evidence/phase3b-or1-v1/candidate-{CANDIDATE}-independent-acceptance.json")
++    acceptance_path = ordinary(ROOT / f"evidence/phase3b-ra1-v1/candidate-{CANDIDATE}-independent-acceptance.json")
+     manifest_bytes, acceptance_bytes = manifest_path.read_bytes(), acceptance_path.read_bytes()
+     manifest, acceptance = parse(manifest_bytes), parse(acceptance_bytes)
+     need(manifest.get("passed") is True and manifest.get("mode") == "offline"
+@@ -179,7 +179,7 @@
+                 need(inventory.get(name) == value, "canonical source missing/changed in packet")
+                 if name not in STREAMS:
+                     need(inventory.get(release + "source/" + name) == value, "ordinary retained source missing/changed")
+-        extracted = ordinary(REVIEW / "extracted-or1", missing=True)
++        extracted = ordinary(REVIEW / "extracted-ra1", missing=True)
+         need(not extracted.exists(), "review extraction must be fresh")
+         extracted.mkdir()
+         for item in infos:
+@@ -196,10 +196,10 @@
+     mountpoint = extracted / f"runs/{PREFIX}/packet-review-output"
+     need(not mountpoint.exists(), "review output mount point must be fresh")
+     mountpoint.mkdir()
+-    output = ordinary(REVIEW / "cold-output-or1", missing=True)
++    output = ordinary(REVIEW / "cold-output-ra1", missing=True)
+     need(not output.exists(), "cold output must be fresh")
+     output.mkdir()
+-    script_name = f"runs/{PREFIX}/{VERIFICATION}/external-reviews/packet-review-or1-c{CANDIDATE}/cold_replay_or1.py"
++    script_name = f"runs/{PREFIX}/{VERIFICATION}/external-reviews/packet-review-ra1-c{CANDIDATE}/cold_replay_ra1.py"
+     need(script_name in inventory, "frozen independent cold worker absent from archive")
+     command = ["docker", "create", "--pull=never", "--network", "none", "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges", "--pids-limit", "256", "--memory", "4g", "--cpus", "2", "--entrypoint", "python",
+                "--mount", f"type=bind,source={extracted},target=/workspace,readonly",
+@@ -210,7 +210,7 @@
+                "-e", "BUDDHA2_OUTPUT_ROOT=/results", "-e", f"BUDDHA2_IMAGE_ID={H1}", "-e", "BUDDHA2_OFFLINE=1",
+                "-e", "PHASE3A_OPENCODE=/opt/phase3a-opencode", "-e", "PHASE3A_BUN=/usr/local/bin/bun", H1,
+                "-B", "/workspace/" + script_name, "--index-sha256", inventory[index_name], "--source-sha256", SOURCE, "--study-sha256", STUDY, "--candidate", str(CANDIDATE)]
+-    result = {"kind":"phase3b-s2-independent-physical-review-v2", "reviewer":"/root/s2_a1_source_review",
++    result = {"kind":"phase3b-s2-independent-physical-review-v2", "reviewer":"/root/ra1_path_review",
+               "observed_at_utc":datetime.now(timezone.utc).isoformat(), "physical_review_passed":True,
+               "final_packet_accepted":False, "cold_replay_executed":False, "archive":manifest["archive"],
+               "archive_sha256":archive_sha, "manifest_sha256":sha(manifest_bytes),
+@@ -219,8 +219,8 @@
+               "canonical_original_stream_count":14, "retained_stream_copies":0,
+               "extracted_root":str(extracted), "cold_output_root":str(output), "docker_create_argv":command,
+               "working_checkout_mounted":False, "real_provider_calls":0, "original_folder_accessed":False}
+-    save(REVIEW / "physical-review-or1.json", result)
+-    save(REVIEW / "cold-create-command-or1.json", {"argv":command, "execute_only_after_independent_owner_review":True})
++    save(REVIEW / "physical-review-ra1.json", result)
++    save(REVIEW / "cold-create-command-ra1.json", {"argv":command, "execute_only_after_independent_owner_review":True})
+     print(json.dumps({k:result[k] for k in ("physical_review_passed", "final_packet_accepted", "archive_sha256", "member_count", "extracted_root")}))
+ 
+ 
+@@ -230,13 +230,13 @@
+     parser.add_argument("--source-sha256", required=True)
+     parser.add_argument("--study-sha256", required=True)
+     parser.add_argument("--source-count", type=int, required=True)
+-    parser.add_argument("--candidate", type=int, choices=(1, 2, 3), required=True)
++    parser.add_argument("--candidate", type=int, choices=(1, 2), required=True)
+     args = parser.parse_args()
+     SOURCE, STUDY, SOURCE_COUNT = args.source_sha256, args.study_sha256, args.source_count
+     CANDIDATE = args.candidate
+-    VERIFICATION = "verification-v" + str(CANDIDATE + 4)
+-    PACKET_STEM = "offline-kit-or1-c" + str(CANDIDATE)
+-    REVIEW = ROOT / "runs" / PREFIX / VERIFICATION / "external-reviews" / ("packet-review-or1-c" + str(CANDIDATE))
++    VERIFICATION = "verification-ra1-v" + str(CANDIDATE)
++    PACKET_STEM = "offline-kit-ra1-c" + str(CANDIDATE)
++    REVIEW = ROOT / "runs" / PREFIX / VERIFICATION / "external-reviews" / ("packet-review-ra1-c" + str(CANDIDATE))
+     need(all(len(value) == 64 and all(c in "0123456789abcdef" for c in value) for value in (SOURCE, STUDY))
+          and SOURCE_COUNT > 0, "invalid prospective source/study binding")
+     review()
+--- prior-or1/cold_replay_or1.py
++++ ra1/cold_replay_ra1.py
+@@ -1,4 +1,4 @@
+-"""Bind the unchanged reviewed cold algorithm to the extracted LA1 identity."""
++"""Bind the unchanged reviewed cold algorithm to the extracted RA1 identity."""
+ from __future__ import annotations
+ import argparse
+ import hashlib
+@@ -9,7 +9,7 @@
+ p.add_argument("--index-sha256", required=True)
+ p.add_argument("--source-sha256", required=True)
+ p.add_argument("--study-sha256", required=True)
+-p.add_argument("--candidate", type=int, choices=(1, 2, 3), required=True)
++p.add_argument("--candidate", type=int, choices=(1, 2), required=True)
+ a = p.parse_args()
+ for value in (a.index_sha256, a.source_sha256, a.study_sha256):
+     if len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
+@@ -17,13 +17,13 @@
+ path = Path(__file__).resolve().with_name("cold_replay.py")
+ if not path.is_relative_to(Path("/workspace")) or hashlib.sha256(path.read_bytes()).hexdigest() != "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0":
+     raise ValueError("extracted unchanged cold worker differs")
+-spec = importlib.util.spec_from_file_location("la1_unchanged_cold", path)
++spec = importlib.util.spec_from_file_location("ra1_unchanged_cold", path)
+ if spec is None or spec.loader is None:
+     raise ValueError("cold worker unavailable")
+ worker = importlib.util.module_from_spec(spec)
+ spec.loader.exec_module(worker)
+ worker.SOURCE = a.source_sha256
+ worker.STUDY = a.study_sha256
+-worker.VERIFICATION = Path("/results/phase3b-seq2-v1") / ("verification-v" + str(a.candidate + 4))
+-worker.INDEX = Path("/workspace/evidence/phase3b-seq2-v1") / ("offline-kit-or1-c" + str(a.candidate) + "-index.json")
++worker.VERIFICATION = Path("/results/phase3b-seq2-v1") / ("verification-ra1-v" + str(a.candidate))
++worker.INDEX = Path("/workspace/evidence/phase3b-seq2-v1") / ("offline-kit-ra1-c" + str(a.candidate) + "-index.json")
+ worker.main(a.index_sha256)

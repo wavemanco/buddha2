@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-04T04:27:42.691569+00:00",
+  "check_code_sha256": "d0a65cb5aae5be36956f901c4a23e92ebaefec6bb612e651a671799a1e053a36",
+  "details": "test_boolean_and_nonpositive_charge_rejected (ra1_effort_policy_check.EffortPolicyTests.test_boolean_and_nonpositive_charge_rejected) ... ok\ntest_conservative_charges_count_once (ra1_effort_policy_check.EffortPolicyTests.test_conservative_charges_count_once) ... ok\ntest_excluded_charge_names_rejected_before_metadata (ra1_effort_policy_check.EffortPolicyTests.test_excluded_charge_names_rejected_before_metadata) ... ok\ntest_linked_charge_rejected (ra1_effort_policy_check.EffortPolicyTests.test_linked_charge_rejected) ... ok\ntest_target_is_review_not_abort (ra1_effort_policy_check.EffortPolicyTests.test_target_is_review_not_abort) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.014s\n\nOK\n",
+  "effort_code_sha256": "245979fd26e1584e4e0a06c1033e2ceb58943c7534a1c2f7f6270cece9462073",
+  "errors": 0,
+  "failures": 0,
+  "kind": "phase3b-ra1-effort-component-result-v1",
+  "passed": true,
+  "plan_sha256": "a01a27e2411c31cb3235b33ed3468b8e9d870c88a6146401e05e5a3bb6d686b4",
+  "pure_accounting_checks_only": true,
+  "skipped": 0,
+  "tests": 5,
+  "worker_campaign_container_provider_starts": 0
+}
