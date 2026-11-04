@@ -24,7 +24,7 @@ from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES
 
 from . import contract, editor
 from . import transport as bounded
-from .delivery import _history, verify_delivery, verify_original_strategy
+from .delivery import _history, audit_delivery, audit_original_strategy
 from .support import DECLARED_DEFINITION_SHA256, NATIVE, ROOT
 
 
@@ -213,7 +213,7 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
         index = _file(search, prefix + "/context-view/C1_INDEX.md", hashes).decode()
         canonical_index = (f"# {role} evidence index \u2014 {contract.POLICY_ID}\n\n"
             f"Stage: {label}; manifest identity: {manifest['sha256']}.\n"
-            "Read all ordered lossless views below; original files remain available unchanged.\n"
+            "Lossless views below are available for inspection; exhaustive coverage is audited separately.\n"
             "Compatibility stubs are inert. Solver delivery and editor completion are separate.\n\n")
         for entry in manifest["required_evidence"]:
             canonical_index += f"- {entry['kind']}: context/{entry['path']} ({entry['bytes']} UTF-8 bytes).\n"
@@ -279,9 +279,6 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
                 "actual editor history lacks exact prior tool-result coverage")
             content = response["response"]["provider_response"]["content"]
             calls = [b for b in content if b.get("type") == "tool_use"]
-            if turn == 1:
-                _require(len(calls) == 1 and calls[0]["name"] == "read" and calls[0]["input"]["filePath"] == cwd + "/MISSION.md",
-                         "first model tool response must read only MISSION.md")
             for call in calls:
                 _require(call["id"] not in seen_ids, "duplicate actual tool-use identity")
                 seen_ids.add(call["id"])
@@ -305,26 +302,42 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
                     cwd + "/context/C1_INDEX.md": index,
                     cwd + "/context/harness/systemprompt.md": original["harness/systemprompt.md"]}
         expected.update({cwd + "/context/" + path: text for path, text in views.items()})
-        delivery, original_delivery = verify_original_strategy(decision, expected, cwd=cwd,
+        delivery, original_delivery = audit_original_strategy(decision, expected, cwd=cwd,
             manifest=manifest, original=original, views=views)
         final = state["results"][rows[-1]["slot_id"]]["response"]["text"]
         _require(isinstance(final, str) and final.count("<notes>") == final.count("</notes>") == 1
                  and re.fullmatch(r"\s*<notes>\s*\S[\s\S]*</notes>\s*", final), "normal final is not one complete notes block")
         _require(notes_mutations, "normal editor did not write its final notes")
-        verify_delivery(bodies[-1], {cwd + "/output/answer.md": final}, after=notes_mutations[-1])
+        notes_delivery = audit_delivery(bodies[-1], {cwd + "/output/answer.md": final}, after=notes_mutations[-1])
         harvested = _file(search, "rollouts/" + stage_name + "/harness/systemprompt.md", hashes).decode()
         contract._strategy(harvested.encode())
+        witnesses = _completion_witnesses(session, state["intents"])
+        mutation_binding = bind_mutation_completion(bodies[-1], cwd=cwd,
+            target="context/harness/systemprompt.md", actual=harvested,
+            witnesses=witnesses, original=original["harness/systemprompt.md"])
+        bind_mutation_completion(bodies[-1], cwd=cwd, target="output/answer.md",
+            actual=final, witnesses=witnesses)
         if strategy_mutations:
-            verify_delivery(bodies[-1], {cwd + "/context/harness/systemprompt.md": harvested}, after=strategy_mutations[-1])
+            strategy_delivery = audit_delivery(bodies[-1], {cwd + "/context/harness/systemprompt.md": harvested}, after=strategy_mutations[-1])
         else:
             _require(contract._strategy(harvested.encode()) == contract._strategy(original["harness/systemprompt.md"].encode())
                      and session["effective_changed_from_input"] is False,
                      "changed strategy lacks an actual write/edit")
-        sessions.append({"label": label, "ordinary_http_calls": len(rows), "mission_first": True,
-            "complete_evidence_before_decision": True, "source_files": len(original), "lossless_views": len(views),
-            "delivered_file_sha256": {name.removeprefix(cwd + "/"): value["sha256"] for name, value in delivery.items()},
+            strategy_delivery = None
+        first_calls = [block for block in contents[0] if block.get("type") == "tool_use"]
+        mission_first = bool(first_calls) and first_calls[0]["name"] == "read" and first_calls[0]["input"]["filePath"] == cwd + "/MISSION.md"
+        sessions.append({"label": label, "ordinary_http_calls": len(rows), "mission_first": mission_first,
+            "mission_first_only": mission_first and len(first_calls) == 1,
+            "complete_evidence_before_decision": delivery["complete"], "source_files": len(original), "lossless_views": len(views),
+            "read_consumption_policy": contract.READ_CONSUMPTION_POLICY_ID,
+            "read_consumption_audit": delivery, "notes_reread_audit": notes_delivery,
+            "strategy_reread_audit": strategy_delivery,
+            "strategy_mutation_binding": mutation_binding,
+            "delivered_file_sha256": {name.removeprefix(cwd + "/"): value["sha256"]
+                for name, value in delivery["files"].items() if value["complete"]},
             "strategy_mutations": len(strategy_mutations), "notes_mutations": len(notes_mutations),
-            "normal_final_notes_sha256": _sha(final.encode()), "post_write_verification": True,
+            "normal_final_notes_sha256": _sha(final.encode()), "post_write_verification": notes_delivery["complete"]
+                and (strategy_delivery is None or strategy_delivery["complete"]),
             "absent_caller_ids_normalized_in_parser_copy_only": sorted(normalized),
             "effective_changed": stages[stage_name]["effective_changed"],
             "effective_changed_from_input": session["effective_changed_from_input"],
@@ -359,7 +372,7 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
     index = _file(search, prefix + "/context-view/C1_INDEX.md", hashes).decode()
     canonical_index = (f"# SELECT evidence index — {contract.POLICY_ID}\n\n"
         f"Stage: select.seq2; manifest identity: {manifest['sha256']}.\n"
-        "Read all ordered lossless views below; original files remain available unchanged.\n"
+        "Lossless views below are available for inspection; exhaustive coverage is audited separately.\n"
         "Compatibility stubs are inert. Solver delivery and editor completion are separate.\n\n")
     for entry in manifest["required_evidence"]:
         canonical_index += f"- {entry['kind']}: context/{entry['path']} ({entry['bytes']} UTF-8 bytes).\n"
@@ -392,7 +405,7 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
     expected = {cwd + "/MISSION.md": mission, cwd + "/context/C1_MANIFEST.json": manifest_text,
                 cwd + "/context/C1_INDEX.md": index}
     expected.update({cwd + "/context/" + name: text for name, text in views.items()})
-    selector_proof["complete_declared_instruction_delivery"] = verify_delivery(selector_body, expected)
+    selector_proof["complete_declared_instruction_delivery"] = audit_delivery(selector_body, expected)
     transport_audits = {}
     clock_records = {}
     bindings = {key: study[key] for key in ("study_sha256", "source_sha256", "policy_sha256", "launcher_sha256")}
@@ -428,7 +441,8 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
         "artifact_sha256": hashes, "sessions": sessions, "selector_session": selector_proof,
         "scoped_transport_audit_sha256": transport_audits,
         "conversation_admission_clock_sha256": {label: clock["sha256"] for label, clock in clock_records.items()},
-        "mechanical_readiness_only": True, "semantic_grounding_review_required": True,
+        "mechanical_readiness_only": True, "semantic_grounding_review_required": False,
+        "read_consumption_policy": contract.READ_CONSUMPTION_POLICY_ID,
         "favorable_utility_required": False}
 
 
@@ -471,19 +485,119 @@ def verify_information_before_decision(request: dict, prepared: dict, *, cwd: st
     expected.update({cwd + "/context/" + path: text for path, text in views.items()})
     original_delivery = None
     if manifest["role"] == "SELECT":
-        delivery = verify_delivery(body, expected)
+        verify_candidate_inspection(body, manifest, cwd=cwd)
+        delivery = audit_delivery(body, expected)
     else:
         expected[cwd + "/context/harness/systemprompt.md"] = original["harness/systemprompt.md"]
-        delivery, original_delivery = verify_original_strategy(body, expected, cwd=cwd,
+        delivery, original_delivery = audit_original_strategy(body, expected, cwd=cwd,
             manifest=manifest, original=original, views=views)
     return {"kind": "phase3b-s2-information-before-decision-v1", "passed": True,
         "label": label, "manifest_sha256": manifest["sha256"], "request_sha256": digest(request),
         "actual_system_sha256": _sha(configured.encode()), "delivery": delivery,
-        "original_strategy_delivery": original_delivery, "provider_calls": 0}
+        "original_strategy_delivery": original_delivery, "provider_calls": 0,
+        "read_consumption_policy": contract.READ_CONSUMPTION_POLICY_ID}
+
+
+def verify_candidate_inspection(body: dict, manifest: dict, *, cwd: str) -> dict:
+    """Native selection still requires an observed successful read of each candidate."""
+    calls, results = _history(body)
+    observed = {}
+    for entry in manifest["required_evidence"]:
+        if entry["kind"] != "selection_candidate":
+            continue
+        paths = {cwd + "/context/" + entry["path"],
+                 *(cwd + "/context/" + chunk["path"] for chunk in entry["chunks"])}
+        identities = [identity for identity, call in calls.items() if call["name"] == "read"
+            and call["input"]["filePath"] in paths and not results[identity].get("is_error")]
+        _require(bool(identities), "native selector did not inspect every anonymous candidate")
+        observed[entry["path"]] = identities
+    _require(bool(observed), "native selector has no declared candidates")
+    return observed
+
+
+def _same_strategy(left: str, right: str) -> bool:
+    if left.replace("\r\n", "\n").strip() == right.replace("\r\n", "\n").strip():
+        return True
+    try:
+        return contract._strategy(left.encode()) == contract._strategy(right.encode())
+    except (ContractError, contract.ContractError):
+        return False  # Native shape validation still owns an unchanged malformed proposal.
+
+
+def _mutation_history(body: dict, path: str) -> tuple[list[str], str, dict]:
+    calls, results = _history(body)
+    ids = [identity for identity, call in calls.items() if call["name"] in {"write", "edit"}
+        and call["input"]["filePath"] == path and not results[identity].get("is_error")]
+    return ids, digest([{ "id": identity, "call": calls[identity], "result": results[identity]} for identity in ids]), calls
+
+
+def observe_mutation_completion(request: dict, *, cwd: Path, slot: str, previous: list) -> list:
+    """The controller observes owned native tool outcomes before returning the next response."""
+    body = _body(request, set())
+    observed = list(previous)
+    for relative in ("context/harness/systemprompt.md", "output/answer.md"):
+        path = str(cwd / relative)
+        ids, history_sha, calls = _mutation_history(body, path)
+        prior = next((v for v in reversed(observed) if v["target"] == relative), None)
+        if not ids or (prior is not None and prior["mutation_ids"] == ids):
+            continue
+        actual = editor.safe(cwd / relative, roots=(cwd,)).read_text(encoding="utf-8")
+        last = calls[ids[-1]]
+        if relative.startswith("context/") and last["name"] == "write":
+            _require(isinstance(last["input"].get("content"), str)
+                and _same_strategy(last["input"]["content"], actual),
+                "native strategy write outcome differs from model-produced fields")
+        text = actual.replace("\r\n", "\n")
+        if relative.startswith("output/"):
+            text = text.strip()
+        value = {"kind": "phase3b-native-mutation-completion-v1", "target": relative,
+            "mutation_ids": ids, "mutation_history_sha256": history_sha,
+            "observed_slot_id": slot, "request_sha256": digest(request), "text_sha256": _sha(text.encode())}
+        value["sha256"] = digest(value)
+        observed.append(value)
+    return observed
+
+
+def bind_mutation_completion(body: dict, *, cwd: str, target: str, actual: str,
+                             witnesses: list, original: str | None = None) -> dict:
+    ids, history_sha, calls = _mutation_history(body, cwd + "/" + target)
+    if not ids:
+        _require(original is not None and _same_strategy(original, actual),
+                 "normal author changed strategy without a successful mutation")
+        return {"mutation_ids": [], "unchanged_from_input": True}
+    if target.startswith("context/") and calls[ids[-1]]["name"] == "write":
+        _require(isinstance(calls[ids[-1]]["input"].get("content"), str)
+            and _same_strategy(calls[ids[-1]]["input"]["content"], actual),
+            "native strategy write outcome differs from model-produced fields")
+    witness = next((v for v in reversed(witnesses) if v.get("target") == target), None)
+    if not isinstance(witness, dict):
+        raise ContractError("successful model mutation lacks its native completion witness")
+    _sealed(witness)
+    text = actual.replace("\r\n", "\n")
+    if target.startswith("output/"):
+        text = text.strip()
+    _require(witness.get("kind") == "phase3b-native-mutation-completion-v1"
+        and witness.get("mutation_ids") == ids and witness.get("mutation_history_sha256") == history_sha
+        and witness.get("text_sha256") == _sha(text.encode()),
+        "native consumed artifact differs from successful model mutation completion")
+    return {"mutation_ids": ids, "completion_witness_sha256": witness["sha256"], "actual_text_matches": True}
+
+
+def _completion_witnesses(session: dict, intents: dict) -> list:
+    witnesses = session.get("mutation_witnesses", [])
+    _require(isinstance(witnesses, list), "native completion witnesses must be a list")
+    for witness in witnesses:
+        _sealed(witness)
+        slot = witness.get("observed_slot_id")
+        _require(slot in session["result_slots"] and slot in intents
+            and intents[slot].get("request_sha256") == witness.get("request_sha256")
+            and digest(intents[slot]["request"]) == witness.get("request_sha256"),
+            "native completion witness differs from its admitted request")
+    return witnesses
 
 
 def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str,
-                          response: dict, harvested_strategy: str | None = None) -> dict:
+                          response: dict, harvested_strategy: str | None = None, mutation_witnesses: list | None = None) -> dict:
     """Same normal-final delivery rule for every pilot; terminal is not normal."""
     manifest, original, _, configured = _prepared(prepared, label)
     _require(_system(request, configured, None) == cwd, "normal final changed native workspace")
@@ -502,10 +616,12 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
     notes = [identity for identity in mutations if calls[identity]["input"]["filePath"] == output]
     proof: dict = {"kind": "phase3b-s2-normal-session-delivery-v1", "passed": True, "label": label,
         "request_sha256": digest(request), "provider_response_sha256": digest(response),
-        "final_sha256": _sha(final.encode()), "notes_delivery": None, "strategy_delivery": None,
+        "final_sha256": _sha(final.encode()), "final_normalized_sha256": _sha(final.strip().encode()),
+        "notes_delivery": None, "strategy_delivery": None,
         "harvested_strategy": harvested_strategy, "harvested_strategy_sha256": None,
         "provider_calls": 0}
     if manifest["role"] == "SELECT":
+        proof["candidate_inspection"] = verify_candidate_inspection(body, manifest, cwd=cwd)
         _require(all(calls[identity]["input"]["filePath"] == output for identity in mutations),
                  "native selector mutated nonoutput evidence")
         from harness2.core.selection import _CHOICE
@@ -523,15 +639,21 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
                  "native author mutated an unsupported artifact")
         if not isinstance(harvested_strategy, str):
             raise ContractError("normal author lacks its actual harvested strategy witness")
+        proof["strategy_mutation_binding"] = bind_mutation_completion(body, cwd=cwd,
+            target="context/harness/systemprompt.md", actual=harvested_strategy,
+            witnesses=mutation_witnesses or [], original=original["harness/systemprompt.md"])
         changed = [identity for identity in mutations if calls[identity]["input"]["filePath"] == strategy_path]
         if changed:
-            proof["strategy_delivery"] = verify_delivery(body, {strategy_path: harvested_strategy}, after=changed[-1])
+            proof["strategy_delivery"] = audit_delivery(body, {strategy_path: harvested_strategy}, after=changed[-1])
         else:
-            _require(harvested_strategy == original["harness/systemprompt.md"],
+            _require(_same_strategy(harvested_strategy, original["harness/systemprompt.md"]),
                      "normal author changed strategy without a successful mutation")
         proof["harvested_strategy_sha256"] = _sha(harvested_strategy.encode())
     if notes:
-        proof["notes_delivery"] = verify_delivery(body, {output: final}, after=notes[-1])
+        proof["notes_mutation_binding"] = bind_mutation_completion(body, cwd=cwd,
+            target="output/answer.md", actual=final, witnesses=mutation_witnesses or [])
+        proof["notes_delivery"] = audit_delivery(body, {output: final}, after=notes[-1])
+    proof["read_consumption_policy"] = contract.READ_CONSUMPTION_POLICY_ID
     return proof
 
 
@@ -547,6 +669,7 @@ def verify_recorded_information(*, search: Path, label: str, session: dict, resu
         "index_text": _file(search, prefix + "/context-view/C1_INDEX.md", hashes).decode(),
         "authoring_system_text": _file(search, prefix + "/configured-agent-prompt.md", hashes).decode()}
     slots = session["result_slots"]
+    witnesses = _completion_witnesses(session, intents)
     _require(bool(slots), "normal information replay has no provider requests")
     information = normal = None
     cwd = None
@@ -566,7 +689,8 @@ def verify_recorded_information(*, search: Path, label: str, session: dict, resu
         if response.get("stop_reason") == "end_turn" and not terminal:
             witness = (session.get("normal_session_proof") or {}).get("harvested_strategy")
             normal = verify_normal_session(request, prepared, cwd=cwd, label=label,
-                response=response, harvested_strategy=witness)
+                response=response, harvested_strategy=witness,
+                mutation_witnesses=witnesses)
     _require(session.get("history_guard_audits") == guard.audits, "normal information signed history differs")
     _require(information is not None and session.get("information_proof") == information,
              "normal session omitted or changed its before-decision information proof")

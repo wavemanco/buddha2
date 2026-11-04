@@ -9,7 +9,7 @@ from pathlib import Path
 
 from buddha2.artifacts import ContractError, digest
 
-from . import accounting, ledger_core, report, workflow
+from . import accounting, ledger_core, report, support, workflow
 
 
 def minimal_study() -> dict:
@@ -36,6 +36,8 @@ def minimal_study() -> dict:
             "known_requests": 1995,
             "unknown_requests": 2,
         },
+        "prior_closed_attempt": copy.deepcopy(support.PRIOR_CLOSED_ATTEMPT),
+        "read_consumption_policy": support.READ_CONSUMPTION_POLICY,
     }
     study["slots"], study["assessment_plan"] = workflow._plan_slots(study)
     return study
@@ -123,13 +125,14 @@ class WorklistCases(unittest.TestCase):
             "cell_input",
             "cell_output",
             "assessment_micro_usd",
-            "first_micro_usd",
             "first_assessment_micro_usd",
             "editor_turns",
             "editor_payload_bytes",
         ):
             self.assertEqual(study["policy"][key], frozen[key])
-        self.assertEqual(study["policy"]["phase_micro_usd"], frozen["global_micro_usd"])
+        self.assertEqual(study["policy"]["phase_micro_usd"] + 12528747, frozen["global_micro_usd"])
+        self.assertEqual(study["policy"]["first_micro_usd"] + 12528747, frozen["first_micro_usd"])
+        self.assertEqual(accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] + 122, 2344)
         self.assertEqual(len(study["slots"]), 2344)
         self.assertEqual(len(study["assessment_plan"]), 12)
         for pilot in accounting.PAIRS:
@@ -264,6 +267,42 @@ class WorklistCases(unittest.TestCase):
         state["status"] = "blocked-unknown"
         with self.assertRaises(ledger_core.LiabilityStop):
             ledger_core._admit(state, meta, ledger_core._reservation("answer"))
+
+    def test_remaining_phase_cap_includes_pending_and_next_liability(self):
+        state = workflow._empty_state(minimal_study(), True)
+        meta = {"pair": "p3b-01", "cell": "p3b-01:adaptive", "role": "native_selector"}
+        reserve = ledger_core._reservation("native_selector")
+        state["spent_micro_usd"] = accounting.POLICY["phase_micro_usd"] - reserve["micro_usd"]
+        accounting._admit(state, meta, reserve)
+        state["reserved_micro_usd"] = 1
+        with self.assertRaises(accounting.PhaseBudgetStop):
+            accounting._admit(state, meta, reserve)
+        self.assertEqual(ledger_core.POLICY["phase_micro_usd"], 180000000)
+
+    def test_remaining_first_checkpoint_stays_binding_after_review(self):
+        meta = {"pair": "p3b-01", "cell": "p3b-01:adaptive", "role": "native_selector"}
+        reserve = ledger_core._reservation("native_selector")
+        for reviewed in (False, True):
+            state = workflow._empty_state(minimal_study(), True)
+            state["engineering_review"] = "b" * 64 if reviewed else None
+            state["first_pair"]["spent_micro_usd"] = accounting.POLICY["first_micro_usd"] - reserve["micro_usd"]
+            accounting._admit(state, meta, reserve)
+            state["first_pair"]["spent_micro_usd"] += 1
+            with self.subTest(reviewed=reviewed), self.assertRaises(accounting.CheckpointStop):
+                accounting._admit(state, meta, reserve)
+
+    def test_closed_attempt_cannot_reset_admission_count_or_global_funding(self):
+        state = workflow._empty_state(minimal_study(), True)
+        meta = {"pair": "p3b-01", "cell": "p3b-01:adaptive", "role": "native_selector"}
+        reserve = ledger_core._reservation("native_selector")
+        state["attempts"] = 2221
+        accounting._admit(state, meta, reserve)
+        state["attempts"] += 1
+        with self.assertRaises(accounting.PhaseBudgetStop):
+            accounting._admit(state, meta, reserve)
+        self.assertEqual(1997 + support.PRIOR_CLOSED_ATTEMPT["provider_calls"] + 2222, 4341)
+        self.assertEqual(46044365 + 22880000 + support.PRIOR_CLOSED_ATTEMPT["known_spent_micro_usd"]
+                         + accounting.POLICY["phase_micro_usd"], 248924365)
 
 
 class AnalysisCases(unittest.TestCase):

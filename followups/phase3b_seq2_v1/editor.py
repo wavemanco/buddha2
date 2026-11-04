@@ -31,7 +31,7 @@ from .support import safe
 
 MAX_STEPS = 24
 NORMAL_STEPS = 23
-PROFILE_ID = "phase3b-seq2-editor-twenty-four-v1"
+PROFILE_ID = "phase3b-seq2-editor-read-diagnostic-v1"
 _SERIAL = frozen._SERIAL
 TOOLS, _FALSE = frozen.TOOLS, frozen._FALSE
 _LABEL = re.compile(r"(?:(?:inv[12]|dom[12]|c[12])\.a[12]|select\.seq2)\Z")
@@ -101,8 +101,11 @@ def tool_boundary(content: list, cwd: Path, *, selector: bool = False) -> None:
 
 
 def profile() -> dict:
+    from .contract import READ_CONSUMPTION_POLICY_ID
+
     return {"id": PROFILE_ID, "steps": MAX_STEPS, "ordinary_steps": NORMAL_STEPS,
             "terminal_turn": MAX_STEPS, "terminal_note_sha256": TERMINAL_NOTE_SHA256,
+        "read_consumption_policy": READ_CONSUMPTION_POLICY_ID,
             "native_subprocess_cap_seconds": 600, "OpenCode_fetch_cap_seconds": 590}
 
 
@@ -137,7 +140,14 @@ def effective_request(raw: dict, *, turn: int | None = None) -> dict:
 @contextmanager
 def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callable, *, prepared: dict):
     exchanges = threading.RLock()
-    guarded_dispatch = HistoryGuard(dispatch, prefix)
+    def observed_dispatch(slot, role, request):
+        from .evidence import observe_mutation_completion
+
+        record["mutation_witnesses"] = observe_mutation_completion(request, cwd=cwd, slot=slot,
+            previous=record.get("mutation_witnesses", []))
+        return dispatch(slot, role, request)
+
+    guarded_dispatch = HistoryGuard(observed_dispatch, prefix)
     record["history_guard_profile"] = "p3a-hi-ordinary-and-terminal-v1"
     settled: dict[str, bytes] = {}
 
@@ -192,7 +202,7 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                                safe(cwd / "context/harness/systemprompt.md", roots=(cwd,)).read_text(encoding="utf-8"))
                     record["normal_session_proof"] = verify_normal_session(
                         request, prepared, cwd=str(cwd), label=label, response=response,
-                        harvested_strategy=current)
+                        harvested_strategy=current, mutation_witnesses=record["mutation_witnesses"])
                 tool_boundary(response["content"], cwd, selector=prefix.endswith(".select.seq2"))
                 payload = sse(response)
                 settled[raw_sha] = payload
@@ -461,14 +471,14 @@ class AccountedProposer(frozen.AccountedProposer):
             if record.get("error"):
                 record["status"] = "boundary_stopped"
                 raise ProposerError("accounted editor boundary stopped this conversation")
+            if not record["terminal_note_used"]:
+                normal = record.get("normal_session_proof", {})
+                if normal.get("final_normalized_sha256") != hashlib.sha256(answer.strip().encode()).hexdigest():
+                    self.halt("native_return_differs_from_normal_proof")
+                    raise ProposerError("native returned artifact differs from normal provider final")
             if label == "select.seq2":
                 _require(selector_snapshot(cwd / "context", owned_workspace=cwd) == captured_input,
                          "selector modified its immutable candidate evidence")
-                if not record["terminal_note_used"]:
-                    normal = record.get("normal_session_proof", {})
-                    if normal.get("final_sha256") != hashlib.sha256(answer.encode()).hexdigest():
-                        self.halt("selector_native_return_differs_from_normal_proof")
-                        raise ProposerError("native selector returned text outside its actual normal proof")
                 record.update(status="valid" if answer.strip() and not error else "empty",
                     model_backed=bool(record["result_slots"]),
                     selector_answer=answer, authentic_eligible=bool(answer.strip() and not error)
@@ -525,8 +535,8 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     """Replay history and prove every candidate reached the decisive native request."""
     from followups.phase3a_c1_completion_v3.evidence import _body
 
-    from .delivery import _history, verify_delivery
-    from .evidence import _sources
+    from .delivery import _history, audit_delivery
+    from .evidence import _file, _sources, _system, verify_candidate_inspection
 
     saved = validate_persisted_sessions(Path(search) / "editor-audit", study_sha256=study_sha256,
         pilot=pilot, fixture=fixture, results=results, intents=intents)
@@ -551,11 +561,6 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
              "native selector returned choice differs from actual final provider text")
     body = _body(intents[slots[-1]]["request"], set())
     calls, tool_results = _history(body)
-    _require(bool(calls), "native selector read no evidence")
-    first = next(iter(calls.values()))
-    _require(first["name"] == "read" and first["input"]["filePath"].endswith("/MISSION.md"),
-             "native selector did not read MISSION first")
-    cwd = first["input"]["filePath"].removesuffix("/MISSION.md")
     prefix = "editor-audit/c1-contracts/select.seq2"
     manifest = read_json(safe(Path(search) / prefix / "manifest.json"))
     _require(manifest.get("role") == "SELECT" and manifest.get("label") == "select.seq2"
@@ -564,6 +569,8 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
              "native selector manifest differs from original candidate inventory")
     hashes: dict[str, str] = {}
     original, views = _sources(Path(search), prefix, manifest, hashes)
+    configured = _file(Path(search), prefix + "/configured-agent-prompt.md", hashes).decode()
+    cwd = _system(intents[slots[-1]]["request"], configured, None)
     writes = [identity for identity, call in calls.items() if call["name"] in {"write", "edit"}
               and call["input"]["filePath"] == cwd + "/output/answer.md"]
     decision = body
@@ -576,12 +583,14 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
         _require(len(indices) == 1, "native selector first choice mutation is ambiguous")
         decision = {"messages": body["messages"][:indices[0]]}
     expected = {cwd + "/context/" + name: value for name, value in views.items()}
-    delivered = verify_delivery(decision, expected)
+    inspected = verify_candidate_inspection(decision, manifest, cwd=cwd)
+    delivered = audit_delivery(decision, expected)
+    notes_delivery = None
     if writes:
-        verify_delivery(body, {cwd + "/output/answer.md": session["selector_answer"]}, after=writes[-1])
+        notes_delivery = audit_delivery(body, {cwd + "/output/answer.md": session["selector_answer"]}, after=writes[-1])
     for call_id, call in calls.items():
-        _require(not tool_results[call_id].get("is_error"), "native selector had an unsuccessful tool")
         if call["name"] != "read":
+            _require(not tool_results[call_id].get("is_error"), "native selector had an unsuccessful mutation")
             _require(call["name"] in {"write", "edit"}
                      and call["input"]["filePath"] == cwd + "/output/answer.md",
                      "native selector modified candidate evidence")
@@ -593,5 +602,7 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     return {"kind": "phase3b-selector-proof-v1", "passed": True, "fixture": fixture,
         "study_sha256": study_sha256, "session": "select.seq2", "normal_completion": True,
         "selected_id": selection["chosen_id"], "required_view_delivery": delivered,
+        "candidate_inspection": inspected, "notes_reread_audit": notes_delivery,
+        "read_consumption_policy": "read-consumption-diagnostic-v1",
         "candidate_source_sha256": {k: hashlib.sha256(v.encode()).hexdigest() for k, v in original.items()},
         "artifact_sha256": hashes, "history_requests": len(slots)}

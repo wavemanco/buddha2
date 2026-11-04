@@ -24,25 +24,37 @@ def _require(value: bool, message: str) -> None:
 
 def _historical_resources(study: dict, state: dict) -> dict:
     prior = study["prior_live_episode"]
+    closed = study.get("prior_closed_attempt", {})
     known, reserved = prior["known_spent_micro_usd"], prior["reserved_micro_usd"]
+    closed_known = closed.get("known_spent_micro_usd", 0)
+    closed_reserved = closed.get("reserved_micro_usd", 0)
     fixture = state["fixture"]
-    total_known = None if fixture else known + state["spent_micro_usd"]
-    total_reserved = None if fixture else reserved + state["reserved_micro_usd"]
+    total_known = None if fixture else known + closed_known + state["spent_micro_usd"]
+    total_reserved = None if fixture else reserved + closed_reserved + state["reserved_micro_usd"]
+    total_calls = None if fixture else (
+        prior["provider_calls"] + closed.get("provider_calls", 0) + state["provider_calls"]
+    )
+    exposure = None if fixture else (
+        known + closed_known + reserved + closed_reserved
+        + state["spent_micro_usd"] + state["reserved_micro_usd"]
+    )
     return {
         "prior_real_phase3a_spent_micro_usd": known,
         "prior_real_phase3a_reserved_micro_usd": reserved,
         "prior_real_phase3a_provider_calls": prior["provider_calls"],
         "prior_real_phase3a_known_responses": prior["known_requests"],
         "prior_real_phase3a_unknown_responses": prior["unknown_requests"],
+        "prior_closed_phase3b_attempt": copy.deepcopy(closed),
+        "lineage_spent_micro_usd": total_known,
+        "lineage_reserved_micro_usd": total_reserved,
+        "lineage_max_exposure_micro_usd": exposure,
+        "lineage_provider_calls": total_calls,
+        "legacy_cumulative_field_scope": "Phase3A plus closed Phase3B attempt plus this run",
         "cumulative_real_phase3a_spent_micro_usd": total_known,
         "cumulative_real_phase3a_reserved_micro_usd": total_reserved,
-        "cumulative_real_phase3a_max_exposure_micro_usd": None
-        if fixture
-        else known + reserved + state["spent_micro_usd"] + state["reserved_micro_usd"],
-        "cumulative_real_phase3a_provider_calls": None
-        if fixture
-        else prior["provider_calls"] + state["provider_calls"],
-        "historical_accounting_settled": reserved == 0,
+        "cumulative_real_phase3a_max_exposure_micro_usd": exposure,
+        "cumulative_real_phase3a_provider_calls": total_calls,
+        "historical_accounting_settled": reserved + closed_reserved == 0,
         "historical_unknown_released": False,
     }
 
@@ -225,6 +237,49 @@ def _strategy_attribution(result: dict) -> dict:
     }
 
 
+def _read_consumption_audit(branches: dict) -> dict:
+    """Keep every recorded session's full read audit separate from benchmark completion."""
+    sessions = []
+    observed = set()
+    for (pilot, arm), branch in sorted(branches.items()):
+        if arm != "adaptive":
+            continue
+        records = ((branch.get("result") or {}).get("editor_evidence") or {}).get("sessions", {})
+        for label, record in sorted(records.items()):
+            observed.add((pilot, label.split(".a", 1)[0]))
+            information = record.get("information_proof") or {}
+            normal = record.get("normal_session_proof") or {}
+            before = information.get("delivery")
+            audits = {
+                "before_decision": copy.deepcopy(before),
+                "notes_reread": copy.deepcopy(normal.get("notes_delivery")),
+                "strategy_reread": copy.deepcopy(normal.get("strategy_delivery")),
+            }
+            available = isinstance(before, dict) and isinstance(record.get("normal_session_proof"), dict)
+            complete = available and all(
+                audit is None or isinstance(audit, dict) and audit.get("complete") is True
+                for audit in audits.values()
+            )
+            sessions.append({
+                "pilot": pilot, "label": label, "session_status": record.get("status"),
+                "diagnostics_available": available, "complete": complete, "audits": audits,
+            })
+    missing = [
+        {"pilot": pilot, "stage": stage}
+        for pilot in accounting.PAIRS
+        for stage in ("inv1", "dom1", "c1", "inv2", "dom2", "c2", "select.seq2")
+        if (pilot, stage) not in observed
+    ]
+    return {
+        "policy_id": "read-consumption-diagnostic-v1", "blocking": False,
+        "complete": not missing and bool(sessions) and all(row["complete"] for row in sessions),
+        "recorded_sessions": len(sessions),
+        "complete_sessions": sum(row["complete"] for row in sessions),
+        "missing_stages": missing, "sessions": sessions,
+        "scope": "All recorded native author/selector sessions, including discarded shape attempts",
+    }
+
+
 def _coverage(study: dict, state: dict, saved: dict, ready: bool) -> dict:
     slots = dict.fromkeys(study["slots"], "not_attempted")
     first = accounting.PAIRS[0]
@@ -306,6 +361,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
     validation = copy.deepcopy(saved.get("validation_failure"))
     branches = saved["branches"] if validation is None else {}
     assessments = saved["assessments"] if validation is None else {}
+    read_audit = _read_consumption_audit(branches)
     readiness = copy.deepcopy(saved.get("readiness"))
     ready = isinstance(readiness, dict) and readiness.get("passed") is True
     rows = []
@@ -528,6 +584,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             "Equal resource ceilings do not imply equal realized compute. c2-c1 includes fresh sampling.",
             "Selected checkpoint and fixed portfolio are complete procedures; selection gain is not an edit effect.",
         ],
+        "read_consumption_audit": read_audit,
     }
     coverage = _coverage(
         study, state, {**saved, "branches": branches, "assessments": assessments}, ready
@@ -542,7 +599,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             for row in study["assessment_plan"]
         ],
         potential_request_slots=2344,
-        maximum_new_admitted_attempts=2344,
+        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         editor_max_requests=24,
         editor_max_ordinary_requests=23,
         inventory_is_authorization=False,
@@ -552,7 +609,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         current_goal_cap_micro_usd=250_000_000,
         defined_max_cumulative_exposure_micro_usd=248_924_365,
         potential_request_slots=2344,
-        maximum_new_admitted_attempts=2344,
+        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
     )
     account = {
         key: copy.deepcopy(value)
@@ -595,6 +652,10 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         "scientific_complete": complete and not fixture,
         "authentic_live_path": authentic,
         "readiness_passed": ready,
+        "read_consumption_audit_complete": read_audit["complete"],
+        "read_consumption_audit_blocking": False,
+        "read_consumption_audit_recorded_sessions": read_audit["recorded_sessions"],
+        "read_consumption_audit_complete_sessions": read_audit["complete_sessions"],
         "engineering_review": state.get("engineering_review"),
         "first_assessments_closed": state.get("first_assessments_closed", False),
         "unknown_results": unknown,
@@ -606,7 +667,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         "diagnostic_scored": 0,
         "diagnostic_classified": True,
         "potential_request_slots": 2344,
-        "maximum_new_admitted_attempts": 2344,
+        "maximum_new_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         "transport_audit_summary": copy.deepcopy(state.get("transport_audit_summary")),
         "deadline_stop": copy.deepcopy(state.get("deadline_stop")),
         "provider_calls_semantics": "Admitted live attempts; actual SDK invocations require physical audits.",
@@ -666,6 +727,8 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             "assessment_plan",
             "fixed_candidate_order",
             "prior_live_episode",
+            "prior_closed_attempt",
+            "read_consumption_policy",
             "rank_io_profile",
         )
         if key in study
@@ -681,7 +744,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         historical_unknown_released=False,
         selected_final_assessment_is_alias=True,
         diagnostic_assessments=0,
-        maximum_new_admitted_attempts=2344,
+        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
     )
     data = {
         "rows": rows,
@@ -730,9 +793,15 @@ def write_report(data: dict, output: Path) -> dict:
         + f"Mean selected minus c1: {analysis['mean_selected_minus_c1']}.\n\n"
         + "Native selected-final scores alias c1/c2 assessments; no extra judging or independent observations. "
         + "A later fresh rollout may change with an unchanged strategy. Selection gain is not an edit effect.\n\n"
-        + f"Admitted requests: {summary['attempts']}/2344 maximum; known micro-USD: {summary['spent_micro_usd']}; "
+        + "Exhaustive read-consumption audit (diagnostic; separate from benchmark completion): "
+        + f"complete={summary['read_consumption_audit_complete']}; "
+        + f"complete recorded sessions={summary['read_consumption_audit_complete_sessions']}/"
+        + f"{summary['read_consumption_audit_recorded_sessions']}. "
+        + "Full per-file coverage, missing ranges and parse errors are retained in analysis.json under read_consumption_audit.\n\n"
+        + f"Admitted requests: {summary['attempts']}/{summary['maximum_new_admitted_attempts']} maximum; known micro-USD: {summary['spent_micro_usd']}; "
         + f"new held micro-USD: {summary['reserved_micro_usd']}. Old held liabilities remain22880000micro-USD.\n\n"
-        + "Equal35USD inference-cell allowances and180USD global exposure cap do not imply equal realized cost. "
+        + f"Equal35USD fresh inference-cell allowances and{data['protocol']['policy']['phase_micro_usd'] / 1_000_000:.6f}USD remaining global exposure cap do not imply equal realized cost. "
+        + "The earlier stopped Phase3B attempt is accounted for separately and remains charged to the original allowance. "
         + "Failed/discarded authoring/selector/solver work remains fully counted. No automatic repetition.\n"
     )
     write_bytes_once(output / "PHASE3B_REPORT.md", text.encode("utf-8"))

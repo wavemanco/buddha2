@@ -46,9 +46,11 @@ def _live_study_claim(checked: dict, *, publish: bool = False) -> dict:
             or Path(checked.get("journal", "")) != accounting.canonical_journal(checked["study_sha256"], False)):
         raise ContractError("completion claim requires the exact fresh provider scope")
     record = {"kind": "phase3b-s2-live-study-claim-v1", **{k: checked[k] for k in _BINDINGS},
-        "run": checked["run"], "journal": checked["journal"], "cap_micro_usd": 180000000,
-        "first_cap_micro_usd": 55000000, "readiness_included_micro_usd": 35000000}
-    path = _completion_path(BASE / "live-study.json")
+        "run": checked["run"], "journal": checked["journal"],
+        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
+        "first_cap_micro_usd": accounting.POLICY["first_micro_usd"],
+        "readiness_included_micro_usd": accounting.POLICY["cell_micro_usd"]}
+    path = _completion_path(BASE / "live-study-read-diagnostic-r1.json")
     if publish:
         write_once(path, record)
     elif path.exists():
@@ -114,8 +116,12 @@ def preflight(study: Path, grant: Path, stage: str, mode: str, *, supervisor_age
     checked = {**value, "kind": "phase3b-s2-launch-preflight-v1",
         "study_path": str(study), "grant_path": str(grant), "run": str(run), "journal": str(journal),
         "mode": mode, "stage": stage, "journal_id": journal_id, "control_policy_sha256": CONTROL_SHA256,
-        "billing_profile": BILLING_PROFILE, "cap_micro_usd": 180000000, "first_pair_cap_micro_usd": 55000000,
-        "readiness_included_micro_usd": 35000000, "slot_count": 2344, "maximum_admitted_attempts": 2344,
+        "billing_profile": BILLING_PROFILE,
+        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
+        "first_pair_cap_micro_usd": accounting.POLICY["first_micro_usd"],
+        "readiness_included_micro_usd": accounting.POLICY["cell_micro_usd"],
+        "slot_count": accounting.WORKLIST_PROFILE["potential_request_slots"],
+        "maximum_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         "configuration_only": mode == "provider-config", "credential_access": False, "provider_requests": 0,
         "supervisor_agent": supervisor_agent, "fixture_supervision_rehearsal": rehearsal}
     if mode == "provider":

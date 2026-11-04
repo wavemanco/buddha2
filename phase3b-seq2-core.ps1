@@ -171,7 +171,7 @@ try {
             if ($Action -eq 'provider') {
                 $bound = Get-Content -LiteralPath ($prefix + '.inspection.json') -Raw -Encoding utf8 | ConvertFrom-Json -AsHashtable
                 Write-Host 'Entering keys confirms the same previously declared Anthropic/OpenAI accounts and public-PAYG billing profile; stop if those accounts or terms have changed.'
-                Write-Host 'This one controller retains keys only in RAM through supervised startup, readiness, first-pair review and remaining work. Approved cap: $180.00 total, included $55 first checkpoint and $35 readiness cell.'
+                Write-Host ('This one controller retains keys only in RAM through supervised startup, readiness, first-pair review and remaining work. Remaining cap: ${0} total, included ${1} first checkpoint and ${2} readiness cell.' -f ($checked.cap_micro_usd / 1000000), ($checked.first_pair_cap_micro_usd / 1000000), ($checked.readiness_included_micro_usd / 1000000))
                 Write-Host 'After key entry, paid work waits for the named keyless supervisor to attach (at most 30 minutes). No extra key prompt is required.'
                 Write-Host 'Validating the frozen release before hidden key entry; this may take a few minutes. Wait for the masked prompts.'
                 $result = Invoke-ProviderExecution $executionId $checked $bound.inspection_sha256

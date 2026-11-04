@@ -13,7 +13,16 @@ from followups.phase3a_readiness_recovery_v1 import support as frozen
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "phase3b-seq2-v1"
 DECLARED_DEFINITION_SHA256 = "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e"
-AUTHORITY = ROOT / "evidence" / PREFIX / "authorization.json"
+AUTHORITY = ROOT / "evidence" / PREFIX / "read-audit-r1-authorization.json"
+READ_CONSUMPTION_POLICY = "read-consumption-diagnostic-v1"
+PRIOR_CLOSED_ATTEMPT = {
+    "study_sha256": "ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c",
+    "known_spent_micro_usd": 12528747,
+    "reserved_micro_usd": 0,
+    "provider_calls": 122,
+    "known_requests": 122,
+    "unknown_requests": 0,
+}
 PROVIDERS = ROOT / "evidence" / PREFIX / "provider-documentation.json"
 LAUNCHER = ROOT / "phase3b-seq2.ps1"
 BASE = Path(os.environ.get("BUDDHA2_OUTPUT_ROOT", "/results")) / PREFIX
@@ -83,15 +92,23 @@ def publish(target: Path, value: dict) -> None:
 def validate_authority() -> dict:
     value = read(AUTHORITY)
     expected = {
-        "new_cap_micro_usd": 180000000, "first_cap_micro_usd": 55000000,
+        "new_cap_micro_usd": 167471253, "first_cap_micro_usd": 42471253,
         "first_assessment_sublimit_micro_usd": 25000000, "readiness_included_micro_usd": 35000000,
         "inference_cell_micro_usd": 35000000, "assessment_pool_micro_usd": 70000000,
-        "historical_known_micro_usd": 46044365, "historical_reserved_micro_usd": 22880000,
-        "historical_attempts": 1997, "new_max_attempts": 2344, "potential_request_slots": 2344,
+        "historical_known_micro_usd": 58573112, "historical_reserved_micro_usd": 22880000,
+        "historical_attempts": 2119, "new_max_attempts": 2222, "potential_request_slots": 2344,
+        "closed_parent_spent_micro_usd": 12528747, "closed_parent_reserved_micro_usd": 0,
+        "closed_parent_attempts": 122,
         "cumulative_max_exposure_micro_usd": 248924365, "cumulative_max_attempts": 4341,
     }
-    require(value.get("kind") == "phase3b-s2-authority-v1" and value.get("authorized") is True
+    require(value.get("kind") == "phase3b-s2-read-audit-r1-authority-v1" and value.get("authorized") is True
             and value.get("definition_sha256") == DECLARED_DEFINITION_SHA256
+        and value.get("amendment_id") == "phase3b-read-audit-r1"
+        and value.get("read_consumption_policy") == READ_CONSUMPTION_POLICY
+        and value.get("authorized_repeat") is True
+        and value.get("closed_parent_study") == PRIOR_CLOSED_ATTEMPT["study_sha256"]
+        and value.get("closed_parent_summary_file_sha256")
+            == "6b302d23860fc2e77bf42921116f25612f3ae5ae94600ed93a4d8d178ca749a2"
             and all(type(value.get(key)) is int and value[key] == n for key, n in expected.items())
             and value.get("historical_liability_release_authorized") is False
             and value.get("old_results_reused") is False

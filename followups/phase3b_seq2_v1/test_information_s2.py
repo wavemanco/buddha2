@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import tempfile
 import unittest
@@ -10,7 +11,7 @@ from unittest.mock import patch
 
 from harness2.core import context, prompts
 
-from buddha2.artifacts import ContractError
+from buddha2.artifacts import ContractError, digest
 from followups.phase3a_readiness_recovery_v1.test_delivery import pair
 
 from . import contract, editor, evidence, history, strategy
@@ -68,26 +69,54 @@ class InformationGuardTests(unittest.TestCase):
             messages.extend(pair(f"read-{index}", "read", path, text, limit=max(2000, len(text.splitlines()))))
         return {"system": [{"type": "text", "text": system}], "messages": messages}
 
+    def completion_witnesses(self, request, *, strategy=None, notes=None):
+        """Synthetic controller observations for the pure binding unit checks."""
+        witnesses = []
+        for target, text in (("context/harness/systemprompt.md", strategy), ("output/answer.md", notes)):
+            if text is None:
+                continue
+            ids, history_sha, _ = evidence._mutation_history(request, self.cwd + "/" + target)
+            if not ids:
+                continue
+            text = text.replace("\r\n", "\n")
+            if target.startswith("output/"):
+                text = text.strip()
+            witness = {"kind": "phase3b-native-mutation-completion-v1", "target": target,
+                "mutation_ids": ids, "mutation_history_sha256": history_sha,
+                "observed_slot_id": "SYNTHETIC current request", "request_sha256": digest(request),
+                "text_sha256": hashlib.sha256(text.encode()).hexdigest()}
+            witness["sha256"] = digest(witness)
+            witnesses.append(witness)
+        return witnesses
+
     def test_complete_later_round_information_passes_without_requiring_an_edit(self):
         prepared = self.prepared()
         request = self.request(prepared)
         proof = evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="inv2.a1")
         self.assertTrue(proof["passed"])
+        self.assertTrue(proof["delivery"]["complete"])
+        raw = proof["delivery"]["files"][self.cwd + "/context/harness/systemprompt.md"]
+        self.assertFalse(raw["required"])
+        self.assertFalse(raw["complete"])
         self.assertEqual(proof["label"], "inv2.a1")
         self.assertEqual(proof["provider_calls"], 0)
 
-    def test_later_pilot_cannot_omit_prior_composed_pool_view(self):
+    def test_later_pilot_reports_omitted_prior_pool_view_without_stopping(self):
         prepared = self.prepared()
         entry = next(e for e in prepared["manifest"]["required_evidence"] if e["path"] == "pool/c1/produced.md")
         request = self.request(prepared, omitted_view=entry["chunks"][0]["path"])
-        with self.assertRaisesRegex(ContractError, "absent, stale or mismatched"):
-            evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="inv2.a1")
+        proof = evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="inv2.a1")
+        audit = proof["delivery"]
+        self.assertTrue(proof["passed"])
+        self.assertFalse(audit["complete"])
+        missing = audit["files"][self.cwd + "/context/" + entry["chunks"][0]["path"]]
+        self.assertEqual(missing["missing_ranges"], [[1, missing["source_lines"]]])
 
     def test_normal_direct_final_cannot_bypass_later_candidate_reads(self):
         prepared = self.prepared(selector=True)
         entry = next(e for e in prepared["manifest"]["required_evidence"] if e["path"] == "candidates/B.md")
         request = self.request(prepared, omitted_view=entry["chunks"][0]["path"])
-        with self.assertRaisesRegex(ContractError, "absent, stale or mismatched"):
+        with self.assertRaisesRegex(ContractError, "inspect every anonymous candidate"):
             evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="select.seq2")
 
     def test_complete_selector_direct_final_needs_no_output_write(self):
@@ -118,13 +147,120 @@ class InformationGuardTests(unittest.TestCase):
         response = {"stop_reason": "end_turn", "content": [{"type": "text", "text": notes}]}
         current = (self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8")
         proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-            response=response, harvested_strategy=current)
+            response=response, harvested_strategy=current,
+            mutation_witnesses=self.completion_witnesses(request, notes=notes))
         self.assertTrue(proof["passed"])
+        with self.assertRaises(ContractError):
+            evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                response=response, harvested_strategy=current + "SYNTHETIC unbound output")
         changed = copy.deepcopy(request)
         changed["messages"] = changed["messages"][:-2]
-        with self.assertRaisesRegex(ContractError, "absent, stale or mismatched"):
-            evidence.verify_normal_session(changed, prepared, cwd=self.cwd, label="inv2.a1",
-                response=response, harvested_strategy=current)
+        incomplete = evidence.verify_normal_session(changed, prepared, cwd=self.cwd, label="inv2.a1",
+            response=response, harvested_strategy=current,
+            mutation_witnesses=self.completion_witnesses(changed, notes=notes))
+        self.assertTrue(incomplete["passed"])
+        self.assertFalse(incomplete["notes_delivery"]["complete"])
+
+    def test_successful_model_write_and_ordered_edit_bind_harvest_without_rereads(self):
+        prepared = self.prepared()
+        original = json.loads((self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8"))
+        written = {**original, "answer_system": "SYNTHETIC MODEL A"}
+        notes = "<notes>SYNTHETIC mutation binding.</notes>"
+        response = {"stop_reason": "end_turn", "content": [{"type": "text", "text": notes}]}
+        for edit in (False, True):
+            request = self.request(prepared)
+            request["messages"].extend(pair("strategy-write", "write", self.cwd + "/context/harness/systemprompt.md",
+                json.dumps(written, indent=2).replace("\n", "\r\n") + "\r\n"))
+            expected = written
+            if edit:
+                request["messages"].extend([{"role": "assistant", "content": [{"type": "tool_use",
+                    "id": "strategy-edit", "name": "edit", "caller": {"type": "direct"}, "input": {
+                        "filePath": self.cwd + "/context/harness/systemprompt.md", "oldString": "SYNTHETIC MODEL A",
+                        "newString": "SYNTHETIC MODEL C"}}]}, {"role": "user", "content": [{
+                            "type": "tool_result", "tool_use_id": "strategy-edit", "content": "Edit applied successfully."}]}])
+                expected = {**written, "answer_system": "SYNTHETIC MODEL C"}
+            request["messages"].extend(pair("notes-write", "write", self.cwd + "/output/answer.md", notes))
+            with self.subTest(edit=edit):
+                proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                    response=response, harvested_strategy=json.dumps(expected, indent=4) + "\n",
+                    mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
+                self.assertTrue(proof["strategy_mutation_binding"]["actual_text_matches"])
+                self.assertFalse(proof["strategy_delivery"]["complete"])
+                wrong = {**expected, "answer_system": "SYNTHETIC OPERATOR B"}
+                with self.assertRaises(ContractError):
+                    evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                        response=response, harvested_strategy=json.dumps(wrong),
+                        mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
+                wrong_final = {"stop_reason": "end_turn", "content": [{"type": "text", "text": "<notes>SYNTHETIC FOREIGN</notes>"}]}
+                with self.assertRaisesRegex(ContractError, "consumed artifact differs"):
+                    evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                        response=wrong_final, harvested_strategy=json.dumps(expected, indent=4) + "\n",
+                        mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
+
+    def test_diagnostic_policy_never_swallows_source_or_system_tamper(self):
+        prepared = self.prepared()
+        request = self.request(prepared)
+        for mutation in ("source", "system", "manifest"):
+            candidate, body = copy.deepcopy(prepared), copy.deepcopy(request)
+            if mutation == "source":
+                name = next(iter(candidate["evidence_files"]))
+                candidate["evidence_files"][name] += "SYNTHETIC changed evidence"
+            elif mutation == "system":
+                body["system"][0]["text"] = "SYNTHETIC foreign instructions"
+            else:
+                candidate["manifest"]["label"] = "dom2.a1"
+            with self.subTest(mutation=mutation), self.assertRaises(ContractError):
+                evidence.verify_information_before_decision(body, candidate, cwd=self.cwd, label="inv2.a1")
+
+    def test_controller_observes_native_completion_and_checks_full_write_fields(self):
+        native = self.root / "native-completion"
+        (native / "context/harness").mkdir(parents=True)
+        (native / "output").mkdir()
+        strategy_path = native / "context/harness/systemprompt.md"
+        notes_path = native / "output/answer.md"
+        fields = {"plan_system": "SYNTHETIC plan", "answer_system": "SYNTHETIC A", "rank_system": "SYNTHETIC rank"}
+        strategy_path.write_text(json.dumps(fields, indent=4) + "\n", encoding="utf-8")
+        notes_path.write_text("<notes>SYNTHETIC saved</notes>\n", encoding="utf-8")
+        request = {"messages": pair("write-strategy", "write", str(strategy_path), json.dumps(fields))
+            + pair("write-notes", "write", str(notes_path), "<notes>SYNTHETIC saved</notes>")}
+        witnesses = evidence.observe_mutation_completion(request, cwd=native, slot="SYNTHETIC t02", previous=[])
+        self.assertEqual(len(witnesses), 2)
+        self.assertEqual(evidence.observe_mutation_completion(request, cwd=native,
+            slot="SYNTHETIC t03", previous=witnesses), witnesses)
+        strategy_path.write_text(json.dumps({**fields, "answer_system": "SYNTHETIC B"}), encoding="utf-8")
+        with self.assertRaisesRegex(ContractError, "differs from model-produced fields"):
+            evidence.observe_mutation_completion(request, cwd=native, slot="SYNTHETIC t02", previous=[])
+        malformed = "SYNTHETIC invalid strategy awaiting native shape repair"
+        strategy_path.write_text(malformed + "\n", encoding="utf-8")
+        request["messages"][0]["content"][0]["input"]["content"] = malformed
+        self.assertEqual(len(evidence.observe_mutation_completion(request, cwd=native,
+            slot="SYNTHETIC t02", previous=[])), 2)
+
+    def test_selector_partial_candidate_read_is_observed_but_not_complete(self):
+        prepared = self.prepared(selector=True)
+        request = self.request(prepared)
+        entry = next(e for e in prepared["manifest"]["required_evidence"] if e["path"] == "candidates/B.md")
+        path = self.cwd + "/context/" + entry["chunks"][0]["path"]
+        for index, message in enumerate(request["messages"]):
+            if message.get("role") != "assistant":
+                continue
+            call = message["content"][0]
+            if call["input"]["filePath"] == path:
+                call["input"]["limit"] = 1
+                original = request["messages"][index + 1]["content"][0]["content"]
+                row = next(line for line in original.splitlines() if line.startswith("1: "))
+                request["messages"][index + 1]["content"][0]["content"] = (
+                    f"<path>{path}</path>\n<type>file</type>\n<content>\n{row}\n"
+                    f"(Showing lines 1-1 of {entry['chunks'][0]['limit']}. Use offset=2 to continue.)\n</content>")
+                break
+        proof = evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="select.seq2")
+        self.assertFalse(proof["delivery"]["complete"])
+        final = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+            response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "```choice\nA\n```"}]})
+        self.assertTrue(final["passed"])
+        with self.assertRaisesRegex(ContractError, "no valid candidate choice"):
+            evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "```choice\nFORGED\n```"}]})
 
 
 class HistoryGuardTests(unittest.TestCase):
@@ -141,7 +277,7 @@ class HistoryGuardTests(unittest.TestCase):
                 "stop_reason": "tool_use", "content": content}}}
         prefix = "p3b-01.adaptive.editor.inv1.a1"
         guard = history.HistoryGuard(dispatch, prefix)
-        request = {"model": "claude-opus-5", "messages": [{"role": "user", "content": "SYNTHETIC initial"}]}
+        request: dict = {"model": "claude-opus-5", "messages": [{"role": "user", "content": "SYNTHETIC initial"}]}
         for turn in range(1, turns + 1):
             result = guard(f"{prefix}.t{turn:02}", "editor", request)
             content = result["response"]["provider_response"]["content"]

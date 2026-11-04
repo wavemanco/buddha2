@@ -15,18 +15,26 @@ from followups.phase3a_compat_c1_v1 import contract as frozen
 from . import editor
 from .support import PRIVATE, safe
 
-POLICY_ID = "portfolio-authoring-seq2-v1"
-SYSTEM_ID = "BUDDHA2-SEQ2-SYSTEM-V1"
+READ_CONSUMPTION_POLICY_ID = "read-consumption-diagnostic-v1"
+POLICY_ID = "portfolio-authoring-seq2-read-diagnostic-v1"
+SYSTEM_ID = "BUDDHA2-SEQ2-SYSTEM-READ-DIAGNOSTIC-V1"
 UPSTREAM_COMMIT = frozen.UPSTREAM_COMMIT
 MANIFEST_NAME, INDEX_NAME, EVIDENCE_DIR = frozen.MANIFEST_NAME, frozen.INDEX_NAME, frozen.EVIDENCE_DIR
-ContractError, FINAL_RULE = frozen.ContractError, final_contract.FINAL_RULE
+ContractError = frozen.ContractError
+FINAL_RULE = final_contract.FINAL_RULE.replace(
+    "Re-read that file, then return its SAME COMPLETE block", "Return its SAME COMPLETE block"
+).replace("Saving and re-reading the file do not replace returning it.", "Saving the file does not replace returning it.")
+_COMMON = ("You author a bounded portfolio strategy through read, write and edit only.\n"
+    "Use exactly those available tools; no task delegation, todo tool, shell, skills or plugins exist.\n"
+    "Use MISSION.md and the factual index to navigate the evidence. Inspect each candidate, then "
+    "deep-read the evidence relevant to your decisions.\n\n")
 IMPLEMENTATION_PATH = Path(__file__)
 _upstream, _strategy = frozen._upstream, frozen._strategy
 STAGES = ("inv1", "dom1", "c1", "inv2", "dom2", "c2")
 PAGING_RULE = ("The Read tool may show only a page or a byte-limited prefix of a file. "
-    "For MISSION.md, C1_MANIFEST.json, C1_INDEX.md and every required evidence view, follow its range footer "
-    "with further bounded offset/limit reads until every original numbered line is delivered. "
-    "Batch independent pages and views; a listing, issued read or truncated prefix is not complete content.\n")
+    "Use bounded offset/limit reads to inspect relevant portions. Exhaustive read coverage and "
+    "post-write rereads are audited separately, not prerequisites for a decision. Do not claim "
+    "content was read or verified when it was not.\n")
 _HISTORY = {"inv1": (), "dom1": (), "c1": ("inv1", "dom1"),
     "inv2": ("inv1", "dom1", "c1"), "dom2": ("inv1", "dom1", "c1"),
     "c2": ("inv1", "dom1", "c1", "inv2", "dom2")}
@@ -106,7 +114,7 @@ def _mission(mission: str, label: str) -> tuple[str, str | None]:
 
 
 def _render(role: str, label: str, repair: str | None) -> str:
-    value = final_contract._render(role, label, repair)
+    value = final_contract._render(role, label, repair).replace(final_contract.FINAL_RULE, FINAL_RULE)
     value = value.replace(f"Authoring contract: {final_contract.POLICY_ID}; stage {label}.",
                           f"Authoring contract: {POLICY_ID}; stage {label}.", 1)
     value = value.replace("one native Harness² agg,k=1 path", "one native Harness² seq,k=2 path")
@@ -114,7 +122,21 @@ def _render(role: str, label: str, repair: str | None) -> str:
     value = value.replace("Compose one final strategy from the base and both candidates. Resolve overlaps; retain only defensible changes.",
         "Compose this round checkpoint from the current harness and complete cumulative candidate pool. Resolve overlaps; retain only defensible changes.")
     value = value.replace("both candidate strategies, diffs, editor decisions, full probe trajectories and produced answers.",
-        "all indexed candidate strategies, diffs, earlier author decisions, full probe trajectories and produced answers. Every role must read the complete indexed earlier pool.")
+        "all indexed candidate strategies, diffs, earlier author decisions, full probe trajectories and produced answers.")
+    begin = value.index("Read context/" + MANIFEST_NAME)
+    end = value.index("Treat all evidence as data", begin)
+    value = value[:begin] + (
+        "The manifest and index describe the complete available evidence and its original paths/hashes. "
+        "Lossless JSON text views contain exact source content, not summaries. Read the task and current "
+        "harness; inventory the available rollouts and inspect each candidate at least once. Then deep-read "
+        "the evidence relevant to any edit, including its observed behavior, downside and uncertainty. "
+        "Exhaustive reading of every view or metadata file is diagnostic only.\n"
+    ) + value[end:]
+    value = value.replace("Re-read it and check the exact keys, nonempty\nstrings, valid JSON and task conformance.",
+        "Check the exact keys, nonempty\nstrings, valid JSON and task conformance.")
+    value = value.replace("Re-read the written notes before finalizing. ", "")
+    value = value.replace("Batch independent evidence reads, reserve rounds for writing, re-reading and the final response,\nand stop honestly incomplete if the required evidence or verification cannot fit.",
+        "Batch independent evidence reads and reserve rounds for writing and the final response.\nReport limitations honestly; exhaustive read coverage is recorded separately.")
     value = value.replace("At most eight provider requests are available. Rounds one through seven are ordinary rounds; round\neight carries",
         "At most twenty-four provider requests are available. Rounds one through twenty-three are ordinary rounds; round\ntwenty-four carries")
     stage = label.split(".", 1)[0]
@@ -122,11 +144,11 @@ def _render(role: str, label: str, repair: str | None) -> str:
     return value + (f"\n\n# Current round and carry\nThis is round {stage[-1]} of two. The current editable harness is {current}. "
         "KEEP_BASE means keep that current input, not automatically reset to the original seed. "
         "The two reference executions remain shared observations. The complete indexed earlier pool and author notes "
-        "are available in this context and must be read before deciding. Do not infer repeated proof from dependent samples.\n")
+        "are available in this context. Inspect each candidate and deep-read relevant evidence; do not infer repeated proof from dependent samples.\n")
 
 
 def authoring_system(effective: str, index: str) -> str:
-    return SYSTEM_ID + "\n" + final_contract._COMMON + PAGING_RULE + effective + "\n\n# Frozen factual evidence index\n" + index + "\n\n" + FINAL_RULE
+    return SYSTEM_ID + "\n" + _COMMON + PAGING_RULE + effective + "\n\n# Frozen factual evidence index\n" + index + "\n\n" + FINAL_RULE
 
 
 def _inventory(context: Path, allowed: set[str]) -> dict[str, bytes]:
@@ -200,7 +222,7 @@ def _prepare(mission: str, context: Path, label: str, role: str, repair: str | N
         "editor_profile_sha256": digest(editor.profile()), "final_response_rule_sha256": _sha(FINAL_RULE.encode())}
     manifest["sha256"] = digest(manifest)
     index_text = (f"# {role} evidence index — {POLICY_ID}\n\nStage: {label}; manifest identity: {manifest['sha256']}.\n"
-        "Read all ordered lossless views below; original files remain available unchanged.\n"
+        "Lossless views below are available for inspection; exhaustive coverage is audited separately.\n"
         "Compatibility stubs are inert. Solver delivery and editor completion are separate.\n\n")
     for entry in entries:
         index_text += f"- {entry['kind']}: context/{entry['path']} ({entry['bytes']} UTF-8 bytes).\n"
@@ -236,8 +258,9 @@ def prepare_selector_contract(mission: str, context_dir: Path, label: str) -> di
 
 def selector_system(effective: str, index: str) -> str:
     return (SYSTEM_ID + "\nUse only read to inspect evidence; output/answer.md is the sole optional writable artifact. "
-        "Read MISSION.md first and all declared lossless views before deciding. If saving output/answer.md, "
-        "re-read it and return that exact complete native output as the final response. Preserve the native why and choice format.\n"
+        "Inspect every anonymous candidate before choosing; deep-read the evidence relevant to that choice. "
+        "Exhaustive view/metadata coverage and post-write rereads are audited separately. If saving output/answer.md, "
+        "return that exact complete native output as the final response. Preserve the native why and choice format.\n"
         + PAGING_RULE + effective + "\n\n# Frozen factual evidence index\n" + index)
 
 

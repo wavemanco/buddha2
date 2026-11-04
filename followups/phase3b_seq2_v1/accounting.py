@@ -29,10 +29,12 @@ from .support import NATIVE, checked, read, runtime_guard, safe
 
 PREFIX = "phase3b-seq2-v1"
 POLICY = copy.deepcopy(core.POLICY)
+POLICY.update(id="phase3b-seq2-read-audit-r1-accounting-v1",
+              phase_micro_usd=167_471_253, first_micro_usd=42_471_253)
 WORKLIST_PROFILE = {
-    "id": "phase3b-seq2-worklist-v1",
+    "id": "phase3b-seq2-read-audit-r1-worklist-v1",
     "potential_request_slots": 2344,
-    "maximum_admitted_attempts": 2344,
+    "maximum_admitted_attempts": 2222,
     "editor_stages_per_cell": 6,
     "shape_attempts_per_stage": 2,
     "editor_turns_per_conversation": 24,
@@ -287,10 +289,14 @@ def _admit(state: dict, meta: dict, reservation: dict) -> None:
         state["spent_micro_usd"] + state["reserved_micro_usd"] + reservation["micro_usd"]
         > POLICY["phase_micro_usd"]
     ):
-        raise PhaseBudgetStop("S2 joint $180 exposure ceiling reached")
+        raise PhaseBudgetStop("remaining S2 exposure ceiling reached")
+    if (state["status"] == "ready" and meta["pair"] == PAIRS[0]
+            and state["first_pair"]["spent_micro_usd"] + reservation["micro_usd"]
+            > POLICY["first_micro_usd"]):
+        raise CheckpointStop("remaining included first-pair exposure ceiling reached")
     core._admit(state, meta, reservation)
     if state["attempts"] + 1 > WORKLIST_PROFILE["maximum_admitted_attempts"]:
-        raise PhaseBudgetStop("HI maximum2344 admitted attempts reached")
+        raise PhaseBudgetStop("remaining S2 admitted-attempt ceiling reached")
 
 
 def _replay(path: Path) -> tuple[dict, list[dict], dict]:

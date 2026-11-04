@@ -1,4 +1,18 @@
-# Current status — Phase 3B live attempt closed incomplete — 4 November 2026
+# Current status — Phase 3B diagnostic-read comparison authorized — 4 November 2026
+
+The user approved making exhaustive read-consumption checking diagnostic and explicitly selected **“Run the full comparison; report the exhaustive audit separately.”** One fresh comparison is authorized if necessary. The [read-audit amendment](../phases/phase-3b/READ_AUDIT_AMENDMENT.md) records the narrow change, full audit, preserved hard safeguards and remaining caps. This is the existing Phase 3B experiment, not a new engineering phase.
+
+The old attempt remains closed incomplete. Its 122 calls/$12.528747 are charged to the original allowance: the fresh comparison has **$167.471253** total, **$42.471253** included first checkpoint and **2,222** actual attempts remaining. Fresh cells retain $35 limits; the $70 assessment pool and $25 first-assessment sublimit remain joint bounds. Cumulative ceilings stay $248.924365 and 4,341 attempts. Old results and held liabilities are not reused or released. A fresh study, fixed one-run claim and masked keys follow current offline acceptance.
+
+The focused offline review has now established the original failure: the first proposed DOM2 write triggered our information-before-decision verifier, which rejected the pinned OpenCode's legitimate 50 KiB pagination footer. All 140 scientific evidence views, the mission and index were completely delivered; 84 metadata-manifest lines were not. The earlier report's unknown-predicate qualification reflects the earlier evidence available; this later finding is recorded prospectively without relabelling the stopped attempt as a pass.
+
+Implementation and independent offline acceptance are complete. All **119 actual pinned-H1 component tests** passed: financial/reporting 22, transport 21, history/read diagnostics 20, strategy 8, native contract 15 and source coverage 33; zero failures, errors or skips. The 163-file canonical source stayed unchanged at `358d92973ba3e55d3a30dea25a938350a3eabfa5fae8d44c3c0d3203d9655d65`. Fresh study `102140079517281714d49e90fde70702551e672ad24877422b5b48dd36ab2d67` and its six receipts passed separate review and the existing readiness validator. Actual source, containment, accounting and test-ID records are retained under `runs/phase3b-seq2-v1/read-audit-r1-checks-v2`; the prior pre-test collector import-path setup failure remains separate. No provider calls or keys were used for acceptance.
+
+The saved-request full audit reports 143 of 144 targets complete, with only metadata-manifest lines 1599–1682 missing and zero parsing/read errors; its append-only record is `runs/phase3b-seq2-v1/read-audit-r1-saved-check/diagnostic.json`. It does not relabel the old attempt. For the fresh comparison, exhaustive coverage is reported separately and may be incomplete without blocking the benchmark result. Actual strategy/carry/selection identity, permitted access, grader isolation, provider-history integrity, normal completion and financial stops remain binding. Next is fresh masked key entry for the already-authorized run; no fresh paid calls have started.
+
+---
+
+## Previous stopped-attempt status (preserved)
 
 The user authorized the reviewed four-prompt Phase 3B comparison within the existing caps, requested fresh keys and required no further engineering detours. The first live attempt is now **closed incomplete**: 122 provider calls, **$12.528747** settled and zero new unresolved liability. It reached c1 and second-round domain authoring on the first prompt; the editor boundary halted execution before native selection, the fixed arm or benchmark scoring. The planned scientific comparison is uncompleted. No source, model/settings, allowance or upstream change and no replacement run followed. MuCE, CrPO, human collection and other criteria remain deferred.
 

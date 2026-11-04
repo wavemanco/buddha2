@@ -28,6 +28,8 @@ from .support import (
     DECLARED_DEFINITION_SHA256,
     LAUNCHER,
     NATIVE,
+    PRIOR_CLOSED_ATTEMPT,
+    READ_CONSUMPTION_POLICY,
     ROOT,
     checked,
     offline_readiness,
@@ -325,6 +327,7 @@ def prepare(
         "parent_decision_sha256": old["parent_decision_sha256"],
         "rank_io_profile": rank_io.profile(),
         "startup_supervision_profile": supervision.profile(),
+        "read_consumption_policy": READ_CONSUMPTION_POLICY,
         "fixture_supervision_rehearsal": supervised_fixture,
         "fixture_boundary_contract": boundary_fixture,
         "seed_procedure_sha256": old["seed_procedure_sha256"],
@@ -336,10 +339,11 @@ def prepare(
             "known_requests": 1995,
             "unknown_requests": 2,
         },
+        "prior_closed_attempt": copy.deepcopy(PRIOR_CLOSED_ATTEMPT),
         "readiness_is_primary": "p3b-01:adaptive",
         "readiness_max_micro_usd": 35000000,
-        "potential_slot_count": 2344,
-        "maximum_admitted_attempts": 2344,
+        "potential_slot_count": accounting.WORKLIST_PROFILE["potential_request_slots"],
+        "maximum_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         "editor_steps": 24,
     }
     body["slots"], body["assessment_plan"] = _plan_slots(body)
@@ -391,6 +395,7 @@ def load_study(study_path: Path) -> dict:
         and study["seed_tree"] == strategy.seed_tree()
         and study["rank_io_profile"] == rank_io.profile()
         and study["startup_supervision_profile"] == supervision.profile()
+        and study["read_consumption_policy"] == READ_CONSUMPTION_POLICY
         and type(study["fixture_supervision_rehearsal"]) is bool
         and type(study["fixture_boundary_contract"]) is bool
         and (not study["fixture_boundary_contract"] or study["fixture_supervision_rehearsal"])
@@ -404,11 +409,12 @@ def load_study(study_path: Path) -> dict:
             "known_requests": 1995,
             "unknown_requests": 2,
         }
+        and study["prior_closed_attempt"] == PRIOR_CLOSED_ATTEMPT
         and study["transport_deadline_policy"] == asdict(DEADLINE_POLICY)
         and study["readiness_is_primary"] == "p3b-01:adaptive"
         and study["readiness_max_micro_usd"] == 35000000
-        and study["potential_slot_count"] == 2344
-        and study["maximum_admitted_attempts"] == 2344
+        and study["potential_slot_count"] == accounting.WORKLIST_PROFILE["potential_request_slots"]
+        and study["maximum_admitted_attempts"] == accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]
         and study["editor_steps"] == 24,
         "completion method/tasks/history differ from the frozen definition",
     )
@@ -443,10 +449,10 @@ def make_grant(study_path: Path, fixture: bool) -> dict:
     )
     authority = {
         "study_sha256": study["study_sha256"],
-        "authorization_id": "phase3b-s2-user-approval",
+        "authorization_id": "phase3b-read-audit-r1-user-approval",
         "authorized": not fixture,
-        "cap_micro_usd": 180000000,
-        "canary_cap_micro_usd": 55000000,
+        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
+        "canary_cap_micro_usd": accounting.POLICY["first_micro_usd"],
         "expansion_authorized": False,
         "control_policy_sha256": am1.CONTROL_SHA256,
         "billing_profile": am1.BILLING_PROFILE,
@@ -762,7 +768,8 @@ def validate_readiness_review(
     require(
         record["proof"] == proof
         and record["inspection"]["evidence_sha256"] == digest(proof)
-        and record["inspection"]["evidence_grounded_decisions"] is True
+        and record["inspection"]["hard_engineering_checks_passed"] is True
+        and record["inspection"]["read_diagnostics_reviewed"] is True
         and record["branch_sha256"] == records["branches"]["p3b-01", "adaptive"]["sha256"],
         "readiness review is unsupported by actual native evidence",
     )
@@ -777,7 +784,8 @@ def _review_readiness(
     require(
         audit.get("study_sha256") == study["study_sha256"]
         and audit.get("evidence_sha256") == digest(proof)
-        and audit.get("evidence_grounded_decisions") is True
+        and audit.get("hard_engineering_checks_passed") is True
+        and audit.get("read_diagnostics_reviewed") is True
         and audit.get("no_quality_continuation_gate") is True
         and audit.get("fixture") is fixture
         and isinstance(audit.get("notes"), str)
@@ -998,7 +1006,8 @@ def _barrier(study_path: Path, study: dict, grant_path: Path, fixture: bool, nam
                 "study_sha256": study["study_sha256"],
                 "evidence_sha256": digest(proof),
                 "fixture": True,
-                "evidence_grounded_decisions": True,
+                "hard_engineering_checks_passed": True,
+                "read_diagnostics_reviewed": True,
                 "no_quality_continuation_gate": True,
                 "engineering_checks_passed": True,
                 "notes": "Scripted offline structural inspection only; not actual model readiness.",
