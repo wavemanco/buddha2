@@ -43,6 +43,8 @@ Fixed won all four prompt comparisons. All four native paths completed normally;
 
 **BD1 unit preflight passed:** all 121 current tests are covered by the final Linux run and three actual Windows cases on the same source. Earlier diagnostics failed, so the exact cause and intermittent-failure risk remain unresolved. This is not full Phase 3B kit acceptance. See the [reviewed BD1 report](docs/phases/phase-3b/PHASE3B_BD1_REPORT.md) and [closed runbook](docs/phases/phase-3b/PHASE3B_BD1_RUNBOOK.md). No new campaign or paid call follows automatically.
 
+**Next block: [P3B-RA1 — complete offline release acceptance](docs/phases/phase-3b/PHASE3B_RELEASE_ACCEPTANCE_DEFINITION.md), defined only.** It covers current-source preflight, all twelve acceptance groups, both supervised exports, physical archive acceptance and extracted replay. Real API cap: $0. The engineering estimate is a review target; runtime and integrity guards remain unchanged. No implementation, experiment or paid launch has started.
+
 Earlier fixed-strategy and evaluator studies are recorded separately. The MuCE-based creativity evaluator missed its predefined agreement/consistency checks and remains diagnostic-only. Human review and further CrPO work are optional, deferred extensions.
 
 ## How the pieces fit

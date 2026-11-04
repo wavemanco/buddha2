@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [OR1 stopped incomplete](phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md):3candidates/2main starts are consumed,0S13/saved/cold starts. The final candidate passed static/preservation but failed the bootstrap unit assertion before capacity/matrix; no precise collector cause is proven. Full acceptance and the offline-kit goal remain unachieved. Independent stopped review and bounded closure accounting are recorded; publication is closure only, and no source fix, rerun, keys or paid work follows automatically.
+Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [BD1 unit preflight passed](phases/phase-3b/PHASE3B_BD1_REPORT.md), with earlier timing variability still unresolved. [RA1 complete release acceptance](phases/phase-3b/PHASE3B_RELEASE_ACCEPTANCE_DEFINITION.md) is defined but not started. The complete offline kit remains unaccepted, and no paid work follows automatically.
 
 ## Research and specifications
 
@@ -107,6 +107,7 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
+- [RA1 complete offline release acceptance: defined, not started](phases/phase-3b/PHASE3B_RELEASE_ACCEPTANCE_DEFINITION.md)
 - [BD1 reviewed unit-preflight result](phases/phase-3b/PHASE3B_BD1_REPORT.md) and [closed runbook](phases/phase-3b/PHASE3B_BD1_RUNBOOK.md)
 - [BD1 original diagnostic definition](phases/phase-3b/PHASE3B_BOOTSTRAP_DIAGNOSTIC_DEFINITION.md)
 - [OR1 stopped offline recovery](phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md)
