@@ -115,7 +115,7 @@ print(json.dumps({'telemetry': module.IMPORT_PRIVACY, 'private_actual_io': len(p
 
     def test_fresh_spawned_core_worker_uses_the_same_import_boundary(self):
         spec = {'bindings': dict.fromkeys(core_view.BINDINGS, 'a' * 64), 'checkpoint': 'closure', 'fixture': True}
-        result = core_view.collect(spec, deadline=time.monotonic() + 4, cleanup=1, behavior='bootstrap')
+        result = core_view.collect(spec, deadline=time.monotonic() + 30, cleanup=1, behavior='bootstrap')
         observed = bootstrap_observation(result)
         destination = os.environ.get('BUDDHA2_BD1_OUTPUT')
         if destination:

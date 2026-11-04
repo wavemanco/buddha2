@@ -25,13 +25,13 @@ from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES
 from . import contract, editor
 from . import transport as bounded
 from .delivery import _history, verify_delivery, verify_original_strategy
-from .support import NATIVE, ROOT
+from .support import DECLARED_DEFINITION_SHA256, NATIVE, ROOT
 
 
 @dataclass(frozen=True)
 class _ValidationProfile:
     namespace: str
-    definition: str
+    definition_sha256: str
     native_root: Path
     contract: ModuleType
     editor: ModuleType
@@ -39,7 +39,7 @@ class _ValidationProfile:
 
 
 def _live_profile() -> _ValidationProfile:
-    return _ValidationProfile("phase3b_seq2_v1", "PHASE3B_DEFINITION.md",
+    return _ValidationProfile("phase3b_seq2_v1", DECLARED_DEFINITION_SHA256,
                               NATIVE, contract, editor, bounded)
 
 
@@ -170,9 +170,9 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
     expected_binding = {key: _sha((ROOT / name).read_bytes()) for key, name in {
         "adapter_sha256": f"followups/{validation.namespace}/adapter.py",
         "contract_sha256": f"followups/{validation.namespace}/contract.py",
-        "definition_sha256": validation.definition,
         "parent_boundary_sha256": "followups/phase3a_v1/editor.py",
         "editor_sha256": f"followups/{validation.namespace}/editor.py"}.items()}
+    expected_binding["definition_sha256"] = validation.definition_sha256
     _require(c1["binding"] == expected_binding, "frozen C1 adapter/profile binding differs")
     upstream = contract._upstream()
     sessions = []

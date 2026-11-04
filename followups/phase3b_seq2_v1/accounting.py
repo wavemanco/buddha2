@@ -76,13 +76,6 @@ RETIRED_SOURCES = frozenset(
         "64b839d569e3ddefa3d56e06fc5b431760aef15cdfb3fd38256e04f8565f519a",
     }
 )
-HISTORICAL = {
-    "known_micro_usd": 46_044_365,
-    "reserved_micro_usd": 22_880_000,
-    "provider_calls": 1997,
-    "known_responses": 1995,
-    "unknown_responses": 2,
-}
 _require, _bindings, _stop = core._require, parent._bindings, parent._stop
 
 
@@ -530,31 +523,6 @@ def close_first_assessments(
     journal: Path, record: dict, *, validate_evidence: Callable[[dict, dict], None]
 ) -> dict:
     return _publish_review(journal, record, validate_evidence, closure=True)
-
-
-def historical_totals(state: dict) -> dict:
-    """Carry closed real costs/liability once; mock costs never become real spend."""
-    fixture = state.get("fixture")
-    _require(type(fixture) is bool, "historical accounting requires an explicit journal mode")
-    return {
-        "historical": copy.deepcopy(HISTORICAL),
-        "historical_unknown_released": False,
-        "cumulative_known_micro_usd": None
-        if fixture
-        else HISTORICAL["known_micro_usd"] + state["spent_micro_usd"],
-        "cumulative_reserved_micro_usd": None
-        if fixture
-        else HISTORICAL["reserved_micro_usd"] + state["reserved_micro_usd"],
-        "cumulative_max_exposure_micro_usd": None
-        if fixture
-        else HISTORICAL["known_micro_usd"]
-        + HISTORICAL["reserved_micro_usd"]
-        + state["spent_micro_usd"]
-        + state["reserved_micro_usd"],
-        "cumulative_provider_calls": None
-        if fixture
-        else HISTORICAL["provider_calls"] + state["attempts"],
-    }
 
 
 class _DeadlineCore:

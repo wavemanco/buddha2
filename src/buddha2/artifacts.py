@@ -17,6 +17,18 @@ class ContractError(ValueError):
     """Input or existing evidence violates the declared artifact contract."""
 
 
+def public_path_parts(parts: tuple[str, ...]) -> None:
+    """Reject private and captured path names before any filesystem access."""
+    private = {".git", ".writer.lock", "auth.json", "credentials.json",
+               "credential-binding.json", "node_modules", ".venv", "venv"}
+    for index, part in enumerate(parts):
+        name = part.casefold()
+        if (name in private or name.startswith(".env")
+                or any(word in name for word in ("stdout", "stderr", "cache", "capture", "retained"))
+                or (index < len(parts) - 1 and "source" in name)):
+            raise ContractError("private or captured path is excluded")
+
+
 def digest(value: Any) -> str:
     return canonical_hash(value)
 

@@ -1,3 +1,13 @@
+# Current direction — 4 November 2026
+
+Read `docs/research/CURRENT_SPEC.md` and `docs/ENGINEERING_AUDIT.md` first. The current user-directed work is Ponytail review and simplification of Buddha2-owned integration code around native Harness² and NoveltyBench. Vendor source, algorithms, pins, datasets and scoring protocol must remain unchanged. MuCE, CrPO and human collection are deferred.
+
+Use `python -B -m buddha2 experiment --help` for the current entry. V2 experiments bind effective code/configuration and the declared approved definition ID. Their live gate uses six current component receipts and a separate independent review; historical ZIP/candidate campaigns are not v2 runtime prerequisites. Preserve all historical manifests, records and results, and never relabel old studies as current. No paid run follows automatically from this engineering work.
+
+The working agreements below retain historical phase context. Their previous next-block labels do not supersede this current direction or a later explicit user instruction.
+
+---
+
 # Working on Buddha2
 
 Read [the documentation index](docs/index.md), [current status](docs/research/CURRENT_SPEC.md), [research method](docs/RESEARCH_METHOD.md), [phase definitions](docs/research/PHASE_DEFINITIONS.md) and [implementation decisions](docs/phases/phase-0/DECISIONS.md) before changing the project. Historical engineering and phase decisions remain in [AGENTS history](docs/archive/AGENTS_HISTORY.md).

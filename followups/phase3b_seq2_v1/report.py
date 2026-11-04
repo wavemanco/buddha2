@@ -208,6 +208,23 @@ def _portfolio(branch: dict | None, target: str) -> dict | None:
     )
 
 
+def _strategy_attribution(result: dict) -> dict:
+    hashes = {
+        label: result.get("rollouts", {}).get(label, {}).get("effective_strategy_sha256")
+        for label in ("c1", "c2")
+    }
+    _require(all(value is None or isinstance(value, str) and len(value) == 64
+                 and all(char in "0123456789abcdef" for char in value)
+                 for value in hashes.values()), "invalid checkpoint strategy identity")
+    return {
+        "c1_effective_strategy_sha256": hashes["c1"],
+        "c2_effective_strategy_sha256": hashes["c2"],
+        "c2_changed_from_c1": hashes["c1"] != hashes["c2"]
+        if all(value is not None for value in hashes.values()) else None,
+        "fresh_rollout_also_changes_sampling": True,
+    }
+
+
 def _coverage(study: dict, state: dict, saved: dict, ready: bool) -> dict:
     slots = dict.fromkeys(study["slots"], "not_attempted")
     first = accounting.PAIRS[0]
@@ -461,10 +478,8 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
                 if selected["status"] == c1["status"] == "scored"
                 else None,
                 "selected_checkpoint": selected.get("selected_checkpoint"),
-                "strategy_attribution": copy.deepcopy(
-                    ((branches.get((pilot, "adaptive")) or {}).get("result") or {}).get(
-                        "checkpoint_strategy_attribution"
-                    )
+                "strategy_attribution": _strategy_attribution(
+                    (branches.get((pilot, "adaptive")) or {}).get("result") or {}
                 ),
             }
         )
@@ -480,7 +495,8 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         else None
     )
     direction = (
-        "adaptive" if mean is not None and mean > 0 else "fixed" if mean is not None else None
+        "tie" if mean == 0 else "adaptive" if mean is not None and mean > 0
+        else "fixed" if mean is not None else None
     )
     analysis = {
         "kind": "phase3b-seq2-analysis-v1",
@@ -499,7 +515,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         "complete_assessment_targets": assessment_scored == 12,
         "scientific_complete": complete and not fixture,
         "fixture": fixture,
-        "selected_method": direction if complete and not fixture else None,
+        "selected_method": direction if complete and not fixture and direction in ARMS else None,
         "descriptive_direction": direction,
         "selection_is_descriptive_only": True,
         "authentic_live_path": authentic,

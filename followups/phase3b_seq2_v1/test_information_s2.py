@@ -6,13 +6,14 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from harness2.core import context, prompts
 
 from buddha2.artifacts import ContractError
 from followups.phase3a_readiness_recovery_v1.test_delivery import pair
 
-from . import contract, evidence, strategy
+from . import contract, editor, evidence, history, strategy
 from .support import BASE
 
 
@@ -124,6 +125,70 @@ class InformationGuardTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "absent, stale or mismatched"):
             evidence.verify_normal_session(changed, prepared, cwd=self.cwd, label="inv2.a1",
                 response=response, harvested_strategy=current)
+
+
+class HistoryGuardTests(unittest.TestCase):
+    def conversation(self, turns):
+        calls = []
+        def dispatch(slot, role, request):
+            calls.append(slot)
+            content = [{"type": "thinking", "thinking": "", "signature": "SYNTHETIC-SIGNATURE"},
+                {"type": "redacted_thinking", "data": "SYNTHETIC-OPAQUE"},
+                {"type": "tool_use", "id": f"read-{len(calls)}", "name": "read",
+                    "input": {"filePath": "/tmp/harness2-prop-historyfixture/MISSION.md"},
+                    "caller": {"type": "direct"}}]
+            return {"status": "response", "response": {"provider_response": {
+                "stop_reason": "tool_use", "content": content}}}
+        prefix = "p3b-01.adaptive.editor.inv1.a1"
+        guard = history.HistoryGuard(dispatch, prefix)
+        request = {"model": "claude-opus-5", "messages": [{"role": "user", "content": "SYNTHETIC initial"}]}
+        for turn in range(1, turns + 1):
+            result = guard(f"{prefix}.t{turn:02}", "editor", request)
+            content = result["response"]["provider_response"]["content"]
+            request = copy.deepcopy(request)
+            request["messages"].extend([{"role": "assistant", "content": copy.deepcopy(content)},
+                {"role": "user", "content": [{"type": "tool_result", "tool_use_id": content[-1]["id"],
+                    "content": "SYNTHETIC read result"}]}])
+        return guard, calls, request, prefix
+
+    def test_signed_normal_history_passes_but_prefix_or_signature_tamper_stops_before_dispatch(self):
+        normal, calls, request, _ = self.conversation(2)
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(request["messages"][1]["content"][0],
+            {"type": "thinking", "thinking": "", "signature": "SYNTHETIC-SIGNATURE"})
+        self.assertEqual(request["messages"][1]["content"][1]["data"], "SYNTHETIC-OPAQUE")
+        self.assertTrue(all(audit["history_preserved"] and not audit["history_restored"] for audit in normal.audits))
+        for mutation in ("prefix", "signature"):
+            guard, calls, request, prefix = self.conversation(1)
+            if mutation == "prefix":
+                request["messages"][0]["content"] = "SYNTHETIC changed initial request"
+            else:
+                request["messages"][1]["content"][0]["signature"] = "SYNTHETIC changed signature"
+            with self.subTest(mutation=mutation), self.assertRaises(ContractError):
+                guard(prefix + ".t02", "editor", request)
+            self.assertEqual(len(calls), 1)
+            self.assertTrue(guard.stopped)
+
+    def test_terminal_control_is_required_exactly_on_turn24_and_never_renews_history(self):
+        terminal = {"role": "user", "content": [{"type": "text", "text": "SYNTHETIC terminal control"}]}
+        # Exercise the real message-shape check with a synthetic note; runtime note bytes have their own pin.
+        with patch.object(editor.frozen, "terminal_note", return_value="SYNTHETIC terminal control"):
+            guard, calls, request, prefix = self.conversation(23)
+            request["messages"].append(copy.deepcopy(terminal))
+            guard(prefix + ".t24", "editor", request)
+            self.assertEqual(len(calls), 24)
+            self.assertFalse(any(audit["terminal_control"] for audit in guard.audits[:-1]))
+            self.assertTrue(guard.audits[-1]["terminal_control"])
+            with self.assertRaises(ContractError):
+                guard(prefix + ".t25", "editor", request)
+            self.assertEqual(len(calls), 24)
+            for turns in (22, 23):
+                guard, calls, request, prefix = self.conversation(turns)
+                if turns == 22:
+                    request["messages"].append(copy.deepcopy(terminal))
+                with self.subTest(turn=turns + 1), self.assertRaises(ContractError):
+                    guard(f"{prefix}.t{turns + 1:02}", "editor", request)
+                self.assertEqual(len(calls), turns)
 
 
 if __name__ == "__main__":

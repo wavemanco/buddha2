@@ -7,12 +7,12 @@ import os
 import stat
 from pathlib import Path, PurePosixPath
 
-from buddha2.artifacts import ContractError, digest, write_once
+from buddha2.artifacts import ContractError, digest, public_path_parts, write_once
 from followups.phase3a_readiness_recovery_v1 import support as frozen
 
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "phase3b-seq2-v1"
-DEFINITION = ROOT / "PHASE3B_DEFINITION.md"
+DECLARED_DEFINITION_SHA256 = "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e"
 AUTHORITY = ROOT / "evidence" / PREFIX / "authorization.json"
 PROVIDERS = ROOT / "evidence" / PREFIX / "provider-documentation.json"
 LAUNCHER = ROOT / "phase3b-seq2.ps1"
@@ -20,17 +20,7 @@ BASE = Path(os.environ.get("BUDDHA2_OUTPUT_ROOT", "/results")) / PREFIX
 NATIVE = BASE / "native"
 IMAGE_ID = frozen.IMAGE_ID
 PRIVATE = frozen.PRIVATE | frozenset({"__pycache__", ".cache", ".mypy_cache", ".ruff_cache", ".pytest_cache"})
-PARENT_SOURCE_SHA = "517b8efcdfc68bbb3e6ac6d260dc2e7e0541fdb02ea46784afc4ca5e2d300ed8"
 PARENT_STUDY_SHA = "bc86391000266d413276de0f9ca8fb7f4f5b65632aa509d650f8236a48735be8"
-PARENT_STUDY = "runs/phase3a-readiness-recovery-v1/verification-v3/release/study.json"
-PARENT_HISTORY = "runs/phase3a-readiness-recovery-v1/verification-v3/preservation-before.json"
-PARENT_PACKET = "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.manifest.json"
-PARENT_RECEIPT = "evidence/phase3a-readiness-recovery-v1/live-packet-acceptance-v1.json"
-PARENT_RECEIPT_SHA = "1e897fc321aecaa868003edc4a2b643ba37f00d59268c67bdf429de1662c39ed"
-README_AUTHORITY = "evidence/phase3b-seq2-v1/readme-refresh-authority-v1.json"
-LEGACY_README_SHA = "59f21b6a7071aeaaf61a9760282621bc3aaa956677139e72fc49b698d9b40ae2"
-OFFLINE_RECEIPT = "evidence/phase2-release-r018/independent-acceptance.json"
-OFFLINE_RECEIPT_SHA = "f8c729dbbb23ab98efacb4a66e67a73189d830a3c837c6acf347a77036703ea7"
 require = frozen.require
 runtime_guard = frozen.runtime_guard
 runtime_identity = frozen.runtime_identity
@@ -101,7 +91,7 @@ def validate_authority() -> dict:
         "cumulative_max_exposure_micro_usd": 248924365, "cumulative_max_attempts": 4341,
     }
     require(value.get("kind") == "phase3b-s2-authority-v1" and value.get("authorized") is True
-            and value.get("definition_sha256") == file_hash(DEFINITION)
+            and value.get("definition_sha256") == DECLARED_DEFINITION_SHA256
             and all(type(value.get(key)) is int and value[key] == n for key, n in expected.items())
             and value.get("historical_liability_release_authorized") is False
             and value.get("old_results_reused") is False
@@ -114,236 +104,43 @@ def validate_authority() -> dict:
     return value
 
 
-SOURCE_INPUTS = (
-    "specifications/amendments/phase3b-release-acceptance-1.0.md",
-    "evidence/phase3b-ra1-v1/authority.json", "evidence/phase3b-ra1-v1/effort.py",
-    "evidence/phase3b-ra1-v1/release-config.json", "evidence/phase3b-ra1-v1/ra1_operator.py",
-    "evidence/phase3b-ra1-v1/unit_preflight.py", "evidence/phase3b-ra1-v1/run_units.py",
-    "evidence/phase3b-ra1-v1/cases-v1.json", "evidence/phase3b-ra1-v1/cases-v2.json", "evidence/phase3b-ra1-v1/cases-v3.json", "evidence/phase3b-ra1-v1/cases-v4.json",
-    "evidence/phase3b-bd1-v1/run_units.py",
-    "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v1.json",
-    "evidence/phase3b-ra1-v1/component_checks.py", "evidence/phase3b-ra1-v1/check_effort.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/PLAN.md",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/plan.json",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/review_packet_ra1.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay_ra1.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/cold_replay.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v1/parameterization.diff",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/PLAN.md",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/plan.json",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/review_packet_ra1.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay_ra1.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/cold_replay.py",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/parameterization.diff",
-    "evidence/phase3b-ra1-v1/packet-plan-v2/ast-delta-proof.json",
-    "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v2.json",
-    "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md",
-    "evidence/phase3b-or1-v1/authority.json", "evidence/phase3b-or1-v1/effort.py",
-    "evidence/phase3b-or1-v1/release-config.json",
-    "evidence/phase3b-or1-v1/prior-source-la1/preservation-receipt.json",
-    "evidence/phase3b-or1-v1/compatibility-plan-v3.json",
-    "evidence/phase3b-or1-v1/compatibility-tests-v1.json",
-    "evidence/phase3b-or1-v1/compatibility-independent-review-v1.json",
-    "evidence/phase3b-or1-v1/initial-compatibility-source/test_boundary_compatibility_s2.py",
-    "evidence/phase3b-or1-v1/operator-unit-checks-v1.json",
-    "evidence/phase3b-or1-v1/operator-unit-checks-v2.json",
-    "evidence/phase3b-or1-v1/windows-probes-v1/final-result.json",
-    "evidence/phase3b-or1-v1/launcher_probe.py", "evidence/phase3b-or1-v1/probe_tree.py",
-    "evidence/phase3b-or1-v1/campaign-cases-v1.json",
-    "evidence/phase3b-or1-v1/campaign-cases-v2.json",
-    "evidence/phase3b-or1-v1/campaign-cases-v3.json",
-    "evidence/phase3b-or1-v1/candidate-2-main-failure.json",
-    "evidence/phase3b-or1-v1/candidate-2-independent-classification.json",
-    "evidence/phase3b-or1-v1/failed-candidate-2/preservation-receipt.json",
-    "evidence/phase3b-or1-v1/path_domain_probe.py",
-    "evidence/phase3b-or1-v1/path-repair-plan-v1.json",
-    "evidence/phase3b-or1-v1/path-domain-prospective-review-v1.json",
-    "evidence/phase3b-or1-v1/path-domain-operator-v1.json",
-    "evidence/phase3b-or1-v1/path-domain-independent-outcome-v1.json",
-    "runs/phase3b-seq2-v1/or1-path-domain-v1/create.json",
-    "runs/phase3b-seq2-v1/or1-path-domain-v1/inspection.json",
-    "runs/phase3b-seq2-v1/or1-path-domain-v1/execution.json",
-    "runs/phase3b-seq2-v1/or1-path-domain-v1/cleanup.json",
-    "runs/phase3b-seq2-v1/or1-path-domain-v1/result.json",
-    "evidence/phase3b-or1-v1/candidate-1-entry-failure.json",
-    "evidence/phase3b-or1-v1/candidate-1-independent-classification.json",
-    "evidence/phase3b-or1-v1/failed-candidate-1/preservation-receipt.json",
-    "evidence/phase3b-or1-v1/writer_domain_probe.py",
-    "evidence/phase3b-or1-v1/writer-repair-plan-v1.json",
-    "evidence/phase3b-or1-v1/writer-domain-prospective-review-v1.json",
-    "evidence/phase3b-or1-v1/writer-host-tests-v1.json",
-    "evidence/phase3b-or1-v1/writer-domain-operator-v1.json",
-    "evidence/phase3b-or1-v1/writer-domain-independent-outcome-v1.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/create.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/inspection.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/execution.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/cleanup.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/result.json",
-    "runs/phase3b-seq2-v1/or1-writer-domain-v1/allowed-runtime-marker.json",
-    "evidence/phase3b-or1-v1/windows-probes-v1/managed/process-result.json",
-    "evidence/phase3b-or1-v1/windows-probes-v1/outer/outer-status-result.json",
-    "evidence/phase3b-or1-v1/windows-probes-v1/tree/tree-result.json",
-    "runs/phase3b-or1-v1/packet-plan-v1/plan.json",
-    "runs/phase3b-or1-v1/packet-plan-v1/parent-plan-review-v1.json",
-    "README.md", "README_LEGACY.md", ".gitattributes", "docs/ATTRIBUTIONS.md", "docs/RESEARCH_METHOD.md",
-    ".gitignore", "LICENSE", "NOTICE", "docs/PUBLICATION.md",
-    "third_party_licenses/INSPECT_AI.txt", "third_party_licenses/NOVELTYBENCH.txt",
-    "third_party_licenses/OPENCODE.txt",
-    "evidence/phase1a-data-readiness-r07/references/assets/crpo-LICENSE.txt",
-    "evidence/phase3b-seq2-v1/license-adoption-publication-authority-v1.json",
-    README_AUTHORITY, "evidence/phase3b-seq2-v1/readme-provenance-cases-v1.json",
-    PARENT_STUDY, PARENT_HISTORY,
-    "PHASE3B_DEFINITION.md", "phase3b-seq2.ps1", "phase3b-seq2-core.ps1",
-    "evidence/phase3b-seq2-v1/authorization.json",
-    "evidence/phase3b-seq2-v1/acceptance-cases.json",
-    "evidence/phase3b-seq2-v1/native-acceptance-cases.json",
-    "evidence/phase3b-seq2-v1/workflow-acceptance-cases.json",
-    "evidence/phase3b-seq2-v1/runtime-acceptance-cases.json",
-    "evidence/phase3b-seq2-v1/runtime-information-supplement-cases-v1.json",
-    "evidence/phase3b-seq2-v1/workflow-admission-correction-cases-v1.json",
-    "evidence/phase3b-seq2-v1/capacity-acceptance-cases.json",
-    "evidence/phase3b-seq2-v1/capacity-aggregate-cases-v1.json",
-    "evidence/phase3b-seq2-v1/capacity-artifact-bound-clarification-v1.json",
-    "evidence/phase3b-seq2-v1/runtime-read-footer-cases-v1.json",
-    "evidence/phase3b-seq2-v1/required-checkpoint-economy-cases-v1.json",
-    "evidence/phase3b-seq2-v1/packet-json-cases-v1.json",
-    "evidence/phase3b-seq2-v1/provider-documentation.json",
-    "evidence/phase3b-seq2-v1/public-billing-review-v1.json",
-    "evidence/phase3b-seq2-v1/component-preparation-v1.json",
-    "evidence/phase3b-seq2-v1/component-preparation-v2.json",
-    "evidence/phase3b-seq2-v1/component-preparation-v3.json",
-    "evidence/phase3b-seq2-v1/component-preparation-v4.json",
-    "evidence/phase3b-seq2-v1/source-snapshot-correction-cases-v1.json",
-    "evidence/phase3b-seq2-v1/unaccepted-candidate-v1.json",
-    "runs/phase3b-seq2-v1/verification-v1/release/study.json",
-    "evidence/phase3b-seq2-v1/preacceptance-review-v1.json",
-    "evidence/phase3b-seq2-v1/preacceptance-review-v2.json",
-    "evidence/phase3b-seq2-v1/preacceptance-review-v3.json",
-    "evidence/phase3b-seq2-v1/package_public.py",
-    "specifications/amendments/phase3b-export-contract-correction-1.0.md",
-    "evidence/phase3b-seq2-c2-v1/authority.json",
-    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
-    "evidence/phase3b-seq2-c2-v1/run_boundary.py",
-    "evidence/phase3b-seq2-c2-v1/run_composed.py",
-    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
-    "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md",
-    "evidence/phase3b-la1-v1/authority.json",
-    "evidence/phase3b-la1-v1/effort.py",
-    "evidence/phase3b-la1-v1/launcher_probe.py",
-    "evidence/phase3b-la1-v1/probe_tree.py",
-    "evidence/phase3b-la1-v1/probe-final-v2/final-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v2/managed/process-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v2/outer/outer-status-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v2/tree/tree-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v3/final-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v3/managed/process-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v3/outer/outer-status-result.json",
-    "evidence/phase3b-la1-v1/probe-final-v3/tree/tree-result.json",
-    "evidence/phase3b-la1-v1/campaign-cases.json",
-    "evidence/phase3b-la1-v1/campaign-cases-v2.json",
-    "evidence/phase3b-la1-v1/test_launcher_cleanup.py",
-    "evidence/phase3b-la1-v1/cleanup-fault-result-v1.json",
-    "evidence/phase3b-la1-v1/cleanup-fault-result-v2.json",
-    "evidence/phase3b-la1-v1/sanitized-cli-readiness-v1.json",
-    "runs/phase3b-la1-v1/packet-plan-v1/plan.json",
-    "runs/phase3b-la1-v1/packet-plan-v1/parent-plan-review-v1.json",
-    "evidence/phase3b-la1-v1/host_acceptance.py",
-    "evidence/phase3b-la1-v1/launcher-probe-milestone-v1.json",
-    "evidence/phase3b-la1-v1/initial-repair-independent-review-v1.json",
-    "evidence/phase3b-la1-v1/prior-source-c2/preservation-receipt.json",
-    "runs/phase3b-seq2-v1/verification-v2/external-reviews/recovery-review-v1/saved_only_worker_v2.py",
-    "PHASE3A_RP2_LIVE_REPORT.md",
-    "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.json",
-    "evidence/phase3a-readiness-recovery-v1/live-independent-review-v1.json",
-    "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.manifest.json",
-    "evidence/phase3a-readiness-recovery-v1/live-packet-acceptance-v1.json",
-)
+SOURCE_KIND = "buddha2-effective-source-v2"
+SOURCE_MANIFEST = "followups/phase3b_seq2_v1/source-inputs.json"
 
 
-def _parent_source() -> tuple[dict, dict]:
-    """Authenticate the closed map without rerunning old current-README assumptions."""
-    require(file_hash(ROOT / PARENT_RECEIPT) == PARENT_RECEIPT_SHA, "closed RP2 packet receipt changed")
-    receipt = read(ROOT / PARENT_RECEIPT)
-    require(receipt.get("passed") is True and receipt.get("source_sha256") == PARENT_SOURCE_SHA
-        and receipt.get("study_sha256") == PARENT_STUDY_SHA
-        and file_hash(ROOT / PARENT_PACKET) == receipt["manifest_sha256"], "closed RP2 packet binding differs")
-    manifest = read(ROOT / PARENT_PACKET)
-    require(manifest.get("archive") == receipt["archive"]
-        and manifest.get("archive_sha256") == receipt["archive_sha256"], "closed RP2 archive binding differs")
-    require(file_hash(ROOT / PARENT_STUDY) == manifest["member_sha256"][PARENT_STUDY], "closed RP2 study changed")
-    study = read(ROOT / PARENT_STUDY)
-    parent = study.get("source")
-    if not isinstance(parent, dict):
-        raise ContractError("closed RP2 source map is not an object")
-    require(study.get("study_sha256") == PARENT_STUDY_SHA
-        and digest({key: value for key, value in study.items() if key != "study_sha256"}) == PARENT_STUDY_SHA
-        and isinstance(parent.get("files"), dict)
-        and len(parent["files"]) == 549 and parent.get("sha256") == PARENT_SOURCE_SHA
-        and digest(parent["files"]) == PARENT_SOURCE_SHA, "closed RP2 source map differs")
-    return parent, manifest
-
-
-def _readme_alias() -> dict:
-    alias = {"README.md": {"retained_path": "README_LEGACY.md", "sha256": LEGACY_README_SHA}}
-    authority = read(ROOT / README_AUTHORITY)
-    require(authority.get("kind") == "buddha2-scientific-readme-refresh-authority-v1"
-        and authority.get("historical_document_alias") == alias
-        and authority.get("parent_source_sha256") == PARENT_SOURCE_SHA
-        and authority.get("historical_manifests_rewritten") is False
-        and authority.get("scientific_conditions_models_caps_and_repetitions_unchanged") is True
-        and authority.get("new_source_identity_required") is True, "only the declared README alias is allowed")
-    return alias
-
-
-def _offline_streams(files: dict) -> dict:
-    """Reuse the packet's exact pinned-receipt classification, before stream metadata."""
-    name = OFFLINE_RECEIPT
-    require(file_hash(ROOT / name) == OFFLINE_RECEIPT_SHA,
-        "historical offline classification receipt changed")
-    receipt = read(ROOT / name)
-    names = {key for key in files if any("stdout" in part.casefold() or "stderr" in part.casefold()
-        for part in PurePosixPath(key).parts)}
-    require(len(names) == 14 and receipt["independent_checks"]["real_provider_calls"] == 0
-        and all(receipt["evidence"].get(key) == files[key] for key in names), "only fourteen classified offline originals allowed")
-    return {key: files[key] for key in names}
-
-
-def _parent_file_hash(name: str, expected: str, streams: dict) -> str:
+def _source_name(name: str) -> str:
+    require(isinstance(name, str), "source input name must be text")
     relative = PurePosixPath(name)
-    require(not relative.is_absolute() and relative.as_posix() == name and "\\" not in name and ":" not in name
-        and all(part not in {"", ".", ".."} and part.casefold() not in PRIVATE for part in relative.parts),
-        "private/cached/nonrelative parent path")
-    if not any("stdout" in part.casefold() or "stderr" in part.casefold() for part in relative.parts):
-        return file_hash(ROOT / name)
-    require(name in streams and streams[name] == expected, "unclassified stream forbidden before metadata")
-    target = ROOT
-    for index, part in enumerate(relative.parts):
-        target /= part
-        info = target.lstat()
-        require(not stat.S_ISLNK(info.st_mode) and not getattr(info, "st_file_attributes", 0) & 0x400
-            and (stat.S_ISREG(info.st_mode) if index == len(relative.parts)-1 else stat.S_ISDIR(info.st_mode)),
-            "classified offline original traverses a link or nonordinary entry")
-    return hashlib.sha256(target.read_bytes()).hexdigest()
+    require(bool(relative.parts) and not relative.is_absolute() and relative.as_posix() == name
+        and "\\" not in name and ":" not in name
+        and all(part not in {"", ".", ".."}
+            and part.casefold() not in PRIVATE | {"runs", "source"} for part in relative.parts),
+        "private, captured or nonrelative source input")
+    public_path_parts(relative.parts)
+    return name
+
+
+def _source_inputs() -> list[str]:
+    manifest = read(ROOT / SOURCE_MANIFEST)
+    require(set(manifest) == {"kind", "files"}
+        and manifest.get("kind") == "buddha2-effective-source-inputs-v2"
+        and isinstance(manifest.get("files"), list) and bool(manifest["files"]),
+        "effective source manifest differs")
+    names = [_source_name(name) for name in manifest["files"]]
+    require(names == sorted(set(names)) and SOURCE_MANIFEST not in names,
+        "effective source inputs must be unique and sorted")
+    return [SOURCE_MANIFEST, *names]
 
 
 def source_snapshot_policy(files: dict) -> dict:
-    """Authenticate canonical originals; never authorize a retained stream copy."""
+    """Only ordinary effective inputs may be copied; historical streams have no exemption."""
     require(isinstance(files, dict) and bool(files), "missing source snapshot files")
     for name, expected in files.items():
-        require(isinstance(name, str), "source snapshot name must be text")
-        relative = PurePosixPath(name)
-        require(bool(relative.parts) and not relative.is_absolute() and relative.as_posix() == name and "\\" not in name
-            and ":" not in name and all(part not in {"", ".", ".."}
-                and part.casefold() not in PRIVATE for part in relative.parts),
-            "private/cached/nonrelative source snapshot name")
+        _source_name(name)
         require(isinstance(expected, str) and len(expected) == 64
             and all(char in "0123456789abcdef" for char in expected), "invalid source snapshot hash")
-    streams = _offline_streams(files)
-    require(all(_parent_file_hash(name, expected, streams) == expected
-        for name, expected in streams.items()), "canonical offline source changed")
-    return {"kind": "phase3b-s2-originals-only-source-snapshot-v1",
-            "canonical_originals": streams,
-            "offline_classification_receipt": {"path": OFFLINE_RECEIPT, "sha256": OFFLINE_RECEIPT_SHA}}
+    return {"kind": "buddha2-effective-source-snapshot-v2", "canonical_originals": {},
+        "files_sha256": digest(files)}
 
 
 def recovery_config() -> dict:
@@ -375,6 +172,25 @@ def release_authority() -> dict:
         and all(value.get(k) is False for k in ("target_is_hard_abort", "keys_authorized",
             "original_folder_access_authorized", "frozen_control_edits_authorized", "old_ledgers_reopened")),
         "RA1 direct offline authority differs")
+    amendment = "specifications/amendments/phase3b-release-acceptance-am1-1.0.md"
+    approval_path = ROOT / "evidence/phase3b-ra1-v1/am1-authority.json"
+    approval = read(approval_path)
+    require(file_hash(approval_path) == "35cee7563a5cf38f856e9ce6a318b8a95d5d447b547272be35d79a650ac5b0a6"
+        and approval.get("amendment") == amendment
+        and approval.get("amendment_sha256") == "5dfad6322a72f029cbbcd17824a384774a6787fa9ced969e6cc04b4b134ea1e1"
+        and file_hash(ROOT / amendment) == approval["amendment_sha256"]
+        and approval.get("original_authority_sha256") == file_hash(ROOT / config["authority"])
+        and approval.get("instruction") == "Approve complete RA1-AM1 (Recommended)"
+        and approval.get("approved_full_remaining_RA1_block") is True
+        and type(approval.get("positive_bootstrap_test_total_seconds")) is int
+        and approval["positive_bootstrap_test_total_seconds"] == 30
+        and type(approval.get("positive_bootstrap_test_cleanup_seconds")) is int
+        and approval["positive_bootstrap_test_cleanup_seconds"] == 1
+        and approval.get("no_new_repetition_allowance") is True
+        and approval.get("production_or_frozen_A0_control_edits_authorized") is False
+        and type(approval.get("real_API_cap_usd")) is int and approval["real_API_cap_usd"] == 0
+        and approval.get("keys_authorized") is False,
+        "approved RA1-AM1 requirement or offline scope differs")
     return value
 
 
@@ -390,112 +206,76 @@ def bootstrap_capture_path(raw: str) -> Path:
 
 
 def source_identity() -> dict:
-    release_authority()
-    or1_definition = "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md"
-    or1 = read(ROOT / "evidence/phase3b-or1-v1/authority.json")
-    require(or1.get("definition") == or1_definition
-        and or1.get("definition_sha256") == file_hash(ROOT / or1_definition)
-        and or1.get("reply") == "Approve full OR1 execution (Recommended)"
-        and or1.get("aggregate_focused_engineering_limit_seconds") == 10800
-        and or1.get("initial_compatibility_limit_seconds") == 1800
-        and or1.get("minimum_closure_reserve_seconds") == 1800
-        and or1.get("maximum_frozen_candidates") == 3
-        and or1.get("maximum_main_matrix_starts") == 2
-        and or1.get("maximum_positive_S13_starts") == 2
-        and or1.get("maximum_saved_replays") == 2
-        and or1.get("maximum_extracted_cold_replays") == 2
-        and or1.get("prior_ledgers_reopened") is False
-        and or1.get("real_API_cost_usd_ceiling") == 0
-        and or1.get("real_keys_authorized") is False
-        and or1.get("paid_pilot_authorized") is False,
-        "OR1 bounded offline authority differs")
-    la1_definition = "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md"
-    la1 = read(ROOT / "evidence/phase3b-la1-v1/authority.json")
-    require(la1.get("definition") == la1_definition
-        and la1.get("definition_sha256") == file_hash(ROOT / la1_definition)
-        and la1.get("reply") == "complete P3B-LA1"
-        and la1.get("aggregate_focused_engineering_limit_seconds") == 7200
-        and la1.get("initial_repair_limit_seconds") == 1800
-        and la1.get("minimum_closure_reserve_seconds") == 1200
-        and la1.get("one_frozen_offline_campaign") is True
-        and la1.get("closed_prior_ledger_reopened") is False
-        and la1.get("offline_API_cost_usd") == 0
-        and la1.get("paid_calls_authorized") is False
-        and la1.get("real_keys_authorized") is False, "LA1 offline execution authority differs")
-    amendment = "specifications/amendments/phase3b-export-contract-correction-1.0.md"
-    authority = read(ROOT / "evidence/phase3b-seq2-c2-v1/authority.json")
-    require(authority.get("kind") == "phase3b-s2-c2-direct-authority-v1"
-        and authority.get("reply") == "C2 is approved"
-        and authority.get("definition") == amendment
-        and authority.get("definition_sha256") == file_hash(ROOT / amendment)
-        and authority.get("prior_source_sha256") == "0b154f40fd0418b5d86a218abf23050d9b0db26a2195dbad828a6c6a3f4073aa"
-        and authority.get("prior_study_sha256") == "160fa663c793f3ac0878031f3ffaa9d6db57b4349069bc9460756e147b2b68ee"
-        and authority.get("aggregate_focused_engineering_limit_seconds") == 10800
-        and authority.get("effort_limit_reset") is False
-        and authority.get("additional_focused_engineering_seconds") == 0
-        and authority.get("additional_api_funding_usd") == 0
-        and authority.get("existing_live_usd_ceiling") == 180
-        and authority.get("minimum_supported_live_reserve_seconds") == 1800
-        and authority.get("extra_paid_repetition_authorized") is False
-        and authority.get("fresh_keys_only_after_complete_acceptance") is True
-        and authority.get("scientific_protocol_and_stop_rules_unchanged") is True,
-        "C2 amendment or bounded direct authority differs")
-    parent, _ = _parent_source()
-    aliases = _readme_alias()
-    streams = _offline_streams(parent["files"])
-    files = {}
-    for name, expected in parent["files"].items():
-        retained = aliases[name]["retained_path"] if name in aliases else name
-        require(name != "README.md" or expected == LEGACY_README_SHA, "historical README expectation changed")
-        require(_parent_file_hash(retained, expected, streams) == expected, "closed parent source changed: " + name)
-        files[retained] = expected
-    directory = safe(ROOT / "followups/phase3b_seq2_v1")
-    for name in sorted(os.listdir(directory)):
-        if name.casefold() in PRIVATE or "stdout" in name.casefold() or "stderr" in name.casefold():
-            continue
-        target = safe(directory / name)
-        info = target.lstat()
-        require(stat.S_ISREG(info.st_mode), "unexpected S2 source directory/type")
-        if target.suffix in {".py", ".json", ".md", ".ps1"}:
-            files[target.relative_to(ROOT).as_posix()] = file_hash(target)
-    for name in SOURCE_INPUTS:
-        files[name] = file_hash(ROOT / name)
-    config = recovery_config()
-    copied = f"runs/{PREFIX}/{config['verification']}/external-reviews/packet-review-ra1-c{config['candidate']}-v2"
-    masters = {name: "evidence/phase3b-ra1-v1/packet-plan-v2/" + name for name in
-        ("PLAN.md", "plan.json", "review_packet_ra1.py", "cold_replay_ra1.py", "cold_replay.py", "parameterization.diff", "ast-delta-proof.json")}
-    masters["packet-plan-static-review-v2.json"] = "evidence/phase3b-ra1-v1/reviews/packet-plan-static-review-v2.json"
-    for name, master in masters.items():
-        expected = file_hash(ROOT / master)
-        retained = copied + "/" + name
-        require(file_hash(ROOT / retained) == expected, "current candidate packet reviewer copy differs")
-        files[retained] = expected
-    return {"kind": "phase3b-s2-source-v1", "parent_source_sha256": parent["sha256"],
-            "H1_source_sha256": parent["H1_source_sha256"], "I1_source_sha256": parent["I1_source_sha256"],
-            "historical_document_alias": aliases,
-            "files": files, "sha256": digest(files)}
+    """Bind the current implementation and effective inputs, independently of old campaigns."""
+    names = _source_inputs()
+    files = {name: file_hash(ROOT / name) for name in names}
+    source_snapshot_policy(files)
+    body = {"kind": SOURCE_KIND, "schema_version": 2, "files": files}
+    return {**body, "sha256": digest(body)}
 
 
 def preserve() -> dict:
-    source_identity()
-    parent_source, manifest = _parent_source()
-    require(file_hash(ROOT / PARENT_HISTORY) == manifest["member_sha256"][PARENT_HISTORY], "closed preservation inventory changed")
-    parent = read(ROOT / PARENT_HISTORY)
-    rp1, hi = parent["RP1_preservation"], parent["RP1_preservation"]["HI_preservation"]
-    require(parent.get("passed") is True and rp1.get("passed") is True and hi.get("passed") is True,
-        "closed parent preservation was not accepted")
-    for inventory in (parent["accepted_checkpoints"], rp1["accepted_checkpoints"], hi["closed_public_metadata"]):
-        require(all(parent_source["files"].get(name) == expected for name, expected in inventory.items()),
-            "closed checkpoint preservation inventory differs from authenticated source")
-    archives = dict(parent["closed_RP1_archives"])
-    require(set(archives) == {f"evidence/phase3a-rc1-pilot-v1/{stem}.zip" for stem in ("offline-kit-v1", "live-outcome-v1")},
-        "closed RP1 archive inventory differs")
-    archives["evidence/phase3a-c1-completion-v4/live-outcome-v1.zip"] = hi["closed_R3_archive_sha256"]
-    archive_name = "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.zip"
-    require(manifest["archive"] == archive_name, "closed Phase3A archive path differs")
-    archives[archive_name] = manifest["archive_sha256"]
-    require(all(file_hash(ROOT / name) == expected for name, expected in archives.items()), "closed ancestor archive changed")
-    return {"kind": "phase3b-s2-preservation-v1", "passed": True, "parent": parent,
-            "parent_source_sha256": PARENT_SOURCE_SHA, "closed_phase3a_archive_sha256": manifest["archive_sha256"],
-            "historical_document_alias": _readme_alias(), "closed_ancestor_archives": archives,
-            "protected_original_accessed": False, "private_worktree_accessed": False}
+    source = source_identity()
+    return {"kind": "buddha2-effective-source-preservation-v2", "passed": True,
+        "source_sha256": source["sha256"], "source_files": len(source["files"]),
+        "historical_artifacts_rewritten": False, "protected_original_accessed": False,
+        "private_worktree_accessed": False}
+
+
+READINESS_BINDINGS = ("study_sha256", "source_sha256", "runtime_sha256", "policy_sha256", "launcher_sha256")
+READINESS_CHECKS = frozenset({"financial", "transport", "message_history", "strategy", "native_contract", "source_coverage"})
+
+
+def offline_readiness(study_path: Path, bindings: dict) -> dict:
+    """Require current offline receipts and a separate review before live admission."""
+    require(isinstance(bindings, dict) and set(bindings) == set(READINESS_BINDINGS)
+        and all(isinstance(value, str) and len(value) == 64
+            and all(char in "0123456789abcdef" for char in value) for value in bindings.values()),
+        "incomplete current readiness binding")
+    directory = safe(study_path).parent
+
+    def load(name: str, kind: str) -> dict:
+        record = checked(read(safe(directory / name)))
+        require(record.get("kind") == kind and record.get("passed") is True
+            and type(record.get("provider_calls")) is int and record["provider_calls"] == 0
+            and record.get("real_credentials_used") is False
+            and all(record.get(key) == value for key, value in bindings.items()),
+            "current offline readiness evidence is failed, stale or foreign")
+        return record
+
+    common = {"kind", "passed", "provider_calls", "real_credentials_used", "sha256", *READINESS_BINDINGS}
+    manifest = load("offline-readiness.json", "buddha2-offline-readiness-v2")
+    require(set(manifest) == common | {"checked_by", "checks"}
+        and isinstance(manifest.get("checked_by"), str) and bool(manifest["checked_by"].strip())
+        and isinstance(manifest.get("checks"), dict) and set(manifest["checks"]) == READINESS_CHECKS,
+        "current offline readiness checks are incomplete")
+    for name in sorted(READINESS_CHECKS):
+        reference = manifest["checks"][name]
+        filename = f"offline-checks/{name}.json"
+        require(isinstance(reference, dict) and set(reference) == {"path", "sha256"}
+            and reference["path"] == filename, "foreign readiness receipt path")
+        record = load(filename, "buddha2-offline-check-v2")
+        require(file_hash(directory / filename) == reference["sha256"]
+            and set(record) == common | {"check", "command", "exit_code", "tests_run", "test_ids", "failures", "errors", "skipped"}
+            and record.get("check") == name
+            and isinstance(record.get("command"), list) and bool(record["command"])
+            and all(isinstance(arg, str) and bool(arg.strip()) for arg in record["command"])
+            and type(record.get("tests_run")) is int and record["tests_run"] > 0
+            and isinstance(record.get("test_ids"), list)
+            and all(isinstance(identity, str) and bool(identity.strip()) for identity in record["test_ids"])
+            and len(record["test_ids"]) == len(set(record["test_ids"])) == record["tests_run"]
+            and all(type(record.get(key)) is int and record[key] == 0
+                for key in ("exit_code", "failures", "errors", "skipped")),
+            "current offline check receipt is incomplete or changed")
+    manifest_hash = file_hash(directory / "offline-readiness.json")
+    review = load("independent-review.json", "buddha2-offline-independent-review-v2")
+    require(set(review) == common | {"manifest_file_sha256", "manifest_sha256", "reviewer", "independent", "notes"}
+        and review.get("manifest_file_sha256") == manifest_hash
+        and review.get("manifest_sha256") == manifest["sha256"]
+        and review.get("independent") is True
+        and isinstance(review.get("reviewer"), str) and bool(review["reviewer"].strip())
+        and review["reviewer"].strip().casefold() != manifest["checked_by"].strip().casefold()
+        and isinstance(review.get("notes"), str) and bool(review["notes"].strip()),
+        "current independent readiness review is missing, stale or not independent")
+    return {"profile": "buddha2-offline-readiness-v2", "manifest_sha256": manifest["sha256"],
+        "manifest_file_sha256": manifest_hash, "independent_review_sha256": file_hash(directory / "independent-review.json")}

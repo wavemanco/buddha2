@@ -40,9 +40,6 @@ def adaptive_run_ids(task_id: str, tag: str) -> dict[str, str]:
     return {label: (base if label.startswith("base") else seq).run_id(task_id, label) for label in LABELS}
 
 
-native_rollout_ids = adaptive_run_ids
-
-
 class PortfolioSubstrate(frozen.PortfolioSubstrate):
     def surface(self):
         with strategy.validation_scope():

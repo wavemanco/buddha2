@@ -74,6 +74,8 @@ def completed_fixture() -> tuple[dict, dict, dict]:
             "portfolio": candidates["c1"],
             "checkpoints": {key: candidates[key] for key in ("c1", "c2")},
             "selected_checkpoint": "c1",
+            "rollouts": {label: {"effective_strategy_sha256": value * 64}
+                for label, value in (("c1", "a"), ("c2", "b"))},
             "status": "complete",
             "authentic": False,
             "native": {"selections": {"seq": {"ok": True, "chosen_label": "c1"}}},
@@ -265,6 +267,16 @@ class WorklistCases(unittest.TestCase):
 
 
 class AnalysisCases(unittest.TestCase):
+    def test_different_checkpoint_outputs_do_not_imply_changed_instructions(self):
+        study, state, saved = completed_fixture()
+        result = saved["branches"]["p3b-01", "adaptive"]["result"]
+        result["rollouts"]["c2"]["effective_strategy_sha256"] = "a" * 64
+        data = report.build(study, state, saved, True)
+        self.assertNotEqual(result["checkpoints"]["c1"], result["checkpoints"]["c2"])
+        attribution = data["analysis"]["checkpoint_deltas"][0]["strategy_attribution"]
+        self.assertFalse(attribution["c2_changed_from_c1"])
+        self.assertTrue(attribution["fresh_rollout_also_changes_sampling"])
+
     def test_incomplete_fixed_pool_or_abnormal_native_selector_cannot_complete(self):
         for fault in ("fixed_pool11", "fixed_failed", "selector_terminal", "selector_fallback", "selector_missing"):
             study, state, saved = completed_fixture()
@@ -299,8 +311,15 @@ class AnalysisCases(unittest.TestCase):
         self.assertEqual(data["summary"]["status"], "mock-complete")
         self.assertFalse(data["summary"]["scientific_complete"])
         self.assertEqual(data["analysis"]["mean_adaptive_minus_fixed"], 0)
+        self.assertEqual(data["analysis"]["descriptive_direction"], "tie")
+        self.assertIsNone(data["analysis"]["selected_method"])
         self.assertEqual(data["analysis"]["mean_c2_minus_c1"], 1)
         self.assertEqual(data["analysis"]["mean_selected_minus_c1"], 0)
+        attribution = data["analysis"]["checkpoint_deltas"][0]["strategy_attribution"]
+        self.assertEqual(attribution["c1_effective_strategy_sha256"], "a" * 64)
+        self.assertEqual(attribution["c2_effective_strategy_sha256"], "b" * 64)
+        self.assertTrue(attribution["c2_changed_from_c1"])
+        self.assertTrue(attribution["fresh_rollout_also_changes_sampling"])
         for row in data["coverage"]["primary_rows"]:
             if row["arm"] == "adaptive":
                 self.assertTrue(row["assessment_is_alias"])

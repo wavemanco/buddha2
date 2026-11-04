@@ -1,0 +1,151 @@
+# Engineering audit and simplification
+
+Date: 4 November 2026. The reviewed cleanup and offline component verification are complete. No paid comparison was run. This is evidence of the integration's tested behavior, not of adaptation improving benchmark results.
+
+## What this repository does
+
+Buddha2 compares base generation, a fixed strategy, and actual Google Harness² adaptation, then evaluates saved outputs through NoveltyBench. The intended load is one research operator and one accounted study owner, with native worker threads. It is not a general execution platform or an unattended production service.
+
+The scientific question remains: for a given model and task family, does native adaptation improve on the same fixed techniques under comparable inference allowances? Development work and held-out confirmation remain separate.
+
+## Scope and non-negotiable boundaries
+
+This review covers only code created for Buddha2: adapters, strategy contracts, provider/accounting boundaries, launchers, reports, tests, and release machinery. Harness² and NoveltyBench source, algorithms, pins, datasets, and scoring protocol are unchanged. Research records, completed results, frozen manifests, notices, and the fourteen classified historical originals are preserved. MuCE, CrPO, human review, and additional creativity criteria are deferred and excluded from this review.
+
+The preceding offline acceptance run was settled on the user's scope redirection. It is incomplete, not a passing release and not a scientific failure. Its actual main and saved-replay passes and partial supervised evidence remain historical observations. No new paid calls are authorized by this cleanup.
+
+## Why time was being consumed
+
+These are observed intervals from the current offline execution records, not a profiler result:
+
+| Work | Observed time | What it establishes |
+| --- | ---: | --- |
+| In-gate 126-test tally | 17 minutes 17 seconds | Test execution was material even before the study worklist |
+| Capacity checks plus full four-prompt, two-arm mock worklist | 91 minutes 22 seconds | Combined cost; the two components were not separately timed |
+| Main matrix to preservation receipt | About 20 seconds | Final preservation receipt followed the matrix |
+| Saved replay after the main worklist | About 35 minutes | Zero new model/mock calls and zero new journal results; substantial work occurred outside inference |
+
+The main matrix represented 1,364 mock requests for the configured multi-stage experiment. That request count is not itself a measure of wrapper overhead. The code review did establish repeated source hashing, historical archive verification, complete journal folding, and reopening prior request-audit files. Their individual shares of elapsed time are unmeasured.
+
+The planning failure was cumulative scope control: successive repair and release requirements became the immediate objective, while the usable experiment entry point remained incomplete. A narrow specification for each addition did not control the size or utility of the whole system.
+
+## Findings and decisions
+
+### Must fix
+
+1. **Checkpoint strategy attribution was missing** ([report](../followups/phase3b_seq2_v1/report.py)).
+   - **What this is:** The c2/c1 report should distinguish changed instructions from another sample using unchanged instructions.
+   - **Problem:** It read an attribution field that no code produced, so the field was always null.
+   - **Fix:** Implemented attribution from the recorded seed/c1/c2 effective strategy hashes, with the sampling limitation retained.
+   - **If skipped:** Readers could attribute a new sample's score difference to an edit that never happened.
+2. **Exact ties were labelled fixed-strategy wins** ([report](../followups/phase3b_seq2_v1/report.py)).
+   - **What this is:** The report names the direction of the paired mean difference.
+   - **Problem:** The nonpositive branch treated zero as a fixed win and could select it as the method.
+   - **Fix:** Implemented an explicit tie/no-selection result and fixture assertions.
+   - **If skipped:** A scientifically neutral outcome would be misreported as a win.
+3. **The public CLI omitted the current native experiment** ([entry](../src/buddha2/experiment.py)).
+   - **What this is:** Codex needs one clear route to prepare, launch, inspect and report an experiment.
+   - **Problem:** The main command primarily exposed the earlier offline kit and Phase 2; the current route required knowledge of internal modules.
+   - **Fix:** Added a thin `experiment` entry delegating to the existing implementation, without another scheduler, server or provider client.
+   - **If skipped:** Useful integration code would remain difficult to operate from Codex.
+4. **Publication formatting could prevent execution** ([authority and source boundary](../followups/phase3b_seq2_v1/support.py)).
+   - **What this is:** The original approved definition has a recorded identity; the public reader copy has reorganized links.
+   - **Problem:** Four code paths hashed the physical Markdown, so editorial link changes broke approval validation despite unchanged executable settings.
+   - **Fix:** Kept the approved definition ID and unchanged authority record; bound executable code/configuration separately. Removed Markdown as an execution input. Method, cap, attempt and model-setting changes still reject.
+   - **If skipped:** An organized public clone could not prepare the otherwise identical experiment.
+5. **The new inspection command initially missed capture-name variants** ([inspection](../src/buddha2/experiment.py)).
+   - **What this is:** Read-only inspection must reject captured/private paths before metadata or contents are accessed.
+   - **Problem:** Exact `source` checks missed names such as `prior-source` and `source-snapshot`.
+   - **Fix:** Independent review caught this before publication. One lexical helper now serves source inputs and inspection, with negative path and import-origin regressions.
+   - **If skipped:** A supposedly safe metadata command could enter an excluded capture directory.
+
+### Should fix
+
+6. **Current execution depended on historical acceptance campaigns** ([source boundary](../followups/phase3b_seq2_v1/support.py)).
+   - **What this is:** Source identity should identify the effective current program and inputs.
+   - **Problem:** It authenticated a 549-member ancestor map and old authorities, failed-candidate receipts, archives, reviewer copies and retained source. Missing old material could prevent current work.
+   - **Fix:** Replaced that runtime prerequisite with an explicit current code/helper/configuration manifest and distinct v2 source/study identities. Old prepared studies reject before source reads; historical records remain unchanged.
+   - **If skipped:** Every small repair or publication change could trigger another historical reconstruction campaign.
+7. **Obsolete copies overwhelmed the implementation** ([retirement manifest](reviews/phase3-first-party-retirement-2026-11-04.json)).
+   - **What this is:** Successive implementation versions accumulated as active-looking source packages and launch commands.
+   - **Problem:** Static imports and string references showed large obsolete groups kept mandatory only by ancestor attestation.
+   - **Fix:** Removed exactly 181 Python files and thirteen closed Phase 3A launchers: 194 files, 42,847 lines, 2,571,754 bytes. Reused helpers, privacy initializers and the adapter reached through a hash reference remain.
+   - **If skipped:** Readers and tools would continue carrying tens of thousands of lines outside the current experiment.
+8. **The paid gate required an entire publication campaign** ([current gate](../followups/phase3b_seq2_v1/support.py)).
+   - **What this is:** Admission must verify the current code, settings and actual offline evidence before keys or spending.
+   - **Problem:** The old gate required one RA1 candidate, twelve campaign groups, ZIP hashes and packet receipts; it could not accept a new current profile without repeating that machinery.
+   - **Fix:** Replaced it with six current component receipts and one separate independent review, bound to the exact study/source/runtime/policy/launcher. No artifact is generated merely because validation code exists. Container, key, money, unknown-liability, no-resend and information guards remain.
+   - **If skipped:** The experiment would stay blocked on release packaging that neither scientific engine requires.
+9. **Journal and source verification repeat expensive work** ([accounting](../followups/phase3b_seq2_v1/accounting.py), [workflow](../followups/phase3b_seq2_v1/workflow.py)).
+   - **What this is:** The ledger reconstructs prior events/audits, and study loading verifies current inputs.
+   - **Problem:** Complete journal reconstruction repeats inside a live run and grows at least quadratically with requests. Historical source/archive reconstruction compounded that cost.
+   - **Fix:** Removed the historical reconstruction and reduced the effective input map. Retained locked full journal replay: a cache would need to preserve out-of-band review additions, stop checks and prior-byte corruption detection. No unsafe cache, database or checkpoint service was added.
+   - **If skipped:** The known journal cost remains. Its individual runtime share is unmeasured; it is an explicit remaining optimization, not a reason to drop financial validation or delay the small scientific comparison.
+
+The three proven unused current aliases/helpers were also removed. Their small saving is separate from the 194-file retirement. This review does not claim that every helper in a retained legacy namespace is minimal; those namespaces still supply live contracts, transport and validation functions.
+
+## What stays
+
+- Actual upstream `schedule.run_task`, native sequential recursion, native proposal/composition/selection, and the project portfolio adapter.
+- The native OpenCode proposer and its accounted relay. OpenCode owns the agent/tool loop; Buddha2 must not replace it with another agent framework.
+- Native NoveltyBench request construction, strict folds, arithmetic and summaries, with assessment outside adaptation.
+- Bounded editable strategy fields, valid ordered portfolios, response identities, and rank permutations.
+- Exact model/settings records; reservations before requests; actual usage settlement; retained uncertain charges; no silent fallback or automatic resend.
+- Information boundaries that prevent external judgments from becoming adaptation inputs.
+- One usable command path and a compact outcome/cost report. Optional existing Inspect viewing remains separate from paid execution.
+
+## Existing frameworks: research revisited
+
+The previous [framework research](../evidence/phase3a-history-compat-h1/RESEARCH.md) and [Inspect fit note](../evidence/phase3a-history-compat-h1/INSPECT_AI_FIT.md) were reviewed, together with current primary documentation. The passive Inspect trial has already been completed. Its [report](operations/inspect/INSPECT_VISIBILITY_I1_REPORT.md) records eight added files, eighty locked wheels, and zero existing modules removed. Repeating that trial would repeat completed work.
+
+| Component | Reuse now | Do not build |
+| --- | --- | --- |
+| [Harness² adapter and scheduler](https://github.com/google-research/harness2/blob/1cfe254e8d25b15f37048c3730134686abe60335/harness2/core/spec.py) | Actual recursion and native execution seams | A second recursion engine or generic strategy plugin platform |
+| [NoveltyBench](https://github.com/novelty-bench/novelty-bench/tree/64a23be6b18ec1dacc298830aab276061b6e143c) | Native generation exchange and separate assessment | A copied grader or an invented replacement metric |
+| [Inspect](https://inspect.aisi.org.uk/eval-logs.html) | Existing optional viewer; its logs, resume and orchestration are available if they replace named custom modules | Another passive-viewer spike, or a model bridge added only for visibility |
+| [Harbor](https://docs.harborframework.com/agents/custom-agents) | Relevant reference for sandboxed agents and separate verification | An immediate migration for this text experiment |
+
+A full Inspect runner replacement is a multi-day integration, not a free speed fix. Its [agent bridge](https://inspect.aisi.org.uk/agent-bridge.html) can change effective generation parameters. Its [cost limits](https://inspect.aisi.org.uk/setting-limits.html) do not by themselves reserve maximum liability for a request whose receipt is lost. Automatic [model retries](https://inspect.aisi.org.uk/models-concurrency.html) and [task retries](https://inspect.aisi.org.uk/eval-sets.html) require explicit configuration for this experiment. Keep the current protocol and paid boundary while cutting redundant machinery.
+
+No new framework or dependency was added for this simplification. Harness² is Apache-2.0; NoveltyBench and Inspect are MIT; Harbor is Apache-2.0. Existing attribution remains applicable. No upstream upgrade accompanies this work.
+
+## Delivery and next research step
+
+The cleanup was organized around the following focused-work targets across agents. These are planning estimates, not a retrospective time measurement or a guarantee.
+
+| Work | Target | Usable result |
+| --- | ---: | --- |
+| Audit, dependency trace, prior-research review | First 60–90 minutes | Evidence-backed keep/cut/reuse map and concrete correctness findings |
+| Effective-source decoupling, justified deletions, report fixes, tests | Next 2–4 hours | Reduced current implementation with preserved records and guards |
+| Clear Codex entry to that same implementation | Then 1–2 hours | Working commands for preparation, execution, inspection and results, delegating to the same implementation |
+
+Those outputs are now implemented and component-reviewed. No additional server, framework migration or nested acceptance campaign is planned. This cleanup spent $0 on APIs.
+
+The next scientific step is the already-defined four-prompt Phase 3B development comparison: actual native `seq,k=2` against fixed best-of-twelve, with the same declared techniques, separate external assessment, and recorded actual spending. Its next operating step is to bind the reviewed current study to applicable spending authority, check current exposure and obtain fresh masked keys. Engineering readiness does not itself authorize a paid run. Schedule the pilot and closure as the next working session, allowing for observed multi-stage run latency rather than promising an inference-only duration. If a real execution defect occurs, retain its result and diagnose that specific defect; do not silently start another fresh campaign.
+
+After that comparison, use its observed outcome to decide whether a larger development comparison is warranted. Held-out confirmation and broader model/strategy comparisons remain later research decisions. The completed four-prompt Phase 3A pilot is evidence about one-step adaptation; the two-step effect and held-out benefit remain unmeasured.
+
+## Current operating contract
+
+The current source manifest contains 162 effective inputs. A new study binds the current code, portable four-prompt development inputs, strategy, runtime, policy and declared original definition ID. Human-facing Markdown is separate. Historical studies and receipts are never rebound to this source.
+
+Before live admission, `offline-readiness.json` beside that study must reference six actual sealed component receipts: `financial`, `transport`, `message_history`, `strategy`, `native_contract`, and `source_coverage`. Every receipt records its real command, unique executed test IDs, a positive test count, zero failures/errors/skips, no real credentials or provider calls, and the same five bindings. A separate `independent-review.json` identifies a different reviewer and binds the exact readiness bytes and seal. Missing, stale, private-path or foreign evidence rejects before a live claim or keys. These are local experiment records, not a new execution framework.
+
+Optional Inspect display is not an admission prerequisite. Canonical report/checkpoint validation, actual owner/container inspection, budget and unknown-result handling remain in execution. A component pass does not establish live provider success or a scientific improvement.
+
+## Verification and limits
+
+The audit traces the active native, strategy, editor, provider/accounting, assessment and reporting paths, plus callers, tests and static/dynamic references used for the retirement map. The historical code is reviewed for reachability and duplication; it is not all reviewed line by line. Upstream and deferred evaluator code are outside the cut.
+
+Actual verification:
+
+- The pinned Linux runtime passed **101 unique component tests in each of the canonical and public source profiles**: financial 16, transport 21, message history 12, strategy 8, native contract 15 and source coverage 29. There were zero failures, errors or skips. These are the same 101 cases against two profiles, not 202 different cases.
+- Both profiles passed actual authority validation, portable study preparation, independent receipt/source review and the existing current-readiness validator. Exact owned test containers were removed. No real credentials or provider calls were used, and no paid grant was created.
+- Ten CLI tests passed in each profile. Root/experiment help and read-only historical metadata inspection ran successfully. Ruff, Mypy on the changed modules, Bandit and scoped whitespace checks passed. The earlier tool/setup failures and superseded test attempts remain recorded; they were not relabelled as final passes.
+- All 39 pinned Harness² Python files and 17 pinned NoveltyBench Python files matched the upstream lock. Their revisions, source and algorithms were unchanged. Current source identities are `c6eb4157c15ff859e70a0411b9b92f227ccfdf94dd1da94f38d1cdac21ef08c1` (canonical) and `97f16655087287dd32a1f491d17219e83adc9284c49570b46f32b7ca413e1ca8` (public). The public profile differs only in two pre-existing documentation-path literals. Exact Git attributes preserve the tested bytes in publication.
+
+See the [independent cleanup review](reviews/engineering-cleanup-review-2026-11-04.json) and [retirement manifest](reviews/phase3-first-party-retirement-2026-11-04.json) for evidence pointers and exact scope.
+
+Static reachability is not runtime correctness. Component readiness is not live provider success, evaluator validity or evidence that adaptation improves results. The previous full release matrix was not repeated, and the new paid comparison and held-out evaluation were not run. Removed historical commands require their historical revision/source kit; they are not current entry points. Locked journal replay remains a known, unprofiled runtime cost.
+
+Verdict: retain the native research integration and financial/information boundaries; remove historical campaign prerequisites and obsolete first-party copies before adding capabilities.

@@ -8,8 +8,6 @@ The central question is:
 
 > For a given model and kind of task, which fixed strategies help, and does recursive adaptation improve further with the same techniques and comparable resource allowances?
 
-
-
 ## What we compare
 
 | Approach | What changes? |
@@ -24,7 +22,7 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 ## Current evidence
 
-Status snapshot: **3 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
+Status snapshot: **4 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
 
 The first task and assessment protocol is [NoveltyBench](https://github.com/novelty-bench/novelty-bench). It measures answer quality and useful variety using its established model-based assessment procedure. Benchmark scores are not a general measure of creativity or human preference.
 
@@ -39,13 +37,9 @@ Best-of-six means generating six fresh ten-answer portfolios and selecting one u
 
 Fixed won all four prompt comparisons. All four native paths completed normally; the selected strategy changed on two prompts. This is a small development result, not held-out confirmation or evidence that recursive adaptation never helps. See the [full Phase 3A report](docs/phases/phase-3a/PHASE3A_RP2_LIVE_REPORT.md) for exact values, provenance, failures and costs.
 
-**P3B-OR1 stopped incomplete; no accepted offline kit.** All3frozen candidates and2main-entry starts were consumed. The final source735 candidate passed static/preservation checks but its fail-fast suite stopped after4tests,1failure and0errors at the spawned-worker bootstrap assertion before capacity or model generation. The worker stopped; its canonical status was failed rather than complete, and the exact sanitized cause was not retained. No diagnostic rerun, source fix or further admission followed. S13, saved and cold replay starts remain0; final gate/physical/extracted acceptance are absent. There were no real API calls, keys or paid work. See the [OR1 stop report](docs/phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md); the stopped outcome is independently reviewed, accounting retains all holds, and the accepted-kit goal remains unachieved. It compares actual two-round native refinement (`seq,k=2`) with fixed best-of-twelve on the same four development prompts. Round two starts from the first composed strategy; native selection may choose either checkpoint. Both checkpoints are assessed after selection is sealed. No Phase 3B paid pilot has started, and fresh keys follow complete independent acceptance.
+**Phase 3B has not started its paid comparison.** It compares actual two-round native refinement (`seq,k=2`) with fixed best-of-twelve on the same four development prompts. Round two starts from the first composed strategy; native selection may choose either checkpoint. Both checkpoints are assessed after selection is sealed. No Phase 3B paid pilot has started, and fresh keys follow complete independent acceptance.
 
-**BD1 unit preflight passed:** all 121 current tests are covered by the final Linux run and three actual Windows cases on the same source. Earlier diagnostics failed, so the exact cause and intermittent-failure risk remain unresolved. This is not full Phase 3B kit acceptance. See the [reviewed BD1 report](docs/phases/phase-3b/PHASE3B_BD1_REPORT.md) and [closed runbook](docs/phases/phase-3b/PHASE3B_BD1_RUNBOOK.md). No new campaign or paid call follows automatically.
-
-**P3B-RA1 stopped incomplete; the offline release kit remains unaccepted.** The first current-source Linux preflight started four of 126 cases: three passed, one failed with `canonical_timeout`, and 122 were unrun. Component checks passed five new regressions and Ruff/Mypy/Bandit; no Windows set, release candidate, main campaign, supervised S13, saved replay or cold replay started. API spend was $0. Read the [stopped report](docs/phases/phase-3b/PHASE3B_RA1_REPORT.md) and [retained-product runbook](docs/phases/phase-3b/PHASE3B_RA1_RUNBOOK.md). [RA1-AM1](docs/phases/phase-3b/PHASE3B_RELEASE_ACCEPTANCE_AM1.md) proposes a declared test-budget change and complete acceptance continuation; it is not approved or implemented. The original failure and conservative effort overage remain disclosed. No paid pilot or new test admission follows automatically.
-
-Earlier fixed-strategy and evaluator studies are recorded separately. The MuCE-based creativity evaluator missed its predefined agreement/consistency checks and remains diagnostic-only. Human review and further CrPO work are optional, deferred extensions.
+A [completed engineering audit and cleanup](docs/ENGINEERING_AUDIT.md) removed 194 obsolete first-party files (42,847 lines), detached current execution from historical release archives, and corrected report attribution and tie handling. Both canonical and public source profiles passed the same 101 offline component tests and independent readiness review. No new paid comparison was run. Upstream code and the experimental comparison are unchanged; additional evaluators and human review are deferred.
 
 ## How the pieces fit
 
@@ -57,15 +51,26 @@ Earlier fixed-strategy and evaluator studies are recorded separately. The MuCE-b
 
 Replacing an engine, benchmark, strategy or compatible evaluator requires a new identity and compatibility checks. We use bounded interfaces rather than build a general plugin platform ahead of evidence.
 
+## Use from Codex
+
+Codex can invoke the same project CLI through its terminal tools. No additional MCP server is needed for this entry point. From this source checkout, with `src` on `PYTHONPATH`:
+
+```text
+python -B -m buddha2 experiment --help
+python -B -m buddha2 experiment inspect --study PATH_TO_STUDY_JSON
+```
+
+Inspection shows sealed study metadata without model calls or opening historical source captures. `prepare`, `grant`, and `report` delegate to the existing experiment code; `launch` uses the inspected provider boundary. Native execution remains in the pinned Linux environment. Paid execution requires current offline evidence, independent review, applicable spending authority, and fresh keys. The CLI does not supply any of those automatically.
+
 ## Start here
 
-- [Documentation index: research, phases, operations and history](docs/index.md)
+- [Engineering audit, cuts and practical delivery schedule](docs/ENGINEERING_AUDIT.md)
 - [Current status and decisions](docs/research/CURRENT_SPEC.md)
 - [Research method and interpretation](docs/RESEARCH_METHOD.md)
 - [Concrete Phase 3B scope, completion criteria, caps and stop rules](docs/phases/phase-3b/PHASE3B_DEFINITION.md)
 - [Completed Phase 3A result](docs/phases/phase-3a/PHASE3A_RP2_LIVE_REPORT.md)
 - [Pinned environment and original implementation decisions](docs/phases/phase-0/DECISIONS.md)
-- [Historical README, edited reader reference](docs/archive/README_LEGACY.md)
+- [Historical README, preserved verbatim](docs/archive/README_LEGACY.md)
 
 This is a staged research repository, not an unattended production service. Fixtures and tests are offline by default. Paid runs use a separately accepted, source-bound launcher, an explicit grant and fresh masked key entry. Follow the current runbook when it is accepted; historical launch commands do not authorize another run.
 

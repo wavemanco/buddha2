@@ -1,4 +1,4 @@
-"""Small CLI for the explicitly offline Phase 0 integration kit."""
+"""CLI for native portfolio experiments and saved-output assessment."""
 
 from __future__ import annotations
 
@@ -315,6 +315,7 @@ def _demo(args: argparse.Namespace) -> dict:
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    commands.add_parser("experiment", help="current native comparison; use experiment --help")
     commands.add_parser("phase2", help="offline Phase 2 preparation; use phase2 --help")
     commands.add_parser("phase2-policy", help="offline track decisions and optional human supplements")
     commands.add_parser("phase2-am1", help="AM-1 offline preflight and SDK/mock first block")
@@ -342,6 +343,10 @@ def _parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     arguments = list(sys.argv[1:] if argv is None else argv)
+    if arguments and arguments[0] == "experiment":
+        from .experiment import main as experiment_main
+
+        return experiment_main(arguments[1:])
     if arguments and arguments[0] == "phase2-release":
         from .phase2_release import main as release_main
 

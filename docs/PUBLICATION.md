@@ -4,7 +4,7 @@ The publication target is [wavemanco/buddha2](https://github.com/wavemanco/buddh
 
 The public snapshot includes original code, tests, setup files, specifications,
 research notes, reports and reviewed ordinary-text evidence. Code and documentation
-authored for this research project are Apache-2.0 licensed. Copied CrPO reference code remains MIT with its
+authored for this new research project are Apache-2.0 licensed. Copied CrPO reference code remains MIT with its
 notice; other third-party terms are recorded in [Attributions](ATTRIBUTIONS.md).
 
 The following remain local:
@@ -21,7 +21,7 @@ artifacts. A public clone does not include every input needed by a frozen local
 launcher, its accepted provenance packet, or its exact pinned runtime image.
 
 The existing local Git history contains private artifact paths and remains
-local. Publication uses a separate clean snapshot and a normal push to the empty
+local. Publication uses a separate clean snapshot and a normal push to the public
 repository, preserving the local history and files. Each publication records
 the reviewed export's file hashes and source commit; later publications build
 on the public branch without rewriting it.

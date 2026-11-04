@@ -1,4 +1,4 @@
-"""P3A-HI inspected launcher; explicit keys follow accepted kit and packet."""
+"""Inspected launcher; explicit keys follow current offline checks and independent review."""
 from __future__ import annotations
 
 import argparse
@@ -9,14 +9,14 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from buddha2.artifacts import ContractError, digest, file_hash, read_json, write_once
+from buddha2.artifacts import ContractError, digest, read_json, write_once
 from buddha2.phase2_am1_controls import BILLING_PROFILE, CONTROL_SHA256
 from buddha2.phase2_dispatch import writer_lock
 from buddha2.phase2_release_launch import _bind_credentials, _credentials, _host_path
 from followups.phase3a_v1 import launch as frozen
 
 from . import accounting, supervision
-from .support import BASE, NATIVE, ROOT, read, recovery_config, safe
+from .support import BASE, NATIVE, READINESS_BINDINGS, offline_readiness, safe
 
 MODULE = "followups.phase3b_seq2_v1.launch"
 _HASH = re.compile(r"[0-9a-f]{64}")
@@ -25,52 +25,6 @@ _ENVIRONMENT = frozen._ENVIRONMENT
 HOST_PROJECT, HOST_RUNS = frozen.HOST_PROJECT, frozen.HOST_RUNS
 STAGES = ("readiness", "first", "remaining", "all")
 MODES = ("preflight", "mock", "provider-config", "provider")
-
-
-def _accepted_packet(study: Path, checked: dict) -> dict:
-    """Require one independently reviewed, source-bound packet before key readiness."""
-    config = recovery_config()
-    number = config["candidate"]
-    evidence = ROOT / "evidence/phase3b-ra1-v1"
-    if study != BASE / config["verification"] / "release/study.json":
-        raise ContractError("accepted RA1 packet must match its exact current release")
-    prepared = read(study)
-    config_name = "evidence/phase3b-ra1-v1/release-config.json"
-    source = prepared.get("source")
-    files = source.get("files") if isinstance(source, dict) else None
-    if (not isinstance(files, dict)
-            or any(prepared.get(k) != checked.get(k) for k in _BINDINGS if k != "grant_sha256")
-            or files.get(config_name) != file_hash(ROOT / config_name)):
-        raise ContractError("accepted RA1 packet source/configuration changed")
-    gate = file_hash(_completion_path(study.parent / "offline-gate.json"))
-    bindings = {key: checked[key] for key in _BINDINGS if key != "grant_sha256"}
-    review_path = safe(evidence / f"candidate-{number}-independent-acceptance.json")
-    review = read(review_path)
-    if (review.get("passed") is not True or review.get("offline_gate_file_sha256") != gate
-            or any(review.get(key) != value for key, value in bindings.items())):
-        raise ContractError("independent HI source/gate review is missing or foreign")
-    review_sha = file_hash(review_path)
-    manifest_path = safe(ROOT / "evidence/phase3b-seq2-v1" / f"offline-kit-ra1-c{number}.manifest.json")
-    receipt_path = safe(evidence / f"packet-acceptance-c{number}.json")
-    manifest, receipt = read(manifest_path), read(receipt_path)
-    archive = safe(ROOT / "evidence/phase3b-seq2-v1" / f"offline-kit-ra1-c{number}.zip")
-    if not archive.is_file():
-        raise ContractError("accepted HI archive is missing")
-    archive_sha, manifest_sha = file_hash(archive), file_hash(manifest_path)
-    archive_name = archive.relative_to(ROOT).as_posix()
-    if (manifest.get("passed") is not True or manifest.get("mode") != "offline"
-            or manifest.get("study_sha256") != checked["study_sha256"]
-            or manifest.get("source_sha256") != checked["source_sha256"]
-            or manifest.get("archive") != archive_name or manifest.get("archive_sha256") != archive_sha
-            or not isinstance(manifest.get("member_sha256"), dict)
-            or manifest["member_sha256"].get(review_path.relative_to(ROOT).as_posix()) != review_sha
-            or receipt.get("passed") is not True or receipt.get("archive") != archive_name
-            or receipt.get("archive_sha256") != archive_sha or receipt.get("manifest_sha256") != manifest_sha
-            or receipt.get("offline_gate_file_sha256") != gate
-            or any(receipt.get(key) != value for key, value in bindings.items())):
-        raise ContractError("independently accepted HI packet differs from this exact release")
-    return {"independent_acceptance_sha256": review_sha, "archive_sha256": archive_sha,
-            "manifest_sha256": manifest_sha, "packet_acceptance_sha256": file_hash(receipt_path)}
 
 
 def _completion_path(value: Path) -> Path:
@@ -165,7 +119,7 @@ def preflight(study: Path, grant: Path, stage: str, mode: str, *, supervisor_age
         "configuration_only": mode == "provider-config", "credential_access": False, "provider_requests": 0,
         "supervisor_agent": supervisor_agent, "fixture_supervision_rehearsal": rehearsal}
     if mode == "provider":
-        checked["accepted_packet"] = _accepted_packet(study, checked)
+        checked["offline_readiness"] = offline_readiness(study, {key: checked[key] for key in READINESS_BINDINGS})
         _live_study_claim(checked)
     return checked
 

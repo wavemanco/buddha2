@@ -1,0 +1,653 @@
+{
+  "kind": "buddha2-public-source-cleanup-projection-v1",
+  "status": "final-documents-staged-awaiting-root-go",
+  "canonical_git_head": "3a6c2a1d9760c6e912c74d244a9e186785b2030c",
+  "canonical_source_is_uncommitted_working_tree": true,
+  "public_baseline_commit": "d2e4e13215215e7a10c7fc7e16e6a347d6de6566",
+  "canonical_history_pushed": false,
+  "committed": false,
+  "pushed": false,
+  "deletion_mapping": {
+    "manifest": "docs/reviews/phase3-first-party-retirement-2026-11-04.json",
+    "manifest_sha256": "99a22727c475a45b7924fb9300842ac3af187fc7791b67f6cea8c7bf4055193a",
+    "public_path_rule": "Each approved manifest path maps unchanged to the same relative public path.",
+    "files": 194,
+    "lines": 42847,
+    "bytes": 2571754,
+    "all_public_pre_cut_sha256_matched": true,
+    "all_paths_outside_effective_inputs": true,
+    "method": "194 explicit absolute apply_patch Delete File entries; no directory or recursive deletion."
+  },
+  "copied_files": [
+    {
+      "source": "followups/phase3b_seq2_v1/accounting.py",
+      "public": "followups/phase3b_seq2_v1/accounting.py",
+      "source_sha256": "6fb583876694d7ab73970d06732a798f0f5fd2279137bd36f802fcafcc1a1c49",
+      "public_sha256": "6fb583876694d7ab73970d06732a798f0f5fd2279137bd36f802fcafcc1a1c49",
+      "public_bytes": 42656
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/adapter.py",
+      "public": "followups/phase3b_seq2_v1/adapter.py",
+      "source_sha256": "387d76130efec5362b00e6df8eaa7d6aa4195afdb89fd26bbe15e21329b9d36c",
+      "public_sha256": "387d76130efec5362b00e6df8eaa7d6aa4195afdb89fd26bbe15e21329b9d36c",
+      "public_bytes": 12266
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/evidence.py",
+      "public": "followups/phase3b_seq2_v1/evidence.py",
+      "source_sha256": "a00ad32aae6b731d1c33cd51eea2cc6071e5cf3366fb0286e9c4dec07a4d7fd0",
+      "public_sha256": "a00ad32aae6b731d1c33cd51eea2cc6071e5cf3366fb0286e9c4dec07a4d7fd0",
+      "public_bytes": 41469
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/launch.py",
+      "public": "followups/phase3b_seq2_v1/launch.py",
+      "source_sha256": "cda07f9e93b77fd13a11ac71679c0c63e628236e18afbcfb59c88543a0ad3ddf",
+      "public_sha256": "cda07f9e93b77fd13a11ac71679c0c63e628236e18afbcfb59c88543a0ad3ddf",
+      "public_bytes": 15093
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/native.py",
+      "public": "followups/phase3b_seq2_v1/native.py",
+      "source_sha256": "8a2bfb746e0e0e14c8c92d735f89b0302fe68b47f83f2d8a6387e26e6c4e6e3e",
+      "public_sha256": "8a2bfb746e0e0e14c8c92d735f89b0302fe68b47f83f2d8a6387e26e6c4e6e3e",
+      "public_bytes": 29518
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/report.py",
+      "public": "followups/phase3b_seq2_v1/report.py",
+      "source_sha256": "d2c89800b94c3f6f13bc227a3f60f90fb71f751a0374d3ba6b3c202b6029d7e0",
+      "public_sha256": "d2c89800b94c3f6f13bc227a3f60f90fb71f751a0374d3ba6b3c202b6029d7e0",
+      "public_bytes": 32848
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/strategy.py",
+      "public": "followups/phase3b_seq2_v1/strategy.py",
+      "source_sha256": "dac46fb06ed72f738268005ae0bf6390f944246ca9f99ebb4687f93af67cce41",
+      "public_sha256": "dac46fb06ed72f738268005ae0bf6390f944246ca9f99ebb4687f93af67cce41",
+      "public_bytes": 26098
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/support.py",
+      "public": "followups/phase3b_seq2_v1/support.py",
+      "source_sha256": "473bb65a8570a40ea6f3b57ecf5931036ea00fc6e7fef38913846ccf10973911",
+      "public_sha256": "473bb65a8570a40ea6f3b57ecf5931036ea00fc6e7fef38913846ccf10973911",
+      "public_bytes": 14821
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "public": "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "source_sha256": "f107099abca5579c5137ad40253ee5c8823e01ab96d046872c773428ece12ab7",
+      "public_sha256": "f107099abca5579c5137ad40253ee5c8823e01ab96d046872c773428ece12ab7",
+      "public_bytes": 6894
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_information_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_information_s2.py",
+      "source_sha256": "a6ac6675dd7977f67a8543c600e821823acec3dd7aef32c76a0c98335e12ff9a",
+      "public_sha256": "a6ac6675dd7977f67a8543c600e821823acec3dd7aef32c76a0c98335e12ff9a",
+      "public_bytes": 11895
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_launch_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_launch_s2.py",
+      "source_sha256": "2e804564bb1fd3db1d047974828a779165ba0adacfc37d886a7422664619fede",
+      "public_sha256": "2e804564bb1fd3db1d047974828a779165ba0adacfc37d886a7422664619fede",
+      "public_bytes": 10658
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_ra1_release_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_ra1_release_s2.py",
+      "source_sha256": "72beb605fc94e7f46502a997a79facb02ece1c28f522387230ed9b786705fe6a",
+      "public_sha256": "72beb605fc94e7f46502a997a79facb02ece1c28f522387230ed9b786705fe6a",
+      "public_bytes": 7088
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+      "source_sha256": "a1e8390bb28473604ee0e39b848ac900fe02aca7b2ee26e6806715323ef4a89f",
+      "public_sha256": "a1e8390bb28473604ee0e39b848ac900fe02aca7b2ee26e6806715323ef4a89f",
+      "public_bytes": 1063
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_source_snapshot_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_source_snapshot_s2.py",
+      "source_sha256": "b879982aaefd499ae95ecf0e1d94fc6bf9a7b8aca214995b97b322d296d33f73",
+      "public_sha256": "b879982aaefd499ae95ecf0e1d94fc6bf9a7b8aca214995b97b322d296d33f73",
+      "public_bytes": 9583
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/test_workflow_s2.py",
+      "public": "followups/phase3b_seq2_v1/test_workflow_s2.py",
+      "source_sha256": "435e4a465316153419c54c5794a54706e703a84eddbc723f7c1ba4d95a4dd8a9",
+      "public_sha256": "435e4a465316153419c54c5794a54706e703a84eddbc723f7c1ba4d95a4dd8a9",
+      "public_bytes": 18881
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/workflow.py",
+      "public": "followups/phase3b_seq2_v1/workflow.py",
+      "source_sha256": "dfbf205b6f94d4de4042831bd9a4dfc6cff3c1efdda30d81353db26394434a4c",
+      "public_sha256": "dfbf205b6f94d4de4042831bd9a4dfc6cff3c1efdda30d81353db26394434a4c",
+      "public_bytes": 70290
+    },
+    {
+      "source": "src/buddha2/__main__.py",
+      "public": "src/buddha2/__main__.py",
+      "source_sha256": "cd71ae3c180b1e9d5248dc1c84cfb1ce9c7398b687237df7ac2794a7e80b9410",
+      "public_sha256": "05fc00a669f8225f7c028c2e167435ae54105ab0dd4ca737bcc8ab71e736e035",
+      "public_bytes": 19151
+    },
+    {
+      "source": "src/buddha2/artifacts.py",
+      "public": "src/buddha2/artifacts.py",
+      "source_sha256": "4bd86e1e2c566e1c5f504f3a988b4d52b91403059ed2f0672daed91a2448adf2",
+      "public_sha256": "4bd86e1e2c566e1c5f504f3a988b4d52b91403059ed2f0672daed91a2448adf2",
+      "public_bytes": 7439
+    },
+    {
+      "source": "src/buddha2/experiment.py",
+      "public": "src/buddha2/experiment.py",
+      "source_sha256": "7f8a15f36b6c796f1fe45fed9ff61b97eb2faee5968ebf622ed29780fee813cc",
+      "public_sha256": "7f8a15f36b6c796f1fe45fed9ff61b97eb2faee5968ebf622ed29780fee813cc",
+      "public_bytes": 4088
+    },
+    {
+      "source": "tests/test_experiment_cli.py",
+      "public": "tests/test_experiment_cli.py",
+      "source_sha256": "8b83bf35c1b1251a879027ee43a8c2725986671ccd20a54f7d4964407ae6005f",
+      "public_sha256": "8b83bf35c1b1251a879027ee43a8c2725986671ccd20a54f7d4964407ae6005f",
+      "public_bytes": 6277
+    },
+    {
+      "source": "configs/phase3b-development.json",
+      "public": "configs/phase3b-development.json",
+      "source_sha256": "c91633d691cec31524cddc10da1493d8d01d63247a07b4d7b19d71adeed1d28c",
+      "public_sha256": "c91633d691cec31524cddc10da1493d8d01d63247a07b4d7b19d71adeed1d28c",
+      "public_bytes": 3363
+    },
+    {
+      "source": "followups/phase3b_seq2_v1/source-inputs.json",
+      "public": "followups/phase3b_seq2_v1/source-inputs.json",
+      "source_sha256": "c4bec8e49d58494c2fa7ca2488896ee24491f108491b4f24363a6488a0a23cad",
+      "public_sha256": "c4bec8e49d58494c2fa7ca2488896ee24491f108491b4f24363a6488a0a23cad",
+      "public_bytes": 7996
+    },
+    {
+      "source": "docs/reviews/phase3-first-party-retirement-2026-11-04.json",
+      "public": "docs/reviews/phase3-first-party-retirement-2026-11-04.json",
+      "source_sha256": "99a22727c475a45b7924fb9300842ac3af187fc7791b67f6cea8c7bf4055193a",
+      "public_sha256": "99a22727c475a45b7924fb9300842ac3af187fc7791b67f6cea8c7bf4055193a",
+      "public_bytes": 52703
+    }
+  ],
+  "runtime_projections": [
+    {
+      "source": "src/buddha2/__main__.py",
+      "public": "src/buddha2/__main__.py",
+      "source_sha256": "cd71ae3c180b1e9d5248dc1c84cfb1ce9c7398b687237df7ac2794a7e80b9410",
+      "public_sha256": "05fc00a669f8225f7c028c2e167435ae54105ab0dd4ca737bcc8ab71e736e035",
+      "public_bytes": 19151,
+      "purpose": "Preserve the two existing organized-documentation path literals."
+    }
+  ],
+  "planned_staging_allowlist": [
+    ".gitattributes",
+    "AGENTS.md",
+    "README.md",
+    "configs/phase3b-development.json",
+    "docs/ENGINEERING_AUDIT.md",
+    "docs/PUBLICATION.md",
+    "docs/research/CURRENT_SPEC.md",
+    "docs/reviews/engineering-cleanup-review-2026-11-04.json",
+    "docs/reviews/phase3-first-party-retirement-2026-11-04.json",
+    "docs/reviews/public-source-cleanup-2026-11-04.json",
+    "followups/phase3b_seq2_v1/accounting.py",
+    "followups/phase3b_seq2_v1/adapter.py",
+    "followups/phase3b_seq2_v1/evidence.py",
+    "followups/phase3b_seq2_v1/launch.py",
+    "followups/phase3b_seq2_v1/native.py",
+    "followups/phase3b_seq2_v1/report.py",
+    "followups/phase3b_seq2_v1/source-inputs.json",
+    "followups/phase3b_seq2_v1/strategy.py",
+    "followups/phase3b_seq2_v1/support.py",
+    "followups/phase3b_seq2_v1/test_bootstrap.py",
+    "followups/phase3b_seq2_v1/test_information_s2.py",
+    "followups/phase3b_seq2_v1/test_launch_s2.py",
+    "followups/phase3b_seq2_v1/test_ra1_release_s2.py",
+    "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+    "followups/phase3b_seq2_v1/test_source_snapshot_s2.py",
+    "followups/phase3b_seq2_v1/test_workflow_s2.py",
+    "followups/phase3b_seq2_v1/workflow.py",
+    "src/buddha2/__main__.py",
+    "src/buddha2/artifacts.py",
+    "src/buddha2/experiment.py",
+    "tests/test_experiment_cli.py"
+  ],
+  "planned_new_public_paths": [
+    "configs/phase3b-development.json",
+    "docs/ENGINEERING_AUDIT.md",
+    "docs/reviews/engineering-cleanup-review-2026-11-04.json",
+    "docs/reviews/phase3-first-party-retirement-2026-11-04.json",
+    "docs/reviews/public-source-cleanup-2026-11-04.json",
+    "followups/phase3b_seq2_v1/source-inputs.json",
+    "src/buddha2/experiment.py",
+    "tests/test_experiment_cli.py"
+  ],
+  "public_source_checks": {
+    "effective_files_including_manifest": 162,
+    "python_ast_parsed_files": 149,
+    "source_inputs_are_ordinary_unlinked_files": true,
+    "python_ast_deltas_are_only_declared_path_constants": true,
+    "existing_public_definition_has_preserved_editorial_bytes": true,
+    "public_effective_source_sha256": "97f16655087287dd32a1f491d17219e83adc9284c49570b46f32b7ca413e1ca8",
+    "canonical_source_test_results_not_transferred_to_projected_bytes": true,
+    "cli_help_passed": [
+      "python -B -m buddha2 --help",
+      "python -B -m buddha2 experiment --help"
+    ],
+    "isolated_host_checks": {
+      "python": "3.13.12",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "authority_validated": true,
+      "definition_sha256": "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e",
+      "blocked_network_process_attempts": 0,
+      "public_source_sha256": "97f16655087287dd32a1f491d17219e83adc9284c49570b46f32b7ca413e1ca8",
+      "effective_input_count": 162
+    },
+    "trusted_h1_checks": {
+      "result": "passed",
+      "canonical_tests": 101,
+      "public_tests": 101,
+      "canonical_source_before_after_equal": true,
+      "public_source_before_after_equal": true,
+      "exact_owner_cleanup_complete": true,
+      "evidence": "Parent-controlled final pinned H1 checks; canonical and public were checked separately."
+    },
+    "canonical_effective_source_sha256": "c6eb4157c15ff859e70a0411b9b92f227ccfdf94dd1da94f38d1cdac21ef08c1",
+    "human_definition_markdown_outside_effective_identity": true,
+    "support_and_source_manifest_identical_to_canonical": true,
+    "active_document_link_checks": {
+      "new_reader_documents_scanned": 5,
+      "active_local_links_checked": 40,
+      "active_local_links_missing": [],
+      "excluded_links_before_metadata": []
+    }
+  },
+  "independent_projection_review": {
+    "result": "no findings",
+    "scope": "exact deletion set; 20 runtime/test/config/manifest files; effective input existence; Python AST path deltas; CLI routing/import origin",
+    "excluded": "final reader documentation and trusted H1 execution",
+    "reviewer": "independent public_projection_review agent",
+    "final_shared_fix_delta_review": "passed-no-findings",
+    "final_source_revision_review": "passed-no-findings-on-c6eb4157-and-97f16655",
+    "index_and_attribute_review": "passed-no-findings",
+    "final_reader_docs_review": "passed-no-findings"
+  },
+  "publication_limits": {
+    "private_names_filtered_before_metadata": true,
+    "captured_retained_sources_raw_streams_and_unknown_runs_excluded": true,
+    "licenses_and_attributions_preserved": true,
+    "no_upstream_dependency_model_or_protocol_changes": true,
+    "no_api_calls_or_credentials": true,
+    "no_ci_green_live_readiness_or_scientific_gain_claim": true,
+    "public_source_is_not_an_accepted_frozen_launch_or_replay_kit": true,
+    "remote_committed_bytes_verified": false
+  },
+  "final_cli_refresh": [
+    {
+      "source": "src/buddha2/experiment.py",
+      "public": "src/buddha2/experiment.py",
+      "previous_public_sha256": "16bd87b2fe3c67e1c8d2160c1c1b72a69979cefa55869214f9d33c140e4264e6",
+      "source_sha256": "7f8a15f36b6c796f1fe45fed9ff61b97eb2faee5968ebf622ed29780fee813cc",
+      "public_sha256": "7f8a15f36b6c796f1fe45fed9ff61b97eb2faee5968ebf622ed29780fee813cc",
+      "public_bytes": 4088
+    },
+    {
+      "source": "tests/test_experiment_cli.py",
+      "public": "tests/test_experiment_cli.py",
+      "previous_public_sha256": "9089e4f602dba573899177b50f810d76bf6fa9b7c0f7a6601a85444146a5af44",
+      "source_sha256": "8b83bf35c1b1251a879027ee43a8c2725986671ccd20a54f7d4964407ae6005f",
+      "public_sha256": "8b83bf35c1b1251a879027ee43a8c2725986671ccd20a54f7d4964407ae6005f",
+      "public_bytes": 6277
+    }
+  ],
+  "git_checkout_byte_policy": {
+    "purpose": "Keep committed and fresh-checkout effective-source bytes identical to the pinned-runtime tested profile.",
+    "physical_program_bytes_changed": false,
+    "effective_source_identity_unchanged": true,
+    "existing_raw_evidence_attribute_rules_preserved": true,
+    "local_info_attribute_override": "Existing '* -text -filter -ident' was temporarily disabled for published-policy probing and staging, then restored byte for byte.",
+    "published_policy_probe": {
+      "published_policy_without_local_override": true,
+      "local_override_restored_byte_exact": true,
+      "affected": [
+        {
+          "path": "followups/phase3b_seq2_v1/source-inputs.json",
+          "worktree_sha256": "c4bec8e49d58494c2fa7ca2488896ee24491f108491b4f24363a6488a0a23cad",
+          "crlf_count": 166
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/launch.py",
+          "worktree_sha256": "cda07f9e93b77fd13a11ac71679c0c63e628236e18afbcfb59c88543a0ad3ddf",
+          "crlf_count": 246
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+          "worktree_sha256": "a1e8390bb28473604ee0e39b848ac900fe02aca7b2ee26e6806715323ef4a89f",
+          "crlf_count": 29
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/test_source_snapshot_s2.py",
+          "worktree_sha256": "b879982aaefd499ae95ecf0e1d94fc6bf9a7b8aca214995b97b322d296d33f73",
+          "crlf_count": 161
+        },
+        {
+          "path": "src/buddha2/engine.py",
+          "worktree_sha256": "09430c9a9c505ea0d6d167517ca81aadca2736daf820b9bd4ba488da45a38768",
+          "crlf_count": 316
+        },
+        {
+          "path": "upstreams.lock.json",
+          "worktree_sha256": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1",
+          "crlf_count": 300
+        }
+      ]
+    },
+    "new_explicit_attribute_rules": [
+      {
+        "path": "followups/phase3b_seq2_v1/source-inputs.json",
+        "worktree_sha256": "c4bec8e49d58494c2fa7ca2488896ee24491f108491b4f24363a6488a0a23cad",
+        "crlf_count": 166,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      },
+      {
+        "path": "followups/phase3b_seq2_v1/launch.py",
+        "worktree_sha256": "cda07f9e93b77fd13a11ac71679c0c63e628236e18afbcfb59c88543a0ad3ddf",
+        "crlf_count": 246,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      },
+      {
+        "path": "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+        "worktree_sha256": "a1e8390bb28473604ee0e39b848ac900fe02aca7b2ee26e6806715323ef4a89f",
+        "crlf_count": 29,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      },
+      {
+        "path": "followups/phase3b_seq2_v1/test_source_snapshot_s2.py",
+        "worktree_sha256": "b879982aaefd499ae95ecf0e1d94fc6bf9a7b8aca214995b97b322d296d33f73",
+        "crlf_count": 161,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      },
+      {
+        "path": "src/buddha2/engine.py",
+        "worktree_sha256": "09430c9a9c505ea0d6d167517ca81aadca2736daf820b9bd4ba488da45a38768",
+        "crlf_count": 316,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      },
+      {
+        "path": "upstreams.lock.json",
+        "worktree_sha256": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1",
+        "crlf_count": 300,
+        "attributes": "-text whitespace=cr-at-eol",
+        "reason": "Without the local override, Git would normalize these bound CRLF bytes; preserve the tested bytes."
+      }
+    ],
+    "no_new_minus_whitespace_exemptions": true
+  },
+  "actual_git_index_verification": {
+    "all162_index_bytes_equal_tested_worktree": true,
+    "index_effective_source_sha256": "97f16655087287dd32a1f491d17219e83adc9284c49570b46f32b7ca413e1ca8",
+    "attributes_index_equals_worktree": true,
+    "scoped_cached_diff_check_passed": true,
+    "explicit_staging_allowlist_count": 365,
+    "staging_allowlist_recipe": "Union of the effective-source input manifest plus itself, the selected changed/new paths in planned_staging_allowlist, and exactly the 194 retirement-manifest paths.",
+    "no_git_add_all": true,
+    "local_attribute_override_restored_byte_exact": true,
+    "effective_input_sha256": {
+      "followups/phase3b_seq2_v1/source-inputs.json": "c4bec8e49d58494c2fa7ca2488896ee24491f108491b4f24363a6488a0a23cad",
+      "configs/phase3b-development.json": "c91633d691cec31524cddc10da1493d8d01d63247a07b4d7b19d71adeed1d28c",
+      "evidence/phase3b-seq2-v1/authorization.json": "40847db84f9312e69c0fa3679d6d6bb12da35f3dccf3b183fd140b6b8cbfe284",
+      "evidence/phase3b-seq2-v1/provider-documentation.json": "ba40e44b2378ea6692c5176aba4e901bfbf64137db436dc6ea7cd200e274cbba",
+      "evidence/phase3b-seq2-v1/public-billing-review-v1.json": "966b6ee5e2b570e03c6141374771f864e49eb92141a79c5bb2023f532e70936c",
+      "followups/inspect_visibility_i1/__init__.py": "0a59298b364057f86a0a2fd53dbb73cea55f754537f3a8ed487d29c6322f470b",
+      "followups/inspect_visibility_i1/importer.py": "b430f0dbd4b3d42e38fc9d750f4dc7064809b39ab228d39e56f17c5a7d92448e",
+      "followups/inspect_visibility_i1/paths.py": "abdf2710b5c807553714e02c081b940b89f7a89111249205caf236b317388be2",
+      "followups/phase3a_c1_completion_v1/__init__.py": "9785df7e6b43d41830593b1ebed530f20cbef01f2655c1022fc2749a52807a62",
+      "followups/phase3a_c1_completion_v1/support.py": "2b06fdcdda4a0d304fd39dc433e0d9659de57d6aabf7cac28903203c8829fd41",
+      "followups/phase3a_c1_completion_v2/__init__.py": "9785df7e6b43d41830593b1ebed530f20cbef01f2655c1022fc2749a52807a62",
+      "followups/phase3a_c1_completion_v2/contract.py": "5de49c3e5f76f9970eb9498bf5946b3a7d14083de7dbb8265b759445faa4c49a",
+      "followups/phase3a_c1_completion_v2/support.py": "597565a9c116eb5f1b9f98a49f374176dce3ccc0ddb26e9303d62ace3fee8c7e",
+      "followups/phase3a_c1_completion_v3/__init__.py": "9785df7e6b43d41830593b1ebed530f20cbef01f2655c1022fc2749a52807a62",
+      "followups/phase3a_c1_completion_v3/accounting.py": "b86d4e179a48176d818fc7f13f405ed202b98a060e04879a7e33019839ab8d41",
+      "followups/phase3a_c1_completion_v3/adapter.py": "6f82d71440ea751455c7ecc048ca888d154be8848a7e8ebb5d37f1370a25f51f",
+      "followups/phase3a_c1_completion_v3/contract.py": "8f0eb0451ea373c8b380729622fe85b5d121422374aa48d07c3b7641e7e16214",
+      "followups/phase3a_c1_completion_v3/deadline.py": "d876fdaa6acf5e060cdbb42d57cf57bc3ec3232bacde157b9e2de7aeab6efca7",
+      "followups/phase3a_c1_completion_v3/evidence.py": "74b64168129207523cf020f41c8d59c53de0fbd9e35340f74253aaff498d8d3b",
+      "followups/phase3a_c1_completion_v3/mocks.py": "e539ae92a691d8f23964ba48ea9de7c0794638d603d38c61d750bdc240e24191",
+      "followups/phase3a_c1_completion_v3/support.py": "2a489c63a564967fba4d2ad1f61d1a3212f170d382c4164b8868a8193fc8e9c8",
+      "followups/phase3a_c1_completion_v3/tests/fixtures.py": "b7a348f2b1e268ebf519656ccc98fd05443886f7feb798365981f42af4b79d07",
+      "followups/phase3a_c1_completion_v3/tests/test_accounting.py": "b560e73b96fd211ca1982deaf0c4e5261fe06bb851e3c6334ff3b98b8375e3cd",
+      "followups/phase3a_c1_completion_v3/tests/test_deadline.py": "fb282a58fc2b2079aded7d5c8671a510d52191cb5c3c2deb5d5648fd0ee731df",
+      "followups/phase3a_c1_completion_v3/transport.py": "18c91303896c8bbad85cd58a6ab02648c5f63973d44941411587ad80a22a76d7",
+      "followups/phase3a_c1_completion_v3/worker.py": "f5f858dc0177572cda0d1d8be8bc2fbe9be1a410493d194cee09bea2b291b417",
+      "followups/phase3a_c1_completion_v4/__init__.py": "24ce23bec8e3c9e2c77b4730fe761c9650eb3c97eb5c85dbf908e61832cf1a34",
+      "followups/phase3a_c1_completion_v4/contract.py": "63f7abaeafa4c52ef42b2153829fdb0616634aed4e51191beb546854931fa90f",
+      "followups/phase3a_c1_completion_v4/editor.py": "d27a7a28af90729a5ffea09e15e33030f7504489bd4d107e66361f44e485fecf",
+      "followups/phase3a_c1_completion_v4/mocks.py": "744786f2832c42397d9e070a0338b2432186d9644cb97e37624db38177d36ff8",
+      "followups/phase3a_c1_completion_v4/support.py": "c613ad53b2b0cabfc565fcd56d64f62936d0c2a6e5d3f81e68faf996c805fcb9",
+      "followups/phase3a_c1_completion_v4/transport.py": "654f5ced54fc88814683b4ec4d57538c6ab8693f021ca956d41a7d1de68bcca5",
+      "followups/phase3a_compat_c1_v1/__init__.py": "724d6a94d088487d19b833387cfe68e7f1f4484c7da4f844f783ab15ece91df3",
+      "followups/phase3a_compat_c1_v1/contract.py": "d45e16bc6ad94c92f7864682ff3e7d8550409d1b90540fde331b9a514174137d",
+      "followups/phase3a_compat_c1_v1/mocks.py": "1a819fa3741eb0674258f0a2bf5e785aa2c7ac21a50dd66e0b3f801b17864216",
+      "followups/phase3a_compat_c1_v1/support.py": "45d5aaa98457bd913f87417fe71cdcae4de5da32c6b14d14402cc49ece345858",
+      "followups/phase3a_h1_integrated_v1/__init__.py": "2d95eda826fd72724f766af4a9a8f1302874cc9ef2e72b36d8e192583e3e9234",
+      "followups/phase3a_h1_integrated_v1/support.py": "ea86d59fe965a40b0ed6fda9b7c4d48c838b9e8f5344691d9a72c6558a7f8241",
+      "followups/phase3a_history_compat_h1/__init__.py": "bcb32f9c7c23db235a44ce55ccecadee64f51b72b1cb9fd9cf7810c856d895d2",
+      "followups/phase3a_history_compat_h1/fixture.py": "477a0ad1551e10668c6482e3e227e0726283f757382929d51819eafd83985223",
+      "followups/phase3a_history_compat_h1/guard.py": "b80415038bec5b70fc66ef536f556e44a4d9f7a28237d383a505589c9916e78d",
+      "followups/phase3a_history_compat_h1/runtime.py": "37f0a89c8f47b84afaa088a272800d2657d217327c148558cfdd9872bed5356d",
+      "followups/phase3a_history_compat_h1/tests.py": "40446f9466d30e2cf62f9368062b36ed16471dbf308427dc0df600221303f05f",
+      "followups/phase3a_history_compat_h1/verify.py": "fa70d508cabf0d52c291a0dacec671938e43321b180addf46caf177d2db6a766",
+      "followups/phase3a_rank_contract_v1/adapter.py": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "followups/phase3a_rc1_pilot_v1/__init__.py": "2d95eda826fd72724f766af4a9a8f1302874cc9ef2e72b36d8e192583e3e9234",
+      "followups/phase3a_rc1_pilot_v1/support.py": "8faee252d48c294584322fc92874c0f8174f20c0b6c0e13b82a8cd6afd62aa4e",
+      "followups/phase3a_readiness_recovery_v1/__init__.py": "2d95eda826fd72724f766af4a9a8f1302874cc9ef2e72b36d8e192583e3e9234",
+      "followups/phase3a_readiness_recovery_v1/accounting.py": "9667c80bac61c5abda86594d2f1339e436864ffa0bf99f714b25dab830d26e02",
+      "followups/phase3a_readiness_recovery_v1/deadline.py": "53bf673c81d76495b9998cfb5efc39d70db306141a3ab09482d3340cbd2e8d7e",
+      "followups/phase3a_readiness_recovery_v1/deadline_regression.py": "bf9c91025ebc52ddcfb74e87ca2133b0ee9bbe3d44918e43392015aa49bb8b0e",
+      "followups/phase3a_readiness_recovery_v1/delivery.py": "5ba8e975f83119a3f539d6bbf623f22eb8f42df6d1417a4d944bdfda59a9d42d",
+      "followups/phase3a_readiness_recovery_v1/editor.py": "899c31d2bf2244955ced79ab4af019e51b42010441e81a03253fdfa53182c737",
+      "followups/phase3a_readiness_recovery_v1/history.py": "1a10d3377c70382d6ad1a02f17528f35c50fbb320d8fd0b350178b391229c326",
+      "followups/phase3a_readiness_recovery_v1/native.py": "97df7fd71f1972558906eafc2b308eb23e5ba495a3f7d4dd8cf6d04859e2677f",
+      "followups/phase3a_readiness_recovery_v1/rank_io.py": "666336198106eb83e22e967112896dc39814f97d90cce637af7009eb4ae57597",
+      "followups/phase3a_readiness_recovery_v1/regression.py": "c97d4b507699fbdb9d30c8d641ff4d1bee65ed7e55c4b2211f0eee906707ee85",
+      "followups/phase3a_readiness_recovery_v1/strategy.py": "75a581a5916b518159a27ba20745c6c2696ce3e94b35be0309e7107e9a0a0fad",
+      "followups/phase3a_readiness_recovery_v1/supervision.py": "e94a19250c965502929e1463c08986f470a51eb4d86b912110b8b2c29bc0a172",
+      "followups/phase3a_readiness_recovery_v1/support.py": "75d7754ad5a8356756c4eb4ffc21fa11b0b43f863653ce7e5a733775d2b90cec",
+      "followups/phase3a_readiness_recovery_v1/test_delivery.py": "3ebdf18807b37f75d949564d1caebee74ca5b57da75323920740641fcda4927a",
+      "followups/phase3a_readiness_recovery_v1/test_rank_io.py": "ff4784a86543cf96868b5e25a45700a7c961719c249ea9d450dbaaffcd7d14af",
+      "followups/phase3a_readiness_recovery_v1/transport.py": "33b7d4de9d923f63c9b1b42cb0b213556bb13ac3551eaa831e92ea04c342574a",
+      "followups/phase3a_v1/accounting.py": "436438a6e7bddc79c668e6aa668238ddd228529f750451c445bc9af46e4fb2bd",
+      "followups/phase3a_v1/editor-tools.json": "eed539bfaf4c69f9f6ba6745f362ad166b7a71243db589713ba69d13a9c1ea68",
+      "followups/phase3a_v1/editor.py": "becdecd2d7d2109a21f1e3ac7ad47dcb591aa9c4a83fdf65539efcd8c923bbc1",
+      "followups/phase3a_v1/launch.py": "314a4c3b90ad5189c01f54a5336b73d5fdaad1ed0726b4f3172a33961bebd06c",
+      "followups/phase3a_v1/mocks.py": "532747e9739dc652926a6a3cec6979ab36198ce2a799d9562fd063b77590d3f4",
+      "followups/phase3a_v1/native.py": "e4c4a92393acbbe5a3e62b43381d726130c260826e4cc8b583676e61e82928d8",
+      "followups/phase3a_v1/strategy.py": "427529f0533553bfeaa899464ef6806825c4c694db7a6639b1814cfcd336d3f9",
+      "followups/phase3a_v1/support.py": "7095a8f3a728bc8cb00b1db8a53862daca381101ebaa854758faada4c2311238",
+      "followups/phase3a_v1/tests/test_accounting.py": "6efd067992c1f2d7ea7168e66feadb6e74c3e642385810a8d1da61319c7652f2",
+      "followups/phase3a_v1/tests/test_strategy.py": "3993428cb499fbc8d3bfa0ef3fcd2447d13eee0f3721633e6afc7e52db423dea",
+      "followups/phase3a_v1/tests/test_transport.py": "67e3c4bbad708fb64cbd5f34eaf3174920b8d7accb56247058d2e330d5bd9ffc",
+      "followups/phase3a_v1/transport.py": "921223c9b4ed55cbee93e5a76d7e60e87aa8ee3adb03995ed3ac727fa3d3108d",
+      "followups/phase3a_v1/workflow.py": "750fb1e8186a4c2ab4c8bd93837eb946ba8b51bfdc55b69d9d84b955fc198816",
+      "followups/phase3b_seq2_v1/__init__.py": "6d77ce2f9dd5f7df3806aa5b87466f94ad9b3c0ee4f0345b6e6c1bd170d591c5",
+      "followups/phase3b_seq2_v1/accounting.py": "6fb583876694d7ab73970d06732a798f0f5fd2279137bd36f802fcafcc1a1c49",
+      "followups/phase3b_seq2_v1/adapter.py": "387d76130efec5362b00e6df8eaa7d6aa4195afdb89fd26bbe15e21329b9d36c",
+      "followups/phase3b_seq2_v1/boundary_contract.py": "9c9b2a561ae8ba0fa848d880a65a858bb4fefc59c8ca3f0dc84be2ba1bcd19db",
+      "followups/phase3b_seq2_v1/capacity.py": "7c9aa467115b17b12336e2eb6f065e4575abc9eaada21804f93fe9ddb2575038",
+      "followups/phase3b_seq2_v1/contract.py": "cafe8cab399784a2623e6519026b4d981b6de19802864fb9bcee09c571fbc29a",
+      "followups/phase3b_seq2_v1/core_view.py": "ae19d5eabca90a3e5824058041f692a2b27dd988b985e1dee9675c00380cfb0c",
+      "followups/phase3b_seq2_v1/deadline.py": "53bf673c81d76495b9998cfb5efc39d70db306141a3ab09482d3340cbd2e8d7e",
+      "followups/phase3b_seq2_v1/deadline_regression.py": "5ca1639b0491130bd88e26bdbbaa6ee55a72ee54cf9443bcd304d43588db6226",
+      "followups/phase3b_seq2_v1/delivery.py": "6f6972fce24ab6450e6c71fedc6bb71464289608bcd17695e096ff4105468aae",
+      "followups/phase3b_seq2_v1/editor.py": "7f5f52e86a04ad1f7b92a7a1935326a799da7abe0492dd033b9f032560aa3f0e",
+      "followups/phase3b_seq2_v1/evidence.py": "a00ad32aae6b731d1c33cd51eea2cc6071e5cf3366fb0286e9c4dec07a4d7fd0",
+      "followups/phase3b_seq2_v1/history.py": "55e9d904d167fb1e1ad40b558da3bf55e324da9837886a88fa74a8f2323ad669",
+      "followups/phase3b_seq2_v1/host_checks.py": "918d30918ff2e7e401c834e3ff64ddda332805dfb282db24973b05437011cb01",
+      "followups/phase3b_seq2_v1/inspect_adapter.py": "33db4cb9bf81689edb95ff8d57dc2614ec1f33c535634652b9ed50a9893e8c55",
+      "followups/phase3b_seq2_v1/inspect_projection.py": "93f30b98f7632f30dc802a47e66742a16d292b5835156b79b9ada5286ec2371f",
+      "followups/phase3b_seq2_v1/launch.py": "cda07f9e93b77fd13a11ac71679c0c63e628236e18afbcfb59c88543a0ad3ddf",
+      "followups/phase3b_seq2_v1/ledger_core.py": "5cdf04d7418a228d897d79e32c456fc9a2c2069dc503ad46d96ff4a4b55ecc02",
+      "followups/phase3b_seq2_v1/mocks.py": "14441b9ec8a7b374739b9745a2b7888289d0e8342f8ba96d268c1c899ed7ca31",
+      "followups/phase3b_seq2_v1/native.py": "8a2bfb746e0e0e14c8c92d735f89b0302fe68b47f83f2d8a6387e26e6c4e6e3e",
+      "followups/phase3b_seq2_v1/native_fixture.py": "ea2829b34143b578d9a6ee1bab1c35ea5de8b6b0eef7905d1c8c7b0e97644bc3",
+      "followups/phase3b_seq2_v1/rank_io.py": "666336198106eb83e22e967112896dc39814f97d90cce637af7009eb4ae57597",
+      "followups/phase3b_seq2_v1/regression.py": "e52bf4e8dc7e4f9ed210fb984a67e157f668cfddecc47d0d97c92290c26a4439",
+      "followups/phase3b_seq2_v1/report.py": "d2c89800b94c3f6f13bc227a3f60f90fb71f751a0374d3ba6b3c202b6029d7e0",
+      "followups/phase3b_seq2_v1/snapshot.py": "efd1c7cea36f614c7c840993cdfe14e3be975461001e5ba0de4bfce8a9d0e9ab",
+      "followups/phase3b_seq2_v1/strategy.py": "dac46fb06ed72f738268005ae0bf6390f944246ca9f99ebb4687f93af67cce41",
+      "followups/phase3b_seq2_v1/supervision.py": "29976ca659f5d43dd5ca78427e4d6fd245c4b4398e52b4b8aa04199d5341c041",
+      "followups/phase3b_seq2_v1/support.py": "473bb65a8570a40ea6f3b57ecf5931036ea00fc6e7fef38913846ccf10973911",
+      "followups/phase3b_seq2_v1/test_bootstrap.py": "f107099abca5579c5137ad40253ee5c8823e01ab96d046872c773428ece12ab7",
+      "followups/phase3b_seq2_v1/test_boundary_compatibility_s2.py": "3a1a47e11bf67b08decdb88b0b6a36aac8a66e26abc3c66b7ff94918dd6c739a",
+      "followups/phase3b_seq2_v1/test_capacity_s2.py": "57ab43d516ff7ddfb8e6583ce498294c8f9099665b7425af7faf235c25797090",
+      "followups/phase3b_seq2_v1/test_delivery_s2.py": "7f2f4ba449087bcd943c95f52e90497a6725e34b0e8697090e13ec96c6988985",
+      "followups/phase3b_seq2_v1/test_fixed_pool_s2.py": "656ddf2b94e6f5f89667ffb938c8d5cf91b93d14a26bea617e26bea6ceb4c1e1",
+      "followups/phase3b_seq2_v1/test_information_s2.py": "a6ac6675dd7977f67a8543c600e821823acec3dd7aef32c76a0c98335e12ff9a",
+      "followups/phase3b_seq2_v1/test_inspect_s2.py": "c4deb8d28b149a06403dd19a8a6c3ec66a42e11f526759d23e5060580d57b26b",
+      "followups/phase3b_seq2_v1/test_launch_s2.py": "2e804564bb1fd3db1d047974828a779165ba0adacfc37d886a7422664619fede",
+      "followups/phase3b_seq2_v1/test_native_s2.py": "d207b0a8a7880c38c2b29afd06fa6d9fb9540ebe27db06cd04d54f79996dae73",
+      "followups/phase3b_seq2_v1/test_offline_timeouts_s2.py": "9db32015824f6b824aa47a6315051aeeea12ab95dc0e964b511861a4d213acc4",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py": "c7c2332368193bbfcb4daa2e22a8e472d03888dc7da087f2428d993b07ca3ab7",
+      "followups/phase3b_seq2_v1/test_package_s2.py": "8354c07ef824e0d7ddd07db652247537e0b1ea27269bbd6c67e3058d7c2bd619",
+      "followups/phase3b_seq2_v1/test_ra1_release_s2.py": "72beb605fc94e7f46502a997a79facb02ece1c28f522387230ed9b786705fe6a",
+      "followups/phase3b_seq2_v1/test_readme_provenance_s2.py": "a1e8390bb28473604ee0e39b848ac900fe02aca7b2ee26e6806715323ef4a89f",
+      "followups/phase3b_seq2_v1/test_required_checkpoint_s2.py": "fcac8fbbf514dfac27734b097069ecbe2211ed30485fdab797b20179930eb1b0",
+      "followups/phase3b_seq2_v1/test_runtime_s2.py": "1fb4682f5390eb8eb48a53e575c2128a2d5d8d05e7e8a40a161eb9f530d0c5c8",
+      "followups/phase3b_seq2_v1/test_selector_s2.py": "b2313395ff371b44673d827dc491e150516237be4503a086da903f87fdaf0d54",
+      "followups/phase3b_seq2_v1/test_source_snapshot_s2.py": "b879982aaefd499ae95ecf0e1d94fc6bf9a7b8aca214995b97b322d296d33f73",
+      "followups/phase3b_seq2_v1/test_verify_s2.py": "a9347e63a40892935d18330f1a4289e9b9878ebc53949e03d303569d3a7eb2fc",
+      "followups/phase3b_seq2_v1/test_workflow_s2.py": "435e4a465316153419c54c5794a54706e703a84eddbc723f7c1ba4d95a4dd8a9",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py": "42e748a0d1e91eb1bc7a284917e5dcc612869c5a435b8a83bdb47753a6673613",
+      "followups/phase3b_seq2_v1/transport.py": "58a0616cf82c3591a4ccf0f7e0aead15c9bd335b938ff2595f66e5b1e9e44442",
+      "followups/phase3b_seq2_v1/verify.py": "4d16b1ba02c6864e3f4b4ed5bb03bfe151617fcbc128f22c7f51cac94aa109ea",
+      "followups/phase3b_seq2_v1/workflow.py": "dfbf205b6f94d4de4042831bd9a4dfc6cff3c1efdda30d81353db26394434a4c",
+      "followups/rank_format_v1/normalizer.py": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+      "followups/rank_format_v1/support.py": "a89a89979f97aac0dfc35c27c616b812bd98721fe0a81ecd795ee51baa52381f",
+      "phase3b-seq2-core.ps1": "eb13abbb38bf0b1a93365e64474f747fba79e6ee538b56f080c938a0fbe8c199",
+      "phase3b-seq2.ps1": "848b06d9d89bb07db351c10c79565f5636b7428476cc7772a82a268b57ae3272",
+      "pyproject.toml": "4880e9a96c041ab9cebfa0e495c64b6f5a5d13cd456a92d3c20db8f4e4546b77",
+      "requirements-build.lock": "215caa7e98c92126bc218409820d6374a801f3ab006e8221969ece313a63cffe",
+      "requirements.lock": "9cc5afd9f1f01988a89ab209d2c8e921feef5024590d6903370993f504e39ce9",
+      "src/buddha2/__init__.py": "e908915f394c261ef4369f4a2a2255e609015f6bd5e196e998dc4e19a0e84090",
+      "src/buddha2/__main__.py": "05fc00a669f8225f7c028c2e167435ae54105ab0dd4ca737bcc8ab71e736e035",
+      "src/buddha2/artifacts.py": "4bd86e1e2c566e1c5f504f3a988b4d52b91403059ed2f0672daed91a2448adf2",
+      "src/buddha2/engine.py": "09430c9a9c505ea0d6d167517ca81aadca2736daf820b9bd4ba488da45a38768",
+      "src/buddha2/evaluation.py": "46e21c1cc44f1c8dce90a33e7583ff5f57371a15187ca9b636e17bf0add6672f",
+      "src/buddha2/experiment.py": "7f8a15f36b6c796f1fe45fed9ff61b97eb2faee5968ebf622ed29780fee813cc",
+      "src/buddha2/nb_worker.py": "e5e6a3f42077b5658207b32b15cd7645d7ba6686a9046045958b88a4f24b6b13",
+      "src/buddha2/pairs.py": "bbc95a5ea1328a5a14dbeb4b6847da9d5a2d991d33ffe416020d97ab02ef8232",
+      "src/buddha2/phase2.py": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+      "src/buddha2/phase2_am1.py": "23661181068422e59531e4cdbc37f32892429dabc9221ae41503e9c0c4629c86",
+      "src/buddha2/phase2_am1_controls.py": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+      "src/buddha2/phase2_am1_mock.py": "f462d259425bd9cf68070f56b82350dbe6a8c02587b7ca11dbd7d70cecf21fe6",
+      "src/buddha2/phase2_analysis.py": "024bbadb8537099da3e07e43a66249bf1e5bc5cf2cae17163e973d86191db00c",
+      "src/buddha2/phase2_contracts.py": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+      "src/buddha2/phase2_coverage.py": "1f104482c10ffd2ca33f1f21ec7a2b556341f9b0cbe612d52dbec929f334f4ef",
+      "src/buddha2/phase2_decisions.py": "d27bdecd270d5e268536d40ca202d89bf513c95815234900ddc7a0897f0f5eab",
+      "src/buddha2/phase2_dispatch.py": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+      "src/buddha2/phase2_human.py": "9d800a25fd3a3f457e7083446dd60e82de43adc0b53c078ea59bba9d7764a566",
+      "src/buddha2/phase2_native.py": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+      "src/buddha2/phase2_policy.py": "557a7bd435aede212d09eb30ac990ba2bd77956b2ff42d4483433a70bb1bf439",
+      "src/buddha2/phase2_release.py": "495962d7a03bb048acc93bb818cbc5d16a277cf835b11461d049b31ed3f1093f",
+      "src/buddha2/phase2_release_journal.py": "a93b2b917e5cd7d10ce894806884c9fb41650e0c6a912ec63e8f9e4177be9c4e",
+      "src/buddha2/phase2_release_launch.py": "abd77810219e83f029e08eef67efa0fc02f26e14fa4587188331c7272fb78ded",
+      "src/buddha2/phase2_release_runner.py": "5468f40ae543284868c5348d414da05bef3d05cc8364576767bb6e1d0467e483",
+      "strategies/fixed/phase2.json": "a845a38d445033489c0f2aefba32288c21e07f99bd192bc42cfd17a75c543f3c",
+      "tests/test_experiment_cli.py": "8b83bf35c1b1251a879027ee43a8c2725986671ccd20a54f7d4964407ae6005f",
+      "upstreams.lock.json": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1"
+    }
+  },
+  "selected_text_secret_scan": {
+    "selected_texts": 31,
+    "credential_pattern_findings": 0,
+    "scope": "Explicit selected changed/new ordinary-text files; excludes private names, caches, streams and source captures before metadata."
+  },
+  "documentation_projection": [
+    {
+      "source": "README.md",
+      "public": "README.md",
+      "source_sha256": "0e34df4c7fe60dfebe69adc23869cabec8901a6e1c8d8906664d32bdc9129a2b",
+      "public_sha256": "6a19fa3227cf64e2e77581e9d566401f107fad78223e3f418e083e2e472f5ce3",
+      "public_bytes": 7624,
+      "relative_link_rewrites": 7,
+      "preserved_frozen_replay_appendix": false
+    },
+    {
+      "source": "CURRENT_SPEC.md",
+      "public": "docs/research/CURRENT_SPEC.md",
+      "source_sha256": "7d28dce0cc72e5ca31b6f683df657a5cb894c4526cb8c0b3607dc1f2dd21275e",
+      "public_sha256": "11769d9a2d09274f12042d61d032a6120230c256ec0e5d2f558700bd3377c00c",
+      "public_bytes": 83419,
+      "relative_link_rewrites": 142,
+      "preserved_frozen_replay_appendix": false
+    },
+    {
+      "source": "docs/PUBLICATION.md",
+      "public": "docs/PUBLICATION.md",
+      "source_sha256": "4cced5833eb4fbaeffc2805e8a84b699b160fc018206c745945fb9258538bcb5",
+      "public_sha256": "fd2c670db7c1b0d864d1c95fa27a73d227704b28c0dd4f51f6d46927fc533b02",
+      "public_bytes": 2398,
+      "relative_link_rewrites": 0,
+      "preserved_frozen_replay_appendix": true
+    },
+    {
+      "source": "docs/ENGINEERING_AUDIT.md",
+      "public": "docs/ENGINEERING_AUDIT.md",
+      "source_sha256": "de2bde1c2072a3b4c982ff18552e97ecb4b6c37707fa1fb7399eef3769d7e999",
+      "public_sha256": "0b9be530d4041d86ef87367e1e2b188d6f8ce7d1df8103b0a8ba711225cf9762",
+      "public_bytes": 19014,
+      "relative_link_rewrites": 1,
+      "preserved_frozen_replay_appendix": false
+    },
+    {
+      "source": "AGENTS.md current-direction prefix only",
+      "public": "AGENTS.md",
+      "source_prefix_sha256": "12ac32e8c02914fbede28beaca83f9588506a73edb940e66544941307b0dba93",
+      "public_prefix_sha256": "1bacd013ad93b927b909423b4c11456c3af77aa291e1b2ad762c6b193e494ebe",
+      "preserved_public_body_sha256": "5474867a9aba8c07cc95c908adfbde60a8d5e0f3cf90e527a7d505b08bd7fc26",
+      "public_sha256": "87a2f3fbbf3478bcfb8a0da7951ee29948533425ab2deae2a4930c5cd67781ee",
+      "public_bytes": 3829,
+      "projection": "One CURRENT_SPEC path updated; pre-existing sanitized public body preserved byte for byte; canonical historical body excluded."
+    },
+    {
+      "source": "docs/reviews/engineering-cleanup-review-2026-11-04.json",
+      "public": "docs/reviews/engineering-cleanup-review-2026-11-04.json",
+      "source_sha256": "c5437fb2a1f4e7508fde79883dc9b91f094d6f2d267c0fd6eaa15eb3caadadea",
+      "public_sha256": "c5437fb2a1f4e7508fde79883dc9b91f094d6f2d267c0fd6eaa15eb3caadadea",
+      "public_bytes": 11816,
+      "projection": "Public text uses LF; parsed JSON and its semantic seal are unchanged.",
+      "semantic_seal": "823ee61ccc4c4738fe687bcc79fc18f7a736e741d61794ebfa7a35beadd03faf",
+      "provider_calls": 0,
+      "canonical_tests": 101,
+      "public_tests": 101
+    }
+  ],
+  "qa_summary_publication": {
+    "path": "docs/reviews/engineering-cleanup-review-2026-11-04.json",
+    "source_and_public_file_sha256": "c5437fb2a1f4e7508fde79883dc9b91f094d6f2d267c0fd6eaa15eb3caadadea",
+    "semantic_seal": "823ee61ccc4c4738fe687bcc79fc18f7a736e741d61794ebfa7a35beadd03faf",
+    "canonical_tests": 101,
+    "public_tests": 101,
+    "provider_calls": 0,
+    "raw_component_receipts_or_effective_source_snapshots_exported": false
+  }
+}

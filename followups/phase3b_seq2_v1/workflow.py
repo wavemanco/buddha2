@@ -25,11 +25,12 @@ from .deadline import POLICY as DEADLINE_POLICY
 from .snapshot import VISIBILITY_OWNER_KIND, VISIBILITY_REQUEST_KIND, VISIBILITY_RESULT_KIND
 from .support import (
     AUTHORITY,
-    DEFINITION,
+    DECLARED_DEFINITION_SHA256,
     LAUNCHER,
     NATIVE,
     ROOT,
     checked,
+    offline_readiness,
     path,
     publish,
     read,
@@ -84,8 +85,23 @@ class ReadinessProposer(CompatibleProposer):
             return reply
 
 
+def _scientific_inputs() -> dict:
+    value = read(ROOT / "configs/phase3b-development.json")
+    hashes = ("parent_decision_sha256", "seed_procedure_sha256", "source_descriptor_file_sha256", "source_study_sha256")
+    require(set(value) == {"kind", "tasks", *hashes}
+        and value.get("kind") == "buddha2-development-inputs-v1"
+        and isinstance(value.get("tasks"), list) and len(value["tasks"]) == 4
+        and all(isinstance(task, dict) and isinstance(task.get("parent_task_id"), str)
+            and bool(task["parent_task_id"].strip()) for task in value["tasks"])
+        and len({task["parent_task_id"] for task in value["tasks"]}) == 4
+        and all(isinstance(value.get(key), str) and len(value[key]) == 64
+            and all(char in "0123456789abcdef" for char in value[key]) for key in hashes),
+        "invalid portable development inputs")
+    return value
+
+
 def frozen_tasks() -> list[dict]:
-    tasks = copy.deepcopy(read(ROOT / "runs/phase3a-r2-v1/release-v1/study.json")["tasks"])
+    tasks = copy.deepcopy(_scientific_inputs()["tasks"])
     for index, task in enumerate(tasks, 1):
         task["pilot_id"] = f"p3b-{index:02}"
     tasks[0]["arm_order"] = ["adaptive", "fixed"]
@@ -285,18 +301,18 @@ def prepare(
     authority = validate_authority()
     sources, environment = source or source_identity(), runtime or runtime_identity()
     snapshot_policy = source_snapshot_policy(sources["files"])
-    old = read(ROOT / "runs/phase3a-r2-v1/release-v1/study.json")
+    old = _scientific_inputs()
     tasks = frozen_tasks()
     body = {
-        "kind": "phase3b-seq2-study-v1",
+        "kind": "buddha2-effective-seq2-study-v2",
         "source": sources,
         "source_sha256": sources["sha256"],
         "source_snapshot_policy": snapshot_policy,
         "runtime": environment,
         "runtime_sha256": digest(environment),
-        "definition_sha256": file_hash(DEFINITION),
+        "definition_sha256": DECLARED_DEFINITION_SHA256,
         "authorization_sha256": file_hash(AUTHORITY),
-        "specification_sha256": file_hash(DEFINITION),
+        "specification_sha256": DECLARED_DEFINITION_SHA256,
         "launcher_sha256": file_hash(LAUNCHER),
         "policy": accounting.POLICY,
         "policy_sha256": digest(accounting.POLICY),
@@ -344,7 +360,9 @@ def load_study(study_path: Path) -> dict:
     study_path = path(study_path)
     study = read(study_path)
     require(
-        study.get("kind") == "phase3b-seq2-study-v1"
+        study.get("kind") == "buddha2-effective-seq2-study-v2"
+        and isinstance(study.get("source"), dict)
+        and study["source"].get("kind") == "buddha2-effective-source-v2"
         and study["study_sha256"]
         == digest({k: v for k, v in study.items() if k != "study_sha256"}),
         "completion study seal differs",
@@ -356,12 +374,13 @@ def load_study(study_path: Path) -> dict:
         and study["source_sha256"] == study["source"]["sha256"]
         and study["runtime"] == runtime_identity()
         and study["runtime_sha256"] == digest(study["runtime"])
-        and study["definition_sha256"] == file_hash(DEFINITION)
+        and study["definition_sha256"] == DECLARED_DEFINITION_SHA256
+        and study["specification_sha256"] == DECLARED_DEFINITION_SHA256
         and study["authorization_sha256"] == file_hash(AUTHORITY)
         and study["authority"] == validate_authority(),
         "completion source/runtime/authority changed",
     )
-    old = read(ROOT / "runs/phase3a-r2-v1/release-v1/study.json")
+    old = _scientific_inputs()
     require(
         study["tasks"] == frozen_tasks()
         and study["execution_tag"]
@@ -677,42 +696,9 @@ def preflight(
         "canonical checkpoint stop prevents all later calls",
     )
     if not fixture and require_offline_gate:
-        gate = checked(read(study_path.parent / "offline-gate.json"))
-        require(
-            gate["passed"] is True
-            and gate["study_sha256"] == study["study_sha256"]
-            and gate["source_sha256"] == study["source_sha256"]
-            and gate["runtime_sha256"] == study["runtime_sha256"],
-            "whole-scope offline gate required",
-        )
-        require(
-            set(gate["checks"])
-            == {
-                "tests",
-                "static",
-                "matrix",
-                "replay",
-                "launcher",
-                "preservation",
-                "windows-tests",
-                "inspect",
-                "regression",
-                "native-fixtures",
-                "semantics",
-                "supervision",
-            },
-            "whole-scope gate groups differ",
-        )
-        for ref in gate["checks"].values():
-            target = path(Path(ref["path"]))
-            record = read(target)
-            require(
-                file_hash(target) == ref["sha256"]
-                and record.get("passed") is True
-                and record.get("study_sha256") == study["study_sha256"]
-                and record.get("source_sha256") == study["source_sha256"],
-                "offline check evidence is stale or incomplete",
-            )
+        offline_readiness(study_path, {key: study[key] for key in (
+            "study_sha256", "source_sha256", "runtime_sha256", "policy_sha256", "launcher_sha256"
+        )})
     state = _state(study, fixture)
     require(
         state["status"] == "ready" and state["reserved_micro_usd"] == 0,
@@ -1675,7 +1661,7 @@ def run(study_path: Path, grant_path: Path, *, stage: str, transport: Any) -> di
         return summary
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     import argparse
 
     parser = argparse.ArgumentParser(description=__doc__)
@@ -1684,7 +1670,7 @@ def main() -> int:
     parser.add_argument("--study", type=Path)
     parser.add_argument("--grant", type=Path)
     parser.add_argument("--fixture", action="store_true")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if args.command == "prepare":
         require(args.output is not None, "prepare requires output")
         result = prepare(args.output)

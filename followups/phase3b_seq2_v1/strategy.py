@@ -489,6 +489,3 @@ def validate_fixed(record: dict, task: dict, harness_dir: Path, *, study_sha256:
                           dispatch=replay, fixture=fixture, known_results=results)
     _require(digest(record) == digest(expected), "fixed control differs from exact journal replay")
     return expected
-
-# Compatibility name for the reused whole-block caller; this implementation always uses twelve.
-fixed_best6 = fixed_best12

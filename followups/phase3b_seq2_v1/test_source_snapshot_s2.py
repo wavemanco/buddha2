@@ -1,259 +1,160 @@
-"""Prospective SS01-SS10: canonical originals, public copies and zero stream-copy IO."""
+"""Current source identity excludes historical campaigns and private inputs."""
 from __future__ import annotations
 
-import builtins
+import ast
 import copy
-import importlib.util
-import io
-import os
-import stat
-import tempfile
 import unittest
-from contextlib import ExitStack, contextmanager
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
 from buddha2.artifacts import ContractError, digest
 
-from . import support, workflow
-
-
-def stream_name(value) -> bool:
-    if not isinstance(value, (str, bytes, os.PathLike)):
-        return False
-    return any("stdout" in part.casefold() or "stderr" in part.casefold()
-        for part in os.fsdecode(os.fspath(value)).replace("\\", "/").split("/"))
-
-
-@contextmanager
-def no_retained_stream_io():
-    """Trap construction and lower metadata/content/write calls, before delegation."""
-    attempts = []
-
-    def guard(value):
-        if isinstance(value, (str, bytes, os.PathLike)):
-            name = os.fsdecode(os.fspath(value)).replace("\\", "/")
-            if "/source/" in name.casefold() and stream_name(name):
-                attempts.append(name)
-                raise AssertionError("retained stream path reached a lower filesystem call")
-
-    def wrapped(original, *, second=False):
-        def call(value, *args, **kwargs):
-            guard(value)
-            if second and args:
-                guard(args[0])
-            return original(value, *args, **kwargs)
-        return call
-
-    division = Path.__truediv__
-
-    def divide(left, right):
-        if "source" in (part.casefold() for part in left.parts) and stream_name(right):
-            attempts.append(str(right))
-            raise AssertionError("retained stream destination was constructed")
-        result = division(left, right)
-        guard(result)
-        return result
-
-    with ExitStack() as stack:
-        stack.enter_context(patch.object(Path, "__truediv__", divide))
-        for module, name in ((os, "stat"), (os, "lstat"), (os, "open"), (os, "mkdir"),
-                (os, "listdir"), (os, "scandir"), (os, "unlink"), (io, "open"), (builtins, "open")):
-            stack.enter_context(patch.object(module, name, wrapped(getattr(module, name))))
-        for name in ("link", "rename", "replace"):
-            stack.enter_context(patch.object(os, name, wrapped(getattr(os, name), second=True)))
-        yield attempts
-
-
-def lexical_stream_inventory(directory: Path) -> list[str]:
-    """Never stat a stream entry, even if an accidental copy exists."""
-    found = []
-    for name in os.listdir(directory):
-        if stream_name(name):
-            found.append(name)
-            continue
-        if name.casefold() in support.PRIVATE:
-            continue
-        item = directory / name
-        if item.is_dir():
-            found.extend(lexical_stream_inventory(item))
-    return found
+from . import adapter, editor, evidence, support, workflow
 
 
 class SourceSnapshotCases(unittest.TestCase):
-    source: dict
-    streams: dict
+    def test_declared_definition_binds_authority_and_native_evidence_without_reading_editorial_markdown(self):
+        original = Path.open
+        def no_editorial(candidate, *args, **kwargs):
+            self.assertNotEqual(candidate.name.casefold(), "phase3b_definition.md")
+            return original(candidate, *args, **kwargs)
+        with patch.object(Path, "open", no_editorial):
+            authority = support.validate_authority()
+            self.assertEqual(authority["definition_sha256"], support.DECLARED_DEFINITION_SHA256)
+            self.assertNotIn("PHASE3B_DEFINITION.md", support.source_identity()["files"])
+            self.assertEqual(evidence._live_profile().definition_sha256, support.DECLARED_DEFINITION_SHA256)
+            with patch.object(editor.AccountedProposer, "__init__", return_value=None), \
+                    patch.object(Path, "is_symlink", return_value=False), \
+                    patch.object(Path, "is_junction", return_value=False, create=True):
+                proposer = adapter.CompatibleProposer(pilot="p3b-01", study_sha256="a" * 64,
+                    dispatch=lambda *args: self.fail("unexpected dispatch"), fixture=True,
+                    audit_dir=support.ROOT / "runs/phase3b-seq2-v1/native/declaration-unit/editor-audit",
+                    halt=lambda *args: self.fail("unexpected halt"))
+            self.assertEqual(proposer._c1_binding["definition_sha256"], support.DECLARED_DEFINITION_SHA256)
 
-    @classmethod
-    def setUpClass(cls):
-        cls.source = support.source_identity()
-        cls.streams = support._offline_streams(cls.source["files"])
-        support.safe(support.BASE).mkdir(parents=True, exist_ok=True)
+    def test_declared_definition_cannot_authorize_changed_identity_caps_or_method(self):
+        authority = support.read(support.AUTHORITY)
+        for key, value in (("definition_sha256", "0" * 64), ("new_cap_micro_usd", 180000001),
+                ("new_max_attempts", 2345), ("models_and_billing_profile_unchanged", False)):
+            with self.subTest(field=key), patch.object(support, "read", return_value={**authority, key: value}), \
+                    self.assertRaisesRegex(ContractError, "authority differs"):
+                support.validate_authority()
 
-    def namespace(self):
-        return tempfile.TemporaryDirectory(prefix="source-snapshot-cases-", dir=support.BASE)
+    def test_portable_development_inputs_preserve_tasks_without_parent_run_reads(self):
+        original = workflow.read
+        baseline = workflow._scientific_inputs()
+        def current_only(target):
+            self.assertEqual(target, support.ROOT / "configs/phase3b-development.json")
+            return original(target)
+        with patch.object(workflow, "read", side_effect=current_only):
+            tasks = workflow.frozen_tasks()
+        self.assertEqual([task["parent_task_id"] for task in tasks],
+            [task["parent_task_id"] for task in baseline["tasks"]])
+        self.assertEqual([task["pilot_id"] for task in tasks], [f"p3b-{index:02}" for index in range(1, 5)])
+        self.assertEqual(tasks[0]["arm_order"], ["adaptive", "fixed"])
+        self.assertEqual(workflow._scientific_inputs(), baseline)
 
-    def producer(self):
-        spec = importlib.util.spec_from_file_location("s2_snapshot_packet_test",
-            support.ROOT / "evidence/phase3b-seq2-v1/package_public.py")
-        if spec is None or spec.loader is None:
-            self.fail("packet producer is unavailable")
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        return module
+    def test_foreign_short_or_duplicate_development_task_inputs_are_rejected(self):
+        baseline = workflow._scientific_inputs()
+        for change in ({"kind": "foreign"}, {"tasks": baseline["tasks"][:3]},
+                {"tasks": [baseline["tasks"][0]] * 4}):
+            with self.subTest(change=list(change)), patch.object(workflow, "read", return_value={**baseline, **change}), \
+                    self.assertRaisesRegex(ContractError, "development inputs"):
+                workflow.frozen_tasks()
 
-    def save_tampered_study(self, target: Path, study: dict) -> None:
-        study["study_sha256"] = digest({key: value for key, value in study.items() if key != "study_sha256"})
-        import json
-        target.write_text(json.dumps(study), encoding="utf-8")
+    def test_local_imports_of_bound_code_are_also_bound(self):
+        names = set(support._source_inputs())
+        for name in sorted(names):
+            if not name.endswith(".py"):
+                continue
+            module = name.removeprefix("src/").removesuffix(".py").replace("/", ".")
+            package = module.removesuffix(".__init__") if module.endswith(".__init__") else module.rsplit(".", 1)[0]
+            tree = ast.parse((support.ROOT / name).read_text(encoding="utf-8-sig"))
+            imports = set()
+            for node in ast.walk(tree):
+                if isinstance(node, ast.Import):
+                    imports.update(item.name for item in node.names)
+                elif isinstance(node, ast.ImportFrom):
+                    prefix = package.split(".")[:len(package.split(".")) - node.level + 1] if node.level else []
+                    base = ".".join(prefix + ([node.module] if node.module else []))
+                    imports.add(base)
+                    imports.update(base + "." + item.name for item in node.names if item.name != "*")
+            for imported in imports:
+                if not imported.startswith(("buddha2.", "followups.")):
+                    continue
+                relative = ("src/" if imported.startswith("buddha2.") else "") + imported.replace(".", "/")
+                for candidate in (relative + ".py", relative + "/__init__.py"):
+                    if (support.ROOT / candidate).is_file():
+                        self.assertIn(candidate, names, f"{name} imports unbound {candidate}")
 
-    def test_actual_main_supervised_and_auxiliary_prepare_load_and_grant_never_touch_stream_copies(self):
-        policies = []
-        with self.namespace() as temporary:
-            for label, supervised in (("main", False), ("supervised", True), ("native-negative-auxiliary", False)):
-                with self.subTest(profile=label), no_retained_stream_io() as attempts:
-                    output = Path(temporary) / label / "release"
-                    study = workflow.prepare(output, supervised_fixture=supervised)
-                    policies.append(study["source_snapshot_policy"])
-                    self.assertEqual(study["source"], support.source_identity())
-                    self.assertEqual(study["source_snapshot_policy"]["canonical_originals"], self.streams)
-                    self.assertEqual(workflow.load_study(output / "study.json"), study)
-                    self.assertTrue(workflow.make_grant(output / "study.json", True))
-                    self.assertEqual(lexical_stream_inventory(output / "source"), [])
-                    for name, expected in study["source"]["files"].items():
-                        if name in self.streams:
-                            continue
-                        self.assertEqual(support.file_hash(output / "source" / name), expected)
-                    self.assertEqual(attempts, [])
-        self.assertEqual(policies, [policies[0]] * 3)
+    def test_effective_identity_covers_reused_helpers_without_historical_artifacts(self):
+        hashed = []
+        original = support.file_hash
 
-    def test_missing_extra_tampered_and_foreign_policy_fail_without_retained_stream_access(self):
-        with self.namespace() as temporary:
-            output = Path(temporary) / "release"
-            study = workflow.prepare(output)
-            variants = []
-            missing = copy.deepcopy(study)
-            missing.pop("source_snapshot_policy")
-            variants.append(missing)
-            for field, value in (("extra", True), ("kind", "foreign"),
-                    ("canonical_originals", {}), ("offline_classification_receipt", {
-                        "path": "runs/foreign/source/untrusted.stdout.log", "sha256": "0" * 64})):
-                changed = copy.deepcopy(study)
-                changed["source_snapshot_policy"][field] = value
-                variants.append(changed)
-            for changed in variants:
-                with self.subTest(policy=changed.get("source_snapshot_policy")), no_retained_stream_io() as attempts:
-                    self.save_tampered_study(output / "study.json", changed)
-                    with self.assertRaisesRegex(ContractError, "snapshot policy"):
-                        workflow.load_study(output / "study.json")
-                    self.assertEqual(attempts, [])
+        def public_hash(path):
+            name = Path(path).relative_to(support.ROOT).as_posix()
+            support._source_name(name)
+            hashed.append(name)
+            return original(path)
 
-    def test_missing_or_tampered_public_retained_copy_fails(self):
-        with self.namespace() as temporary:
-            output = Path(temporary) / "release"
-            workflow.prepare(output)
-            retained = output / "source/followups/phase3b_seq2_v1/accounting.py"
-            raw = retained.read_bytes()
-            for missing in (False, True):
-                with self.subTest(missing=missing):
-                    retained.write_bytes(b"offline-corruption")
-                    if missing:
-                        retained.unlink()
-                    with no_retained_stream_io() as attempts, self.assertRaises((ContractError, FileNotFoundError)):
-                        workflow.load_study(output / "study.json")
-                    self.assertEqual(attempts, [])
-                    retained.write_bytes(raw)
+        with patch.object(support, "file_hash", side_effect=public_hash), \
+                patch.object(support, "release_authority", side_effect=AssertionError("old campaign read")):
+            source = support.source_identity()
+            preserved = support.preserve()
+        self.assertEqual(source["kind"], "buddha2-effective-source-v2")
+        self.assertEqual(source["sha256"], digest({k: v for k, v in source.items() if k != "sha256"}))
+        self.assertTrue({"followups/phase3b_seq2_v1/editor.py", "src/buddha2/phase2_native.py",
+            "followups/phase3a_c1_completion_v3/adapter.py", "followups/phase3a_v1/strategy.py",
+            "strategies/fixed/phase2.json", "upstreams.lock.json"}.issubset(source["files"]))
+        self.assertFalse(any("runs" in Path(name).parts or name.endswith(".zip") for name in hashed))
+        self.assertEqual(preserved["source_sha256"], source["sha256"])
+        self.assertFalse(preserved["historical_artifacts_rewritten"])
+        self.assertEqual(support.source_snapshot_policy(source["files"])["canonical_originals"], {})
 
-    def test_canonical_original_and_pinned_receipt_tampering_fail(self):
-        with self.namespace() as temporary:
-            output = Path(temporary) / "release"
-            workflow.prepare(output)
-            original_hash = support._parent_file_hash
-            name = next(iter(self.streams))
-            def changed_original(value, expected, streams):
-                return "0" * 64 if value == name else original_hash(value, expected, streams)
-            with patch.object(support, "_parent_file_hash", side_effect=changed_original), \
-                    no_retained_stream_io(), self.assertRaises(ContractError):
-                workflow.load_study(output / "study.json")
-            file_hash = support.file_hash
-            def changed_receipt(value):
-                return "0" * 64 if value == support.ROOT / support.OFFLINE_RECEIPT else file_hash(value)
-            with patch.object(support, "file_hash", side_effect=changed_receipt), \
-                    no_retained_stream_io(), self.assertRaises(ContractError):
-                workflow.load_study(output / "study.json")
+    def test_effective_file_change_changes_identity(self):
+        source = support.source_identity()
+        original = support.file_hash
+        target = support.ROOT / "followups/phase3b_seq2_v1/editor.py"
+        with patch.object(support, "file_hash", side_effect=lambda path:
+                "0" * 64 if Path(path) == target else original(path)):
+            changed = support.source_identity()
+        self.assertNotEqual(changed["sha256"], source["sha256"])
 
-    def test_private_cache_and_malformed_source_names_fail_before_metadata(self):
-        for name in (".ENV", "x/auth.json", "x/Credentials.json", "x/credential-binding.json", ".writer.lock",
-                "x/.cache/a", "x/__pycache__/a", "x/.mypy_cache/a", "x/.ruff_cache/a", "x/.pytest_cache/a",
-                "../escape", "/absolute", "a\\b", "a:b", ".", "a//b", "a/./b"):
-            changed = {**self.source["files"], name: "0" * 64}
+    def test_private_captured_and_noncanonical_names_fail_before_metadata(self):
+        for name in (".ENV", "x/.env.local", "x/auth.json", "x/credentials.json",
+                "x/credential-binding.json", ".writer.lock", "x/.cache/a", "x/__pycache__/a",
+                "runs/old.py", "x/source/old.py", "x/prior-source/old.py", "x/old.STDOUT.log",
+                "x/stderr/old.py", "../escape", "/absolute", "a\\b", "a:b", ".", "a//b", "a/./b"):
             with self.subTest(name=name), patch.object(Path, "lstat", side_effect=AssertionError("unsafe metadata")), \
                     self.assertRaises(ContractError):
-                support.source_snapshot_policy(changed)
+                support.source_snapshot_policy({name: "0" * 64})
 
-    def test_unknown_or_substituted_stream_fails_before_its_metadata(self):
-        unknown = "evidence/unclassified.STDOUT.log"
+    def test_manifest_names_are_checked_before_content_hashing(self):
+        manifest = {"kind": "buddha2-effective-source-inputs-v2", "files": ["runs/old.py"]}
+        with patch.object(support, "read", return_value=manifest), \
+                patch.object(support, "file_hash", side_effect=AssertionError("unsafe content")), \
+                self.assertRaises(ContractError):
+            support.source_identity()
+
+    def test_linked_effective_source_is_rejected(self):
+        target = support.ROOT / "followups/phase3b_seq2_v1/editor.py"
         original = Path.lstat
-        def metadata(value, *args, **kwargs):
-            if unknown in value.as_posix():
-                self.fail("unknown stream metadata reached")
-            return original(value, *args, **kwargs)
-        for replace in (False, True):
-            changed = {**self.source["files"], unknown: "0" * 64}
-            if replace:
-                changed.pop(next(iter(self.streams)))
-            with self.subTest(replace=replace), patch.object(Path, "lstat", metadata), self.assertRaises(ContractError):
-                support.source_snapshot_policy(changed)
 
-    def test_accidental_retained_stream_name_is_skipped_lexically_without_metadata(self):
-        with self.namespace() as temporary:
-            output = Path(temporary) / "release"
-            workflow.prepare(output)
-            directory = output / "source"
-            listdir = os.listdir
-            def listing(value):
-                names = listdir(value)
-                return names + ["accidental.stdout.log"] if Path(value) == directory else names
-            with no_retained_stream_io() as attempts, patch.object(os, "listdir", side_effect=listing):
-                self.assertEqual(lexical_stream_inventory(directory), ["accidental.stdout.log"])
-                workflow.load_study(output / "study.json")
-                self.assertEqual(attempts, [])
+        def linked(path, *args, **kwargs):
+            return SimpleNamespace(st_mode=0o120777, st_file_attributes=0x400) \
+                if path == target else original(path, *args, **kwargs)
 
-    def test_public_copy_symlink_and_original_reparse_fail_before_content(self):
-        with self.namespace() as temporary:
-            output = Path(temporary) / "release"
-            workflow.prepare(output)
-            retained = output / "source/followups/phase3b_seq2_v1/accounting.py"
-            original = Path.lstat
-            def linked(value, *args, **kwargs):
-                return SimpleNamespace(st_mode=stat.S_IFLNK, st_file_attributes=0x400) \
-                    if value == retained else original(value, *args, **kwargs)
-            with patch.object(Path, "lstat", linked), self.assertRaisesRegex(ContractError, "linked"):
-                workflow.load_study(output / "study.json")
-            name = next(iter(self.streams))
-            canonical = support.ROOT / name
-            def reparse(value, *args, **kwargs):
-                return SimpleNamespace(st_mode=stat.S_IFREG, st_file_attributes=0x400) \
-                    if value == canonical else original(value, *args, **kwargs)
-            with patch.object(Path, "lstat", reparse), self.assertRaisesRegex(ContractError, "link"):
-                support._parent_file_hash(name, self.streams[name], self.streams)
+        with patch.object(Path, "lstat", linked), self.assertRaisesRegex(ContractError, "linked"):
+            support.source_identity()
 
-    def test_standalone_packager_uses_identical_policy_and_only_canonical_classification(self):
-        module = self.producer()
-        with no_retained_stream_io() as attempts:
-            policy = module.source_snapshot_policy(self.source["files"])
-            self.assertEqual(policy, support.source_snapshot_policy(self.source["files"]))
-            self.assertEqual(set(policy["canonical_originals"]), module.OFFLINE_NAMES)
-            for name in self.streams:
-                relative = "runs/phase3b-seq2-v1/auxiliary/release/source/" + name
-                self.assertFalse(module.public(relative, policy["canonical_originals"]))
-                with self.assertRaises(ValueError):
-                    module.safe(relative, offline_streams=policy["canonical_originals"])
-            self.assertEqual(attempts, [])
-        for name in ("evidence/unclassified.stderr.log", "x/.ENV", "x/.cache/a", "../escape", "."):
-            with self.subTest(name=name), self.assertRaises(ValueError):
-                module.source_snapshot_policy({**self.source["files"], name: "0" * 64})
+    def test_old_prepared_study_is_rejected_before_current_or_historical_source_reads(self):
+        old = {"kind": "phase3b-seq2-study-v1"}
+        with patch.object(workflow, "path", side_effect=lambda value: value), \
+                patch.object(workflow, "read", return_value=copy.deepcopy(old)), \
+                patch.object(workflow, "source_identity", side_effect=AssertionError("source read")), \
+                self.assertRaisesRegex(ContractError, "study seal"):
+            workflow.load_study(Path("unused-study.json"))
 
 
 if __name__ == "__main__":

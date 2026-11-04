@@ -6,3 +6,11 @@ references/surprise-conversation.md -text -whitespace
 evidence/** -text -whitespace
 specifications/archive/** -text -whitespace
 README_LEGACY.md -text -whitespace
+
+# Effective-source fingerprints bind verified bytes, including CRLF.
+followups/phase3b_seq2_v1/source-inputs.json -text whitespace=cr-at-eol
+followups/phase3b_seq2_v1/launch.py -text whitespace=cr-at-eol
+followups/phase3b_seq2_v1/test_readme_provenance_s2.py -text whitespace=cr-at-eol
+followups/phase3b_seq2_v1/test_source_snapshot_s2.py -text whitespace=cr-at-eol
+src/buddha2/engine.py -text whitespace=cr-at-eol
+upstreams.lock.json -text whitespace=cr-at-eol

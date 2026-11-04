@@ -17,6 +17,7 @@ from buddha2.phase2_dispatch import _publish
 from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES, PRIVATE, opencode_profile_sources
 
 from . import contract, editor, strategy
+from .support import DECLARED_DEFINITION_SHA256
 
 
 class CompatibleProposer(editor.AccountedProposer):
@@ -51,7 +52,7 @@ class CompatibleProposer(editor.AccountedProposer):
         self._c1_binding = {
             "adapter_sha256": file_hash(Path(__file__)),
             "contract_sha256": file_hash(contract.IMPLEMENTATION_PATH),
-            "definition_sha256": file_hash(strategy.ROOT / "PHASE3B_DEFINITION.md"),
+            "definition_sha256": DECLARED_DEFINITION_SHA256,
             "parent_boundary_sha256": file_hash(Path(editor.frozen.__file__)),
             "editor_sha256": file_hash(Path(editor.__file__)),
         }

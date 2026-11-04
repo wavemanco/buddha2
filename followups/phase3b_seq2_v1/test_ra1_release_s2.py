@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 from buddha2.artifacts import ContractError
 
-from . import launch, support
+from . import support
 from .support import BASE, ROOT
 
 
@@ -31,6 +31,26 @@ class RA1ReleaseTests(unittest.TestCase):
                     value[field] = bad
                 return value
             with self.subTest(field=field), patch.object(support, "read", side_effect=changed):
+                with self.assertRaises(ContractError):
+                    support.release_authority()
+        for name in ("evidence/phase3b-ra1-v1/am1-authority.json",
+                     "specifications/amendments/phase3b-release-acceptance-am1-1.0.md"):
+            original_hash = support.file_hash
+            def changed_hash(path):
+                return "0" * 64 if Path(path) == ROOT / name else original_hash(path)
+            with self.subTest(amended_hash=name), patch.object(support, "file_hash", side_effect=changed_hash):
+                with self.assertRaises(ContractError):
+                    support.release_authority()
+        for field, bad in (("approved_full_remaining_RA1_block", False),
+                           ("positive_bootstrap_test_total_seconds", 4),
+                           ("positive_bootstrap_test_cleanup_seconds", 2)):
+            def changed_amendment(path):
+                value = original(path)
+                if Path(path) == ROOT / "evidence/phase3b-ra1-v1/am1-authority.json":
+                    value = copy.deepcopy(value)
+                    value[field] = bad
+                return value
+            with self.subTest(amended_scope=field), patch.object(support, "read", side_effect=changed_amendment):
                 with self.assertRaises(ContractError):
                     support.release_authority()
 
@@ -85,14 +105,6 @@ class RA1ReleaseTests(unittest.TestCase):
                 (here / "release-config.json").write_text(json.dumps(config), encoding="utf-8")
                 with self.assertRaises(ValueError):
                     operator.settings()
-
-    def test_resolver_rejects_foreign_release_before_reading_packet_or_claiming_live_study(self):
-        config = {"candidate": 1, "verification": "verification-ra1-v1"}
-        with patch.object(launch, "recovery_config", return_value=config), \
-             patch.object(launch, "read", side_effect=AssertionError("foreign packet read")), \
-             patch.object(launch, "_live_study_claim", side_effect=AssertionError("live claim attempted")):
-            with self.assertRaises(ContractError):
-                launch._accepted_packet(BASE / "verification-v7/release/study.json", {})
 
     def test_preflight_counter_rejects_stream_named_receipt_before_source_metadata(self):
         spec = importlib.util.spec_from_file_location("ra1_preflight_counter_unit", ROOT / "evidence/phase3b-ra1-v1/run_units.py")

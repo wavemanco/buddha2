@@ -1,0 +1,193 @@
+{
+  "checks": [
+    "Reviewed cleanup diff and connected source/CLI/readiness callers; exact retirement manifest matches 194 deletions and current dependency closure excludes retired modules.",
+    "Traced full locked financial replay, joint liability reservations, durable intent ordering, unknown holds, no-resend and absolute deadline/canonical-stop behavior; no journal cache introduced.",
+    "Inspected final collector source: actual unittest TextTestRunner execution records startTest IDs; matched all six detail results and receipt test-ID orders.",
+    "Verified 101 unique actual tests per profile, identical ID sets, 0 failures/errors/skips and no unexpected network attempts.",
+    "Independently rehashed all 162 current effective source inputs per profile, matched source-before/source-after and actual new study/runtime/policy/launcher bindings.",
+    "Verified declared definition ID, original authority/method/model/cap controls and matching actual study preparation; no editorial Markdown hash substituted for the declared ID.",
+    "Verified actual pinned H1 image, network-none containment, read-only source/vendor mounts and recorded exact-owner successful removal plus absence checks.",
+    "Wrote only the two authorized independent review records and this QA report; existing plain offline_readiness accepted both matching host receipt profiles."
+  ],
+  "created_utc": "2026-11-04T14:56:34.605808+00:00",
+  "declared_definition_sha256": "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e",
+  "findings": [],
+  "historical_results_or_intermediate_indices_retagged": false,
+  "kind": "buddha2-engineering-cleanup-independent-qa-v1",
+  "limitations": [
+    "Component readiness is not proof of paid-provider behavior or operational full-matrix completion.",
+    "No held-out effectiveness, model-quality, creativity or human-preference claim was assessed.",
+    "Saved source payload trees, raw streams, credentials and historical captured-source trees were excluded."
+  ],
+  "new_docker_or_full_suite_runs_by_reviewer": 0,
+  "new_paid_grant_created": false,
+  "paid_execution_authorized_by_this_review": false,
+  "passed": true,
+  "prior_finding_closed": "CLI captured-source directory variants now reject before backend or filesystem metadata; direct foreign-origin and changed-map regressions are present.",
+  "profiles": {
+    "canonical": {
+      "actual_receipts": {
+        "financial": {
+          "actual_tests": 16,
+          "file_sha256": "615c782ed42909620e01c8ef17623dc0ce98a99cf05ef53bd7dc107ae3579984",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/financial.json",
+          "record_sha256": "68ed7551f613d8da7907b338fdea4c7e95d5720039961986ba66558f41bc46df"
+        },
+        "message_history": {
+          "actual_tests": 12,
+          "file_sha256": "ecb3dd6b0822ebd9358c0b779f4e01efe09ca0417b8f3c729be81f770524b584",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/message_history.json",
+          "record_sha256": "610142fd659bc09b7bdd20c6ab9b792633eae3d92c0936c9e07333f15f2c6f78"
+        },
+        "native_contract": {
+          "actual_tests": 15,
+          "file_sha256": "cf24ebc91cd238c68a4b158fa45417906c0df75aa25caad7ebf50e8ca61b679f",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/native_contract.json",
+          "record_sha256": "70d9bcf27b2f4e5784c582cb2276c821765aa37a2627da5f91c6658de57ddc69"
+        },
+        "source_coverage": {
+          "actual_tests": 29,
+          "file_sha256": "c4c40ef1fc5626a6cc1c7f242dcf7425a821caa5855369a26efd43f3de5c7c94",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/source_coverage.json",
+          "record_sha256": "0100502a72c2b208bccb894f70a7fbf023bb18e20c5b293e55d0c381cf5b52ee"
+        },
+        "strategy": {
+          "actual_tests": 8,
+          "file_sha256": "8ce3df3774e924b0c6c6493554575ee292eb7b025dad5c6183cb047b671562a0",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/strategy.json",
+          "record_sha256": "441af75bb44ecc6ab28ed370af1742ca3b576c3ea35610f6c58d685041df77d2"
+        },
+        "transport": {
+          "actual_tests": 21,
+          "file_sha256": "1766762b36d63c1cc57356aa08630f7d26539b306038014789df5362393ba9b0",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-checks/transport.json",
+          "record_sha256": "cb2d63d9dccc74e3866de1d073d0612fdd8a257670aca5bff4346f110dd3bcc5"
+        }
+      },
+      "bindings": {
+        "launcher_sha256": "848b06d9d89bb07db351c10c79565f5636b7428476cc7772a82a268b57ae3272",
+        "policy_sha256": "98a889983d7accb5f72ebd33c9c597c574081079809e2aaefe30b9c94fc72787",
+        "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+        "source_sha256": "c6eb4157c15ff859e70a0411b9b92f227ccfdf94dd1da94f38d1cdac21ef08c1",
+        "study_sha256": "ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c"
+      },
+      "component_index": {
+        "file_sha256": "72825a8e72c125198743a92b9d3ce6269d80462f60b0af33cd3bbc8ea483e0da",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/component-evidence-index.json"
+      },
+      "container_owner": "f778a8a07d64ea9efb13c85d2b500ff2ea265a1d2f40cede3a287d7b4b0242a0",
+      "groups": {
+        "financial": 16,
+        "message_history": 12,
+        "native_contract": 15,
+        "source_coverage": 29,
+        "strategy": 8,
+        "transport": 21
+      },
+      "independent_review": {
+        "file_sha256": "a82eba70616ffeb4f55ce88d01dea57768ab219423db313b639e685f99ff5488",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/independent-review.json",
+        "record_sha256": "f6fb813c513ef1e317b752f18707988f3b949f51708159dcfd4603858ec8281a"
+      },
+      "plain_offline_readiness_validation": {
+        "independent_review_sha256": "a82eba70616ffeb4f55ce88d01dea57768ab219423db313b639e685f99ff5488",
+        "manifest_file_sha256": "7bc3cbb04d9ade646cc821b560a7f47fed2a3b17e3c95c226b2a144ba1f6f9e9",
+        "manifest_sha256": "aab45a0db53f97acad4b0b09fb1b77a5c263f5c5abaf4cb8802988362dbf5408",
+        "profile": "buddha2-offline-readiness-v2"
+      },
+      "readiness_manifest": {
+        "file_sha256": "7bc3cbb04d9ade646cc821b560a7f47fed2a3b17e3c95c226b2a144ba1f6f9e9",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-20261104-5/phase3b-seq2-v1/release/offline-readiness.json",
+        "record_sha256": "aab45a0db53f97acad4b0b09fb1b77a5c263f5c5abaf4cb8802988362dbf5408"
+      },
+      "recorded_exact_owner_removal_passed": true,
+      "source_files": 162,
+      "unique_actual_tests": 101
+    },
+    "public": {
+      "actual_receipts": {
+        "financial": {
+          "actual_tests": 16,
+          "file_sha256": "12faad7fed79164d805aec98eb097b772efcaaa182dce1c944e50003a13d2a28",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/financial.json",
+          "record_sha256": "44808423a4e3f1ff11239284bd7123da5b6621081d17090f39f7c61c990fcb8d"
+        },
+        "message_history": {
+          "actual_tests": 12,
+          "file_sha256": "07283c8b22031ca46e5ef6f61acc6ee0d7c7593972875dd1f9f561256012534f",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/message_history.json",
+          "record_sha256": "ca1c97ea0f5c008b20d71c8f36a012381ab8ff425a7cb1d8c751288bd5fcf3e4"
+        },
+        "native_contract": {
+          "actual_tests": 15,
+          "file_sha256": "3bc73b1b61473e55c84ce34abccc9b1e69008e4e02c161df95d1e4aa93058fde",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/native_contract.json",
+          "record_sha256": "cb89f92b1debcbfb70ce111f134f31090e291839c43a0a681ea4657c86bf7fa5"
+        },
+        "source_coverage": {
+          "actual_tests": 29,
+          "file_sha256": "4690f4f4989218e4fdf581059b970a5cf078157589738839a4cfd6ed44d15fb9",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/source_coverage.json",
+          "record_sha256": "1bdf14ed271098b43ce67ed9243f926d60623487c2593f852843877d0248b7a5"
+        },
+        "strategy": {
+          "actual_tests": 8,
+          "file_sha256": "3308b1b4f08d2cecfa049a43506627d917a3a9648cea1ee37493eeac126f80b1",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/strategy.json",
+          "record_sha256": "6ca31bb4cf881f1dcde5cc0357fbdb6f8f6a8e589546ed54f160048249a5450b"
+        },
+        "transport": {
+          "actual_tests": 21,
+          "file_sha256": "599e92ce040ddd73ff746d721b799db91f691a7e53c558445e2f02747b264301",
+          "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-checks/transport.json",
+          "record_sha256": "fda8ce9b6e5b7d7cc797ee65cd1348147256e7e036e0b494c4cab697ea4c2757"
+        }
+      },
+      "bindings": {
+        "launcher_sha256": "848b06d9d89bb07db351c10c79565f5636b7428476cc7772a82a268b57ae3272",
+        "policy_sha256": "98a889983d7accb5f72ebd33c9c597c574081079809e2aaefe30b9c94fc72787",
+        "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+        "source_sha256": "97f16655087287dd32a1f491d17219e83adc9284c49570b46f32b7ca413e1ca8",
+        "study_sha256": "d350ba87b8dd92c2fb54089d7bef4bf131f3e6e48d9a7587ff8e94d022318c0c"
+      },
+      "component_index": {
+        "file_sha256": "16040e9f38a416c56cb54716700375c45cd4892ef2f2648596e6a50f4b4263a3",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/component-evidence-index.json"
+      },
+      "container_owner": "e8f3723c63b3e598f8ae34cdbf16f6f30eeb29a27c31f05fd0a5b66d503a187b",
+      "groups": {
+        "financial": 16,
+        "message_history": 12,
+        "native_contract": 15,
+        "source_coverage": 29,
+        "strategy": 8,
+        "transport": 21
+      },
+      "independent_review": {
+        "file_sha256": "1f2a062950f36ff0bc809b76ab92010599d63256e4d30ad69370bf61ba7e4967",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/independent-review.json",
+        "record_sha256": "fe38d0aa9abca422f618c851a675a919605606e3568bb95362db51ecb8afea21"
+      },
+      "plain_offline_readiness_validation": {
+        "independent_review_sha256": "1f2a062950f36ff0bc809b76ab92010599d63256e4d30ad69370bf61ba7e4967",
+        "manifest_file_sha256": "2557d0bdc3e8ae1b075bfef6f513c645965c92d86d5c71db8737c3758f3fbe68",
+        "manifest_sha256": "83be871e49d581aef5043c2a1e1a61bb726f50ca61e2b472982841635d4f49e3",
+        "profile": "buddha2-offline-readiness-v2"
+      },
+      "readiness_manifest": {
+        "file_sha256": "2557d0bdc3e8ae1b075bfef6f513c645965c92d86d5c71db8737c3758f3fbe68",
+        "path": "runs/phase3b-seq2-v1/code-review-v2-public-20261104/phase3b-seq2-v1/release/offline-readiness.json",
+        "record_sha256": "83be871e49d581aef5043c2a1e1a61bb726f50ca61e2b472982841635d4f49e3"
+      },
+      "recorded_exact_owner_removal_passed": true,
+      "source_files": 162,
+      "unique_actual_tests": 101
+    }
+  },
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "reviewer": "/root/framework_research",
+  "same_actual_test_ids_across_profiles": true,
+  "scope": "Independent code review and final offline component-readiness evidence; canonical checkout and exact public-source mirror.",
+  "sha256": "823ee61ccc4c4738fe687bcc79fc18f7a736e741d61794ebfa7a35beadd03faf"
+}
