@@ -1,0 +1,104 @@
+{
+  "API_cost": 0,
+  "actual_current_groups": "static andpreservationPASS; testsFAIL;9absent",
+  "all_unreleased_holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-domain-planning-hold-v1.json": {
+      "seconds": 93,
+      "sha256": "0f2066c78d212cf260ba0928b09c275b33b2e49430cefa4f3de3f9599f533026"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "controller-postfailure-hold-v1.json": {
+      "seconds": 33,
+      "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+    },
+    "reviewer-candidate-handoff-hold-v1.json": {
+      "seconds": 23,
+      "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  },
+  "closure_estimate_total_seconds": 1170,
+  "closure_remaining_estimate_seconds": {
+    "controller_finalindex_handoff": 90,
+    "independent_final_stopped_proof_andprose": 120,
+    "parentfinalprose_accounting_review_commit": 360,
+    "publication_staging_review_commit_push": 600
+  },
+  "counts": {
+    "S13": 0,
+    "candidate": 3,
+    "cold": 0,
+    "main": 2,
+    "saved": 0
+  },
+  "effective_remaining_seconds": 3597.636399,
+  "effective_used_seconds": 7202.363601,
+  "final_accounting_still_pending": true,
+  "goal_achieved": false,
+  "hold_seconds": 529,
+  "kind": "phase3b-or1-120minute-closure-progress-v1",
+  "meter": {
+    "active_seconds": 6673.363601,
+    "actors": [
+      {
+        "active_seconds": 2589.112985,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "wait",
+        "records": 62
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 221.402085,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "wait",
+        "records": 4
+      },
+      {
+        "active_seconds": 1797.837775,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 45
+      },
+      {
+        "active_seconds": 1909.985896,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 112
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:46:24.949648+00:00",
+    "remaining_seconds": 4126.636399,
+    "within_limit": true
+  },
+  "no_further_execution_or_source_repairs": true,
+  "observed_at_utc": "2026-11-04T00:46:24.956132+00:00",
+  "protected_closure_reserve_seconds": 1800,
+  "publication_is_not_kit_completion": true,
+  "remaining_only": "Finalizeindependentstoppedreceipt/prose, docs/currentstatus, finalactual/conservativeaccounting, reviewedpublication. No tests/candidate/matrix/S13/saved/cold/provider/key operation.",
+  "status": "HARDSTOP incomplete; candidates/maincaps exhausted"
+}

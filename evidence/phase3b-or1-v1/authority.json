@@ -1,0 +1,23 @@
+{
+  "aggregate_focused_engineering_limit_seconds": 10800,
+  "authority": "Direct user reply to request_user_input_async call_61d33c0f753640339c52b9d8a2000b69",
+  "definition": "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md",
+  "definition_sha256": "857b2a93898d8335e804073cbe649846d17cd97b3fd903a0228deeeff4ee957d",
+  "initial_compatibility_limit_seconds": 1800,
+  "kind": "phase3b-or1-direct-authority-v1",
+  "maximum_extracted_cold_replays": 2,
+  "maximum_frozen_candidates": 3,
+  "maximum_main_matrix_starts": 2,
+  "maximum_positive_S13_starts": 2,
+  "maximum_saved_replays": 2,
+  "minimum_closure_reserve_seconds": 1800,
+  "paid_pilot_authorized": false,
+  "prior_ledgers_reopened": false,
+  "prior_source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc",
+  "prior_unused_time_transferred": false,
+  "real_API_cost_usd_ceiling": 0,
+  "real_keys_authorized": false,
+  "recorded_at_utc": "2026-11-03T23:31:20.806102+00:00",
+  "reply": "Approve full OR1 execution (Recommended)",
+  "versioned_guard_preserving_offline_repairs_authorized": true
+}

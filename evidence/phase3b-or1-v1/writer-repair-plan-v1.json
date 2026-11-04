@@ -1,0 +1,36 @@
+{
+  "component": {
+    "S13_calls": 0,
+    "cases": [
+      "actualLinuxEROFS onnew/workspace/evidencepath",
+      "unchangedruntimepublish rejects/workspace/evidence",
+      "actualruntime/results marker succeeds",
+      "differentsecondwrite rejects/firstbytesunchanged"
+    ],
+    "clocks": {
+      "absence": 15,
+      "create": 60,
+      "execute": 120,
+      "inspect": 60,
+      "remove": 30,
+      "stop": 30
+    },
+    "container": "actualpinnedH1 Netnone/readonlycode/existingS2RWresourceguards/lognone",
+    "main_calls": 0,
+    "output": "runs/phase3b-seq2-v1/or1-writer-domain-v1",
+    "owner": "Exactsuccessfulcreate64hex; actualinspectionbeforestart, stop/remove/independentNoSuchObject mandatory; allcommandexceptionsretained",
+    "provider_calls": 0,
+    "release_admissions": 0,
+    "script": "evidence/phase3b-or1-v1/writer_domain_probe.py",
+    "script_sha256": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df"
+  },
+  "correction": "admit usesexistingwrite_once(safe(target,roots=(ROOT,))); support.path/publish unchanged. Allproductionadmit callers are HOSToperator boundary/main/replay/host plushostcold, noneH1.",
+  "current_source_changed_only_after_failed_source_snapshot": true,
+  "eligible_cause": "Hostoperator calledruntime-onlypublish forROOT/evidenceadmissions. Guardrefusalbeforechild, no actualprivacy/writeownership incident.",
+  "host_test": "actualWindows-onlytest_host_evidence_writer_outside_runtime_base_is_exclusive, ownROOT/evidence temporaryunit scope outsideBASE; pure countercaps retain and no livecountergaming",
+  "kind": "phase3b-or1-evidence-writer-repair-plan-v1",
+  "next": "Afterindependentcomponentprospective review, actualhostunit+onecontaineddomainprobe. Then config2/v6/newsource/case/admissionreview, no candidate1repeat.",
+  "prior_candidate": 1,
+  "prior_source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+  "recorded_at_utc": "2026-11-03T23:57:08.961577+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "phase3b-or1-domain-component-operator-v1",
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T23:59:53.086658+00:00",
+  "release_admissions": 0,
+  "result": {
+    "cancelled": false,
+    "child_returncode": 0,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 0,
+    "output": "",
+    "output_bytes_base64": "",
+    "pid": 58528,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  },
+  "review_sha256": "640bd29937a81a5e092962334701536450d6b41c2026212e437eeabe04cee520",
+  "script_sha256": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df"
+}

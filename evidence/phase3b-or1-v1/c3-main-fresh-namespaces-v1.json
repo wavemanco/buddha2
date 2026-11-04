@@ -1,0 +1,13 @@
+{
+  "basis": "Actual directory absence observed, not inferred from outputpath difference.",
+  "journal_absent": true,
+  "journal_root": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\5c258ddb31a37c7eb38428d641252dc5f6c3bae5a915c1f8d4081b912368fb54\\mock\\journal",
+  "kind": "phase3b-or1-main-fresh-namespace-observation-v1",
+  "native_absent": true,
+  "native_root": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\native\\5c258ddb31a37c7eb38428d641252dc5f6c3bae5a915c1f8d4081b912368fb54\\mock",
+  "observed_at_utc": "2026-11-04T00:37:43.573337+00:00",
+  "source735_binding": true,
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e",
+  "stage": "mainstaticchecks before fullworkflow; capacity/test fixture namespaces separately declared",
+  "study_sha256": "5c258ddb31a37c7eb38428d641252dc5f6c3bae5a915c1f8d4081b912368fb54"
+}

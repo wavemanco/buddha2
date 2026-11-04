@@ -1,0 +1,26 @@
+{
+  "actual_packet_accepted": false,
+  "checks": [
+    "offline manifest mode, archive SHA and full member_sha256/member_count match reviewer schema",
+    "versioned candidate3 acceptance path, stem and verification-v7 mapping agree",
+    "embedded index excludes itself while external manifest includes it",
+    "all twelve gate groups and five main source/study/runtime/policy/launcher bindings required by both paths",
+    "separate rehearsal study has identical source/runtime/policy/launcher and explicit supervision nested bindings",
+    "both ordinary retained snapshots plus canonical fourteen authenticated originals and zero stream copies match review requirements",
+    "actual source735, study seal, immutable copied plan and actual archive bytes still require later independent validation"
+  ],
+  "cold_replay_executed": false,
+  "kind": "phase3b-or1-parent-packet-schema-review-v1",
+  "observed_at_utc": "2026-11-04T00:33:30.721798+00:00",
+  "physical_review_executed": false,
+  "provider_calls": 0,
+  "reviewed_sha256": {
+    "evidence/phase3b-seq2-v1/package_public.py": "d7f635ceba76b5b85c9babc114a46d02026c1433bcae61504e87289bfda8781e",
+    "runs/phase3b-or1-v1/packet-plan-v1/cold_replay.py": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0",
+    "runs/phase3b-or1-v1/packet-plan-v1/cold_replay_or1.py": "48193242137615b669a7b16763ae0424eae38bfab970589d6af48d89a30959fd",
+    "runs/phase3b-or1-v1/packet-plan-v1/review_packet_or1.py": "1485ca765b3e9b8459102fff1f7d1b296a9af94f37de4a29e89edd5bd24a7cd8"
+  },
+  "reviewer": "/root",
+  "runtime_or_source_changes": false,
+  "static_compatibility_passed": true
+}

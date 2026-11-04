@@ -11,12 +11,76 @@ import subprocess  # nosec B404
 import sys
 import time
 import traceback
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-HERE = ROOT / "evidence/phase3b-la1-v1"
+HERE = ROOT / "evidence/phase3b-or1-v1"
 PRIVATE = {"credential-binding.json", ".writer.lock", ".env", "auth.json", "credentials.json",
            "__pycache__", ".cache", ".mypy_cache", ".ruff_cache", ".pytest_cache", ".git"}
+
+
+def ordinary(root: Path, target: Path) -> bytes:
+    relative = target.relative_to(root)
+    if not relative.parts or ".." in relative.parts or relative.drive or any(
+            q.casefold() in PRIVATE or "stdout" in q.casefold() or "stderr" in q.casefold()
+            for q in relative.parts):
+        raise ValueError("excluded candidate path before metadata")
+    checked = root
+    for part in relative.parts:
+        checked /= part
+        info = checked.lstat()
+        if stat.S_ISLNK(info.st_mode) or getattr(info, "st_file_attributes", 0) & 0x400:
+            raise ValueError("candidate path crosses a link")
+    if not stat.S_ISREG(info.st_mode):
+        raise ValueError("nonordinary candidate input")
+    return checked.read_bytes()
+
+
+def settings() -> dict:
+    value = json.loads(ordinary(ROOT, ROOT / "evidence/phase3b-or1-v1/release-config.json"))
+    number = value.get("candidate")
+    if (value.get("kind") != "phase3b-or1-release-config-v1" or type(number) is not int
+            or number not in (1, 2, 3) or value.get("verification") != "verification-v" + str(4 + number)
+            or value.get("authority") != "evidence/phase3b-or1-v1/authority.json"):
+        raise ValueError("invalid OR1 source-bound configuration")
+    return value
+
+
+def admit(kind: str, candidate: dict) -> dict:
+    """One immutable receipt per bounded admission, written before child work."""
+    from buddha2.artifacts import write_once
+    from followups.phase3b_seq2_v1.support import file_hash, read, require, safe
+    limits = {"candidate": 3, "main": 2, "S13": 2, "saved": 2, "cold": 2}
+    require(kind in limits, "unknown OR1 admission kind")
+    number = settings()["candidate"]
+    require(candidate == read(HERE / f"candidate-{number}.json"), "OR1 admission candidate differs")
+    directory = safe(HERE / "admissions")
+    prior = []
+    for index in (1, 2, 3):
+        for label in limits:
+            item = safe(directory / f"c{index}-{label}.json")
+            if not item.exists():
+                continue
+            row = read(item)
+            frozen = read(HERE / f"candidate-{index}.json")
+            require(row.get("candidate") == index and row.get("admission") == label
+                and row.get("source_sha256") == frozen["source_sha256"]
+                and row.get("candidate_sha256") == file_hash(HERE / f"candidate-{index}.json"),
+                "OR1 admission history changed or is foreign")
+            prior.append(row)
+    require(sum(row["admission"] == kind for row in prior) < limits[kind]
+        and not any(row["candidate"] == number and row["admission"] == kind for row in prior),
+        "OR1 admission cap or per-candidate allowance exhausted")
+    require(kind == "candidate" or any(row["candidate"] == number and row["admission"] == "candidate"
+        for row in prior), "OR1 candidate has not been admitted")
+    value = {"kind": "phase3b-or1-admission-v1", "candidate": number, "admission": kind,
+             "source_sha256": candidate["source_sha256"],
+             "candidate_sha256": file_hash(HERE / f"candidate-{number}.json"),
+             "admitted_at_utc": datetime.now(timezone.utc).isoformat(),
+             "real_provider_calls": 0, "consumed_before_child_work": True}
+    write_once(safe(directory / f"c{number}-{kind}.json", roots=(ROOT,)), value)
+    return value
 
 
 def clean_environment(root: Path, environment=None) -> dict:
@@ -31,24 +95,9 @@ def clean_environment(root: Path, environment=None) -> dict:
 def authenticate_candidate(root: Path, candidate_path: Path, review_path: Path,
                            reviewer: str = "/root/s2_a1_source_review") -> dict:
     """Stdlib-only file authentication; never constructs a workflow or child."""
-    def ordinary(target):
-        relative = target.relative_to(root)
-        if not relative.parts or ".." in relative.parts or relative.drive or any(
-                q.casefold() in PRIVATE or "stdout" in q.casefold() or "stderr" in q.casefold()
-                for q in relative.parts):
-            raise ValueError("excluded candidate path before metadata")
-        checked = root
-        for part in relative.parts:
-            checked /= part
-            info = checked.lstat()
-            if stat.S_ISLNK(info.st_mode) or getattr(info, "st_file_attributes", 0) & 0x400:
-                raise ValueError("candidate path crosses a link")
-        if not stat.S_ISREG(info.st_mode):
-            raise ValueError("nonordinary candidate input")
-        return checked.read_bytes()
 
-    candidate_raw = ordinary(candidate_path)
-    candidate, review = json.loads(candidate_raw), json.loads(ordinary(review_path))
+    candidate_raw = ordinary(root, candidate_path)
+    candidate, review = json.loads(candidate_raw), json.loads(ordinary(root, review_path))
     if (review.get("passed") is not True or review.get("reviewer") != reviewer
             or review.get("candidate_sha256") != hashlib.sha256(candidate_raw).hexdigest()
             or review.get("source_sha256") != candidate.get("source_sha256")):
@@ -60,7 +109,7 @@ def authenticate_candidate(root: Path, candidate_path: Path, review_path: Path,
         relative = Path(name)
         if relative.is_absolute() or relative.drive or ".." in relative.parts:
             raise ValueError("nonrelative candidate path")
-        if hashlib.sha256(ordinary(root / relative)).hexdigest() != expected:
+        if hashlib.sha256(ordinary(root, root / relative)).hexdigest() != expected:
             raise ValueError("reviewed candidate file changed")
     return candidate
 
@@ -126,7 +175,7 @@ def run_child(args, *, cwd: Path, env: dict, timeout: float, cancel=None, driver
 def settle_receipt_owners(phase: str) -> dict:
     """Failure-only fallback: exact successful create receipts, never enumeration."""
     from followups.phase3b_seq2_v1 import verify
-    output = ROOT / "runs/phase3b-seq2-v1/verification-v4"
+    output = ROOT / "runs/phase3b-seq2-v1" / settings()["verification"]
     receipts = [output / ("c2-" + phase + "-create.json")]
     errors = []
     if phase == "boundary":
@@ -182,13 +231,17 @@ def main() -> int:
     os.environ.clear()
     os.environ.update(env)
     sys.path[:0] = [str(ROOT), str(ROOT / "src"), str(ROOT / ".upstream/harness2")]
-    candidate = authenticate_candidate(ROOT, HERE / "candidate-v4.json", HERE / "prospective-acceptance-v4.json")
+    config = settings()
+    number = config["candidate"]
+    candidate = authenticate_candidate(ROOT, HERE / f"candidate-{number}.json", HERE / f"prospective-acceptance-{number}.json")
     from followups.phase3b_seq2_v1.support import require, source_identity
 
     require(source_identity()["sha256"] == candidate["source_sha256"], "current LA1 source changed")
+    if phase in {"boundary", "main", "replay", "host"}:
+        admit({"boundary": "candidate", "main": "main", "replay": "saved", "host": "S13"}[phase], candidate)
     driver = ROOT / "evidence/phase3b-seq2-c2-v1" / ("run_boundary.py" if phase == "boundary" else "run_composed.py")
     if phase in ("windows", "host"):
-        driver = HERE / "host_acceptance.py"
+        driver = ROOT / "evidence/phase3b-la1-v1/host_acceptance.py"
     args = [sys.executable, "-B", str(driver)] + ([] if phase == "boundary" else [phase])
     if phase == "host":
         from followups.phase3b_seq2_v1.supervision import agent_name
@@ -211,7 +264,7 @@ def main() -> int:
         if phase == "host":
             try:
                 import importlib.util
-                spec = importlib.util.spec_from_file_location("la1_host_cleanup", HERE / "host_acceptance.py")
+                spec = importlib.util.spec_from_file_location("la1_host_cleanup", ROOT / "evidence/phase3b-la1-v1/host_acceptance.py")
                 if spec is None or spec.loader is None:
                     raise ValueError("host emergency cleanup cannot load")
                 helper = importlib.util.module_from_spec(spec)
@@ -219,7 +272,7 @@ def main() -> int:
                 result["host_failure_owner_cleanup"] = helper.emergency_cleanup()
             except Exception as exc:
                 result["host_emergency_cleanup_error"] = {"passed": False, "type": type(exc).__name__, "message": str(exc)}
-    target = ROOT / "runs/phase3b-seq2-v1/verification-v4" / ("operator-" + phase + ".json")
+    target = ROOT / "runs/phase3b-seq2-v1" / config["verification"] / ("operator-" + phase + ".json")
     target.parent.mkdir(parents=True, exist_ok=True)
     with target.open("x", encoding="utf-8", newline="\n") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)

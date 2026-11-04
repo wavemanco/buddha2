@@ -1,0 +1,11 @@
+{
+  "current_spec_sha256": "7c079c94d3184f05956185b8ae84642350a0fca4448879985bb0014db2d61926",
+  "finding": "CURRENT candidate1/2 paragraphs explicitly preserved historical outcomes, spare-admission wording is anchored to earlier checkpoint and subsequently consumed. Top remains stopped-incomplete; finalaccounting/publication only. Requested navigation correction resolved.",
+  "kind": "phase3b-or1-independent-stopped-navigation-correction-v1",
+  "observed_at_utc": "2026-11-04T00:45:31.279409+00:00",
+  "passed": true,
+  "report_sha256": "59c37dde42e2367330d357bfab805e53896403ce112235f6baad3ef0e44f9f7a",
+  "reviewer": "/root/s2_a1_source_review",
+  "source_or_gate_or_kit_accepted": false,
+  "stopped_review_sha256": "04c8abcb3523b1716509c48e52e72a4833b7694490eb6f9ca6f9b78fa18535be"
+}

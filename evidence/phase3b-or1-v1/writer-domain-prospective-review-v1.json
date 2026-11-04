@@ -1,0 +1,25 @@
+{
+  "candidate_or_gate_accepted": false,
+  "execution_conditions": [
+    "Controller alone executes exact one component; observe actual result/ownership before any candidate2 freeze. Unexpected writable code/privacy/containment/owner uncertainty triggers OR1 hardstop, not adjusted expectedvalues.",
+    "Use actual newOR1 ledger minus all unreleasedholds (436 currently reported), preserve60/120minute progress and >=1800second closure reserve. Component/unit work consumes no main/S13/release/cold/saved counter.",
+    "Candidate1 stays failed/consumed; new source/config/freshv6/fullprospective review are still required before candidate2 integration. All12/physical/extracted criteria unchanged."
+  ],
+  "findings": [
+    "The real pinnedH1 will inspect exact image/NETnone/ROroot/mounts/resources/capabilities/tmpfs/lognone before its sole owned start. The predefined sourceevidence write is an intentional negative that must fail with OSEROFS; no file may appear there.",
+    "Unchanged runtime publish must reject that hostevidence target; a real writable/results marker must publish and retain firstbytes when a different overwrite is rejected. No global root guard is widened.",
+    "Probe performs no workflow.run, generation, ledger/release admission, SDK call or full worklist. Outputroot is new component namespace, not a release/campaign root.",
+    "Every create/start/cleanup command is bounded, exceptions retained, exact successful64hex ID binds cleanup and specificNoSuchObject is mandatory. Partial/unknown owner does not pass and is not guessed or enumerated.",
+    "A separate actualhost unittest must target ROOT/evidence outsideBASE and exercise the narrow root-safe immutable write; Linux/H1 test outputs remain runtime/results. This closes the previous temp-underBASE coverage gap."
+  ],
+  "kind": "phase3b-or1-writer-domain-component-prospective-review-v1",
+  "kit_or_packet_accepted": false,
+  "observed_at_utc": "2026-11-03T23:58:23.196951+00:00",
+  "passed": true,
+  "plan_sha256": "5a55f3e5234e9de3492b925785d285e664a402e9f0d3f1e6233f9fc417c7a46c",
+  "real_keys_paid_authorized": false,
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_executed_by_reviewer": false,
+  "scope": "One declared cheap prefreeze writer-domain component plus actual host-domain unit; not candidate2 or fullgate acceptance.",
+  "script_sha256": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df"
+}

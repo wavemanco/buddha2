@@ -1,0 +1,25 @@
+{
+  "actual_component": "Sameproductionruntime_output function calledinsideactualH1 againstexistingfailedv6, readonlymetadata/sentinelhashreads only; accepts/results/v6, rejects/workspace/runsalias,BASE,sibling,traversal,actualsymlink, unchangedhostguardstillrejects/results. No workflow.run, token/model/SDK, main/candidateadmission.",
+  "clocks": {
+    "absence": 15,
+    "create": 60,
+    "execute": 120,
+    "inspect": 60,
+    "remove": 30,
+    "stop": 30
+  },
+  "existing_owned_driver_sha256": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df",
+  "fix": "Sharedruntime_output usesunchanged support.path, thenexact workflow.BASE/currentconfigurationverification andexistingordinarydir. Usedbybothmain+saved; hostverify.output_path unchanged.",
+  "kind": "phase3b-or1-containedpath-repair-plan-v1",
+  "no_clock_engine_model_prompt_strategy_or_science_change": true,
+  "output": "runs/phase3b-seq2-v1/or1-path-domain-v1",
+  "prior_candidate": 2,
+  "production_path_audit": "Controller/root/reviewer tracedverifyinside/record/windows/supervised/seal; HOSTvalidator occurswrongonlyatcomposedentry. H1capacity/nativefixture/core/saved outputs useBASE path; HOSTchecks/from_container/packager useROOT/runs. No otherwrongdomaincall found.",
+  "recorded_at_utc": "2026-11-04T00:18:20.112793+00:00",
+  "source_config_during_precheck": "candidate2/verification-v6; onlyaftertestpassfreezeconfig3/v7",
+  "source_sha256": {
+    "evidence/phase3b-or1-v1/path_domain_probe.py": "9dbd5a8df1ff659c0db7f49d940618649a16536c51c38694ca44913a14f2c1cc",
+    "evidence/phase3b-or1-v1/writer_domain_probe.py": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df",
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py": "b8747be47543d258921aed32d2ddc082a1fde108db8c7c079cd81f99070fb747"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "closed_ancestor_archives": {
+    "evidence/phase3a-c1-completion-v4/live-outcome-v1.zip": "f1fb9bd222ff31d7addaef0fa1e6556522cb8d62470a68b89c4669bbe6d255e5",
+    "evidence/phase3a-rc1-pilot-v1/live-outcome-v1.zip": "2d975140ce893c8484622d995a1a0259c3bdfcd8c9257bc4cc73fd9b0bd3187e",
+    "evidence/phase3a-rc1-pilot-v1/offline-kit-v1.zip": "9026c0d15341409f976aeef0274d181457ab8342da6500f18743dd5efeab2f89",
+    "evidence/phase3a-readiness-recovery-v1/live-outcome-v1.zip": "e463acf545cacd94221a74e44ae41edb3964f978af07c2f572c175930942fcba"
+  },
+  "closed_phase3a_archive_sha256": "e463acf545cacd94221a74e44ae41edb3964f978af07c2f572c175930942fcba",
+  "historical_document_alias": {
+    "README.md": {
+      "retained_path": "README_LEGACY.md",
+      "sha256": "59f21b6a7071aeaaf61a9760282621bc3aaa956677139e72fc49b698d9b40ae2"
+    }
+  },
+  "kind": "phase3b-s2-preservation-v1",
+  "parent": {
+    "RP1_preservation": {
+      "HI_preservation": {
+        "closed_R3_archive_sha256": "f1fb9bd222ff31d7addaef0fa1e6556522cb8d62470a68b89c4669bbe6d255e5",
+        "closed_public_metadata": {
+          "evidence/inspect-visibility-i1/independent-acceptance.json": "61d4c90a441f8bf2b474add9203b1cf21c89d2b41fb3cc3e5c2a83f1ff929344",
+          "evidence/phase3a-c1-completion-v4/live-outcome-v1.manifest.json": "555741b110d42f8282769144080fc5c976a5c4eb8bf6e5f9093b83475f88d91f",
+          "evidence/phase3a-c1-completion-v4/live-outcome.json": "243c29222736d21624022e036f3a1f158725db3aa4d9fdeb4d76141aef0d3283",
+          "evidence/phase3a-c1-completion-v4/live-packet-acceptance.json": "96e00d4179252ddf3370af34ca2cf30ff536e9198cc5b5e5279d431b839ee075",
+          "evidence/phase3a-history-compat-h1/independent-acceptance.json": "a999c33b4584a6c1a94d0fda45078fca09db0e98b29f662eafd7396cdc7ff4f6"
+        },
+        "kind": "phase3a-hi-preservation-v1",
+        "parent_source_files": 294,
+        "parent_source_sha256": "5c592fdf7724fe7371491ab3b2ec2c5d223bcaf7bede091485789d5050a5ecfb",
+        "passed": true,
+        "private_worktree_accessed": false,
+        "protected_original_accessed": false
+      },
+      "accepted_HI_source_files": 356,
+      "accepted_checkpoints": {
+        "INSPECT_DISPLAY_V2_REPORT.md": "0d11af8935057da9e41651041e4eeb50ebff4ca72efca7eb192d4a47e1df06b2",
+        "P3A_HI_LIVE_REPORT.md": "4b37b06108bcd132b4f99e9060997a6649d9b6c9425f0d1996505eb288f43011",
+        "PHASE3A_RANKING_CONTRACT_DEFINITION.md": "d317a6b60adc5d2b36b89c278080124955c1efbbd3548520e0c8199f4aa9da79",
+        "PHASE3A_RC1_REPORT.md": "cada390053c69480a765283dd67ece7aa72248ff07157a0578cb1fab5db60d2f",
+        "evidence/inspect-display-v2/independent-acceptance.json": "88880867100e947aba87fa524855b198cce639dd185c15dce6a71a32b57769b2",
+        "evidence/inspect-display-v2/retained-evidence.json": "fa7806922ec475f09f41f0f509ed2fb0518f085004c57e4d83cdcbfa5fe81e09",
+        "evidence/phase3a-h1-integrated-v1/live-outcome-v1.manifest.json": "e2ce7e6f38a19e499dc43f8d407f0a1261bae296a01489a740bb8a634d5519bc",
+        "evidence/phase3a-h1-integrated-v1/live-outcome-v1.zip": "50e69c125f2ff9b514aa959bc8be1731050f8e9566ebf69748aadeb37026345f",
+        "evidence/phase3a-h1-integrated-v1/live-packet-acceptance.json": "60f462480e14ab00e6e74f9253bdae2e64f8b0502d2f276a3b946867268037a2",
+        "evidence/phase3a-rank-contract-v1/closeout.json": "8db7ea491ce81795332a474afdc2209203fbf0a0438dabaafb2649cfe623f3d2",
+        "evidence/phase3a-rank-contract-v1/independent-acceptance.json": "14bcab2c9bb9b3627e0cee194336f9bfecfd6f02d76cf068c33910addd129253",
+        "evidence/phase3a-rank-contract-v1/retained-artifacts.json": "1ea477ecf6e88c709c212a1aa3e3e715a9e81e2491a2c974c8b4a75393716b24",
+        "followups/inspect_display_v2/display.py": "7b7f1bfc6ced0ae7d4137ade03e47ae30068bfb1737c9f75fc6f70726ceed963",
+        "followups/inspect_display_v2/provenance.py": "1a2194b16c5a3945989f9ba817afec482ef01466b3ae20dfd3d440dd6e06c2a9",
+        "followups/inspect_display_v2/test_display.py": "77ba4055d6a5c9e0bced2ee0daa24550de5e5fe3c14579a841b50d03cc6f5320",
+        "followups/phase3a_rank_contract_v1/adapter.py": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+        "followups/phase3a_rank_contract_v1/test_adapter.py": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+        "followups/phase3a_rank_contract_v1/verify.py": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935"
+      },
+      "kind": "phase3a-rp1-preservation-v1",
+      "passed": true,
+      "private_worktree_accessed": false,
+      "protected_original_accessed": false
+    },
+    "accepted_RP1_source_files": 419,
+    "accepted_checkpoints": {
+      "INSPECT_DISPLAY_V2_REPORT.md": "0d11af8935057da9e41651041e4eeb50ebff4ca72efca7eb192d4a47e1df06b2",
+      "P3A_HI_LIVE_REPORT.md": "4b37b06108bcd132b4f99e9060997a6649d9b6c9425f0d1996505eb288f43011",
+      "P3A_RP1_LIVE_REPORT.md": "2e6233fcfa6edaf539a10cc78d43cbf2b1a004b74225be0365fda3be709c026b",
+      "PHASE3A_RANKING_CONTRACT_DEFINITION.md": "d317a6b60adc5d2b36b89c278080124955c1efbbd3548520e0c8199f4aa9da79",
+      "PHASE3A_RC1_REPORT.md": "cada390053c69480a765283dd67ece7aa72248ff07157a0578cb1fab5db60d2f",
+      "evidence/inspect-display-v2/independent-acceptance.json": "88880867100e947aba87fa524855b198cce639dd185c15dce6a71a32b57769b2",
+      "evidence/inspect-display-v2/retained-evidence.json": "fa7806922ec475f09f41f0f509ed2fb0518f085004c57e4d83cdcbfa5fe81e09",
+      "evidence/phase3a-h1-integrated-v1/live-outcome-v1.manifest.json": "e2ce7e6f38a19e499dc43f8d407f0a1261bae296a01489a740bb8a634d5519bc",
+      "evidence/phase3a-h1-integrated-v1/live-outcome-v1.zip": "50e69c125f2ff9b514aa959bc8be1731050f8e9566ebf69748aadeb37026345f",
+      "evidence/phase3a-h1-integrated-v1/live-packet-acceptance.json": "60f462480e14ab00e6e74f9253bdae2e64f8b0502d2f276a3b946867268037a2",
+      "evidence/phase3a-rank-contract-v1/closeout.json": "8db7ea491ce81795332a474afdc2209203fbf0a0438dabaafb2649cfe623f3d2",
+      "evidence/phase3a-rank-contract-v1/independent-acceptance.json": "14bcab2c9bb9b3627e0cee194336f9bfecfd6f02d76cf068c33910addd129253",
+      "evidence/phase3a-rank-contract-v1/retained-artifacts.json": "1ea477ecf6e88c709c212a1aa3e3e715a9e81e2491a2c974c8b4a75393716b24",
+      "evidence/phase3a-rc1-pilot-v1/independent-acceptance.json": "5d51331f9a8b411b48b22ed0fba7b0eb0337de9792b1c1ef3b6807b2bfe61cd2",
+      "evidence/phase3a-rc1-pilot-v1/live-independent-acceptance-v1.json": "bfc0afb1b0d360489cf64b1e162cc005229c402eb7ec5de418ae2f6e75949e34",
+      "evidence/phase3a-rc1-pilot-v1/live-outcome-v1.json": "e07b6c8dfaf1e0cd92389265af87875a452e9f6b4c638448eb00c70db4de024a",
+      "evidence/phase3a-rc1-pilot-v1/live-outcome-v1.manifest.json": "4093c743835da6289dee23a37559425e65b552bcfef2ac4a2bd2e726da9a5cac",
+      "evidence/phase3a-rc1-pilot-v1/live-packet-acceptance.json": "716b32f2d7bd8edcb0f68383d690ce88590eef9fe1bb24f38ef42cc2d8692f31",
+      "evidence/phase3a-rc1-pilot-v1/offline-kit-v1.manifest.json": "39cc0734a6124313d31cf95b2cc9baa97750e99d0e53f0fc07817c37ba7401e7",
+      "evidence/phase3a-rc1-pilot-v1/packet-acceptance.json": "2a8ada4f165ff8a2dec8e898fe779f7320c56e7effd894e1287bed0e413bd206",
+      "followups/inspect_display_v2/display.py": "7b7f1bfc6ced0ae7d4137ade03e47ae30068bfb1737c9f75fc6f70726ceed963",
+      "followups/inspect_display_v2/provenance.py": "1a2194b16c5a3945989f9ba817afec482ef01466b3ae20dfd3d440dd6e06c2a9",
+      "followups/inspect_display_v2/test_display.py": "77ba4055d6a5c9e0bced2ee0daa24550de5e5fe3c14579a841b50d03cc6f5320",
+      "followups/phase3a_rank_contract_v1/adapter.py": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "followups/phase3a_rank_contract_v1/test_adapter.py": "8fb5caaef950e8fbc61d4965e96f080e81a0d6a48492e138953a7e1cee1ab9a5",
+      "followups/phase3a_rank_contract_v1/verify.py": "6f7ac23c7c6c970de3f62133970baaedbe8385b99ae19ecdcaf471bfae356935"
+    },
+    "closed_RP1_archives": {
+      "evidence/phase3a-rc1-pilot-v1/live-outcome-v1.zip": "2d975140ce893c8484622d995a1a0259c3bdfcd8c9257bc4cc73fd9b0bd3187e",
+      "evidence/phase3a-rc1-pilot-v1/offline-kit-v1.zip": "9026c0d15341409f976aeef0274d181457ab8342da6500f18743dd5efeab2f89"
+    },
+    "kind": "phase3a-rp2-preservation-v1",
+    "passed": true,
+    "private_worktree_accessed": false,
+    "protected_original_accessed": false
+  },
+  "parent_source_sha256": "517b8efcdfc68bbb3e6ac6d260dc2e7e0541fdb02ea46784afc4ca5e2d300ed8",
+  "passed": true,
+  "private_worktree_accessed": false,
+  "protected_original_accessed": false
+}

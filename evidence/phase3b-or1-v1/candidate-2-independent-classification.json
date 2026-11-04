@@ -1,0 +1,89 @@
+{
+  "actual_v6_evidence_sha256": {
+    "boundary-contract/cleanup.json": "9ebbad4d6776e4780094d4d6c27b68ef3abca24fa98cbf5c16d502aa51525ff4",
+    "boundary-contract/result.json": "49972dfe6d5f8458e21f4c19acb880eb397b27c7fc61947312017b818be2c86d",
+    "c2-main-cleanup.json": "630286a99f6d774a47a966ab31fa91e51c53177295ae9b7df70c4744a044496b",
+    "c2-main-create.json": "b8faacf4cc344482d6028d35a90fd7c388af147babbe5af0540b6132de16d9eb",
+    "c2-main-execution.json": "63d4e8655b79680ca2518affab1c5a3281e498da01dffcafe6b10bf55f6c8158",
+    "c2-main-inspection.json": "dac5ecda9877f9643b76dbdd1d71c89c81e56163e37f20da491e257f0198e924",
+    "operator-boundary.json": "1e51ee31302b0ff7b5a8ee91fc4a8f31b9e8c161dd6af5996d0e3ee13ea960cf",
+    "operator-main.json": "a6be6346cde6ef41a03436bafae6321bdeb38964ce5bfcc14999828c9f98af97"
+  },
+  "candidate_terminal": 2,
+  "classification": "eligible_contained_entry_validator_domain_defect",
+  "continuation_conditions": [
+    "C2 stays failed/immutable. Before finalcandidate3/v7, execute a cheap same-production-runtime-helper check in realH1 with no workflow.run, accepted existingv6 runtimepath and rejected host/sibling/BASE/traversal/link aliases; review exactplan/proof. This component does not resume or pass C2.",
+    "New source/config/currentcases/freshv7/native+journal identity and independentprospective review are required. C3 is last candidate and nextmain is last main entry; unusedS13slots do not authorize repeat on failedC3. Last admitted allowed attempt may finish permitted downstream checks within caps.",
+    "All12current-source groups/actualpositiveS13/physical/extracted and unchanged science/resources/clocks/privacy/owner guards remain required. Current aggregate effort minus529knownholds and >=1800closure/task-basedreserve constrain feasibility; hardstop conditions remain unchanged."
+  ],
+  "counter_state_supported": {
+    "S13_starts": 0,
+    "candidate_starts": 2,
+    "cold_replays": 0,
+    "main_starts": 1,
+    "saved_replays": 0
+  },
+  "findings": [
+    "Candidate2 actual expected-empty canonical negative and declared strict negatives pass with owner cleanup. First main admission was honestly consumed before its child; H1 then rejected output at entry before static/source-before/study/modelwork.",
+    "Recorded traceback directly proves composed_acceptance.main uses hostverify.output_path(ROOT/runs) for actual/results. Its guard correctly rejected. The same wrong call affects BOTH main and saved entry, with no privacy/source/ownership incident.",
+    "Expanded call audit: verify.inside/run_tests/record/save/preservation use supplied runtime output directly; capacity uses support.path/publish(BASE). verify.main supervised/seal call runtimeprepare/read/save directly; windows uses hostvalidator correctly. Hostcontainer_args and hostchecks.from_container act only on host; I1 has separate/snapshot and/out scopes. No other same wrong-domain productioncall found in this audited surface.",
+    "Eligible shared runtime helper must use unchanged support.path plus exact workflow.BASE/configuredverification and existing ordinarydirectory, rejecting host/workspacealias, BASEroot, sibling, traversal and symlink/reparse inputs. Leave hostverify.output_path unchanged. Both main and saved must call the repaired helper.",
+    "All four known H1 owners (three negative-check owners plus main) were independently queried absent by specificNoSuchObject. No I1/model/judge/provider work or S13/saved/cold start occurred. Source721/history preservation beforeedit reports707ordinary captures,14canonical originals and zerocopies."
+  ],
+  "independent_known_owner_absence": [
+    {
+      "error": "error: no such object: 41db90fa5d18ab9195576eda290275506a850e41528cb7992b31f9c471908616\n",
+      "exit_code": 1,
+      "owner": "41db90fa5d18ab9195576eda290275506a850e41528cb7992b31f9c471908616"
+    },
+    {
+      "error": "error: no such object: c56f5e4f9dff05d41a0dc61f6970b5351d58b48631a963be699cab62a0a92b2b\n",
+      "exit_code": 1,
+      "owner": "c56f5e4f9dff05d41a0dc61f6970b5351d58b48631a963be699cab62a0a92b2b"
+    },
+    {
+      "error": "error: no such object: 9d6d57485005794d5143f54f85a1b35ee9bdb1d26aa1e08b30200c2feaeef9d0\n",
+      "exit_code": 1,
+      "owner": "9d6d57485005794d5143f54f85a1b35ee9bdb1d26aa1e08b30200c2feaeef9d0"
+    },
+    {
+      "error": "error: no such object: 5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0\n",
+      "exit_code": 1,
+      "owner": "5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0"
+    }
+  ],
+  "kind": "phase3b-or1-independent-candidate2-repair-classification-v1",
+  "kit_or_packet_accepted": false,
+  "observed_at_utc": "2026-11-04T00:18:22.558341+00:00",
+  "references": {
+    "admissions/c2-candidate.json": {
+      "path": "evidence/phase3b-or1-v1/admissions/c2-candidate.json",
+      "sha256": "34c965dcbf96ecf4af7c35e45191f3c4ae123bc7f7791f7fc79606402e65f511"
+    },
+    "admissions/c2-main.json": {
+      "path": "evidence/phase3b-or1-v1/admissions/c2-main.json",
+      "sha256": "4655a20ea89ea676e01c24e42689c22d9864bbebbf594300574c748f7b656e8e"
+    },
+    "candidate-2-main-failure.json": {
+      "path": "evidence/phase3b-or1-v1/candidate-2-main-failure.json",
+      "sha256": "ffe6805cc4ba368fe2ad192f54f4e0b1b313ec999ab1af05a913be07410d4d7c"
+    },
+    "failed-candidate-2/preservation-receipt.json": {
+      "path": "evidence/phase3b-or1-v1/failed-candidate-2/preservation-receipt.json",
+      "sha256": "7ac72ccc5bf4673f66cd9ee005385157d752b3dba2b8d658d6ef17924fc3865e"
+    }
+  },
+  "remaining_upper_bounds": {
+    "S13_starts": 2,
+    "candidate_starts": 1,
+    "cold_replays": 2,
+    "main_starts": 1,
+    "saved_replays": 2
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_or_source_repair_by_reviewer": false,
+  "scientific_complete": false,
+  "scope": "Independent recorded-failure/code-domain classification plus read-only exact-owner queries; no experiments/replays/retests or broad historical rehash.",
+  "source_or_gate_accepted": false,
+  "whole_OR1_hard_stop_required_by_this_defect": false
+}

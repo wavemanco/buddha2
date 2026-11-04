@@ -1,0 +1,9 @@
+{
+  "end": "2026-11-04T00:15:57.157060+00:00",
+  "kind": "phase3b-or1-controller-domain-planning-hold-v1",
+  "prior_holds_seconds": 436,
+  "reason": "Whole bounded snapshotWAIT interval also included substantive endtoend domain planning before ACTIVE; charge entireinterval including automaticwait conservatively, no precise-focus reconstruction.",
+  "reserved_seconds": 93,
+  "start": "2026-11-04T00:14:24.217415+00:00",
+  "total_holds_seconds": 529
+}

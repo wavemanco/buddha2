@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "additional_unreleased_terminal_hold_seconds": 600,
+    "all_counters_and_incomplete_outcome_retained": true,
+    "below_original_10800_seconds": true,
+    "exact_final_focused_time_claimed": false,
+    "historical_unreleased_holds_seconds": 529,
+    "maximum_further_actual_focused_seconds_all_actors": 600,
+    "no_specific_collector_cause_inferred": true,
+    "prospective_whole_block_upper_seconds": 8625.525599,
+    "raw_meter_boundary_seconds": 6896.525599,
+    "source_tests_runtime_or_experiments_by_reviewer": false,
+    "stopped_report_next_step_requires_separate_definition_and_decision": true,
+    "total_unreleased_hold_seconds": 1129,
+    "v1_proposed1200_hold_never_activated": true
+  },
+  "closure_v2_sha256": "efe7f41ab278d64ee59ed852929ac9918a6a148c66b0b1c62875e0a272c1db39",
+  "current_spec_sha256": "cf07de855f46d1a7abcacfc498aac9d7e9880bc05c71e8edc901a16f325b51b3",
+  "final_condition": "After remote verification, root must verify totalpostboundary actualaggregate delta<=600 and retainall1129holds; this document review cannot certify futurework already occurred.",
+  "finding": "Arithmetic6896.525599+529+600+atmost600=8625.525599 is correct. The additionalterminalhold is unreleased and separately charged from newactualwork. Report explicitly calls this prospectiveconservative, not exactfinalfocus; CURRENT presents finitebound and requires finalhandoffverification. Scientificbody remains stopped/incomplete, underlyingcollectorcauseunresolved, noacceptedkit/noAPI/noautomaticrerun.",
+  "independent_stopped_receipt_sha256": "04c8abcb3523b1716509c48e52e72a4833b7694490eb6f9ca6f9b78fa18535be",
+  "kind": "phase3b-or1-independent-final-document-review-v1",
+  "observed_at_utc": "2026-11-04T00:50:28.934558+00:00",
+  "offline_kit_accepted": false,
+  "passed": true,
+  "report_sha256": "01984e8e2f8fb3d2995f7944ef178efe3b233e43327e5512aa062ec4800af182",
+  "reviewer": "/root/s2_a1_source_review",
+  "scope": "Final stopped-only documentation and prospective finite publication/accounting review; no runtime, source/gate/kit acceptance or new execution.",
+  "terminal_publication_hold_sha256": "6cd2221c821a45a9171b07a01a1e7effed83353e4621d0e40157727f33ec379e"
+}

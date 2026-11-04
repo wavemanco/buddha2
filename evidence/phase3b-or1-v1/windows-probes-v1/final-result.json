@@ -1,0 +1,33 @@
+{
+  "Docker_calls": 0,
+  "actual_auth_negative_cases": 4,
+  "actual_driver_tree_cases": 2,
+  "actual_managed_cases": 7,
+  "actual_outer_status_cases": 2,
+  "counter_admissions_exercised": false,
+  "gate_accepted": false,
+  "helper_output_kind_note": "Raw byte-identical helper child receipts retain their historical LA1 schema names; execution here is new OR1/current-source, not reused historical results.",
+  "helper_reuse": "Byte-identical copies of existing LA1 probes into OR1 evidence namespace preserve strict __file__-relative output guards. Original helpers and prior outcomes unchanged.",
+  "kind": "phase3b-or1-windows-probes-v1",
+  "launcher_sha256": "9e5960ae7a7cb07cb8cf8856e468e8bbe133aa7199c01a384b1b18572f3648d5",
+  "legacy_reproduction_note": "Existing unchanged default helper also recorded its harmless legacy os.execve case; no additional investigation or diagnostic claim.",
+  "passed": true,
+  "primitive_ast_sha256": {
+    "authenticate_candidate": "7334a6034aba09562333824178871edbc9d1deaa3cc853c41a2be449b01a2ab0",
+    "clean_environment": "e8000bb4b1a37a37264730aa22b9e1c03aa1b73647dc21ac37e3d3a1a7094287",
+    "ordinary": "d40b5e3b35fa7f605d5ef7296ae77090b5955db2788cf1e9c47d5b3e9342d183",
+    "run_child": "10c11cf2cfedc65d9673c40f5c2bd223c6792b212dc28c2c77ef51b11063bce8",
+    "settings": "28e87b0f56f5215c3bb15a8c70772823ba58c6a22cd82df6744ba5d323802b1e"
+  },
+  "project_workflows": 0,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T23:43:47.905036+00:00",
+  "references": {
+    "launcher_probe.py": "deb3b526ad7d872a3d859ff50ed4642cf6ed723810ad66bbcffac1817cae2e14",
+    "probe_tree.py": "5c77e4c984b7fc975cd808c4f8a4ef99662505f43e46e9c2ad04bb6bc1f5331f",
+    "windows-probes-v1/managed/process-result.json": "cca8c6c69cb0c229b4cc6980b8ed5985e1c6eb12efb0bcf71636cae94c82490d",
+    "windows-probes-v1/outer/outer-status-result.json": "52d766cef8d856fdcc0af1b5296bcdb379180735418aa3fc8584c18a64c2d6ce",
+    "windows-probes-v1/tree/tree-result.json": "78b230828ff0a54b44ad926592474c40e3cbfab436834ea822cc1980cf7a5e7c"
+  },
+  "tree_outcome": "Actual taskkill returned0; timeout driver14136/grandchild52280 and cancellation driver34480/grandchild40536 independently verified absent87. Managed codes124/130 and actual child codes retained."
+}

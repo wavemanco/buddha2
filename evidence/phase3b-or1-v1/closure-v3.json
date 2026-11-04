@@ -1,0 +1,89 @@
+{
+  "aggregate_limit_seconds": 10800,
+  "all_unreleased_hold_seconds": 1129,
+  "cost_usd": 0,
+  "counts": {
+    "S13": 0,
+    "candidate": 3,
+    "cold": 0,
+    "main": 2,
+    "saved": 0
+  },
+  "exact_final_focus_claimed": false,
+  "final_guard": "Additional aggregate metered actual work plus any newly unmetered conservative intervals after this boundary must be <=700. All1129 existing holds remain unreleased. Do not report v2 as passed.",
+  "forbidden": [
+    "source repair",
+    "unit test rerun",
+    "main or S13 repetition",
+    "saved or cold replay",
+    "keys or paid calls"
+  ],
+  "further_root_interval_conservative_seconds": 86,
+  "kind": "phase3b-or1-closure-accounting-v3",
+  "maximum_additional_actual_focused_seconds": 700,
+  "maximum_effective_total_seconds": 9369.832702,
+  "meter_at_new_terminal_boundary": {
+    "active_seconds": 7540.832702,
+    "actors": [
+      {
+        "active_seconds": 2630.781529,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "done",
+        "records": 64
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 492.620767,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "done",
+        "records": 12
+      },
+      {
+        "active_seconds": 1844.681482,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 47
+      },
+      {
+        "active_seconds": 2417.724064,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 118
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:56:55.659371+00:00",
+    "remaining_seconds": 3259.167298,
+    "within_limit": true
+  },
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "prior_accounting_v2_sha256": "efe7f41ab278d64ee59ed852929ac9918a6a148c66b0b1c62875e0a272c1db39",
+  "public_HEAD_before_closure": "2d155e7b7bf4f83c6baeb86d554a3dbb6c91ef90",
+  "published_remote_changed": false,
+  "reason_for_versioned_correction": "Final publication assertion failed before commit; v2 internal terminal guard exceeded. Preserve both failures and finish already-authorized closure within unchanged original10800-second cap. This is no experimental repair, extra funding or new admission.",
+  "recorded_at_utc": "2026-11-04T00:56:55.667983+00:00",
+  "scope_remaining": [
+    "diagnose and correct only the external publication check",
+    "update and independently review stopped documentation/accounting",
+    "normal public-mirror commit/push and remote verification",
+    "final accounting/handoff"
+  ],
+  "status": "experiment-stopped-publication-closure-only",
+  "terminal_hold_cumulative_allocated_uncertain_seconds": 114,
+  "terminal_hold_total_600_unreleased": true,
+  "v2_guard_at_publisher_done_seconds": 614.12612,
+  "v2_guard_limit_seconds": 600,
+  "v2_guard_with_all_known_root_intervals_at_new_boundary_seconds": 758.3071030000001,
+  "v2_terminal_actual_guard_passed": false
+}

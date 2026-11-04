@@ -174,17 +174,20 @@ def inside(output: Path, *, saved_replay: bool = True) -> int:
         [sys.executable, "-B", "-m", "ruff", "check", "--no-cache", "followups/phase3b_seq2_v1",
          "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
          "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
-         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py"],
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
+         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py"],
         [sys.executable, "-B", "-m", "mypy", "--explicit-package-bases", "--follow-imports", "silent",
          "--ignore-missing-imports", "--no-incremental", "--cache-dir", "/tmp/s2-mypy",  # nosec B108
          "followups/phase3b_seq2_v1", "evidence/phase3b-seq2-v1/package_public.py",
          "evidence/phase3b-seq2-c2-v1/composed_acceptance.py", "evidence/phase3b-seq2-c2-v1/run_boundary.py",
          "evidence/phase3b-seq2-c2-v1/run_composed.py", "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
-         "evidence/phase3b-la1-v1/host_acceptance.py"],
+         "evidence/phase3b-la1-v1/host_acceptance.py", "evidence/phase3b-or1-v1/writer_domain_probe.py",
+         "evidence/phase3b-or1-v1/path_domain_probe.py"],
         [sys.executable, "-B", "-m", "bandit", "-q", "-r", "followups/phase3b_seq2_v1",
          "evidence/phase3b-seq2-v1/package_public.py", "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
          "evidence/phase3b-seq2-c2-v1/run_boundary.py", "evidence/phase3b-seq2-c2-v1/run_composed.py",
-         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py", "--exclude",
+         "evidence/phase3b-seq2-c2-v1/launch_candidate.py", "evidence/phase3b-la1-v1/host_acceptance.py",
+         "evidence/phase3b-or1-v1/writer_domain_probe.py", "evidence/phase3b-or1-v1/path_domain_probe.py", "--exclude",
          ",".join(p.name for p in Path(__file__).parent.glob("test*.py")) + ",deadline_regression.py"],
     ]
     statics = []

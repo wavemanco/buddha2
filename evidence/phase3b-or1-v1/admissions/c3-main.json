@@ -1,0 +1,10 @@
+{
+  "admission": "main",
+  "admitted_at_utc": "2026-11-04T00:35:03.529914+00:00",
+  "candidate": 3,
+  "candidate_sha256": "4c8bf9e122354fa77367cf358163a71eed76889be97520e157f9439579d67eed",
+  "consumed_before_child_work": true,
+  "kind": "phase3b-or1-admission-v1",
+  "real_provider_calls": 0,
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e"
+}

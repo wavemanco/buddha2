@@ -1,0 +1,31 @@
+{
+  "actual_pure_tests_sha256": "044bd6cc71e3ab011dbb85906d35a159433ca6129c39a28e48fbc23f9bd621bd",
+  "affected_file_sha256": {
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py": "9410fc41831c0644f4edf7569c5b2945b64ea6bcc34877366e1a828a2b89e407",
+    "followups/phase3b_seq2_v1/boundary_contract.py": "9c9b2a561ae8ba0fa848d880a65a858bb4fefc59c8ca3f0dc84be2ba1bcd19db",
+    "followups/phase3b_seq2_v1/host_checks.py": "918d30918ff2e7e401c834e3ff64ddda332805dfb282db24973b05437011cb01",
+    "followups/phase3b_seq2_v1/test_boundary_compatibility_s2.py": "b8878a06c916b805bc93af56f6c7bdb4c33b0bc0a9b566e5d7899d1ac0596abb",
+    "followups/phase3b_seq2_v1/workflow.py": "3e7b02396ca25c94fc8ad55b26e4aa3b5c83450253af6dc25191904153953704"
+  },
+  "before_edit_preservation_receipt_sha256": "b08b65a0225fc561d9c4402a41d2b7dbdd96493a8a02fe943ccb1a4cfecd897e",
+  "compatibility_plan_path": "evidence/phase3b-or1-v1/compatibility-plan-v3.json",
+  "compatibility_plan_sha256": "6c85fbe180dfac3b65f060a4e2efd8a5cee63ad4306f98a87b3274fa8e842f92",
+  "findings": [
+    "Actual3pure build_snapshot/validate_projection tests prove3synthetic first-targets/9missingfuturetargets, no slots/requests and unchanged in-memory inputs. Unclosed/missing assessment classification and absent/empty review reject. No canonical synthetic state, Docker, workflowrun or provider activity is written.",
+    "Predeclared empty core negative calls real _visibility_checkpoint and requires complete honest reports, failed projection with structured ProjectionError and no snapshot/request/ACK/owner/journal/generation. This actual integration remains required after freeze; it is not inferred here.",
+    "Existing projection_error_type propagation preserves admission rules. Both real positive handshakes remain mandatory only in actual freshS13 after real review/assessment classification; strict request/claimed owner/ACK guard and proof hashes preserve all existing I1 checks.",
+    "Current five-file plan hashes are independently verified after explicit brief freeze. Stale v1/v2 hashes were rejected during moving implementation and produced no review receipt or repeated tests. Full config/operator/source/counter wiring is outside this milestone and still needs independent review.",
+    "The sanitized host Ruff probe failed because the module is absent; this failure remains recorded and is not called a pass. Required actualpure tests pass; formal current-source H1 static checks remain mandatory."
+  ],
+  "kind": "phase3b-or1-independent-compatibility-milestone-v1",
+  "next": "Freeze and review versioned OR1 source/commands/counters before integration; obey bounded candidate/main/S13/saved/cold/time controls.",
+  "observed_at_utc": "2026-11-03T23:39:07.299047+00:00",
+  "packet_accepted": false,
+  "passed": true,
+  "real_keys_or_paid_authorized": false,
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_repeated_by_reviewer": false,
+  "scientific_complete": false,
+  "scope": "Initial compatibility code/method/cases and actual3puretests only. Full SourceMap deliberately unbound to avoid circularity when receipt becomes source input. Not source/candidate/gate/packet acceptance.",
+  "source_or_candidate_accepted": false
+}

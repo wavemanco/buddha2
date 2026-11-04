@@ -1,0 +1,74 @@
+{
+  "Docker_calls": 0,
+  "kind": "phase3b-la1-tree-probe-v1",
+  "launcher_sha256": "db4c110bb3de0daa4a5c52c5e51fbdeb44538ccd4015f9c3fc22a5ead253431f",
+  "outcomes": [
+    {
+      "case": "timeout",
+      "owners": {
+        "driver_pid": {
+          "classification": "absent",
+          "error": 87,
+          "pid": 51416,
+          "verified": true
+        },
+        "grandchild_pid": {
+          "classification": "absent",
+          "error": 87,
+          "pid": 17244,
+          "verified": true
+        }
+      },
+      "passed": true,
+      "result": {
+        "cancelled": false,
+        "child_returncode": 1,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 124,
+        "output": "{\"driver_pid\": 51416, \"grandchild_pid\": 17244}\r\n",
+        "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogNTE0MTYsICJncmFuZGNoaWxkX3BpZCI6IDE3MjQ0fQ0K",
+        "pid": 51416,
+        "settled": true,
+        "started": true,
+        "timed_out": true,
+        "tree_stop_exit_code": 0
+      }
+    },
+    {
+      "case": "cancellation",
+      "owners": {
+        "driver_pid": {
+          "classification": "absent",
+          "error": 87,
+          "pid": 13256,
+          "verified": true
+        },
+        "grandchild_pid": {
+          "classification": "absent",
+          "error": 87,
+          "pid": 70344,
+          "verified": true
+        }
+      },
+      "passed": true,
+      "result": {
+        "cancelled": true,
+        "child_returncode": 1,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 130,
+        "output": "{\"driver_pid\": 13256, \"grandchild_pid\": 70344}\r\n",
+        "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogMTMyNTYsICJncmFuZGNoaWxkX3BpZCI6IDcwMzQ0fQ0K",
+        "pid": 13256,
+        "settled": true,
+        "started": true,
+        "timed_out": false,
+        "tree_stop_exit_code": 0
+      }
+    }
+  ],
+  "passed": true,
+  "project_workflows": 0,
+  "provider_calls": 0
+}

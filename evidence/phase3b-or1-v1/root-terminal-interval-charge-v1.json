@@ -1,0 +1,12 @@
+{
+  "actor": "/root",
+  "allocated_within_existing_unreleased_600_seconds": true,
+  "already_charged_hold": "evidence/phase3b-or1-v1/terminal-publication-hold-v1.json",
+  "conservative_seconds": 28,
+  "existing_total_hold_seconds_unchanged": 1129,
+  "final_guard": "Require metered post-boundary actual delta PLUS this28-second conservative interval to be at most600; retain the whole terminalhold unreleased.",
+  "interval_end_utc": "2026-11-04T00:54:03.176857+00:00",
+  "interval_start_utc": "2026-11-04T00:53:35.414340+00:00",
+  "kind": "phase3b-or1-terminal-hold-allocation-v1",
+  "reason": "Entire bounded WAIT-marked terminal coordination interval conservatively charged; no exact focus invented."
+}

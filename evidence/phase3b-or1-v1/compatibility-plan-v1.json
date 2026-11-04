@@ -1,0 +1,32 @@
+{
+  "actual_pure_test_receipt_sha256": "044bd6cc71e3ab011dbb85906d35a159433ca6129c39a28e48fbc23f9bd621bd",
+  "actual_pure_tests": "evidence/phase3b-or1-v1/compatibility-tests-v1.json",
+  "empty_current_source_case": "First frozen candidate compatibility entry calls actual boundary-only _visibility_checkpoint: honest canonicalreportscomplete, projectionfailed/ProjectionError, no snapshot/request/ACK/owner/journal/generation; independent source/cases review before integration",
+  "frozen_campaign_started": false,
+  "kind": "phase3b-or1-compatibility-milestone-plan-v1",
+  "limits": {
+    "S13_starts": 2,
+    "aggregate_seconds": 10800,
+    "candidate_versions": 3,
+    "closure_reserve_seconds": 1800,
+    "cold_replays": 2,
+    "compatibility_milestone_seconds": 1800,
+    "main_starts": 2,
+    "saved_replays": 2
+  },
+  "new_registry_or_fixture_ledger": false,
+  "not_ready_contract": "False/missing first_assessments_closed or empty/missing engineering_review rejects projection",
+  "positive_integration": "Mandatory actual freshS13 real engineeringreview+three closedfirstassessments before first-pair; realclosure; structural autoACKdisabled. Both SDK-freeI1 exports/realACKs/claimedowner/corestatus/request hashes+all existingproofs required.",
+  "provider_calls": 0,
+  "ready_contract": "fixture_records(first_only=True,no_calls=True) only purebuild/validate; three synthetic scored/nine missing, zero requests; never injected canonical scores/review/readiness",
+  "real_keys": false,
+  "recorded_at_utc": "2026-11-03T23:36:17.869919+00:00",
+  "retained_negatives": "existingVisibilitySettlementTests and16actualhostnegativecases, boundary-only generation/grant denial",
+  "source_sha256": {
+    "evidence/phase3b-seq2-c2-v1/run_boundary.py": "a1048cffdccbdf95833244caf9ee8a2f920cc5f4c8bce42db7b704284a3de9eb",
+    "followups/phase3b_seq2_v1/boundary_contract.py": "097ecfd93d684ef632b537cb49e1bbe17354accc3ac66a14e850bd0d0ece83e3",
+    "followups/phase3b_seq2_v1/host_checks.py": "918d30918ff2e7e401c834e3ff64ddda332805dfb282db24973b05437011cb01",
+    "followups/phase3b_seq2_v1/test_boundary_compatibility_s2.py": "b8878a06c916b805bc93af56f6c7bdb4c33b0bc0a9b566e5d7899d1ac0596abb",
+    "followups/phase3b_seq2_v1/workflow.py": "3e7b02396ca25c94fc8ad55b26e4aa3b5c83450253af6dc25191904153953704"
+  }
+}

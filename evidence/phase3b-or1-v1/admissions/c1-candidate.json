@@ -1,0 +1,14 @@
+{
+  "actual_failure_sha256": "25400a82994d1def2148726ccc50025d85325fee78007d1406bc58c909d271b7",
+  "admission": "candidate",
+  "admitted_at_utc": "2026-11-03T23:53:44.186552+00:00",
+  "candidate": 1,
+  "candidate_sha256": "e0c1ffc9280c75e5a1e79b58fe009cd9f4c164d5017749dcd6da274f7734da21",
+  "consumed_before_child_work": true,
+  "entry_status": "failed_before_child",
+  "kind": "phase3b-or1-admission-v1",
+  "real_provider_calls": 0,
+  "receipt_origin": "Controller explicit conservative count after operator counter write was rejected; no child ever started.",
+  "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+  "timestamp_basis": "Controller observed actual failedreleaseentry; not an invented prior operator receipt timestamp."
+}

@@ -1,0 +1,29 @@
+{
+  "candidate_or_gate_accepted": false,
+  "conditions": [
+    "Controller alone executes exactonecomponent. Any unexpectedprivacy/containment/owner uncertainty hardstopsOR1; do not alter expectedguards/errors afterfailure to claimpass.",
+    "Use currentnewOR1ledger minus allunreleasedholds (529 currentlyknown), progress60/120minutes and >=1800second/task-basedclosure reserve. No main/candidate/S13/saved/cold budget consumed by this generation-freecomponent.",
+    "Only after actualindependentcomponentoutcome may config3/v7/newsource/cases be frozen and prospectively reviewed. C2 remains failed/immutable; lastcandidate/main permissions remainbounded, all12/physical/extractedpositiveproofs unchanged."
+  ],
+  "file_sha256": {
+    "evidence/phase3b-or1-v1/path_domain_probe.py": "9dbd5a8df1ff659c0db7f49d940618649a16536c51c38694ca44913a14f2c1cc",
+    "evidence/phase3b-or1-v1/writer_domain_probe.py": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df",
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py": "b8747be47543d258921aed32d2ddc082a1fde108db8c7c079cd81f99070fb747"
+  },
+  "findings": [
+    "Sharedruntime_output first applies unchanged support.path (lexical/path/link guard), then requires exact workflow.BASE/currentverification and existingdirectory. Both main and saved use it; hostverify.output_path remains unchanged.",
+    "Actual component imports that same function, accepts preservedfailedv6 runtimepath under currentconfig2, rejects readonlyworkspace hostalias, BASEroot, sibling, traversal and real symlink by actuallinkguard, and proves oldhostvalidator still rejects/results. ContractError is ValueError, so typed negative expectations match real guards.",
+    "Three named failedv6 sentinel hashes are checked unchanged before/after. Only a temporary component-output symlink is created/removed; no canonical fixture/state/ledger/workflow.run/model/provider/admission is manufactured.",
+    "Owned driver is byte-exact authenticated8ba0023f, already reviewed actual NETnone/ROsource/exactmount/resources and bounded create/inspect120execute/cleanup/specificNoSuchObject. Replacement is only OUT+PROBE for this explicitly reviewed component; no positive success-return patch.",
+    "Expanded source audit found no othersame wrong-domain downstreamcall: H1verifyinside/record/save/preservation/capacity/supervised/seal use suppliedruntimeoutputs; host windows/from_container/container_args usehostpaths; I1separates/snapshot and/out."
+  ],
+  "keys_paid_authorized": false,
+  "kind": "phase3b-or1-runtime-path-component-prospective-review-v1",
+  "kit_packet_scientific_accepted": false,
+  "observed_at_utc": "2026-11-04T00:19:48.746536+00:00",
+  "passed": true,
+  "plan_sha256": "81a7ed079d8e03f5d31f78670c0aa194a040601b498dc464b115cee1a36826d9",
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_by_reviewer": false,
+  "scope": "One cheap prefreeze actualH1 same-production-runtime_output domain component, not releasecandidate3/fullgate acceptance."
+}

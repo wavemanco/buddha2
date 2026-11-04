@@ -10,7 +10,16 @@ from typing import Any
 
 from buddha2.artifacts import file_hash
 from followups.phase3b_seq2_v1 import verify, workflow
-from followups.phase3b_seq2_v1.support import PRIVATE, checked, read, require, safe, source_identity
+from followups.phase3b_seq2_v1.support import (
+    PRIVATE,
+    checked,
+    path,
+    read,
+    recovery_config,
+    require,
+    safe,
+    source_identity,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 SAVED_WORKER = ROOT / (
@@ -93,13 +102,21 @@ def saved_replay(output: Path) -> int:
     return 0 if details["passed"] is True else 1
 
 
+def runtime_output(raw: str) -> Path:
+    """Contained entry: exact runtime namespace, never the host path gate."""
+    output = path(Path(raw))
+    require(output == workflow.BASE / recovery_config()["verification"] and output.is_dir(),
+            "contained acceptance needs its exact existing verification directory")
+    return output
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--phase", choices=("main", "replay"), required=True)
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
-    output = verify.output_path(args.output, existing=True)
-    require(output.name == "verification-v4", "C2 requires its fresh verification root")
+    output = runtime_output(args.output)
+    require(output.name == recovery_config()["verification"], "OR1 requires its current fresh verification root")
     if args.phase == "replay":
         return saved_replay(output)
     require(not (output / "source-before.json").exists(), "main acceptance already attempted")

@@ -1,0 +1,39 @@
+{
+  "candidate": 3,
+  "candidate_file_count": 131,
+  "candidate_sha256": "4c8bf9e122354fa77367cf358163a71eed76889be97520e157f9439579d67eed",
+  "case_sha256": "da535c21c1fb19db83c95b833874c108aa5243e8079aadd594b89bc41caf35fd",
+  "checks": {
+    "all_131_candidate_raw_files_match": true,
+    "all_5_actual_Windows_primitive_ASTs_match": true,
+    "all_735_source_raw_files_match": true,
+    "canonical_14_authenticated_before_metadata": true,
+    "existing_admissions_candidate_2_main_1_S13_saved_cold_0": true,
+    "no_runtime_tests_or_container_started_by_reviewer": true,
+    "private_cache_paths_read": 0,
+    "retained_stream_copies_read": 0,
+    "source_digest_recomputed": true,
+    "verification_v7_absent": true
+  },
+  "findings": [
+    "ExactC2snapshot diff shows sole behavioral correction sharedruntime_output for BOTHcontainedmain+saved: existing support.path with lexicalprivate/traversal/root/link guards, then exact workflow.BASE/currentconfig verification and existingdirectory. HOSTverify.output_path remains unchanged. No path normalization or broadenedruntimewrite domain.",
+    "Expanded trace covers wrapper->verify.inside->source/history/static/tests/capacity/main records and separately typeddeny savedrun/snapshot/report; output record/save use supplied runtimepath. HOSTwindows andhostorchestration retain HOSTvalidation; H1supervised/seal use actual/results path. HOSTcounter write remains exactROOTsafe write_once. Otherchanged support/verify bytes only provenance/staticinput additions.",
+    "Actual same-production-function H1domain proof3e2ce and immutableC2failure/preservation are bound; cfg3/v7 is fresh binding after that component, not replay of failedC2. Main/S13/saved/cold not admitted yet. SourceMap has no removed paths, exactly14receipt-authenticated canonical originals, zero copiedstreams; candidate131 ordinaryfile hashes allmatch.",
+    "Commands/cases preserve strict all12, actualpositive first/closure S13 I1/core/ACK/claimedowner proofs after actual engineering readiness, existing clocks/caps, exactowner cleanup, extraction/cold controls, originalscience andproviderlogic. Source-bound archivedworker/packager unchanged from C2.",
+    "This is lastallowedcandidate and lastmain entry. Currentcounters2candidates/main1 leave C3/main2 once; failureterminal, noautomaticrepeat. Controller must enforce sharedmeter plus529holds, >=1800closure or larger taskreserve before admissions, actuallyrunningS13 and exact source/study bindings."
+  ],
+  "kind": "phase3b-or1-independent-prospective-acceptance-v1",
+  "observed_at_utc": "2026-11-04T00:29:55.209070+00:00",
+  "passed": true,
+  "remaining_required": [
+    "Actual fresh expectednegative boundary and complete current-source12groups",
+    "Independent final source/history/gate acceptance on actual main and separately boundS13 evidence",
+    "Versioned physical archive rawSHA/CRC/inventory and actual extracted-only denyguarded cold replay, inputs unchanged/eightreports identical/exactowners absent",
+    "Offline-only closure/publication; no keys or paid transition"
+  ],
+  "reviewer": "/root/s2_a1_source_review",
+  "scope": "Prospective current-source code, command, domain, counter and guard review only; not actual gate/source/kit/packet/scientific acceptance.",
+  "source_count": 735,
+  "source_map_raw_sha256": "139a9fc280e7ae464e083cb422168cf34f00c94b5c92c4af9230eda2994f2596",
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e"
+}

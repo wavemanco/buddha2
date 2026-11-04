@@ -1,0 +1,98 @@
+{
+  "candidate1": "Failed before child at evidence-writer domain guard; preserved705/source/history, conservativecandidate1consumed; eligible classification5fb7...",
+  "capacity_decision": "ContinuewithinOR1 onlywhileactualnextslice+closurefits. Automatedwallmaybehours, no clockextension or extraadmissions. Main/S13 eachstilltwoavailable, versions2/3 remain.",
+  "counts": {
+    "S13": 0,
+    "candidate": 1,
+    "cold": 0,
+    "main": 0,
+    "saved": 0
+  },
+  "current": "NarrowROOT-scoped evidencewrite_once repair, actualWindowsoutsideBASE+exclusive unittestPASSED68a01..., prospectivecontaineddomaincomponentPASS640bd... awaitingactualrun; no secondcandidate frozen yet.",
+  "effective_remaining_seconds": 7302.213983,
+  "effective_used_seconds": 3497.7860170000004,
+  "estimate_total_seconds": 4750,
+  "initial_compatibility_pass": true,
+  "kind": "phase3b-or1-sixty-minute-progress-v1",
+  "meter": {
+    "active_seconds": 3061.786017,
+    "actors": [
+      {
+        "active_seconds": 1265.262464,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 21
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 682.617158,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "wait",
+        "records": 25
+      },
+      {
+        "active_seconds": 958.881535,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 31
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-03T23:59:48.072901+00:00",
+    "remaining_seconds": 7738.213983,
+    "within_limit": true
+  },
+  "next": [
+    "actualcontaineddomaincomponent",
+    "newsourcev6/candidate2 fullreview",
+    "emptynegative thenmain/saved/Windows/S13/all12/physicalcold",
+    "offlineclosurepublicationstop"
+  ],
+  "observed_at_utc": "2026-11-03T23:59:48.106530+00:00",
+  "paid_transition": false,
+  "provider_calls": 0,
+  "real_keys": false,
+  "remaining_focused_seconds_estimate": {
+    "S13supervision_reviews_hostchecks": 1000,
+    "candidate2preparation_static_and_independentreview": 650,
+    "component_and_main_saved_windows_operation": 350,
+    "protectedclosure_reporting_publication": 1800,
+    "sourcegate_archive_physicalcoldacceptance": 950
+  },
+  "unreleased_hold_seconds": 436,
+  "unreleased_holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "controller-postfailure-hold-v1.json": {
+      "seconds": 33,
+      "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+    },
+    "reviewer-candidate-handoff-hold-v1.json": {
+      "seconds": 23,
+      "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  }
+}

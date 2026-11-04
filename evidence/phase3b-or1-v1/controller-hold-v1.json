@@ -1,0 +1,9 @@
+{
+  "end": "2026-11-03T23:41:21.362656+00:00",
+  "kind": "phase3b-or1-bounded-controller-hold-v1",
+  "prior_holds_seconds": 120,
+  "reason": "Entire bounded interval includes immediate inline helper SyntaxError and brief correction reasoning before ACTIVE; no unit/container/model command entered. Conservative interval, no precision claim.",
+  "reserved_seconds": 28,
+  "start": "2026-11-03T23:40:53.761287+00:00",
+  "total_holds_seconds": 148
+}

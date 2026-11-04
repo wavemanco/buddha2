@@ -1478,6 +1478,7 @@ def _visibility_checkpoint(study_path, study, grant_path, fixture, checkpoint, *
             canonical_summary=built.get("summary"),
             visibility_status=built["visibility_status"],
             canonical_error_type=built.get("canonical_error_type"),
+            projection_error_type=built.get("projection_error_type"),
         )
         if built["canonical_status"] != "complete" or not built["worker_stopped"]:
             canonical_failure = True

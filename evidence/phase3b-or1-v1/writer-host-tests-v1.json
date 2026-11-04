@@ -1,0 +1,32 @@
+{
+  "Docker_calls": 0,
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "followups.phase3b_seq2_v1.test_or1_admissions_s2"
+  ],
+  "kind": "phase3b-or1-actual-host-writer-unit-v1",
+  "operator_sha256": "b51495f7930fd43c347baff37b1c2d0bd169d4a841112cffd7c6c2717ee8b795",
+  "passed": true,
+  "production_admissions": 0,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T23:57:50.671048+00:00",
+  "result": {
+    "cancelled": false,
+    "child_returncode": 0,
+    "error": "test_count_before_work_per_candidate_and_global_caps (followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_count_before_work_per_candidate_and_global_caps) ... ok\r\ntest_host_evidence_writer_outside_runtime_base_is_exclusive (followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_host_evidence_writer_outside_runtime_base_is_exclusive) ... ok\r\ntest_unadmitted_or_changed_history_cannot_admit (followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_unadmitted_or_changed_history_cannot_admit) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.419s\r\n\r\nOK\r\n",
+    "error_bytes_base64": "dGVzdF9jb3VudF9iZWZvcmVfd29ya19wZXJfY2FuZGlkYXRlX2FuZF9nbG9iYWxfY2FwcyAoZm9sbG93dXBzLnBoYXNlM2Jfc2VxMl92MS50ZXN0X29yMV9hZG1pc3Npb25zX3MyLk9SMUFkbWlzc2lvblRlc3RzLnRlc3RfY291bnRfYmVmb3JlX3dvcmtfcGVyX2NhbmRpZGF0ZV9hbmRfZ2xvYmFsX2NhcHMpIC4uLiBvaw0KdGVzdF9ob3N0X2V2aWRlbmNlX3dyaXRlcl9vdXRzaWRlX3J1bnRpbWVfYmFzZV9pc19leGNsdXNpdmUgKGZvbGxvd3Vwcy5waGFzZTNiX3NlcTJfdjEudGVzdF9vcjFfYWRtaXNzaW9uc19zMi5PUjFBZG1pc3Npb25UZXN0cy50ZXN0X2hvc3RfZXZpZGVuY2Vfd3JpdGVyX291dHNpZGVfcnVudGltZV9iYXNlX2lzX2V4Y2x1c2l2ZSkgLi4uIG9rDQp0ZXN0X3VuYWRtaXR0ZWRfb3JfY2hhbmdlZF9oaXN0b3J5X2Nhbm5vdF9hZG1pdCAoZm9sbG93dXBzLnBoYXNlM2Jfc2VxMl92MS50ZXN0X29yMV9hZG1pc3Npb25zX3MyLk9SMUFkbWlzc2lvblRlc3RzLnRlc3RfdW5hZG1pdHRlZF9vcl9jaGFuZ2VkX2hpc3RvcnlfY2Fubm90X2FkbWl0KSAuLi4gb2sNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDMgdGVzdHMgaW4gMC40MTlzDQoNCk9LDQo=",
+    "exit_code": 0,
+    "output": "",
+    "output_bytes_base64": "",
+    "pid": 3444,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  },
+  "runtime_publish_guard_unchanged": true,
+  "test_sha256": "bff955340e68ddabee9151e91c4ac1214bdd3eb933eec5b032c34735ef91716f"
+}

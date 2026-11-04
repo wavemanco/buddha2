@@ -1,0 +1,100 @@
+{
+  "API_cap_usd": 0,
+  "authority": "evidence/phase3b-or1-v1/authority.json",
+  "before_each_expensive_admission": "Authenticate candidate/source/review; evaluate newOR1aggregate+ALLunreleasedholds+taskbasedreview/supervision+>=1800closure reserve. No oldtime reset.",
+  "candidate": 1,
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "<phase>"
+  ],
+  "counter_rules": {
+    "S13": {
+      "entry": "operator host beforeactualsupervisedlauncher/modelwork",
+      "limit": 2
+    },
+    "candidate": {
+      "entry": "operator boundary beforechild",
+      "limit": 3
+    },
+    "cold": {
+      "entry": "controller invokes sourceboundoperator admit(cold) beforeindependentreplay",
+      "limit": 2
+    },
+    "main": {
+      "entry": "operator main beforecontainer/modelwork",
+      "limit": 2
+    },
+    "saved": {
+      "entry": "operator replay beforechild",
+      "limit": 2
+    }
+  },
+  "existing_scientific_conditions_models_prompts_strategy_tasks_caps_upstream_unchanged": true,
+  "host_extra_arguments": [
+    "--supervisor-agent",
+    "<new-actually-running-keyless-S13>"
+  ],
+  "inner_clocks": {
+    "HTTP": 240,
+    "boundary_core_negative": 600,
+    "boundary_host_negatives": 120,
+    "boundary_prepare": 600,
+    "boundary_pure_negatives": 120,
+    "export": 600,
+    "main": 21600,
+    "native": 600,
+    "original_S13_mock_lifecycle": 10800,
+    "review": 600,
+    "saved": 7200,
+    "startup": 1800
+  },
+  "kind": "phase3b-or1-campaign-cases-v1",
+  "negative_proof": "Emptyboundaryremainsgeneration-denied and expectedProjectionError/firstpairfailed; honestcanonicalreportscomplete; no snapshot/request/ACK/owner/journal/export. Existing3settlementpuretests+newpurecompatibility and16actualhostnegatives remain.",
+  "one_each_per_candidate": true,
+  "operator_timeout_seconds": {
+    "boundary": 4800,
+    "host": 86400,
+    "main": 22200,
+    "replay": 7800,
+    "seal": 7800,
+    "supervised": 7800,
+    "windows": 7800
+  },
+  "order": [
+    "actual empty-boundary expectednegative+pure/strict negatives",
+    "fullmain/static/capacity/Linuxsuite/semantics/preservation",
+    "actualsavedtypeddenyworkflow.run/snapshot8reportbyteidentity",
+    "actualWindowsonlytests",
+    "freshS13prepare",
+    "actualfreshkeylessS13fulllaunch+reviews+bothrealI1ACKandclaimedowners,Inspect/nativefixtures/regression",
+    "all12gate",
+    "independentsourcegate",
+    "immutablephysicalarchiveCRCinventory",
+    "oneextractedcoldreplay",
+    "offlineclosurepublicationstop"
+  ],
+  "packet": "Sourceboundpackager--acceptance evidence/phase3b-or1-v1/candidate-1-independent-acceptance.json --packet-stem offline-kit-or1-c1; archivedreview/coldcodefrozenbeforemain/savedinventory,source/studyboundafteractualprepare. Nooverwrites.",
+  "paid_transition": false,
+  "positive_proof": "OnlyactualfreshS13aftergenuinefixtureengineeringreview+closedfirstassessments; structuralautoACKdisabled; realproducerrequest,SDKfreeI1,resultACK,claimedowner,_export_owner_settled,corestatus/request/ownerhashes+existingroundtripcleanuprequired.",
+  "prior_failure_preservation": "LA1source683/historypreserved; oldLA1failed,closedledgers/holdsretained; canonical14receipt-authbeforemetadata/0auxstreamcopies.",
+  "real_keys": false,
+  "recorded_at_utc": "2026-11-03T23:44:47.671951+00:00",
+  "recovery": "Eligibleguard-preserving engineeringdefect: stopcandidate,settle/preserve,independentlyclassifyandfreeze nextsource/root(v6/v7) withallcurrent-sourcechecks; noretag. Anyintegrity/privacy/ownership/realexternalattempt/criteriaweaken/timecounterimpossibilityhardstop.",
+  "required_groups": [
+    "static",
+    "matrix",
+    "replay",
+    "tests",
+    "windows-tests",
+    "launcher",
+    "inspect",
+    "preservation",
+    "regression",
+    "native-fixtures",
+    "semantics",
+    "supervision"
+  ],
+  "verification": "verification-v5"
+}

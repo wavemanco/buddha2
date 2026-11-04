@@ -1,0 +1,56 @@
+{
+  "Docker_calls": 0,
+  "kind": "phase3b-la1-outer-status-probe-v1",
+  "launcher_sha256": "db4c110bb3de0daa4a5c52c5e51fbdeb44538ccd4015f9c3fc22a5ead253431f",
+  "outcomes": [
+    {
+      "case": "outer-status-0",
+      "error": "",
+      "managed": {
+        "cancelled": false,
+        "child_returncode": 0,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 0,
+        "output": "",
+        "output_bytes_base64": "",
+        "pid": 38752,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      },
+      "outer_returncode": 0,
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      }
+    },
+    {
+      "case": "outer-status-7",
+      "error": "",
+      "managed": {
+        "cancelled": false,
+        "child_returncode": 7,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 7,
+        "output": "",
+        "output_bytes_base64": "",
+        "pid": 49420,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      },
+      "outer_returncode": 7,
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      }
+    }
+  ],
+  "passed": true,
+  "project_workflows": 0,
+  "provider_calls": 0
+}

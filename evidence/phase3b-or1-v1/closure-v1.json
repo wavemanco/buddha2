@@ -1,0 +1,106 @@
+{
+  "API_cost": 0,
+  "accounting_method_proposed": "KeepallACT/WAIT/DONEactualrecordsprospectivelythroughend andretainexistingholds. Parentmayactivateoneadditionalunreleased1200terminalpublication/coordinationhold beforefinalpublication; addittoallactualactiveelapsed, conservativelydoublecharginganyoverlap. Checknewsumunder10800beforeclosureactions. No reset/release/extraallowance; hold is a cappedproposal, not measuredfocus or authorityforruntime.",
+  "all_existing_unreleased_holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-domain-planning-hold-v1.json": {
+      "seconds": 93,
+      "sha256": "0f2066c78d212cf260ba0928b09c275b33b2e49430cefa4f3de3f9599f533026"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "controller-postfailure-hold-v1.json": {
+      "seconds": 33,
+      "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+    },
+    "reviewer-candidate-handoff-hold-v1.json": {
+      "seconds": 23,
+      "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  },
+  "counts": {
+    "S13": 0,
+    "candidate": 3,
+    "cold": 0,
+    "main": 2,
+    "saved": 0
+  },
+  "effective_used_as_of_proposal_seconds": 7254.354389,
+  "existing_hold_seconds": 529,
+  "final_conservative_bound_if_full_proposal_used_seconds": 9624.354389,
+  "independent_stopped_receipt_sha256": "04c8abcb3523b1716509c48e52e72a4833b7694490eb6f9ca6f9b78fa18535be",
+  "kind": "phase3b-or1-closure-accounting-proposal-v1",
+  "meter_as_of_proposal": {
+    "active_seconds": 6725.354389,
+    "actors": [
+      {
+        "active_seconds": 2589.959322,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 63
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 230.904165,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "active",
+        "records": 5
+      },
+      {
+        "active_seconds": 1797.837775,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 45
+      },
+      {
+        "active_seconds": 1951.628267,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 114
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:47:16.466534+00:00",
+    "remaining_seconds": 4074.645611,
+    "within_limit": true
+  },
+  "not_claimed_exact_final_focus": true,
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "only_remaining_actions": "Finalstoppedproof/prose/accounting andreviewedGitpublication; no codefix/test/candidate/main/S13/replay/cold/key/provider work.",
+  "prospective_hold_activated_by_this_file": false,
+  "prospective_terminal_uncertainty_hold_proposed_seconds": 1200,
+  "recorded_at_utc": "2026-11-04T00:47:16.474198+00:00",
+  "remaining_as_of_proposal_seconds": 3545.645611,
+  "remaining_closure_max_focused_seconds_proposed": {
+    "controllerfinalindex_handoff": 90,
+    "parentprose_accounting_commit_review": 360,
+    "peerfinaladdendumreview": 120,
+    "publisherstaging_review_commit_push": 600
+  },
+  "remaining_closure_total_proposed": 1170,
+  "status": "stopped-incomplete; finalpublicationpending"
+}

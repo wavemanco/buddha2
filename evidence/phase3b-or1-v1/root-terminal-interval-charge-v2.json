@@ -1,0 +1,12 @@
+{
+  "actor": "/root",
+  "allocated_within_existing_unreleased_600_seconds": true,
+  "already_charged_hold": "evidence/phase3b-or1-v1/terminal-publication-hold-v1.json",
+  "conservative_seconds": 86,
+  "cumulative_allocated_seconds": 114,
+  "existing_total_hold_seconds_unchanged": 1129,
+  "interval_end_utc": "2026-11-04T00:55:58.456239+00:00",
+  "interval_start_utc": "2026-11-04T00:54:33.122532+00:00",
+  "kind": "phase3b-or1-terminal-hold-allocation-v2",
+  "reason": "Entire bounded WAIT-marked interval includes terminal coordination; conservatively charge all rather than invent exact focus."
+}

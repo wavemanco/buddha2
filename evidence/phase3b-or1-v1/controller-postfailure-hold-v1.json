@@ -1,0 +1,9 @@
+{
+  "end": "2026-11-03T23:52:50.639330+00:00",
+  "kind": "phase3b-or1-bounded-controller-postfailure-hold-v1",
+  "prior_holds_seconds": 403,
+  "reason": "Entire bounded WAIT interval after operator entry failed includes automated return and correction classification reasoning before timelyACTIVE. Preserveconservatively; not exactfocus.",
+  "reserved_seconds": 33,
+  "start": "2026-11-03T23:52:17.795553+00:00",
+  "total_holds_seconds": 436
+}

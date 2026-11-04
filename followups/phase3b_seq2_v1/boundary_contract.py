@@ -1,10 +1,8 @@
-"""Generation-free real H1 -> host -> I1 checkpoint regression.
+"""Generation-free expected negative and strict host contract regression.
 
-Run prepare/core in the ordinary inspected H1 runtime and host on the keyless
-host concurrently. This uses a fresh supervised fixture, not a generated pair.
-Its canonical reports truthfully contain twelve missing targets. Its explicit
-boundary-only identity is denied ordinary workflow and provider dispatch, and
-is distinct from the later full supervised fixture. No relocation is needed.
+The empty boundary-only study must be rejected before an export request while
+its canonical reports remain honest. Pure prepared-unit negatives are separate.
+Real positive first-pair and closure handshakes are required from fresh S13.
 """
 from __future__ import annotations
 
@@ -14,7 +12,7 @@ import json
 import time
 from pathlib import Path
 
-from .snapshot import VISIBILITY_OWNER_KIND, VISIBILITY_REQUEST_KIND, VISIBILITY_RESULT_KIND
+from .snapshot import VISIBILITY_OWNER_KIND, VISIBILITY_REQUEST_KIND
 from .support import path, publish, read, require
 
 CHECKPOINTS = ("first-pair", "closure")
@@ -47,45 +45,37 @@ def prepare(output: Path) -> dict:
 
 
 def core(output: Path) -> dict:
-    """Actual canonical spawn/snapshot, real host ACK consumption and settlement."""
+    """Expected negative: an empty fixture cannot claim first-pair readiness."""
     from . import workflow
 
     prepared = read(path(output / "prepared.json"))
     study_path, grant_path = Path(prepared["study_path"]), Path(prepared["grant_path"])
     study = workflow.load_study(study_path)
     require(study["fixture_supervision_rehearsal"] is True
-            and study["fixture_boundary_contract"] is True, "structural auto-ACK/nonboundary study forbidden")
+            and study["fixture_boundary_contract"] is True, "boundary-only study required")
     workflow.grant_for(study, grant_path, True)
     run, journal = workflow.paths(study, True)
     require(str(run) == prepared["run"] and str(journal) == prepared["journal"]
             and not journal.exists(), "boundary fixture has generated activity")
-    outcomes = []
-    for checkpoint in CHECKPOINTS:
-        directory = path(run / "visibility" / checkpoint)
-        require(not directory.exists(), "boundary checkpoint must be fresh")
-        # No fixture_ack, collect, snapshot, host result or settlement replacement.
-        status = workflow._visibility_checkpoint(study_path, study, grant_path, True, checkpoint)
-        request, ack = read(directory / "request.json"), read(directory / "result.json")
-        owner = read(directory / "ownership.json")
-        require(request["kind"] == VISIBILITY_REQUEST_KIND
-                and ack["kind"] == VISIBILITY_RESULT_KIND and owner["kind"] == VISIBILITY_OWNER_KIND,
-                "real boundary wire family differs")
-        require(status["canonical_status"] == status["visibility_status"] == "complete"
-                and status["worker_stopped"] is True and status["reports_published"] is True
-                and ack.get("exporter_stopped") is True and ack.get("cleanup_verified") is True
-                and owner.get("state") == "claimed" and owner.get("exporter_started") is True,
-                "real boundary did not finish with settled owners")
-        require(not journal.exists(), "boundary admitted a generation or assessment")
-        summary = status["canonical_summary"]
-        require(summary["fixture"] is True and summary["scientific_complete"] is False
-                and summary.get("attempts", 0) == 0, "partial fixture was misrepresented")
-        outcomes.append({"checkpoint": checkpoint, "status_sha256": _hash(directory / "status.json"),
-            "request_sha256": _hash(directory / "request.json"),
-            "result_sha256": _hash(directory / "result.json"),
-            "ownership_sha256": _hash(directory / "ownership.json")})
-    result = {"kind": "p3b-s2-boundary-core-v1", "passed": True,
-        "study_sha256": study["study_sha256"], "source_sha256": study["source_sha256"],
-        "fixture": True, "provider_calls": 0, "generations": 0, "outcomes": outcomes}
+    status = workflow._visibility_checkpoint(study_path, study, grant_path, True, "first-pair")
+    directory = path(run / "visibility/first-pair")
+    summary = status["canonical_summary"]
+    require(status.get("canonical_status") == "complete" and status.get("worker_stopped") is True
+            and status.get("reports_published") is True and status.get("report_status") == "complete"
+            and status.get("visibility_status") == "failed" and status.get("snapshot_sha256") is None
+            and status.get("projection_error_type") == "ProjectionError"
+            and summary.get("first_assessments_closed") is False
+            and not summary.get("engineering_review") and summary.get("attempts") == 0,
+            "empty fixture bypassed the actual first-pair projection contract")
+    require(not journal.exists() and not any((directory / name).exists()
+            for name in ("request.json", "result.json", "ownership.json", "snapshot")),
+            "empty fixture created request/export/generation activity")
+    result = {"kind": "p3b-s2-boundary-empty-negative-v1", "passed": True,
+        "expected_negative": True, "study_sha256": study["study_sha256"],
+        "source_sha256": study["source_sha256"], "fixture": True,
+        "provider_calls": 0, "generations": 0, "I1_exports": 0,
+        "status_sha256": _hash(directory / "status.json"),
+        "positive_proof_required_from": "fresh actual S13 first-pair and closure"}
     publish(path(output / "core-result.json"), result)
     return result
 

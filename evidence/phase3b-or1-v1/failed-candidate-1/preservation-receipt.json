@@ -1,0 +1,11 @@
+{
+  "canonical_originals": 14,
+  "kind": "phase3b-or1-failed-candidate1-preservation-v1",
+  "ordinary_copies": 691,
+  "recorded_at_utc": "2026-11-03T23:54:00.429675+00:00",
+  "retained_stream_copies": 0,
+  "runtime_owners": [],
+  "source_files": 705,
+  "source_history_unchanged": true,
+  "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b"
+}

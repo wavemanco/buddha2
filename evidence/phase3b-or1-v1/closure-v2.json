@@ -1,0 +1,85 @@
+{
+  "additional_work_scope": [
+    "final documentation and accounting",
+    "short independent final-document review",
+    "isolated public-mirror commit/push and read-only remote verification",
+    "final handoff"
+  ],
+  "aggregate_limit_seconds": 10800,
+  "all_unreleased_holds_seconds": 1129,
+  "closure_v1_proposal_retained": "evidence/phase3b-or1-v1/closure-v1.json",
+  "closure_v1_proposed_1200_hold_activated": false,
+  "counts": {
+    "S13": 0,
+    "candidate": 3,
+    "cold": 0,
+    "main": 2,
+    "saved": 0
+  },
+  "effective_used_at_boundary_seconds": 8025.525599,
+  "exact_final_focus_claimed": false,
+  "future_work_limit_basis": "All actors combined may add at most600 actual focused seconds from this metered boundary. The separate600 terminal charge remains unreleased. Verify the final metered delta after remote verification; do not treat this prospective upper bound as exact elapsed/focused time.",
+  "historical_OR1_unreleased_holds_seconds": 529,
+  "historical_billing_holds_released": false,
+  "historical_ledgers_reopened": false,
+  "independent_stopped_review_sha256": "04c8abcb3523b1716509c48e52e72a4833b7694490eb6f9ca6f9b78fa18535be",
+  "kind": "phase3b-or1-closure-accounting-v2",
+  "known_owners_settled": 10,
+  "maximum_additional_actual_focused_seconds": 600,
+  "maximum_effective_total_seconds": 8625.525599,
+  "meter_at_terminal_boundary": {
+    "active_seconds": 6896.525599,
+    "actors": [
+      {
+        "active_seconds": 2630.781529,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "done",
+        "records": 64
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 262.589569,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "wait",
+        "records": 6
+      },
+      {
+        "active_seconds": 1797.837775,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "done",
+        "records": 45
+      },
+      {
+        "active_seconds": 2050.291866,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 114
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:48:55.130133+00:00",
+    "remaining_seconds": 3903.474401,
+    "within_limit": true
+  },
+  "no_further_repair_rerun_or_paid_transition": true,
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "real_API_cost_usd": 0,
+  "real_provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T00:48:55.140420+00:00",
+  "source_files": 735,
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e",
+  "status": "stopped-execution-closed-terminal-publication-pending",
+  "terminal_hold_file_sha256": "6cd2221c821a45a9171b07a01a1e7effed83353e4621d0e40157727f33ec379e",
+  "terminal_hold_seconds": 600
+}

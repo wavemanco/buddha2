@@ -1,0 +1,114 @@
+--- review_packet_la1.py
++++ review_packet_or1.py
+@@ -12,7 +12,10 @@
+ 
+ ROOT = Path(r"C:\Users\arvik\code\research\Buddha2")
+ PREFIX = "phase3b-seq2-v1"
+-REVIEW = ROOT / "runs" / PREFIX / "verification-v4/external-reviews/packet-review-la1-v1"
++CANDIDATE = 0
++VERIFICATION = ""
++PACKET_STEM = ""
++REVIEW = Path()
+ SOURCE = ""
+ SOURCE_COUNT = 0
+ STUDY = ""
+@@ -99,9 +102,9 @@
+ 
+ def review():
+     # Exact paths, no arbitrary file selection or original-checkout dependency.
+-    archive = ordinary(ROOT / f"evidence/{PREFIX}/offline-kit-v1.zip")
+-    manifest_path = ordinary(ROOT / f"evidence/{PREFIX}/offline-kit-v1.manifest.json")
+-    acceptance_path = ordinary(ROOT / f"evidence/{PREFIX}/independent-acceptance.json")
++    archive = ordinary(ROOT / f"evidence/{PREFIX}/{PACKET_STEM}.zip")
++    manifest_path = ordinary(ROOT / f"evidence/{PREFIX}/{PACKET_STEM}.manifest.json")
++    acceptance_path = ordinary(ROOT / f"evidence/phase3b-or1-v1/candidate-{CANDIDATE}-independent-acceptance.json")
+     manifest_bytes, acceptance_bytes = manifest_path.read_bytes(), acceptance_path.read_bytes()
+     manifest, acceptance = parse(manifest_bytes), parse(acceptance_bytes)
+     need(manifest.get("passed") is True and manifest.get("mode") == "offline"
+@@ -114,9 +117,9 @@
+     for name, value in expected.items():
+         relative(name)
+         need(isinstance(value, str) and len(value) == 64 and all(c in "0123456789abcdef" for c in value), "invalid member hash")
+-    index_name = f"evidence/{PREFIX}/offline-kit-v1-index.json"
+-    study_name = f"runs/{PREFIX}/verification-v4/release/study.json"
+-    gate_name = f"runs/{PREFIX}/verification-v4/release/offline-gate.json"
++    index_name = f"evidence/{PREFIX}/{PACKET_STEM}-index.json"
++    study_name = f"runs/{PREFIX}/{VERIFICATION}/release/study.json"
++    gate_name = f"runs/{PREFIX}/{VERIFICATION}/release/offline-gate.json"
+     acceptance_name = acceptance_path.relative_to(ROOT).as_posix()
+     inventory = {}
+     with zipfile.ZipFile(archive) as zipped:
+@@ -159,7 +162,7 @@
+              and sha(zipped.read(gate_name)) == manifest["offline_gate_file_sha256"] == acceptance["offline_gate_file_sha256"]
+              and acceptance.get("passed") is True and zipped.read(acceptance_name) == acceptance_bytes, "full independent gate not accepted")
+         for ref in gate["checks"].values():
+-            need(isinstance(ref["path"], str) and ref["path"].startswith(f"/results/{PREFIX}/verification-v4/"), "gate reference escaped current verification")
++            need(isinstance(ref["path"], str) and ref["path"].startswith(f"/results/{PREFIX}/{VERIFICATION}/"), "gate reference escaped current verification")
+             name = "runs/" + ref["path"].removeprefix("/results/")
+             record = parse(zipped.read(name))
+             need(inventory[name] == ref["sha256"] and record.get("passed") is True
+@@ -167,7 +170,7 @@
+         policy = {"kind":"phase3b-s2-originals-only-source-snapshot-v1", "canonical_originals":streams,
+                   "offline_classification_receipt":{"path":RECEIPT,"sha256":RECEIPT_SHA}}
+         need(study["source_snapshot_policy"] == policy, "main snapshot policy mismatch")
+-        rehearsal_name = f"runs/{PREFIX}/verification-v4/operational-rehearsal/release/study.json"
++        rehearsal_name = f"runs/{PREFIX}/{VERIFICATION}/operational-rehearsal/release/study.json"
+         rehearsal = parse(zipped.read(rehearsal_name))
+         need(rehearsal["source"] == study["source"] and rehearsal["source_snapshot_policy"] == policy
+              and rehearsal["fixture_supervision_rehearsal"] is True, "rehearsal snapshot mismatch")
+@@ -176,7 +179,7 @@
+                 need(inventory.get(name) == value, "canonical source missing/changed in packet")
+                 if name not in STREAMS:
+                     need(inventory.get(release + "source/" + name) == value, "ordinary retained source missing/changed")
+-        extracted = ordinary(REVIEW / "extracted-la1", missing=True)
++        extracted = ordinary(REVIEW / "extracted-or1", missing=True)
+         need(not extracted.exists(), "review extraction must be fresh")
+         extracted.mkdir()
+         for item in infos:
+@@ -193,10 +196,10 @@
+     mountpoint = extracted / f"runs/{PREFIX}/packet-review-output"
+     need(not mountpoint.exists(), "review output mount point must be fresh")
+     mountpoint.mkdir()
+-    output = ordinary(REVIEW / "cold-output-la1", missing=True)
++    output = ordinary(REVIEW / "cold-output-or1", missing=True)
+     need(not output.exists(), "cold output must be fresh")
+     output.mkdir()
+-    script_name = f"runs/{PREFIX}/verification-v4/external-reviews/packet-review-la1-v1/cold_replay_la1.py"
++    script_name = f"runs/{PREFIX}/{VERIFICATION}/external-reviews/packet-review-or1-c{CANDIDATE}/cold_replay_or1.py"
+     need(script_name in inventory, "frozen independent cold worker absent from archive")
+     command = ["docker", "create", "--pull=never", "--network", "none", "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges", "--pids-limit", "256", "--memory", "4g", "--cpus", "2", "--entrypoint", "python",
+                "--mount", f"type=bind,source={extracted},target=/workspace,readonly",
+@@ -206,7 +209,7 @@
+                "-e", "PYTHONDONTWRITEBYTECODE=1", "-e", "PYTHONPATH=/workspace/src:/workspace/.upstream/harness2:/workspace",
+                "-e", "BUDDHA2_OUTPUT_ROOT=/results", "-e", f"BUDDHA2_IMAGE_ID={H1}", "-e", "BUDDHA2_OFFLINE=1",
+                "-e", "PHASE3A_OPENCODE=/opt/phase3a-opencode", "-e", "PHASE3A_BUN=/usr/local/bin/bun", H1,
+-               "-B", "/workspace/" + script_name, "--index-sha256", inventory[index_name], "--source-sha256", SOURCE, "--study-sha256", STUDY]
++               "-B", "/workspace/" + script_name, "--index-sha256", inventory[index_name], "--source-sha256", SOURCE, "--study-sha256", STUDY, "--candidate", str(CANDIDATE)]
+     result = {"kind":"phase3b-s2-independent-physical-review-v2", "reviewer":"/root/s2_a1_source_review",
+               "observed_at_utc":datetime.now(timezone.utc).isoformat(), "physical_review_passed":True,
+               "final_packet_accepted":False, "cold_replay_executed":False, "archive":manifest["archive"],
+@@ -216,8 +219,8 @@
+               "canonical_original_stream_count":14, "retained_stream_copies":0,
+               "extracted_root":str(extracted), "cold_output_root":str(output), "docker_create_argv":command,
+               "working_checkout_mounted":False, "real_provider_calls":0, "original_folder_accessed":False}
+-    save(REVIEW / "physical-review-la1.json", result)
+-    save(REVIEW / "cold-create-command-la1.json", {"argv":command, "execute_only_after_independent_owner_review":True})
++    save(REVIEW / "physical-review-or1.json", result)
++    save(REVIEW / "cold-create-command-or1.json", {"argv":command, "execute_only_after_independent_owner_review":True})
+     print(json.dumps({k:result[k] for k in ("physical_review_passed", "final_packet_accepted", "archive_sha256", "member_count", "extracted_root")}))
+ 
+ 
+@@ -227,8 +230,13 @@
+     parser.add_argument("--source-sha256", required=True)
+     parser.add_argument("--study-sha256", required=True)
+     parser.add_argument("--source-count", type=int, required=True)
++    parser.add_argument("--candidate", type=int, choices=(1, 2, 3), required=True)
+     args = parser.parse_args()
+     SOURCE, STUDY, SOURCE_COUNT = args.source_sha256, args.study_sha256, args.source_count
++    CANDIDATE = args.candidate
++    VERIFICATION = "verification-v" + str(CANDIDATE + 4)
++    PACKET_STEM = "offline-kit-or1-c" + str(CANDIDATE)
++    REVIEW = ROOT / "runs" / PREFIX / VERIFICATION / "external-reviews" / ("packet-review-or1-c" + str(CANDIDATE))
+     need(all(len(value) == 64 and all(c in "0123456789abcdef" for c in value) for value in (SOURCE, STUDY))
+          and SOURCE_COUNT > 0, "invalid prospective source/study binding")
+     review()

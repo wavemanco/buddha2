@@ -1,0 +1,21 @@
+{
+  "case": "success-argv",
+  "owned_child": {
+    "classification": "absent",
+    "error": 87,
+    "verified": true
+  },
+  "result": {
+    "cancelled": false,
+    "child_returncode": 0,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 0,
+    "output": "{\"argv\": [\"space value\", \"quote\\\"inside\", \"trailing\\\\\", \"Unicode café 雪\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+    "output_bytes_base64": "eyJhcmd2IjogWyJzcGFjZSB2YWx1ZSIsICJxdW90ZVwiaW5zaWRlIiwgInRyYWlsaW5nXFwiLCAiVW5pY29kZSBjYWbDqSDpm6oiXSwgImZvcmJpZGRlbl9zZW50aW5lbF9wcmVzZW50IjogZmFsc2UsICJyZXF1aXJlZF9lbnYiOiB7IlNZU1RFTVJPT1QiOiB0cnVlLCAiV0lORElSIjogdHJ1ZSwgIlBBVEgiOiB0cnVlfX0NCg==",
+    "pid": 11628,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "canonical_originals": 14,
+  "kind": "phase3b-or1-before-edit-preservation-v1",
+  "ordinary_copies": 669,
+  "recorded_at_utc": "2026-11-03T23:32:53.742843+00:00",
+  "retained_stream_copies": 0,
+  "source_files": 683,
+  "source_history_unchanged": true,
+  "source_sha256": "b461433c3c8e9443e6e57e8c00af86d596dbda6c92de69728da1e4fd669001fc"
+}

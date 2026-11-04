@@ -1,0 +1,6 @@
+{
+  "authority": "evidence/phase3b-or1-v1/authority.json",
+  "candidate": 3,
+  "kind": "phase3b-or1-release-config-v1",
+  "verification": "verification-v7"
+}

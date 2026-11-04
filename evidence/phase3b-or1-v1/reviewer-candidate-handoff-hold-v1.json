@@ -1,0 +1,13 @@
+{
+  "actor": "/root/s2_a1_source_review",
+  "additional_unreleased_hold_seconds": 23,
+  "current_fixed_holds_seconds": 403,
+  "from_last_wait_utc": "2026-11-03T23:51:19.816741+00:00",
+  "initial_milestone_unchanged": true,
+  "kind": "phase3b-or1-reviewer-conservative-effort-hold-v1",
+  "observed_at_utc": "2026-11-03T23:52:08.632111+00:00",
+  "prior_fixed_holds_seconds": 380,
+  "reason": "Candidate handoff preparation began while reviewer recordedWAIT; charge whole bounded uncertain interval, not precisefocus.",
+  "released": false,
+  "to_registered_active_utc": "2026-11-03T23:51:42.005181+00:00"
+}

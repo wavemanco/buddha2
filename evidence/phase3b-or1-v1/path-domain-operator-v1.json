@@ -1,0 +1,23 @@
+{
+  "helper_sha256": "b8747be47543d258921aed32d2ddc082a1fde108db8c7c079cd81f99070fb747",
+  "kind": "phase3b-or1-path-domain-operator-v1",
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T00:20:42.632321+00:00",
+  "release_admissions": 0,
+  "result": {
+    "cancelled": false,
+    "child_returncode": 0,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 0,
+    "output": "",
+    "output_bytes_base64": "",
+    "pid": 79048,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  },
+  "review_sha256": "8e6569ae0eacce426084ff2df307d7666419ad4c2efb70d9b8478999c83abe33",
+  "script_sha256": "9dbd5a8df1ff659c0db7f49d940618649a16536c51c38694ca44913a14f2c1cc",
+  "workflow_run_calls": 0
+}

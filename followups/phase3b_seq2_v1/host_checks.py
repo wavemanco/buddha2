@@ -11,7 +11,7 @@ from pathlib import Path
 from buddha2.artifacts import digest
 from followups.inspect_visibility_i1.paths import checked_path
 
-from .snapshot import canonical, utc
+from .snapshot import VISIBILITY_REQUEST_KIND, canonical, utc
 from .supervision import agent_name
 from .verify import (
     BINDINGS,
@@ -166,8 +166,17 @@ def supervision_checks(output: Path, main: dict, study: dict, run: Path, handoff
             raise ValueError("supervised review was skipped, auto-scripted or belongs to another actor")
     exports = []
     for name in ("first-pair", "closure"):
+        from .workflow import _export_owner_settled
         target = Path(handoff["export_outputs"][name])
         status, ack = sealed(run / "visibility" / name / "status.json"), read(run / "visibility" / name / "result.json")
+        request = read(run / "visibility" / name / "request.json")
+        owner = read(run / "visibility" / name / "ownership.json")
+        if (request.get("kind") != VISIBILITY_REQUEST_KIND
+                or request.get("study_sha256") != study["study_sha256"] or request.get("checkpoint") != name
+                or request.get("snapshot_sha256") != status.get("snapshot_sha256")
+                or owner.get("state") != "claimed" or owner.get("exporter_started") is not True
+                or not _export_owner_settled(request, owner, ack)):
+            raise ValueError("positive S13 handoff lacks its actual claimed/settled exporter")
         result, proof = read(target / "visibility-result.json"), read(target / "export/result.json")
         actual, cleanup = read(target / "actual-container.json"), read(target / "cleanup.json")
         from .inspect_adapter import IMAGE as INSPECT_IMAGE
@@ -183,6 +192,9 @@ def supervision_checks(output: Path, main: dict, study: dict, run: Path, handoff
                 or actual.get("read_only_root") is not True or cleanup.get("exit_code") != 0):
             raise ValueError("supervised timed Inspect handoff was not actually completed")
         exports.append({"checkpoint": name, "output": str(target), "result_sha256": sha(target / "visibility-result.json"),
+                        "request_sha256": sha(run / "visibility" / name / "request.json"),
+                        "ownership_sha256": sha(run / "visibility" / name / "ownership.json"),
+                        "core_status_sha256": sha(run / "visibility" / name / "status.json"),
                         "proof_sha256": sha(target / "export/result.json"), "cleanup_sha256": sha(target / "cleanup.json")})
     summary = read(run / "reports/final/summary.json")
     if (summary.get("study_sha256") != study["study_sha256"] or summary.get("fixture") is not True

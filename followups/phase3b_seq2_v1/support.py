@@ -115,6 +115,54 @@ def validate_authority() -> dict:
 
 
 SOURCE_INPUTS = (
+    "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md",
+    "evidence/phase3b-or1-v1/authority.json", "evidence/phase3b-or1-v1/effort.py",
+    "evidence/phase3b-or1-v1/release-config.json",
+    "evidence/phase3b-or1-v1/prior-source-la1/preservation-receipt.json",
+    "evidence/phase3b-or1-v1/compatibility-plan-v3.json",
+    "evidence/phase3b-or1-v1/compatibility-tests-v1.json",
+    "evidence/phase3b-or1-v1/compatibility-independent-review-v1.json",
+    "evidence/phase3b-or1-v1/initial-compatibility-source/test_boundary_compatibility_s2.py",
+    "evidence/phase3b-or1-v1/operator-unit-checks-v1.json",
+    "evidence/phase3b-or1-v1/operator-unit-checks-v2.json",
+    "evidence/phase3b-or1-v1/windows-probes-v1/final-result.json",
+    "evidence/phase3b-or1-v1/launcher_probe.py", "evidence/phase3b-or1-v1/probe_tree.py",
+    "evidence/phase3b-or1-v1/campaign-cases-v1.json",
+    "evidence/phase3b-or1-v1/campaign-cases-v2.json",
+    "evidence/phase3b-or1-v1/campaign-cases-v3.json",
+    "evidence/phase3b-or1-v1/candidate-2-main-failure.json",
+    "evidence/phase3b-or1-v1/candidate-2-independent-classification.json",
+    "evidence/phase3b-or1-v1/failed-candidate-2/preservation-receipt.json",
+    "evidence/phase3b-or1-v1/path_domain_probe.py",
+    "evidence/phase3b-or1-v1/path-repair-plan-v1.json",
+    "evidence/phase3b-or1-v1/path-domain-prospective-review-v1.json",
+    "evidence/phase3b-or1-v1/path-domain-operator-v1.json",
+    "evidence/phase3b-or1-v1/path-domain-independent-outcome-v1.json",
+    "runs/phase3b-seq2-v1/or1-path-domain-v1/create.json",
+    "runs/phase3b-seq2-v1/or1-path-domain-v1/inspection.json",
+    "runs/phase3b-seq2-v1/or1-path-domain-v1/execution.json",
+    "runs/phase3b-seq2-v1/or1-path-domain-v1/cleanup.json",
+    "runs/phase3b-seq2-v1/or1-path-domain-v1/result.json",
+    "evidence/phase3b-or1-v1/candidate-1-entry-failure.json",
+    "evidence/phase3b-or1-v1/candidate-1-independent-classification.json",
+    "evidence/phase3b-or1-v1/failed-candidate-1/preservation-receipt.json",
+    "evidence/phase3b-or1-v1/writer_domain_probe.py",
+    "evidence/phase3b-or1-v1/writer-repair-plan-v1.json",
+    "evidence/phase3b-or1-v1/writer-domain-prospective-review-v1.json",
+    "evidence/phase3b-or1-v1/writer-host-tests-v1.json",
+    "evidence/phase3b-or1-v1/writer-domain-operator-v1.json",
+    "evidence/phase3b-or1-v1/writer-domain-independent-outcome-v1.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/create.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/inspection.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/execution.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/cleanup.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/result.json",
+    "runs/phase3b-seq2-v1/or1-writer-domain-v1/allowed-runtime-marker.json",
+    "evidence/phase3b-or1-v1/windows-probes-v1/managed/process-result.json",
+    "evidence/phase3b-or1-v1/windows-probes-v1/outer/outer-status-result.json",
+    "evidence/phase3b-or1-v1/windows-probes-v1/tree/tree-result.json",
+    "runs/phase3b-or1-v1/packet-plan-v1/plan.json",
+    "runs/phase3b-or1-v1/packet-plan-v1/parent-plan-review-v1.json",
     "README.md", "README_LEGACY.md", ".gitattributes", "docs/ATTRIBUTIONS.md", "docs/RESEARCH_METHOD.md",
     ".gitignore", "LICENSE", "NOTICE", "docs/PUBLICATION.md",
     "third_party_licenses/INSPECT_AI.txt", "third_party_licenses/NOVELTYBENCH.txt",
@@ -276,7 +324,37 @@ def source_snapshot_policy(files: dict) -> dict:
             "offline_classification_receipt": {"path": OFFLINE_RECEIPT, "sha256": OFFLINE_RECEIPT_SHA}}
 
 
+def recovery_config() -> dict:
+    value = read(ROOT / "evidence/phase3b-or1-v1/release-config.json")
+    number = value.get("candidate")
+    require(value.get("kind") == "phase3b-or1-release-config-v1"
+        and type(number) is int and number in (1, 2, 3)
+        and value.get("verification") == "verification-v" + str(4 + number)
+        and value.get("authority") == "evidence/phase3b-or1-v1/authority.json",
+        "OR1 release configuration differs")
+    return value
+
+
 def source_identity() -> dict:
+    recovery_config()
+    or1_definition = "specifications/amendments/phase3b-bounded-offline-recovery-1.0.md"
+    or1 = read(ROOT / "evidence/phase3b-or1-v1/authority.json")
+    require(or1.get("definition") == or1_definition
+        and or1.get("definition_sha256") == file_hash(ROOT / or1_definition)
+        and or1.get("reply") == "Approve full OR1 execution (Recommended)"
+        and or1.get("aggregate_focused_engineering_limit_seconds") == 10800
+        and or1.get("initial_compatibility_limit_seconds") == 1800
+        and or1.get("minimum_closure_reserve_seconds") == 1800
+        and or1.get("maximum_frozen_candidates") == 3
+        and or1.get("maximum_main_matrix_starts") == 2
+        and or1.get("maximum_positive_S13_starts") == 2
+        and or1.get("maximum_saved_replays") == 2
+        and or1.get("maximum_extracted_cold_replays") == 2
+        and or1.get("prior_ledgers_reopened") is False
+        and or1.get("real_API_cost_usd_ceiling") == 0
+        and or1.get("real_keys_authorized") is False
+        and or1.get("paid_pilot_authorized") is False,
+        "OR1 bounded offline authority differs")
     la1_definition = "specifications/amendments/phase3b-launcher-offline-acceptance-1.0.md"
     la1 = read(ROOT / "evidence/phase3b-la1-v1/authority.json")
     require(la1.get("definition") == la1_definition

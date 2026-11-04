@@ -189,12 +189,12 @@ class VisibilitySettlementTests(unittest.TestCase):
                              ("state", "unclassified")):
             with self.subTest(owner_field=field), self.assertRaises(ContractError):
                 _export_owner_settled(request, {**owner, field: value}, ack)
-        for field, value in (("kind", "p3b-rp2-visibility-result-v1"),
+        for field, ack_value in (("kind", "p3b-rp2-visibility-result-v1"),
                              ("study_sha256", "c" * 64), ("checkpoint", "closure"),
                              ("snapshot_sha256", "d" * 64),
                              ("provider_calls", 1), ("exporter_stopped", False)):
             with self.subTest(ack_field=field), self.assertRaises(ContractError):
-                _export_owner_settled(request, owner, {**ack, field: value})
+                _export_owner_settled(request, owner, {**ack, field: ack_value})
         with self.assertRaises(ContractError):
             _export_owner_settled(request, owner, None)
 

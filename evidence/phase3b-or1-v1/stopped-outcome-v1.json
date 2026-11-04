@@ -1,0 +1,293 @@
+{
+  "I1_containers_started": 0,
+  "actual_final_failure": {
+    "assertion": "canonical_status expected complete, observed failed at test_bootstrap.py89",
+    "errors": 0,
+    "failures": 1,
+    "inner_collector_error_type_retained": false,
+    "production_deadline_or_privacy_failure_claimed": false,
+    "reproduction_or_repair_after_failure": false,
+    "source_only_test_window": "collect called with deadline now+4 seconds, cleanup1; this identifies testconfiguration, not proof of a timeout.",
+    "suite_failfast": true,
+    "test": "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary",
+    "tests_run": 4,
+    "underlying_mechanism": "UNRESOLVED: startup, framing, exception and timeout are distinct possible collect failurepaths; no specificcause established.",
+    "worker_stopped_assertion": "passed before failing assertion"
+  },
+  "actual_gate_groups": {
+    "inspect": "absent",
+    "launcher": "absent",
+    "matrix": "absent",
+    "native-fixtures": "absent",
+    "preservation": "pass",
+    "regression": "absent",
+    "replay": "absent",
+    "semantics": "absent",
+    "static": "pass",
+    "supervision": "absent",
+    "tests": "fail",
+    "windows-tests": "absent"
+  },
+  "actual_main_operator": {
+    "child_returncode": 1,
+    "owner": "89f2d8740ccf3bc030bb18376efe465a539f127712de627f431b326f52f56886",
+    "removed_and_independently_absent": true,
+    "settled": true,
+    "timed_out": false
+  },
+  "all_known_H1_owners_independently_absent": true,
+  "capacity_started": false,
+  "counter_entries": [
+    {
+      "path": "evidence/phase3b-or1-v1/admissions/c1-candidate.json",
+      "record": {
+        "actual_failure_sha256": "25400a82994d1def2148726ccc50025d85325fee78007d1406bc58c909d271b7",
+        "admission": "candidate",
+        "admitted_at_utc": "2026-11-03T23:53:44.186552+00:00",
+        "candidate": 1,
+        "candidate_sha256": "e0c1ffc9280c75e5a1e79b58fe009cd9f4c164d5017749dcd6da274f7734da21",
+        "consumed_before_child_work": true,
+        "entry_status": "failed_before_child",
+        "kind": "phase3b-or1-admission-v1",
+        "real_provider_calls": 0,
+        "receipt_origin": "Controller explicit conservative count after operator counter write was rejected; no child ever started.",
+        "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+        "timestamp_basis": "Controller observed actual failedreleaseentry; not an invented prior operator receipt timestamp."
+      },
+      "sha256": "8dd902b97413abcda429babe90122fabb5fc5754c5d30149f0a6430172943340"
+    },
+    {
+      "path": "evidence/phase3b-or1-v1/admissions/c2-candidate.json",
+      "record": {
+        "admission": "candidate",
+        "admitted_at_utc": "2026-11-04T00:07:33.181633+00:00",
+        "candidate": 2,
+        "candidate_sha256": "b13850c921959e1c29f9c4b984d2effb11176d0f2243b96d44b99dd67c4b1a35",
+        "consumed_before_child_work": true,
+        "kind": "phase3b-or1-admission-v1",
+        "real_provider_calls": 0,
+        "source_sha256": "b46a6b1664e8241914f41286d0098df4ff28a6af9d6e7a81218ffc5c2c5ccf34"
+      },
+      "sha256": "34c965dcbf96ecf4af7c35e45191f3c4ae123bc7f7791f7fc79606402e65f511"
+    },
+    {
+      "path": "evidence/phase3b-or1-v1/admissions/c2-main.json",
+      "record": {
+        "admission": "main",
+        "admitted_at_utc": "2026-11-04T00:12:00.124102+00:00",
+        "candidate": 2,
+        "candidate_sha256": "b13850c921959e1c29f9c4b984d2effb11176d0f2243b96d44b99dd67c4b1a35",
+        "consumed_before_child_work": true,
+        "kind": "phase3b-or1-admission-v1",
+        "real_provider_calls": 0,
+        "source_sha256": "b46a6b1664e8241914f41286d0098df4ff28a6af9d6e7a81218ffc5c2c5ccf34"
+      },
+      "sha256": "4655a20ea89ea676e01c24e42689c22d9864bbebbf594300574c748f7b656e8e"
+    },
+    {
+      "path": "evidence/phase3b-or1-v1/admissions/c3-candidate.json",
+      "record": {
+        "admission": "candidate",
+        "admitted_at_utc": "2026-11-04T00:30:59.883050+00:00",
+        "candidate": 3,
+        "candidate_sha256": "4c8bf9e122354fa77367cf358163a71eed76889be97520e157f9439579d67eed",
+        "consumed_before_child_work": true,
+        "kind": "phase3b-or1-admission-v1",
+        "real_provider_calls": 0,
+        "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e"
+      },
+      "sha256": "fb2a484a013605d5f8f3c41d6a2f76f2abb83a5b9b8947792b8afad8741d2fb8"
+    },
+    {
+      "path": "evidence/phase3b-or1-v1/admissions/c3-main.json",
+      "record": {
+        "admission": "main",
+        "admitted_at_utc": "2026-11-04T00:35:03.529914+00:00",
+        "candidate": 3,
+        "candidate_sha256": "4c8bf9e122354fa77367cf358163a71eed76889be97520e157f9439579d67eed",
+        "consumed_before_child_work": true,
+        "kind": "phase3b-or1-admission-v1",
+        "real_provider_calls": 0,
+        "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e"
+      },
+      "sha256": "562e94202d047369efed72bb5a4f6fd3bf85e6f593868b0a49d287cb76843684"
+    }
+  ],
+  "counts": {
+    "S13": 0,
+    "candidate": 3,
+    "cold": 0,
+    "main": 2,
+    "saved": 0
+  },
+  "effort_as_of_outcome": {
+    "all_unreleased_holds": {
+      "bootstrap-hold.json": {
+        "seconds": 120,
+        "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+      },
+      "controller-domain-planning-hold-v1.json": {
+        "seconds": 93,
+        "sha256": "0f2066c78d212cf260ba0928b09c275b33b2e49430cefa4f3de3f9599f533026"
+      },
+      "controller-hold-v1.json": {
+        "seconds": 28,
+        "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+      },
+      "controller-postfailure-hold-v1.json": {
+        "seconds": 33,
+        "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+      },
+      "reviewer-candidate-handoff-hold-v1.json": {
+        "seconds": 23,
+        "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+      },
+      "reviewer-parent-plan-handoff-hold-v1.json": {
+        "seconds": 32,
+        "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+      },
+      "reviewer-plan-coordination-hold-v1.json": {
+        "seconds": 200,
+        "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+      }
+    },
+    "effective_remaining_seconds": 4109.176643,
+    "effective_used_seconds": 6690.823357,
+    "hold_seconds": 529,
+    "meter": {
+      "active_seconds": 6161.823357,
+      "actors": [
+        {
+          "active_seconds": 2504.818645,
+          "actor": "/root/s2_block_controller",
+          "file": "controller.jsonl",
+          "mode": "active",
+          "records": 59
+        },
+        {
+          "active_seconds": 155.02486,
+          "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+          "file": "probe.jsonl",
+          "mode": "done",
+          "records": 8
+        },
+        {
+          "active_seconds": 77.426596,
+          "actor": "/root/publication_audit",
+          "file": "publication.jsonl",
+          "mode": "done",
+          "records": 2
+        },
+        {
+          "active_seconds": 1669.022009,
+          "actor": "/root/s2_a1_source_review",
+          "file": "reviewer.jsonl",
+          "mode": "wait",
+          "records": 43
+        },
+        {
+          "active_seconds": 1755.531247,
+          "actor": "/root",
+          "file": "root.jsonl",
+          "mode": "active",
+          "records": 106
+        }
+      ],
+      "limit_seconds": 10800,
+      "observed_at_utc": "2026-11-04T00:43:04.215837+00:00",
+      "remaining_seconds": 4638.176643,
+      "within_limit": true
+    },
+    "parent_report_publication_final_accounting_pending": true
+  },
+  "evidence_sha256": {
+    "evidence/phase3b-or1-v1/admissions/c1-candidate.json": "8dd902b97413abcda429babe90122fabb5fc5754c5d30149f0a6430172943340",
+    "evidence/phase3b-or1-v1/admissions/c2-candidate.json": "34c965dcbf96ecf4af7c35e45191f3c4ae123bc7f7791f7fc79606402e65f511",
+    "evidence/phase3b-or1-v1/admissions/c2-main.json": "4655a20ea89ea676e01c24e42689c22d9864bbebbf594300574c748f7b656e8e",
+    "evidence/phase3b-or1-v1/admissions/c3-candidate.json": "fb2a484a013605d5f8f3c41d6a2f76f2abb83a5b9b8947792b8afad8741d2fb8",
+    "evidence/phase3b-or1-v1/admissions/c3-main.json": "562e94202d047369efed72bb5a4f6fd3bf85e6f593868b0a49d287cb76843684",
+    "evidence/phase3b-or1-v1/authority.json": "f1717bbf2e18e6cfa089862ad8fc9d665715bb2536ac87a8891bf4f81df3befe",
+    "evidence/phase3b-or1-v1/candidate-1-entry-failure.json": "25400a82994d1def2148726ccc50025d85325fee78007d1406bc58c909d271b7",
+    "evidence/phase3b-or1-v1/candidate-1-independent-classification.json": "5fb7df9e3482bbf25944d169c21009cddaf1d9bcf92d6e2a84636a6e43f727ad",
+    "evidence/phase3b-or1-v1/candidate-2-independent-classification.json": "358a7e32df178589ac7bd360eef7dd6531b2fcad3abda51154bde9fc81295b4f",
+    "evidence/phase3b-or1-v1/candidate-2-main-failure.json": "ffe6805cc4ba368fe2ad192f54f4e0b1b313ec999ab1af05a913be07410d4d7c",
+    "evidence/phase3b-or1-v1/candidate-3.json": "4c8bf9e122354fa77367cf358163a71eed76889be97520e157f9439579d67eed",
+    "evidence/phase3b-or1-v1/capacity-before-c3-entry-v1.json": "d51bdbd238c630465c8d5282a3e7c8cd4c76698bde28791f71040be4a23e585a",
+    "evidence/phase3b-or1-v1/capacity-before-c3-main-v1.json": "20332ab9d6e7e5e5a8473634229d71e66416616c4553b718bee5d08f9a3381ff",
+    "evidence/phase3b-or1-v1/compatibility-independent-review-v1.json": "ba04f8c64281dced8eb7cade846955276ca903a71c96f985ed4301dc2f3ada5c",
+    "evidence/phase3b-or1-v1/failed-candidate-1/preservation-receipt.json": "00b7d438c5322cf714fd33d68fa437baf4ae03937a129daf34fa106ac6c7e702",
+    "evidence/phase3b-or1-v1/failed-candidate-2/preservation-receipt.json": "7ac72ccc5bf4673f66cd9ee005385157d752b3dba2b8d658d6ef17924fc3865e",
+    "evidence/phase3b-or1-v1/final-known-owners-v1.json": "bffcc70f5cb248d687e2a9e910a78a2c8ea05180a48a492dbce5f58f1e82e7ac",
+    "evidence/phase3b-or1-v1/final-stopped-preservation-v1.json": "05611f2d8a0427fa736bdbf8bb67d49582adf33098197762ab8618bd7d9a7298",
+    "evidence/phase3b-or1-v1/path-domain-independent-outcome-v1.json": "3e2ce9a585ea2b8064d57f7ffb3c1dd582018fb71faad0631cd2e9f5b1680dd0",
+    "evidence/phase3b-or1-v1/prospective-acceptance-3.json": "8abc4bd624cb73ef19cb96976cdb2b27c8cb71f6bab001c6a7064fc9dcf409b1",
+    "evidence/phase3b-or1-v1/source-candidate-3.json": "139a9fc280e7ae464e083cb422168cf34f00c94b5c92c4af9230eda2994f2596",
+    "evidence/phase3b-or1-v1/writer-domain-independent-outcome-v1.json": "895b463f215fe397a1122cb0dd8eb63e25c711a30cbcd2768c16a65772bd1d28",
+    "runs/phase3b-seq2-v1/verification-v7/boundary-contract/cleanup.json": "ea10fffba4af010f8059906f65bbb96c5bb529ecf316fcb20a7fba409f6dba33",
+    "runs/phase3b-seq2-v1/verification-v7/boundary-contract/result.json": "49972dfe6d5f8458e21f4c19acb880eb397b27c7fc61947312017b818be2c86d",
+    "runs/phase3b-seq2-v1/verification-v7/c2-main-cleanup.json": "7ace620c34a3f8f443483214e77e61d693bcc46bc552878af22249d43657d2e0",
+    "runs/phase3b-seq2-v1/verification-v7/c2-main-create.json": "fdf75593d0f1b3b119b811a2990e9c87f09bd60caea55adb54bc54e7215f31c0",
+    "runs/phase3b-seq2-v1/verification-v7/c2-main-execution.json": "8ee9255d8a06ffbd4223c99bb997bda95016d5060587e56c7304d64ce58967fa",
+    "runs/phase3b-seq2-v1/verification-v7/c2-main-inspection.json": "c52b563b191b4acf843ea0237efa8bc63a943a45ff166945099953fbf5c010e9",
+    "runs/phase3b-seq2-v1/verification-v7/operator-boundary.json": "13dee46c9b099d378f56a1e4a24bc762617993a0494bf2588e951a46d3569efd",
+    "runs/phase3b-seq2-v1/verification-v7/operator-main.json": "eb9ddaa21151547ba0f5840bbd69f9a14661555b0e4d3293d50772cdead55579",
+    "runs/phase3b-seq2-v1/verification-v7/preservation-after.json": "08ac928f0a9570e8eb3b8f15cad5ae99ef014f6e498fc63e467cec942b3a62f9",
+    "runs/phase3b-seq2-v1/verification-v7/preservation-before.json": "08ac928f0a9570e8eb3b8f15cad5ae99ef014f6e498fc63e467cec942b3a62f9",
+    "runs/phase3b-seq2-v1/verification-v7/preservation.json": "eb914b1f5b25f4fbf97c29f8d3ad902b713cdc32a1df89cde81f06ffd71e82cc",
+    "runs/phase3b-seq2-v1/verification-v7/release/study.json": "a4b7b1a941d62085125e7ef485c1978df50d8d48ab8318b53ba95253ebc273b6",
+    "runs/phase3b-seq2-v1/verification-v7/source-after.json": "139a9fc280e7ae464e083cb422168cf34f00c94b5c92c4af9230eda2994f2596",
+    "runs/phase3b-seq2-v1/verification-v7/source-before.json": "139a9fc280e7ae464e083cb422168cf34f00c94b5c92c4af9230eda2994f2596",
+    "runs/phase3b-seq2-v1/verification-v7/static.json": "2eebac62454ff53281fa18f577c5ee8b70ff3dd8481c5bd619582b923dc1d3d3",
+    "runs/phase3b-seq2-v1/verification-v7/tests.json": "5d7e81bbbb190c4bf61d30c318e8627a0fe5fb1bc6d60a4a522ccb9d8ca8a47d",
+    "runs/phase3b-seq2-v1/verification-v7/tests.log": "326f05315ab9fc9a515ee906838cde6a53ac1ed4c5de4b29d312d11a69d2b87f"
+  },
+  "final_candidate": 3,
+  "fullworklist_model_mock_calls": 0,
+  "historical_holds_released": false,
+  "historical_ledgers_reopened": false,
+  "kind": "phase3b-or1-stopped-outcome-v1",
+  "known_H1_owners_count": 10,
+  "main_study_sha256": "5c258ddb31a37c7eb38428d641252dc5f6c3bae5a915c1f8d4081b912368fb54",
+  "matrix_generation_started": false,
+  "missing_completion": [
+    "PassingfullLinuxsuite+actualWindowsskipcases",
+    "Capacity/fullmainmatrix/semantics",
+    "Zero-call savedworkflow.run/reports replay",
+    "FreshactualS13 andbothpositiveI1handshakes",
+    "Remaininglauncher/Inspect/nativefixture/regression/supervisiongroups",
+    "All12current-sourcegate andindependentsourceacceptance",
+    "Actualarchive/manifest/CRCinventory andextractedcoldreplay",
+    "Acceptedofflinehandoff"
+  ],
+  "new_billing_liabilities_micro_usd": 0,
+  "next": "Close documentation/publication andreportstopped/unachieved. Anynewexecution needs explicitconcrete continuation thataddressesthe missingcollector diagnostic and exhausted counters. No auto sourcefix/repeat orpaidtransition.",
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "positive_S13_started": false,
+  "preservation": {
+    "canonical_originals": 14,
+    "retained_ordinary_source_files": 721,
+    "retained_source_location": "runs/phase3b-seq2-v1/verification-v7/release/source",
+    "retained_stream_copies": 0,
+    "source_history_unchanged": true
+  },
+  "real_keys_used": false,
+  "real_provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T00:43:04.392905+00:00",
+  "saved_or_cold_replay_started": false,
+  "scientific_phase_complete": false,
+  "source_files": 735,
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e",
+  "status": "stopped-incomplete",
+  "stop_rule": "All3candidate and2mainentry allowances consumed; required SourceMap-bound unittest failed inlastcandidate. No permittedpath to acceptedkit remains withinOR1, regardless unused engineeringtime. No observer-only exception for changing/rerunning sourceboundtests.",
+  "usable_partial_outputs": [
+    "Actualready/notready purefixture tests and independentlyaccepted compatibility milestone",
+    "Strict emptyboundary expectednegative andallactualhostcontractnegatives",
+    "ActualWindows managedprocess/auth/env/tree/exit regressions",
+    "Correct HOSTevidence counterwriter with actualhostoutsideBASE/exclusive andactualH1domainproof",
+    "Sharedcontained main/saved pathvalidator with sameactualH1positive+sixrejections",
+    "Versionedsource/counter/failure/classification/cleanup evidence for3candidates",
+    "Current-source actualRuff/Mypy58/Bandit andpreservation PASS",
+    "Physical/cold observer plan frozen/staged but neverexecuted"
+  ]
+}

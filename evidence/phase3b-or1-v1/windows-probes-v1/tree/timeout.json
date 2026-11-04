@@ -1,0 +1,32 @@
+{
+  "case": "timeout",
+  "owners": {
+    "driver_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 14136,
+      "verified": true
+    },
+    "grandchild_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 52280,
+      "verified": true
+    }
+  },
+  "passed": true,
+  "result": {
+    "cancelled": false,
+    "child_returncode": 1,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 124,
+    "output": "{\"driver_pid\": 14136, \"grandchild_pid\": 52280}\r\n",
+    "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogMTQxMzYsICJncmFuZGNoaWxkX3BpZCI6IDUyMjgwfQ0K",
+    "pid": 14136,
+    "settled": true,
+    "started": true,
+    "timed_out": true,
+    "tree_stop_exit_code": 0
+  }
+}

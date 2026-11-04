@@ -1,4 +1,4 @@
-"""Exact-owned keyless H1/I1 boundary regression; no generation entry point."""
+"""OR1 expected-empty negative and pure contracts; positive proof belongs to S13."""
 from __future__ import annotations
 
 import base64
@@ -6,12 +6,13 @@ import json
 import os
 import subprocess  # nosec B404
 import sys
-import time
 import traceback
 from pathlib import Path
 
+from followups.phase3b_seq2_v1.support import recovery_config
+
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "runs/phase3b-seq2-v1/verification-v4/boundary-contract"
+OUT = ROOT / "runs/phase3b-seq2-v1" / recovery_config()["verification"] / "boundary-contract"
 IMAGE = "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800"
 
 
@@ -24,8 +25,8 @@ def main() -> int:
     env = {k: os.environ[k] for k in ("PATH", "SYSTEMROOT", "WINDIR", "COMSPEC", "TEMP", "TMP", "PATHEXT") if k in os.environ}
     env.update(PYTHONPATH=os.pathsep.join(str(p) for p in (ROOT, ROOT / "src", ROOT / ".upstream/harness2")),
                BUDDHA2_OUTPUT_ROOT=str(ROOT / "runs"), PYTHONDONTWRITEBYTECODE="1", PYTHONNOUSERSITE="1")
-    target = "/results/phase3b-seq2-v1/verification-v4/boundary-contract/fixture"
-    owners, processes = [], []
+    target = "/results/" + (OUT / "fixture").relative_to(ROOT / "runs").as_posix()
+    owners = []
 
     def run(args, timeout=60):
         try:
@@ -73,7 +74,8 @@ def main() -> int:
 
     passed, cleanup_passed = False, True
     try:
-        unit = create("negative-tests", ["-m", "unittest", "followups.phase3b_seq2_v1.test_inspect_s2.VisibilitySettlementTests"])
+        unit = create("negative-tests", ["-m", "unittest", "followups.phase3b_seq2_v1.test_inspect_s2.VisibilitySettlementTests",
+            "followups.phase3b_seq2_v1.test_boundary_compatibility_s2"])
         result = run(["docker", "start", "--attach", unit], 120)
         save(OUT / "negative-tests-execution.json", result)
         if result["exit_code"]:
@@ -89,34 +91,15 @@ def main() -> int:
         if result["exit_code"]:
             raise ValueError("boundary preparation failed")
         core = create("core", ["-m", "followups.phase3b_seq2_v1.boundary_contract", "core", "--output", target])
-        # No parent-chat acknowledgement is needed. This host independently waits
-        # for both real requests, each retaining its original <=600s deadline.
-        host_process = subprocess.Popen([sys.executable, "-B", "-m", "followups.phase3b_seq2_v1.boundary_contract",  # nosec B603
-             "host", "--output", str(OUT / "fixture")], cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        processes.append(host_process)
-        # Existing inspected Docker CLI, exact created owned ID, no shell.
-        core_command = ["docker", "start", "--attach", core]
-        core_process = subprocess.Popen(core_command, cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)  # nosec B603
-        processes.append(core_process)
-        deadline = time.monotonic() + 1800
-        for label, process in (("core", core_process), ("host", host_process)):
-            output, error = process.communicate(timeout=max(1, deadline - time.monotonic()))
-            save(OUT / (label + "-execution.json"), {"exit_code": process.returncode,
-                 "output": output.decode("utf-8", errors="replace"), "error": error.decode("utf-8", errors="replace")})
-            if process.returncode:
-                raise ValueError("real boundary " + label + " failed")
+        result = run(["docker", "start", "--attach", core], 600)
+        save(OUT / "core-execution.json", result)
+        if result["exit_code"]:
+            raise ValueError("expected empty-fixture rejection check failed")
         passed = True
     except BaseException as exc:
         save(OUT / "failure.json", {"passed": False, "exception_type": type(exc).__name__,
              "exception_message": str(exc), "traceback": traceback.format_exc(), **partial(exc)})
     finally:
-        for process in processes:
-            if process.poll() is None:
-                try:
-                    process.kill()
-                    process.communicate(timeout=15)
-                except (OSError, subprocess.TimeoutExpired):
-                    cleanup_passed = False
         cleanup = []
         for owner in owners:
             state = run(["docker", "inspect", "--format", "{{json .State.Running}}", owner])
@@ -130,45 +113,10 @@ def main() -> int:
             cleanup.append({"owner": owner, "terminal": state, "stop": stopped,
                             "remove": removed, "absence": absent, "passed": valid})
         save(OUT / "cleanup.json", {"passed": cleanup_passed, "owners": cleanup})
-        exporters = []
-        prepared_path = OUT / "fixture/prepared.json"
-        if prepared_path.is_file():
-            try:
-                prepared = json.loads(prepared_path.read_text(encoding="utf-8"))
-            except (ValueError, OSError):
-                prepared = {}
-                cleanup_passed = False
-            study_id = prepared.get("study_sha256", "")
-            if len(study_id) != 64 or any(c not in "0123456789abcdef" for c in study_id):
-                cleanup_passed = False
-            else:
-                for checkpoint in ("first-pair", "closure"):
-                    directory = ROOT / "runs/phase3b-seq2-v1/visibility-exports" / study_id / "mock" / checkpoint / "boundary-contract"
-                    create_path = directory / "create.json"
-                    if not create_path.is_file():
-                        continue
-                    proof: dict = {"checkpoint": checkpoint, "passed": False}
-                    try:
-                        created = json.loads(create_path.read_text(encoding="utf-8"))
-                        owner = created.get("stdout", "").strip()
-                        proof = {"checkpoint": checkpoint, "passed": False}
-                        if created.get("exit_code") == 0 and len(owner) == 64 and all(c in "0123456789abcdef" for c in owner):
-                            proof["owner"] = owner
-                            actual = run(["docker", "inspect", "--format", "{{json .Image}}", owner], 15)
-                            proof["image"] = actual
-                            if actual["exit_code"] == 0 and actual["output"].strip('"\r\n') == "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d":
-                                proof["stop"] = run(["docker", "stop", "--time", "10", owner], 30)
-                                proof["remove"] = run(["docker", "rm", owner], 30)
-                            absent = run(["docker", "inspect", "--format", "{{json .State.Running}}", owner], 15)
-                            proof["absence"] = absent
-                            proof["passed"] = absent["exit_code"] != 0 and "no such object" in absent["error"].casefold()
-                    except (ValueError, OSError) as exc:
-                        proof.update(error_type=type(exc).__name__, error_message=str(exc))
-                    cleanup_passed &= proof["passed"]
-                    exporters.append(proof)
-        save(OUT / "exporter-cleanup.json", {"passed": cleanup_passed, "owners": exporters})
-    result = {"kind": "p3b-s2-c2-real-boundary-result-v1", "passed": passed and cleanup_passed,
-              "real_provider_calls": 0, "generations": 0, "cleanup_passed": cleanup_passed}
+        save(OUT / "exporter-cleanup.json", {"passed": cleanup_passed, "owners": [],
+             "expected_no_exporter": True, "positive_proof_required_from": "fresh S13"})
+    result = {"kind": "p3b-or1-compatibility-result-v1", "passed": passed and cleanup_passed,
+              "real_provider_calls": 0, "generations": 0, "expected_empty_negative": True, "cleanup_passed": cleanup_passed}
     save(OUT / "result.json", result)
     print(json.dumps(result, sort_keys=True))
     return 0 if result["passed"] else 1

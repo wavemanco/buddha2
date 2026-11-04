@@ -1,0 +1,90 @@
+{
+  "API_cost": 0,
+  "actual_expectednegative_passed": true,
+  "all_unreleased_holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "controller-postfailure-hold-v1.json": {
+      "seconds": 33,
+      "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+    },
+    "reviewer-candidate-handoff-hold-v1.json": {
+      "seconds": 23,
+      "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  },
+  "counts_before_main": {
+    "S13": 0,
+    "candidate": 2,
+    "cold": 0,
+    "main": 0,
+    "saved": 0
+  },
+  "effective_remaining_seconds": 6551.105945,
+  "expectednegative_operator_sha256": "1e51ee31302b0ff7b5a8ee91fc4a8f31b9e8c161dd6af5996d0e3ee13ea960cf",
+  "kind": "phase3b-or1-capacity-before-c2-main-v1",
+  "meter": {
+    "active_seconds": 3812.894055,
+    "actors": [
+      {
+        "active_seconds": 1561.684176,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 33
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 77.426596,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "done",
+        "records": 2
+      },
+      {
+        "active_seconds": 915.039754,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "wait",
+        "records": 29
+      },
+      {
+        "active_seconds": 1103.718669,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 57
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:11:58.390293+00:00",
+    "remaining_seconds": 6987.105945,
+    "within_limit": true
+  },
+  "observed_at_utc": "2026-11-04T00:11:58.413928+00:00",
+  "one_main_for_this_candidate": true,
+  "protected_closure_seconds": 1800,
+  "remaining_work_estimate_seconds": 2800,
+  "source_sha256": "b46a6b1664e8241914f41286d0098df4ff28a6af9d6e7a81218ffc5c2c5ccf34",
+  "unreleased_hold_seconds": 436
+}

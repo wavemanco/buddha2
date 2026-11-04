@@ -1,0 +1,8 @@
+{
+  "basis": "Conservative bounded startup/context/authority/meter bootstrap before first ACTIVE receipt; not measured exact focus.",
+  "created_at_utc": "2026-11-03T23:31:20.806102+00:00",
+  "effective_remaining_rule": "effort.remaining_seconds minus all recorded unreleased OR1 holds",
+  "held_seconds": 120,
+  "kind": "phase3b-or1-bootstrap-hold-v1",
+  "release_authorized": false
+}

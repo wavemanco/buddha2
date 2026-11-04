@@ -9,9 +9,10 @@ import traceback
 from pathlib import Path
 
 from followups.phase3b_seq2_v1 import verify
+from followups.phase3b_seq2_v1.support import recovery_config
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "runs/phase3b-seq2-v1/verification-v4"
+OUT = ROOT / "runs/phase3b-seq2-v1" / recovery_config()["verification"]
 
 
 def encoded(value):

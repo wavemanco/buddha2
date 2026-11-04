@@ -1,0 +1,171 @@
+{
+  "I1_owners": [],
+  "count": 10,
+  "global_container_enumeration": false,
+  "kind": "phase3b-or1-all-known-owners-absence-v1",
+  "owners": [
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "b197533ef2b6ad07a2dfe195041cf99d3fa1643ab7054b969ffc0587574204d9"
+      ],
+      "create": "runs/phase3b-seq2-v1/or1-writer-domain-v1/create.json",
+      "create_sha256": "f33d20ce342fdf37e9b649c2edac23c50c1dcd3cf1c35174a651555021897342",
+      "error": "error: no such object: b197533ef2b6ad07a2dfe195041cf99d3fa1643ab7054b969ffc0587574204d9\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "b197533ef2b6ad07a2dfe195041cf99d3fa1643ab7054b969ffc0587574204d9"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "744d81b319e0cab18d6aed05e25661f94295a2300b56e98bf9fc3ea1fb1c86c5"
+      ],
+      "create": "runs/phase3b-seq2-v1/or1-path-domain-v1/create.json",
+      "create_sha256": "10631cf104cb600e81fc77814e717822fa934f1393c5c9a7f98932f7a81d99b9",
+      "error": "error: no such object: 744d81b319e0cab18d6aed05e25661f94295a2300b56e98bf9fc3ea1fb1c86c5\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "744d81b319e0cab18d6aed05e25661f94295a2300b56e98bf9fc3ea1fb1c86c5"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "41db90fa5d18ab9195576eda290275506a850e41528cb7992b31f9c471908616"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v6/boundary-contract/negative-tests-create.json",
+      "create_sha256": "bd3b2b260fae73139bb0b88a14f42c225490571148cb402af59429db7eabcfe2",
+      "error": "error: no such object: 41db90fa5d18ab9195576eda290275506a850e41528cb7992b31f9c471908616\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "41db90fa5d18ab9195576eda290275506a850e41528cb7992b31f9c471908616"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "c56f5e4f9dff05d41a0dc61f6970b5351d58b48631a963be699cab62a0a92b2b"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v6/boundary-contract/prepare-create.json",
+      "create_sha256": "0b8b3c720f942a57f17bb23b7556356ef6ca81072740baadb61b91aece6ef6d2",
+      "error": "error: no such object: c56f5e4f9dff05d41a0dc61f6970b5351d58b48631a963be699cab62a0a92b2b\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "c56f5e4f9dff05d41a0dc61f6970b5351d58b48631a963be699cab62a0a92b2b"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "9d6d57485005794d5143f54f85a1b35ee9bdb1d26aa1e08b30200c2feaeef9d0"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v6/boundary-contract/core-create.json",
+      "create_sha256": "1c95036a9d706181a2468919f0a10d22996b79d2586ff6ca8f35b3eb3ab6a564",
+      "error": "error: no such object: 9d6d57485005794d5143f54f85a1b35ee9bdb1d26aa1e08b30200c2feaeef9d0\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "9d6d57485005794d5143f54f85a1b35ee9bdb1d26aa1e08b30200c2feaeef9d0"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v6/c2-main-create.json",
+      "create_sha256": "b8faacf4cc344482d6028d35a90fd7c388af147babbe5af0540b6132de16d9eb",
+      "error": "error: no such object: 5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "0c2b47442177f466d6c81fa8bcd32d1ac02f8c4931c3a2e82cfe9fa603e011ac"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v7/boundary-contract/negative-tests-create.json",
+      "create_sha256": "34cc9abe131813fc2b01bec566e6f11cdbde13bdb22b8f2e1330d65da1783ddc",
+      "error": "error: no such object: 0c2b47442177f466d6c81fa8bcd32d1ac02f8c4931c3a2e82cfe9fa603e011ac\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "0c2b47442177f466d6c81fa8bcd32d1ac02f8c4931c3a2e82cfe9fa603e011ac"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "24e27228e08a439cdcee3ca52f20d5bffc7b039502d69ce66ccc5a98eafc1815"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v7/boundary-contract/prepare-create.json",
+      "create_sha256": "39b6cf830a8cc371f668cd5a8a849348354ce126c2ff95f370a2363cdb14f6ca",
+      "error": "error: no such object: 24e27228e08a439cdcee3ca52f20d5bffc7b039502d69ce66ccc5a98eafc1815\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "24e27228e08a439cdcee3ca52f20d5bffc7b039502d69ce66ccc5a98eafc1815"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "35e3b6ae0cc6faa684ec4062034c71a23c12735cf2e3df36a099a6007af402fd"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v7/boundary-contract/core-create.json",
+      "create_sha256": "897cea3a9050511071c89f9ae9548b5a6c9dcb286b358368e0594deda7853b71",
+      "error": "error: no such object: 35e3b6ae0cc6faa684ec4062034c71a23c12735cf2e3df36a099a6007af402fd\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "35e3b6ae0cc6faa684ec4062034c71a23c12735cf2e3df36a099a6007af402fd"
+    },
+    {
+      "absent": true,
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "89f2d8740ccf3bc030bb18376efe465a539f127712de627f431b326f52f56886"
+      ],
+      "create": "runs/phase3b-seq2-v1/verification-v7/c2-main-create.json",
+      "create_sha256": "fdf75593d0f1b3b119b811a2990e9c87f09bd60caea55adb54bc54e7215f31c0",
+      "error": "error: no such object: 89f2d8740ccf3bc030bb18376efe465a539f127712de627f431b326f52f56886\n",
+      "exit_code": 1,
+      "output": "\n",
+      "owner": "89f2d8740ccf3bc030bb18376efe465a539f127712de627f431b326f52f56886"
+    }
+  ],
+  "passed": true,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T00:41:36.900171+00:00"
+}

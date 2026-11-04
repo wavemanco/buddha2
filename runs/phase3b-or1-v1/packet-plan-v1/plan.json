@@ -1,0 +1,55 @@
+{
+  "candidate_mappings": {
+    "1": {
+      "packet_stem": "offline-kit-or1-c1",
+      "verification": "verification-v5"
+    },
+    "2": {
+      "packet_stem": "offline-kit-or1-c2",
+      "verification": "verification-v6"
+    },
+    "3": {
+      "packet_stem": "offline-kit-or1-c3",
+      "verification": "verification-v7"
+    }
+  },
+  "created_at_utc": "2026-11-03T23:40:25.288757+00:00",
+  "definition_sha256": "857b2a93898d8335e804073cbe649846d17cd97b3fd903a0228deeeff4ee957d",
+  "files": {
+    "PLAN.md": {
+      "bytes": 6336,
+      "sha256": "c81c5da275933379047ea5306ba81548e39d0ce796778bb97f9131451ecd96ea"
+    },
+    "cold_replay.py": {
+      "bytes": 9082,
+      "sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0"
+    },
+    "cold_replay_or1.py": {
+      "bytes": 1505,
+      "sha256": "48193242137615b669a7b16763ae0424eae38bfab970589d6af48d89a30959fd"
+    },
+    "physical-parameterization.diff": {
+      "bytes": 7929,
+      "sha256": "24fc6195fb7e9193eb15a3555d2facfa550b1b14d8ae5c49a89b14a6cd89039d"
+    },
+    "review_packet_or1.py": {
+      "bytes": 15212,
+      "sha256": "1485ca765b3e9b8459102fff1f7d1b296a9af94f37de4a29e89edd5bd24a7cd8"
+    }
+  },
+  "kind": "phase3b-or1-prospective-physical-cold-plan-v1",
+  "packet_accepted": false,
+  "parent_physical_algorithm_sha256": "73c05fb35dfc74228a354a0654fb1e44875c40390457dd8343afc62de936fe80",
+  "required_before_execution": [
+    "all12actual current-source gate",
+    "independent source/gate acceptance",
+    "exact immutable archive/manifest",
+    "parent script static review",
+    "exact current candidate/source/count/study/argv/copiedhash bindings",
+    "actual owner configuration inspection before coldstart"
+  ],
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_archive_or_extraction_execution": false,
+  "status": "prospective-awaiting-parent-static-review-and-actual-candidate-bindings",
+  "unchanged_cold_worker_sha256": "d68506fe917db86c8068fa2a829e19e46771532d59241ae430ae467037c023e0"
+}

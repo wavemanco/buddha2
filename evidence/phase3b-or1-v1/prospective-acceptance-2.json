@@ -1,0 +1,43 @@
+{
+  "actual_Windows_primitive_AST_matches": {
+    "authenticate_candidate": "7334a6034aba09562333824178871edbc9d1deaa3cc853c41a2be449b01a2ab0",
+    "clean_environment": "e8000bb4b1a37a37264730aa22b9e1c03aa1b73647dc21ac37e3d3a1a7094287",
+    "ordinary": "d40b5e3b35fa7f605d5ef7296ae77090b5955db2788cf1e9c47d5b3e9342d183",
+    "run_child": "10c11cf2cfedc65d9673c40f5c2bd223c6792b212dc28c2c77ef51b11063bce8",
+    "settings": "28e87b0f56f5215c3bb15a8c70772823ba58c6a22cd82df6744ba5d323802b1e"
+  },
+  "candidate": 2,
+  "candidate_sha256": "b13850c921959e1c29f9c4b984d2effb11176d0f2243b96d44b99dd67c4b1a35",
+  "continuation_conditions": [
+    "Controller alone executes exact frozen candidate2. Admit candidate2 before integration; at most one main/S13/saved/cold per candidate with remaining globalcaps. Any unexpected phasefailure stops this candidate, settles/preserves it and permits only independently classified authorized newcandidate recovery within remaining scope/counters/time.",
+    "Do not change source/commands/criteria during this candidate. No globalpathguard broadening, owner guessing, privacy/source/history uncertainty, realexternalattempt or newdependency/upstream/science change is allowed; those hardstop OR1.",
+    "Use actual aggregate ledger minus all unreleasedholds (436 currently known), explicit60/120minute progress and >=1800second or larger task-based closure reserve. Do not admit a slice whose real supervision/review/cleanup cannot fit; last admitted allowed attempt may finish allowed downstream checks.",
+    "No keys or paid calls even after acceptance. All12 current-source groups, independent fullsource/gate review, actualimmutablearchiveCRC/inventory/hash and extractedonlyzero-generation/eightbyte-identicalreport/ownerabsence checks remain mandatory."
+  ],
+  "findings": [
+    "All117ordinary candidate files match,721entrymap seal matches and5actualWindowsprimitiveASTs remain unchanged. Delta versuscandidate1 is5existingfiles (config/operator/support/sourceinputs/newhosttest/statichelperlist) plus16explicit failure/component receipts, no scientific implementation changes.",
+    "Candidate1 is immutable failed-before-child, conservatively consumes1candidate and no main/S13/saved/cold; its observed-entry provenance is explicit. Repair classification5fb7... is within existing OR1 authority, not an integrityguard weakening.",
+    "The exact host admission write now reuses write_once(safe(target,roots=(ROOT,))). Global runtime publish/path remains unchanged. ActualWindowsoutsideBASE/exclusivecounter tests and pinnedH1EROFS/runtimeguardnegative/resultspositive/immutablemarker have independently accepted componentproof895b... and exactowner absence.",
+    "Actual host-evidence unittest is Windows-only; H1 discovery therefore skips it for actual-host coverage rather than attempting readonly/workspace evidence writes. Contained canonical/study/report/replay writers remain/results; newstatic helper is included in formalH1 checks.",
+    "Original candidate1 prospective code/command review remains useful static context only; no failed or old-source runtime pass is retagged. Candidate2 configuration is source-bound and v6 is absent; actualmain/S13/native+journal freshness must be proved when prepared.",
+    "Exclusive before-child admissions retain3candidate/2main/2S13/2saved/2cold globalcaps and1each/candidate. Main/S13 remainzero before this candidate. Cold admission must use the same hostcounter path; actual counter history must be audited in finalsource/packet receipts.",
+    "Revised expected-empty canonical negative and pure/strict tests precede main; real positive first/closure handshakes remain mandatory only in current freshS13 after genuine review/assessment classification, strict request/claimed-owner/realACK guard and actualI1 proof.",
+    "Versioned source-bound packager, candidate2acceptance/offline-kit-or1-c2, parent-reviewed physicalobserver candidate2/v6/INDEX mapping and unchangedd685 coldalgorithm agree. Copy all observerplan/scripts byteexact beforemain/replay; final actualbindings/all12/archive/ownerproofs still required."
+  ],
+  "gate_accepted": false,
+  "kind": "phase3b-or1-independent-prospective-acceptance-v2",
+  "kit_accepted": false,
+  "limitations": "Verified117ordinary files and721mapseal rather than independently rehashing every721raw/historical input; full effective source check is required before phases, and finalacceptance audits actual preserved artifacts. No tests/component/main/S13/archive/cold runtime repeated by reviewer.",
+  "observed_at_utc": "2026-11-04T00:06:31.764554+00:00",
+  "ordinary_candidate_files_independently_raw_hashed": 117,
+  "packet_accepted": false,
+  "passed": true,
+  "real_keys_or_paid_authorized": false,
+  "reviewer": "/root/s2_a1_source_review",
+  "scientific_complete": false,
+  "scope": "Exact prospective candidate2/v6 source/code/case/command review after preserved failedcandidate1; no runtime/gate/kit/packet/scientific acceptance.",
+  "source_accepted": false,
+  "source_files": 721,
+  "source_map_seal_independently_recomputed": true,
+  "source_sha256": "b46a6b1664e8241914f41286d0098df4ff28a6af9d6e7a81218ffc5c2c5ccf34"
+}

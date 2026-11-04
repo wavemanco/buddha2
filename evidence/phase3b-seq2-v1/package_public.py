@@ -109,7 +109,7 @@ def source_snapshot_policy(files: dict) -> dict:
 
 
 def package(verification: Path, *, mode: str = "offline", outcome: Path | None = None,
-            review: Path | None = None) -> dict:
+            review: Path | None = None, acceptance: Path | None = None, packet_stem: str | None = None) -> dict:
     if mode not in {"offline", "mock-closure", "live-closure"} or ((mode == "offline") != (outcome is None and review is None)):
         raise ValueError("packet mode and explicit closure inputs differ")
     verification = Path(verification)
@@ -123,7 +123,18 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
         raise ValueError("packet source snapshot policy differs")
     gate = read((release / "offline-gate.json").relative_to(ROOT).as_posix())
     acceptance_name = f"evidence/{PREFIX}/independent-acceptance.json"
-    acceptance = read(acceptance_name)
+    if acceptance is not None or packet_stem is not None:
+        config_name = "evidence/phase3b-or1-v1/release-config.json"
+        config = read(config_name)
+        number = config.get("candidate")
+        if (mode != "offline" or acceptance is None or type(number) is not int or number not in (1, 2, 3)
+                or config.get("verification") != verification.name
+                or digest(safe(config_name).read_bytes()) != study["source"]["files"].get(config_name)
+                or packet_stem != f"offline-kit-or1-c{number}"
+                or acceptance != ROOT / f"evidence/phase3b-or1-v1/candidate-{number}-independent-acceptance.json"):
+            raise ValueError("OR1 versioned packet configuration differs")
+        acceptance_name = acceptance.relative_to(ROOT).as_posix()
+    acceptance_receipt = read(acceptance_name)
     bindings = {key: study[key] for key in
                 ("study_sha256", "source_sha256", "runtime_sha256", "policy_sha256", "launcher_sha256")}
     if (any(not isinstance(value, str) or len(value) != 64
@@ -132,9 +143,9 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
             or digest(canonical(study["source"]["files"])) != study["source_sha256"]):
         raise ValueError("packet study/source identities are not authenticated")
     gate_bytes = safe((release / "offline-gate.json").relative_to(ROOT).as_posix()).read_bytes()
-    if (gate.get("passed") is not True or acceptance.get("passed") is not True
-            or any(gate.get(k) != v or acceptance.get(k) != v for k, v in bindings.items())
-            or acceptance.get("offline_gate_file_sha256") != digest(gate_bytes)):
+    if (gate.get("passed") is not True or acceptance_receipt.get("passed") is not True
+            or any(gate.get(k) != v or acceptance_receipt.get(k) != v for k, v in bindings.items())
+            or acceptance_receipt.get("offline_gate_file_sha256") != digest(gate_bytes)):
         raise ValueError("unaccepted or foreign source-bound offline gate")
     groups = {"static", "matrix", "replay", "tests", "windows-tests", "launcher", "inspect", "preservation", "regression", "native-fixtures", "semantics", "supervision"}
     if set(gate.get("checks", {})) != groups:
@@ -151,7 +162,7 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
                 or check.get("passed") is not True or any(check.get(k) != v for k, v in bindings.items())):
             raise ValueError("gate evidence changed or is foreign")
         checked_groups[group] = check
-    stem = {"offline": "offline-kit-v1", "mock-closure": "mock-outcome-v1", "live-closure": "live-outcome-v1"}[mode]
+    stem = packet_stem or {"offline": "offline-kit-v1", "mock-closure": "mock-outcome-v1", "live-closure": "live-outcome-v1"}[mode]
     archive = safe(f"evidence/{PREFIX}/{stem}.zip", missing=True)
     manifest_path = safe(f"evidence/{PREFIX}/{stem}.manifest.json", missing=True)
     if archive.exists() or manifest_path.exists():
@@ -199,6 +210,8 @@ def package(verification: Path, *, mode: str = "offline", outcome: Path | None =
     if offline_streams:
         include(OFFLINE_RECEIPT)
     include(acceptance_name)
+    if packet_stem is not None:
+        walk(safe("evidence/phase3b-or1-v1/admissions"))
     # Navigation is a dated packet snapshot, separate from immutable code inputs.
     include("CURRENT_SPEC.md")
     include("PHASE3B_RUNBOOK.md")
@@ -366,8 +379,11 @@ def main() -> None:
     parser.add_argument("--mode", choices=("offline", "mock-closure", "live-closure"), default="offline")
     parser.add_argument("--outcome", type=Path)
     parser.add_argument("--review", type=Path)
+    parser.add_argument("--acceptance", type=Path)
+    parser.add_argument("--packet-stem")
     args = parser.parse_args()
-    print(json.dumps(package(args.verification, mode=args.mode, outcome=args.outcome, review=args.review)))
+    print(json.dumps(package(args.verification, mode=args.mode, outcome=args.outcome, review=args.review,
+                             acceptance=args.acceptance, packet_stem=args.packet_stem)))
 
 
 if __name__ == "__main__":

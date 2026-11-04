@@ -1,0 +1,22 @@
+{
+  "case": "missing-executable",
+  "owned_child": {
+    "classification": "not_started",
+    "verified": true
+  },
+  "result": {
+    "cancelled": false,
+    "child_returncode": null,
+    "error": "",
+    "error_bytes_base64": "",
+    "error_message": "[WinError 2] The system cannot find the file specified",
+    "error_type": "FileNotFoundError",
+    "exit_code": 127,
+    "output": "",
+    "output_bytes_base64": "",
+    "pid": null,
+    "settled": true,
+    "started": false,
+    "timed_out": false
+  }
+}

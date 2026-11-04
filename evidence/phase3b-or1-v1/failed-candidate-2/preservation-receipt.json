@@ -1,0 +1,12 @@
+{
+  "canonical_originals": 14,
+  "kind": "phase3b-or1-failed-candidate2-preservation-v1",
+  "known_runtime_owner": "5ebcf707d92686d8bc6415e89c92975f07f07901b75dbf9e89a1b3dadf4a6ed0",
+  "ordinary_copies": 707,
+  "owner_absent_verified_by_driver_and_operator": true,
+  "recorded_at_utc": "2026-11-04T00:14:37.995551+00:00",
+  "retained_stream_copies": 0,
+  "source_files": 721,
+  "source_history_unchanged": true,
+  "source_sha256": "b46a6b1664e8241914f41286d0098df4ff28a6af9d6e7a81218ffc5c2c5ccf34"
+}

@@ -1,0 +1,194 @@
+{
+  "Docker_calls": 0,
+  "authentication_cases_completed": true,
+  "interpreter": "C:\\Program Files\\Python313\\python.exe",
+  "kind": "phase3b-la1-launcher-probe-v1",
+  "launcher_sha256": "9e5960ae7a7cb07cb8cf8856e468e8bbe133aa7199c01a384b1b18572f3648d5",
+  "observations": [
+    {
+      "case": "execve-reproduction",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3b-or1-v1\\windows-probes-v1\\managed\\harmless scripts ü\\execve outer.py"
+      ],
+      "error": "",
+      "error_base64": "",
+      "outer_returncode": 3221225477,
+      "output": "OUTER_ENTERED\r\n",
+      "output_base64": "T1VURVJfRU5URVJFRA0K",
+      "received_child_json": false
+    },
+    {
+      "case": "success-argv",
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": 0,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 0,
+        "output": "{\"argv\": [\"space value\", \"quote\\\"inside\", \"trailing\\\\\", \"Unicode café 雪\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+        "output_bytes_base64": "eyJhcmd2IjogWyJzcGFjZSB2YWx1ZSIsICJxdW90ZVwiaW5zaWRlIiwgInRyYWlsaW5nXFwiLCAiVW5pY29kZSBjYWbDqSDpm6oiXSwgImZvcmJpZGRlbl9zZW50aW5lbF9wcmVzZW50IjogZmFsc2UsICJyZXF1aXJlZF9lbnYiOiB7IlNZU1RFTVJPT1QiOiB0cnVlLCAiV0lORElSIjogdHJ1ZSwgIlBBVEgiOiB0cnVlfX0NCg==",
+        "pid": 11628,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "nonzero",
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": 7,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 7,
+        "output": "{\"argv\": [\"exit7\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+        "output_bytes_base64": "eyJhcmd2IjogWyJleGl0NyJdLCAiZm9yYmlkZGVuX3NlbnRpbmVsX3ByZXNlbnQiOiBmYWxzZSwgInJlcXVpcmVkX2VudiI6IHsiU1lTVEVNUk9PVCI6IHRydWUsICJXSU5ESVIiOiB0cnVlLCAiUEFUSCI6IHRydWV9fQ0K",
+        "pid": 53276,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "missing-executable",
+      "owned_child": {
+        "classification": "not_started",
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": null,
+        "error": "",
+        "error_bytes_base64": "",
+        "error_message": "[WinError 2] The system cannot find the file specified",
+        "error_type": "FileNotFoundError",
+        "exit_code": 127,
+        "output": "",
+        "output_bytes_base64": "",
+        "pid": null,
+        "settled": true,
+        "started": false,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "missing-script",
+      "owned_child": {
+        "classification": "exited",
+        "exit_code": 2,
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": 2,
+        "error": "C:\\Program Files\\Python313\\python.exe: can't open file 'C:\\\\Users\\\\arvik\\\\code\\\\research\\\\Buddha2\\\\evidence\\\\phase3b-or1-v1\\\\windows-probes-v1\\\\managed\\\\harmless scripts ü\\\\missing.py': [Errno 2] No such file or directory\r\n",
+        "error_bytes_base64": "QzpcUHJvZ3JhbSBGaWxlc1xQeXRob24zMTNccHl0aG9uLmV4ZTogY2FuJ3Qgb3BlbiBmaWxlICdDOlxcVXNlcnNcXGFydmlrXFxjb2RlXFxyZXNlYXJjaFxcQnVkZGhhMlxcZXZpZGVuY2VcXHBoYXNlM2Itb3IxLXYxXFx3aW5kb3dzLXByb2Jlcy12MVxcbWFuYWdlZFxcaGFybWxlc3Mgc2NyaXB0cyDDvFxcbWlzc2luZy5weSc6IFtFcnJubyAyXSBObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5DQo=",
+        "exit_code": 2,
+        "output": "",
+        "output_bytes_base64": "",
+        "pid": 32916,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "clean-environment",
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": 0,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 0,
+        "output": "{\"argv\": [\"env\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+        "output_bytes_base64": "eyJhcmd2IjogWyJlbnYiXSwgImZvcmJpZGRlbl9zZW50aW5lbF9wcmVzZW50IjogZmFsc2UsICJyZXF1aXJlZF9lbnYiOiB7IlNZU1RFTVJPT1QiOiB0cnVlLCAiV0lORElSIjogdHJ1ZSwgIlBBVEgiOiB0cnVlfX0NCg==",
+        "pid": 5284,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "timeout",
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      },
+      "result": {
+        "cancelled": false,
+        "child_returncode": 1,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 124,
+        "output": "{\"argv\": [\"sleep\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+        "output_bytes_base64": "eyJhcmd2IjogWyJzbGVlcCJdLCAiZm9yYmlkZGVuX3NlbnRpbmVsX3ByZXNlbnQiOiBmYWxzZSwgInJlcXVpcmVkX2VudiI6IHsiU1lTVEVNUk9PVCI6IHRydWUsICJXSU5ESVIiOiB0cnVlLCAiUEFUSCI6IHRydWV9fQ0K",
+        "pid": 17668,
+        "settled": true,
+        "started": true,
+        "timed_out": true
+      }
+    },
+    {
+      "case": "cancellation",
+      "owned_child": {
+        "classification": "absent",
+        "error": 87,
+        "verified": true
+      },
+      "result": {
+        "cancelled": true,
+        "child_returncode": 1,
+        "error": "",
+        "error_bytes_base64": "",
+        "exit_code": 130,
+        "output": "{\"argv\": [\"sleep\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+        "output_bytes_base64": "eyJhcmd2IjogWyJzbGVlcCJdLCAiZm9yYmlkZGVuX3NlbnRpbmVsX3ByZXNlbnQiOiBmYWxzZSwgInJlcXVpcmVkX2VudiI6IHsiU1lTVEVNUk9PVCI6IHRydWUsICJXSU5ESVIiOiB0cnVlLCAiUEFUSCI6IHRydWV9fQ0K",
+        "pid": 82112,
+        "settled": true,
+        "started": true,
+        "timed_out": false
+      }
+    },
+    {
+      "case": "auth-changed-source",
+      "child_attempts": 0,
+      "expected_rejection": "ValueError"
+    },
+    {
+      "case": "auth-missing-review",
+      "child_attempts": 0,
+      "expected_rejection": "FileNotFoundError"
+    },
+    {
+      "case": "auth-foreign-review",
+      "child_attempts": 0,
+      "expected_rejection": "ValueError"
+    },
+    {
+      "case": "auth-manifest",
+      "child_attempts": 0,
+      "expected_rejection": "ValueError"
+    }
+  ],
+  "process_cases_completed": true,
+  "project_workflows": 0,
+  "provider_calls": 0
+}

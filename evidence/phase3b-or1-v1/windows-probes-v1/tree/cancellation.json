@@ -1,0 +1,32 @@
+{
+  "case": "cancellation",
+  "owners": {
+    "driver_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 34480,
+      "verified": true
+    },
+    "grandchild_pid": {
+      "classification": "absent",
+      "error": 87,
+      "pid": 40536,
+      "verified": true
+    }
+  },
+  "passed": true,
+  "result": {
+    "cancelled": true,
+    "child_returncode": 1,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 130,
+    "output": "{\"driver_pid\": 34480, \"grandchild_pid\": 40536}\r\n",
+    "output_bytes_base64": "eyJkcml2ZXJfcGlkIjogMzQ0ODAsICJncmFuZGNoaWxkX3BpZCI6IDQwNTM2fQ0K",
+    "pid": 34480,
+    "settled": true,
+    "started": true,
+    "timed_out": false,
+    "tree_stop_exit_code": 0
+  }
+}

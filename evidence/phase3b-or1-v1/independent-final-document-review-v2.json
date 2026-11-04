@@ -1,0 +1,36 @@
+{
+  "additional_all_actor_actual_plus_new_uncertainty_limit_seconds": 700,
+  "closure_v3_sha256": "f1d85d5148d8a74ef25f03b4e9cf07f2cd390620f4657922acc3544d6b635cb3",
+  "current_spec_sha256": "ccdd62bd3154745b8b4dacd84303092968bf173ea473d85dcfe1d195cf797ac6",
+  "exact_final_focus_claimed": false,
+  "findings": [
+    "V2 internalterminal guard failed; earlier prospectivebound is not a passed finalmeasurement. V3 honestly preservesfailure and restricts remainingauthorized docs/publication within original10800, no newexperiment/funds/admissions.",
+    "Arithmetic7540.832702+1129+700=9369.832702 is correct. All1129holds remain charged; rootmust verify finalpostboundary all-actor actualplusanynewuncertainty<=700 afterremoteverification. This review does not pre-certify futurework.",
+    "Actual externalpublicmirror whitespacecheck exit2 contains39issues solely in the two exact immutableevidencefiles. Both research-original and public-working rawhashes match pinned hashes; exacttwo-file exclusion returns0. Narrow criterion is appropriate publicationcheck and does not alter experiment/source acceptance.",
+    "Report andCURRENT clearly retain stoppedincomplete/noacceptedkit, unresolvedcollector cause, v2failure, v3prospective bound and requirementforseparatefutureexecutiondecision. No causal/scientificclaim introduced."
+  ],
+  "kind": "phase3b-or1-independent-final-document-review-v2",
+  "observed_at_utc": "2026-11-04T00:59:05.496660+00:00",
+  "offline_kit_accepted": false,
+  "passed": true,
+  "prospective_whole_block_upper_seconds": 9369.832702,
+  "raw_new_boundary_seconds": 7540.832702,
+  "report_sha256": "1a16f9b9b386dac23f9922a32719446b75bbdb79ddb82385c67012c41c0fc766",
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_or_source_changes_by_reviewer": false,
+  "scope": "Stopped-only final publication/documentation accounting; no source, tests, acceptance or experimental execution.",
+  "unreleased_hold_seconds": 1129,
+  "v2_failed_retained_and_disclosed": true,
+  "whitespace_check": {
+    "criterion_accepted": true,
+    "filtered_git_diff_cached_check_exit": 0,
+    "observed_whitespace_issue_count": 39,
+    "only_two_rawhash_authenticated_exclusions": {
+      "runs/phase3b-or1-v1/packet-plan-v1/parent-plan-review-v1.json": "52a0ff5223e6b1afe6e52e83366f91b6e4790177269c871a2943bf77fe07d09a",
+      "runs/phase3b-or1-v1/packet-plan-v1/physical-parameterization.diff": "24fc6195fb7e9193eb15a3555d2facfa550b1b14d8ae5c49a89b14a6cd89039d"
+    },
+    "original_and_public_working_bytes_match_pinned_hashes": true,
+    "scope": "External staged public mirror only; all code/other files still checked. Preserve immutable bytes, no normalization.",
+    "unfiltered_git_diff_cached_check_exit": 2
+  }
+}

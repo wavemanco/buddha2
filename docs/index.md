@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [P3B-OR1 bounded offline recovery](phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md) is defined and unstarted. It proposes three aggregate focused hours, an initial30-minute compatibility milestone, at least30minutes for closure, at most3frozen candidates,2main-matrix entries and2S13 starts. The empty fixture is an expected negative; both real positives remain mandatory in fresh S13 after genuine reviews/assessments, with all12groups and physical/extracted acceptance. Execution needs a subsequent instruction; no keys or paid transition is authorized. LA1 remains stopped with its accepted-kit goal unachieved and its ledger closed.
+Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [OR1 stopped incomplete](phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md):3candidates/2main starts are consumed,0S13/saved/cold starts. The final candidate passed static/preservation but failed the bootstrap unit assertion before capacity/matrix; no precise collector cause is proven. Full acceptance and the offline-kit goal remain unachieved. Independent stopped review and bounded closure accounting are recorded; publication is closure only, and no source fix, rerun, keys or paid work follows automatically.
 
 ## Research and specifications
 
@@ -107,6 +107,7 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
+- [OR1 stopped offline recovery](phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md)
 - [OR1 bounded offline recovery: defined, unstarted](phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md)
 - [LA1 repaired launcher and required-boundary stop](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md)
 - [LA1 launcher repair and offline acceptance: defined, unstarted](phases/phase-3b/PHASE3B_LAUNCHER_OFFLINE_ACCEPTANCE_DEFINITION.md)

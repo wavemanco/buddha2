@@ -1,0 +1,1 @@
+{"status": "prefreeze-command-failed-before-unit-dispatch", "exception": "SyntaxError: expected else after if expression (else1 typo)", "candidate_admissions": 0, "model_calls": 0, "source_changed_by_command": false}

@@ -1,0 +1,57 @@
+{
+  "candidate_terminal": true,
+  "classification": "eligible_operator_host_receipt_path_binding_defect",
+  "continuation_conditions": [
+    "Candidate1 remains failed/immutable, no samecandidate retry or mixedpasses. New effective source/config/cases/identity plus fresh verification-v6 and independent prospective review are required before candidate2 admission.",
+    "Audit every writer/caller after the narrow repair, including any contained main-entry marker, and execute meaningful hostdomain/containeddomain denial-positive tests without realcounter/model admissions.",
+    "All12/S13realpositive/physical/extracted acceptance and OR1scope/counters/time/ownership/privacy guards remain unchanged. Actualsource/history/privacy/owner uncertainty would hardstop independently of this benign planned-path refusal."
+  ],
+  "counter_state_supported": {
+    "S13_starts": 0,
+    "candidate_starts": 1,
+    "cold_replays": 0,
+    "main_starts": 0,
+    "saved_replays": 0
+  },
+  "findings": [
+    "Recorded first release entry exited1 before run_child/driver/Docker/model. support.publish intentionally delegates to runtime-only path(BASE/ROOT-runsPrefix); hostROOT/evidence admission target is outside that domain. The guard correctly refused and was not bypassed.",
+    "The controller conservatively consumes candidate1 via explicit observed-after-failure receipt. Its origin and timestamp basis are disclosed; it is not represented as a successful prior operator publication. No main/S13/saved/cold attempt was hidden.",
+    "Currentv5 contains staged externalreview material only; actual boundary and mainrelease paths are absent. No runtime owner was created or needs guessed/global cleanup on this path.",
+    "Failed source705 preservation receipt reports691ordinary captures plus14authenticated canonical originals, zero retained copies and unchanged history before permitted edits. No broad capture rehash was repeated by this bounded review.",
+    "Domain audit: host admission receipts belong under safeROOT/evidence, host driver/inspection/operator records underROOT/runs; H1 canonical/study/report/replay markers belong under writable/results/phase3b-seq2-v1. Current host admit callers are boundary/main/replay/host plus separately planned hostcold; contained routines must not call that host publisher.",
+    "Small approved repair is existing write_once(safe(target,roots=(ROOT,)),value) for the predetermined host admission path. Keep global support.path/publish runtime restrictions intact. Tests must exercise a genuine hostevidence target outsideBASE, since old unit tempROOTunderBASE masked this mismatch. Preserve Linux contained write domains and actual writer exclusivity."
+  ],
+  "kind": "phase3b-or1-independent-candidate1-repair-classification-v1",
+  "kit_or_packet_accepted": false,
+  "observed_at_utc": "2026-11-03T23:56:59.236375+00:00",
+  "references": {
+    "admissions/c1-candidate.json": {
+      "path": "evidence/phase3b-or1-v1/admissions/c1-candidate.json",
+      "sha256": "8dd902b97413abcda429babe90122fabb5fc5754c5d30149f0a6430172943340"
+    },
+    "candidate-1-entry-failure.json": {
+      "path": "evidence/phase3b-or1-v1/candidate-1-entry-failure.json",
+      "sha256": "25400a82994d1def2148726ccc50025d85325fee78007d1406bc58c909d271b7"
+    },
+    "candidate-1.json": {
+      "path": "evidence/phase3b-or1-v1/candidate-1.json",
+      "sha256": "e0c1ffc9280c75e5a1e79b58fe009cd9f4c164d5017749dcd6da274f7734da21"
+    },
+    "failed-candidate-1/preservation-receipt.json": {
+      "path": "evidence/phase3b-or1-v1/failed-candidate-1/preservation-receipt.json",
+      "sha256": "00b7d438c5322cf714fd33d68fa437baf4ae03937a129daf34fa106ac6c7e702"
+    },
+    "prospective-acceptance-1.json": {
+      "path": "evidence/phase3b-or1-v1/prospective-acceptance-1.json",
+      "sha256": "4f37f09c942c0b9029e56313bcbb420651c4d7f155f98d22bf9642508b52d517"
+    }
+  },
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_or_repair_by_reviewer": false,
+  "scientific_complete": false,
+  "scope": "Independent named-evidence/codepath classification only; no test/rerun/sourceedit. Existing fullOR1 authority covers the specified eligible versioned repair, not relaxing anyguard.",
+  "source_or_gate_accepted": false,
+  "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+  "stopped_candidate": 1,
+  "whole_OR1_hard_stop_required_by_this_defect": false
+}

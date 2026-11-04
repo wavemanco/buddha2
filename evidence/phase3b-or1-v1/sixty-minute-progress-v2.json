@@ -1,0 +1,100 @@
+{
+  "actual_repair_verification": "Host3counter/domain/exclusivePASS68a01...; containeddomainactualpositive+negative+cleanupPASS9c1c..., independentlyverified895b...; unchangedglobalruntimeguard. Candidate1failedpreserved; no secondadmissionyet.",
+  "continuation": "ContinuewholeauthorizedOR1withtaskbasedcapacitychecksbeforeadmissions and>=1800closure. Two versions andtwoeachmain/S13/saved/coldremain; no clock/science changes. Notcompletionguarantee.",
+  "counts": {
+    "S13": 0,
+    "candidate": 1,
+    "cold": 0,
+    "main": 0,
+    "saved": 0
+  },
+  "effective_remaining_seconds": 7019.904214,
+  "effective_used_seconds": 3780.095786,
+  "initial_milestone_pass": true,
+  "kind": "phase3b-or1-sixty-minute-threshold-review-v2",
+  "meter": {
+    "active_seconds": 3344.095786,
+    "actors": [
+      {
+        "active_seconds": 1367.282074,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 25
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 60.590223,
+        "actor": "/root/publication_audit",
+        "file": "publication.jsonl",
+        "mode": "active",
+        "records": 1
+      },
+      {
+        "active_seconds": 748.713043,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "wait",
+        "records": 27
+      },
+      {
+        "active_seconds": 1012.485586,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 39
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-04T00:02:27.752369+00:00",
+    "remaining_seconds": 7455.904214,
+    "within_limit": true
+  },
+  "observed_at_utc": "2026-11-04T00:02:27.785963+00:00",
+  "paid_transition": false,
+  "provider_calls": 0,
+  "real_keys": false,
+  "remaining_focused_seconds_estimate": {
+    "C2remaining_static_source_freeze_review": 450,
+    "S13_supervision_hostchecks": 1000,
+    "emptynegative_main_saved_Windows_operation": 350,
+    "protected_closure_remaining_reporting_publication": 1800,
+    "publication_preparation_registered_actor": 240,
+    "source_gate_archive_physicalcold": 950
+  },
+  "stage": "Newsource/configv6 implemented; final57fileMypypending; source/candidate2 freeze/fullprospectivereview next.",
+  "total_estimate_seconds": 4790,
+  "unreleased_hold_seconds": 436,
+  "unreleased_holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "controller-postfailure-hold-v1.json": {
+      "seconds": 33,
+      "sha256": "efb4ab9f4e644877b3ef9f5668fc3d0c07b1d5aa06c9123ff10ed29f96e485d0"
+    },
+    "reviewer-candidate-handoff-hold-v1.json": {
+      "seconds": 23,
+      "sha256": "f0b5b2bdb9afde175f81baa473b8014b009e00b17f1723ee7240087663db0a5e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  }
+}

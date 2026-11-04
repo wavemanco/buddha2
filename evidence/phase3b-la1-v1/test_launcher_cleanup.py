@@ -38,7 +38,10 @@ class FailedCleanupCases(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(dir=parent)
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.output = self.root / "runs/phase3b-seq2-v1/verification-v4"
+        self.output = self.root / "runs/phase3b-seq2-v1/verification-v5"
+        write(self.root / "evidence/phase3b-or1-v1/release-config.json",
+              {"kind": "phase3b-or1-release-config-v1", "candidate": 1, "verification": "verification-v5",
+               "authority": "evidence/phase3b-or1-v1/authority.json"})
 
     def test_exceptional_child_retains_failure_and_attempts_cleanup(self):
         from followups.phase3b_seq2_v1 import support
@@ -49,6 +52,7 @@ class FailedCleanupCases(unittest.TestCase):
         with patch.object(OPERATOR, "ROOT", self.root), patch.object(OPERATOR, "HERE", self.root / "evidence"), \
              patch.object(OPERATOR, "authenticate_candidate", return_value={"source_sha256": "a", "operator_timeout_seconds": {"boundary": 1}}), \
              patch.object(support, "source_identity", return_value={"sha256": "a"}), \
+             patch.object(OPERATOR, "admit", return_value={"unit_fixture": True}), \
              patch.object(OPERATOR, "run_child", side_effect=failure), \
              patch.object(OPERATOR, "settle_receipt_owners", return_value={"passed": False}) as cleanup, \
              patch.object(sys, "argv", ["operator", "boundary"]):

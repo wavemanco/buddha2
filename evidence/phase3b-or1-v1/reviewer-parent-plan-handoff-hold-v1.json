@@ -1,0 +1,13 @@
+{
+  "actor": "/root/s2_a1_source_review",
+  "additional_unreleased_hold_seconds": 32,
+  "current_fixed_holds_seconds": 380,
+  "from_parent_receipt_creation_utc": "2026-11-03T23:44:25.102873+00:00",
+  "initial_milestone_unchanged": true,
+  "kind": "phase3b-or1-reviewer-conservative-effort-hold-v1",
+  "observed_at_utc": "2026-11-03T23:45:10.721559+00:00",
+  "prior_fixed_holds_seconds": 348,
+  "reason": "Parent-plan handoff message was handled while reviewer recordedWAIT. Charge whole bounded interval from creation of the receipt referenced by that message through actualACTIVE registration; no precisefocus reconstruction and no earlier pure waiting claimed active.",
+  "released": false,
+  "to_registered_active_utc": "2026-11-03T23:44:56.720342+00:00"
+}

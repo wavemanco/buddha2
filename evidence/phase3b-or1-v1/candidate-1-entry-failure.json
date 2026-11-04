@@ -1,0 +1,29 @@
+{
+  "Docker_commands": 0,
+  "S13_starts": 0,
+  "actual_exit_code": 1,
+  "actual_trace": "launch_candidate.py main:240 -> admit:81 -> support.publish:90 -> path:84 -> safe:46 -> require; publish(directory/c1-candidate.json,value) rejected because path roots are runtimeBASE only. Source authentication had passed; run_child had not been called.",
+  "classification_proposed": "OR1-eligible evidence-path/writer binding defect, strict runtime path guard correctly refused; no source/privacy/ownership uncertainty",
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "evidence/phase3b-seq2-c2-v1/launch_candidate.py",
+    "boundary"
+  ],
+  "driver_started": false,
+  "failure_message": "S2 path outside explicit roots",
+  "failure_type": "ContractError",
+  "independent_classification_pending": true,
+  "kind": "phase3b-or1-candidate1-entry-failure-v1",
+  "known_runtime_owners": [],
+  "main_starts": 0,
+  "model_calls": 0,
+  "narrow_fix_proposed": "Use existing write_once(safe(evidence_target,ROOT)) for public operator admission receipts. Keep support.publish runtime-only guard unchanged. Tests must cover ordinary evidence ROOT outsideBASE. Newcandidate2/v6 required.",
+  "observed_at_utc": "2026-11-03T23:53:44.186552+00:00",
+  "provider_calls": 0,
+  "receipt_write_failed_before_child": true,
+  "same_candidate_repeat": false,
+  "source_files": 705,
+  "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+  "whole_block_stopped": false
+}

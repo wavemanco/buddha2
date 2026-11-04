@@ -1,0 +1,35 @@
+{
+  "actual_component_sha256": {
+    "cleanup.json": "3335464921cf8557cdc251a2c6e20d10ea0851ad98efcaaed5febc7ad5806d3d",
+    "create.json": "10631cf104cb600e81fc77814e717822fa934f1393c5c9a7f98932f7a81d99b9",
+    "execution.json": "cdceb10eb9b058dfaabb8a2ef87844934bff8b00ee98ac6fca7ccbf35ca8bf53",
+    "inspection.json": "9ba228b26e5d326bbbed4f07540d52f2f4aca5a6d861a8dab6d378b94d8330da",
+    "result.json": "f986f415d8f3362f78da2f503823e4f3f27af409609874fb85a9ffaa301cc9a0"
+  },
+  "findings": [
+    "Actual same productionruntime_output inside realH1 accepts exact/results/currentv6; rejects host/workspace alias, BASEroot, sibling, traversal and actualsymlink. Existinghostvalidator remains strict and rejects/results. No shim or successful-return mock replaces this function.",
+    "Actual operator and component exit0 agree, all declared rejection booleans true; all3failedv6sentinel rawhashes independently still match immutablefailure dossier. The temporarysymlink was removed, nofailedcandidatecanonical/modelwork was resumed.",
+    "PinnedH1 containment inspection/cleanup pass. Reviewer independently queried the exactfullID and observedNoSuchObject. No workflow.run/model/provider/release counter consumed by this component.",
+    "This validates the shared guard used by main+saved, not the complete futureentry/workflow. Config3/v7/newSourceMap/source/case and independent prospective review are stillrequired before lastcandidate3/lastmain."
+  ],
+  "independent_owner_absence": {
+    "error": "error: no such object: 744d81b319e0cab18d6aed05e25661f94295a2300b56e98bf9fc3ea1fb1c86c5\n",
+    "exit_code": 1,
+    "owner": "744d81b319e0cab18d6aed05e25661f94295a2300b56e98bf9fc3ea1fb1c86c5"
+  },
+  "keys_paid_authorized": false,
+  "kind": "phase3b-or1-independent-runtime-path-component-outcome-v1",
+  "kit_packet_scientific_accepted": false,
+  "observed_at_utc": "2026-11-04T00:22:24.478401+00:00",
+  "operator_receipt_sha256": "2e7a45a08ed99a10c013594f645627c2152407f50afd33c6a0814d84e1ebb5ad",
+  "passed": true,
+  "plan_sha256": "81a7ed079d8e03f5d31f78670c0aa194a040601b498dc464b115cee1a36826d9",
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_rerun_by_reviewer": false,
+  "script_and_helper_sha256": {
+    "evidence/phase3b-or1-v1/path_domain_probe.py": "9dbd5a8df1ff659c0db7f49d940618649a16536c51c38694ca44913a14f2c1cc",
+    "evidence/phase3b-or1-v1/writer_domain_probe.py": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df",
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py": "b8747be47543d258921aed32d2ddc082a1fde108db8c7c079cd81f99070fb747"
+  },
+  "source_candidate_or_gate_accepted": false
+}

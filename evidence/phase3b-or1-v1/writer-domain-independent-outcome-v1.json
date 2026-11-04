@@ -1,0 +1,51 @@
+{
+  "actual_component_file_sha256": {
+    "allowed-runtime-marker.json": "bbcce16902f77706bfe1593f10daa6f45517d62c29f1c3c4b2292149a31f2328",
+    "cleanup.json": "16e1e296a2e9e3d9626a6b016642c978a950931d7c9d2b88fcdeabb73b6f765c",
+    "create.json": "f33d20ce342fdf37e9b649c2edac23c50c1dcd3cf1c35174a651555021897342",
+    "execution.json": "e3c38aaa705c4c0c8cb1dbcbd4be410d7ec7119f0450c65c4305c8f9da8db439",
+    "inspection.json": "ebf5c10f821d71df27750bf09b0c2021cadbc764a7e6c2ea965feddddf97b54f",
+    "result.json": "f986f415d8f3362f78da2f503823e4f3f27af409609874fb85a9ffaa301cc9a0"
+  },
+  "candidate_or_gate_accepted": false,
+  "findings": [
+    "ActualH1 producedOSEROFS for sourceevidence, unchanged runtime publisher denied thathostpath, actual/results marker wrote and retained its firstbytes after rejected differentoverwrite. Forbidden evidencefile is independently absent.",
+    "The actualhost test suite3cases passes, including targetROOT/evidence outside runtimeBASE/exclusivewriter and global/percandidatecounter negatives. No production admission is consumed.",
+    "Actual component/operator childexit0 and settled status agree; actual pinnedcontainment inspection and cleanup pass. Reviewer independently queried the exact full64hex owner and observedNoSuchObject.",
+    "These component tests establish writer-domain behavior only. Candidate1 remains failed/consumed; candidate2source/config/caseprospective review and all12/physical/extracted acceptance are stillrequired."
+  ],
+  "independent_owner_absence": {
+    "error": "error: no such object: b197533ef2b6ad07a2dfe195041cf99d3fa1643ab7054b969ffc0587574204d9\n",
+    "exit_code": 1
+  },
+  "kind": "phase3b-or1-independent-writer-domain-component-review-v1",
+  "kit_packet_scientific_accepted": false,
+  "observed_at_utc": "2026-11-04T00:01:21.308887+00:00",
+  "owner": "b197533ef2b6ad07a2dfe195041cf99d3fa1643ab7054b969ffc0587574204d9",
+  "passed": true,
+  "references": {
+    "writer-domain-operator-v1.json": {
+      "path": "evidence/phase3b-or1-v1/writer-domain-operator-v1.json",
+      "sha256": "9c1c7ae397e2499aa27571eb9d18ccac56e5f8d3a736d73dd7c9f251b59c7932"
+    },
+    "writer-domain-prospective-review-v1.json": {
+      "path": "evidence/phase3b-or1-v1/writer-domain-prospective-review-v1.json",
+      "sha256": "640bd29937a81a5e092962334701536450d6b41c2026212e437eeabe04cee520"
+    },
+    "writer-host-tests-v1.json": {
+      "path": "evidence/phase3b-or1-v1/writer-host-tests-v1.json",
+      "sha256": "68a01a9039facdfb8db07900d16c9b32a1d5659a1c9fa4b4a44a5d6b3905afce"
+    },
+    "writer-repair-plan-v1.json": {
+      "path": "evidence/phase3b-or1-v1/writer-repair-plan-v1.json",
+      "sha256": "5a55f3e5234e9de3492b925785d285e664a402e9f0d3f1e6233f9fc417c7a46c"
+    },
+    "writer_domain_probe.py": {
+      "path": "evidence/phase3b-or1-v1/writer_domain_probe.py",
+      "sha256": "8ba0023f611574fcd0f6facb626266681a4201a73cedb00890ebd7e5f042e6df"
+    }
+  },
+  "release_main_S13_model_provider_calls": 0,
+  "reviewer": "/root/s2_a1_source_review",
+  "runtime_rerun_by_reviewer": false
+}

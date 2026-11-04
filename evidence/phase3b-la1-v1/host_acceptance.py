@@ -6,9 +6,10 @@ import os
 from pathlib import Path
 
 from followups.phase3b_seq2_v1 import verify
+from followups.phase3b_seq2_v1.support import recovery_config
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / "runs/phase3b-seq2-v1/verification-v4"
+OUTPUT = ROOT / "runs/phase3b-seq2-v1" / recovery_config()["verification"]
 
 
 def emergency_cleanup() -> dict:
@@ -47,9 +48,9 @@ def emergency_cleanup() -> dict:
                 raise ValueError("foreign new launcher study")
             command = item["command"]
             study_argument = command[command.index("--study") + 1]
-            if study_argument not in {
-                    "/results/phase3b-seq2-v1/verification-v4/release/study.json",
-                    "/results/phase3b-seq2-v1/verification-v4/operational-rehearsal/release/study.json"}:
+            prefix = "/results/" + OUTPUT.relative_to(ROOT / "runs").as_posix()
+            if study_argument not in {prefix + "/release/study.json",
+                                      prefix + "/operational-rehearsal/release/study.json"}:
                 raise ValueError("foreign inspected launcher input")
             owners.append((item["container_id"], item["image"], name))
         except Exception as exc:

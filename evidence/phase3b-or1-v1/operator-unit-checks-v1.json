@@ -1,0 +1,53 @@
+{
+  "Docker_calls": 0,
+  "commands": [
+    [
+      "C:\\Program Files\\Python313\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "followups.phase3b_seq2_v1.test_boundary_compatibility_s2",
+      "followups.phase3b_seq2_v1.test_or1_admissions_s2"
+    ],
+    [
+      "C:\\Program Files\\Python313\\python.exe",
+      "-B",
+      "evidence/phase3b-la1-v1/test_launcher_cleanup.py"
+    ]
+  ],
+  "kind": "phase3b-or1-operator-unit-checks-v1",
+  "passed": true,
+  "production_admissions": 0,
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-03T23:41:23.822711+00:00",
+  "results": [
+    {
+      "cancelled": false,
+      "child_returncode": 0,
+      "error": "test_first_pair_unit_fixture_rejects_missing_engineering_review (followups.phase3b_seq2_v1.test_boundary_compatibility_s2.BoundaryCompatibilityTests.test_first_pair_unit_fixture_rejects_missing_engineering_review) ... ok\r\ntest_first_pair_unit_fixture_rejects_unclosed_assessments (followups.phase3b_seq2_v1.test_boundary_compatibility_s2.BoundaryCompatibilityTests.test_first_pair_unit_fixture_rejects_unclosed_assessments) ... ok\r\ntest_ready_first_pair_unit_fixture_projects_three_targets_without_calls (followups.phase3b_seq2_v1.test_boundary_compatibility_s2.BoundaryCompatibilityTests.test_ready_first_pair_unit_fixture_projects_three_targets_without_calls) ... ok\r\ntest_count_before_work_per_candidate_and_global_caps (followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_count_before_work_per_candidate_and_global_caps) ... ok\r\ntest_unadmitted_or_changed_history_cannot_admit (followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_unadmitted_or_changed_history_cannot_admit) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.446s\r\n\r\nOK\r\n",
+      "error_bytes_base64": "dGVzdF9maXJzdF9wYWlyX3VuaXRfZml4dHVyZV9yZWplY3RzX21pc3NpbmdfZW5naW5lZXJpbmdfcmV2aWV3IChmb2xsb3d1cHMucGhhc2UzYl9zZXEyX3YxLnRlc3RfYm91bmRhcnlfY29tcGF0aWJpbGl0eV9zMi5Cb3VuZGFyeUNvbXBhdGliaWxpdHlUZXN0cy50ZXN0X2ZpcnN0X3BhaXJfdW5pdF9maXh0dXJlX3JlamVjdHNfbWlzc2luZ19lbmdpbmVlcmluZ19yZXZpZXcpIC4uLiBvaw0KdGVzdF9maXJzdF9wYWlyX3VuaXRfZml4dHVyZV9yZWplY3RzX3VuY2xvc2VkX2Fzc2Vzc21lbnRzIChmb2xsb3d1cHMucGhhc2UzYl9zZXEyX3YxLnRlc3RfYm91bmRhcnlfY29tcGF0aWJpbGl0eV9zMi5Cb3VuZGFyeUNvbXBhdGliaWxpdHlUZXN0cy50ZXN0X2ZpcnN0X3BhaXJfdW5pdF9maXh0dXJlX3JlamVjdHNfdW5jbG9zZWRfYXNzZXNzbWVudHMpIC4uLiBvaw0KdGVzdF9yZWFkeV9maXJzdF9wYWlyX3VuaXRfZml4dHVyZV9wcm9qZWN0c190aHJlZV90YXJnZXRzX3dpdGhvdXRfY2FsbHMgKGZvbGxvd3Vwcy5waGFzZTNiX3NlcTJfdjEudGVzdF9ib3VuZGFyeV9jb21wYXRpYmlsaXR5X3MyLkJvdW5kYXJ5Q29tcGF0aWJpbGl0eVRlc3RzLnRlc3RfcmVhZHlfZmlyc3RfcGFpcl91bml0X2ZpeHR1cmVfcHJvamVjdHNfdGhyZWVfdGFyZ2V0c193aXRob3V0X2NhbGxzKSAuLi4gb2sNCnRlc3RfY291bnRfYmVmb3JlX3dvcmtfcGVyX2NhbmRpZGF0ZV9hbmRfZ2xvYmFsX2NhcHMgKGZvbGxvd3Vwcy5waGFzZTNiX3NlcTJfdjEudGVzdF9vcjFfYWRtaXNzaW9uc19zMi5PUjFBZG1pc3Npb25UZXN0cy50ZXN0X2NvdW50X2JlZm9yZV93b3JrX3Blcl9jYW5kaWRhdGVfYW5kX2dsb2JhbF9jYXBzKSAuLi4gb2sNCnRlc3RfdW5hZG1pdHRlZF9vcl9jaGFuZ2VkX2hpc3RvcnlfY2Fubm90X2FkbWl0IChmb2xsb3d1cHMucGhhc2UzYl9zZXEyX3YxLnRlc3Rfb3IxX2FkbWlzc2lvbnNfczIuT1IxQWRtaXNzaW9uVGVzdHMudGVzdF91bmFkbWl0dGVkX29yX2NoYW5nZWRfaGlzdG9yeV9jYW5ub3RfYWRtaXQpIC4uLiBvaw0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpSYW4gNSB0ZXN0cyBpbiAwLjQ0NnMNCg0KT0sNCg==",
+      "exit_code": 0,
+      "output": "",
+      "output_bytes_base64": "",
+      "pid": 82680,
+      "settled": true,
+      "started": true,
+      "timed_out": false
+    },
+    {
+      "cancelled": false,
+      "child_returncode": 0,
+      "error": "test_exceptional_child_retains_failure_and_attempts_cleanup (__main__.FailedCleanupCases.test_exceptional_child_retains_failure_and_attempts_cleanup) ... ok\r\ntest_malformed_boundary_discovery_still_settles_known_owner (__main__.FailedCleanupCases.test_malformed_boundary_discovery_still_settles_known_owner) ... ok\r\ntest_malformed_host_discovery_still_settles_known_native_owner (__main__.FailedCleanupCases.test_malformed_host_discovery_still_settles_known_native_owner) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.080s\r\n\r\nOK\r\n",
+      "error_bytes_base64": "dGVzdF9leGNlcHRpb25hbF9jaGlsZF9yZXRhaW5zX2ZhaWx1cmVfYW5kX2F0dGVtcHRzX2NsZWFudXAgKF9fbWFpbl9fLkZhaWxlZENsZWFudXBDYXNlcy50ZXN0X2V4Y2VwdGlvbmFsX2NoaWxkX3JldGFpbnNfZmFpbHVyZV9hbmRfYXR0ZW1wdHNfY2xlYW51cCkgLi4uIG9rDQp0ZXN0X21hbGZvcm1lZF9ib3VuZGFyeV9kaXNjb3Zlcnlfc3RpbGxfc2V0dGxlc19rbm93bl9vd25lciAoX19tYWluX18uRmFpbGVkQ2xlYW51cENhc2VzLnRlc3RfbWFsZm9ybWVkX2JvdW5kYXJ5X2Rpc2NvdmVyeV9zdGlsbF9zZXR0bGVzX2tub3duX293bmVyKSAuLi4gb2sNCnRlc3RfbWFsZm9ybWVkX2hvc3RfZGlzY292ZXJ5X3N0aWxsX3NldHRsZXNfa25vd25fbmF0aXZlX293bmVyIChfX21haW5fXy5GYWlsZWRDbGVhbnVwQ2FzZXMudGVzdF9tYWxmb3JtZWRfaG9zdF9kaXNjb3Zlcnlfc3RpbGxfc2V0dGxlc19rbm93bl9uYXRpdmVfb3duZXIpIC4uLiBvaw0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpSYW4gMyB0ZXN0cyBpbiAwLjA4MHMNCg0KT0sNCg==",
+      "exit_code": 0,
+      "output": "",
+      "output_bytes_base64": "",
+      "pid": 16300,
+      "settled": true,
+      "started": true,
+      "timed_out": false
+    }
+  ],
+  "unit_fixture_histories_only": true
+}

@@ -1,0 +1,70 @@
+{
+  "API_cost_cap": 0,
+  "admission_not_yet_consumed": true,
+  "candidate": 1,
+  "copied_reviewplan_before_main_saved_inventory": true,
+  "effective_remaining_seconds": 8343.631098,
+  "fresh_v5_absent_before_setup": true,
+  "holds": {
+    "bootstrap-hold.json": {
+      "seconds": 120,
+      "sha256": "604a57a9d51c4ca401a2c11f7f47f7ec0da834002ba54dd9ab63f139a37163ef"
+    },
+    "controller-hold-v1.json": {
+      "seconds": 28,
+      "sha256": "eb5cf432f8b49d629543263bb5045eed7727341c4cc25b04268ce5b45992b20e"
+    },
+    "reviewer-parent-plan-handoff-hold-v1.json": {
+      "seconds": 32,
+      "sha256": "5e68364d482958e0db03ba6b950c7684e6b69ba33565df1d1b38f1ddd8f63957"
+    },
+    "reviewer-plan-coordination-hold-v1.json": {
+      "seconds": 200,
+      "sha256": "b40543c678436152cbfbc751a7155afc2b91d08fc07c1e2acdaab5768dc195b1"
+    }
+  },
+  "kind": "phase3b-or1-capacity-before-c1-candidate-v1",
+  "meter": {
+    "active_seconds": 2076.368902,
+    "actors": [
+      {
+        "active_seconds": 900.208389,
+        "actor": "/root/s2_block_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 15
+      },
+      {
+        "active_seconds": 155.02486,
+        "actor": "/root/s2_block_controller/s2_supervisor_recovery_a1",
+        "file": "probe.jsonl",
+        "mode": "done",
+        "records": 8
+      },
+      {
+        "active_seconds": 364.932556,
+        "actor": "/root/s2_a1_source_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 18
+      },
+      {
+        "active_seconds": 656.203097,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 24
+      }
+    ],
+    "limit_seconds": 10800,
+    "observed_at_utc": "2026-11-03T23:52:17.280908+00:00",
+    "remaining_seconds": 8723.631098,
+    "within_limit": true
+  },
+  "observed_at_utc": "2026-11-03T23:52:17.341450+00:00",
+  "protected_closure_seconds": 1800,
+  "review_sha256": "4f37f09c942c0b9029e56313bcbb420651c4d7f155f98d22bf9642508b52d517",
+  "source_sha256": "d38acf7dc089906e3a7e2abed9ad83580681ff7cdcfc9cf1582768c3cf51242b",
+  "supported_remaining_engineering_estimate_seconds": 3600,
+  "unreleased_hold_seconds": 380
+}

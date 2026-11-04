@@ -1,0 +1,15 @@
+{
+  "basis": "Additional conservative prospective terminal-closure charge. Actual root/reviewer/publication effort remains separately metered; this is not a claim of an observed missed interval.",
+  "kind": "phase3b-or1-prospective-terminal-publication-hold-v1",
+  "new_candidate_or_main_admission_authorized": false,
+  "new_experimental_execution_authorized": false,
+  "recorded_at_utc": "2026-11-04T00:48:55.140420+00:00",
+  "released": false,
+  "scope": [
+    "final documentation and accounting",
+    "short independent final-document review",
+    "isolated public-mirror commit/push and read-only remote verification",
+    "final handoff"
+  ],
+  "seconds": 600
+}

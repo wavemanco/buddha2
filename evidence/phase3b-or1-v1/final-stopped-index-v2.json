@@ -1,0 +1,22 @@
+{
+  "controller_runtime_finished": true,
+  "files_sha256": {
+    "120-minute-progress-v1.json": "cb6457fcb25e14c36225c22cfb4fb0e77d92df71a4c6652e63b59d40da023bbd",
+    "closure-v1.json": "8a8cdb34fa872f14a068dd5b681ee875709f0851994d4e521caa5b77bbd47808",
+    "final-known-owners-v1.json": "bffcc70f5cb248d687e2a9e910a78a2c8ea05180a48a492dbce5f58f1e82e7ac",
+    "final-stopped-preservation-v1.json": "05611f2d8a0427fa736bdbf8bb67d49582adf33098197762ab8618bd7d9a7298",
+    "independent-stopped-navigation-v1.json": "3b78133e113386aa43ccc7253c85b55acb477231bb3c216b977873bea5114235",
+    "independent-stopped-outcome-v1.json": "04c8abcb3523b1716509c48e52e72a4833b7694490eb6f9ca6f9b78fa18535be",
+    "stopped-dossier-index-v1.json": "77a217be5426048ceefe123eadfb7342b74c2c0315737eb120124faf4fb853f6",
+    "stopped-outcome-v1.json": "17f050dabaf0b2b69f3cfcfde6114f05e7eca20a6bcd5e1b3151ce66acebce2f"
+  },
+  "kind": "phase3b-or1-final-stopped-index-v2",
+  "no_automatic_further_execution": true,
+  "objective_achieved": false,
+  "offline_kit_accepted": false,
+  "parent_publication_and_final_accounting_pending": true,
+  "recorded_at_utc": "2026-11-04T00:47:16.475321+00:00",
+  "source_files": 735,
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e",
+  "status": "stopped-incomplete"
+}

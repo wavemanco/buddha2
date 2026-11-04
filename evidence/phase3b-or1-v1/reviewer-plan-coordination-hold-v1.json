@@ -1,0 +1,34 @@
+{
+  "OR1_total_fixed_holds_with_existing120bootstrap": 320,
+  "actor": "/root/s2_a1_source_review",
+  "additional_unreleased_hold_seconds": 200,
+  "initial_milestone_earlier_overlap_additional_hold_seconds": 88,
+  "initial_milestone_remains_under1800": true,
+  "intervals": [
+    {
+      "from_last_wait_utc": "2026-11-03T23:37:38.836390+00:00",
+      "to_registered_active_utc": "2026-11-03T23:38:10.584932+00:00",
+      "whole_bounded_interval_seconds_ceiling": 32
+    },
+    {
+      "from_last_wait_utc": "2026-11-03T23:38:11.511990+00:00",
+      "to_registered_active_utc": "2026-11-03T23:39:06.636280+00:00",
+      "whole_bounded_interval_seconds_ceiling": 56
+    },
+    {
+      "from_last_wait_utc": "2026-11-03T23:39:07.793382+00:00",
+      "to_registered_active_utc": "2026-11-03T23:40:24.755371+00:00",
+      "whole_bounded_interval_seconds_ceiling": 77
+    },
+    {
+      "from_last_wait_utc": "2026-11-03T23:40:25.736253+00:00",
+      "to_registered_active_utc": "2026-11-03T23:41:00.270799+00:00",
+      "whole_bounded_interval_seconds_ceiling": 35
+    }
+  ],
+  "kind": "phase3b-or1-reviewer-conservative-effort-hold-v1",
+  "observed_at_utc": "2026-11-03T23:41:24.033291+00:00",
+  "prior_ledger_modified": false,
+  "reason": "Reviewer started planning/coordination while recorded WAIT before registering ACTIVE in the next tool call. Charge each entire bounded uncertain WAIT interval; this is not a reconstruction of exact focus.",
+  "released": false
+}

@@ -1,0 +1,21 @@
+{
+  "case": "nonzero",
+  "owned_child": {
+    "classification": "absent",
+    "error": 87,
+    "verified": true
+  },
+  "result": {
+    "cancelled": false,
+    "child_returncode": 7,
+    "error": "",
+    "error_bytes_base64": "",
+    "exit_code": 7,
+    "output": "{\"argv\": [\"exit7\"], \"forbidden_sentinel_present\": false, \"required_env\": {\"SYSTEMROOT\": true, \"WINDIR\": true, \"PATH\": true}}\r\n",
+    "output_bytes_base64": "eyJhcmd2IjogWyJleGl0NyJdLCAiZm9yYmlkZGVuX3NlbnRpbmVsX3ByZXNlbnQiOiBmYWxzZSwgInJlcXVpcmVkX2VudiI6IHsiU1lTVEVNUk9PVCI6IHRydWUsICJXSU5ESVIiOiB0cnVlLCAiUEFUSCI6IHRydWV9fQ0K",
+    "pid": 53276,
+    "settled": true,
+    "started": true,
+    "timed_out": false
+  }
+}

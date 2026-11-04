@@ -1,0 +1,23 @@
+{
+  "canonical_originals": {
+    "evidence/phase2-release-r018/runtime/current-source-historical-rejected.stderr.log": "dd2919183218c69dabbb766208becff186200b073f81d5ea906cc674f67b0bc0",
+    "evidence/phase2-release-r018/runtime/current-source-historical-rejected.stdout.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "evidence/phase2-release-r018/runtime/final-static-checks.stderr.log": "38eff644c174d7f5c7afce4c595147aca4c9c1201de64ab1922182f3335468aa",
+    "evidence/phase2-release-r018/runtime/final-static-checks.stdout.log": "6adafdc57ec3a233e29d8cde10e7f3fba3799cbb8c64eff49142dd9df9c947d3",
+    "evidence/phase2-release-r018/runtime/full-suite.stderr.log": "2b5a929a692ed349eb2973322e706b456d141d846d7d3f4ce52507a1e590eae3",
+    "evidence/phase2-release-r018/runtime/full-suite.stdout.log": "41a9dd4cdf189cf0f9672263d139ed24769b543564afb363a81f78751bb231b6",
+    "evidence/phase2-release-r018/runtime/historical-am1-resume.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/phase2-release-r018/runtime/historical-am1-resume.stdout.log": "62f9e7f479441e1a654dbdb58c7c29830e60893c228210f5498ed3198bef6712",
+    "evidence/phase2-release-r018/runtime/historical-r010-replay.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/phase2-release-r018/runtime/historical-r010-replay.stdout.log": "e5fdcc6b849fc35293de494ecd09c1d73a3954aa74840599287ef83035c6d0d3",
+    "evidence/phase2-release-r018/runtime/independent-full-rehearsal.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/phase2-release-r018/runtime/independent-full-rehearsal.stdout.log": "6ee34f7a469acc3eff70237b5ba36e1b1ecfaf811153e9e9f6828b9b81c33403",
+    "evidence/phase2-release-r018/runtime/unreviewed-expansion-rejected.stderr.log": "cf4a9be98dbb3dacc75eb3f85a78defc74449b1d3badcc2f03de7d2a60ccaf3f",
+    "evidence/phase2-release-r018/runtime/unreviewed-expansion-rejected.stdout.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "kind": "phase3b-s2-originals-only-source-snapshot-v1",
+  "offline_classification_receipt": {
+    "path": "evidence/phase2-release-r018/independent-acceptance.json",
+    "sha256": "f8c729dbbb23ab98efacb4a66e67a73189d830a3c837c6acf347a77036703ea7"
+  }
+}
