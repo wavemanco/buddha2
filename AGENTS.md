@@ -1,6 +1,6 @@
 # Current direction — 4 November 2026
 
-Read `docs/research/CURRENT_SPEC.md` and `docs/ENGINEERING_AUDIT.md` first. The current user-directed work is Ponytail review and simplification of Buddha2-owned integration code around native Harness² and NoveltyBench. Vendor source, algorithms, pins, datasets and scoring protocol must remain unchanged. MuCE, CrPO and human collection are deferred.
+Read `docs/research/CURRENT_SPEC.md` and `docs/ENGINEERING_AUDIT.md` first. The Ponytail cleanup is complete. The subsequent authorized Phase 3B live attempt closed incomplete after 122 calls/$12.528747 during the first prompt's second-round editor session. Read `docs/phases/phase-3b/PHASE3B_LIVE_ATTEMPT_REPORT.md` for the stop, reproduced read-format rejection and diagnostic limits. No automatic repeat, broader engineering campaign or repair is authorized by that outcome. Vendor source, algorithms, pins, datasets and scoring protocol must remain unchanged. MuCE, CrPO and human collection are deferred.
 
 Use `python -B -m buddha2 experiment --help` for the current entry. V2 experiments bind effective code/configuration and the declared approved definition ID. Their live gate uses six current component receipts and a separate independent review; historical ZIP/candidate campaigns are not v2 runtime prerequisites. Preserve all historical manifests, records and results, and never relabel old studies as current. No paid run follows automatically from this engineering work.
 

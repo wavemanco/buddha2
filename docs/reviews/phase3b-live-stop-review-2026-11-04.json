@@ -1,0 +1,122 @@
+{
+  "accounting": {
+    "active_unsettled_intents": 0,
+    "actual_sdk_invocations": 122,
+    "cost_basis": "Usage-based public-price exposure, not an invoice. Unused authorization is not permission to repeat.",
+    "cumulative_known_spent_micro_usd": 58573112,
+    "cumulative_max_exposure_micro_usd": 81453112,
+    "durable_unknown_results": 0,
+    "historical_known_spent_micro_usd": 46044365,
+    "historical_reserved_micro_usd": 22880000,
+    "historical_unknown_released": false,
+    "historical_unknown_responses": 2,
+    "input_tokens": 7946328,
+    "late_known": 0,
+    "new_admitted_attempts": 122,
+    "new_reserved_micro_usd": 0,
+    "new_spent_micro_usd": 12528747,
+    "output_tokens": 141043,
+    "sdk_invocation_unknown": 0,
+    "validated_transport_audits": 122
+  },
+  "checks": {
+    "all_three_exact_owned_containers_absent": true,
+    "current_effective_source_unchanged": true,
+    "current_status_docs_preserve_failure_and_limits": true,
+    "eight_reports_byte_identical": true,
+    "historical_holds_preserved": true,
+    "i1_existing_semantic_replay_helper_passed": true,
+    "i1_study_snapshot_bindings_match": true,
+    "live_replay_independently_observed": true,
+    "postmortem_and_closure_status_seals_valid": true,
+    "public_accounting_matches_live_replay": true
+  },
+  "continuation_or_repetition_authorized": false,
+  "evidence_sha256": {
+    "docs/phases/phase-3b/PHASE3B_LIVE_ATTEMPT_REPORT.md": "001f7152029ae1bbf4997106117937111b9b16f8978c9e014daf34f88cc5d341",
+    "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/typed-postmortem-v1.json": "d841479418ed77d3cb6febd9e6265cf827c732f51134a1f9220f4a34f0e6a157",
+    "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/visibility/closure/result.json": "a36325c968c8ff3fb59463aedac44af593adab6f31ba69252c7c47bc52ade14b",
+    "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/visibility/closure/snapshot/manifest.json": "d4fb2d0ceb9c54f0c10d6b9526cbdf4cba64e252afe6c3b8beb2dfde7a17e0c9",
+    "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/visibility/closure/status.json": "a58036140f41b8d45fdec83173bef9092668bacb011a354d59e00e7d4c644f88",
+    "runs/phase3b-seq2-v1/visibility-exports/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/closure/supervised/export/result.json": "358d71ac7a905766217a94c950311cfe20556a94a1c537c2307cf454ff91d749",
+    "runs/phase3b-seq2-v1/visibility-exports/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/closure/supervised/export/semantic.json": "3b23b7fb9b0bc655136a852197df12942960d698b888a5361e8aa5d7a902b653"
+  },
+  "experiment_status": "closed_incomplete",
+  "findings": [],
+  "kind": "phase3b-live-stop-independent-review-v1",
+  "limits": [
+    "No readiness, first-pair, phase, model-quality, held-out or effectiveness PASS is conferred.",
+    "No source, dependency, protocol, model, allowance, starting prompt or upstream edit was made by this review. Native strategy changes are experimental outputs.",
+    "No keys, private files, raw stream files or captured-source trees were inspected. Provider payload bodies and thinking were not displayed or manually reviewed; existing pure runtime replay and the parent bounded guard recheck operated internally on retained records.",
+    "The original failing live predicate remains unknown; the reproduced numbered-read parser rejection is not a proven model or unsafe-action failure."
+  ],
+  "readiness_passed": false,
+  "removed_exact_owners": [
+    "dae8fddfe7b7cfc8adaa772913898cc20065051facc098d937563e75c1b18b42",
+    "6446f7b5e255c573c8394a7dee3f78ebb0688669025bd54b1581cf2d14f07795",
+    "78f3fd86a046c3bd3512c5afc74460a862a3f457c04dc8350bf116239f247f21"
+  ],
+  "report_replay": {
+    "canonical_directory": "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/reports/final",
+    "extra_provider_calls_reported": 0,
+    "file_sha256": {
+      "PHASE3B_REPORT.md": "352799d9228ceb5c9b06f4aa00c81b0031871f8afbca2f96bf9da7fcaefe33e8",
+      "accounting.json": "d0e8197145f2bd25816ffdf7d80a499dfb720a881bcae514f6deeb2b857e6558",
+      "analysis.json": "922a452fdd829d7a7851ca4c2f61a10194408734e3b3ae40d01385fc515b011b",
+      "coverage.json": "26f71e57a42a5c0a89a152f58ac252362fcfa19fcc34f95148ad1b856cebcff6",
+      "protocol.json": "02132742f79bb2f7bf09cfb2be89aaed75bdccd75aeb1cbc0754b10ae43c7232",
+      "readiness.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "rows.json": "6a812a905c9ca2f1fa87be9cacd81c63be4a60f5a585e4d4c9349c88f89acec1",
+      "summary.json": "6b302d23860fc2e77bf42921116f25612f3ae5ae94600ed93a4d8d178ca749a2"
+    },
+    "runtime_scope": "Parent executed one existing pinned-H1 network-none saved-report job; this reviewer compared its outputs and exact-owner absence, and did not start a container or test campaign.",
+    "saved_directory": "runs/phase3b-seq2-v1/native/ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c/live/reports/saved-replay-v1"
+  },
+  "review_classification": "accurately_reported_closed_failure",
+  "review_status": "PASS",
+  "reviewed_at_utc": "2026-11-04T18:43:03.342497+00:00",
+  "reviewed_docs": [
+    "README.md",
+    "CURRENT_SPEC.md",
+    "AGENTS.md",
+    "docs/ENGINEERING_AUDIT.md",
+    "docs/phases/phase-3b/PHASE3B_LIVE_ATTEMPT_REPORT.md"
+  ],
+  "reviewer": "/root/framework_research",
+  "scientific_complete": false,
+  "scientific_coverage": {
+    "assessment_scored": 0,
+    "assessment_targets": 12,
+    "first_pair_reviewed": false,
+    "primary_scored": 0,
+    "result": "No completed seq-k2 versus fixed comparison or performance conclusion; no readiness or first-pair PASS was written."
+  },
+  "scope": "Current failed attempt, public closure/report fidelity, accounting, bounded postmortem qualifications and documentation; no model-quality or effectiveness rating.",
+  "sha256": "314db2631d0487efa046a176dba9824eb935de944f7f384439ac4ae22afee378",
+  "source_files": 162,
+  "source_sha256": "c6eb4157c15ff859e70a0411b9b92f227ccfdf94dd1da94f38d1cdac21ef08c1",
+  "stop": {
+    "existing_information_guard_reproduction": "malformed numbered read content",
+    "halt_evidence_sha256": "d3be54ed723caffa43416534993169e4a0675b12fbbc0d9ddeb26fc6b856430a",
+    "journal_reason": "editor_boundary_violation",
+    "journal_status": "halted-integrity",
+    "last_settled_slot": "p3b-01.adaptive.editor.dom2.a1.t15",
+    "original_failing_predicate": "unknown",
+    "qualification": "The existing read-format verifier reproduces a rejection. The broad live relay halt does not prove that predicate was invoked on this turn, unsafe access, history mutation, refusal, timeout or a budget stop. Original temporary-workspace witnesses were unavailable; normal-session and tool replay were not attempted.",
+    "retained_response_stop_reason": "tool_use",
+    "retained_response_tool_names": [
+      "write"
+    ],
+    "settled_editor_receipt": "The exact dom2.a1.settled.json is absent. Current editor.py raises on record.error before _save_session; no more specific live exception message was retained."
+  },
+  "study_sha256": "ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c",
+  "visibility": {
+    "elapsed_seconds": 49.35789045901038,
+    "provider_calls": 0,
+    "roundtrip_equal_recorded": true,
+    "semantic_sha256_verified": "9dc1ce2a770ea0fefd13ec20cfd849233ce3f6fc9b89a03769b1a41fb017ebaa",
+    "source_attachment_bytes_preserved_recorded": true,
+    "status": "complete",
+    "verification": "Existing host_checks.replay_semantic_sha verified the public semantic record, excluding only its recorded export time, and bound that time to the export proof. Snapshot payload bodies and attachment contents were not reopened."
+  }
+}

@@ -1,6 +1,6 @@
 # Engineering audit and simplification
 
-Date: 4 November 2026. The reviewed cleanup and offline component verification are complete. No paid comparison was run. This is evidence of the integration's tested behavior, not of adaptation improving benchmark results.
+Date: 4 November 2026. The reviewed cleanup and offline component verification are complete; that engineering work made zero provider calls. The [subsequent Phase 3B live attempt](phases/phase-3b/PHASE3B_LIVE_ATTEMPT_REPORT.md) stopped incomplete during round two. This audit is evidence of the integration's tested offline behavior, not of adaptation improving benchmark results.
 
 ## What this repository does
 
@@ -121,9 +121,9 @@ The cleanup was organized around the following focused-work targets across agent
 
 Those outputs are now implemented and component-reviewed. No additional server, framework migration or nested acceptance campaign is planned. This cleanup spent $0 on APIs.
 
-The next scientific step is the already-defined four-prompt Phase 3B development comparison: actual native `seq,k=2` against fixed best-of-twelve, with the same declared techniques, separate external assessment, and recorded actual spending. Its next operating step is to bind the reviewed current study to applicable spending authority, check current exposure and obtain fresh masked keys. Engineering readiness does not itself authorize a paid run. Schedule the pilot and closure as the next working session, allowing for observed multi-stage run latency rather than promising an inference-only duration. If a real execution defect occurs, retain its result and diagnose that specific defect; do not silently start another fresh campaign.
+At cleanup closure, the handoff was the defined four-prompt Phase 3B development comparison: actual native `seq,k=2` against fixed best-of-twelve, with the same declared techniques, separate external assessment and recorded actual spending. The user subsequently authorized that attempt. It stopped incomplete during the first prompt's second round. The [stopped-attempt report](phases/phase-3b/PHASE3B_LIVE_ATTEMPT_REPORT.md) now records the current next decision about the reproduced read-format rejection. This historical handoff does not authorize another paid attempt or a new release campaign.
 
-After that comparison, use its observed outcome to decide whether a larger development comparison is warranted. Held-out confirmation and broader model/strategy comparisons remain later research decisions. The completed four-prompt Phase 3A pilot is evidence about one-step adaptation; the two-step effect and held-out benefit remain unmeasured.
+Only after a completed comparison should its observed outcome determine whether a larger development comparison is warranted. Held-out confirmation and broader model/strategy comparisons remain later research decisions. The completed four-prompt Phase 3A pilot is evidence about one-step adaptation; the two-step effect and held-out benefit remain unmeasured.
 
 ## Current operating contract
 
