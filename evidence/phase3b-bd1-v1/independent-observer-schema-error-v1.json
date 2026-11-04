@@ -1,0 +1,7 @@
+{
+  "correction": "Exact case-bound schema: statics create.output; other create.stdout. Raw owner/create/cleanup hashes and exact64ID remain required.",
+  "effect": "Reviewer stopped before final receipt; no source/test/runtime or evidence failure.",
+  "error": "KeyError stdout while reading statics create metadata; actual schema is output/error",
+  "kind": "bd1-independent-observer-schema-error-v1",
+  "source_or_results_changed": false
+}

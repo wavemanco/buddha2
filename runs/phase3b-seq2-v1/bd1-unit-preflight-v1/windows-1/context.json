@@ -1,0 +1,21 @@
+{
+  "actual_spawn_collector_unchanged": true,
+  "argv": [
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3b-seq2-c2-v1\\composed_acceptance.py",
+    "--phase",
+    "units",
+    "--unit-mode",
+    "windows",
+    "--output",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\bd1-unit-preflight-v1\\windows-1"
+  ],
+  "campaign_prepare_omitted": true,
+  "cwd": "C:\\Users\\arvik\\code\\research\\Buddha2",
+  "entry_file": "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3b-seq2-c2-v1\\composed_acceptance.py",
+  "entry_module": "__main__",
+  "executable": "C:\\Program Files\\Python313\\python.exe",
+  "importtime_option_enabled": false,
+  "mode": "windows",
+  "production_unit_runner": "verify.run_tests",
+  "pythonpath": "C:\\Users\\arvik\\code\\research\\Buddha2;C:\\Users\\arvik\\code\\research\\Buddha2\\src;C:\\Users\\arvik\\code\\research\\Buddha2\\.upstream\\harness2"
+}

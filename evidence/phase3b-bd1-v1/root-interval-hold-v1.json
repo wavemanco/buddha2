@@ -1,0 +1,8 @@
+{
+  "basis": "Entire bounded WAIT-marked interval conservatively charged because root continued coordination/analysis; no exact focus estimated. Afterinitialdiagnosticgate, not retroactive.",
+  "end_utc": "2026-11-04T03:05:38.525494+00:00",
+  "kind": "phase3b-bd1-root-interval-hold-v1",
+  "released": false,
+  "seconds": 98,
+  "start_utc": "2026-11-04T03:04:00.711913+00:00"
+}

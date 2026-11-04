@@ -1,0 +1,27 @@
+{
+  "declared_ids": [
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_bootstrap_pins_actual_core_and_forwards_the_named_supervisor",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_cold_parent_import_denies_dotenv_before_lower_io_and_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_export_only_import_without_harness2_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary"
+  ],
+  "errors": 0,
+  "failures": 1,
+  "fixture_mock_activity_permitted": true,
+  "kind": "phase3b-bd1-unit-preflight-v1",
+  "mode": "bootstrap",
+  "passed": false,
+  "real_provider_calls": 0,
+  "release_acceptance_claimed": false,
+  "skipped_test_ids": [],
+  "source_sha256": "13e3fb2ed1882421cfea508e0679d0caf42b9ac674d141f76c105c166b02c438",
+  "started_ids": [
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_bootstrap_pins_actual_core_and_forwards_the_named_supervisor",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_cold_parent_import_denies_dotenv_before_lower_io_and_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_export_only_import_without_harness2_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary"
+  ],
+  "tests": 4,
+  "unit_only": true,
+  "unrun_ids": []
+}

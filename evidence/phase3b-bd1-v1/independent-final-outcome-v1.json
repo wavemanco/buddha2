@@ -1,0 +1,148 @@
+{
+  "Linux_cases_executed_passed": 118,
+  "Linux_named_Windows_skips": 3,
+  "Linux_unit_cases_tallied": 121,
+  "actual_Windows_cases_executed_passed": 3,
+  "actual_Windows_not_H1_runtime_context_verified": true,
+  "all_24_frozen_A0_controls_unchanged": true,
+  "bootstrap_all3assertions_and_4s1s_unchanged": true,
+  "canonical14_classified_before_metadata_and_hashes_unchanged": true,
+  "closed_ancestor_archive_hashes_verified": 4,
+  "controller_outcome_sha256": "5e0046993b422c83510104aaa7de4777aea6f290c5d27b43fb4d7358a94a1a5e",
+  "counts": {
+    "Windows_sets": 1,
+    "full_Linux_suites": 1,
+    "standalone_bootstrap": 3
+  },
+  "current_development_files_raw_hashes_verified": 726,
+  "development_source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "dossier_index_sha256": "971b9ae01a779ecdeb55a987ade254732d97c6a5b738345a5ecfd5735a6b8067",
+  "dossier_references_verified": 81,
+  "errors": 0,
+  "failures": 0,
+  "final_BD1_completion_requires_accounting_and_publication": true,
+  "full_Phase3B_release_accepted": false,
+  "historical_cause_or_absence_of_variability_established": false,
+  "instrumented_prefix_pass_not_unprofiled_causal_fix": true,
+  "kind": "phase3b-bd1-independent-final-outcome-v1",
+  "known_unreleased_hold_seconds": 394,
+  "no_release_campaign_or_paid_work": true,
+  "observed_at_utc": "2026-11-04T03:44:01.415806+00:00",
+  "observer_schema_error_preserved": "evidence/phase3b-bd1-v1/independent-observer-schema-error-v1.json",
+  "owners_independently_absent": [
+    {
+      "case": "bootstrap-2",
+      "cleanup_sha256": "4a6e73070a60fd57de40bf2628c1dca57eed7a92596fec29621bc008dd0b8dbf",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7"
+      ],
+      "create_sha256": "bc9ad5a007c9cf3a2fb908c5b7299cf74f0a97b437c4eb13303102a83c2b7c6b",
+      "error": "error: no such object: bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7"
+    },
+    {
+      "case": "bootstrap-3",
+      "cleanup_sha256": "3fc2970a70bd26aa9a3458075a6d4f66a01e625cafe2f956a06341d15247974c",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a"
+      ],
+      "create_sha256": "863d941ce44b9675e6f1324d7cbf395a484c55271d06cae683392e8fc3d9f47f",
+      "error": "error: no such object: 0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a"
+    },
+    {
+      "case": "bootstrap-4",
+      "cleanup_sha256": "29b1456d0d949fde9691b1f4275ffa80c0f78f6151b4c2c846206e5224dfd4c3",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348"
+      ],
+      "create_sha256": "2e55221294aa8832228a7dc0e193d67ebaf15c8083e13e78a1901be4273bb9bb",
+      "error": "error: no such object: 584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348"
+    },
+    {
+      "case": "statics-1",
+      "cleanup_sha256": "dc3d537b1ef40ea3f75903df96c8b3fb1c590e257722e1820b0ac983c8d182b0",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+      ],
+      "create_sha256": "a1fe61559e04f3153086e9bdf878e55d9d5078ce85eae24e01330306d927c557",
+      "error": "error: no such object: 5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+    },
+    {
+      "case": "statics-2",
+      "cleanup_sha256": "32ad61727a0792feaed36c0ad52002be8e303e764f521786eb0a344e9006f1c1",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab"
+      ],
+      "create_sha256": "2833f416c8387c39bf1fe2d9557371ffe6c0f32f7529628a0c8f659e1bd741b6",
+      "error": "error: no such object: 0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab"
+    },
+    {
+      "case": "suite-1",
+      "cleanup_sha256": "af745a10ba4270efac4aacf6c58b6d0a04e9203224eba037d08aeeeeace04f1b",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .State.Running}}",
+        "731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80"
+      ],
+      "create_sha256": "196ef524399dd7c1b5952956a34c969a56d42299f9f81b8e64f534ca390c5dce",
+      "error": "error: no such object: 731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80\n",
+      "exit_code": 1,
+      "independently_absent": true,
+      "output": "\n",
+      "owner": "731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80"
+    }
+  ],
+  "passed": true,
+  "read_only_exact_owner_queries_authorized_by_root": true,
+  "real_API_cost_usd": 0,
+  "report_body_reviewed_sha256": "765d7c6223270621e9c67fcf49d0a3ec11cd000cf9631efd856f50133ac4a567",
+  "report_body_scientifically_qualified": true,
+  "reviewer": "/root/bd1_independent_review",
+  "reviewer_did_not_execute_tests_or_modify_source": true,
+  "scope": "Unit-preflight evidence and scientific report body; final accounting/publication remain root closure obligations.",
+  "two_normal_timeouts_preserved": true,
+  "unique_final_source_case_ids_executed": 121,
+  "unit_preflight_gate_data_ready": true,
+  "unrun_final_case_ids": []
+}

@@ -1,0 +1,27 @@
+{
+  "arguments_or_environment_read": false,
+  "at_utc": "2026-11-04T03:30:47.567602+00:00",
+  "command": [
+    "docker",
+    "top",
+    "731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80",
+    "-eo",
+    "pid,comm,etime"
+  ],
+  "global_process_or_container_listing": false,
+  "kind": "bd1-owned-runtime-process-visibility-v1",
+  "owner": "731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80",
+  "rows": [
+    {
+      "command_name": "python",
+      "elapsed": "16:56",
+      "host_pid": 27256
+    },
+    {
+      "command_name": "python",
+      "elapsed": "16:47",
+      "host_pid": 27273
+    }
+  ],
+  "testcase_or_pass_inference": false
+}

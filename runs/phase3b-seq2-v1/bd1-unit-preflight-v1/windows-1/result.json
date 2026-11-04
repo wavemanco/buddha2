@@ -1,0 +1,25 @@
+{
+  "declared_ids": [
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_foreign_phase_before_metadata",
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_private_input_before_metadata",
+    "followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_host_evidence_writer_outside_runtime_base_is_exclusive"
+  ],
+  "errors": 0,
+  "failures": 0,
+  "fixture_mock_activity_permitted": true,
+  "kind": "phase3b-bd1-unit-preflight-v1",
+  "mode": "windows",
+  "passed": true,
+  "real_provider_calls": 0,
+  "release_acceptance_claimed": false,
+  "skipped_test_ids": [],
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "started_ids": [
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_foreign_phase_before_metadata",
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_private_input_before_metadata",
+    "followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_host_evidence_writer_outside_runtime_base_is_exclusive"
+  ],
+  "tests": 3,
+  "unit_only": true,
+  "unrun_ids": []
+}

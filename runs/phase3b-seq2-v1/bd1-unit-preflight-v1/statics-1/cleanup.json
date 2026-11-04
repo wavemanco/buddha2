@@ -1,0 +1,38 @@
+{
+  "absence": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+    ],
+    "error": "error: no such object: 5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b\n",
+    "exit_code": 1,
+    "output": "\n"
+  },
+  "owner": "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b",
+  "passed": true,
+  "remove": {
+    "command": [
+      "docker",
+      "rm",
+      "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+    ],
+    "error": "",
+    "exit_code": 0,
+    "output": "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b\n"
+  },
+  "terminal": {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{json .State.Running}}",
+      "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+    ],
+    "error": "",
+    "exit_code": 0,
+    "output": "false\n"
+  }
+}

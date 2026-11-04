@@ -1,0 +1,46 @@
+{
+  "Windows_setup_supervision_estimate_seconds": 35,
+  "all_unreleased_holds_seconds": 394,
+  "effective_remaining_seconds": 1247.313074,
+  "kind": "bd1-capacity-before-Windows1-v1",
+  "meter": {
+    "active_seconds": 5558.686926,
+    "actors": [
+      {
+        "active_seconds": 2434.622175,
+        "actor": "/root/bd1_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 57
+      },
+      {
+        "active_seconds": 126.658017,
+        "actor": "/root/bd1_publication",
+        "file": "publication.jsonl",
+        "mode": "done",
+        "records": 4
+      },
+      {
+        "active_seconds": 1198.523897,
+        "actor": "/root/bd1_independent_review",
+        "file": "reviewer.jsonl",
+        "mode": "wait",
+        "records": 20
+      },
+      {
+        "active_seconds": 1798.882837,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 81
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-04T03:38:00.294403+00:00",
+    "remaining_seconds": 1641.313074,
+    "within_limit": true
+  },
+  "protected_closure_seconds": 1200,
+  "selected_host_cases": 3,
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493"
+}

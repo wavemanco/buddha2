@@ -107,7 +107,8 @@ The public Markdown is a reader-oriented reference: links and layout are maintai
 
 ### Phase 3B: two-round refinement
 
-- [BD1 bootstrap diagnostics and unit preflight: defined, not started](phases/phase-3b/PHASE3B_BOOTSTRAP_DIAGNOSTIC_DEFINITION.md)
+- [BD1 reviewed unit-preflight result](phases/phase-3b/PHASE3B_BD1_REPORT.md) and [closed runbook](phases/phase-3b/PHASE3B_BD1_RUNBOOK.md)
+- [BD1 original diagnostic definition](phases/phase-3b/PHASE3B_BOOTSTRAP_DIAGNOSTIC_DEFINITION.md)
 - [OR1 stopped offline recovery](phases/phase-3b/PHASE3B_OR1_STOP_REPORT.md)
 - [OR1 bounded offline recovery: defined, unstarted](phases/phase-3b/PHASE3B_BOUNDED_OFFLINE_RECOVERY_DEFINITION.md)
 - [LA1 repaired launcher and required-boundary stop](phases/phase-3b/PHASE3B_LA1_STOP_REPORT.md)

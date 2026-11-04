@@ -1,0 +1,21 @@
+{
+  "actual_spawn_collector_unchanged": true,
+  "argv": [
+    "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+    "--phase",
+    "units",
+    "--unit-mode",
+    "suite",
+    "--output",
+    "/results/phase3b-seq2-v1/bd1-unit-preflight-v1/suite-1"
+  ],
+  "campaign_prepare_omitted": true,
+  "cwd": "/workspace",
+  "entry_file": "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+  "entry_module": "__main__",
+  "executable": "/usr/local/bin/python",
+  "importtime_option_enabled": false,
+  "mode": "suite",
+  "production_unit_runner": "verify.run_tests",
+  "pythonpath": "/workspace/src:/workspace/.upstream/harness2:/workspace"
+}

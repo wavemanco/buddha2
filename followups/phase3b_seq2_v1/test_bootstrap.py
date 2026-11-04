@@ -16,6 +16,37 @@ from . import core_view
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def bootstrap_observation(result):
+    """Retain typed fixture diagnostics after the real collector has stopped."""
+    observed: dict[str, object] = {}
+    for key in ('canonical_status', 'report_status', 'visibility_status', 'report_variant',
+                'canonical_error_type', 'projection_error_type', 'report_error_type', 'held_report_error_type',
+                'cleanup_proof'):
+        if key in result:
+            value = result[key]
+            if not isinstance(value, str) or not re.fullmatch(r'[A-Za-z0-9_.-]{1,80}', value):
+                raise ValueError('invalid bounded bootstrap diagnostic field')
+            observed[key] = value
+    for key in ('worker_stopped', 'financial_state_validated', 'reports_published'):
+        if key in result:
+            if type(result[key]) is not bool:
+                raise ValueError('invalid boolean bootstrap diagnostic field')
+            observed[key] = result[key]
+    summary = result.get('summary')
+    if isinstance(summary, dict) and isinstance(summary.get('import_privacy'), dict):
+        privacy = summary['import_privacy']
+        privacy_observed: dict[str, int | bool] = {}
+        observed['import_privacy'] = privacy_observed
+        for key in ('dotenv_open_denials', 'harness2_config_imported'):
+            if key in privacy:
+                value = privacy[key]
+                if (key == 'dotenv_open_denials' and (type(value) is not int or value < 0)
+                        or key == 'harness2_config_imported' and type(value) is not bool):
+                    raise ValueError('invalid import-privacy diagnostic field')
+                privacy_observed[key] = value
+    return observed
+
+
 class BootstrapTests(unittest.TestCase):
     def test_bootstrap_pins_actual_core_and_forwards_the_named_supervisor(self):
         bootstrap = (ROOT / "phase3b-seq2.ps1").read_text(encoding="utf-8")
@@ -85,6 +116,17 @@ print(json.dumps({'telemetry': module.IMPORT_PRIVACY, 'private_actual_io': len(p
     def test_fresh_spawned_core_worker_uses_the_same_import_boundary(self):
         spec = {'bindings': dict.fromkeys(core_view.BINDINGS, 'a' * 64), 'checkpoint': 'closure', 'fixture': True}
         result = core_view.collect(spec, deadline=time.monotonic() + 4, cleanup=1, behavior='bootstrap')
-        self.assertTrue(result['worker_stopped'])
-        self.assertEqual(result['canonical_status'], 'complete')
-        self.assertEqual(result['summary']['import_privacy']['dotenv_open_denials'], 1)
+        observed = bootstrap_observation(result)
+        destination = os.environ.get('BUDDHA2_BD1_OUTPUT')
+        if destination:
+            from .support import BASE, safe
+            target = safe(Path(destination))
+            if not target.is_relative_to(BASE / 'bd1-unit-preflight-v1') or not target.is_dir():
+                raise ValueError('BD1 diagnostic output escaped its existing namespace')
+            with (target / 'bootstrap-result.json').open('x', encoding='utf-8', newline='\n') as stream:
+                json.dump(observed, stream, sort_keys=True, indent=2)
+                stream.write('\n')
+        message = json.dumps(observed, sort_keys=True)
+        self.assertTrue(result['worker_stopped'], message)
+        self.assertEqual(result['canonical_status'], 'complete', message)
+        self.assertEqual(result['summary']['import_privacy']['dotenv_open_denials'], 1, message)

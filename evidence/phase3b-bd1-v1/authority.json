@@ -1,0 +1,20 @@
+{
+  "OR1_ledgers_reopened": false,
+  "aggregate_focused_engineering_limit_seconds": 7200,
+  "definition": "specifications/amendments/phase3b-bootstrap-diagnostic-1.0.md",
+  "definition_sha256": "ada47bc29d12521022e2e3ba93112138049420270d8845534b603ca46b7d6af3",
+  "frozen_control_edits_authorized": false,
+  "initial_diagnostic_gate_seconds": 1800,
+  "instruction": "Go ahead with the full P3B-BD1 block as defined, within the two-hour engineering limit and $0 API cap. Keep the original Buddha2 folder untouched, keep me updated, and push the reviewed outcome.",
+  "keys_authorized": false,
+  "kind": "phase3b-bd1-direct-authority-v1",
+  "main_capacity_S13_or_release_campaign_authorized": false,
+  "max_Windows_set_starts": 2,
+  "max_full_Linux_suite_starts": 2,
+  "max_standalone_diagnostics": 3,
+  "minimum_closure_reserve_seconds": 1200,
+  "original_folder_access_authorized": false,
+  "real_API_cap_usd": 0,
+  "recorded_at_utc": "2026-11-04T02:34:20.501283+00:00",
+  "reviewed_outcome_publication_authorized": true
+}

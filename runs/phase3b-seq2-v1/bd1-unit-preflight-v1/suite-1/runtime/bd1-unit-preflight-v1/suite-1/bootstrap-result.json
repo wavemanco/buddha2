@@ -1,0 +1,13 @@
+{
+  "canonical_status": "complete",
+  "cleanup_proof": "stopped",
+  "financial_state_validated": true,
+  "import_privacy": {
+    "dotenv_open_denials": 1,
+    "harness2_config_imported": true
+  },
+  "report_status": "complete",
+  "report_variant": "validated",
+  "visibility_status": "failed",
+  "worker_stopped": true
+}

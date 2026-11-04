@@ -1,0 +1,20 @@
+{
+  "baseline_preservation_receipt_sha256": "d5e5d2f4fc3f090032963fd77d7842024e0ffaf2a381eb854579ce30c73a57b1",
+  "canonical_originals_classified_before_metadata_and_raw_hashes_verified": 14,
+  "changed_original_source_paths": [
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+    "followups/phase3b_seq2_v1/test_bootstrap.py",
+    "followups/phase3b_seq2_v1/test_or1_admissions_s2.py"
+  ],
+  "exact_retained_inventory_verified": 721,
+  "frozen_A0_controls_raw_hashes_verified": 24,
+  "kind": "phase3b-bd1-independent-baseline-review-v1",
+  "observed_at_utc": "2026-11-04T02:45:44.685903+00:00",
+  "ordinary_retained_file_raw_hashes_verified": 721,
+  "passed": true,
+  "retained_stream_copies": 0,
+  "reviewer": "/root/bd1_independent_review",
+  "runtime_or_tests_run_by_reviewer": false,
+  "scope": "baseline preservation only; prospective command remains unapproved pending containment/cleanup fixes",
+  "source_sha256": "5b356fd87ca860a16ad3d18feed54dfb2592405ebd082b2088f568c5df50164e"
+}

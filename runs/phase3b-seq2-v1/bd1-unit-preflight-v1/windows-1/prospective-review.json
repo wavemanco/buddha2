@@ -1,0 +1,51 @@
+{
+  "Windows_set_limit": 2,
+  "actual_Windows_set_index": 1,
+  "actual_host_command_override_from_reviewed_driver": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3b-seq2-c2-v1\\composed_acceptance.py",
+    "--phase",
+    "units",
+    "--unit-mode",
+    "windows",
+    "--output",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\bd1-unit-preflight-v1\\windows-1"
+  ],
+  "actual_runtime": "Windows host Python, not H1; unit binding runtime field carries H1lineage only.",
+  "affected6actualfilehashes_verified": true,
+  "command_outer_seconds": 7200,
+  "environment_allowlist": [
+    "PATH",
+    "SYSTEMROOT",
+    "WINDIR",
+    "COMSPEC",
+    "TEMP",
+    "TMP",
+    "PATHEXT",
+    "PYTHONPATH",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "BUDDHA2_OUTPUT_ROOT"
+  ],
+  "hostwriter_temporary_parent": "evidence/phase3b-bd1-v1/host-writer-unit",
+  "kind": "phase3b-bd1-independent-Windows-prospective-v1",
+  "manifest_command_note": "Manifestcommand is a Linux-style template unused onhost; the reviewed Windows branch executes the explicit host override above and records actual context.",
+  "manifest_sha256": "daf238b95631ae953444b8babd3e474598cf83235e45c4b0a7cd5d7e898e543f",
+  "no_keys_or_wholesale_environment": true,
+  "no_source_change_or_standalone_diagnostic_authorized": true,
+  "observed_at_utc": "2026-11-04T03:37:28.208985+00:00",
+  "ordinary_guard_expectations_unchanged": true,
+  "passed": true,
+  "reviewer": "/root/bd1_independent_review",
+  "runtime_or_tests_executed_by_reviewer": false,
+  "selected_exactly_matches_all3actualLinux_skips": true,
+  "selected_ids": [
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_foreign_phase_before_metadata",
+    "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_private_input_before_metadata",
+    "followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_host_evidence_writer_outside_runtime_base_is_exclusive"
+  ],
+  "shorter_inner_case_limits_preserved": true,
+  "source_map_exactly_equal_to_passing_Linux_source": true,
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493"
+}

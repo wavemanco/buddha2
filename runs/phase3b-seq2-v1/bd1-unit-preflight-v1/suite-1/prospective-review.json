@@ -1,0 +1,51 @@
+{
+  "actual_full_suite_index": 1,
+  "affected_source_bindings_verified": 6,
+  "affected_static_and_3pure_check_proofs": [
+    {
+      "exit_code": 0,
+      "path": "runs/phase3b-seq2-v1/bd1-unit-preflight-v1/statics-2/runtime/check-0.json",
+      "sha256": "83be894c1ef737e65a0d0e43bd0a39682d81b2ceaa94daf4201a0b4d14434dd5"
+    },
+    {
+      "exit_code": 0,
+      "path": "runs/phase3b-seq2-v1/bd1-unit-preflight-v1/statics-2/runtime/check-1.json",
+      "sha256": "9c6d3eb12e4460ed905973b2f8808a3ae6ab6030162e6082dbd0c51c062c15f2"
+    },
+    {
+      "exit_code": 0,
+      "path": "runs/phase3b-seq2-v1/bd1-unit-preflight-v1/statics-2/runtime/check-2.json",
+      "sha256": "ad072a279459f0571bb4aa10a6afd4ccca616488794388b92c570d0b1abc326c"
+    },
+    {
+      "exit_code": 0,
+      "path": "runs/phase3b-seq2-v1/bd1-unit-preflight-v1/statics-2/runtime/check-3.json",
+      "sha256": "491723efe7bb46b278018735391ccb07b40476308a8d81d37f2a1ce391354c4b"
+    }
+  ],
+  "capacity_original_remaining_seconds": 2455.701478,
+  "capacity_receipt_sha256": "c57194d8cd5cdcffce7f49b34b6af9bccff8412c2f868a1b3648f7f6de51a38f",
+  "discovered_and_selected_count": 121,
+  "expected_Linux_executions": 118,
+  "expected_named_Windows_skips": 3,
+  "explicit_unit_only_entry_not_verify_inside": true,
+  "frozen_A0_control_raw_hashes_verified": 24,
+  "full_suite_limit": 2,
+  "kind": "phase3b-bd1-independent-full-suite-prospective-v1",
+  "manifest_sha256": "2da9c56d292a5ef747a716e2e49f41d70d1eec47d67c875a64415a1eab10dbca",
+  "minimum_protected_closure_seconds": 1200,
+  "new_regression_methods": 3,
+  "no_standalone_bootstrap_remaining": true,
+  "observed_at_utc": "2026-11-04T03:12:32.135290+00:00",
+  "passed": true,
+  "prior_instrumented_pass_is_not_unprofiled_repair_proof": true,
+  "production_runner": "verify.run_tests",
+  "reviewer": "/root/bd1_independent_review",
+  "runtime_manifest_raw_equal": true,
+  "runtime_tests_or_imports_executed_by_reviewer": false,
+  "same_ROworkspace_fresh_RWresults_absolute_cleanup60": true,
+  "source_files_rehashed": 726,
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "supported_remaining_task_estimate_seconds": 2050,
+  "unprofiled_command_verified": true
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348"
+  ],
+  "exit_code": 0,
+  "raw_stderr_retained": false,
+  "stderr": "",
+  "stderr_bytes": 251128,
+  "stderr_sha256": "63d323d1dd5a3ecb6dd50cc066688bf8db264adaaf05f69ffcd7fb5ad996d86d",
+  "stdout": ""
+}

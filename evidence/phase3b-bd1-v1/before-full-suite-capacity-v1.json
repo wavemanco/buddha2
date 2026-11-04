@@ -1,0 +1,60 @@
+{
+  "all_unreleased_holds_seconds": 319,
+  "at_utc": "2026-11-04T03:10:59.797693+00:00",
+  "automatic_waiting_separate_original_clocks_unchanged": true,
+  "component_checks_current_source": "statics-2:3pureunits/Ruff/Mypy/BanditallPASS",
+  "counts_before_admission": {
+    "Windows_sets": 0,
+    "full_Linux_suites": 0,
+    "standalone_bootstrap": 3
+  },
+  "effective_remaining_seconds": 2455.701478,
+  "effective_used_seconds": 4744.298522,
+  "kind": "phase3b-bd1-before-first-full-suite-capacity-v1",
+  "meter": {
+    "active_seconds": 4425.298522,
+    "actors": [
+      {
+        "active_seconds": 1944.744429,
+        "actor": "/root/bd1_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 21
+      },
+      {
+        "active_seconds": 126.658017,
+        "actor": "/root/bd1_publication",
+        "file": "publication.jsonl",
+        "mode": "done",
+        "records": 4
+      },
+      {
+        "active_seconds": 1038.758462,
+        "actor": "/root/bd1_independent_review",
+        "file": "reviewer.jsonl",
+        "mode": "wait",
+        "records": 16
+      },
+      {
+        "active_seconds": 1315.137614,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 38
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-04T03:10:59.791498+00:00",
+    "remaining_seconds": 2774.701478,
+    "within_limit": true
+  },
+  "native_model_worklist_or_provider_calls_authorized": false,
+  "remaining_task_estimate_seconds": {
+    "Windows_set_and_independentreview_if_Linuxpasses": 300,
+    "peerprospective_and_full_unit_supervision": 350,
+    "preservation_and_outcome_dossier": 200,
+    "protected_closure_reporting_publication": 1200
+  },
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "total_estimate_seconds": 2050
+}

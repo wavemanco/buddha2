@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\evidence\\phase3b-seq2-c2-v1\\composed_acceptance.py",
+    "--phase",
+    "units",
+    "--unit-mode",
+    "windows",
+    "--output",
+    "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\bd1-unit-preflight-v1\\windows-1"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": ""
+}

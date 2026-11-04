@@ -1,0 +1,60 @@
+{
+  "commands": [
+    [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2",
+      "-v"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "ruff",
+      "check",
+      "--no-cache",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+      "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "mypy",
+      "--explicit-package-bases",
+      "--follow-imports",
+      "silent",
+      "--ignore-missing-imports",
+      "--no-incremental",
+      "--cache-dir",
+      "NUL",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+      "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "bandit",
+      "-q",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py"
+    ]
+  ],
+  "kind": "phase3b-bd1-predeclared-pure-component-checks-v2",
+  "purpose": "Static helpers and3pure diagnostic/import-boundary units only; no positivebootstrap,spawn,worklist orprovider invocation. Not fullLinuxsuite/hostset acceptance.",
+  "real_provider_calls": 0,
+  "source_at_plan": "a0994590335744bf1b6bb476d0d7aa42522581a9fcc17f7def9592c47a91ec19",
+  "supersedes_unexecuted_plan": "component-checks-plan-v1.json"
+}

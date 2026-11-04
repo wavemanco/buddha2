@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2",
+    "-v"
+  ],
+  "error": "test_error_and_cleanup_retained_without_unrelated_payload (followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2.BD1DiagnosticTests.test_error_and_cleanup_retained_without_unrelated_payload) ... ok\ntest_spawn_entry_defers_workflow_import_until_guarded_functions (followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2.BD1DiagnosticTests.test_spawn_entry_defers_workflow_import_until_guarded_functions) ... ok\ntest_untyped_or_unbounded_diagnostic_rejected (followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2.BD1DiagnosticTests.test_untyped_or_unbounded_diagnostic_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.007s\n\nOK\n",
+  "exit_code": 0,
+  "output": "",
+  "positive_bootstrap_invocations": 0,
+  "real_provider_calls": 0
+}

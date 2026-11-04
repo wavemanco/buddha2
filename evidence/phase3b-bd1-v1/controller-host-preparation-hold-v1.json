@@ -1,0 +1,9 @@
+{
+  "actor": "/root/bd1_controller",
+  "interval_end_utc": "2026-11-04T03:37:40.343536+00:00",
+  "interval_start_utc": "2026-11-04T03:37:13.987787+00:00",
+  "kind": "bd1-controller-host-preparation-hold-v1",
+  "reason": "EntireboundedWAITintervalchargedforpreparinghosthandoff; noexactfocusinvented.",
+  "released": false,
+  "seconds": 27
+}

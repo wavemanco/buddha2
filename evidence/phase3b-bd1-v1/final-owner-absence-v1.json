@@ -1,0 +1,61 @@
+{
+  "global_enumeration": false,
+  "kind": "bd1-all-six-exact-owners-absence-v1",
+  "owners": [
+    {
+      "absent": true,
+      "case": "bootstrap-2",
+      "cleanup_sha256": "4a6e73070a60fd57de40bf2628c1dca57eed7a92596fec29621bc008dd0b8dbf",
+      "create_sha256": "bc9ad5a007c9cf3a2fb908c5b7299cf74f0a97b437c4eb13303102a83c2b7c6b",
+      "error": "error: no such object: bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7",
+      "exit_code": 1,
+      "owner": "bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7"
+    },
+    {
+      "absent": true,
+      "case": "bootstrap-3",
+      "cleanup_sha256": "3fc2970a70bd26aa9a3458075a6d4f66a01e625cafe2f956a06341d15247974c",
+      "create_sha256": "863d941ce44b9675e6f1324d7cbf395a484c55271d06cae683392e8fc3d9f47f",
+      "error": "error: no such object: 0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a",
+      "exit_code": 1,
+      "owner": "0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a"
+    },
+    {
+      "absent": true,
+      "case": "bootstrap-4",
+      "cleanup_sha256": "29b1456d0d949fde9691b1f4275ffa80c0f78f6151b4c2c846206e5224dfd4c3",
+      "create_sha256": "2e55221294aa8832228a7dc0e193d67ebaf15c8083e13e78a1901be4273bb9bb",
+      "error": "error: no such object: 584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348",
+      "exit_code": 1,
+      "owner": "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348"
+    },
+    {
+      "absent": true,
+      "case": "statics-1",
+      "cleanup_sha256": "dc3d537b1ef40ea3f75903df96c8b3fb1c590e257722e1820b0ac983c8d182b0",
+      "create_sha256": "a1fe61559e04f3153086e9bdf878e55d9d5078ce85eae24e01330306d927c557",
+      "error": "error: no such object: 5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b",
+      "exit_code": 1,
+      "owner": "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+    },
+    {
+      "absent": true,
+      "case": "statics-2",
+      "cleanup_sha256": "32ad61727a0792feaed36c0ad52002be8e303e764f521786eb0a344e9006f1c1",
+      "create_sha256": "2833f416c8387c39bf1fe2d9557371ffe6c0f32f7529628a0c8f659e1bd741b6",
+      "error": "error: no such object: 0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab",
+      "exit_code": 1,
+      "owner": "0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab"
+    },
+    {
+      "absent": true,
+      "case": "suite-1",
+      "cleanup_sha256": "af745a10ba4270efac4aacf6c58b6d0a04e9203224eba037d08aeeeeace04f1b",
+      "create_sha256": "196ef524399dd7c1b5952956a34c969a56d42299f9f81b8e64f534ca390c5dce",
+      "error": "error: no such object: 731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80",
+      "exit_code": 1,
+      "owner": "731cc95f92fb77452c5d275bd46116b1d45c0fe00f87f0a764655c66d57b5f80"
+    }
+  ],
+  "passed": true
+}

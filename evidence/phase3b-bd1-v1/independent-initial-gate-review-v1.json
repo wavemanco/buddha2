@@ -1,0 +1,16 @@
+{
+  "actual_result_and_source_context_verified": true,
+  "actual_target_observation_review": "evidence/phase3b-bd1-v1/independent-target-observations-v1.json",
+  "bootstrap_hold_seconds": 180,
+  "effective_seconds_recorded_by_controller": 1785.754746,
+  "gate_receipt_sha256": "5414d2c18eb0eae983f3f136a312a68c2b791ffaef1bc9e24636874865810a94",
+  "independently_recomputed_at_gate_receipt_timestamp_seconds": 1785.760421,
+  "initial_gate_is_observability_not_success": true,
+  "kind": "phase3b-bd1-independent-initial-gate-review-v1",
+  "limit_seconds": 1800,
+  "observed_at_utc": "2026-11-04T03:05:05.501266+00:00",
+  "passed": true,
+  "real_provider_calls": 0,
+  "reviewer": "/root/bd1_independent_review",
+  "underlying_no_frame_reason_established": false
+}

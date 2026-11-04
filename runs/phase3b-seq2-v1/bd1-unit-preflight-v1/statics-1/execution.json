@@ -1,0 +1,11 @@
+{
+  "command": [
+    "docker",
+    "start",
+    "--attach",
+    "5bf9ec7f17d22a39a9b13c3e7e79cb4924e839dced0040e95df917301f63ed2b"
+  ],
+  "error": "",
+  "exit_code": 1,
+  "output": "{\"checks\": [{\"index\": 0, \"exit_code\": 0}, {\"index\": 1, \"exit_code\": 1}, {\"index\": 2, \"exit_code\": 1}, {\"index\": 3, \"exit_code\": 0}], \"real_provider_calls\": 0, \"positive_bootstrap_invocations\": 0}\n"
+}

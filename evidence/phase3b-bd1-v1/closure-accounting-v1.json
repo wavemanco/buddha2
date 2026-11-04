@@ -1,0 +1,70 @@
+{
+  "API_cost_usd": 0,
+  "accepted_Phase3B_kit": false,
+  "aggregate_limit_seconds": 7200,
+  "all_unreleased_hold_seconds": 424,
+  "counts": {
+    "Linux_full_suites": 1,
+    "Windows_sets": 1,
+    "standalone_diagnostics": 3
+  },
+  "effective_used_as_of_seconds": 7014.078245,
+  "exact_final_focus_claimed": false,
+  "final_ledger_verification_required": true,
+  "hold_components_seconds": {
+    "bootstrap": 180,
+    "controller_host_preparation": 27,
+    "controller_visibility": 48,
+    "publication_handoff": 41,
+    "root_interval": 98,
+    "terminal_handoff": 30
+  },
+  "kind": "phase3b-bd1-closure-accounting-v1",
+  "maximum_effective_total_seconds": 7200,
+  "meter_at_closure": {
+    "active_seconds": 6590.078245,
+    "actors": [
+      {
+        "active_seconds": 2720.534638,
+        "actor": "/root/bd1_controller",
+        "file": "controller.jsonl",
+        "mode": "done",
+        "records": 58
+      },
+      {
+        "active_seconds": 308.948291,
+        "actor": "/root/bd1_publication",
+        "file": "publication.jsonl",
+        "mode": "active",
+        "records": 9
+      },
+      {
+        "active_seconds": 1485.7303,
+        "actor": "/root/bd1_independent_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 23
+      },
+      {
+        "active_seconds": 2074.865016,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "active",
+        "records": 84
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-04T03:43:49.053141+00:00",
+    "remaining_seconds": 609.921755,
+    "within_limit": true
+  },
+  "recorded_at_utc": "2026-11-04T03:43:49.060311+00:00",
+  "remaining_scope": [
+    "independent final document/data acceptance",
+    "reviewed source/docs/evidence publication and remote verification",
+    "final ledger/handoff"
+  ],
+  "remaining_to_original_ceiling_seconds": 185.9217550000003,
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "status": "unit-evidence-complete-final-review-publication-pending"
+}

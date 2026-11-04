@@ -1,0 +1,31 @@
+{
+  "actual_bootstrap_invocations_before": 1,
+  "changed_paths_from_failed_source": [
+    "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+    "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+  ],
+  "containment_operator_unchanged_from_review_v1": true,
+  "discovered_count": 121,
+  "failed_source13e3_preserved_raw_files_verified": 726,
+  "frozen_A0_control_hashes_verified": 24,
+  "guard_function_ASTs_identical_excluding_only_local_imports": true,
+  "hypothesis": "Deferring workflow import in the unfrozen spawn entry may remove pre-target import overhead. Actual comparison does not yet exist and no historical underlying cause is claimed.",
+  "kind": "phase3b-bd1-independent-prospective-review-v2",
+  "manifest_sha256": "9f291dd9de34511d25b3f90da8550c08894dccb801e452770518eee709d7dabf",
+  "observed_at_utc": "2026-11-04T02:55:11.995075+00:00",
+  "passed": true,
+  "real_API_cap": 0,
+  "regression": "New pure import-hook check rejects eagerworkflow import independently of module caches; no child/model/worklist invocation.",
+  "reviewer": "/root/bd1_independent_review",
+  "runtime_manifest_raw_equal": true,
+  "runtime_tests_or_imports_executed_by_reviewer": false,
+  "selected_ids": [
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_bootstrap_pins_actual_core_and_forwards_the_named_supervisor",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_cold_parent_import_denies_dotenv_before_lower_io_and_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_export_only_import_without_harness2_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary"
+  ],
+  "source_files_rehashed": 726,
+  "source_sha256": "240d7961e5f0f7afa8103c9e1e7018ca5f0ced211a1d54cec3142971ce028588",
+  "unchanged_real_collector_4s_1s_all3assertions": true
+}

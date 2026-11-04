@@ -1,0 +1,210 @@
+{
+  "Windows_sets": 0,
+  "actual_target_invocations": 3,
+  "classification": "Two actual unprofiled collector canonical_timeout results; one instrumented passingprefix. This does not demonstrate a causal import-slowness fix or reliable unprofiled completion.",
+  "full_suite_starts": 0,
+  "historical_OR1_underlying_cause_established": false,
+  "instrumented_prefix_passing": true,
+  "kind": "phase3b-bd1-independent-target-observations-v1",
+  "lazy_entry_correction_sufficient_for_unprofiled_bootstrap": false,
+  "next_eligible_check": "Full unprofiled unit suite on independently reviewed final source; no further standalonebootstrap invocation.",
+  "no_source_tests_or_runtime_execution_by_reviewer": true,
+  "normal_unprofiled_preflight_passing": false,
+  "observations": [
+    {
+      "actual_invocation_index": 1,
+      "context": {
+        "actual_spawn_collector_unchanged": true,
+        "argv": [
+          "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+          "--phase",
+          "units",
+          "--unit-mode",
+          "bootstrap",
+          "--output",
+          "/results/phase3b-seq2-v1/bd1-unit-preflight-v1/bootstrap-2"
+        ],
+        "campaign_prepare_omitted": true,
+        "cwd": "/workspace",
+        "entry_file": "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+        "entry_module": "__main__",
+        "executable": "/usr/local/bin/python",
+        "mode": "bootstrap",
+        "production_unit_runner": "verify.run_tests",
+        "pythonpath": "/workspace/src:/workspace/.upstream/harness2:/workspace"
+      },
+      "diagnostic": {
+        "canonical_error_type": "canonical_timeout",
+        "canonical_status": "failed",
+        "cleanup_proof": "stopped",
+        "report_status": "unavailable",
+        "visibility_status": "failed",
+        "worker_stopped": true
+      },
+      "diagnostic_sha256": "85173169b67d8ada7d9bb8c8f58841cb496afcf7d67d2518472f6d0e33c83776",
+      "independent_owner_query": {
+        "absent": true,
+        "command": [
+          "docker",
+          "inspect",
+          "--format",
+          "{{json .State.Running}}",
+          "bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7"
+        ],
+        "error": "error: no such object: bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7\n",
+        "exit_code": 1,
+        "output": "\n"
+      },
+      "ordinal": 2,
+      "owner": "bfebf940b168e6a06ec88f3c7d259255b7df8e04bbbf38bf312156c5e2c7bae7",
+      "proof_sha256": {
+        "cleanup.json": "4a6e73070a60fd57de40bf2628c1dca57eed7a92596fec29621bc008dd0b8dbf",
+        "create.json": "bc9ad5a007c9cf3a2fb908c5b7299cf74f0a97b437c4eb13303102a83c2b7c6b",
+        "inspection.json": "af1c555767eaddc1744835b72682129eda41243e118d36ecba08262d767fb19d",
+        "manifest.json": "7c70a7cdedcda247dad2bc42e88c54a7c15237ca168ec9e7ee615e9fb5460dbd",
+        "prospective-review.json": "b7fe4ea23656fe5a810a5d108be54cfc68c4a666f56a76e39a5a3d794b3d4a5a"
+      },
+      "result_sha256": "ea9b83765957333ec8b934d4a218beed63d2e828c8b6512b6021b76e36eb2e0a",
+      "tests": {
+        "errors": 0,
+        "failures": 1,
+        "run": 4
+      }
+    },
+    {
+      "actual_invocation_index": 2,
+      "context": {
+        "actual_spawn_collector_unchanged": true,
+        "argv": [
+          "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+          "--phase",
+          "units",
+          "--unit-mode",
+          "bootstrap",
+          "--output",
+          "/results/phase3b-seq2-v1/bd1-unit-preflight-v1/bootstrap-3"
+        ],
+        "campaign_prepare_omitted": true,
+        "cwd": "/workspace",
+        "entry_file": "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+        "entry_module": "__main__",
+        "executable": "/usr/local/bin/python",
+        "mode": "bootstrap",
+        "production_unit_runner": "verify.run_tests",
+        "pythonpath": "/workspace/src:/workspace/.upstream/harness2:/workspace"
+      },
+      "diagnostic": {
+        "canonical_error_type": "canonical_timeout",
+        "canonical_status": "failed",
+        "cleanup_proof": "stopped",
+        "report_status": "unavailable",
+        "visibility_status": "failed",
+        "worker_stopped": true
+      },
+      "diagnostic_sha256": "85173169b67d8ada7d9bb8c8f58841cb496afcf7d67d2518472f6d0e33c83776",
+      "independent_owner_query": {
+        "absent": true,
+        "command": [
+          "docker",
+          "inspect",
+          "--format",
+          "{{json .State.Running}}",
+          "0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a"
+        ],
+        "error": "error: no such object: 0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a\n",
+        "exit_code": 1,
+        "output": "\n"
+      },
+      "ordinal": 3,
+      "owner": "0ff1eee7b3d1a20cde6b050b713c49be5f0bf1f3776e0c97752b651fdc68a90a",
+      "proof_sha256": {
+        "cleanup.json": "3fc2970a70bd26aa9a3458075a6d4f66a01e625cafe2f956a06341d15247974c",
+        "create.json": "863d941ce44b9675e6f1324d7cbf395a484c55271d06cae683392e8fc3d9f47f",
+        "inspection.json": "2dc5f807fbf60d0cd78900518969ffa4e02c08f176fc2e02621f9ceb7b749c23",
+        "manifest.json": "9f291dd9de34511d25b3f90da8550c08894dccb801e452770518eee709d7dabf",
+        "prospective-review.json": "0bf820c9226e0f40bc7e535124b5aaacc718eee8a66584e5d33facb52864c75c"
+      },
+      "result_sha256": "d440a1de5819de39d9d23d4d21b8edf92d423f7ee24b479f5dd57d6053f120e5",
+      "tests": {
+        "errors": 0,
+        "failures": 1,
+        "run": 4
+      }
+    },
+    {
+      "actual_invocation_index": 3,
+      "context": {
+        "actual_spawn_collector_unchanged": true,
+        "argv": [
+          "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+          "--phase",
+          "units",
+          "--unit-mode",
+          "bootstrap",
+          "--output",
+          "/results/phase3b-seq2-v1/bd1-unit-preflight-v1/bootstrap-4"
+        ],
+        "campaign_prepare_omitted": true,
+        "cwd": "/workspace",
+        "entry_file": "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+        "entry_module": "__main__",
+        "executable": "/usr/local/bin/python",
+        "importtime_option_enabled": true,
+        "mode": "bootstrap",
+        "production_unit_runner": "verify.run_tests",
+        "pythonpath": "/workspace/src:/workspace/.upstream/harness2:/workspace"
+      },
+      "diagnostic": {
+        "canonical_status": "complete",
+        "cleanup_proof": "stopped",
+        "financial_state_validated": true,
+        "import_privacy": {
+          "dotenv_open_denials": 1,
+          "harness2_config_imported": true
+        },
+        "report_status": "complete",
+        "report_variant": "validated",
+        "visibility_status": "failed",
+        "worker_stopped": true
+      },
+      "diagnostic_sha256": "cf1b298175b52d2e7c98f94509af57509b6a30fcb204c6dd304e178cc95b60d3",
+      "independent_owner_query": {
+        "absent": true,
+        "command": [
+          "docker",
+          "inspect",
+          "--format",
+          "{{json .State.Running}}",
+          "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348"
+        ],
+        "error": "error: no such object: 584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348\n",
+        "exit_code": 1,
+        "output": "\n"
+      },
+      "ordinal": 4,
+      "owner": "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348",
+      "proof_sha256": {
+        "cleanup.json": "29b1456d0d949fde9691b1f4275ffa80c0f78f6151b4c2c846206e5224dfd4c3",
+        "create.json": "2e55221294aa8832228a7dc0e193d67ebaf15c8083e13e78a1901be4273bb9bb",
+        "inspection.json": "a26fce422298caff08c1ad29b1dcf23b108831e9cb1c18cf3d093c422a2232c8",
+        "manifest.json": "ce1a545f5d2045baacf7df18285f314b9f55970e8134d7dfaac0a498517e847f",
+        "prospective-review.json": "f72152a5ca8559934960f9421e0761e81ade5e2df8faf098d7e56ff33b4afe71"
+      },
+      "result_sha256": "cab298140fc74c61e9852aa71626eb03114c7c9131d37f09d8136e9a6a5eec8f",
+      "tests": {
+        "errors": 0,
+        "failures": 0,
+        "run": 4
+      }
+    }
+  ],
+  "observed_at_utc": "2026-11-04T03:04:27.571897+00:00",
+  "passed_for_observation_and_cleanup": true,
+  "profile_events_typed": 2815,
+  "profile_process_attribution_established": false,
+  "profile_raw_stream_retained": false,
+  "profile_unmatched_lines": 4,
+  "readonly_exact_owner_queries_authorized_by_root": true,
+  "reviewer": "/root/bd1_independent_review",
+  "target_limit": 3
+}

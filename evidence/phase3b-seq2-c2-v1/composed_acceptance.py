@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from buddha2.artifacts import file_hash
-from followups.phase3b_seq2_v1 import verify, workflow
+from followups.phase3b_seq2_v1 import verify
 from followups.phase3b_seq2_v1.support import (
     PRIVATE,
     checked,
@@ -55,6 +55,7 @@ def ordinary_inventory(directory: Path) -> dict:
 
 def saved_replay(output: Path) -> int:
     """Parameterize the already reviewed R1 worker; retain its real run/guards."""
+    from followups.phase3b_seq2_v1 import workflow
     require({p.name for p in Path("/sys/class/net").iterdir()} == {"lo"}, "network-none required")
     study_path = output / "release/study.json"
     study = workflow.load_study(study_path)
@@ -104,6 +105,7 @@ def saved_replay(output: Path) -> int:
 
 def runtime_output(raw: str) -> Path:
     """Contained entry: exact runtime namespace, never the host path gate."""
+    from followups.phase3b_seq2_v1 import workflow
     output = path(Path(raw))
     require(output == workflow.BASE / recovery_config()["verification"] and output.is_dir(),
             "contained acceptance needs its exact existing verification directory")
@@ -112,9 +114,18 @@ def runtime_output(raw: str) -> Path:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--phase", choices=("main", "replay"), required=True)
+    parser.add_argument("--phase", choices=("main", "replay", "units"), required=True)
     parser.add_argument("--output", required=True)
+    parser.add_argument("--unit-mode", choices=("bootstrap", "suite", "windows"))
     args = parser.parse_args()
+    if args.phase == "units":
+        spec = importlib.util.spec_from_file_location("bd1_unit_preflight", ROOT / "evidence/phase3b-bd1-v1/unit_preflight.py")
+        if spec is None or spec.loader is None:
+            raise ValueError("BD1 unit-only module cannot load")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.run(args.unit_mode, args.output)
+    require(args.unit_mode is None, "unit mode cannot enter a campaign")
     output = runtime_output(args.output)
     require(output.name == recovery_config()["verification"], "OR1 requires its current fresh verification root")
     if args.phase == "replay":

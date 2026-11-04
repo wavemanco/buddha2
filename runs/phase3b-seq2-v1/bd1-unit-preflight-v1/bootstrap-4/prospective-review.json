@@ -1,0 +1,36 @@
+{
+  "actual_bootstrap_index": 3,
+  "actual_bootstrap_limit": 3,
+  "bootstrap_collect_assertions_and_lazyentry_unchanged_from_previous_source": true,
+  "changed_paths_from_failed_source": [
+    "evidence/phase3b-bd1-v1/run_units.py",
+    "evidence/phase3b-bd1-v1/unit_preflight.py"
+  ],
+  "discovered_count": 121,
+  "failed_source240d_raw_copies_verified": 726,
+  "frozen_A0_control_hashes_verified": 24,
+  "instrumented": true,
+  "interpretation_limit": "Profiling changes startup cost; events mix parent, worker and resource-tracker without PID attribution. No unprofiled or historical bottleneck is established.",
+  "kind": "phase3b-bd1-independent-prospective-review-v3",
+  "manifest_sha256": "ce1a545f5d2045baacf7df18285f314b9f55970e8134d7dfaac0a498517e847f",
+  "no_further_standalone_diagnostic_after_this": true,
+  "numeric_output_ordinal": 4,
+  "observed_at_utc": "2026-11-04T03:01:17.430683+00:00",
+  "ordinal_reason": "bootstrap-1 was never admitted and remains immutable; two actual admissions exist before this finaltarget.",
+  "passed": true,
+  "per_invocation_ROworkspace_fresh_RWresults_absolute_cleanup60_unchanged": true,
+  "profile_output_scope": "Typed module identifiers and reported microsecond integers only; raw diagnosticstderr not retained; hash/bytecount and unmatchedlinecount preserved.",
+  "profile_uses_builtin_CPython_option": true,
+  "reviewer": "/root/bd1_independent_review",
+  "runtime_manifest_raw_equal": true,
+  "runtime_or_tests_executed_by_reviewer": false,
+  "same_case_clock_4s_cleanup1_and_outer120": true,
+  "selected_ids": [
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_bootstrap_pins_actual_core_and_forwards_the_named_supervisor",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_cold_parent_import_denies_dotenv_before_lower_io_and_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_export_only_import_without_harness2_restores_open",
+    "followups.phase3b_seq2_v1.test_bootstrap.BootstrapTests.test_fresh_spawned_core_worker_uses_the_same_import_boundary"
+  ],
+  "source_files_rehashed": 726,
+  "source_sha256": "a0994590335744bf1b6bb476d0d7aa42522581a9fcc17f7def9592c47a91ec19"
+}

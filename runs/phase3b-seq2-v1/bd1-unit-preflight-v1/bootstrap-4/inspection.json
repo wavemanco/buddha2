@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "-X",
+    "importtime",
+    "-B",
+    "/workspace/evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+    "--phase",
+    "units",
+    "--unit-mode",
+    "bootstrap",
+    "--output",
+    "/results/phase3b-seq2-v1/bd1-unit-preflight-v1/bootstrap-4"
+  ],
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "mounts": [
+    {
+      "Destination": "/workspace",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/results/phase3b-seq2-v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\bd1-unit-preflight-v1\\bootstrap-4\\runtime",
+      "Type": "bind"
+    }
+  ],
+  "network": "none",
+  "owner": "584527b552824a27821c90c29bc79d8edc5bb452358284971d35a76069d85348",
+  "passed": true,
+  "readonly_root": true
+}

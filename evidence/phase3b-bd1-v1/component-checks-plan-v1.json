@@ -1,0 +1,64 @@
+{
+  "commands": [
+    [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2",
+      "-v"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "ruff",
+      "check",
+      "--no-cache",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+      "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "mypy",
+      "--explicit-package-bases",
+      "--follow-imports",
+      "silent",
+      "--ignore-missing-imports",
+      "--no-incremental",
+      "--cache-dir",
+      "NUL",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+      "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "bandit",
+      "-q",
+      "-t",
+      "B101,B102,B103,B104,B105,B106,B107,B108,B201,B301,B302,B303,B304,B305,B306,B307,B308,B309,B310,B311,B312,B313,B314,B315,B316,B317,B318,B319,B320,B321,B322,B323,B324,B401,B402,B403,B404,B405,B406,B407,B408,B409,B410,B411,B412,B413,B414,B415,B501,B502,B503,B504,B505,B506,B507,B508,B509,B601,B602,B603,B604,B605,B606,B607,B608,B609,B610,B611,B612,B613,B614,B615,B701,B702,B703,B704",
+      "evidence/phase3b-bd1-v1/unit_preflight.py",
+      "evidence/phase3b-bd1-v1/run_units.py",
+      "evidence/phase3b-seq2-c2-v1/composed_acceptance.py",
+      "followups/phase3b_seq2_v1/test_bootstrap.py",
+      "followups/phase3b_seq2_v1/test_or1_admissions_s2.py",
+      "followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py"
+    ]
+  ],
+  "kind": "phase3b-bd1-predeclared-pure-component-checks-v1",
+  "purpose": "Static helpers and3pure diagnostic/import-boundary units only; no positivebootstrap,spawn,worklist orprovider invocation. Not fullLinuxsuite/hostset acceptance.",
+  "real_provider_calls": 0,
+  "source_at_plan": "a0994590335744bf1b6bb476d0d7aa42522581a9fcc17f7def9592c47a91ec19"
+}

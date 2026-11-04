@@ -1,0 +1,67 @@
+{
+  "at_utc": "2026-11-04T03:05:06.052079+00:00",
+  "automatic_runtime_waits_separate_and_finite": true,
+  "counts": {
+    "Windows_sets": 0,
+    "full_Linux_suites": 0,
+    "standalone_bootstrap": 3
+  },
+  "effective_focused_seconds": 4049.270687,
+  "effective_remaining_seconds": 3150.729313,
+  "full_release_or_paid_work_authorized": false,
+  "initial_diagnostic_gate_passed": true,
+  "kind": "phase3b-bd1-sixty-minute-review-v1",
+  "meter": {
+    "active_seconds": 3869.270687,
+    "actors": [
+      {
+        "active_seconds": 1631.006104,
+        "actor": "/root/bd1_controller",
+        "file": "controller.jsonl",
+        "mode": "active",
+        "records": 17
+      },
+      {
+        "active_seconds": 126.658017,
+        "actor": "/root/bd1_publication",
+        "file": "publication.jsonl",
+        "mode": "done",
+        "records": 4
+      },
+      {
+        "active_seconds": 990.695273,
+        "actor": "/root/bd1_independent_review",
+        "file": "reviewer.jsonl",
+        "mode": "active",
+        "records": 15
+      },
+      {
+        "active_seconds": 1120.911293,
+        "actor": "/root",
+        "file": "root.jsonl",
+        "mode": "wait",
+        "records": 33
+      }
+    ],
+    "limit_seconds": 7200,
+    "observed_at_utc": "2026-11-04T03:05:06.045782+00:00",
+    "remaining_seconds": 3330.729313,
+    "within_limit": true
+  },
+  "next": "Preserve instrumented source, affected static checks and3purecomponent checks, then current-source fullUNPROFILED suite afterpeerreview. No more standalone diagnostics.",
+  "observations": [
+    "unprofiled baseline canonical_timeout",
+    "lazy-entry unprofiled canonical_timeout; insufficient fix",
+    "instrumented -Ximporttime prefix passed; no unprofiled causal repair established"
+  ],
+  "real_provider_calls": 0,
+  "remaining_focused_estimate_seconds": {
+    "Windows_set_if_Linux_complete": 300,
+    "independent_full_command_review_and_supervision": 500,
+    "preservation_dossier_and_independent_outcome": 200,
+    "protected_closure_reporting_publication": 1200,
+    "statics_and_source_freeze": 400
+  },
+  "total_remaining_estimate_seconds": 2600,
+  "unreleased_hold_seconds": 180
+}

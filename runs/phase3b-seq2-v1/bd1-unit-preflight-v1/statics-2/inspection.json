@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "-B",
+    "-c",
+    "import json,subprocess,sys\nfrom pathlib import Path\ncommands=[['python', '-B', '-m', 'unittest', 'followups.phase3b_seq2_v1.test_z_bd1_diagnostics_s2', '-v'], ['python', '-B', '-m', 'ruff', 'check', '--no-cache', 'evidence/phase3b-bd1-v1/unit_preflight.py', 'evidence/phase3b-bd1-v1/run_units.py', 'evidence/phase3b-seq2-c2-v1/composed_acceptance.py', 'followups/phase3b_seq2_v1/test_bootstrap.py', 'followups/phase3b_seq2_v1/test_or1_admissions_s2.py', 'followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py'], ['python', '-B', '-m', 'mypy', '--explicit-package-bases', '--follow-imports', 'silent', '--ignore-missing-imports', '--no-incremental', '--cache-dir', '/tmp/bd1-mypy', 'evidence/phase3b-bd1-v1/unit_preflight.py', 'evidence/phase3b-bd1-v1/run_units.py', 'evidence/phase3b-seq2-c2-v1/composed_acceptance.py', 'followups/phase3b_seq2_v1/test_bootstrap.py', 'followups/phase3b_seq2_v1/test_or1_admissions_s2.py', 'followups/phase3b_seq2_v1/test_z_bd1_diagnostics_s2.py'], ['python', '-B', '-m', 'bandit', '-q', 'evidence/phase3b-bd1-v1/unit_preflight.py', 'evidence/phase3b-bd1-v1/run_units.py', 'evidence/phase3b-seq2-c2-v1/composed_acceptance.py']]\nresults=[]\nfor i,c in enumerate(commands):\n c[0]=sys.executable\n p=subprocess.run(c,capture_output=True,text=True,check=False,timeout=600)\n r={\"command\":c,\"exit_code\":p.returncode,\"output\":p.stdout,\"error\":p.stderr}\n Path(\"/results/phase3b-seq2-v1/check-\"+str(i)+\".json\").write_text(json.dumps(r,sort_keys=True,indent=2)+\"\\n\",encoding=\"utf-8\")\n results.append({\"index\":i,\"exit_code\":p.returncode})\nprint(json.dumps({\"checks\":results,\"real_provider_calls\":0,\"positive_bootstrap_invocations\":0}))\nsys.exit(0 if all(r[\"exit_code\"]==0 for r in results) else 1)\n"
+  ],
+  "mounts": [
+    {
+      "Destination": "/workspace",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/results/phase3b-seq2-v1",
+      "Mode": "",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "C:\\Users\\arvik\\code\\research\\Buddha2\\runs\\phase3b-seq2-v1\\bd1-unit-preflight-v1\\statics-2\\runtime",
+      "Type": "bind"
+    }
+  ],
+  "owner": "0021ccb77a878df1deb3a3eba004ca93cde4197e62971f84e3999fd334af9eab",
+  "passed": true
+}

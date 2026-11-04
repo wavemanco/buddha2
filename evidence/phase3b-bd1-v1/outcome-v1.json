@@ -1,0 +1,59 @@
+{
+  "API_cost_usd": 0,
+  "Linux_tests": {
+    "errors": 0,
+    "executed_passed": 118,
+    "failures": 0,
+    "named_Windows_skips": [
+      "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_foreign_phase_before_metadata",
+      "followups.phase3b_seq2_v1.test_launch_s2.LaunchBoundaryTests.test_actual_windows_bootstrap_rejects_private_input_before_metadata",
+      "followups.phase3b_seq2_v1.test_or1_admissions_s2.OR1AdmissionTests.test_host_evidence_writer_outside_runtime_base_is_exclusive"
+    ],
+    "profile_enabled": false,
+    "total": 121,
+    "unrun": []
+  },
+  "Windows_tests": {
+    "actual_Windows_host_not_H1": true,
+    "errors": 0,
+    "executed_passed": 3,
+    "failures": 0,
+    "skips": [],
+    "unrun": []
+  },
+  "all_existing_bootstrap_assertions_and_4s1s_limits_unchanged": true,
+  "all_frozen_controls_unchanged": true,
+  "all_known_unreleased_hold_seconds": 394,
+  "baseline_tests": 118,
+  "causal_repair_or_flakiness_absence_claimed": false,
+  "counts": {
+    "Windows_sets": 1,
+    "full_Linux_suites": 1,
+    "standalone_bootstrap": 3
+  },
+  "current_total_case_ids": 121,
+  "declared_new_regression_tests": 3,
+  "development_source_files": 726,
+  "final_owner_absence_sha256": "688cd179f54e72de876a4f205dff0d5996943682475588651195c7beb14dc10d",
+  "final_preservation_sha256": "971bb840a29d0fa37253c75eb6b4090d3b3d61dfbb32185fac60ee1920ff0a9c",
+  "full_Phase3B_kit_accepted": false,
+  "full_current_source_suite_retagged_as_release_gate": false,
+  "historical_failure_root_cause_established": false,
+  "independent_final_acceptance_pending": true,
+  "kind": "phase3b-bd1-outcome-v1",
+  "new_main_capacity_S13_or_paid_work": false,
+  "next": "Finish independent unit-preflight review, final accounting/report and reviewed publication; stop. Define a new complete release-acceptance block separately. No paid or release campaign begins automatically.",
+  "observations": [
+    "baseline unprofiled prefix failed:canonical_timeout",
+    "lazy-entry unprofiled prefix failed:canonical_timeout; change insufficient",
+    "instrumented profile prefix passed; 2815typed importevents, no process attribution",
+    "complete current-source UNPROFILED suite passed, followed by3actualWindows cases"
+  ],
+  "real_provider_calls": 0,
+  "recorded_at_utc": "2026-11-04T03:41:01.352665+00:00",
+  "remaining_uncertainty": "Timing variation remains; standalone failures and later passes do not isolate historical root cause or show the eager-import change caused success. Profiling alters startup cost and mixed-process timings cannot establish a child bottleneck.",
+  "six_known_H1_owners_absent": true,
+  "source_sha256": "55f405a0c53fdb28522cd01198e2d4caeed31d3c166eb63ed3b6000d48669493",
+  "status": "ready-pending-independent-closure-review",
+  "unit_preflight_ready_evidence": true
+}

@@ -1,0 +1,9 @@
+{
+  "actor": "/root/bd1_publication",
+  "basis": "Entire bounded WAIT-marked plan handoff/coordination interval conservatively charged. No exact focus invented. Added after initial diagnostic gate; not a retroactive pre-gate charge.",
+  "interval_end_utc": "2026-11-04T03:04:55.172385+00:00",
+  "interval_start_utc": "2026-11-04T03:04:14.556973+00:00",
+  "kind": "phase3b-bd1-publication-plan-handoff-hold-v1",
+  "released": false,
+  "seconds": 41
+}

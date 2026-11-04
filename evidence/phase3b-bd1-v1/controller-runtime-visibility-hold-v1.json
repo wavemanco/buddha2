@@ -1,0 +1,9 @@
+{
+  "actor": "/root/bd1_controller",
+  "interval_end_utc": "2026-11-04T03:14:10.363919+00:00",
+  "interval_start_utc": "2026-11-04T03:13:22.438929+00:00",
+  "kind": "bd1-controller-runtime-visibility-hold-v1",
+  "reason": "EntireboundedWAITintervalconservativelychargedbecauseitcontainedanalysis/visibilitycoordination; noexactfocusinvented.",
+  "released": false,
+  "seconds": 48
+}
