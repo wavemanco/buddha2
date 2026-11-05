@@ -24,6 +24,8 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 Status snapshot: **4 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
 
+A separately authorized **offline artifact-binding correction** now follows the native engine's actual return and saved-file priority. It binds the actual artifact, write witness and strategy while treating final-chat prose differences as diagnostic. Offline checks passed 145 unique methods across pinned Linux and the Windows host, with independent review. See the [audit correction](docs/ENGINEERING_AUDIT.md#durable-native-artifact-binding-correction). The stopped R2 result remains incomplete; no fresh live kit, grant or paid continuation is created.
+
 **Latest Phase 3B R2 attempt closed incomplete:** 513 calls/**$14.094285**, zero new unresolved liability. The first paired prompt completed, but a later selector stopped because our artifact contract compared differing prose despite the same declared candidate B. The exploratory first-pair scores remain distinct from the final globally held result (zero primary/assessment targets scored). There is no completed four-prompt comparison or gain claim. See the [R2 attempt report](docs/phases/phase-3b/PHASE3B_READ_AUDIT_R2_LIVE_ATTEMPT_REPORT.md). No paid repeat follows automatically.
 
 The first task and assessment protocol is [NoveltyBench](https://github.com/novelty-bench/novelty-bench). It measures answer quality and useful variety using its established model-based assessment procedure. Benchmark scores are not a general measure of creativity or human preference.

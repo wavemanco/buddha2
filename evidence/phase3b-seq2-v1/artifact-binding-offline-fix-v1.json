@@ -1,0 +1,142 @@
+{
+  "canonical_source_sha256": "dda19ddcbe4990a119fd0267776ac81fde2618c0dfea1767ceae6cdc7d956d32",
+  "changed_files_sha256": {
+    "followups/phase3b_seq2_v1/editor.py": "cd89333b3cec536a870659d85927ef1c4143cd815efb9d634d17019517f55a14",
+    "followups/phase3b_seq2_v1/evidence.py": "89b924d4ab545016e866f7c17ea060a95c037afa63baff302ad030b822419468",
+    "followups/phase3b_seq2_v1/test_information_s2.py": "bd1c3ceb077573ab4efc2762023fb03ad510ec1d8a4e2ebeedc0f63f1f1511b8",
+    "followups/phase3b_seq2_v1/test_native_s2.py": "f7be4bc90b088bb337cc6c11688479685d10f0cbc9f8c048b41b55fa9ed4ac8e",
+    "followups/phase3b_seq2_v1/workflow.py": "72a58b55f49071fa49c0fd79ffe63af38d6c68754f6da203238de38c4b41a7b5"
+  },
+  "effective_source_inputs": 163,
+  "final_chat_mismatch_diagnostic": true,
+  "final_verification": {
+    "actual_windows_host_passed": 2,
+    "errors": 0,
+    "failures": 0,
+    "linux_collected": 145,
+    "linux_passed": 143,
+    "linux_windows_only_skips": 2,
+    "unique_methods": 145
+  },
+  "fresh_study_readiness_kit_or_grant_created": false,
+  "independent_peer_review": {
+    "all_five_changed_files_and_live_saved_callers_reviewed": true,
+    "no_blockers": true,
+    "reviewer": "/root/artifact_binding_review",
+    "tests_rerun_by_reviewer": false,
+    "verdict": "Looks good. Ship"
+  },
+  "initial_combined_stdin_runner_trial": {
+    "assertion_failures": 0,
+    "completed_naturally": true,
+    "product_failure_claimed": false,
+    "setup_error_path": "/workspace/<stdin>",
+    "spawn_setup_errors": 1,
+    "tests_run": 145,
+    "windows_skips": 2
+  },
+  "initial_static_observations": {
+    "ruff_readonly_cache": "initial setup issue; final Ruff passed",
+    "type_check_observations": "addressed before final Mypy pass"
+  },
+  "kind": "phase3b-artifact-binding-offline-fix-v1",
+  "native_relay_integration": {
+    "actual_unchanged_Proposer_opencode": true,
+    "cases": 3,
+    "cases_checked": [
+      "nonempty saved-file priority",
+      "empty-file actual stdout aggregation",
+      "altered saved file rejected"
+    ],
+    "only_subprocess_simulated": true,
+    "passed": true,
+    "test_methods": 1
+  },
+  "native_return_authoritative": true,
+  "normal_module_groups": {
+    "financial": {
+      "passed": true,
+      "skips": 0,
+      "tests": 22
+    },
+    "message_history": {
+      "passed": true,
+      "skips": 0,
+      "tests": 31
+    },
+    "native_contract": {
+      "elapsed_seconds": 611.749,
+      "passed": true,
+      "skips": 0,
+      "tests": 16
+    },
+    "source_coverage": {
+      "passed": true,
+      "skips": 2,
+      "tests": 35
+    },
+    "strategy": {
+      "passed": true,
+      "skips": 0,
+      "tests": 20
+    },
+    "transport": {
+      "passed": true,
+      "skips": 0,
+      "tests": 21
+    }
+  },
+  "normal_proof_version": 2,
+  "old_studies_grants_reports_or_rows_requalified": false,
+  "original_bug_red_reproduced": true,
+  "paid_continuation_authorized": false,
+  "proof_created_after_native_return": true,
+  "provider_calls": 0,
+  "public_H1_run_claimed": false,
+  "public_source_sha256": "516a14ce15aefa77514b03681adc7910dac5fdb484453e281a442854c640665c",
+  "raw_provider_thinking_strategy_or_source_captures_published": false,
+  "real_credentials_used": false,
+  "saved_author_notes_and_selector_choice_bound": true,
+  "saved_file_mutation_witness_and_strategy_bound": true,
+  "saved_selector_counterfactual": {
+    "both_declared_choice_B": true,
+    "counterfactual_only": true,
+    "historical_completion_requalified": false,
+    "historical_files_preserved": 22,
+    "history_guard_passed": true,
+    "ledger_hash_chain_valid": true,
+    "negative_controls_rejected": {
+      "changed_native_return": true,
+      "changed_saved_artifact": true,
+      "missing_saved_file": true,
+      "missing_write_witness": true
+    },
+    "new_native_completion_observed": false,
+    "normal_artifact_proof_passed": true,
+    "prose_difference_diagnostic": true,
+    "raw_sha256": "8e5623f0eebe91b5615f9b0705e2dbc1b65323c1a3decfd1d06981a156170c58",
+    "receipt_relative_path": "runs/phase3b-seq2-v1/artifact-binding-fix-v1/saved-selector-replay-v1.json",
+    "recorded_information_replay_passed": true,
+    "selector_requests_bound": 10,
+    "sha256": "fe092b426439058844100e4514a66731822f8a90d44e1a0b26f41d92b767ea8e",
+    "verifier_source_hashes_preserved": 4
+  },
+  "sha256": "8500a941af6426c72b1537557dfe198fd27083a0f47697a18536ecd8d90cb2bd",
+  "static_checks": {
+    "bandit_existing_nosec_warnings_only": true,
+    "bandit_findings": 0,
+    "bandit_production_files": 3,
+    "mypy_passed": true,
+    "mypy_production_files": 3,
+    "ruff_files": 5,
+    "ruff_passed": true
+  },
+  "upstream_dependencies_prompts_models_and_budgets_changed": false,
+  "verification_status": "passed_offline",
+  "windows_host_checks": {
+    "credential_free_child_environment": true,
+    "elapsed_seconds": 0.841,
+    "passed": true,
+    "tests": 2
+  }
+}

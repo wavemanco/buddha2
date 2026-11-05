@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from harness2.core.proposer import Proposer, Reply
+from harness2.core.proposer import Proposer, ProposerError, Reply
 from harness2.core.spec import ChannelSpec
 
 from buddha2.artifacts import ContractError, digest
@@ -126,6 +126,115 @@ class NativeS2Tests(unittest.TestCase):
         self.assertEqual(permissions["output/answer.md"], "allow")
         self.assertTrue(all(path == "*" or path.endswith("output/answer.md") for path in permissions))
         self.assertEqual(prop.attempts, 1)
+
+    def test_native_relay_binds_consumed_file_or_stdout_after_different_final_prose(self):
+        import http.client
+        import subprocess
+        from unittest.mock import patch
+        from urllib.parse import urlsplit
+
+        from followups.phase3a_readiness_recovery_v1.test_delivery import pair
+
+        NATIVE.mkdir(parents=True, exist_ok=True)
+        for mode in ("saved", "stdout", "changed_after_final"):
+            with self.subTest(mode=mode), tempfile.TemporaryDirectory(prefix="native-output-", dir=NATIVE) as temporary:
+                root = Path(temporary)
+                context = root / "context"
+                (context / "candidates").mkdir(parents=True)
+                (context / "task.md").write_text("SYNTHETIC relay task", encoding="utf-8")
+                for candidate in ("A", "B"):
+                    (context / "candidates" / (candidate + ".md")).write_text(
+                        "SYNTHETIC complete candidate " + candidate, encoding="utf-8")
+                halts, admitted, responses = [], [], []
+
+                def dispatch(slot, role, request):
+                    blocks = responses[len(admitted)]
+                    admitted.append((slot, role, copy.deepcopy(request)))
+                    return {"status": "response", "response": {"provider_response": {
+                        "id": "synthetic-" + slot, "type": "message", "role": "assistant",
+                        "model": "claude-opus-5", "content": blocks,
+                        "stop_reason": "end_turn" if len(admitted) == 3 else "tool_use",
+                        "usage": {"input_tokens": 0, "output_tokens": 0}}}}
+
+                prop = adapter.CompatibleProposer(pilot="p3b-02", study_sha256=STUDY,
+                    dispatch=dispatch, audit_dir=root / "editor-audit", fixture=True, halt=halts.append,
+                    register_deadline=lambda *args: None)
+                saved = "<why>SYNTHETIC saved rationale.</why>\n```choice\nB\n```" if mode != "stdout" else ""
+                final = "<why>SYNTHETIC different final rationale.</why>\n```choice\nB\n```"
+                progress = "SYNTHETIC earlier CLI progress."
+
+                def opencode(command, *, cwd, env, **kwargs):
+                    cwd = Path(cwd)
+                    configured = json.loads(env["OPENCODE_CONFIG_CONTENT"])
+                    options = configured["provider"]["anthropic"]["options"]
+                    url = urlsplit(options["baseURL"])
+                    self.assertEqual(url.hostname, "127.0.0.1")
+                    prepared = prop._c1_contracts["select.seq2"]
+                    reads = {cwd / "MISSION.md": (cwd / "MISSION.md").read_text(encoding="utf-8"),
+                        cwd / "context/C1_MANIFEST.json": (cwd / "context/C1_MANIFEST.json").read_text(encoding="utf-8"),
+                        cwd / "context/C1_INDEX.md": prepared["index_text"]}
+                    reads.update({cwd / "context" / name: text for name, text in prepared["evidence_files"].items()})
+                    pairs = [pair(f"read-{index}", "read", str(path), text,
+                                  limit=max(2000, len(text.splitlines()))) for index, (path, text) in enumerate(reads.items())]
+                    written = pair("write-answer", "write", str(cwd / "output/answer.md"), saved)
+                    responses.extend([[{"type": "text", "text": progress}, *(value[0]["content"][0] for value in pairs)],
+                                      written[0]["content"], [{"type": "text", "text": final}]])
+                    system = configured["agent"]["build"]["prompt"] + (
+                        "\nYou are powered by the model named claude-opus-5. The exact model ID is anthropic/claude-opus-5\n"
+                        "Here is some useful information about the environment you are running in:\n<env>\n"
+                        f"  Working directory: {cwd}\n  Workspace root folder: /tmp\n"
+                        "  Is directory a git repo: no\n  Platform: linux\n  Today's date: Wed Nov 04 2026\n</env>")
+                    raw = {"model": "claude-opus-5", "max_tokens": 16000, "stream": True,
+                        "thinking": {"type": "adaptive"}, "output_config": {"effort": "high"},
+                        "system": [{"type": "text", "text": system}],
+                        "tools": [{"name": name, "input_schema": {"type": "object"}} for name in editor.TOOLS],
+                        "messages": [{"role": "user", "content": "SYNTHETIC native invocation"}]}
+                    for turn in range(3):
+                        connection = http.client.HTTPConnection(url.hostname, url.port, timeout=15)
+                        try:
+                            connection.request("POST", url.path + "/messages", json.dumps(raw),
+                                {"Content-Type": "application/json", "x-api-key": options["apiKey"]})
+                            response = connection.getresponse()
+                            payload = response.read()
+                            self.assertEqual(response.status, 200, payload.decode())
+                            self.assertIn(b"event: message_stop", payload)
+                        finally:
+                            connection.close()
+                        if turn < 2:
+                            results = [value[1]["content"][0] for value in pairs] if turn == 0 else written[1]["content"]
+                            if turn == 1:
+                                (cwd / "output/answer.md").write_text(saved, encoding="utf-8")
+                            raw["messages"].extend([{"role": "assistant", "content": responses[turn]},
+                                                    {"role": "user", "content": results}])
+                    if mode == "changed_after_final":
+                        (cwd / "output/answer.md").write_text(saved + "\nSYNTHETIC unwitnessed change", encoding="utf-8")
+                    stdout = "\n".join(json.dumps({"type": "text", "part": {"text": text}}) for text in (progress, final))
+                    return subprocess.CompletedProcess(command, 0, stdout=stdout, stderr="")
+
+                with patch("harness2.core.proposer.subprocess.run", side_effect=opencode) as simulated:
+                    if mode == "changed_after_final":
+                        with self.assertRaisesRegex(ProposerError, "consumed output failed its completion binding"):
+                            prop.call(contract.selector_mission(["A", "B"]), context, "select.seq2")
+                    else:
+                        reply = prop.call(contract.selector_mission(["A", "B"]), context, "select.seq2")
+                self.assertEqual(simulated.call_count, 1)
+                self.assertEqual(len(admitted), 3)
+                session = prop.phase3a_evidence()["sessions"]["select.seq2"]
+                self.assertEqual(len(session["history_guard_audits"]), 3)
+                if mode == "changed_after_final":
+                    self.assertIn("native_output_binding_violation", halts)
+                    self.assertEqual(session["status"], "boundary_stopped")
+                else:
+                    self.assertTrue(reply.ok, reply.text)
+                    self.assertFalse(halts)
+                    proof = session["normal_session_proof"]
+                    self.assertEqual(reply.text, saved if mode == "saved" else progress + "\n\n" + final)
+                    self.assertEqual(proof["native_output"], reply.text)
+                    self.assertEqual(proof["saved_output"], saved)
+                    self.assertEqual(proof["native_output_source"], "saved_file" if mode == "saved" else "native_stdout")
+                    self.assertFalse(proof["final_matches_native_output"])
+                    self.assertTrue(proof["notes_mutation_binding"]["actual_text_matches"])
+                    self.assertEqual(len(proof["candidate_inspection"]), 2)
 
     def test_actual_native_two_round_keep_preserves_changed_c1_and_both_choices(self):
         root = self.fresh()

@@ -124,6 +124,7 @@ class InformationGuardTests(unittest.TestCase):
         request = self.request(prepared)
         evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="select.seq2")
         proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+            native_output="```choice\nA\n```",
             response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "```choice\nA\n```"}]})
         self.assertTrue(proof["passed"])
         self.assertIsNone(proof["notes_delivery"])
@@ -134,6 +135,7 @@ class InformationGuardTests(unittest.TestCase):
         evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="inv2.a1")
         with self.assertRaisesRegex(ContractError, "mandatory saved notes"):
             evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                native_output="<notes>kept -> KEEP_BASE -> synthetic.</notes>",
                 response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "<notes>kept -> KEEP_BASE -> synthetic.</notes>"}]},
                 harvested_strategy=(self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8"))
 
@@ -147,16 +149,17 @@ class InformationGuardTests(unittest.TestCase):
         response = {"stop_reason": "end_turn", "content": [{"type": "text", "text": notes}]}
         current = (self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8")
         proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-            response=response, harvested_strategy=current,
+            response=response, native_output=notes, saved_output=notes, harvested_strategy=current,
             mutation_witnesses=self.completion_witnesses(request, notes=notes))
         self.assertTrue(proof["passed"])
         with self.assertRaises(ContractError):
             evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-                response=response, harvested_strategy=current + "SYNTHETIC unbound output")
+                response=response, native_output=notes, saved_output=notes,
+                harvested_strategy=current + "SYNTHETIC unbound output")
         changed = copy.deepcopy(request)
         changed["messages"] = changed["messages"][:-2]
         incomplete = evidence.verify_normal_session(changed, prepared, cwd=self.cwd, label="inv2.a1",
-            response=response, harvested_strategy=current,
+            response=response, native_output=notes, saved_output=notes, harvested_strategy=current,
             mutation_witnesses=self.completion_witnesses(changed, notes=notes))
         self.assertTrue(incomplete["passed"])
         self.assertFalse(incomplete["notes_delivery"]["complete"])
@@ -182,20 +185,123 @@ class InformationGuardTests(unittest.TestCase):
             request["messages"].extend(pair("notes-write", "write", self.cwd + "/output/answer.md", notes))
             with self.subTest(edit=edit):
                 proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-                    response=response, harvested_strategy=json.dumps(expected, indent=4) + "\n",
+                    response=response, native_output=notes, saved_output=notes,
+                    harvested_strategy=json.dumps(expected, indent=4) + "\n",
                     mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
                 self.assertTrue(proof["strategy_mutation_binding"]["actual_text_matches"])
                 self.assertFalse(proof["strategy_delivery"]["complete"])
                 wrong = {**expected, "answer_system": "SYNTHETIC OPERATOR B"}
                 with self.assertRaises(ContractError):
                     evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-                        response=response, harvested_strategy=json.dumps(wrong),
+                        response=response, native_output=notes, saved_output=notes, harvested_strategy=json.dumps(wrong),
                         mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
-                wrong_final = {"stop_reason": "end_turn", "content": [{"type": "text", "text": "<notes>SYNTHETIC FOREIGN</notes>"}]}
-                with self.assertRaisesRegex(ContractError, "consumed artifact differs"):
+                different_final = {"stop_reason": "end_turn", "content": [{"type": "text", "text": "SYNTHETIC final acknowledgement."}]}
+                proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                    response=different_final, native_output=notes, saved_output=notes,
+                    harvested_strategy=json.dumps(expected, indent=4) + "\n",
+                    mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
+                self.assertFalse(proof["final_matches_native_output"])
+                with self.assertRaises(ContractError):
                     evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
-                        response=wrong_final, harvested_strategy=json.dumps(expected, indent=4) + "\n",
+                        response=different_final, native_output=notes + "SYNTHETIC changed native return", saved_output=notes,
+                        harvested_strategy=json.dumps(expected, indent=4) + "\n",
                         mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
+
+    def test_selector_saved_output_is_authoritative_when_final_prose_or_choice_differs(self):
+        prepared = self.prepared(selector=True)
+        request = self.request(prepared)
+        saved = "<why>SYNTHETIC saved reasoning.</why>\n```choice\nB\n```"
+        request["messages"].extend(pair("write-answer", "write", self.cwd + "/output/answer.md", saved))
+        for final in (saved.replace("saved", "different final"), "```choice\nA\n```", "SYNTHETIC done."):
+            with self.subTest(final=final):
+                proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                    response={"stop_reason": "end_turn", "content": [{"type": "text", "text": final}]},
+                    native_output=saved, saved_output=saved,
+                    mutation_witnesses=self.completion_witnesses(request, notes=saved))
+                self.assertTrue(proof["passed"])
+                self.assertEqual(proof["kind"], "phase3b-s2-normal-session-delivery-v2")
+                self.assertEqual(proof["native_output"], saved)
+                self.assertEqual(proof["saved_output"], saved)
+                self.assertEqual(proof["native_output_source"], "saved_file")
+                self.assertFalse(proof["final_matches_native_output"])
+                self.assertTrue(proof["notes_mutation_binding"]["actual_text_matches"])
+
+    def test_selector_stdout_fallback_uses_actual_native_aggregate_with_absent_or_empty_file(self):
+        from harness2.core.proposer import _opencode_stdout
+
+        prepared = self.prepared(selector=True)
+        final = "```choice\nB\n```"
+        wire = "\n".join(json.dumps({"type": "text", "part": {"type": "text", "text": text}})
+                         for text in ("SYNTHETIC earlier progress.", final))
+        actual, error = _opencode_stdout(wire)
+        self.assertFalse(error)
+        self.assertNotEqual(actual, final)
+        for saved in (None, ""):
+            request = self.request(prepared)
+            if saved is not None:
+                request["messages"].extend(pair("empty-answer", "write", self.cwd + "/output/answer.md", saved))
+            with self.subTest(saved_file_exists=saved is not None):
+                proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                    response={"stop_reason": "end_turn", "content": [{"type": "text", "text": final}]},
+                    native_output=actual, saved_output=saved,
+                    mutation_witnesses=self.completion_witnesses(request, notes=saved))
+                self.assertTrue(proof["passed"])
+                self.assertEqual(proof["native_output_source"], "native_stdout")
+                self.assertFalse(proof["final_matches_native_output"])
+
+    def test_native_output_binding_rejects_unwitnessed_changed_or_missing_artifacts(self):
+        prepared = self.prepared(selector=True)
+        saved = "<why>SYNTHETIC saved.</why>\n```choice\nB\n```"
+        original = self.request(prepared)
+        original["messages"].extend(pair("write-answer", "write", self.cwd + "/output/answer.md", saved))
+        for mutation in ("missing_file", "changed_file", "changed_native_return", "no_witness", "no_write", "failed_write", "wrong_path"):
+            request = copy.deepcopy(original)
+            native, observed = saved, saved
+            witnesses = self.completion_witnesses(request, notes=saved)
+            if mutation == "missing_file":
+                observed = None
+            elif mutation == "changed_file":
+                observed += "SYNTHETIC changed artifact"
+                native = observed
+            elif mutation == "changed_native_return":
+                native = saved.replace("\nB\n", "\nA\n")
+            elif mutation == "no_witness":
+                witnesses = []
+            elif mutation == "no_write":
+                request["messages"] = request["messages"][:-2]
+                witnesses = []
+            elif mutation == "failed_write":
+                request["messages"][-1]["content"][0]["is_error"] = True
+            else:
+                request["messages"][-2]["content"][0]["input"]["filePath"] += ".foreign"
+            with self.subTest(mutation=mutation), self.assertRaises(ContractError):
+                evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                    response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "SYNTHETIC done."}]},
+                    native_output=native, saved_output=observed, mutation_witnesses=witnesses)
+
+    def test_native_selector_choice_and_normal_end_remain_required(self):
+        prepared = self.prepared(selector=True)
+        for invalid, reason in (("```choice\nFORGED\n```", "end_turn"),
+                                ("SYNTHETIC no choice", "end_turn"), ("```choice\nA\n```", "max_tokens")):
+            request = self.request(prepared)
+            request["messages"].extend(pair("write-answer", "write", self.cwd + "/output/answer.md", invalid))
+            with self.subTest(output=invalid, stop_reason=reason), self.assertRaises(ContractError):
+                evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                    response={"stop_reason": reason, "content": [{"type": "text", "text": "SYNTHETIC done."}]},
+                    native_output=invalid, saved_output=invalid,
+                    mutation_witnesses=self.completion_witnesses(request, notes=invalid))
+
+    def test_author_cannot_substitute_stdout_for_empty_saved_notes(self):
+        prepared = self.prepared()
+        request = self.request(prepared)
+        request["messages"].extend(pair("empty-notes", "write", self.cwd + "/output/answer.md", ""))
+        notes = "<notes>SYNTHETIC stdout-only notes.</notes>"
+        with self.assertRaises(ContractError):
+            evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+                response={"stop_reason": "end_turn", "content": [{"type": "text", "text": notes}]},
+                native_output=notes, saved_output="",
+                harvested_strategy=(self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8"),
+                mutation_witnesses=self.completion_witnesses(request, notes=""))
 
     def test_earlier_completion_witness_accepts_only_block_cache_changes(self):
         for use_edit in (False, True):
@@ -263,14 +369,18 @@ class InformationGuardTests(unittest.TestCase):
         notes = "<notes>\r\nSYNTHETIC first line\r\nSYNTHETIC second line\r\n</notes>\r\n"
         request["messages"].extend(pair("write-notes", "write", self.cwd + "/output/answer.md", notes))
         proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+            native_output=notes.replace("\r\n", "\n"), saved_output=notes,
             response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "\r\n" + notes}]},
             harvested_strategy=(self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8"),
             mutation_witnesses=self.completion_witnesses(request, notes=notes))
         native_answer = notes.replace("\r\n", "\n")
+        self.assertEqual(proof["native_output_normalized_sha256"], hashlib.sha256(native_answer.strip().encode()).hexdigest())
         self.assertEqual(proof["final_normalized_sha256"], hashlib.sha256(native_answer.strip().encode()).hexdigest())
         self.assertEqual(proof["final_sha256"], hashlib.sha256(("\r\n" + notes).encode()).hexdigest())
 
-    def test_saved_selector_accepts_output_representation_but_rejects_changed_content(self):
+    def saved_selector(self, saved, final, actual, *, failed_target=None):
+        from harness2.core.selection import _CHOICE
+
         prepared = self.prepared(selector=True)
         base = self.request(prepared)
         first = {**base, "messages": base["messages"][:1]}
@@ -284,19 +394,42 @@ class InformationGuardTests(unittest.TestCase):
             returned.append(messages[1]["content"][0])
         second = copy.deepcopy(first)
         second["messages"].extend([{"role": "assistant", "content": tools}, {"role": "user", "content": returned}])
-        text = "<why>SYNTHETIC choice.</why>\n```choice\nA\n```"
+        requests = [first, second]
+        content = [tools]
+        if saved is not None:
+            written = pair("write-answer", "write", self.cwd + "/output/answer.md", saved)
+            third = copy.deepcopy(second)
+            third["messages"].extend(written)
+            requests.append(third)
+            content.append(written[0]["content"])
+        if failed_target is not None:
+            failed = [{"role": "assistant", "content": [{"type": "tool_use", "id": "failed-edit", "name": "edit",
+                "caller": {"type": "direct"}, "input": {"filePath": self.cwd + "/" + failed_target,
+                    "oldString": "SYNTHETIC missing text", "newString": "SYNTHETIC unapplied replacement"}}]},
+                {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "failed-edit",
+                    "is_error": True, "content": "SYNTHETIC edit failed"}]}]
+            following = copy.deepcopy(requests[-1])
+            following["messages"].extend(failed)
+            requests.append(following)
+            content.append(failed[0]["content"])
+        content.append([{"type": "text", "text": final}])
         prefix = "p3b-02.adaptive.editor.select.seq2"
-        slots = [prefix + ".t01", prefix + ".t02"]
-        intents = {slot: {"request": request} for slot, request in zip(slots, (first, second))}
-        results = {
-            slots[0]: {"role": "native_selector", "status": "response", "response": {"text": "", "provider_response": {
-                "stop_reason": "tool_use", "content": tools}}},
-            slots[1]: {"role": "native_selector", "status": "response", "response": {"text": text, "provider_response": {
-                "stop_reason": "end_turn", "content": [{"type": "text", "text": text}]}}},
-        }
+        slots = [prefix + f".t{i:02}" for i in range(1, len(requests) + 1)]
+        intents = {slot: {"request": request, "request_sha256": digest(request)} for slot, request in zip(slots, requests)}
+        results = {slot: {"role": "native_selector", "status": "response", "response": {
+            "text": final if index == len(slots) - 1 else "", "provider_response": {
+                "stop_reason": "end_turn" if index == len(slots) - 1 else "tool_use", "content": blocks}}}
+            for index, (slot, blocks) in enumerate(zip(slots, content))}
         guard = history.HistoryGuard(lambda slot, role, request: results[slot], prefix)
         for slot in slots:
             guard(slot, "native_selector", intents[slot]["request"])
+        witnesses = self.completion_witnesses(requests[-1], notes=saved)
+        for witness in witnesses:
+            witness["observed_slot_id"] = slots[-1]
+            witness["sha256"] = digest({key: value for key, value in witness.items() if key != "sha256"})
+        normal = evidence.verify_normal_session(requests[-1], prepared, cwd=self.cwd, label="select.seq2",
+            response=results[slots[-1]]["response"]["provider_response"], native_output=actual,
+            saved_output=saved, mutation_witnesses=witnesses)
         search = self.root / "saved-selector"
         audit = search / "editor-audit/c1-contracts/select.seq2"
         audit.mkdir(parents=True)
@@ -307,14 +440,23 @@ class InformationGuardTests(unittest.TestCase):
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(value, encoding="utf-8")
         session = {"status": "valid", "model_backed": True, "authentic_eligible": True, "terminal_note_used": False,
-            "result_slots": slots, "history_guard_audits": guard.audits,
-            "input_snapshot": {"files": prepared["manifest"]["context_inventory"]}, "selector_answer": text}
-        selection = {"ok": True, "fallback": False, "chosen_id": "A", "id_map": {"A": "c1", "B": "c2"}}
+            "result_slots": slots, "history_guard_audits": guard.audits, "mutation_witnesses": witnesses,
+            "information_proof": evidence.verify_information_before_decision(second, prepared, cwd=self.cwd, label="select.seq2"),
+            "normal_session_proof": normal, "input_snapshot": {"files": prepared["manifest"]["context_inventory"]},
+            "selector_answer": actual}
+        choice = _CHOICE.search(actual)
+        assert choice is not None
+        selection = {"ok": True, "fallback": False, "chosen_id": choice.group(1).strip(), "id_map": {"A": "c1", "B": "c2"}}
         def validate():
             # Storage loading alone is replaced; history, source, inspection and choice validation are real.
             with patch.object(editor, "validate_persisted_sessions", return_value={"select.seq2": session}):
                 return editor.validate_selector_evidence(search=search, study_sha256="a" * 64, pilot="p3b-02",
                     fixture=True, session=session, results=results, intents=intents, selection=selection)
+        return session, selection, validate
+
+    def test_saved_selector_accepts_output_representation_but_rejects_changed_content(self):
+        text = "<why>SYNTHETIC choice.</why>\n```choice\nA\n```"
+        session, selection, validate = self.saved_selector(None, text, text)
         for answer in (text, "\n" + text + "\n", "\r\n" + text.replace("\n", "\r\n") + "\r\n"):
             session["selector_answer"] = answer
             with self.subTest(answer_hash=hashlib.sha256(answer.encode()).hexdigest()):
@@ -326,6 +468,30 @@ class InformationGuardTests(unittest.TestCase):
         session["selector_answer"] = text
         selection["chosen_id"] = "B"
         with self.assertRaises(ContractError):
+            validate()
+
+    def test_saved_selector_replays_actual_written_output_with_different_final_prose(self):
+        saved = "<why>SYNTHETIC saved rationale.</why>\n```choice\nB\n```"
+        final = "<why>SYNTHETIC final rationale differs.</why>\n```choice\nB\n```"
+        session, _, validate = self.saved_selector(saved, final, saved)
+        self.assertFalse(session["normal_session_proof"]["final_matches_native_output"])
+        self.assertTrue(validate()["passed"])
+        session["selector_answer"] = saved.replace("saved", "unwitnessed")
+        with self.assertRaises(ContractError):
+            validate()
+
+    def test_failed_permitted_edit_does_not_replace_successful_saved_output(self):
+        saved = "<why>SYNTHETIC saved rationale.</why>\n```choice\nB\n```"
+        session, _, validate = self.saved_selector(saved, "SYNTHETIC done.", saved,
+            failed_target="output/answer.md")
+        self.assertTrue(session["normal_session_proof"]["notes_mutation_binding"]["actual_text_matches"])
+        self.assertTrue(validate()["passed"])
+
+    def test_failed_edit_of_candidate_evidence_still_violates_selector_ownership(self):
+        saved = "<why>SYNTHETIC saved rationale.</why>\n```choice\nB\n```"
+        with self.assertRaises(ContractError):
+            _, _, validate = self.saved_selector(saved, "SYNTHETIC done.", saved,
+                failed_target="context/candidates/A.md")
             validate()
 
     def test_diagnostic_policy_never_swallows_source_or_system_tamper(self):
@@ -387,10 +553,12 @@ class InformationGuardTests(unittest.TestCase):
         proof = evidence.verify_information_before_decision(request, prepared, cwd=self.cwd, label="select.seq2")
         self.assertFalse(proof["delivery"]["complete"])
         final = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+            native_output="```choice\nA\n```",
             response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "```choice\nA\n```"}]})
         self.assertTrue(final["passed"])
         with self.assertRaisesRegex(ContractError, "no valid candidate choice"):
             evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="select.seq2",
+                native_output="```choice\nFORGED\n```",
                 response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "```choice\nFORGED\n```"}]})
 
 

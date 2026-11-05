@@ -141,6 +141,7 @@ def effective_request(raw: dict, *, turn: int | None = None) -> dict:
 @contextmanager
 def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callable, *, prepared: dict):
     exchanges = threading.RLock()
+    completion: dict = {}
     def observed_dispatch(slot, role, request):
         from .evidence import observe_mutation_completion
 
@@ -189,7 +190,7 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                     "role_translation": translation})
                 _require(result.get("status") == "response", "editor result is unresolved")
                 response = result["response"]["provider_response"]
-                from .evidence import verify_information_before_decision, verify_normal_session
+                from .evidence import verify_information_before_decision
 
                 label = prefix.split(".editor.", 1)[1]
                 decision = response.get("stop_reason") == "end_turn" or any(
@@ -199,11 +200,8 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                     record["information_proof"] = verify_information_before_decision(
                         request, prepared, cwd=str(cwd), label=label)
                 if response.get("stop_reason") == "end_turn" and not record["terminal_note_used"]:
-                    current = (None if label == "select.seq2" else
-                               safe(cwd / "context/harness/systemprompt.md", roots=(cwd,)).read_text(encoding="utf-8"))
-                    record["normal_session_proof"] = verify_normal_session(
-                        request, prepared, cwd=str(cwd), label=label, response=response,
-                        harvested_strategy=current, mutation_witnesses=record["mutation_witnesses"])
+                    # Native output is known only after OpenCode returns its file/stdout result.
+                    completion.update(request=request, response=response)
                 tool_boundary(response["content"], cwd, selector=prefix.endswith(".select.seq2"))
                 payload = sse(response)
                 settled[raw_sha] = payload
@@ -243,7 +241,7 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     try:
-        yield f"http://127.0.0.1:{server.server_port}/v1"
+        yield f"http://127.0.0.1:{server.server_port}/v1", completion
     finally:
         server.shutdown()
         server.server_close()
@@ -465,7 +463,7 @@ class AccountedProposer(frozen.AccountedProposer):
             Path(self._local.home).mkdir()
             prefix = f"{self.pilot}.adaptive.editor.{label}"
             prepared = self._c1_contracts[label]
-            with relay(cwd, self.dispatch, prefix, record, self.halt, prepared=prepared) as url:
+            with relay(cwd, self.dispatch, prefix, record, self.halt, prepared=prepared) as (url, completion):
                 self._local.url = url
                 answer, cost, error = Proposer._opencode(self, cwd, mission, system, wall)
             record["result_slots"] = [row["slot_id"] for row in record["requests"]]
@@ -473,10 +471,22 @@ class AccountedProposer(frozen.AccountedProposer):
                 record["status"] = "boundary_stopped"
                 raise ProposerError("accounted editor boundary stopped this conversation")
             if not record["terminal_note_used"]:
-                normal = record.get("normal_session_proof", {})
-                if normal.get("final_normalized_sha256") != hashlib.sha256(normalized_output(answer).encode()).hexdigest():
-                    self.halt("native_return_differs_from_normal_proof")
-                    raise ProposerError("native returned artifact differs from normal provider final")
+                from .evidence import verify_normal_session
+
+                try:
+                    output = safe(cwd / "output/answer.md", roots=(cwd,))
+                    saved_output = output.read_text(encoding="utf-8", errors="replace") if output.is_file() else None
+                    current = (None if label == "select.seq2" else
+                               safe(cwd / "context/harness/systemprompt.md", roots=(cwd,)).read_text(encoding="utf-8"))
+                    _require(bool(completion), "native editor has no normal final response")
+                    record["normal_session_proof"] = verify_normal_session(
+                        completion["request"], prepared, cwd=str(cwd), label=label,
+                        response=completion["response"], native_output=answer, saved_output=saved_output,
+                        harvested_strategy=current, mutation_witnesses=record["mutation_witnesses"])
+                except (ContractError, OSError, TypeError, ValueError) as exc:
+                    record.update(status="boundary_stopped", error=type(exc).__name__)
+                    self.halt("native_output_binding_violation")
+                    raise ProposerError("native consumed output failed its completion binding") from None
             if label == "select.seq2":
                 _require(selector_snapshot(cwd / "context", owned_workspace=cwd) == captured_input,
                          "selector modified its immutable candidate evidence")
@@ -537,7 +547,7 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     from followups.phase3a_c1_completion_v3.evidence import _body
 
     from .delivery import _history, audit_delivery
-    from .evidence import _file, _sources, _system, verify_candidate_inspection
+    from .evidence import _file, _mutation_history, _sources, _system, verify_candidate_inspection
 
     saved = validate_persisted_sessions(Path(search) / "editor-audit", study_sha256=study_sha256,
         pilot=pilot, fixture=fixture, results=results, intents=intents)
@@ -559,8 +569,8 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
         item.get("type") == "tool_use" for item in final.get("content", [])),
         "native selector response was incomplete")
     _require(normalized_output(session.get("selector_answer"))
-             == normalized_output(results[slots[-1]]["response"]["text"]),
-             "native selector returned choice differs from actual final provider text")
+             == normalized_output((session.get("normal_session_proof") or {}).get("native_output")),
+             "native selector returned choice differs from its observed native output")
     body = _body(intents[slots[-1]]["request"], set())
     calls, tool_results = _history(body)
     prefix = "editor-audit/c1-contracts/select.seq2"
@@ -573,8 +583,7 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     original, views = _sources(Path(search), prefix, manifest, hashes)
     configured = _file(Path(search), prefix + "/configured-agent-prompt.md", hashes).decode()
     cwd = _system(intents[slots[-1]]["request"], configured, None)
-    writes = [identity for identity, call in calls.items() if call["name"] in {"write", "edit"}
-              and call["input"]["filePath"] == cwd + "/output/answer.md"]
+    writes, _, _ = _mutation_history(body, cwd + "/output/answer.md")
     decision = body
     if writes:
         first_mutation = writes[0]
@@ -589,10 +598,11 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     delivered = audit_delivery(decision, expected)
     notes_delivery = None
     if writes:
-        notes_delivery = audit_delivery(body, {cwd + "/output/answer.md": session["selector_answer"]}, after=writes[-1])
+        saved_output = (session.get("normal_session_proof") or {}).get("saved_output")
+        _require(isinstance(saved_output, str), "native selector lacks its observed saved output")
+        notes_delivery = audit_delivery(body, {cwd + "/output/answer.md": saved_output}, after=writes[-1])
     for call_id, call in calls.items():
         if call["name"] != "read":
-            _require(not tool_results[call_id].get("is_error"), "native selector had an unsuccessful mutation")
             _require(call["name"] in {"write", "edit"}
                      and call["input"]["filePath"] == cwd + "/output/answer.md",
                      "native selector modified candidate evidence")

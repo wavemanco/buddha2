@@ -248,8 +248,6 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
         contents: list[list[dict]] = []
         cwd = None
         seen_ids: set[str] = set()
-        strategy_mutations: list[str] = []
-        notes_mutations: list[str] = []
         decision = None
         for turn, row in enumerate(rows, 1):
             slot = f"{pilot}.adaptive.editor.{label}.t{turn:02}"
@@ -285,7 +283,6 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
                 if call["name"] in {"write", "edit"}:
                     path = call["input"]["filePath"]
                     _require(path in {cwd + "/context/harness/systemprompt.md", cwd + "/output/answer.md"}, "editor mutated an unsupported path")
-                    (strategy_mutations if path.endswith("systemprompt.md") else notes_mutations).append(call["id"])
                     if decision is None:
                         decision = body
             if turn == len(rows):
@@ -304,10 +301,17 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
         expected.update({cwd + "/context/" + path: text for path, text in views.items()})
         delivery, original_delivery = audit_original_strategy(decision, expected, cwd=cwd,
             manifest=manifest, original=original, views=views)
-        final = state["results"][rows[-1]["slot_id"]]["response"]["text"]
-        _require(isinstance(final, str) and final.count("<notes>") == final.count("</notes>") == 1
+        final = (session.get("normal_session_proof") or {}).get("native_output")
+        if not isinstance(final, str):
+            raise ContractError("normal author lacks its observed native output")
+        _require(final.count("<notes>") == final.count("</notes>") == 1
                  and re.fullmatch(r"\s*<notes>\s*\S[\s\S]*</notes>\s*", final), "normal final is not one complete notes block")
+        strategy_mutations, _, _ = _mutation_history(bodies[-1], cwd + "/context/harness/systemprompt.md")
+        notes_mutations, _, _ = _mutation_history(bodies[-1], cwd + "/output/answer.md")
         _require(notes_mutations, "normal editor did not write its final notes")
+        notes_match = re.search(r"<notes>(.*?)</notes>", final, re.S)
+        _require(notes_match is not None and notes_match.group(1).strip() == stages[stage_name].get("notes"),
+                 "native stage notes differ from its consumed output")
         notes_delivery = audit_delivery(bodies[-1], {cwd + "/output/answer.md": final}, after=notes_mutations[-1])
         harvested = _file(search, "rollouts/" + stage_name + "/harness/systemprompt.md", hashes).decode()
         contract._strategy(harvested.encode())
@@ -600,8 +604,9 @@ def _completion_witnesses(session: dict, intents: dict) -> list:
 
 
 def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str,
-                          response: dict, harvested_strategy: str | None = None, mutation_witnesses: list | None = None) -> dict:
-    """Same normal-final delivery rule for every pilot; terminal is not normal."""
+                          response: dict, native_output: object, saved_output: str | None = None,
+                          harvested_strategy: str | None = None, mutation_witnesses: list | None = None) -> dict:
+    """Bind the actual native file/stdout return; final chat wording is diagnostic."""
     manifest, original, _, configured = _prepared(prepared, label)
     _require(_system(request, configured, None) == cwd, "normal final changed native workspace")
     content = response.get("content")
@@ -617,9 +622,20 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
                  and not results[identity].get("is_error")]
     output = cwd + "/output/answer.md"
     notes = [identity for identity in mutations if calls[identity]["input"]["filePath"] == output]
-    proof: dict = {"kind": "phase3b-s2-normal-session-delivery-v1", "passed": True, "label": label,
+    if not isinstance(native_output, str) or not native_output.strip():
+        raise ContractError("native consumed output is empty or nontext")
+    _require(saved_output is None or isinstance(saved_output, str), "observed saved output is not text")
+    _require(bool(notes) == (saved_output is not None), "saved output and successful model mutation differ")
+    source = "saved_file" if saved_output is not None and saved_output.strip() else "native_stdout"
+    if source == "saved_file":
+        _require(normalized_output(native_output) == normalized_output(saved_output),
+                 "native return differs from its observed saved output")
+    proof: dict = {"kind": "phase3b-s2-normal-session-delivery-v2", "passed": True, "label": label,
         "request_sha256": digest(request), "provider_response_sha256": digest(response),
         "final_sha256": _sha(final.encode()), "final_normalized_sha256": _sha(normalized_output(final).encode()),
+        "native_output": native_output, "saved_output": saved_output, "native_output_source": source,
+        "native_output_normalized_sha256": _sha(normalized_output(native_output).encode()),
+        "final_matches_native_output": normalized_output(final) == normalized_output(native_output),
         "notes_delivery": None, "strategy_delivery": None,
         "harvested_strategy": harvested_strategy, "harvested_strategy_sha256": None,
         "provider_calls": 0}
@@ -628,15 +644,16 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
         _require(all(calls[identity]["input"]["filePath"] == output for identity in mutations),
                  "native selector mutated nonoutput evidence")
         from harness2.core.selection import _CHOICE
-        match = _CHOICE.search(final)
+        match = _CHOICE.search(native_output)
         candidates = {PurePosixPath(name).stem for name in original if name.startswith("candidates/")}
         _require(match is not None and match.group(1).strip() in candidates,
                  "native selector normal final has no valid candidate choice")
     else:
-        _require(final.count("<notes>") == final.count("</notes>") == 1
-                 and re.fullmatch(r"\s*<notes>\s*\S[\s\S]*</notes>\s*", final) is not None,
+        _require(native_output.count("<notes>") == native_output.count("</notes>") == 1
+                 and re.fullmatch(r"\s*<notes>\s*\S[\s\S]*</notes>\s*", native_output) is not None,
                  "normal author final is not one complete notes block")
-        _require(bool(notes), "normal author omitted its mandatory saved notes")
+        _require(bool(notes) and saved_output is not None and bool(saved_output.strip()),
+                 "normal author omitted its mandatory saved notes")
         strategy_path = cwd + "/context/harness/systemprompt.md"
         _require(all(calls[identity]["input"]["filePath"] in {output, strategy_path} for identity in mutations),
                  "native author mutated an unsupported artifact")
@@ -652,10 +669,10 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
             _require(_same_strategy(harvested_strategy, original["harness/systemprompt.md"]),
                      "normal author changed strategy without a successful mutation")
         proof["harvested_strategy_sha256"] = _sha(harvested_strategy.encode())
-    if notes:
+    if notes and saved_output is not None:
         proof["notes_mutation_binding"] = bind_mutation_completion(body, cwd=cwd,
-            target="output/answer.md", actual=final, witnesses=mutation_witnesses or [])
-        proof["notes_delivery"] = audit_delivery(body, {output: final}, after=notes[-1])
+            target="output/answer.md", actual=saved_output, witnesses=mutation_witnesses or [])
+        proof["notes_delivery"] = audit_delivery(body, {output: saved_output}, after=notes[-1])
     proof["read_consumption_policy"] = contract.READ_CONSUMPTION_POLICY_ID
     return proof
 
@@ -674,6 +691,10 @@ def verify_recorded_information(*, search: Path, label: str, session: dict, resu
     slots = session["result_slots"]
     witnesses = _completion_witnesses(session, intents)
     _require(bool(slots), "normal information replay has no provider requests")
+    consumed = session.get("normal_session_proof") or {}
+    if not session.get("terminal_note_used"):
+        _require(consumed.get("kind") == "phase3b-s2-normal-session-delivery-v2",
+                 "normal completion proof lacks its observed native output")
     information = normal = None
     cwd = None
     from .history import HistoryGuard
@@ -692,7 +713,8 @@ def verify_recorded_information(*, search: Path, label: str, session: dict, resu
         if response.get("stop_reason") == "end_turn" and not terminal:
             witness = (session.get("normal_session_proof") or {}).get("harvested_strategy")
             normal = verify_normal_session(request, prepared, cwd=cwd, label=label,
-                response=response, harvested_strategy=witness,
+                response=response, native_output=consumed.get("native_output"),
+                saved_output=consumed.get("saved_output"), harvested_strategy=witness,
                 mutation_witnesses=witnesses)
     _require(session.get("history_guard_audits") == guard.audits, "normal information signed history differs")
     _require(information is not None and session.get("information_proof") == information,

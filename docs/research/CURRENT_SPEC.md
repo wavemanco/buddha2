@@ -4,7 +4,7 @@ The one further authorized comparison is **closed incomplete** after **513 calls
 
 The earlier first-pair snapshot's two primary/three assessment scores and seven diagnostic read audits remain exploratory historical evidence. There is no completed four-prompt comparison or adaptation-gain claim. One zero-call saved-report replay reproduced all eight final reports; both passive Inspect exports and exact-owner cleanup completed. Current known lineage is 2,667 attempts/$73.731299 plus $22.88 old held liability ($96.611299 maximum exposure).
 
-The [accepted-kit receipt](../../evidence/phase3b-seq2-v1/read-audit-r2-offline-acceptance.json) remains unchanged. No source repair or paid repeat is authorized by this outcome. A minimal correct artifact-binding proposal and saved-only replay can precede a later continuation decision.
+The user separately authorized the durable artifact-binding correction and saved-only tests. It now binds the native engine's actual returned output to its saved artifact, write witness and strategy; final-chat prose mismatch is diagnostic. See the [audit correction](../ENGINEERING_AUDIT.md#durable-native-artifact-binding-correction) and [safe correction receipt](../../evidence/phase3b-seq2-v1/artifact-binding-offline-fix-v1.json). The 145-method offline verification and independent review passed. Earlier readiness no longer applies to proof v2/new source identity. No fresh live kit, grant or paid continuation is supplied; the accepted kit and stopped R2 records remain unchanged.
 
 ## Preserved preceding status
 

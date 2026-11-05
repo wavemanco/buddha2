@@ -54,9 +54,8 @@ ARMS = ("fixed", "adaptive")
 class ReadinessProposer(CompatibleProposer):
     """Observe known unfinished sessions before native fallback/probe scheduling."""
 
-    def __init__(self, *, observe: bool, known_stop, can_stop, final_response=None, **kwargs):
+    def __init__(self, *, observe: bool, known_stop, can_stop, **kwargs):
         self.observe, self.known_stop, self.can_stop = observe, known_stop, can_stop
-        self.final_response = final_response
         super().__init__(**kwargs)
 
     def call(self, mission, context_dir=None, label="", **kwargs):
@@ -76,13 +75,12 @@ class ReadinessProposer(CompatibleProposer):
                 ):
                     self.known_stop("unfinished_editor_session")
                 elif session.get("status") == "valid":
-                    final = self.final_response(session) if self.final_response else reply.text
+                    final = reply.text
                     if not label.startswith("select.") and (
                         not isinstance(final, str)
                         or not re.fullmatch(r"\s*<notes>\s*\S[\s\S]*</notes>\s*", final)
                         or final.count("<notes>") != 1
                         or final.count("</notes>") != 1
-                        or final.strip() != reply.text.strip()
                     ):
                         self.known_stop("unfinished_editor_session")
             return reply
@@ -1198,12 +1196,6 @@ def _run_stage(
                         observe=stage == "readiness",
                         known_stop=known_stop,
                         can_stop=lambda: ledger.state()["status"] == "ready" and not stop.is_set(),
-                        final_response=lambda session: (
-                            ledger.state()["results"]
-                            .get((session.get("result_slots") or [None])[-1], {})
-                            .get("response", {})
-                            .get("text")
-                        ),
                         pilot=pilot,
                         study_sha256=study["study_sha256"],
                         dispatch=dispatch_for(pilot, arm),
