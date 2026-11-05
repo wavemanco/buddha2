@@ -46,10 +46,16 @@ class ReadAuditReportingCases(unittest.TestCase):
         row = report._historical_resources(study, state)
         self.assertEqual(row["prior_real_phase3a_spent_micro_usd"], 46044365)
         self.assertEqual(row["prior_closed_phase3b_attempt"]["known_spent_micro_usd"], 12528747)
-        self.assertEqual(row["lineage_spent_micro_usd"], 59573112)
+        self.assertEqual(row["prior_real_phase3a_provider_calls"], 1997)
+        self.assertEqual(row["prior_closed_phase3b_repeat"]["known_spent_micro_usd"], 1063902)
+        self.assertEqual(row["prior_closed_phase3b_repeat"]["provider_calls"], 35)
+        self.assertEqual(row["prior_closed_phase3b_attempt"]["provider_calls"], 122)
+        self.assertNotEqual(row["prior_closed_phase3b_attempt"]["study_sha256"],
+                            row["prior_closed_phase3b_repeat"]["study_sha256"])
+        self.assertEqual(row["lineage_spent_micro_usd"], 60637014)
         self.assertEqual(row["lineage_reserved_micro_usd"], 22880000)
-        self.assertEqual(row["lineage_max_exposure_micro_usd"], 82453112)
-        self.assertEqual(row["lineage_provider_calls"], 2129)
+        self.assertEqual(row["lineage_max_exposure_micro_usd"], 83517014)
+        self.assertEqual(row["lineage_provider_calls"], 2164)
         self.assertFalse(row["historical_unknown_released"])
 
 

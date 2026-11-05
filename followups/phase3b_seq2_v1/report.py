@@ -25,14 +25,16 @@ def _require(value: bool, message: str) -> None:
 def _historical_resources(study: dict, state: dict) -> dict:
     prior = study["prior_live_episode"]
     closed = study.get("prior_closed_attempt", {})
+    repeat = study.get("prior_closed_repeat", {})
     known, reserved = prior["known_spent_micro_usd"], prior["reserved_micro_usd"]
-    closed_known = closed.get("known_spent_micro_usd", 0)
-    closed_reserved = closed.get("reserved_micro_usd", 0)
+    closed_known = closed.get("known_spent_micro_usd", 0) + repeat.get("known_spent_micro_usd", 0)
+    closed_reserved = closed.get("reserved_micro_usd", 0) + repeat.get("reserved_micro_usd", 0)
     fixture = state["fixture"]
     total_known = None if fixture else known + closed_known + state["spent_micro_usd"]
     total_reserved = None if fixture else reserved + closed_reserved + state["reserved_micro_usd"]
     total_calls = None if fixture else (
-        prior["provider_calls"] + closed.get("provider_calls", 0) + state["provider_calls"]
+        prior["provider_calls"] + closed.get("provider_calls", 0)
+        + repeat.get("provider_calls", 0) + state["provider_calls"]
     )
     exposure = None if fixture else (
         known + closed_known + reserved + closed_reserved
@@ -45,11 +47,12 @@ def _historical_resources(study: dict, state: dict) -> dict:
         "prior_real_phase3a_known_responses": prior["known_requests"],
         "prior_real_phase3a_unknown_responses": prior["unknown_requests"],
         "prior_closed_phase3b_attempt": copy.deepcopy(closed),
+        "prior_closed_phase3b_repeat": copy.deepcopy(repeat),
         "lineage_spent_micro_usd": total_known,
         "lineage_reserved_micro_usd": total_reserved,
         "lineage_max_exposure_micro_usd": exposure,
         "lineage_provider_calls": total_calls,
-        "legacy_cumulative_field_scope": "Phase3A plus closed Phase3B attempt plus this run",
+        "legacy_cumulative_field_scope": "Phase3A plus separately identified closed Phase3B attempts plus this run",
         "cumulative_real_phase3a_spent_micro_usd": total_known,
         "cumulative_real_phase3a_reserved_micro_usd": total_reserved,
         "cumulative_real_phase3a_max_exposure_micro_usd": exposure,
@@ -728,6 +731,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             "fixed_candidate_order",
             "prior_live_episode",
             "prior_closed_attempt",
+            "prior_closed_repeat",
             "read_consumption_policy",
             "rank_io_profile",
         )

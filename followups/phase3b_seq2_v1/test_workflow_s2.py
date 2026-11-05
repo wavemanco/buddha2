@@ -37,6 +37,7 @@ def minimal_study() -> dict:
             "unknown_requests": 2,
         },
         "prior_closed_attempt": copy.deepcopy(support.PRIOR_CLOSED_ATTEMPT),
+        "prior_closed_repeat": copy.deepcopy(support.PRIOR_CLOSED_REPEAT),
         "read_consumption_policy": support.READ_CONSUMPTION_POLICY,
     }
     study["slots"], study["assessment_plan"] = workflow._plan_slots(study)
@@ -130,9 +131,9 @@ class WorklistCases(unittest.TestCase):
             "editor_payload_bytes",
         ):
             self.assertEqual(study["policy"][key], frozen[key])
-        self.assertEqual(study["policy"]["phase_micro_usd"] + 12528747, frozen["global_micro_usd"])
-        self.assertEqual(study["policy"]["first_micro_usd"] + 12528747, frozen["first_micro_usd"])
-        self.assertEqual(accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] + 122, 2344)
+        self.assertEqual(study["policy"]["phase_micro_usd"] + 12528747 + 1063902, frozen["global_micro_usd"])
+        self.assertEqual(study["policy"]["first_micro_usd"] + 12528747 + 1063902, frozen["first_micro_usd"])
+        self.assertEqual(accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] + 122 + 35, 2344)
         self.assertEqual(len(study["slots"]), 2344)
         self.assertEqual(len(study["assessment_plan"]), 12)
         for pilot in accounting.PAIRS:
@@ -295,13 +296,16 @@ class WorklistCases(unittest.TestCase):
         state = workflow._empty_state(minimal_study(), True)
         meta = {"pair": "p3b-01", "cell": "p3b-01:adaptive", "role": "native_selector"}
         reserve = ledger_core._reservation("native_selector")
-        state["attempts"] = 2221
+        state["attempts"] = accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] - 1
         accounting._admit(state, meta, reserve)
         state["attempts"] += 1
         with self.assertRaises(accounting.PhaseBudgetStop):
             accounting._admit(state, meta, reserve)
-        self.assertEqual(1997 + support.PRIOR_CLOSED_ATTEMPT["provider_calls"] + 2222, 4341)
+        self.assertEqual(1997 + support.PRIOR_CLOSED_ATTEMPT["provider_calls"]
+                         + support.PRIOR_CLOSED_REPEAT["provider_calls"]
+                         + accounting.WORKLIST_PROFILE["maximum_admitted_attempts"], 4341)
         self.assertEqual(46044365 + 22880000 + support.PRIOR_CLOSED_ATTEMPT["known_spent_micro_usd"]
+                         + support.PRIOR_CLOSED_REPEAT["known_spent_micro_usd"]
                          + accounting.POLICY["phase_micro_usd"], 248924365)
 
 

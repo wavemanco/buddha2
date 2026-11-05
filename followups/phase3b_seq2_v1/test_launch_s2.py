@@ -147,10 +147,15 @@ class LaunchBoundaryTests(unittest.TestCase):
     def test_authority_is_the_exact_whole_block_with_no_old_hold_release(self):
         value = validate_authority()
         self.assertEqual(value, read(AUTHORITY))
-        self.assertEqual(value["new_cap_micro_usd"], 167471253)
-        self.assertEqual(value["first_cap_micro_usd"], 42471253)
-        self.assertEqual(value["historical_known_micro_usd"], 58573112)
-        self.assertEqual(value["new_max_attempts"], 2222)
+        self.assertEqual(value["new_cap_micro_usd"], 166407351)
+        self.assertEqual(value["first_cap_micro_usd"], 41407351)
+        self.assertEqual(value["historical_known_micro_usd"], 59637014)
+        self.assertEqual(value["new_max_attempts"], 2187)
+        self.assertEqual(value["historical_attempts"], 2154)
+        self.assertEqual(value["closed_parent_attempts"], 122)
+        self.assertEqual(value["closed_repeat_attempts"], 35)
+        self.assertEqual(value["closed_repeat_spent_micro_usd"], 1063902)
+        self.assertEqual(value["closed_repeat_study"], support.PRIOR_CLOSED_REPEAT["study_sha256"])
         self.assertEqual(value["cumulative_max_exposure_micro_usd"], 248924365)
         self.assertFalse(value["historical_liability_release_authorized"])
         self.assertTrue(value["calls_require_offline_gate_and_fresh_masked_keys"])
@@ -162,16 +167,19 @@ class LaunchBoundaryTests(unittest.TestCase):
             directory = Path(temporary)
             closed = directory / "live-study.json"
             closed.write_bytes(b'{"closed":true}\n')
+            repeat = directory / "live-study-read-diagnostic-r1.json"
+            repeat.write_bytes(b'{"closed-repeat":true}\n')
             checked = {key: char * 64 for key, char in zip(launch._BINDINGS, "abcdef", strict=True)}
             study = checked["study_sha256"]
             checked.update(mode="provider", fixture=False, run=str(support.NATIVE / study / "live"),
                            journal=str(launch.accounting.canonical_journal(study, False)))
             with patch.object(launch, "BASE", directory):
                 record = launch._live_study_claim(checked, publish=True)
-                self.assertEqual(record["cap_micro_usd"], 167471253)
-                self.assertEqual(record["first_cap_micro_usd"], 42471253)
+                self.assertEqual(record["cap_micro_usd"], 166407351)
+                self.assertEqual(record["first_cap_micro_usd"], 41407351)
                 self.assertEqual(closed.read_bytes(), b'{"closed":true}\n')
-                self.assertTrue((directory / "live-study-read-diagnostic-r1.json").is_file())
+                self.assertEqual(repeat.read_bytes(), b'{"closed-repeat":true}\n')
+                self.assertTrue((directory / "live-study-read-diagnostic-r2.json").is_file())
                 self.assertEqual(launch._live_study_claim(checked), record)
                 checked.update(study_sha256="f" * 64, run=str(support.NATIVE / ("f" * 64) / "live"),
                                journal=str(launch.accounting.canonical_journal("f" * 64, False)))
@@ -183,7 +191,13 @@ class LaunchBoundaryTests(unittest.TestCase):
         for change in ({"new_cap_micro_usd": 180000000}, {"first_cap_micro_usd": 55000000},
                        {"new_max_attempts": 2344}, {"historical_known_micro_usd": 46044365},
                        {"historical_reserved_micro_usd": 0}, {"closed_parent_reserved_micro_usd": 1},
-                       {"authorized_repeat": False}, {"closed_parent_study": "f" * 64}):
+                       {"authorized_repeat": False}, {"closed_parent_study": "f" * 64},
+                       {"new_cap_micro_usd": 167471253}, {"first_cap_micro_usd": 42471253},
+                       {"new_max_attempts": 2222}, {"historical_known_micro_usd": 58573112},
+                       {"historical_attempts": 2119}, {"closed_repeat_spent_micro_usd": 0},
+                       {"closed_repeat_attempts": 0}, {"closed_repeat_reserved_micro_usd": 1},
+                       {"closed_repeat_study": "f" * 64},
+                       {"closed_repeat_summary_file_sha256": "0" * 64}):
             with self.subTest(change=change), patch.object(support, "read", return_value=valid | change):
                 with self.assertRaises(ContractError):
                     validate_authority()

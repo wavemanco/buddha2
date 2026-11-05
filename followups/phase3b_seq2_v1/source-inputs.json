@@ -4,7 +4,7 @@
     "configs/phase3b-development.json",
     "evidence/phase3b-seq2-v1/provider-documentation.json",
     "evidence/phase3b-seq2-v1/public-billing-review-v1.json",
-    "evidence/phase3b-seq2-v1/read-audit-r1-authorization.json",
+    "evidence/phase3b-seq2-v1/read-audit-r2-authorization.json",
     "followups/inspect_visibility_i1/__init__.py",
     "followups/inspect_visibility_i1/importer.py",
     "followups/inspect_visibility_i1/paths.py",

@@ -1,4 +1,10 @@
-# Current status — Phase 3B diagnostic-read attempt closed incomplete — 4 November 2026
+# Current status — one further Phase 3B comparison accepted — 4 November 2026
+
+The user explicitly approved full preparation and offline acceptance, followed by one further unchanged four-prompt Phase 3B comparison and closure. Remaining ceilings are $166.407351 total, $41.407351 included first checkpoint and 2,187 requests; cumulative ceilings remain $248.924365 and 4,341 attempts. Both prior attempts and their costs/held liability remain unchanged. This later approval covers one further comparison.
+
+All six current component groups passed 122 unique pinned-H1 tests with zero failures, errors or skips. Independent review, the actual runtime gate and the bounded live grant also passed with no provider calls or real credentials. The [accepted-kit receipt](../../evidence/phase3b-seq2-v1/read-audit-r2-offline-acceptance.json) binds current study 0e55a3316b31f093b10d6c6f1ac7e4c72087d716d081184cdff02a2844eaf08b and canonical source 0c8214e8d11d90ca50c3955a59ed9fb6c4650d43365e8d6e3099211e576795bc/163 inputs. Fresh masked key entry and the existing launcher come next; no new paid calls have started.
+
+## Preserved preceding status
 
 The authorized fresh diagnostic-read comparison is **closed incomplete** after **35 provider calls/$1.063902**, with zero new reserved liability or durable unknown results and zero benchmark scores. It stopped during the first prompt's DOM1 authoring session, before a completed branch, native selection, fixed-arm comparison or assessment. Read the [diagnostic-read attempt report](../phases/phase-3b/PHASE3B_READ_AUDIT_LIVE_ATTEMPT_REPORT.md).
 

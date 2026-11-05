@@ -1,0 +1,99 @@
+{
+  "authority": {
+    "amendment_id": "phase3b-read-audit-r2",
+    "cumulative_max_attempts": 4341,
+    "cumulative_max_exposure_micro_usd": 248924365,
+    "historical_attempts": 2154,
+    "historical_known_micro_usd": 59637014,
+    "historical_reserved_micro_usd": 22880000,
+    "one_further_comparison_and_closure_only": true,
+    "raw_sha256": "7244c7626ae4a965e93b8d2140daf344054a472aed2489a353ef25226d948b15"
+  },
+  "canonical_source_before_after_equal": true,
+  "ci_run": false,
+  "component_tests": {
+    "errors": 0,
+    "failures": 0,
+    "groups": [
+      {
+        "check": "financial",
+        "raw_sha256": "ccb7d5d0dcb5f7ee75772c4422e3f15349f4422e3198a1fed7ce282b363d0fdb",
+        "seal_sha256": "899cd67a5b2a8303bc7f6782b8e3ffdc682c49c1bb9190f11a838a514248dc46",
+        "tests_run": 22
+      },
+      {
+        "check": "transport",
+        "raw_sha256": "646ef8ca09a9c98e7ef924fa663b32fa95fe47c57094019d32482479dd4ec360",
+        "seal_sha256": "ac11df025dbf210f06536be84a0f71396eb03e93572113c81441d37fd3b1234f",
+        "tests_run": 21
+      },
+      {
+        "check": "message_history",
+        "raw_sha256": "5181c553e071f1b823c8d20b8d33c4b66674aef1a2d4f46ad509bd72023a32cc",
+        "seal_sha256": "78224cbc574f11d7affb1f53c398b4fbd755aa2bb594ec5f8b698682f44e92bd",
+        "tests_run": 23
+      },
+      {
+        "check": "strategy",
+        "raw_sha256": "9e31f606f7c8cb839db71a348911be58aa56a421b25d63eb1d2118766c375cf3",
+        "seal_sha256": "0760725a31f6c6bee54a17c51ca7e27534d05c39c7c57f5197cca09425428fa6",
+        "tests_run": 8
+      },
+      {
+        "check": "native_contract",
+        "raw_sha256": "85f0ad2b4365d288b332a8e9ddf0c9249bc61639080a8fdc27db6467d00dc97e",
+        "seal_sha256": "b2a2b725937694b4748f486a167c8ee87ec87148f2a99cc63e4adaa6accfbac1",
+        "tests_run": 15
+      },
+      {
+        "check": "source_coverage",
+        "raw_sha256": "f8da735707625533e933acb591fafa06c62c0539a20087e43b91997d83ad3381",
+        "seal_sha256": "d854afd0276669c434f1a6430048e1c0c7d81c5c537bb96ef20d5ef09a2cfe75",
+        "tests_run": 33
+      }
+    ],
+    "skipped": 0,
+    "unique_tests": 122
+  },
+  "effective_source_inputs": 163,
+  "fresh_masked_keys_next": true,
+  "independent_review": {
+    "passed": true,
+    "raw_sha256": "727c4855f24c04a9a1a77281b0dd63ab8c542ec5bd8ee335bbf355ef96c9bab1",
+    "reviewer": "/root/am1_acceptance",
+    "seal_sha256": "3b917d6a2b2b5e7eeaf0bc8a34ba4467d10f1f16597f648f5aa3cc6a6cc6376f"
+  },
+  "kind": "phase3b-read-audit-r2-offline-acceptance-v1",
+  "launcher_sha256": "131ba785a037039da1941f85f1d3c43ef4fbf4423f369ebb4d6a2254c92470b0",
+  "live_grant": {
+    "first_cap_micro_usd": 41407351,
+    "new_cap_micro_usd": 166407351,
+    "new_max_attempts": 2187,
+    "raw_sha256": "340a29beb5fd03007b0d36196fdb639e0a8c4093297c176985865daae547730a",
+    "sha256": "f5fe5721e66c4f24fd2e010c53d1807b8544a3c139ccc4f85bb729ffaa283b53"
+  },
+  "old_results_authorities_and_claims_rewritten": false,
+  "owned_component_actor_removed_and_absent": true,
+  "paid_execution_started": false,
+  "passed": true,
+  "policy_sha256": "3c960b10a0b59810da3b249ed76ecab2630d9be4d4b6cabbaa87899e45004063",
+  "provider_calls": 0,
+  "public_h1_suite_rerun": false,
+  "public_projection": "Only the two existing __main__.py documentation-path literals differ from canonical.",
+  "public_source_sha256": "8c2ca96ca81e839ad669e4059456e939a1e55b2d9c947b9b2d03a7b6f84173a7",
+  "readiness_manifest": {
+    "raw_sha256": "26ad6d4014f2db3d6d2ee97a3105553047609509c9ca77a97db3e5e3ebc851af",
+    "seal_sha256": "18789e307e3dfb70fe64e821beeee046f12b802e923555693db25fb59d2de430"
+  },
+  "real_credentials_used": false,
+  "runtime_gate": {
+    "passed": true,
+    "provider_calls": 0,
+    "raw_sha256": "195637aaa6e4ca82d619c56daf13efea9424630ca226398076d091d1e2e97c7f",
+    "real_credentials_used": false
+  },
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "008524dea17a8d3759c0c7fd4c6264134ce7f89e346a1a9196864f6519c2957c",
+  "source_sha256": "0c8214e8d11d90ca50c3955a59ed9fb6c4650d43365e8d6e3099211e576795bc",
+  "study_sha256": "0e55a3316b31f093b10d6c6f1ac7e4c72087d716d081184cdff02a2844eaf08b"
+}
