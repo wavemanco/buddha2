@@ -38,6 +38,7 @@ def minimal_study() -> dict:
         },
         "prior_closed_attempt": copy.deepcopy(support.PRIOR_CLOSED_ATTEMPT),
         "prior_closed_repeat": copy.deepcopy(support.PRIOR_CLOSED_REPEAT),
+        "prior_closed_artifact_attempt": copy.deepcopy(support.PRIOR_CLOSED_ARTIFACT_ATTEMPT),
         "read_consumption_policy": support.READ_CONSUMPTION_POLICY,
     }
     study["slots"], study["assessment_plan"] = workflow._plan_slots(study)
@@ -131,9 +132,9 @@ class WorklistCases(unittest.TestCase):
             "editor_payload_bytes",
         ):
             self.assertEqual(study["policy"][key], frozen[key])
-        self.assertEqual(study["policy"]["phase_micro_usd"] + 12528747 + 1063902, frozen["global_micro_usd"])
-        self.assertEqual(study["policy"]["first_micro_usd"] + 12528747 + 1063902, frozen["first_micro_usd"])
-        self.assertEqual(accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] + 122 + 35, 2344)
+        self.assertEqual(study["policy"]["phase_micro_usd"] + 12528747 + 1063902 + 14094285, frozen["global_micro_usd"])
+        self.assertEqual(study["policy"]["first_micro_usd"] + 12528747 + 1063902 + 9435450, frozen["first_micro_usd"])
+        self.assertEqual(accounting.WORKLIST_PROFILE["maximum_admitted_attempts"] + 122 + 35 + 513, 2344)
         self.assertEqual(len(study["slots"]), 2344)
         self.assertEqual(len(study["assessment_plan"]), 12)
         for pilot in accounting.PAIRS:
@@ -303,10 +304,16 @@ class WorklistCases(unittest.TestCase):
             accounting._admit(state, meta, reserve)
         self.assertEqual(1997 + support.PRIOR_CLOSED_ATTEMPT["provider_calls"]
                          + support.PRIOR_CLOSED_REPEAT["provider_calls"]
+                         + support.PRIOR_CLOSED_ARTIFACT_ATTEMPT["provider_calls"]
                          + accounting.WORKLIST_PROFILE["maximum_admitted_attempts"], 4341)
         self.assertEqual(46044365 + 22880000 + support.PRIOR_CLOSED_ATTEMPT["known_spent_micro_usd"]
                          + support.PRIOR_CLOSED_REPEAT["known_spent_micro_usd"]
+                         + support.PRIOR_CLOSED_ARTIFACT_ATTEMPT["known_spent_micro_usd"]
                          + accounting.POLICY["phase_micro_usd"], 248924365)
+        self.assertEqual(support.PRIOR_CLOSED_ATTEMPT["known_spent_micro_usd"]
+                         + support.PRIOR_CLOSED_REPEAT["known_spent_micro_usd"]
+                         + support.PRIOR_CLOSED_ARTIFACT_ATTEMPT["first_pair_spent_micro_usd"]
+                         + accounting.POLICY["first_micro_usd"], 55000000)
 
 
 class AnalysisCases(unittest.TestCase):

@@ -28,6 +28,7 @@ from .support import (
     DECLARED_DEFINITION_SHA256,
     LAUNCHER,
     NATIVE,
+    PRIOR_CLOSED_ARTIFACT_ATTEMPT,
     PRIOR_CLOSED_ATTEMPT,
     PRIOR_CLOSED_REPEAT,
     READ_CONSUMPTION_POLICY,
@@ -340,6 +341,7 @@ def prepare(
         },
         "prior_closed_attempt": copy.deepcopy(PRIOR_CLOSED_ATTEMPT),
         "prior_closed_repeat": copy.deepcopy(PRIOR_CLOSED_REPEAT),
+        "prior_closed_artifact_attempt": copy.deepcopy(PRIOR_CLOSED_ARTIFACT_ATTEMPT),
         "readiness_is_primary": "p3b-01:adaptive",
         "readiness_max_micro_usd": 35000000,
         "potential_slot_count": accounting.WORKLIST_PROFILE["potential_request_slots"],
@@ -411,6 +413,7 @@ def load_study(study_path: Path) -> dict:
         }
         and study["prior_closed_attempt"] == PRIOR_CLOSED_ATTEMPT
         and study["prior_closed_repeat"] == PRIOR_CLOSED_REPEAT
+        and study["prior_closed_artifact_attempt"] == PRIOR_CLOSED_ARTIFACT_ATTEMPT
         and study["transport_deadline_policy"] == asdict(DEADLINE_POLICY)
         and study["readiness_is_primary"] == "p3b-01:adaptive"
         and study["readiness_max_micro_usd"] == 35000000
@@ -450,7 +453,7 @@ def make_grant(study_path: Path, fixture: bool) -> dict:
     )
     authority = {
         "study_sha256": study["study_sha256"],
-        "authorization_id": "phase3b-read-audit-r2-user-approval",
+        "authorization_id": "phase3b-continuation-user-approval",
         "authorized": not fixture,
         "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
         "canary_cap_micro_usd": accounting.POLICY["first_micro_usd"],

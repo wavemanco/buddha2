@@ -147,15 +147,20 @@ class LaunchBoundaryTests(unittest.TestCase):
     def test_authority_is_the_exact_whole_block_with_no_old_hold_release(self):
         value = validate_authority()
         self.assertEqual(value, read(AUTHORITY))
-        self.assertEqual(value["new_cap_micro_usd"], 166407351)
-        self.assertEqual(value["first_cap_micro_usd"], 41407351)
-        self.assertEqual(value["historical_known_micro_usd"], 59637014)
-        self.assertEqual(value["new_max_attempts"], 2187)
-        self.assertEqual(value["historical_attempts"], 2154)
+        self.assertEqual(value["new_cap_micro_usd"], 152313066)
+        self.assertEqual(value["first_cap_micro_usd"], 31971901)
+        self.assertEqual(value["historical_known_micro_usd"], 73731299)
+        self.assertEqual(value["new_max_attempts"], 1674)
+        self.assertEqual(value["historical_attempts"], 2667)
         self.assertEqual(value["closed_parent_attempts"], 122)
         self.assertEqual(value["closed_repeat_attempts"], 35)
         self.assertEqual(value["closed_repeat_spent_micro_usd"], 1063902)
         self.assertEqual(value["closed_repeat_study"], support.PRIOR_CLOSED_REPEAT["study_sha256"])
+        self.assertEqual(value["closed_artifact_attempts"], 513)
+        self.assertEqual(value["closed_artifact_attempt_spent_micro_usd"], 14094285)
+        self.assertEqual(value["closed_artifact_attempt_first_pair_spent_micro_usd"], 9435450)
+        self.assertEqual(value["closed_artifact_attempt_study"],
+                         support.PRIOR_CLOSED_ARTIFACT_ATTEMPT["study_sha256"])
         self.assertEqual(value["cumulative_max_exposure_micro_usd"], 248924365)
         self.assertFalse(value["historical_liability_release_authorized"])
         self.assertTrue(value["calls_require_offline_gate_and_fresh_masked_keys"])
@@ -169,17 +174,20 @@ class LaunchBoundaryTests(unittest.TestCase):
             closed.write_bytes(b'{"closed":true}\n')
             repeat = directory / "live-study-read-diagnostic-r1.json"
             repeat.write_bytes(b'{"closed-repeat":true}\n')
+            artifact = directory / "live-study-read-diagnostic-r2.json"
+            artifact.write_bytes(b'{"closed-artifact-attempt":true}\n')
             checked = {key: char * 64 for key, char in zip(launch._BINDINGS, "abcdef", strict=True)}
             study = checked["study_sha256"]
             checked.update(mode="provider", fixture=False, run=str(support.NATIVE / study / "live"),
                            journal=str(launch.accounting.canonical_journal(study, False)))
             with patch.object(launch, "BASE", directory):
                 record = launch._live_study_claim(checked, publish=True)
-                self.assertEqual(record["cap_micro_usd"], 166407351)
-                self.assertEqual(record["first_cap_micro_usd"], 41407351)
+                self.assertEqual(record["cap_micro_usd"], 152313066)
+                self.assertEqual(record["first_cap_micro_usd"], 31971901)
                 self.assertEqual(closed.read_bytes(), b'{"closed":true}\n')
                 self.assertEqual(repeat.read_bytes(), b'{"closed-repeat":true}\n')
-                self.assertTrue((directory / "live-study-read-diagnostic-r2.json").is_file())
+                self.assertEqual(artifact.read_bytes(), b'{"closed-artifact-attempt":true}\n')
+                self.assertTrue((directory / "live-study-continuation-v1.json").is_file())
                 self.assertEqual(launch._live_study_claim(checked), record)
                 checked.update(study_sha256="f" * 64, run=str(support.NATIVE / ("f" * 64) / "live"),
                                journal=str(launch.accounting.canonical_journal("f" * 64, False)))
@@ -197,7 +205,18 @@ class LaunchBoundaryTests(unittest.TestCase):
                        {"historical_attempts": 2119}, {"closed_repeat_spent_micro_usd": 0},
                        {"closed_repeat_attempts": 0}, {"closed_repeat_reserved_micro_usd": 1},
                        {"closed_repeat_study": "f" * 64},
-                       {"closed_repeat_summary_file_sha256": "0" * 64}):
+                       {"closed_repeat_summary_file_sha256": "0" * 64},
+                       {"new_cap_micro_usd": 166407351}, {"first_cap_micro_usd": 41407351},
+                       {"new_max_attempts": 2187}, {"historical_known_micro_usd": 59637014},
+                       {"historical_attempts": 2154}, {"closed_artifact_attempt_spent_micro_usd": 0},
+                       {"closed_artifact_attempts": 0}, {"closed_artifact_attempt_reserved_micro_usd": 1},
+                       {"closed_artifact_attempt_first_pair_spent_micro_usd": 14094285},
+                       {"closed_artifact_attempt_study": "f" * 64},
+                       {"closed_artifact_attempt_summary_file_sha256": "0" * 64},
+                       {"closed_artifact_attempt_first_pair_summary_file_sha256": "0" * 64},
+                       {"continuation_proposal_file_sha256": "0" * 64},
+                       {"rollover_only_no_additional_funds": False},
+                       {"subsequent_paid_repetition_authorized": True}):
             with self.subTest(change=change), patch.object(support, "read", return_value=valid | change):
                 with self.assertRaises(ContractError):
                     validate_authority()

@@ -1,0 +1,147 @@
+{
+  "authority": {
+    "cumulative_max_attempts": 4341,
+    "cumulative_max_exposure_micro_usd": 248924365,
+    "first_cap_micro_usd": 31971901,
+    "historical_attempts": 2667,
+    "historical_known_micro_usd": 73731299,
+    "historical_reserved_micro_usd": 22880000,
+    "new_cap_micro_usd": 152313066,
+    "new_max_attempts": 1674,
+    "no_additional_funds": true,
+    "potential_slots": 2344,
+    "raw_sha256": "6c61ee2a2301c12989f74fdd1fdea61995394bc3228e57316ab0dbf153df8cfb"
+  },
+  "ci_at_receipt_creation": "not yet run for the forthcoming publication commit",
+  "cleanup": {
+    "all_created_offline_owners_removed_and_absence_verified": true,
+    "independent_four_offline_owners_raw_sha256": "bab451088020c48ffc45a2f37c39ff0708869b583c94acdce2e206e4f794410a",
+    "keyless_runtime_owners_raw_sha256": "7f9a3c3e17652bf58b7cd1fdf028b180987632b4994a0f4200cc8ed5cd12996f"
+  },
+  "component_tests": {
+    "actual_windows_methods": 2,
+    "errors": 0,
+    "failures": 0,
+    "groups": [
+      {
+        "check": "financial",
+        "raw_sha256": "07a1350616be2d7fb7a002b685ff196a450339cfd0254fd2e0a5601f4c0a5ed9",
+        "seal_sha256": "270f75e2f0ed5a35d0b745a21eb3aebefa29e7dd683c7cb2040d5e870f16b228",
+        "tests": 22
+      },
+      {
+        "check": "message_history",
+        "raw_sha256": "9fdf503a8bce131803416c60a80e9cec485f16df8a98560ae730e5669b683b7e",
+        "seal_sha256": "aaccfe0853ea9b8e194db7882b2b04b30c85feee7058f57bf0f56f3fae934b0c",
+        "tests": 31
+      },
+      {
+        "check": "native_contract",
+        "raw_sha256": "ea3490e6e5e593a96dbeb796b1431caf1bdf747f4641bdde7b5964b0f80120fc",
+        "seal_sha256": "8af45280824c055122c870794b9e74f8f811a25ac5d220f33d77494bb9d16883",
+        "tests": 16
+      },
+      {
+        "check": "source_coverage",
+        "raw_sha256": "d061d3e21a08774e9e4eebd217fe47f675ea5854dd87d5606f4623ae619a9959",
+        "seal_sha256": "23d982e172b4c72b55e1bb9f0175e88c5304d413c21976e3e8e64d2eff258c71",
+        "tests": 33
+      },
+      {
+        "check": "strategy",
+        "raw_sha256": "e6aff2a5a67cd132f0f464d45cf8740932fe77d4163ea0176ae22691cb336ddb",
+        "seal_sha256": "b00d9fc3dd206acd1f023290f9a11de877ddb0a5cef6f2ca83e39033a3ec3e75",
+        "tests": 8
+      },
+      {
+        "check": "transport",
+        "raw_sha256": "3afb7cc7b712b52d02ce6d4910317096124f8603fa8bc137ced6eacda06d414a",
+        "seal_sha256": "acca027c52df0891c2dee48f4acde489f56c4c6da2274812aac09e4aeea988d6",
+        "tests": 21
+      }
+    ],
+    "skips": 0,
+    "targeted_corrected_budget_regression": {
+      "elapsed_seconds": 43.281,
+      "method_is_also_in_financial_group": true,
+      "passed": true
+    },
+    "total_unique_methods": 133,
+    "unique_linux_methods": 131
+  },
+  "created_at_utc": "2026-11-05T12:37:56.405601+00:00",
+  "effective_source_inputs": 163,
+  "fresh_masked_keys_next": true,
+  "host_bind_runtime_and_launcher": {
+    "actual_host_inspection_raw_sha256": "fbb0d3af24c9c6a3379b8fe9ec0cbe1296191a3ccc8a5760e1c433acf9c9a276",
+    "actual_windows_powershell_preflight_exit_code": 0,
+    "configuration_only": false,
+    "credential_access": false,
+    "host_preflight_raw_sha256": "7bf16c0f90a0892ac8d70b02c7a20df3137756120747cc0de81428c667c3dafe",
+    "live_mount_configuration_changed": false,
+    "network_for_keyless_checks": "none",
+    "provider_calls": 0,
+    "provider_mode_preflight_passed": true,
+    "provider_mode_preflight_raw_sha256": "3e89befec78f8aff78a056650e8c174b66d8d56fe40ca7b4e4d5247cb4083acd",
+    "real_host_bind_configuration_verified": true
+  },
+  "kind": "phase3b-continuation-offline-acceptance-v1",
+  "launcher_sha256": "131ba785a037039da1941f85f1d3c43ef4fbf4423f369ebb4d6a2254c92470b0",
+  "live_grant": {
+    "raw_sha256": "bbb30f1f675f6eceb18d46bd823d53038c52d94e6924aecfe5f267f85f4c1b3e",
+    "seal_sha256": "3aebd7c77a6f8eb8550f4f79f5f152eb5188c1c9f5f51a4592638c4f382d18bd"
+  },
+  "native_unit_fixture": {
+    "elapsed_seconds": 349.43571190396324,
+    "network": "none",
+    "only_named_safe_evidence_copied_back": true,
+    "receipt_raw_sha256": "ea3490e6e5e593a96dbeb796b1431caf1bdf747f4641bdde7b5964b0f80120fc",
+    "same_pinned_image_source_runtime_collector_and_assertions": true,
+    "source_before_after_equal": true,
+    "source_mount_read_only": true,
+    "temporary_results_storage": "512 MiB Docker tmpfs at /results"
+  },
+  "offline_readiness": {
+    "independent_review_sha256": "5425c9c945489b34ea23ada89d03492a328d68016f2850aa209b3a587fef5cec",
+    "manifest_file_sha256": "babc30ae3dd04b3f38719dd9a9253aeeeca20430a4466a421302af23e1be86f5",
+    "manifest_sha256": "35c95136e949219575aadefacca394e47fd4317e9a68beaa7152d18ca9cdd4c9",
+    "profile": "buddha2-offline-readiness-v2"
+  },
+  "paid_pilot_started": false,
+  "passed": true,
+  "policy_sha256": "90f260e596e1aa2b97c7d4626cbe78e596a41fabc162edb87167a862d2f08824",
+  "preservation": {
+    "historical_files_unchanged": 9,
+    "old_results_claims_authorities_or_reports_requalified": false,
+    "upstream_algorithms_models_settings_strategies_or_datasets_changed": false
+  },
+  "provider_calls": 0,
+  "public_projection": "Only the two existing __main__.py documentation-path literals differ. No public H1 suite is claimed.",
+  "public_source_sha256": "1d6e31c846593997e2a333c1d8450fcfbd481504a44b8769fd1d99ecfb4c2326",
+  "raw_provider_thinking_strategy_text_or_source_captures_published": false,
+  "real_credentials_used": false,
+  "retained_preparation_outcomes": [
+    {
+      "aggregate_collector": "Timed out after 1500 seconds; not a pass.",
+      "correction": "Only the three fixture sums were corrected to include the closed R2 total, first-prompt cost and requests. Original nominal limits stayed unchanged.",
+      "financial_individual_group": "22 methods, one failure from three stale envelope assertions; executable caps were correct.",
+      "native_group": "Stopped unfinished; no PASS claimed.",
+      "source_sha256": "8b8b2abee7650574527358aeb5f0e1194f87fa7f505c307f110671771fddaa54"
+    },
+    {
+      "host_shared_storage_native_group": "Stopped unfinished after observed p9_cli file-sharing waits; not qualified.",
+      "replacement": "Same 16 assertions completed using bounded temporary RAM-backed unit output; actual host-bind launch checks passed separately.",
+      "source_sha256": "19e03f2dfc8623e571574decde2859a73074e5b9a0c94626dab775525664dff1"
+    }
+  ],
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "5ad4484efe404a452889acb263c064e308b5acb87dae0d4fc1dece1e9bce5ff4",
+  "source_sha256": "19e03f2dfc8623e571574decde2859a73074e5b9a0c94626dab775525664dff1",
+  "study_sha256": "90e0562959a2ba5a03411a45aa86be5ed77b6f9115fe0791ee5811f91e94a838",
+  "supplemental_checks": {
+    "fresh_ruff_files": 8,
+    "mypy_bandit": "Prior successful checks retained for five production files; their bytes are unchanged. Not rerun after a test-only change.",
+    "static_receipt_raw_sha256": "64a0e5fede7789bdbd43672250f22973fa917fd391f2088829b74638d663684c",
+    "windows_receipt_raw_sha256": "4e08a4c04c75b3a38665b7cfc160b14dcb9109c55ff7a1f2b963535edb403ec7"
+  }
+}

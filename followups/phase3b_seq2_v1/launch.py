@@ -50,7 +50,7 @@ def _live_study_claim(checked: dict, *, publish: bool = False) -> dict:
         "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
         "first_cap_micro_usd": accounting.POLICY["first_micro_usd"],
         "readiness_included_micro_usd": accounting.POLICY["cell_micro_usd"]}
-    path = _completion_path(BASE / "live-study-read-diagnostic-r2.json")
+    path = _completion_path(BASE / "live-study-continuation-v1.json")
     if publish:
         write_once(path, record)
     elif path.exists():

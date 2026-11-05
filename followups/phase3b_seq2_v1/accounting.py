@@ -29,12 +29,12 @@ from .support import NATIVE, checked, read, runtime_guard, safe
 
 PREFIX = "phase3b-seq2-v1"
 POLICY = copy.deepcopy(core.POLICY)
-POLICY.update(id="phase3b-seq2-read-audit-r2-accounting-v1",
-              phase_micro_usd=166_407_351, first_micro_usd=41_407_351)
+POLICY.update(id="phase3b-seq2-continuation-accounting-v1",
+              phase_micro_usd=152_313_066, first_micro_usd=31_971_901)
 WORKLIST_PROFILE = {
-    "id": "phase3b-seq2-read-audit-r2-worklist-v1",
+    "id": "phase3b-seq2-continuation-worklist-v1",
     "potential_request_slots": 2344,
-    "maximum_admitted_attempts": 2187,
+    "maximum_admitted_attempts": 1674,
     "editor_stages_per_cell": 6,
     "shape_attempts_per_stage": 2,
     "editor_turns_per_conversation": 24,
