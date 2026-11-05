@@ -1,4 +1,10 @@
-# Current status - Phase 3B R2 closed incomplete - 4 November 2026
+# Current status - continuation proposed, not started - 5 November 2026
+
+The user's direction to proceed with planning has produced a [one fresh four-prompt repeat proposal](../phases/phase-3b/PHASE3B_CONTINUATION.md). This is a proposed repetition amendment, not execution authority or an acceptance promise. It uses the existing runner and corrected native-output proof v2; stock resume cannot cross the stopped ledger/source identity. Prior stopped outcomes and exploratory first-pair results remain separate and unchanged.
+
+The proposed reduced ceilings are $152.313066 aggregate, $31.971901 included first-pair and 1,674 new requests, within the unchanged $248.924365/4,341-attempt lineage maximum. Funding is already inside that envelope; the pending decision is one fresh repetition and changed acceptance scope. Only after explicit approval would metadata rollover, six current checks, independent review and runtime/launcher acceptance precede fresh keys. No preparation, study, grant or paid call is authorized by this planning step.
+
+## Prior closed outcome and offline correction
 
 The one further authorized comparison is **closed incomplete** after **513 calls/$14.094285**, with zero new reserves or durable unknown results. The first paired prompt completed; the second prompt's selector stopped on our artifact-contract mistake: saved output and final assistant text choose B but have different prose. Final closure globally holds all result rows (zero primary/assessment targets scored and zero final read audits). Read the [R2 attempt report](../phases/phase-3b/PHASE3B_READ_AUDIT_R2_LIVE_ATTEMPT_REPORT.md).
 

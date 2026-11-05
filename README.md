@@ -22,7 +22,9 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 ## Current evidence
 
-Status snapshot: **4 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
+Status snapshot: **5 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
+
+**Continuation is proposed, not started.** The [one-repeat proposal](docs/phases/phase-3b/PHASE3B_CONTINUATION.md) keeps the same four prompts, arms and models, using the existing runner with corrected native-output acceptance and $152.313066 aggregate, $31.971901 included first-pair and 1,674 new-request ceilings. Funding remains inside the existing envelope; a fresh-repetition decision is still required. Planning authorizes no preparation, grant, keys or paid calls.
 
 A separately authorized **offline artifact-binding correction** now follows the native engine's actual return and saved-file priority. It binds the actual artifact, write witness and strategy while treating final-chat prose differences as diagnostic. Offline checks passed 145 unique methods across pinned Linux and the Windows host, with independent review. See the [audit correction](docs/ENGINEERING_AUDIT.md#durable-native-artifact-binding-correction). The stopped R2 result remains incomplete; no fresh live kit, grant or paid continuation is created.
 
