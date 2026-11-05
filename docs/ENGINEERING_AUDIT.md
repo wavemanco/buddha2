@@ -149,3 +149,13 @@ See the [independent cleanup review](reviews/engineering-cleanup-review-2026-11-
 Static reachability is not runtime correctness. Component readiness is not live provider success, evaluator validity or evidence that adaptation improves results. The previous full release matrix was not repeated, and the new paid comparison and held-out evaluation were not run. Removed historical commands require their historical revision/source kit; they are not current entry points. Locked journal replay remains a known, unprofiled runtime cost.
 
 Verdict: retain the native research integration and financial/information boundaries; remove historical campaign prerequisites and obsolete first-party copies before adding capabilities.
+
+## Offline false-stop correction
+
+The correction reuses existing validators and unittest; it adds no dependency or paid experiment. [Anthropic documents moving cache breakpoints](https://platform.claude.com/docs/en/build-with-claude/prompt-caching), while [tool/thinking history must remain intact](https://platform.claude.com/docs/en/build-with-claude/thinking-tool-workflows). Mutation binding now omits only top-level cache_control on tool-call/result blocks. Nested payload fields, tool identities, inputs, results and strategy content remain bound.
+
+Live normal-final and saved-selector comparisons share native CRLF and surrounding-whitespace normalization; substantive output and candidate-choice changes still reject. [Behavior-focused testing](https://testing.googleblog.com/2013/08/testing-on-toilet-test-behavior-not.html) and existing [unittest subtests](https://docs.python.org/3/library/unittest.html#distinguishing-test-iterations-using-subtests) vary observation and completion independently. The [record/replay pattern](https://vcrpy.readthedocs.io/en/latest/usage.html#record-modes) uses existing exchanges without installing VCR.py.
+
+All **27 focused tests** passed with zero failures/errors/skips (300.834 seconds collector; 299.761 seconds unittest). Three regressions failed before correction. The actual DOM1 counterfactual reconstructed the model edit, generated a fresh t09 witness, preserved it through t11 and passed normal verification. Ruff passed four files, Mypy three; Bandit found zero issues with known comment warnings. A broader 122-test run was interrupted after seven passes; no full-suite pass is claimed.
+
+The [correction receipt](../evidence/phase3b-seq2-v1/false-stop-correction-offline-v1.json) binds the new 163-input identities. Earlier acceptance results remain historical. Both paid attempts stay incomplete. This correction creates no study, readiness pass, grant or paid-run authority.

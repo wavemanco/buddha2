@@ -1,0 +1,66 @@
+{
+  "broader_run": {
+    "complete_pass_claimed": false,
+    "completed_passing": 7,
+    "interrupted": true,
+    "planned": 122,
+    "reason": "scope restricted to affected boundaries"
+  },
+  "canonical_source_sha256": "78cf76c4b3bfbc9b8d669902e0e5070b7ffca8e7429f14fb0440b0c10c9d6924",
+  "changed_files": {
+    "followups/phase3b_seq2_v1/delivery.py": "8ca7ecd9048e252bc4b62f6d59fbbbb148f9aeda6c23f4180cdcce75ab502cb5",
+    "followups/phase3b_seq2_v1/editor.py": "11f169d1fdac8075b420392518c79af8f33f55e1e70ed4a05f21568d2f3649d9",
+    "followups/phase3b_seq2_v1/evidence.py": "228901018a6d4822bf1b5ce0247a63e35db3a5c146ebc45c60a086c09b9507cb",
+    "followups/phase3b_seq2_v1/test_information_s2.py": "c808a94a035ffb9e8aa89b820f0884f892ce4916c01ad22feca9a50d9a5c3aa7"
+  },
+  "ci_run": false,
+  "corrections": [
+    "Omit only top-level cache_control on mutation call/result blocks; preserve nested payloads.",
+    "Use one native CRLF/outer-whitespace comparison for normal finals and saved selectors."
+  ],
+  "counterfactual": {
+    "closed_outcome_relabelled": false,
+    "fresh_t09_observation_preserved_at_t11": true,
+    "old_requests_or_witnesses_rewritten": false,
+    "passed": true,
+    "probe_sha256": "6c3c45d3069ffd05629cd96fd9eb34d3350e738ca4bad899e9e23bc7d9c40186",
+    "receipt_raw_sha256": "edeba140549de29024ca3b3f7e76f751f1d9e7068c62fa3893e4da5771c56707",
+    "receipt_relative_path": "runs/phase3b-seq2-v1/false-stop-fix-offline-v1/counterfactual.json",
+    "receipt_seal_sha256": "224fdf997f7fb631d65a2406da28478b6f94fb69e4343e653a858eeb22fd8f39"
+  },
+  "exact_test_owner_removed_and_independently_absent": true,
+  "focused_tests": {
+    "collector_elapsed_seconds": 300.83421573304804,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "receipt_raw_sha256": "110d5f7fe69b42bff6a08cd1e78a538c8540f8dcc7c3ed06f9aed81bd4fae357",
+    "receipt_relative_path": "runs/phase3b-seq2-v1/false-stop-fix-offline-v1/tests.json",
+    "skipped": 0,
+    "unique_tests": 27,
+    "unittest_elapsed_seconds": 299.761
+  },
+  "historical_artifacts_rewritten": false,
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "kind": "phase3b-false-stop-correction-offline-v1",
+  "network": "none",
+  "new_study_or_readiness_pass_or_grant_created": false,
+  "paid_run_authorized": false,
+  "pre_fix_regressions_reproduced": 3,
+  "projected_public_source_sha256": "2c45af0d5ba072f6325d6630d485e9fc8587fa6077ce471d7acd2da38644ca9c",
+  "provider_calls": 0,
+  "public_h1_suite_rerun": false,
+  "public_source_projection": "Only the two pre-existing __main__.py documentation-path literals differ from canonical.",
+  "real_credentials_used": false,
+  "sha256": "f9e6709a0207e38e1e17d333d8631f7b5adc51a3c4fdcd554b916bd98b1f635d",
+  "source_inputs": 163,
+  "static_checks": {
+    "bandit_existing_comment_warnings": true,
+    "bandit_findings": 0,
+    "mypy_errors": 0,
+    "mypy_files": 3,
+    "ruff_files": 4,
+    "ruff_findings": 0
+  },
+  "upstream_dependency_prompt_or_protocol_changes": false
+}

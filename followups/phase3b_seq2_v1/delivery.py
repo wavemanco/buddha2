@@ -25,6 +25,13 @@ def require(value: bool, reason: str) -> None:
         raise ContractError(reason)
 
 
+def normalized_output(value: object) -> str:
+    """Match native text-file reading without changing internal content."""
+    if not isinstance(value, str):
+        raise ContractError("returned output must be text")
+    return value.replace("\r\n", "\n").strip()
+
+
 def retain_operator_records(directory, relative_paths: list[str]) -> list[dict]:
     """Embed explicitly selected public S2 operator evidence losslessly at closure.
 

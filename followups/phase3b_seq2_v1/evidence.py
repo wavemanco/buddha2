@@ -24,7 +24,7 @@ from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES
 
 from . import contract, editor
 from . import transport as bounded
-from .delivery import _history, audit_delivery, audit_original_strategy
+from .delivery import _history, audit_delivery, audit_original_strategy, normalized_output
 from .support import DECLARED_DEFINITION_SHA256, NATIVE, ROOT
 
 
@@ -528,7 +528,12 @@ def _mutation_history(body: dict, path: str) -> tuple[list[str], str, dict]:
     calls, results = _history(body)
     ids = [identity for identity, call in calls.items() if call["name"] in {"write", "edit"}
         and call["input"]["filePath"] == path and not results[identity].get("is_error")]
-    return ids, digest([{ "id": identity, "call": calls[identity], "result": results[identity]} for identity in ids]), calls
+    # Cache breakpoints can move without changing native tool execution.
+    mutations = [{"id": identity,
+        "call": {key: value for key, value in calls[identity].items() if key != "cache_control"},
+        "result": {key: value for key, value in results[identity].items() if key != "cache_control"}}
+        for identity in ids]
+    return ids, digest(mutations), calls
 
 
 def observe_mutation_completion(request: dict, *, cwd: Path, slot: str, previous: list) -> list:
@@ -547,9 +552,8 @@ def observe_mutation_completion(request: dict, *, cwd: Path, slot: str, previous
             _require(isinstance(last["input"].get("content"), str)
                 and _same_strategy(last["input"]["content"], actual),
                 "native strategy write outcome differs from model-produced fields")
-        text = actual.replace("\r\n", "\n")
-        if relative.startswith("output/"):
-            text = text.strip()
+        text = (normalized_output(actual) if relative.startswith("output/")
+                else actual.replace("\r\n", "\n"))
         value = {"kind": "phase3b-native-mutation-completion-v1", "target": relative,
             "mutation_ids": ids, "mutation_history_sha256": history_sha,
             "observed_slot_id": slot, "request_sha256": digest(request), "text_sha256": _sha(text.encode())}
@@ -573,9 +577,8 @@ def bind_mutation_completion(body: dict, *, cwd: str, target: str, actual: str,
     if not isinstance(witness, dict):
         raise ContractError("successful model mutation lacks its native completion witness")
     _sealed(witness)
-    text = actual.replace("\r\n", "\n")
-    if target.startswith("output/"):
-        text = text.strip()
+    text = (normalized_output(actual) if target.startswith("output/")
+            else actual.replace("\r\n", "\n"))
     _require(witness.get("kind") == "phase3b-native-mutation-completion-v1"
         and witness.get("mutation_ids") == ids and witness.get("mutation_history_sha256") == history_sha
         and witness.get("text_sha256") == _sha(text.encode()),
@@ -616,7 +619,7 @@ def verify_normal_session(request: dict, prepared: dict, *, cwd: str, label: str
     notes = [identity for identity in mutations if calls[identity]["input"]["filePath"] == output]
     proof: dict = {"kind": "phase3b-s2-normal-session-delivery-v1", "passed": True, "label": label,
         "request_sha256": digest(request), "provider_response_sha256": digest(response),
-        "final_sha256": _sha(final.encode()), "final_normalized_sha256": _sha(final.strip().encode()),
+        "final_sha256": _sha(final.encode()), "final_normalized_sha256": _sha(normalized_output(final).encode()),
         "notes_delivery": None, "strategy_delivery": None,
         "harvested_strategy": harvested_strategy, "harvested_strategy_sha256": None,
         "provider_calls": 0}

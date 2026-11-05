@@ -25,6 +25,7 @@ from buddha2.artifacts import ContractError, digest, read_json, write_once
 from followups.phase3a_compat_c1_v1.support import PRIVATE
 from followups.phase3a_v1 import editor as frozen
 
+from .delivery import normalized_output
 from .history import HistoryGuard
 from .support import read as read_public
 from .support import safe
@@ -473,7 +474,7 @@ class AccountedProposer(frozen.AccountedProposer):
                 raise ProposerError("accounted editor boundary stopped this conversation")
             if not record["terminal_note_used"]:
                 normal = record.get("normal_session_proof", {})
-                if normal.get("final_normalized_sha256") != hashlib.sha256(answer.strip().encode()).hexdigest():
+                if normal.get("final_normalized_sha256") != hashlib.sha256(normalized_output(answer).encode()).hexdigest():
                     self.halt("native_return_differs_from_normal_proof")
                     raise ProposerError("native returned artifact differs from normal provider final")
             if label == "select.seq2":
@@ -557,7 +558,8 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     _require(final.get("stop_reason") == "end_turn" and not any(
         item.get("type") == "tool_use" for item in final.get("content", [])),
         "native selector response was incomplete")
-    _require(session.get("selector_answer") == results[slots[-1]]["response"]["text"],
+    _require(normalized_output(session.get("selector_answer"))
+             == normalized_output(results[slots[-1]]["response"]["text"]),
              "native selector returned choice differs from actual final provider text")
     body = _body(intents[slots[-1]]["request"], set())
     calls, tool_results = _history(body)

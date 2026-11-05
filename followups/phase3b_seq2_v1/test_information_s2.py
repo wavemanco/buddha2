@@ -197,6 +197,137 @@ class InformationGuardTests(unittest.TestCase):
                         response=wrong_final, harvested_strategy=json.dumps(expected, indent=4) + "\n",
                         mutation_witnesses=self.completion_witnesses(request, strategy=json.dumps(expected, indent=4) + "\n", notes=notes))
 
+    def test_earlier_completion_witness_accepts_only_block_cache_changes(self):
+        for use_edit in (False, True):
+            native = self.root / ("cache-edit" if use_edit else "cache-write")
+            (native / "context/harness").mkdir(parents=True)
+            path = native / "context/harness/systemprompt.md"
+            fields = {"plan_system": "SYNTHETIC plan", "answer_system": "SYNTHETIC A", "rank_system": "SYNTHETIC rank"}
+            request = {"messages": pair("strategy-write", "write", str(path), json.dumps(fields))}
+            if use_edit:
+                request["messages"].extend([{"role": "assistant", "content": [{"type": "tool_use",
+                    "id": "strategy-edit", "name": "edit", "caller": {"type": "direct"}, "input": {
+                        "filePath": str(path), "oldString": "SYNTHETIC A", "newString": "SYNTHETIC B"}}]},
+                    {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "strategy-edit",
+                        "content": "Edit applied successfully."}]}])
+                fields["answer_system"] = "SYNTHETIC B"
+            actual = json.dumps(fields, indent=2) + "\n"
+            path.write_text(actual, encoding="utf-8")
+            # Nested payload data is protected even when its key happens to be cache_control.
+            request["messages"][-2]["content"][0]["input"]["opaque"] = {"cache_control": "SYNTHETIC argument"}
+            request["messages"][-1]["content"][0]["content"] = [{"type": "text", "text": "SYNTHETIC applied",
+                "opaque": {"cache_control": "SYNTHETIC result"}}]
+            for variant in ("add", "remove", "move"):
+                earlier = copy.deepcopy(request)
+                if variant != "add":
+                    earlier["messages"][-2]["content"][0]["cache_control"] = {"type": "ephemeral"}
+                witnesses = evidence.observe_mutation_completion(earlier, cwd=native,
+                    slot="SYNTHETIC earlier observation", previous=[])
+                later = copy.deepcopy(earlier)
+                later["messages"][-2]["content"][0].pop("cache_control", None)
+                if variant in ("add", "move"):
+                    later["messages"][-1]["content"][0]["cache_control"] = {"type": "ephemeral"}
+                if variant == "add":
+                    later["messages"][-2]["content"][0]["cache_control"] = {"type": "ephemeral"}
+                before = digest(later)
+                with self.subTest(edit=use_edit, cache=variant):
+                    self.assertNotEqual(digest(earlier), before)
+                    bound = evidence.bind_mutation_completion(later, cwd=str(native),
+                        target="context/harness/systemprompt.md", actual=actual, witnesses=witnesses)
+                    self.assertTrue(bound["actual_text_matches"])
+                    self.assertEqual(evidence.observe_mutation_completion(later, cwd=native,
+                        slot="SYNTHETIC later observation", previous=witnesses), witnesses)
+                    self.assertEqual(digest(later), before)
+            for mutation in ("nested_input", "nested_result", "result_text", "identity", "path", "strategy"):
+                changed, harvested = copy.deepcopy(later), actual
+                call, result = changed["messages"][-2]["content"][0], changed["messages"][-1]["content"][0]
+                if mutation == "nested_input":
+                    call["input"]["opaque"]["cache_control"] = "SYNTHETIC changed argument"
+                elif mutation == "nested_result":
+                    result["content"][0]["opaque"]["cache_control"] = "SYNTHETIC changed result"
+                elif mutation == "result_text":
+                    result["content"][0]["text"] = "SYNTHETIC changed tool result"
+                elif mutation == "identity":
+                    call["id"] = result["tool_use_id"] = "SYNTHETIC foreign mutation"
+                elif mutation == "path":
+                    call["input"]["filePath"] += ".foreign"
+                else:
+                    harvested += "SYNTHETIC changed strategy"
+                with self.subTest(edit=use_edit, mutation=mutation), self.assertRaises(ContractError):
+                    evidence.bind_mutation_completion(changed, cwd=str(native),
+                        target="context/harness/systemprompt.md", actual=harvested, witnesses=witnesses)
+
+    def test_normal_final_fingerprint_matches_native_newline_normalization(self):
+        prepared = self.prepared()
+        request = self.request(prepared)
+        notes = "<notes>\r\nSYNTHETIC first line\r\nSYNTHETIC second line\r\n</notes>\r\n"
+        request["messages"].extend(pair("write-notes", "write", self.cwd + "/output/answer.md", notes))
+        proof = evidence.verify_normal_session(request, prepared, cwd=self.cwd, label="inv2.a1",
+            response={"stop_reason": "end_turn", "content": [{"type": "text", "text": "\r\n" + notes}]},
+            harvested_strategy=(self.root / "author/harness/systemprompt.md").read_text(encoding="utf-8"),
+            mutation_witnesses=self.completion_witnesses(request, notes=notes))
+        native_answer = notes.replace("\r\n", "\n")
+        self.assertEqual(proof["final_normalized_sha256"], hashlib.sha256(native_answer.strip().encode()).hexdigest())
+        self.assertEqual(proof["final_sha256"], hashlib.sha256(("\r\n" + notes).encode()).hexdigest())
+
+    def test_saved_selector_accepts_output_representation_but_rejects_changed_content(self):
+        prepared = self.prepared(selector=True)
+        base = self.request(prepared)
+        first = {**base, "messages": base["messages"][:1]}
+        tools, returned = [], []
+        for candidate in ("A", "B"):
+            entry = next(e for e in prepared["manifest"]["required_evidence"] if e["path"] == "candidates/" + candidate + ".md")
+            chunk = entry["chunks"][0]
+            messages = pair("read-" + candidate, "read", self.cwd + "/context/" + chunk["path"],
+                prepared["evidence_files"][chunk["path"]], limit=chunk["limit"])
+            tools.append(messages[0]["content"][0])
+            returned.append(messages[1]["content"][0])
+        second = copy.deepcopy(first)
+        second["messages"].extend([{"role": "assistant", "content": tools}, {"role": "user", "content": returned}])
+        text = "<why>SYNTHETIC choice.</why>\n```choice\nA\n```"
+        prefix = "p3b-02.adaptive.editor.select.seq2"
+        slots = [prefix + ".t01", prefix + ".t02"]
+        intents = {slot: {"request": request} for slot, request in zip(slots, (first, second))}
+        results = {
+            slots[0]: {"role": "native_selector", "status": "response", "response": {"text": "", "provider_response": {
+                "stop_reason": "tool_use", "content": tools}}},
+            slots[1]: {"role": "native_selector", "status": "response", "response": {"text": text, "provider_response": {
+                "stop_reason": "end_turn", "content": [{"type": "text", "text": text}]}}},
+        }
+        guard = history.HistoryGuard(lambda slot, role, request: results[slot], prefix)
+        for slot in slots:
+            guard(slot, "native_selector", intents[slot]["request"])
+        search = self.root / "saved-selector"
+        audit = search / "editor-audit/c1-contracts/select.seq2"
+        audit.mkdir(parents=True)
+        (audit / "manifest.json").write_text(json.dumps(prepared["manifest"], sort_keys=True, indent=2) + "\n", encoding="utf-8")
+        (audit / "configured-agent-prompt.md").write_text(prepared["authoring_system_text"], encoding="utf-8")
+        for name, value in prepared["evidence_files"].items():
+            target = audit / "context-view" / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(value, encoding="utf-8")
+        session = {"status": "valid", "model_backed": True, "authentic_eligible": True, "terminal_note_used": False,
+            "result_slots": slots, "history_guard_audits": guard.audits,
+            "input_snapshot": {"files": prepared["manifest"]["context_inventory"]}, "selector_answer": text}
+        selection = {"ok": True, "fallback": False, "chosen_id": "A", "id_map": {"A": "c1", "B": "c2"}}
+        def validate():
+            # Storage loading alone is replaced; history, source, inspection and choice validation are real.
+            with patch.object(editor, "validate_persisted_sessions", return_value={"select.seq2": session}):
+                return editor.validate_selector_evidence(search=search, study_sha256="a" * 64, pilot="p3b-02",
+                    fixture=True, session=session, results=results, intents=intents, selection=selection)
+        for answer in (text, "\n" + text + "\n", "\r\n" + text.replace("\n", "\r\n") + "\r\n"):
+            session["selector_answer"] = answer
+            with self.subTest(answer_hash=hashlib.sha256(answer.encode()).hexdigest()):
+                self.assertTrue(validate()["passed"])
+        for answer in (text.replace("\nA\n", "\nB\n"), text.replace("SYNTHETIC", "CHANGED")):
+            session["selector_answer"] = answer
+            with self.subTest(changed_hash=hashlib.sha256(answer.encode()).hexdigest()), self.assertRaises(ContractError):
+                validate()
+        session["selector_answer"] = text
+        selection["chosen_id"] = "B"
+        with self.assertRaises(ContractError):
+            validate()
+
     def test_diagnostic_policy_never_swallows_source_or_system_tamper(self):
         prepared = self.prepared()
         request = self.request(prepared)
