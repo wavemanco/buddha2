@@ -1,0 +1,154 @@
+{
+  "amendment_id": "phase3b-read-audit-r1",
+  "canonical_source_sha256": "358d92973ba3e55d3a30dea25a938350a3eabfa5fae8d44c3c0d3203d9655d65",
+  "combined_phase3b_provider_calls": 157,
+  "combined_phase3b_spent_micro_usd": 13592649,
+  "completed_branch_session_audits": 0,
+  "current_known_lineage_exposure_micro_usd": 82517014,
+  "current_known_lineage_held_micro_usd": 22880000,
+  "current_known_lineage_spent_micro_usd": 59637014,
+  "durable_unknown_results": 0,
+  "effective_source_inputs": 163,
+  "further_calls_or_repetition_authorized_by_record": false,
+  "independent_diagnostic": {
+    "raw_sha256": "603f58982f25cb918b44e025959fa84439b773a0b90dbdcde81c005aba07ede6",
+    "relative_path": "runs/phase3b-seq2-v1/read-audit-r1-halted-check-v1/diagnostic.json",
+    "seal_sha256": "8f0e7e479b1be4b2788233a61ec774cfe8948637f618ba9d64dbd7454fb03393"
+  },
+  "inspect_closure": {
+    "api_spend": 0,
+    "elapsed_seconds": 47.711587,
+    "external_socket_attempts": 0,
+    "first_pair_requested": false,
+    "image": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d",
+    "model_constructor_attempts": 0,
+    "owned_container_id": "5e6e53246c68d996f9b83653fa213775262dd62700ff97755cf156a25a806b10",
+    "owner_independently_absent": true,
+    "owner_removed": true,
+    "proof_raw_sha256": "bb11e1a8df5fc290f1b344e1da1f8ebfb8a1265c137458ea95d2256d6018854d",
+    "proof_relative_path": "runs/phase3b-seq2-v1/visibility-exports/102140079517281714d49e90fde70702551e672ad24877422b5b48dd36ab2d67/live/closure/supervised/export/result.json",
+    "provider_calls": 0,
+    "roundtrip_equal": true,
+    "snapshot_sha256": "2bba02eae229256207bef4fc245e12167b05321b802aa733c304833c35f38c6a",
+    "source_attachment_bytes_preserved": true,
+    "window_seconds": 600
+  },
+  "kind": "phase3b-read-audit-r1-live-outcome-v1",
+  "new_source_or_dependency_changes": false,
+  "old_reports_or_grants_rewritten": false,
+  "partial_read_audit": {
+    "admitted_editor_requests": 11,
+    "admitted_editor_sessions": 1,
+    "all_admitted_editor_sessions_audited": true,
+    "blocking": false,
+    "complete_targets": 21,
+    "dom1_required_targets": 53,
+    "dom1_targets": 54,
+    "incomplete_required_targets": 32,
+    "inv1_admitted_requests": 0,
+    "optional_original_strategy_conflicts": 1,
+    "parse_errors": 0,
+    "read_errors": 0
+  },
+  "prior_closed_attempt_preserved": {
+    "provider_calls": 122,
+    "spent_micro_usd": 12528747,
+    "study_sha256": "ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c"
+  },
+  "prior_held_micro_usd_preserved": 22880000,
+  "provider_calls": 35,
+  "public_source_sha256": "7a30dfda54c51ac15cc47a35a712700728732babfd30c4ad16f497d732cf1e50",
+  "raw_provider_messages_or_source_captures_published": false,
+  "read_consumption_policy": "read-consumption-diagnostic-v1",
+  "report_sha256": "10873dcdac9b85044b8031ab34aefa4ebb3c05cf4bb58497d6692125872d4a10",
+  "reproduced_cause": {
+    "changed_field_paths_only": [
+      "/0/call/cache_control",
+      "/0/result/cache_control"
+    ],
+    "hard_contract_category": "mutation_completion_binding",
+    "histories_equal_after_existing_cache_normalization": true,
+    "interpretation": "first-party cache-annotation mutation-history false rejection; not a strategy-content mismatch or read-coverage halt",
+    "model_authored_strategy_edits": 1,
+    "model_strategy_reconstruction_matches_live_witness": true,
+    "mutation_ids_equal": true,
+    "notes_mutation_binding_passed": true,
+    "notes_shape_passed": true,
+    "observed_slot_id": "p3b-01.adaptive.editor.dom1.a1.t09",
+    "read_coverage_caused_halt": false,
+    "reproduced_exception_type": "ContractError",
+    "reproduced_predicate": "native consumed artifact differs from successful model mutation completion",
+    "session": "dom1.a1",
+    "slot": "p3b-01.adaptive.editor.dom1.a1.t11",
+    "subsequent_model_read_matches_live_witness": true
+  },
+  "reserved_micro_usd": 0,
+  "saved_report_replay": {
+    "all_eight_reports_byte_equal": true,
+    "elapsed_seconds": 52.10264419997111,
+    "exit_code": 0,
+    "files": [
+      {
+        "bytes": 10947,
+        "canonical_and_replay_sha256": "f44d50f94feaf05241dedf82a0fd619ec05c7dbc92b3c8bc1ab9193b62ee1969",
+        "file": "rows.json"
+      },
+      {
+        "bytes": 185332,
+        "canonical_and_replay_sha256": "00a376d0914895aa7b8d27cd48d5b14e6b25cab0d32938af515e709bf916cfd3",
+        "file": "coverage.json"
+      },
+      {
+        "bytes": 5397,
+        "canonical_and_replay_sha256": "f7fd5a3668c4b30f3897075767f2175d6288771db01cd51f91e0f3e227cb7ff9",
+        "file": "analysis.json"
+      },
+      {
+        "bytes": 6787,
+        "canonical_and_replay_sha256": "48641fff45cc15d84369c677dfd05f94d21d0a0e7e822e8b17cb2c2dc108df7d",
+        "file": "summary.json"
+      },
+      {
+        "bytes": 13241,
+        "canonical_and_replay_sha256": "e5008229d411b1aac98926b96d90a0c5373cf42e9df2bce4a2acede806467900",
+        "file": "accounting.json"
+      },
+      {
+        "bytes": 431561,
+        "canonical_and_replay_sha256": "5929a0d3311609dee18cdc5b5b31958fdc2c225bfe33c08ffdd69f3893a0001f",
+        "file": "protocol.json"
+      },
+      {
+        "bytes": 5,
+        "canonical_and_replay_sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+        "file": "readiness.json"
+      },
+      {
+        "bytes": 1221,
+        "canonical_and_replay_sha256": "b9483475608f3fa75aa7141899e3775d013deb01ab0fe4d8585abc6f25f1aee9",
+        "file": "PHASE3B_REPORT.md"
+      }
+    ],
+    "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "initial_cli_preimport_failure": {
+      "error": "experiment_command_failed",
+      "exit_code": 2,
+      "report_executed": false
+    },
+    "keyless": true,
+    "network": "none",
+    "owned_container_id": "877401be4faa9f8b6d73bf773f1d9d4ec93af82acdd80de93c9c547a5da67f9a",
+    "owner_independently_absent": true,
+    "owner_removed": true,
+    "process_only_import_path_correction": "/workspace/.upstream/harness2:/workspace/src:/workspace",
+    "provider_calls_added": 0,
+    "source_changes": false,
+    "successful_replays": 1
+  },
+  "scientific_complete": false,
+  "scored_primary_targets": 0,
+  "sha256": "ff4ab20e598ce3eaf3bf3bef6da6f35b48300f368fc18b7d2a91835e514d156a",
+  "spent_micro_usd": 1063902,
+  "status": "halted-integrity",
+  "study_sha256": "102140079517281714d49e90fde70702551e672ad24877422b5b48dd36ab2d67"
+}
