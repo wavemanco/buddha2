@@ -1,0 +1,150 @@
+{
+  "accepted_public_commit": "5ca734636af48534ddcf4739b2e433e44e6b670d",
+  "approved_limits": {
+    "automatic_further_repetition": false,
+    "included_first_prompt_micro_usd": 26094077,
+    "maximum_new_admitted_attempts": 1513,
+    "total_micro_usd": 146435242
+  },
+  "authority_receipt_sha256": "1106360bbd4299e60c7e11e3f7ccee9a53ec99aa85e5d38e4c8208e13fa1fba6",
+  "benchmark_assessment": {
+    "matched_comparison_complete": false,
+    "provider_calls": 25,
+    "spent_micro_usd": 379805
+  },
+  "closure": {
+    "all_owned_live_preflight_exporter_and_forensic_actors_independently_absent": true,
+    "canonical_complete": true,
+    "existing_viewer_preserved": true,
+    "first_pair_export_occurred": false,
+    "inspect_snapshot_sha256": "f2667f64400a15f9e7dd27cc45c58b6726825d80acb631f2a8cb91efd99ea1b6",
+    "new_local_viewer_server_launch_rejected_by_automatic_review": "blocked by policy",
+    "new_local_viewer_server_started": false,
+    "passive_inspect_export_complete": true
+  },
+  "cumulative_lineage": {
+    "current_exposure_micro_usd": 113571473,
+    "historical_hold_micro_usd": 22880000,
+    "historical_liability_released": false,
+    "known_spent_micro_usd": 90691473,
+    "maximum_approved_lineage_exposure_micro_usd": 248924365,
+    "provider_calls": 3181
+  },
+  "effective_source_inputs": 163,
+  "evidence_receipt_sha256": {
+    "accepted_kit": "66233425c233a6a020270737bff10235681813722f6371fdce4ccbfd68cc05b4",
+    "forensic_metadata": "c20fba2cb3dc727b2d5dd181feccd96969c78bcaac9efadd1bb73b7dbabd0491",
+    "forensic_owner_cleanup": "cda37ca7cd5b25b36f485f250aab8f6fe64f0e0908e93d3f27feb7286c10eef0",
+    "independent_outcome_review": "5be1621fda2e93555748f63118202fee0a01a00eb9d858eeef56a4585d1664fe",
+    "inspect_closure_result": "d98b8a76b54d5865ced16e1a7d43b9d8d599ef0d6c0bf27b5f6297cc39bd6997",
+    "inspect_closure_status": "f46395a33e089c2832ef64c476ae41dd8c7c295b52ead462266078f1f37fcf0f"
+  },
+  "failure": {
+    "caused_by_provider_refusal": false,
+    "caused_by_timing_stop": false,
+    "evidence_classification": "Deterministic reconstruction of the first missing head in the unchanged sequential native loop; preceding admitted head requests match exact hashes. No rejected-body hash exists in the halt.",
+    "excess_utf8_bytes": 254,
+    "legacy_quality_limit_utf8_bytes": 5952,
+    "message": "strategy/native request exceeds preserved payload admission",
+    "native_frozen_profile_checks_passed": true,
+    "producer_to_evaluator_limit_compatibility_not_established_by_acceptance": true,
+    "provider_acceptance_or_token_count_tested": false,
+    "reconstructed_request_sha256": "19fcfbe1226074b81666a4ac3479b3626e8055cac63cfbcb3741da7d711ed25c",
+    "rejected_body_logged": false,
+    "rejected_request_sent": false,
+    "role": "quality",
+    "serialized_utf8_bytes": 6206,
+    "slot_id": "p3a-assessment-7e38fac75ff15ad170b5e4d4.quality.02",
+    "target": "c2"
+  },
+  "generation_observations_separate_from_held_projection": {
+    "choices_sealed_before_assessment": true,
+    "first_prompt_engineering_review_opened": false,
+    "fixed_best_of_twelve": {
+      "blind_selector_returned": true,
+      "portfolios_returned": 12,
+      "provider_calls": 145,
+      "spent_micro_usd": 2208749
+    },
+    "native_seq_k2": {
+      "independent_counted_readiness_passed": true,
+      "normal_authoring_sessions": 6,
+      "normal_nonfallback_selector_returned": true,
+      "portfolios_returned": 8,
+      "provider_calls": 183,
+      "spent_micro_usd": 8493796
+    },
+    "other_prompts_started": 0,
+    "prompt": "p3b-01"
+  },
+  "grant_sha256": "431e79397022e42160ee9e87bd6e147423576e63b12cfdaeaabeb39d819c03fe",
+  "kind": "phase3b-timing-continuation-live-outcome-v1",
+  "launcher_sha256": "131ba785a037039da1941f85f1d3c43ef4fbf4423f369ebb4d6a2254c92470b0",
+  "limitations": [
+    "No completed four-prompt benchmark comparison or adaptation-gain conclusion.",
+    "Rejected request is reconstructed, not a captured rejected body; provider acceptance and token count remain untested.",
+    "Costs are usage/public-price accounting; provider invoices were not verified.",
+    "Report replay and closure do not establish scientific completion."
+  ],
+  "local_date": "2026-11-05",
+  "next_decision": "Make evaluator limits compatible with allowed producer outputs and verify the real benchmark request builder before paid work. Preserve generated artifacts; any compatible assessment-only reuse requires an explicit definition/accounting and must not reopen this closed ledger.",
+  "outcome": {
+    "assessment_scheduled": 12,
+    "assessment_scored": 0,
+    "attempts": 353,
+    "deadline_stop": null,
+    "durable_unknown_results": 0,
+    "held_evidence_failure": {
+      "classification": "integrity_hold",
+      "exception_type": "ContractError",
+      "scientific_use": "disqualified"
+    },
+    "journal_status": "halted-integrity",
+    "pending_intents": 0,
+    "primary_scheduled": 8,
+    "primary_scored": 0,
+    "reserved_micro_usd": 0,
+    "scientific_complete": false,
+    "spent_micro_usd": 11082350,
+    "status": "incomplete"
+  },
+  "physical_transport_audits": {
+    "SDK_invocation_unknown": 0,
+    "SDK_invoked": 353,
+    "missing_or_invalid_slots": [],
+    "validated_audits": 353
+  },
+  "policy_sha256": "fd7320d91fc0b61d7cb3e1785978e9639c9c724d5718c4bd90453c83c3490cd4",
+  "preservation": {
+    "answer_text_not_shortened_to_fit_guard": true,
+    "closed_ledger_not_reopened": true,
+    "no_paid_retry_or_fresh_repetition_after_halt": true,
+    "prior_outcomes_and_holds_unchanged": true,
+    "production_source_unchanged_after_acceptance": true
+  },
+  "public_source_sha256": "cdbd29e6e257c88338ae865cec11eb94defa37420a12aa800827e4fd44b050a3",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "saved_report_replay": {
+    "all_eight_files_byte_identical": true,
+    "all_nine_blocked_seam_attempt_counts_zero": true,
+    "independent_review_passed": true,
+    "invocations": 1,
+    "journal_unchanged": true,
+    "observation_sha256": "9d2d35bf76b35cfb7a57afc1a854a17e68ba143b0036d601697b476493bb89d5",
+    "provider_calls_added": 0,
+    "report_file_sha256": {
+      "PHASE3B_REPORT.md": "26eb0a0734fb9d038ba461513697bcf1155dea9eaa736af1cec39d1cf6ae3525",
+      "accounting.json": "a872050c293773485b45e4a8f3cb8d1ecf7003321a3cc1408d7035af460f3752",
+      "analysis.json": "37a7199a20e23fd92f86575b02a512ba0b175a6d822a6ceeadb0bd5b9423396a",
+      "coverage.json": "eb83640f64585a9db5258b100f3efc256ef63bd79db8432ac15c24b6c8f64231",
+      "protocol.json": "bb2c0f49d68545c65ff718f3b30556fb437539985ee28b34d88681492f8656e5",
+      "readiness.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "rows.json": "ebf8006d6f1b2fa0ad737f32078f3034d8058e598df0a685b80db389fbab78e3",
+      "summary.json": "b0c3e33f955cea44a31bef28c8bb0d1558b2beff3c7445ba144dd00ffd51ef3b"
+    },
+    "source_unchanged": true
+  },
+  "source_sha256": "da77ba399f3f55fad784d136a7271ee22716bf36282122608ea2ec5bf1b9a203",
+  "study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+  "timezone": "America/Los_Angeles"
+}
