@@ -161,7 +161,9 @@
     "src/buddha2/phase2_release_launch.py",
     "src/buddha2/phase2_release_runner.py",
     "strategies/fixed/phase2.json",
+    "tests/__init__.py",
     "tests/test_experiment_cli.py",
+    "tests/test_phase2_native.py",
     "upstreams.lock.json"
   ]
 }

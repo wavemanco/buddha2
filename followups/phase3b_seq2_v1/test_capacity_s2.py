@@ -1,12 +1,17 @@
 """Capacity trust boundaries and independent liabilities; full observed fixture is a gate command."""
 from __future__ import annotations
 
+import copy
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from buddha2.artifacts import ContractError
+from buddha2 import phase2_am1_controls as am1
+from buddha2.artifacts import ContractError, digest
+from buddha2.phase2_native import NativeAssessment
+from tests.test_phase2_native import sample_portfolio
 
 from . import capacity, ledger_core
 from .mocks import _metadata_reads
@@ -61,6 +66,71 @@ class CapacityS2Tests(unittest.TestCase):
             self.assertEqual(reserve["input"], 1_000_000)
             self.assertEqual(reserve["output"], 16_000)
             self.assertEqual(reserve["micro_usd"], 11_440_000)
+
+
+@unittest.skipUnless(os.environ.get("BUDDHA2_NB_UPSTREAM"), "requires supported native environment")
+class EvaluatorAdmissionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.native = NativeAssessment(Path(os.environ["BUDDHA2_NB_UPSTREAM"]))
+
+    def test_quality_request_at_saved_failure_size_is_admitted(self):
+        portfolio = sample_portfolio()
+        request = self.native.quality_requests(portfolio, list(range(10)))[2]
+        portfolio["responses"][2]["text"] += "x" * (6206 - len(ledger_core._wire(request)))
+        portfolio["portfolio_id"] = "portfolio-" + digest(
+            {k: v for k, v in portfolio.items() if k != "portfolio_id"})
+        request = self.native.quality_requests(portfolio, list(range(10)))[2]
+        self.assertEqual(len(ledger_core._wire(request)), 6206)
+        self.assertFalse(am1.admitted("quality", request))
+        ledger_core.validate_request("quality", request)
+
+    def test_native_requests_cover_entire_allowed_portfolio_text_envelope(self):
+        for character in ("x", "\U0001f600", "\x01", '"', "\\"):
+            with self.subTest(character=repr(character)):
+                portfolio = sample_portfolio()
+                portfolio["task"]["prompt"] = character * 100_000
+                for response in portfolio["responses"]:
+                    response["text"] = character * 100_000
+                portfolio["portfolio_id"] = "portfolio-" + digest(
+                    {k: v for k, v in portfolio.items() if k != "portfolio_id"})
+                group = self.native.group_request(portfolio)
+                ledger_core.validate_request("group", group)
+                for request in self.native.quality_requests(portfolio, list(range(10))):
+                    ledger_core.validate_request("quality", request)
+
+    def test_evaluator_size_boundaries_and_frozen_profiles(self):
+        portfolio = sample_portfolio()
+        requests = {"group": self.native.group_request(portfolio),
+                    "quality": self.native.quality_requests(portfolio, list(range(10)))[0]}
+        for role, request in requests.items():
+            with self.subTest(role=role):
+                limit = ledger_core.POLICY["evaluator_payload_bytes"][role]
+                request["messages"][-1]["content"] += "x" * (limit - len(ledger_core._wire(request)))
+                self.assertEqual(len(ledger_core._wire(request)), limit)
+                ledger_core.validate_request(role, request)
+                request["messages"][-1]["content"] += "x"
+                with self.assertRaisesRegex(ContractError, "payload"):
+                    ledger_core.validate_request(role, request)
+                changed = copy.deepcopy(requests[role])
+                changed["model"] = "substituted-model"
+                with self.assertRaisesRegex(ContractError, "frozen profile"):
+                    ledger_core.validate_request(role, changed)
+        quality = self.native.quality_requests(portfolio, list(range(10)))[0]
+        quality["max_tokens"] *= 2
+        with self.assertRaisesRegex(ContractError, "frozen profile"):
+            ledger_core.validate_request("quality", quality)
+
+    def test_evaluator_reservations_and_legacy_limits_are_unchanged(self):
+        self.assertEqual(am1.CONTROL_POLICY["payload_utf8_bytes"],
+                         {"answer": 5952, "plan": 5952, "rank": 61952,
+                          "group": 61952, "quality": 5952})
+        for role in ("group", "quality"):
+            self.assertEqual(ledger_core._reservation(role)["micro_usd"], am1.reservation(role))
+            self.assertEqual(ledger_core._reservation(role)["input"],
+                             am1.CONTROL_POLICY["maximum_billable_input"][role])
+            self.assertEqual(ledger_core._reservation(role)["output"],
+                             am1.CONTROL_POLICY["reserved_total_output"][role])
 
 
 if __name__ == "__main__":

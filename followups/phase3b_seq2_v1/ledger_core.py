@@ -60,6 +60,9 @@ POLICY = {
     "phase_micro_usd": 180_000_000,
     "first_micro_usd": 55_000_000,
     "editor_payload_bytes": 2_097_152,
+    # Ten 100k-character answers plus a 100k prompt; JSON needs at most six bytes/character.
+    # Native grouping/scoring add fixed framing, not another layer of JSON escaping.
+    "evaluator_payload_bytes": {"group": 8_388_608, "quality": 2_097_152},
     "editor_turns": 24,
     "cost_basis": am1.CONTROL_POLICY["cost_basis"],
     "am1_sha256": am1.CONTROL_SHA256,
@@ -279,9 +282,11 @@ def validate_request(role: str, request: dict, *, editor_tools: dict | None = No
             role == "group" or type(request.get("max_tokens")) is int,
             "output token ceiling must be an integer",
         )
+        evaluator_limit = POLICY["evaluator_payload_bytes"].get(role)
         _require(
-            am1.admitted(role, request),
-            "strategy/native request exceeds preserved payload admission",
+            am1.admitted(role, request) if evaluator_limit is None
+            else len(_wire(request)) <= evaluator_limit,
+            "strategy/native request exceeds phase payload admission",
         )
     reject_final_assistant_prefill("editor" if role == "native_selector" else role, request)
     _wire(request)

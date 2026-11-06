@@ -218,3 +218,22 @@ The stop was a local admission check, rather than a timing stop or provider fail
 Canonical closure and the passive closure Inspect export completed within the original window. One saved-report replay produced eight byte-identical files with unchanged journal and source, zero provider calls and zero blocked SDK/socket/process attempts. All exact run, preflight, exporter and forensic/replay owners are independently absent. Earlier studies, the accepted source and the old $22.88 hold remain unchanged. The [attempt report](phases/phase-3b/PHASE3B_TIMING_CONTINUATION_LIVE_ATTEMPT_REPORT.md) and [outcome receipt](../evidence/phase3b-seq2-v1/timing-continuation-live-outcome-v1.json) retain the detailed accounting and limits.
 
 Next is a decision on the obsolete local quality byte cap. This closure authorizes no code repair, new study, keys, further calls or paid repetition; unused funds do not reopen the stopped ledger.
+
+## Evaluator admission correction
+
+The user authorized this focused offline correction and reviewed publication after the timing-corrected attempt stopped. The existing Phase 3B shared validator now uses evaluator-specific local wire ceilings. The historical AM-1 policy remains byte-unchanged; planner, answer and rank admission still use it. Live admission and saved-request validation share the corrected function.
+
+The existing portfolio contract permits a 100,000-character prompt and ten answers of up to 100,000 characters each. Canonical UTF-8 JSON uses at most six bytes per valid character. The pinned native renderers insert those texts directly, without another JSON-escaping layer. Their measured fixed wrappers give these complete upper bounds:
+
+| Evaluator request | Maximum contract payload | Local ceiling |
+|---|---:|---:|
+| Quality: prompt and one answer | 1,200,935 bytes | 2,097,152 bytes (2 MiB) |
+| Group: prompt and ten answers | 6,601,333 bytes | 8,388,608 bytes (8 MiB) |
+
+These are finite resource ceilings derived from the accepted text contract, not provider-token estimates or provider-acceptance guarantees. The frozen generator still requests at most 4,096 output tokens; characters and tokens are not equated. Model/settings validation, full-context reservations, monetary/token/request ceilings and unknown-charge holds are unchanged. Quality still reserves $11.44 and grouping $1.661880 before a request; these are maximum-liability reservations, not expected spend.
+
+The new regression first reproduced the inherited rejection, then passed after the correction. **45 unique focused checks pass:** 42 logic/native/financial/strategy cases plus three source-binding checks. They include actual maximum-size ASCII, Unicode, JSON control-character and quoting cases; exact-ceiling and one-byte-over rejection; frozen-profile negatives; and the existing financial and unknown-liability checks. The real pinned benchmark builders also admitted all 25 saved evaluator requests and 33 requests rebuilt from the completed c1/c2/fixed portfolios. The reconstructed missing request retains its exact 6,206-byte size/hash, corroborated by the preceding two admitted requests. No judge was called.
+
+All nine blocked SDK/socket/subprocess seams recorded zero attempts. Ruff passed both changed Python files; Mypy and Bandit passed the one changed production file. Independent review found and resolved one test-fixture initializer binding gap. Only source-manifest entries changed afterward; final source checks passed without repeating the 42 logic tests. The resulting source profile has 165 inputs. The 29 explicitly retained files, including journal, reports, native outputs and embedded fixed candidates, are unchanged. No broader artifact scan or complete test-suite campaign was run.
+
+See the [safe correction receipt](../evidence/phase3b-seq2-v1/evaluator-admission-offline-fix-v1.json). This $0 offline correction creates no fresh live acceptance, grant or scientific result. The closed attempt and prior charges/holds stay intact. Next is a decision on compatible assessment-only reuse of completed generation; a paid continuation requires its own current identity/accounting and applicable authority.

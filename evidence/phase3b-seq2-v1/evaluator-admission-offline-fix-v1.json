@@ -1,0 +1,126 @@
+{
+  "additional_repetition_authorized": false,
+  "allowed_portfolio_envelope": {
+    "answers": 10,
+    "local_wire_limits": {
+      "group": 8388608,
+      "quality": 2097152
+    },
+    "maximum_canonical_utf8_bytes_per_character": 6,
+    "maximum_characters_per_prompt_or_answer": 100000,
+    "maximum_valid_contract_request_bytes": {
+      "group": 6601333,
+      "quality": 1200935
+    },
+    "native_fixed_overhead_bytes": {
+      "group": 1333,
+      "quality": 935
+    }
+  },
+  "api_spend_usd": 0,
+  "authorization": "User authorized the focused evaluator-admission fix, offline verification against saved requests and allowed output sizes, preserving budget guards and completed generation, and reviewed push; no paid calls or engineering detours.",
+  "canonical_source_sha256": "6ca2fc1565932355d9e2ba664cfa568172a4d960b30dbbaed161f5e87913fbd8",
+  "changed_source_file_sha256": {
+    "followups/phase3b_seq2_v1/ledger_core.py": "2bd168e3f01dce32be4889683fd051066ec00d2128e08e57898bc7b655f9bf45",
+    "followups/phase3b_seq2_v1/source-inputs.json": "70ca48e2359fd68fd01ce270141e76aed45fcf018a7de7b76cb838b1f29c0071",
+    "followups/phase3b_seq2_v1/test_capacity_s2.py": "e213dab3a123303539f4d1407e0b3cd14ce116643a8248d36065c15d579065de"
+  },
+  "effective_source_inputs": 165,
+  "evidence_receipt_sha256": {
+    "final-source-binding.json": "7315a078e0749f89d61a5c421293d498aff6f44e67016df60b73b5e249441368",
+    "focused-tests.json": "b77885eb4fd3da50368cd71ad2d97a3ec559bbfc964eeb67f9f860eed8a1787c",
+    "initial-observer-startup.json": "1ad446a817a051939b1fd8180ca210d2de2271d22776c04f998caa2b902562e7",
+    "owned-absence-review.json": "46b14a37f0489e4e9577501e30424fa27dca11df979c0b7edb9bd9299f70d16f",
+    "owned-cleanup.json": "09d49abfed19982af48c254f57ec6882f89c37c09ab41915d5268519c9ba898e",
+    "owned-containment.json": "8c6d3f06db019f508a71169bc8a1cbfadffd0336dd443b91756021a2ee0e2d73",
+    "preservation-before.json": "d94eaf1280e1cb2032ccb2302a2c2d97fd8478c606954898fdf3613f70e2aef0",
+    "red-observation.json": "1b75fd731ed2f996468bb9b785d8230bbca1b4765dd3b87a869284f3569b2d79",
+    "saved-request-verification.json": "153271a579cdc496f9ae16c3bbcab3aca7c4e261e0e926ce1175652520853892"
+  },
+  "independent_review": {
+    "initializer_binding_gap_fixed": true,
+    "reviewer": "pause_rehearsal_review",
+    "reviewer_reran_tests_or_provider_calls": false,
+    "status": "pass"
+  },
+  "kind": "phase3b-evaluator-admission-offline-fix-v1",
+  "legacy_am1_control_file_unchanged_sha256": "1c7eaf39997b1de07ea266dc8204a423cdaea3384f992d6532948ced7f81d346",
+  "limitations": [
+    "Local wire ceilings are not provider token-count or context-acceptance guarantees.",
+    "No provider inference/token-count call or paid acceptance check occurred.",
+    "The original failed comparison remains incomplete; no scientific improvement is established.",
+    "Historical 42-method logic evidence and saved-request evidence precede a manifest-only initializer binding amendment; final source checks bind the unchanged code and fixtures."
+  ],
+  "new_live_kit_created": false,
+  "next_decision": "Decide compatible assessment-only reuse of preserved generation under current identity/accounting; do not reopen the closed study or automatically regenerate.",
+  "owned_runtime": {
+    "both_exact_owned_observers_independently_absent": true,
+    "bounded_writable_output_only": true,
+    "existing_viewers_untouched": true,
+    "initial_cli_entrypoint_startup_exited_before_tests_and_was_removed": true,
+    "network_none": true,
+    "pinned_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "readonly_source_and_root": true
+  },
+  "paid_continuation_started": false,
+  "preservation": {
+    "all_twelve_fixed_candidates_and_selection_preserved": true,
+    "broad_artifact_scan_performed": false,
+    "closed_ledger_reopened": false,
+    "explicit_ordinary_files_verified_unchanged": 29,
+    "historical_outcomes_authority_and_holds_preserved": true,
+    "journal_and_final_eight_reports_preserved": true,
+    "native_eight_rollouts_and_c1_c2_selection_preserved": true,
+    "prior_scientific_status": "incomplete"
+  },
+  "preserved_controls": [
+    "Frozen provider/model/settings and output ceilings",
+    "Legacy AM-1 policy and all non-evaluator admission roles",
+    "Full-context maximum-liability reservations",
+    "Existing dollar/token/request caps",
+    "Unknown delivery/usage holds and no-resend behavior",
+    "Pinned Harness2 and NoveltyBench sources and scoring protocol"
+  ],
+  "production_change": "Only Phase3B group/quality local-wire admission overrides the historical AM-1 byte ceilings; shared live and saved validation use the same validator.",
+  "provider_calls": 0,
+  "public_source_sha256": "dfdcb588ad3cb8e14b675a14d63bc650ff6c0c5e5fa8b83b698f50d690d10ed8",
+  "regression": {
+    "actual_missing_request_now_admitted_offline": true,
+    "actual_missing_request_reconstructed_not_captured": true,
+    "actual_reconstructed_request_sha256": "19fcfbe1226074b81666a4ac3479b3626e8055cac63cfbcb3741da7d711ed25c",
+    "old_rejection_reproduced_before_fix": true,
+    "preceding_two_admitted_request_hashes_match": true,
+    "request_sent_to_provider": false,
+    "synthetic_native_request_bytes": 6206
+  },
+  "status": "verified-offline",
+  "unchanged_next_request_reservations_micro_usd": {
+    "group": 1661880,
+    "quality": 11440000
+  },
+  "verification": {
+    "actual_completed_portfolios": [
+      "c1",
+      "c2",
+      "fixed"
+    ],
+    "actual_portfolio_requests_rebuilt": 33,
+    "all_nine_blocked_sdk_socket_process_attempt_counts_zero": true,
+    "bandit_production_files": 1,
+    "code_and_test_logic_unchanged_after_42_tests": true,
+    "errors": 0,
+    "failures": 0,
+    "final_source_binding_methods": 3,
+    "full_suite_or_release_acceptance_run": false,
+    "later_manifest_only_change": "Pin the existing reused fixture module and package initializer; final three source checks passed.",
+    "logic_native_financial_strategy_methods": 42,
+    "mypy_production_files": 1,
+    "network_mode": "none",
+    "real_credentials_present": false,
+    "ruff_python_files": 2,
+    "saved_admitted_evaluator_requests_checked": 25,
+    "skips": 0,
+    "static_checks_passed": true,
+    "unique_focused_test_methods": 45
+  }
+}
