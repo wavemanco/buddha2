@@ -13,7 +13,7 @@ from followups.phase3a_readiness_recovery_v1 import support as frozen
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "phase3b-seq2-v1"
 DECLARED_DEFINITION_SHA256 = "84cc77fd0c98b3b3dcb4d299a649b38953b66ed41b117e11a9ef2306cd08bf2e"
-AUTHORITY = ROOT / "evidence" / PREFIX / "continuation-authorization-v1.json"
+AUTHORITY = ROOT / "evidence" / PREFIX / "timing-continuation-authorization-v1.json"
 READ_CONSUMPTION_POLICY = "read-consumption-diagnostic-v1"
 PRIOR_CLOSED_ATTEMPT = {
     "study_sha256": "ed17a788fdd61b203cf7d5c856b635430e824ea254e31cdf215eea76f7d12b5c",
@@ -39,6 +39,15 @@ PRIOR_CLOSED_ARTIFACT_ATTEMPT = {
     "known_requests": 513,
     "unknown_requests": 0,
     "first_pair_spent_micro_usd": 9435450,
+}
+PRIOR_CLOSED_CONTINUATION = {
+    "study_sha256": "90e0562959a2ba5a03411a45aa86be5ed77b6f9115fe0791ee5811f91e94a838",
+    "known_spent_micro_usd": 5877824,
+    "reserved_micro_usd": 0,
+    "provider_calls": 161,
+    "known_requests": 161,
+    "unknown_requests": 0,
+    "first_pair_spent_micro_usd": 5877824,
 }
 PROVIDERS = ROOT / "evidence" / PREFIX / "provider-documentation.json"
 LAUNCHER = ROOT / "phase3b-seq2.ps1"
@@ -107,13 +116,15 @@ def publish(target: Path, value: dict) -> None:
 
 
 def validate_authority() -> dict:
+    from .deadline import CONVERSATION_POLICY
+
     value = read(AUTHORITY)
     expected = {
-        "new_cap_micro_usd": 152313066, "first_cap_micro_usd": 31971901,
+        "new_cap_micro_usd": 146435242, "first_cap_micro_usd": 26094077,
         "first_assessment_sublimit_micro_usd": 25000000, "readiness_included_micro_usd": 35000000,
         "inference_cell_micro_usd": 35000000, "assessment_pool_micro_usd": 70000000,
-        "historical_known_micro_usd": 73731299, "historical_reserved_micro_usd": 22880000,
-        "historical_attempts": 2667, "new_max_attempts": 1674, "potential_request_slots": 2344,
+        "historical_known_micro_usd": 79609123, "historical_reserved_micro_usd": 22880000,
+        "historical_attempts": 2828, "new_max_attempts": 1513, "potential_request_slots": 2344,
         "closed_parent_spent_micro_usd": 12528747, "closed_parent_reserved_micro_usd": 0,
         "closed_parent_attempts": 122,
         "closed_repeat_spent_micro_usd": 1063902, "closed_repeat_reserved_micro_usd": 0,
@@ -122,11 +133,22 @@ def validate_authority() -> dict:
         "closed_artifact_attempt_reserved_micro_usd": 0,
         "closed_artifact_attempts": 513,
         "closed_artifact_attempt_first_pair_spent_micro_usd": 9435450,
+        "closed_continuation_spent_micro_usd": 5877824,
+        "closed_continuation_reserved_micro_usd": 0, "closed_continuation_attempts": 161,
+        "closed_continuation_first_pair_spent_micro_usd": 5877824,
         "cumulative_max_exposure_micro_usd": 248924365, "cumulative_max_attempts": 4341,
     }
-    require(value.get("kind") == "phase3b-s2-continuation-authority-v1" and value.get("authorized") is True
+    require(value.get("kind") == "phase3b-s2-timing-continuation-authority-v1" and value.get("authorized") is True
             and value.get("definition_sha256") == DECLARED_DEFINITION_SHA256
-        and value.get("amendment_id") == "phase3b-continuation-v1"
+        and value.get("amendment_id") == "phase3b-timing-continuation-v1"
+        and value.get("parent_authority_file_sha256")
+            == "6c61ee2a2301c12989f74fdd1fdea61995394bc3228e57316ab0dbf153df8cfb"
+        and value.get("conversation_timing_policy") == CONVERSATION_POLICY
+        and value.get("user_answer") == "proceed"
+        and value.get("annotation_selected_text") == "Next is existing current-source acceptance for the separately authorized four-prompt comparison, followed by fresh keys and execution."
+        and value.get("annotation_source_assistant_message_id") == "msg_0d7d9d4b735ca8b9016aed1dffc2e087d0b3218b34b8dfa8ac"
+        and value.get("approval_timestamp_provided") is False
+        and value.get("created_at_utc_is_approval_timestamp") is False
         and value.get("continuation_proposal_file_sha256")
             == "8e36a5b46d62ae98511031bfe4ab00d51d436faa8279f52380101cba64d35ccd"
         and value.get("continuation_proposal_commit") == "db6956c"
@@ -143,6 +165,9 @@ def validate_authority() -> dict:
             == "7b96fb7364d63e4aaa902f8f90c6b23530b7f09a6c3a05fc9c539b568e3a2c17"
         and value.get("closed_artifact_attempt_first_pair_summary_file_sha256")
             == "cf8bd5b73a46bf42ffd5aeb5d31c2ed7ee1bf86eec009d7fc7671fb00566b079"
+        and value.get("closed_continuation_study") == PRIOR_CLOSED_CONTINUATION["study_sha256"]
+        and value.get("closed_continuation_outcome_file_sha256")
+            == "8f0427b49b740be19d37d57bef806fec7b0e0d24c18cf73599856b4ff6c486cf"
             and all(type(value.get(key)) is int and value[key] == n for key, n in expected.items())
             and value.get("historical_liability_release_authorized") is False
             and value.get("old_results_reused") is False

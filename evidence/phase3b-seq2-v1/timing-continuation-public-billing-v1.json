@@ -1,0 +1,181 @@
+{
+  "account_or_key_probes": 0,
+  "arithmetic_verified_with_decimal": true,
+  "changed_rates_or_reservation_limits_found": false,
+  "created_at_utc": "2026-11-06T00:28:15.573103+00:00",
+  "decision": "Preserve existing frozen public-PAYG prices, modifiers and conservative per-request reservations. Opus5 remains published as available legacy; no model substitution.",
+  "experiment_spend_usd": 0,
+  "frozen_model_ids": [
+    "claude-sonnet-5-5",
+    "claude-opus-5",
+    "gpt-5.6-luna"
+  ],
+  "kind": "phase3b-timing-continuation-public-billing-v1",
+  "limits": [
+    "Public documentation only; no account balances, contracts, defaults or account-specific model availability established.",
+    "Existing estimated35-90USD band is a conditional usage scenario, not guaranteed spend or a provider quote.",
+    "Hard new total146.435242USD/first26.094077USD caps include pending and next-request liabilities; reservations may prevent completion below the cap.",
+    "Actual model identity, request settings, tier/geography, returned usage and unknown charges remain governed by the existing accepted execution path."
+  ],
+  "model_facts": {
+    "claude-opus-5": {
+      "context_tokens": 1000000,
+      "long_context_surcharge": false,
+      "ordinary_max_output_tokens": 128000,
+      "reservation_assumptions": "Full1M input at1h write rate,16000 requested output,10% geography allowance; supplied editor control is standard_only/global; native quality judge preserves omitted controls.",
+      "reservation_expression": "((1000000 * 10 + 16000 * 25) / 1000000) * 1.1",
+      "reservation_usd": "11.440000",
+      "sources": [
+        "https://platform.claude.com/docs/en/models/opus-5/overview",
+        "https://platform.claude.com/docs/en/about-claude/pricing"
+      ],
+      "usd_per_million": {
+        "cache_read": 0.5,
+        "cache_write_1h": 10,
+        "cache_write_5m": 6.25,
+        "input": 5,
+        "output": 25
+      }
+    },
+    "claude-sonnet-5-5": {
+      "context_tokens": 1000000,
+      "long_context_surcharge": false,
+      "ordinary_max_output_tokens": 128000,
+      "reservation_assumptions": "Full1M input at5m write rate,4096 requested output; supplied strategy control is standard_only/global.",
+      "reservation_expression": "(1000000 * 2.50 + 4096 * 10) / 1000000",
+      "reservation_usd": "2.540960",
+      "sources": [
+        "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+        "https://platform.claude.com/docs/en/about-claude/pricing"
+      ],
+      "usd_per_million": {
+        "cache_read": 0.1,
+        "cache_write_1h": 4,
+        "cache_write_5m": 2.5,
+        "input": 2,
+        "output": 10
+      }
+    },
+    "gpt-5.6-luna": {
+      "context_tokens": 1050000,
+      "fast_multiplier": 2,
+      "geography_allowance_multiplier": 1.1,
+      "long_context_comparison": ">",
+      "long_context_input_multiplier": 2,
+      "long_context_output_multiplier": 1.5,
+      "long_context_threshold_input_tokens": 272000,
+      "ordinary_max_output_tokens": 128000,
+      "reservation_assumptions": "Full1.05M input at30m cache-write rate plus128k output, long-context, Fast and10% geography allowances; native Chat judge retains omitted settings.",
+      "reservation_expression": "(1050000 * (0.20 * 1.25 * 2 * 2 * 1.1) + 128000 * (1.20 * 1.5 * 2 * 1.1)) / 1000000",
+      "reservation_input_component_usd": "1.155000",
+      "reservation_output_component_usd": "0.506880",
+      "reservation_usd": "1.661880",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "https://developers.openai.com/api/docs/guides/fast-mode"
+      ],
+      "usd_per_million": {
+        "fast_long_cache_write_30m": 1,
+        "fast_long_input": 0.8,
+        "fast_long_output": 3.6,
+        "standard_long_input": 0.4,
+        "standard_long_output": 1.8,
+        "standard_short_cache_read": 0.02,
+        "standard_short_cache_write_12h": 0.5,
+        "standard_short_cache_write_30m": 0.25,
+        "standard_short_input": 0.2,
+        "standard_short_output": 1.2
+      }
+    }
+  },
+  "prior_record_sha256": "ba40e44b2378ea6692c5176aba4e901bfbf64137db436dc6ea7cd200e274cbba",
+  "public_fetches": [
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.702036+00:00",
+      "bytes": 3873,
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "sha256": "f376a265438581b4914cf7789a625824979769acc83cf3aba1892fbbc78732ab",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.637698+00:00",
+      "bytes": 22164,
+      "final_url": "https://developers.openai.com/api/docs/pricing.md",
+      "sha256": "cce7d025c084192ff382095b95d0c9826b0659e0fff2dada2fb7ec8db4bf8c8a",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/pricing.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.643860+00:00",
+      "bytes": 56584,
+      "final_url": "https://developers.openai.com/api/docs/guides/prompt-caching.md",
+      "sha256": "8c672dafd6a332d4b9ad7464aefa3ca4f6b0fffa8bf66bb5ee087e1b39152711",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.639898+00:00",
+      "bytes": 8788,
+      "final_url": "https://developers.openai.com/api/docs/guides/fast-mode.md",
+      "sha256": "673f3f882070c3245b18d578d4f94cbb2d603c01d4227698bdf67acffb423e80",
+      "status": 200,
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.853625+00:00",
+      "bytes": 52659,
+      "final_url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "sha256": "5864b14c0eb020db52f96b3f42787810ad65d3f28823e317c03b7e9ca345aa49",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.894308+00:00",
+      "bytes": 15037,
+      "final_url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "sha256": "e5f81605991b4580b67dbc17fe6cc4eb1df5f45494ce5acae9ec0a46e68d3311",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.835365+00:00",
+      "bytes": 14215,
+      "final_url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "sha256": "50f1680eb95585d596e101ee9528e7e5c8ea5feea14efe097f9e9c6dcfb8b4b0",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.910963+00:00",
+      "bytes": 29831,
+      "final_url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md",
+      "sha256": "543b0ad2a2f7d1cd996e4738befadf34488d1856d63f8a867e436d729891e872",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:33.970990+00:00",
+      "bytes": 29520,
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md",
+      "sha256": "d3ca3ba76f2a9d0124d8ee28b6a77bc2aac74928606bb433a26a457acfcfdd31",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md"
+    },
+    {
+      "accessed_at_utc": "2026-11-06T00:26:34.068368+00:00",
+      "bytes": 10024,
+      "final_url": "https://platform.claude.com/docs/en/api/service-tiers.md",
+      "sha256": "98b72918a849482f62cb8610a21a6d40e67d2b190fe96d958933bdb8052c6f80",
+      "status": 200,
+      "url": "https://platform.claude.com/docs/en/api/service-tiers.md"
+    }
+  ],
+  "reservation_usd": {
+    "claude-opus-5": "11.44",
+    "claude-sonnet-5-5": "2.54096",
+    "gpt-5.6-luna": "1.66188"
+  }
+}

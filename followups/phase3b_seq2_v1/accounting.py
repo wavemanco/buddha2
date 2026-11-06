@@ -1,7 +1,7 @@
 """Versioned HI worklist and replay around immutable request/accounting helpers.
 
 The 2344 potential slots are not a 2344-call allowance. All old economic guards
-remain delegated, with a separate 2344-admission ceiling and sixteen-round scope.
+remain delegated, with a remaining-admission ceiling and twenty-four-turn scope.
 No frozen module globals or manifests are modified or projected.
 """
 
@@ -25,16 +25,16 @@ from . import ledger_core as core
 from . import transport as bounded
 from .deadline import CONVERSATION_POLICY, KnownDeadlineStop, TimingStop, validate_stop
 from .support import IMAGE_ID as IMAGE_ID
-from .support import NATIVE, checked, read, runtime_guard, safe
+from .support import NATIVE, PRIOR_CLOSED_CONTINUATION, checked, read, runtime_guard, safe
 
 PREFIX = "phase3b-seq2-v1"
 POLICY = copy.deepcopy(core.POLICY)
-POLICY.update(id="phase3b-seq2-continuation-accounting-v1",
-              phase_micro_usd=152_313_066, first_micro_usd=31_971_901)
+POLICY.update(id="phase3b-seq2-timing-continuation-accounting-v1",
+              phase_micro_usd=146_435_242, first_micro_usd=26_094_077)
 WORKLIST_PROFILE = {
-    "id": "phase3b-seq2-continuation-worklist-v1",
+    "id": "phase3b-seq2-timing-continuation-worklist-v1",
     "potential_request_slots": 2344,
-    "maximum_admitted_attempts": 1674,
+    "maximum_admitted_attempts": 1513,
     "editor_stages_per_cell": 6,
     "shape_attempts_per_stage": 2,
     "editor_turns_per_conversation": 24,
@@ -57,6 +57,7 @@ Validator = Callable[[dict], None]
 OwnerStopRequired = parent.OwnerStopRequired
 RETIRED_STUDIES = parent.RETIRED_STUDIES | frozenset(
     {
+        PRIOR_CLOSED_CONTINUATION["study_sha256"],
         "bc86391000266d413276de0f9ca8fb7f4f5b65632aa509d650f8236a48735be8",
         "a233fbc5ed3fedaa21e6b364ecfbfdd15496e25c005897067eb2cc7aed90d28a",
         "080c6ec2bbc1477002a83f7bb91bf0c3f86799ffa1fddd693ced2bdbbccc4f34",

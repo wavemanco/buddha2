@@ -147,11 +147,11 @@ class LaunchBoundaryTests(unittest.TestCase):
     def test_authority_is_the_exact_whole_block_with_no_old_hold_release(self):
         value = validate_authority()
         self.assertEqual(value, read(AUTHORITY))
-        self.assertEqual(value["new_cap_micro_usd"], 152313066)
-        self.assertEqual(value["first_cap_micro_usd"], 31971901)
-        self.assertEqual(value["historical_known_micro_usd"], 73731299)
-        self.assertEqual(value["new_max_attempts"], 1674)
-        self.assertEqual(value["historical_attempts"], 2667)
+        self.assertEqual(value["new_cap_micro_usd"], 146435242)
+        self.assertEqual(value["first_cap_micro_usd"], 26094077)
+        self.assertEqual(value["historical_known_micro_usd"], 79609123)
+        self.assertEqual(value["new_max_attempts"], 1513)
+        self.assertEqual(value["historical_attempts"], 2828)
         self.assertEqual(value["closed_parent_attempts"], 122)
         self.assertEqual(value["closed_repeat_attempts"], 35)
         self.assertEqual(value["closed_repeat_spent_micro_usd"], 1063902)
@@ -161,6 +161,13 @@ class LaunchBoundaryTests(unittest.TestCase):
         self.assertEqual(value["closed_artifact_attempt_first_pair_spent_micro_usd"], 9435450)
         self.assertEqual(value["closed_artifact_attempt_study"],
                          support.PRIOR_CLOSED_ARTIFACT_ATTEMPT["study_sha256"])
+        self.assertEqual(value["closed_continuation_study"], support.PRIOR_CLOSED_CONTINUATION["study_sha256"])
+        self.assertEqual(value["closed_continuation_attempts"], 161)
+        self.assertEqual(value["closed_continuation_spent_micro_usd"], 5877824)
+        self.assertEqual(value["closed_continuation_first_pair_spent_micro_usd"], 5877824)
+        self.assertEqual(value["conversation_timing_policy"]["id"], "phase3b-soft-timing-v1")
+        self.assertEqual(value["user_answer"], "proceed")
+        self.assertFalse(value["created_at_utc_is_approval_timestamp"])
         self.assertEqual(value["cumulative_max_exposure_micro_usd"], 248924365)
         self.assertFalse(value["historical_liability_release_authorized"])
         self.assertTrue(value["calls_require_offline_gate_and_fresh_masked_keys"])
@@ -176,18 +183,21 @@ class LaunchBoundaryTests(unittest.TestCase):
             repeat.write_bytes(b'{"closed-repeat":true}\n')
             artifact = directory / "live-study-read-diagnostic-r2.json"
             artifact.write_bytes(b'{"closed-artifact-attempt":true}\n')
+            continuation = directory / "live-study-continuation-v1.json"
+            continuation.write_bytes(b'{"closed-continuation":true}\n')
             checked = {key: char * 64 for key, char in zip(launch._BINDINGS, "abcdef", strict=True)}
             study = checked["study_sha256"]
             checked.update(mode="provider", fixture=False, run=str(support.NATIVE / study / "live"),
                            journal=str(launch.accounting.canonical_journal(study, False)))
             with patch.object(launch, "BASE", directory):
                 record = launch._live_study_claim(checked, publish=True)
-                self.assertEqual(record["cap_micro_usd"], 152313066)
-                self.assertEqual(record["first_cap_micro_usd"], 31971901)
+                self.assertEqual(record["cap_micro_usd"], 146435242)
+                self.assertEqual(record["first_cap_micro_usd"], 26094077)
                 self.assertEqual(closed.read_bytes(), b'{"closed":true}\n')
                 self.assertEqual(repeat.read_bytes(), b'{"closed-repeat":true}\n')
                 self.assertEqual(artifact.read_bytes(), b'{"closed-artifact-attempt":true}\n')
-                self.assertTrue((directory / "live-study-continuation-v1.json").is_file())
+                self.assertEqual(continuation.read_bytes(), b'{"closed-continuation":true}\n')
+                self.assertTrue((directory / "live-study-timing-continuation-v1.json").is_file())
                 self.assertEqual(launch._live_study_claim(checked), record)
                 checked.update(study_sha256="f" * 64, run=str(support.NATIVE / ("f" * 64) / "live"),
                                journal=str(launch.accounting.canonical_journal("f" * 64, False)))
@@ -215,6 +225,17 @@ class LaunchBoundaryTests(unittest.TestCase):
                        {"closed_artifact_attempt_summary_file_sha256": "0" * 64},
                        {"closed_artifact_attempt_first_pair_summary_file_sha256": "0" * 64},
                        {"continuation_proposal_file_sha256": "0" * 64},
+                       {"new_cap_micro_usd": 152313066}, {"first_cap_micro_usd": 31971901},
+                       {"new_max_attempts": 1674}, {"historical_known_micro_usd": 73731299},
+                       {"historical_attempts": 2667}, {"closed_continuation_spent_micro_usd": 0},
+                       {"closed_continuation_attempts": 0}, {"closed_continuation_reserved_micro_usd": 1},
+                       {"closed_continuation_first_pair_spent_micro_usd": 0},
+                       {"closed_continuation_study": "f" * 64},
+                       {"closed_continuation_outcome_file_sha256": "0" * 64},
+                       {"parent_authority_file_sha256": "0" * 64}, {"user_answer": "not authorized"},
+                       {"annotation_source_assistant_message_id": "not a user approval"},
+                       {"created_at_utc_is_approval_timestamp": True},
+                       {"conversation_timing_policy": valid["conversation_timing_policy"] | {"grace_seconds": 0}},
                        {"rollover_only_no_additional_funds": False},
                        {"subsequent_paid_repetition_authorized": True}):
             with self.subTest(change=change), patch.object(support, "read", return_value=valid | change):

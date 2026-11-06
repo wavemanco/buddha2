@@ -27,17 +27,19 @@ def _historical_resources(study: dict, state: dict) -> dict:
     closed = study.get("prior_closed_attempt", {})
     repeat = study.get("prior_closed_repeat", {})
     artifact = study.get("prior_closed_artifact_attempt", {})
+    continuation = study.get("prior_closed_continuation", {})
     known, reserved = prior["known_spent_micro_usd"], prior["reserved_micro_usd"]
     closed_known = (closed.get("known_spent_micro_usd", 0) + repeat.get("known_spent_micro_usd", 0)
-                    + artifact.get("known_spent_micro_usd", 0))
+                    + artifact.get("known_spent_micro_usd", 0) + continuation.get("known_spent_micro_usd", 0))
     closed_reserved = (closed.get("reserved_micro_usd", 0) + repeat.get("reserved_micro_usd", 0)
-                       + artifact.get("reserved_micro_usd", 0))
+                       + artifact.get("reserved_micro_usd", 0) + continuation.get("reserved_micro_usd", 0))
     fixture = state["fixture"]
     total_known = None if fixture else known + closed_known + state["spent_micro_usd"]
     total_reserved = None if fixture else reserved + closed_reserved + state["reserved_micro_usd"]
     total_calls = None if fixture else (
         prior["provider_calls"] + closed.get("provider_calls", 0)
-        + repeat.get("provider_calls", 0) + artifact.get("provider_calls", 0) + state["provider_calls"]
+        + repeat.get("provider_calls", 0) + artifact.get("provider_calls", 0)
+        + continuation.get("provider_calls", 0) + state["provider_calls"]
     )
     exposure = None if fixture else (
         known + closed_known + reserved + closed_reserved
@@ -52,6 +54,7 @@ def _historical_resources(study: dict, state: dict) -> dict:
         "prior_closed_phase3b_attempt": copy.deepcopy(closed),
         "prior_closed_phase3b_repeat": copy.deepcopy(repeat),
         "prior_closed_phase3b_artifact_attempt": copy.deepcopy(artifact),
+        "prior_closed_phase3b_continuation": copy.deepcopy(continuation),
         "lineage_spent_micro_usd": total_known,
         "lineage_reserved_micro_usd": total_reserved,
         "lineage_max_exposure_micro_usd": exposure,
@@ -739,6 +742,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             "prior_closed_attempt",
             "prior_closed_repeat",
             "prior_closed_artifact_attempt",
+            "prior_closed_continuation",
             "read_consumption_policy",
             "rank_io_profile",
         )

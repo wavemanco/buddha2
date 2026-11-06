@@ -1,0 +1,113 @@
+{
+  "actual_host_gates": {
+    "all_four_exact_owners_independently_absent": true,
+    "configuration_bridge_owner_not_executed": true,
+    "current_readiness_and_grant_consumed": true,
+    "independent_gate_review_file_sha256": "b2b9d4cdba39f85e7a2840fa411a5d16b8f6751d72cc5c806100d4b30c8339f0",
+    "provider_mode_host_bind_preflight_passed": true,
+    "viewer_untouched": true,
+    "windows_powershell_configuration_passed": true
+  },
+  "additional_repetition_authorized": false,
+  "api_spend_usd": 0,
+  "billing_check_file_sha256": "49710c6cfad0c5178096f90ac71a1d9471cee6ba73241a48cfa020ece6195402",
+  "canonical_source_sha256": "da77ba399f3f55fad784d136a7271ee22716bf36282122608ea2ec5bf1b9a203",
+  "caps": {
+    "included_first_prompt_micro_usd": 26094077,
+    "maximum_new_requests": 1513,
+    "total_micro_usd": 146435242
+  },
+  "checks": {
+    "actual_linux_passes": 149,
+    "actual_pinned_runtime_guard_passed": true,
+    "actual_windows_passes": 2,
+    "bandit_existing_comment_warnings_only": true,
+    "bandit_production_files": 5,
+    "errors": 0,
+    "failures": 0,
+    "groups": {
+      "financial": {
+        "methods": 22,
+        "receipt_file_sha256": "eaaa5ce00daf09717168ceddb70e59be19f58a9f4baba50fbe25aac103d6fa2a"
+      },
+      "message_history": {
+        "methods": 31,
+        "receipt_file_sha256": "773ded392007e472e690d5fa8e36aad86a98f3ed0176b6d1029b460ffa2fbf61"
+      },
+      "native_contract": {
+        "methods": 16,
+        "receipt_file_sha256": "520ecbc94532a4356e37588ac72ebdf961e973e889552f7f0aa3c139c665550a"
+      },
+      "source_coverage": {
+        "methods": 36,
+        "receipt_file_sha256": "158300eb616715ceab2ea5b3fbbc52909d4a675497d9d7686aa8ea4bceb5193b"
+      },
+      "strategy": {
+        "methods": 8,
+        "receipt_file_sha256": "0cf54625bdf63e4a4aa3718cd7c89b1b67baf305d9b2a66f20dbc63a48d71ca3"
+      },
+      "transport": {
+        "methods": 38,
+        "receipt_file_sha256": "9b5358cfc01695dd493df47d3b8311d3ce78c58d5777b2ad40ff3d0e2b9eaf92"
+      }
+    },
+    "mypy_production_files": 5,
+    "ruff_python_files": 8,
+    "scoped_static_checks_passed": true,
+    "skips": 0,
+    "source_before_after_identical": true,
+    "source_coverage_domains": {
+      "linux": 34,
+      "windows": 2
+    },
+    "unique_methods": 151
+  },
+  "created_at_utc": "2026-11-06T00:58:18.663038+00:00",
+  "effective_source_inputs": 163,
+  "grant_sha256": "431e79397022e42160ee9e87bd6e147423576e63b12cfdaeaabeb39d819c03fe",
+  "kind": "phase3b-timing-continuation-offline-acceptance-v1",
+  "launcher_sha256": "131ba785a037039da1941f85f1d3c43ef4fbf4423f369ebb4d6a2254c92470b0",
+  "limits": [
+    "Canonical current-source acceptance; no separate public-profile H1 execution or archive/cold campaign.",
+    "The initial Windows scratch invocation executed zero tests due to double encoding. Its failed observation remains; the two actual methods subsequently passed once.",
+    "Docker archive-copy did not expose RAM tmpfs output. Only named observations and the manifested current release were transferred through the existing exec stream; no tests were repeated for transfer.",
+    "Actual live-provider completion and scientific results remain unmeasured. The prior actual-native human rehearsal keeps its accelerated initial-request and mocked-provider limits."
+  ],
+  "lineage": {
+    "historical_hold_micro_usd": 22880000,
+    "hold_released": false,
+    "known_cost_micro_usd": 79609123,
+    "maximum_cumulative_requests": 4341,
+    "maximum_exposure_micro_usd": 248924365,
+    "prior_calls": 2828
+  },
+  "next_step": "Publish the reviewed accepted kit, request fresh masked keys, then execute the approved single four-prompt comparison through existing reviews, Inspect exports and closure with the dedicated keyless supervisor.",
+  "old_studies_reopened_or_requalified": false,
+  "passed": true,
+  "policy_sha256": "fd7320d91fc0b61d7cb3e1785978e9639c9c724d5718c4bd90453c83c3490cd4",
+  "provider_calls": 0,
+  "public_source_sha256": "cdbd29e6e257c88338ae865cec11eb94defa37420a12aa800827e4fd44b050a3",
+  "raw_local_observations_sha256": {
+    "actual-host-config-v1.json": "7cdea10f1b0ad518cca8c61e8e7d7b2b0dc86482ddc5b436008e1f75ab18fbe8",
+    "actual-provider-preflight-cleanup-v1.json": "d31047a1026a9dd9afdfb2352b441151fba87face99c0cabaacdf181488425c1",
+    "actual-provider-preflight-observation-v1.json": "dd607b1c1c57777e22462d707c359d9dc0c09fb16a5affe606a95a3a6cf36240",
+    "final-host-gate-independent-v1.json": "b2b9d4cdba39f85e7a2840fa411a5d16b8f6751d72cc5c806100d4b30c8339f0",
+    "root-static-v1.json": "b70d711d8778cb6c15ec27a0960c26137fe85d8f5d0023730fb9950dfb24e1e5",
+    "windows-bootstrap-supplement-v2.json": "9ed90f037fd32a5ff339ff0fef073aed4bd197f32f8a78ab63d4e3499d9d0ac0",
+    "windows-bootstrap-supplement.json": "119dcd36cd43ecf0c1b8c891dc830d1df4690b5f97ddb1f079b7fc684233c445"
+  },
+  "readiness": {
+    "manifest_file_sha256": "178b9d8f2f010827dfb43af98dd441f2a67b164b16ab4120fb61b45a19ba14e5",
+    "manifest_seal": "8e132d1be219b77661a35ceacaaf154de7ef987a13024072f2d8dc7ae4e14609",
+    "producer": "/root/pause_rehearsal_review",
+    "production_validator_consumed_current_evidence": true,
+    "review_file_sha256": "e5c1ba95cca26e8db9b5af7ed8e41b48a120d002ce4500d834dc57296ca3da62",
+    "review_seal": "83d252372853d8f43a401e1c1bb07ccc278c8aaf4a45da62bf435962483e69b5",
+    "reviewer": "/root/timing_publication"
+  },
+  "real_credentials_used": false,
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "scientific_comparison_started": false,
+  "source_sha256": "da77ba399f3f55fad784d136a7271ee22716bf36282122608ea2ec5bf1b9a203",
+  "study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623"
+}

@@ -2,9 +2,9 @@
   "kind": "buddha2-effective-source-inputs-v2",
   "files": [
     "configs/phase3b-development.json",
-    "evidence/phase3b-seq2-v1/continuation-authorization-v1.json",
     "evidence/phase3b-seq2-v1/provider-documentation.json",
     "evidence/phase3b-seq2-v1/public-billing-review-v1.json",
+    "evidence/phase3b-seq2-v1/timing-continuation-authorization-v1.json",
     "followups/inspect_visibility_i1/__init__.py",
     "followups/inspect_visibility_i1/importer.py",
     "followups/inspect_visibility_i1/paths.py",
