@@ -302,6 +302,29 @@ def preserve() -> dict:
 
 READINESS_BINDINGS = ("study_sha256", "source_sha256", "runtime_sha256", "policy_sha256", "launcher_sha256")
 READINESS_CHECKS = frozenset({"financial", "transport", "message_history", "strategy", "native_contract", "source_coverage"})
+REQUIRED_REGRESSION_TESTS = frozenset({
+    # Representation changes must preserve the actual native artifact and tool payloads.
+    "followups.phase3b_seq2_v1.test_information_s2.InformationGuardTests.test_earlier_completion_witness_accepts_only_block_cache_changes",
+    "followups.phase3b_seq2_v1.test_information_s2.InformationGuardTests.test_saved_selector_replays_actual_written_output_with_different_final_prose",
+    "followups.phase3b_seq2_v1.test_native_s2.NativeS2Tests.test_native_relay_binds_consumed_file_or_stdout_after_different_final_prose",
+    # Pinned read rendering and incomplete coverage must remain diagnostic.
+    "followups.phase3b_seq2_v1.test_delivery_s2.PagedReadTests.test_actual_footer_excludes_metadata_and_accepts_later_offset",
+    "followups.phase3b_seq2_v1.test_read_audit_reporting_s2.ReadAuditReportingCases.test_incomplete_audit_is_retained_without_blocking_completed_fixture",
+    # A soft timing pause must preserve both continuation and hard financial limits.
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_saved_543_second_shortfall_keeps_full_request_budget_in_new_mode",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_review_pauses_before_admission_and_continue_excludes_waiting_time",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_hard_money_token_and_request_caps_precede_any_timing_pause",
+    # Signed history and actual owned SDK response handling stay binding.
+    "followups.phase3b_seq2_v1.test_information_s2.HistoryGuardTests.test_signed_normal_history_passes_but_prefix_or_signature_tamper_stops_before_dispatch",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SelectorOwnedWorkerTests.test_actual_pinned_selector_sdk_response_has_bound_native_role_audit",
+    "followups.phase3b_seq2_v1.test_workflow_s2.WorklistCases.test_unknown_liability_and_remaining_gate",
+    "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_evaluator_reservations_and_legacy_limits_are_unchanged",
+    # The consumer must accept the whole producer contract, including future limit changes.
+    "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_quality_request_at_saved_failure_size_is_admitted",
+    "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_native_requests_cover_entire_allowed_portfolio_text_envelope",
+    "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_evaluator_size_boundaries_and_frozen_profiles",
+    "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_preflight_rejects_changed_producer_limit_without_consumer_change",
+})
 
 
 def offline_readiness(study_path: Path, bindings: dict) -> dict:
@@ -327,6 +350,7 @@ def offline_readiness(study_path: Path, bindings: dict) -> dict:
         and isinstance(manifest.get("checked_by"), str) and bool(manifest["checked_by"].strip())
         and isinstance(manifest.get("checks"), dict) and set(manifest["checks"]) == READINESS_CHECKS,
         "current offline readiness checks are incomplete")
+    observed_tests: set[str] = set()
     for name in sorted(READINESS_CHECKS):
         reference = manifest["checks"][name]
         filename = f"offline-checks/{name}.json"
@@ -345,6 +369,9 @@ def offline_readiness(study_path: Path, bindings: dict) -> dict:
             and all(type(record.get(key)) is int and record[key] == 0
                 for key in ("exit_code", "failures", "errors", "skipped")),
             "current offline check receipt is incomplete or changed")
+        observed_tests.update(record["test_ids"])
+    require(REQUIRED_REGRESSION_TESTS.issubset(observed_tests),
+        "current offline checks omit required historical regressions")
     manifest_hash = file_hash(directory / "offline-readiness.json")
     review = load("independent-review.json", "buddha2-offline-independent-review-v2")
     require(set(review) == common | {"manifest_file_sha256", "manifest_sha256", "reviewer", "independent", "notes"}

@@ -8,6 +8,7 @@ import stat
 from pathlib import Path
 from typing import Any
 
+from buddha2 import phase2_contracts as portfolio_contract
 from buddha2.artifacts import (
     ContractError,
     digest,
@@ -17,9 +18,9 @@ from buddha2.artifacts import (
 )
 from followups.phase3a_v1 import native as frozen
 
-from . import contract, editor, strategy
+from . import contract, editor, ledger_core, strategy
 from .deadline import NATIVE_TIMEOUT
-from .support import PRIVATE, safe
+from .support import PRIVATE, ROOT, safe
 from .support import read as read_json
 
 Phase3NativeAssessment = frozen.Phase3NativeAssessment
@@ -27,6 +28,29 @@ _modules = frozen._modules
 BENCHMARK, SUBSTRATE = "noveltybench-phase3b", frozen.SUBSTRATE
 LABELS = ("base1", "base2", "inv1", "dom1", "c1", "inv2", "dom2", "c2")
 STAGES = ("inv1", "dom1", "c1", "inv2", "dom2", "c2")
+
+
+def validate_evaluator_capacity(task: dict) -> dict[str, int]:
+    """Exercise current producer maxima through real builders, without dispatch."""
+    task = copy.deepcopy(task)
+    # This valid character takes six bytes in canonical JSON: the worst UTF-8 expansion.
+    task["prompt"] = "\x01" * portfolio_contract.MAX_PROMPT_CHARS
+    slots = [f"capacity-answer-{i}" for i in range(10)]
+    portfolio = portfolio_contract.make_portfolio(task, [
+        {"id": f"capacity-{i}", "text": "\x01" * portfolio_contract.MAX_RESPONSE_CHARS,
+         "status": "ok", "request_id": slot} for i, slot in enumerate(slots)
+    ], method="A", repeat=1, model={"requested": "fixture-no-model", "returned": "fixture-no-model"},
+        settings_sha256="0" * 64, procedure_sha256="0" * 64,
+        request_ids=slots, study_sha256="0" * 64, fixture=True)
+    evaluator = Phase3NativeAssessment(ROOT / ".upstream/novelty-bench")
+    requests = {"group": [evaluator.group_request(portfolio)],
+                "quality": evaluator.quality_requests(portfolio, list(range(len(slots))))}
+    sizes = {}
+    for role, bodies in requests.items():
+        for body in bodies:
+            ledger_core.validate_request(role, body)
+        sizes[role] = max(len(ledger_core._wire(body)) for body in bodies)
+    return sizes
 
 
 class RequiredCheckpointStop(ContractError):

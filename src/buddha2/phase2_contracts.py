@@ -10,6 +10,9 @@ from typing import Any
 
 from .artifacts import ContractError, digest, read_json, write_bytes_once, write_once
 
+MAX_PROMPT_CHARS = 100_000
+MAX_RESPONSE_CHARS = 100_000
+
 _KINDS = {False: "phase2-portfolio-live-v2", True: "phase2-portfolio-walkthrough-v2"}
 _PORTFOLIO_KEYS = {
     "schema_version", "kind", "fixture", "portfolio_id", "task", "responses", "provenance",
@@ -20,7 +23,7 @@ _PROVENANCE_KEYS = {
 }
 
 
-def _text(value: Any, label: str, limit: int = 100_000) -> None:
+def _text(value: Any, label: str, limit: int) -> None:
     if not isinstance(value, str) or not value.strip() or len(value) > limit or "\x00" in value:
         raise ContractError(f"invalid {label}")
 
@@ -89,7 +92,7 @@ def validate_portfolio(value: Any) -> None:
     task = value["task"]
     _record(task, {"id", "prompt", "domain", "source_context"}, "task")
     for field in ("id", "prompt", "domain"):
-        _text(task[field], f"task {field}", 100_000 if field == "prompt" else 256)
+        _text(task[field], f"task {field}", MAX_PROMPT_CHARS if field == "prompt" else 256)
     context = task["source_context"]
     _record(context, {"dataset", "revision", "source_sha256", "source_task_id"}, "source")
     for field in ("dataset", "source_task_id"):
@@ -124,7 +127,7 @@ def validate_portfolio(value: Any) -> None:
         _record(response, {"id", "text", "status", "request_id"}, "response")
         for field in ("id", "request_id"):
             _text(response[field], f"response {field}", 256)
-        _text(response["text"], "response text")
+        _text(response["text"], "response text", MAX_RESPONSE_CHARS)
         if (
             not isinstance(response["status"], str)
             or response["status"] not in ("ok", "refused", "empty", "truncated")
@@ -251,7 +254,7 @@ def import_native(source: Path) -> dict:
         raise ContractError("native exchange needs ten mapped responses")
     responses = []
     for index, (text, binding) in enumerate(zip(texts, bindings, strict=True)):
-        _text(text, "native response")
+        _text(text, "native response", MAX_RESPONSE_CHARS)
         _record(binding, {"index", "id", "status", "request_id", "text_sha256"}, "binding")
         if (
             type(binding["index"]) is not int or binding["index"] != index

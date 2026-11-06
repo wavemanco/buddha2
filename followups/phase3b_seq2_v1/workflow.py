@@ -715,6 +715,7 @@ def preflight(
         offline_readiness(study_path, {key: study[key] for key in (
             "study_sha256", "source_sha256", "runtime_sha256", "policy_sha256", "launcher_sha256"
         )})
+        native.validate_evaluator_capacity(_task(study["tasks"][0]))
     state = _state(study, fixture)
     require(
         state["status"] == "ready" and state["reserved_micro_usd"] == 0,

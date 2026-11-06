@@ -1,0 +1,151 @@
+{
+  "api_spend_usd": 0,
+  "authorization": "User requested mandatory regressions and contract-driven checks in the existing preflight, including the changed-limit test, offline verification and reviewed push; no paid calls or engineering detours.",
+  "canonical_source_sha256": "a76755db1cf54c901691b7b9e7fabef59883a2a2ecc79d01a9822795e6a10a63",
+  "changed_limit_test": {
+    "both_incompatible_cases_reject_before_accounting": true,
+    "consumer_ceilings_and_financial_guards_unchanged": true,
+    "counterexamples_derived_from_current_consumer_ceilings": {
+      "answer_chars": 139811,
+      "prompt_chars": 349526
+    },
+    "missing_check_reproduced_before_hook_added": true,
+    "normal_case_reaches_accounting_sentinel": true,
+    "only_producer_limit_changed": true
+  },
+  "changed_source_file_sha256": {
+    "followups/phase3b_seq2_v1/native.py": "4fa8aa97067184b4866e5cf1f1def2938a8f30d1c0eaf6ac2db7e10eefa9980d",
+    "followups/phase3b_seq2_v1/support.py": "152fec6d08d42e098213d31b009e17add75913f9e6c00a834bb180b8ddaa271a",
+    "followups/phase3b_seq2_v1/test_capacity_s2.py": "32a398d4000873768b99f4ec88fb5547f83bdc415913681f41f543248304aff2",
+    "followups/phase3b_seq2_v1/test_launch_s2.py": "36bad005c6a78123aee605b4f419e06e085c2e70ffa19e4b0544b76bb33d7677",
+    "followups/phase3b_seq2_v1/workflow.py": "2dac66cb7f4a53b453d81a45729965e7836055706c543ad2686d1754a4159db9",
+    "src/buddha2/phase2_contracts.py": "4d09c4996822f6176070936daaa37f80ebfe02be43378e9485307edebaad8b06"
+  },
+  "effective_source_inputs": 165,
+  "evidence_receipt_sha256": {
+    "changed-limit-red.json": "c99a518f3b2b6790258c1d463a2d8437778b9a70f54b211ac730580bccdb5908",
+    "client-module-recovery.json": "6d284f4fee41adee45eab316a1b86ae5a846438b428099bcbbae29c78d035820",
+    "final-gate-tests.json": "dc314ee49b8c1468e42b222c03fd534648cd75f07ae6b1781e353bc64e7a2430",
+    "final-verification.json": "50e94ac2a813c9095658e031f3298283007749426f3fb95d37edf788d36841a9",
+    "focused-tests.json": "625ca1473a752fa65cf4257e297f77ff7780ddc0fe5e2788f5b6ff9597c4ceb5",
+    "owned-absence-review.json": "e19640e970d62cd6c80c7d81722c10bcc28d9ec1235d46dbd81c6e11e9a32411",
+    "owned-cleanup.json": "5998c3c085e377a3d1a2288585a9b33356004e40d635563e9250adfa15a194c9",
+    "owned-containment.json": "5a42b42c94c39460fe253bcd6929d9b2b6b5e985d04ac5451ebeb8dace5b89b0",
+    "preservation-before.json": "f0149c2a4e5456500c3e940a2cac39c5ccf7a299b3e5452f7b7ef11d6efbe439",
+    "required-client-regressions.json": "0824d5e3589be21b0a47715751bfa8fdad6b5942fa6c81ef484cf7189c8f031c",
+    "static-checks.json": "9d2ed19ea60bbe7820235beaede4dca8ababde87e7d3d759eb67afd1aecbfc6a"
+  },
+  "existing_gate": {
+    "additional_test_ids_allowed": true,
+    "otherwise_green_resealed_packets_missing_each_required_case_rejected": true,
+    "receipt_groups": 6,
+    "required_named_regressions": 16,
+    "required_test_ids": [
+      "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_evaluator_reservations_and_legacy_limits_are_unchanged",
+      "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_evaluator_size_boundaries_and_frozen_profiles",
+      "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_native_requests_cover_entire_allowed_portfolio_text_envelope",
+      "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_preflight_rejects_changed_producer_limit_without_consumer_change",
+      "followups.phase3b_seq2_v1.test_capacity_s2.EvaluatorAdmissionTests.test_quality_request_at_saved_failure_size_is_admitted",
+      "followups.phase3b_seq2_v1.test_delivery_s2.PagedReadTests.test_actual_footer_excludes_metadata_and_accepts_later_offset",
+      "followups.phase3b_seq2_v1.test_information_s2.HistoryGuardTests.test_signed_normal_history_passes_but_prefix_or_signature_tamper_stops_before_dispatch",
+      "followups.phase3b_seq2_v1.test_information_s2.InformationGuardTests.test_earlier_completion_witness_accepts_only_block_cache_changes",
+      "followups.phase3b_seq2_v1.test_information_s2.InformationGuardTests.test_saved_selector_replays_actual_written_output_with_different_final_prose",
+      "followups.phase3b_seq2_v1.test_native_s2.NativeS2Tests.test_native_relay_binds_consumed_file_or_stdout_after_different_final_prose",
+      "followups.phase3b_seq2_v1.test_read_audit_reporting_s2.ReadAuditReportingCases.test_incomplete_audit_is_retained_without_blocking_completed_fixture",
+      "followups.phase3b_seq2_v1.test_runtime_s2.SelectorOwnedWorkerTests.test_actual_pinned_selector_sdk_response_has_bound_native_role_audit",
+      "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_hard_money_token_and_request_caps_precede_any_timing_pause",
+      "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_review_pauses_before_admission_and_continue_excludes_waiting_time",
+      "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_saved_543_second_shortfall_keeps_full_request_budget_in_new_mode",
+      "followups.phase3b_seq2_v1.test_workflow_s2.WorklistCases.test_unknown_liability_and_remaining_gate"
+    ],
+    "schema_unchanged": true,
+    "source_runtime_bindings_and_independent_review_preserved": true
+  },
+  "external_provider_calls": 0,
+  "fresh_live_kit_created": false,
+  "independent_review": {
+    "code_and_evidence_reviewer": "timing_publication",
+    "reviewers_reran_tests": false,
+    "status": "pass",
+    "worker_absence_reviewer": "pause_rehearsal_review"
+  },
+  "kind": "phase3b-preflight-contracts-offline-v1",
+  "limitations": [
+    "Contract-driven maximum-size validation covers the current portfolio-to-NoveltyBench evaluator interface; it is not proof for every future plugin/interface.",
+    "Named regressions cover tested history, representation, timing and financial failure classes, not all unforeseen provider behaviors.",
+    "Local byte ceilings are not provider-token or context-acceptance guarantees.",
+    "No live provider acceptance or new scientific comparison was performed."
+  ],
+  "live_contract_check": {
+    "cached_pass_reused": false,
+    "consumer_wire_ceilings_unchanged": {
+      "group": 8388608,
+      "quality": 2097152
+    },
+    "copies_of_maximum_test_limits_removed": true,
+    "maximum_payload_sizes": {
+      "group": 6601333,
+      "quality": 1200935
+    },
+    "portfolio_is_explicit_unpersisted_synthetic_fixture": true,
+    "producer_limits": {
+      "answer_chars": 100000,
+      "prompt_chars": 100000
+    },
+    "producer_validator_and_native_importer_use_same_declarations": true,
+    "real_pinned_native_request_builders_used": true,
+    "recomputed_on_every_gated_provider_preflight": true,
+    "runs_after_offline_gate_before_accounting_state": true,
+    "worst_json_escape_character_used": true
+  },
+  "new_dependency_or_runner_or_framework": false,
+  "next_decision": "Compatible assessment-only reuse of preserved generation remains separate; no automatic regeneration or paid execution.",
+  "paid_continuation_started": false,
+  "preservation": {
+    "completed_generation_and_closed_journal_and_reports_unchanged": true,
+    "explicit_historical_files_verified_unchanged": 39,
+    "old_study_reopened_or_requalified": false,
+    "prior_fix_evidence_unchanged": true,
+    "prior_holds_and_authorities_unchanged": true,
+    "upstream_sources_unmodified_and_verified_by_native_adapter": true
+  },
+  "public_source_sha256": "ce84037a737091657cc8722bec18021cb8a9a6dfbab5cef0077a393b835332df",
+  "retained_invocation_failures": {
+    "affected_methods": 2,
+    "causes": [
+      "Global socket block also blocked the required local fixture relay.",
+      "stdin could not be imported by a multiprocessing-spawn child."
+    ],
+    "final_summary_schema_key_corrected_without_source_change": true,
+    "initial_client_group_failed": true,
+    "only_affected_two_methods_repeated_via_normal_unittest_module": true,
+    "production_or_test_source_changed_for_that_recovery": false,
+    "provider_calls_or_paid_usage": 0
+  },
+  "runtime": {
+    "existing_viewers_untouched": true,
+    "network_mode": "none",
+    "owned_worker_independently_absent": true,
+    "pinned_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "readonly_code_and_root": true,
+    "real_provider_keys_used": false
+  },
+  "status": "verified-offline",
+  "verification": {
+    "all_required_16_ids_actually_covered": true,
+    "bandit_production_files": 4,
+    "final_errors": 0,
+    "final_failures": 0,
+    "final_gate_and_derived_limit_methods": 10,
+    "full_test_suite_or_live_acceptance_campaign_run": false,
+    "initial_pure_methods": 66,
+    "mypy_production_files": 4,
+    "pure_checks_all_nine_sdk_socket_subprocess_seams_zero": true,
+    "remaining_required_client_history_methods": 9,
+    "ruff_python_files": 6,
+    "sdk_mock_loopback_regressions_reported_separately": true,
+    "skips": 0,
+    "static_checks_passed": true,
+    "unique_test_methods_passed": 75
+  }
+}

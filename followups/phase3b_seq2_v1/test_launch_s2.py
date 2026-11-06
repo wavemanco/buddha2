@@ -33,13 +33,15 @@ class CurrentOfflineReadinessTests(unittest.TestCase):
         target.write_text(json.dumps(value, sort_keys=True, indent=2) + "\n", encoding="utf-8")
         return value
 
-    def profile(self, *, receipt_changes=None, review_changes=None):
+    def profile(self, *, receipt_changes=None, review_changes=None, required_ids=None):
         common = {**self.bindings, "passed": True, "provider_calls": 0, "real_credentials_used": False}
         references = {}
         for name in sorted(support.READINESS_CHECKS):
+            identities = (sorted(support.REQUIRED_REGRESSION_TESTS) if required_ids is None else required_ids) \
+                if name == "native_contract" else ["synthetic." + name]
             body = {**common, "kind": "buddha2-offline-check-v2", "check": name,
                 "command": ["python", "-B", "-m", "unittest", "synthetic." + name],
-                "exit_code": 0, "tests_run": 1, "test_ids": ["synthetic." + name],
+                "exit_code": 0, "tests_run": len(identities), "test_ids": identities,
                 "failures": 0, "errors": 0, "skipped": 0}
             if receipt_changes and name == "financial":
                 body.update(receipt_changes)
@@ -72,6 +74,19 @@ class CurrentOfflineReadinessTests(unittest.TestCase):
                 self.profile(receipt_changes=change)
                 with self.assertRaises(ContractError):
                     support.offline_readiness(self.study, self.bindings)
+
+    def test_missing_named_regression_cannot_pass_with_resealed_green_receipts_and_review(self):
+        for missing in sorted(support.REQUIRED_REGRESSION_TESTS):
+            with self.subTest(missing=missing):
+                identities = sorted(support.REQUIRED_REGRESSION_TESTS - {missing}) + ["synthetic.replacement"]
+                self.profile(required_ids=identities)
+                with self.assertRaisesRegex(ContractError, "required historical regressions"):
+                    support.offline_readiness(self.study, self.bindings)
+
+    def test_required_regressions_allow_additional_tests_without_changing_review_rules(self):
+        self.profile(required_ids=sorted(support.REQUIRED_REGRESSION_TESTS | {"synthetic.additional"}))
+        self.assertEqual(support.offline_readiness(self.study, self.bindings)["profile"],
+                         "buddha2-offline-readiness-v2")
 
     def test_missing_or_changed_receipts_and_private_paths_fail_closed(self):
         manifest = self.profile()

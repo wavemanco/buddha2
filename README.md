@@ -22,7 +22,9 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 ## Current evidence
 
-Status snapshot: **5 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
+**Preflight now requires regression coverage and checks the current producer/evaluator size contract.** Shared limits drive validation and maximum-size requests through the real benchmark builders. All 75 selected offline checks pass, including changed-limit and missing-regression tests; financial guards and saved generation are preserved. See the [preflight update](docs/ENGINEERING_AUDIT.md#mandatory-preflight-regressions-and-contract-checks). No new paid run has started.
+
+Status snapshot: **6 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
 
 **Latest Phase 3B attempt closed incomplete: 353 calls/$11.082350, with zero new held liability.** The first prompt's native two-round path completed normally and fixed best-of-twelve also returned. Final evidence is globally held: zero of eight primary outputs and zero of twelve assessment targets are scored. There is no completed comparison or gain claim.
 

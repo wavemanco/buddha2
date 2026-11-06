@@ -9,13 +9,14 @@ from pathlib import Path
 from unittest.mock import patch
 
 from buddha2 import phase2_am1_controls as am1
+from buddha2 import phase2_contracts as portfolio_contract
 from buddha2.artifacts import ContractError, digest
 from buddha2.phase2_native import NativeAssessment
 from tests.test_phase2_native import sample_portfolio
 
-from . import capacity, ledger_core
+from . import capacity, ledger_core, workflow
 from .mocks import _metadata_reads
-from .support import BASE
+from .support import BASE, READINESS_BINDINGS
 
 
 def request() -> dict:
@@ -89,9 +90,9 @@ class EvaluatorAdmissionTests(unittest.TestCase):
         for character in ("x", "\U0001f600", "\x01", '"', "\\"):
             with self.subTest(character=repr(character)):
                 portfolio = sample_portfolio()
-                portfolio["task"]["prompt"] = character * 100_000
+                portfolio["task"]["prompt"] = character * portfolio_contract.MAX_PROMPT_CHARS
                 for response in portfolio["responses"]:
-                    response["text"] = character * 100_000
+                    response["text"] = character * portfolio_contract.MAX_RESPONSE_CHARS
                 portfolio["portfolio_id"] = "portfolio-" + digest(
                     {k: v for k, v in portfolio.items() if k != "portfolio_id"})
                 group = self.native.group_request(portfolio)
@@ -131,6 +132,38 @@ class EvaluatorAdmissionTests(unittest.TestCase):
                              am1.CONTROL_POLICY["maximum_billable_input"][role])
             self.assertEqual(ledger_core._reservation(role)["output"],
                              am1.CONTROL_POLICY["reserved_total_output"][role])
+
+    def test_preflight_rejects_changed_producer_limit_without_consumer_change(self):
+        original = sample_portfolio()["task"]
+        study = {"fixture_boundary_contract": False, "tasks": [{
+            "parent_task_id": original["id"], "prompt": original["prompt"],
+            "source_context": original["source_context"]}],
+            **{key: "a" * 64 for key in READINESS_BINDINGS}}
+        BASE.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="contract-preflight-", dir=BASE) as raw:
+            root = Path(raw)
+            with patch.object(workflow, "load_study", return_value=study), \
+                    patch.object(workflow, "grant_for", return_value={}), \
+                    patch.object(workflow, "paths", return_value=(root / "run", root / "journal")), \
+                    patch.object(workflow, "offline_readiness") as gate, \
+                    patch.object(workflow, "_state", side_effect=AssertionError("accounting reached")) as state:
+                with self.assertRaisesRegex(AssertionError, "accounting reached"):
+                    workflow.preflight(root / "study.json", root / "grant.json", False)
+                gate.assert_called_once()
+                ceilings = copy.deepcopy(ledger_core.POLICY["evaluator_payload_bytes"])
+                changed_limits = {
+                    "MAX_PROMPT_CHARS": max(portfolio_contract.MAX_PROMPT_CHARS + 1,
+                                            ceilings["quality"] // 6 + 1),
+                    "MAX_RESPONSE_CHARS": max(portfolio_contract.MAX_RESPONSE_CHARS + 1,
+                        ceilings["group"] // (6 * len(sample_portfolio()["responses"])) + 1),
+                }
+                for field, value in changed_limits.items():
+                    with self.subTest(field=field), patch.object(portfolio_contract, field, value):
+                        state.reset_mock()
+                        with self.assertRaisesRegex(ContractError, "payload admission"):
+                            workflow.preflight(root / "study.json", root / "grant.json", False)
+                        state.assert_not_called()
+                        self.assertEqual(ledger_core.POLICY["evaluator_payload_bytes"], ceilings)
 
 
 if __name__ == "__main__":
