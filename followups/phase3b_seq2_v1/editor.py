@@ -25,6 +25,7 @@ from buddha2.artifacts import ContractError, digest, read_json, write_once
 from followups.phase3a_compat_c1_v1.support import PRIVATE
 from followups.phase3a_v1 import editor as frozen
 
+from .deadline import CONVERSATION_POLICY, FETCH_TIMEOUT, NATIVE_TIMEOUT
 from .delivery import normalized_output
 from .history import HistoryGuard
 from .support import read as read_public
@@ -32,7 +33,7 @@ from .support import safe
 
 MAX_STEPS = 24
 NORMAL_STEPS = 23
-PROFILE_ID = "phase3b-seq2-editor-read-diagnostic-v1"
+PROFILE_ID = "phase3b-seq2-editor-soft-timing-v1"
 _SERIAL = frozen._SERIAL
 TOOLS, _FALSE = frozen.TOOLS, frozen._FALSE
 _LABEL = re.compile(r"(?:(?:inv[12]|dom[12]|c[12])\.a[12]|select\.seq2)\Z")
@@ -107,7 +108,8 @@ def profile() -> dict:
     return {"id": PROFILE_ID, "steps": MAX_STEPS, "ordinary_steps": NORMAL_STEPS,
             "terminal_turn": MAX_STEPS, "terminal_note_sha256": TERMINAL_NOTE_SHA256,
         "read_consumption_policy": READ_CONSUMPTION_POLICY_ID,
-            "native_subprocess_cap_seconds": 600, "OpenCode_fetch_cap_seconds": 590}
+            "timing_policy": copy.deepcopy(CONVERSATION_POLICY),
+            "native_subprocess_cap_seconds": NATIVE_TIMEOUT, "OpenCode_fetch_cap_seconds": FETCH_TIMEOUT}
 
 
 def terminal_translation() -> dict:
@@ -118,6 +120,7 @@ def terminal_translation() -> dict:
 def configuration(base_url: str) -> dict:
     value = frozen.configuration(base_url)
     value["agent"]["build"]["steps"] = MAX_STEPS
+    value["provider"]["anthropic"]["options"]["timeout"] = FETCH_TIMEOUT * 1000
     return value
 
 
@@ -382,7 +385,7 @@ class AccountedProposer(frozen.AccountedProposer):
             halt("editor_audit_boundary_violation")
             raise ProposerError("editor audit path failed its input boundary")
         Proposer.__init__(self, ChannelSpec(kind="opencode", model="anthropic/claude-opus-5",
-                                     effort="high", steps=MAX_STEPS, timeout=600), audit_dir=audit_dir, attempts=1)
+                                     effort="high", steps=MAX_STEPS, timeout=NATIVE_TIMEOUT), audit_dir=audit_dir, attempts=1)
         self.pilot, self.study_sha256 = pilot, study_sha256
         self.dispatch, self.fixture = dispatch, fixture
         self.halt = halt
@@ -406,6 +409,7 @@ class AccountedProposer(frozen.AccountedProposer):
         value = super().env()
         configured = json.loads(value["OPENCODE_CONFIG_CONTENT"])
         configured["agent"]["build"]["steps"] = MAX_STEPS
+        configured["provider"]["anthropic"]["options"]["timeout"] = FETCH_TIMEOUT * 1000
         value["OPENCODE_CONFIG_CONTENT"] = json.dumps(configured, ensure_ascii=False, allow_nan=False)
         return value
 
@@ -599,7 +603,8 @@ def validate_selector_evidence(*, search: Path, study_sha256: str, pilot: str,
     notes_delivery = None
     if writes:
         saved_output = (session.get("normal_session_proof") or {}).get("saved_output")
-        _require(isinstance(saved_output, str), "native selector lacks its observed saved output")
+        if not isinstance(saved_output, str):
+            raise ContractError("native selector lacks its observed saved output")
         notes_delivery = audit_delivery(body, {cwd + "/output/answer.md": saved_output}, after=writes[-1])
     for call_id, call in calls.items():
         if call["name"] != "read":

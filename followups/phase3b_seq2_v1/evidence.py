@@ -24,6 +24,7 @@ from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES
 
 from . import contract, editor
 from . import transport as bounded
+from .deadline import POLICY, validate_clock
 from .delivery import _history, audit_delivery, audit_original_strategy, normalized_output
 from .support import DECLARED_DEFINITION_SHA256, NATIVE, ROOT
 
@@ -415,13 +416,10 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
     bindings = {key: study[key] for key in ("study_sha256", "source_sha256", "policy_sha256", "launcher_sha256")}
     for stage_name in ("inv1", "dom1", "c1", "inv2", "dom2", "c2", "select.seq2"):
         label = stage_name if stage_name == "select.seq2" else stages[stage_name]["accepted_editor_sessions"][0]
-        clock = _read(search, "editor-audit/conversation-deadlines/" + label + ".json", hashes)
-        _sealed(clock)
+        clock = validate_clock(_read(search, "editor-audit/conversation-deadlines/" + label + ".json", hashes))
         _require(clock["study_sha256"] == study["study_sha256"] and clock["source_sha256"] == study["source_sha256"]
                  and clock["fixture"] is fixture and clock["label"] == label and clock["pilot"] == pilot
-                 and clock["conversation_id"] == pilot + ":adaptive:" + label and clock["seconds"] == 600
-                 and clock["deadline_monotonic"] == clock["started_monotonic"] + 600
-                 and clock["native_subprocess_cap_seconds"] == 600 and clock["OpenCode_fetch_cap_seconds"] == 590
+                 and clock["conversation_id"] == pilot + ":adaptive:" + label
                  and clock["renewable"] is False and clock["editor_profile_sha256"] == digest(editor.profile()), "absolute conversation admission clock differs")
         clock_records[label] = clock
     for slot in sorted(scoped):
@@ -433,9 +431,12 @@ def _verify(study: dict, run: Path, state: dict, branch: dict, fixture: bool,
         if audit["role"] in {"editor", "native_selector"}:
             label = slot.split(".editor.", 1)[1].rsplit(".t", 1)[0]
             clock = clock_records[label]
-            _require(audit["budget"]["conversation_deadline"] == clock["deadline_monotonic"]
+            timing = audit["conversation_timing"]
+            _sealed(timing["gate"])
+            _require(timing["clock"] == clock and audit["budget"]["conversation_deadline"] is None
+                     and audit["budget"]["effective_seconds"] == POLICY.completion
                      and audit["budget"]["started_monotonic"] >= clock["started_monotonic"],
-                     "editor budget changed or renewed its registered conversation deadline")
+                     "editor budget or soft timing proof differs from its registered conversation")
         transport_audits[slot] = audit["sha256"]
     return {"kind": "phase3b-s2-counted-readiness-evidence-v1", "passed": True, "fixture": fixture,
         "study_sha256": study["study_sha256"], "source_sha256": study["source_sha256"], "branch_sha256": branch["sha256"],

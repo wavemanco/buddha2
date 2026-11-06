@@ -18,6 +18,7 @@ from buddha2.artifacts import (
 from followups.phase3a_v1 import native as frozen
 
 from . import contract, editor, strategy
+from .deadline import NATIVE_TIMEOUT
 from .support import PRIVATE, safe
 from .support import read as read_json
 
@@ -364,7 +365,7 @@ def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_roo
     strategy._integrity(isinstance(prop, modules["proposer"].Proposer), "actual native Proposer required")
     strategy._integrity(fixture or callable(halt), "live native execution requires durable global halt")
     channel = modules["spec"].ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high",
-                                         steps=editor.MAX_STEPS, timeout=600)
+                                         steps=editor.MAX_STEPS, timeout=NATIVE_TIMEOUT)
     strategy._integrity(prop.spec == channel, "native editor profile differs")
     strategy._integrity(prop.attempts == 1, "native selector outer retry is not disabled")
     run_root = strategy._path(run_root, existing=False)

@@ -1,0 +1,146 @@
+{
+  "api_spend_usd": 0,
+  "canonical_source_sha256": "26898c3788418aa17dc21a3e6b269abdf61348ac0feeaf57c846a2353fa18178",
+  "changed_code_and_test_files_sha256": {
+    "followups/phase3b_seq2_v1/accounting.py": "4a28a4fb250286eaa6f9adf22a84eaf633ab9591da2a21e4f50aa12a3547ddf4",
+    "followups/phase3b_seq2_v1/adapter.py": "f3b91715aa981a27a6c6c495faba7a566a9604125823e4a1f21e7c065f9ef14c",
+    "followups/phase3b_seq2_v1/capacity.py": "42fd62bd27d7e7ddfa826df79859eda9ec6ec3fbc0ac9a0fb62199ff28e175e9",
+    "followups/phase3b_seq2_v1/deadline.py": "8cf719ba4bbaa5274cd69d418a0bfcf74155dd4f6f272b5a2b565e40fa6cdeac",
+    "followups/phase3b_seq2_v1/editor.py": "024bea6486da7e85a9af7cd07592961dfac54ce849029e3c8ac74d858a645dc8",
+    "followups/phase3b_seq2_v1/evidence.py": "387090671eed35725a2ef503e2408e6df3acd87f3a230ed7870025ca1cc6d2cd",
+    "followups/phase3b_seq2_v1/native.py": "05e6baa7c23865b1fe9e7361b25708a66cb7fad807cc1d48ba26855381ca90dd",
+    "followups/phase3b_seq2_v1/report.py": "71c290bc7cb6092d8865d3cbde527d978e0cb93cd556b15494449142ac42fc1a",
+    "followups/phase3b_seq2_v1/supervision.py": "8ca7d34bb86a91de22aa2a7150959cad3692a64694739cb690703d13e404615a",
+    "followups/phase3b_seq2_v1/test_native_s2.py": "60a4ec569113af739bf5363db7ac28c5f379a9576d59c176aa2af9d0b763917e",
+    "followups/phase3b_seq2_v1/test_required_checkpoint_s2.py": "a979695f4ad1a1b08ccd5d67e7bf9c717eda2aecd8435cc25066abe8a077a4fe",
+    "followups/phase3b_seq2_v1/test_runtime_s2.py": "3e5234e0a8374ae2be3512020230450f5637b662a1d44c2138f9fc5977d30a1e",
+    "followups/phase3b_seq2_v1/transport.py": "14346d8ee9a1b43aca53123cf9448b57bbe616806e74a435c37339b52001c5df",
+    "followups/phase3b_seq2_v1/workflow.py": "24ef2cacf4e01f2ddccf5fc095343cfedf640bb17656c8df28759df3d1cb52bf",
+    "src/buddha2/experiment.py": "6e6838e815a795906193d0c1135b2d60c38b4b63cd4550fb891b1720e2dff76e",
+    "tests/test_experiment_cli.py": "5bde81521c70251d6392bc3135bf7911ed34d38c72a8efa6981fac8c33ea1e0e"
+  },
+  "checks_exercised": [
+    "saved 543-second admission shortfall with fake time",
+    "warning, grace, continue, stop, expiry and late setup",
+    "slow notice and ACK file-write boundaries",
+    "zero intents and SDK calls while paused; same slot after ACK",
+    "hard dollar, token and request precedence",
+    "pinned SDK MockTransport audit and resealed-record negatives",
+    "legacy audit compatibility and unknown-liability/no-resend handling",
+    "native-wrapper configuration and relay integration with simulated subprocess",
+    "required-checkpoint accounting"
+  ],
+  "cleanup": {
+    "absence_independently_observed": true,
+    "exact_test_owner_removed": true,
+    "viewer_untouched": true
+  },
+  "created_at_utc": "2026-11-06T00:04:47.294227+00:00",
+  "earlier_evidence": {
+    "additional_red_regression_methods": 2,
+    "both_methods_pass_final": true,
+    "initial_focused_tests": 65,
+    "initial_result_predates_final_fixes": true,
+    "red_assertion_failures": 1,
+    "red_subcase_errors": 2
+  },
+  "effective_source_inputs": 163,
+  "final_focused_tests": {
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "followups.phase3b_seq2_v1.test_runtime_s2",
+      "tests.test_experiment_cli.ExperimentCLI",
+      "followups.phase3b_seq2_v1.test_workflow_s2.WorklistCases",
+      "followups.phase3b_seq2_v1.test_native_s2.NativeS2Tests.test_selector_opencode_config_denies_candidate_mutation",
+      "followups.phase3b_seq2_v1.test_native_s2.NativeS2Tests.test_native_relay_binds_consumed_file_or_stdout_after_different_final_prose",
+      "followups.phase3b_seq2_v1.test_required_checkpoint_s2.RequiredCheckpointCases"
+    ],
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "4a862f059e18d5aa2f21b77f98ad340326cad02f66f3601beebfebcf27a5e402",
+    "network": "none",
+    "observed_seconds": 133.4928109,
+    "pinned_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "skips": 0,
+    "source_before_after_identical": true,
+    "unique_methods": 67,
+    "unittest_seconds": 128.75
+  },
+  "fresh_study_readiness_kit_or_grant_created": false,
+  "hard_controls": {
+    "admitted_provider_operation_not_paused_or_renewed": true,
+    "existing_inspect_export_window_unchanged": true,
+    "financial_token_and_request_limits_unchanged": true,
+    "provider_cleanup_seconds": 60,
+    "provider_completion_seconds": 240,
+    "unknown_charge_holds_and_no_resend_unchanged": true
+  },
+  "independent_review": {
+    "blockers": 0,
+    "code_and_final_test_static_documentation_evidence_reviewed": true,
+    "reviewer": "/root/timing_final_review",
+    "tests_rerun_by_reviewer": false
+  },
+  "kind": "phase3b-conversation-timing-offline-correction-v1",
+  "limitations": [
+    "Focused canonical offline verification; no complete new acceptance campaign or public-profile H1 run.",
+    "Native-wrapper integration simulates the subprocess; actual human continuation with the native child and live providers remains untested.",
+    "No remote CI execution claimed; this public checkout contains no tracked workflow.",
+    "Prior comparison remains incomplete; no scientific performance conclusion."
+  ],
+  "next_step": "Fresh four-prompt Phase 3B repetition decision, then existing source-bound acceptance before fresh keys; retain prior charges and holds.",
+  "one_slot_permission": {
+    "no_answer_is_not_approval": true,
+    "pause_before_intent": true,
+    "same_conversation_and_next_slot": true,
+    "slow_local_guards_do_not_revoke_that_slot": true,
+    "source_and_readiness_guards_after_ack": true
+  },
+  "paid_repetition_authorized_by_this_correction": false,
+  "policy": {
+    "automatic_grace_seconds": 300,
+    "continue_seconds_from_ack": 600,
+    "id": "phase3b-soft-timing-v1",
+    "local_relay_outer_cap_seconds": 65690,
+    "max_requests_unchanged": 24,
+    "native_outer_cap_seconds": 65700,
+    "operator_review_seconds": 1800,
+    "soft_seconds": 600,
+    "warning_seconds": 480
+  },
+  "preservation": {
+    "all_other_effective_inputs_unchanged_except_existing_public_main_projection": true,
+    "closed_historical_artifacts_identical_sha256": {
+      "docs/phases/phase-3b/PHASE3B_CONTINUATION_LIVE_ATTEMPT_REPORT.md": "cb52509defacd8bb9f0128c19fad59fc7c5d137694e6046b06a45beea3e5f844",
+      "evidence/phase3b-seq2-v1/artifact-binding-offline-fix-v1.json": "e213e84c60fc065bdd35427fc637797dd977afcb10b3d69884a5ae4c62bd5a00",
+      "evidence/phase3b-seq2-v1/continuation-live-outcome-v1.json": "8f0427b49b740be19d37d57bef806fec7b0e0d24c18cf73599856b4ff6c486cf",
+      "evidence/phase3b-seq2-v1/false-stop-correction-offline-v1.json": "c04135ab5882d2357090b0ed32b562dfcb822783230bf48105c5bf7aeb4585f5"
+    },
+    "old_study_reopened_or_requalified": false,
+    "upstream_source_models_prompts_strategies_and_dependencies_not_changed": true
+  },
+  "provider_calls": 0,
+  "public_source_sha256": "671b5f7cfaf9e03968eedfaf32f19ad4516df471f479da0b9f802f550a116a97",
+  "raw_local_observations_sha256": {
+    "boundary-red.log": "61021a3bff8e9846fdbe05be3edc100442f56218ed23794c34fb3085a79b5c9c",
+    "cleanup-independent.json": "a475ebf80223b6821dd3fbd15424b13be0babd5bdc2244fb88209b43e91ff7b5",
+    "final-static-observation.json": "236f6c3b4bfa01013d35e9ec3feb1f8695505b7651bfc8b7714f15d1d64fd812",
+    "focused-final-unit-observation.json": "b717a2e30b37b6520811ae2caacfb4304b65f399a1ac65b23a53b57be14e21b7",
+    "focused-unit-observation.json": "57de1810a9d7f5fbe8df2dbb62c384e09acc1bddad0d5ced984fc38c1d12b140",
+    "independent-code-review.json": "0642f1e474cf2de0645a78f34567e898e0a49110499e02d6e3c5b0f2ff2f7006",
+    "publication-preservation-observation.json": "1b7d61370681baf16b55817fc1d18cb6b5cf430732e8fc6e1589a553d7c950df"
+  },
+  "real_credentials_used": false,
+  "scope": "Existing conversation time controls; no new engine, framework or live study",
+  "static_checks": {
+    "all_exit_codes": 0,
+    "bandit_existing_comment_warnings_only": true,
+    "bandit_production_files": 12,
+    "mypy_production_files": 12,
+    "ruff_files": 16
+  }
+}

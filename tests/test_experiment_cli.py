@@ -47,6 +47,17 @@ class ExperimentCLI(unittest.TestCase):
                 self.assertEqual(experiment.main(args), 7)
             backend.main.assert_called_once_with(forwarded)
 
+    def test_timing_decision_routes_without_a_provider_or_workflow_backend(self):
+        for action in ("continue", "stop"):
+            result = {"decision": action, "provider_calls": 0, "financial_authority_changed": False}
+            backend = SimpleNamespace(decide=Mock(return_value=result))
+            with self.subTest(action=action), patch.object(experiment, "_backend", return_value=backend) as imported:
+                code, output, _ = self.invoke(["timing", "--request", "review-01.request.json",
+                                               "--decision", action])
+            self.assertEqual((code, json.loads(output)), (0, result))
+            imported.assert_called_once_with("deadline")
+            backend.decide.assert_called_once_with(Path("review-01.request.json"), action)
+
     def test_inspection_is_compact_and_never_launch_approval(self):
         study = self.study()
         support = self.support(study)

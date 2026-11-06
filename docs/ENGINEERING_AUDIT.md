@@ -171,3 +171,34 @@ Final normal-module groups verified **145 unique methods**: financial 22, transp
 The initial combined stdin-runner trial completed naturally with 145 tests, one multiprocessing spawn setup error at `/workspace/<stdin>` and two platform skips, with no assertion failures. Final verification uses the individual normal-module group results. Initial read-only Ruff-cache setup and type-check observations preceded final correction. Final Ruff passes five changed files, Mypy three production files, and Bandit finds zero issues in those production files with only existing `nosec` warnings. No public H1 run is claimed.
 
 The [safe correction receipt](../evidence/phase3b-seq2-v1/artifact-binding-offline-fix-v1.json) binds canonical source `dda19ddcbe4990a119fd0267776ac81fde2618c0dfea1767ceae6cdc7d956d32` and projected public source `516a14ce15aefa77514b03681adc7910dac5fdb484453e281a442854c640665c`, each with 163 inputs. Their sole existing source projection is two documentation-path literals in `__main__.py`. Proof v2 and the new source identity naturally invalidate earlier readiness. No fresh live kit, grant, paid continuation or repaired historical result is supplied. The R2 outcome remains closed incomplete with all final rows held; its earlier first-pair scores remain exploratory.
+
+## Conversation time controls
+
+Authorized 5 November 2026 by the user's instruction to proceed with the focused timing correction. This changes the existing control path, not the experimental adaptation algorithm.
+
+**Objective:** an elapsed conversation-time threshold should lead to a warning, bounded grace and a user decision, preserving the same native conversation and next request. It must not turn the observed 56.948-versus-60-second admission shortfall into an automatic whole-run failure.
+
+**Scope and usable deliverables:** coordinate the external adapter's soft clock, native subprocess and local HTTP limits; add an identity-bound continuation decision at the existing pre-intent boundary; expose that decision through the existing experiment CLI; record the policy and decisions in source-bound evidence and reports. The supervisor contract must identify the warning/pause files and require an actual user answer. No new service or plugin is introduced.
+
+| Control | Prospective behavior |
+|---|---|
+| Warning | Observed at a request boundary after 480 seconds; the supervisor notifies the user. |
+| Conversation allowance | 600 soft seconds plus 300 automatic grace seconds, including local setup. |
+| Review | At the next request boundary after that allowance, publish a paused request before any intent or SDK call. Wait up to 1,800 seconds for an explicit continue/stop decision. |
+| Continue | Preserve the same native child, conversation, history and request slot. Grant 600 seconds from acknowledgement; waiting and overdue setup do not consume that new allowance. Recheck source/readiness and financial guards before dispatch. |
+| One-slot permission | A valid timing gate covers exactly the next slot and its mandatory validation. Slow file checks do not revoke that permission. Another review is scheduled at a subsequent request boundary. |
+| Stop / no answer | Record the explicit operator stop or expired review, close incomplete and preserve accounting. Never infer approval, restart or resend. |
+| Actual provider operation | Keep the existing 240-second completion and 60-second cleanup bounds, unknown-charge holds and no-resend behavior. |
+| Native/local outer limits | Finite process ceiling 65,700 seconds, derived from the 24-request limit and maximum waits/work; local relay-fetch ceiling 65,690 seconds. These are containment ceilings, not work, spending or continuation grants. External provider I/O limits remain unchanged. |
+
+Requests, decisions and ACKs use immutable files under the current run's `timing-controls/` directory, outside proposer context. They bind the source, study, accounting policy, launcher, conversation and slot. The host command is `python -B -m buddha2 experiment timing --request <host-request.json> --decision continue|stop`; it changes no financial authorization. The decision is effective only when the controller ACKs it. An already admitted provider call settles under its original budget before a later pause.
+
+**Exclusions:** paid calls or fresh keys; any new live study, grant or paid repetition; upstream Harness2/NoveltyBench edits; model, prompt, strategy, token, request or dollar-limit changes; historical-result rescue; a new runner, scheduler, framework, dashboard or MCP server. Inspect's separate 600-second export window is unchanged.
+
+**Completion:** reproduce the saved shortfall with fake time; prove warning/grace/continue/stop/expiry and late-setup behavior; prove zero intents/SDK calls while paused, unchanged next-slot/history and guard checks after continuation; retain legacy audit parsing and hard-cap/unknown-liability negatives; exercise the pinned native wrapper and MockTransport path; pass focused tests and static checks; independently review the change and preserve old artifacts. Offline verification does not establish human-in-the-loop live completion.
+
+**Cost:** $0 API spend. This correction creates a new effective source/profile; earlier readiness cannot admit it. The stopped study stays closed. Prospective paid work still needs its applicable definition, kit and repetition authorization, carrying all prior charges and holds.
+
+**Verified outcome:** 67 unique methods passed in the pinned, keyless H1 runtime with networking disabled, zero failures/errors/skips (128.750 seconds in unittest; 133.493 seconds observed). The source stayed `26898c3788418aa17dc21a3e6b269abdf61348ac0feeaf57c846a2353fa18178` across all 163 effective inputs before and after testing. Ruff passed 16 changed production/test files; Mypy and Bandit passed 12 production files, with existing Bandit comment warnings only. Independent code review found no blockers. Two deliberately failing regressions exposed slow notice/ACK writes; both now pass. Pinned SDK mocks and real ledger paths verify zero intents or SDK calls while paused, continuation on the same slot, post-wait source guards, and hard financial/unknown-charge handling. The native-wrapper integration simulates its subprocess; it does not claim a live human continuation or a complete new acceptance campaign. The earlier 65-test run remains separate evidence preceding the final fixes. See the [safe offline receipt](../evidence/phase3b-seq2-v1/timing-correction-offline-v1.json).
+
+**Next:** seek the fresh-comparison repetition decision, then run the existing source-bound acceptance before fresh keys and one four-prompt comparison. Keep historical charges, holds and incomplete results intact. Do not add another infrastructure project.

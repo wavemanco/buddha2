@@ -14,7 +14,7 @@ from buddha2.artifacts import ContractError, digest
 from followups.phase3a_readiness_recovery_v1.test_rank_io import Dispatch
 from followups.phase3a_v1.tests.test_strategy import STUDY, TASK
 
-from . import adapter, contract, editor, native, strategy
+from . import adapter, contract, deadline, editor, native, strategy
 from .mocks import SDKMock
 from .support import BASE, NATIVE
 
@@ -40,7 +40,7 @@ class ComponentMock(SDKMock):
 class SyntheticProposer(Proposer):
     """A fixture direct return proves native control flow, never model authenticity."""
     def __init__(self):
-        super().__init__(ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=600), attempts=1)
+        super().__init__(ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=deadline.NATIVE_TIMEOUT), attempts=1)
         self.contexts = {}
         self.selector_label = "c1"
 
@@ -121,6 +121,9 @@ class NativeS2Tests(unittest.TestCase):
         prop._local.url, prop._local.home, prop._local.cwd = "http://127.0.0.1:1/v1", str(root), root
         prop._c1_contracts["select.seq2"] = {"authoring_system_text": "SYNTHETIC CONFIGURATION ONLY"}
         configured = json.loads(prop.env()["OPENCODE_CONFIG_CONTENT"])
+        self.assertEqual(prop.spec.timeout, deadline.NATIVE_TIMEOUT)
+        self.assertEqual(configured["provider"]["anthropic"]["options"]["timeout"],
+                         deadline.FETCH_TIMEOUT * 1000)
         permissions = configured["agent"]["build"]["permission"]["edit"]
         self.assertEqual(permissions["*"], "deny")
         self.assertEqual(permissions["output/answer.md"], "allow")
@@ -158,7 +161,7 @@ class NativeS2Tests(unittest.TestCase):
 
                 prop = adapter.CompatibleProposer(pilot="p3b-02", study_sha256=STUDY,
                     dispatch=dispatch, audit_dir=root / "editor-audit", fixture=True, halt=halts.append,
-                    register_deadline=lambda *args: None)
+                    register_deadline=lambda *args, **kwargs: None)
                 saved = "<why>SYNTHETIC saved rationale.</why>\n```choice\nB\n```" if mode != "stdout" else ""
                 final = "<why>SYNTHETIC different final rationale.</why>\n```choice\nB\n```"
                 progress = "SYNTHETIC earlier CLI progress."
@@ -167,6 +170,8 @@ class NativeS2Tests(unittest.TestCase):
                     cwd = Path(cwd)
                     configured = json.loads(env["OPENCODE_CONFIG_CONTENT"])
                     options = configured["provider"]["anthropic"]["options"]
+                    self.assertEqual(options["timeout"], deadline.FETCH_TIMEOUT * 1000)
+                    self.assertEqual(kwargs["timeout"], deadline.NATIVE_TIMEOUT)
                     url = urlsplit(options["baseURL"])
                     self.assertEqual(url.hostname, "127.0.0.1")
                     prepared = prop._c1_contracts["select.seq2"]

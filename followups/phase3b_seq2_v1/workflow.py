@@ -21,6 +21,7 @@ from buddha2.phase2_dispatch import writer_lock
 
 from . import accounting, editor, native, rank_io, strategy, supervision
 from .adapter import CompatibleProposer
+from .deadline import CONVERSATION_POLICY
 from .deadline import POLICY as DEADLINE_POLICY
 from .snapshot import VISIBILITY_OWNER_KIND, VISIBILITY_REQUEST_KIND, VISIBILITY_RESULT_KIND
 from .support import (
@@ -322,6 +323,7 @@ def prepare(
         "execution_tag": "phase3b-seq2-"
         + digest({"source": sources["sha256"], "tasks": tasks})[:20],
         "transport_deadline_policy": asdict(DEADLINE_POLICY),
+        "conversation_timing_policy": copy.deepcopy(CONVERSATION_POLICY),
         "editor_tools": read(ROOT / "followups/phase3a_v1/editor-tools.json"),
         "seed_tree": strategy.seed_tree(),
         "parent_decision_sha256": old["parent_decision_sha256"],
@@ -415,6 +417,7 @@ def load_study(study_path: Path) -> dict:
         and study["prior_closed_repeat"] == PRIOR_CLOSED_REPEAT
         and study["prior_closed_artifact_attempt"] == PRIOR_CLOSED_ARTIFACT_ATTEMPT
         and study["transport_deadline_policy"] == asdict(DEADLINE_POLICY)
+        and study["conversation_timing_policy"] == CONVERSATION_POLICY
         and study["readiness_is_primary"] == "p3b-01:adaptive"
         and study["readiness_max_micro_usd"] == 35000000
         and study["potential_slot_count"] == accounting.WORKLIST_PROFILE["potential_request_slots"]

@@ -31,13 +31,21 @@ AGENT = re.compile(r"/root(?:/[a-z0-9_]+)+")
 
 
 def profile() -> dict:
-    return {"kind": "phase3b-s2-startup-supervision-profile-v1", "seconds": SECONDS,
+    return {"kind": "phase3b-s2-startup-supervision-profile-v2", "seconds": SECONDS,
         "observation_seconds": OBSERVATION_SECONDS, "renewable": False, "one_shot": True,
         "agent_source": "actual fresh collaboration.list_agents result via trusted host attestation",
         "exact_controller_owner_required": True, "before_transport_claim_binding_and_intent": True,
         "supervisor_started_before_key_window": "external orchestrator obligation verified in the actual rehearsal",
         "point_in_time_presence_only": True, "later_loss_uses_existing_review_and_export_timeouts": True,
-        "quality_or_readiness_approval": False, "provider_calls": 0}
+        "quality_or_readiness_approval": False, "provider_calls": 0,
+        "timing_reviews": {"policy_id": "phase3b-soft-timing-v1",
+            "warning_glob": "timing-controls/*/warning.json",
+            "pause_request_glob": "timing-controls/*/review-*.request.json",
+            "operator_wait_seconds": SECONDS, "explicit_user_answer_required": True,
+            "automatic_continuation": False,
+            "decision_command": "python -B -m buddha2 experiment timing --request <host-request.json> --decision <continue|stop>",
+            "supervisor_obligation": "Notify on warnings; promptly ask the user at a pause and publish only their actual answer.",
+            "effective_after_controller_ack": True}}
 
 
 def agent_name(value: str | None) -> str:

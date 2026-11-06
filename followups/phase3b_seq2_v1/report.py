@@ -727,6 +727,8 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             "runtime",
             "runtime_sha256",
             "policy",
+            "transport_deadline_policy",
+            "conversation_timing_policy",
             "role_profiles",
             "price_verification",
             "tasks",
@@ -754,6 +756,7 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         selected_final_assessment_is_alias=True,
         diagnostic_assessments=0,
         maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        transport_audit_summary=copy.deepcopy(state.get("transport_audit_summary")),
     )
     data = {
         "rows": rows,

@@ -29,7 +29,19 @@ from followups.phase3a_v1.transport import (
 )
 
 from . import ledger_core as core
-from .deadline import POLICY, Budget, KnownDeadlineStop, Policy, budget, eligible
+from .deadline import (
+    NATIVE_TIMEOUT,
+    POLICY,
+    Budget,
+    Clock,
+    KnownDeadlineStop,
+    Policy,
+    TimingStop,
+    budget,
+    eligible,
+    validate_clock,
+    validate_gate,
+)
 
 _HASH = re.compile(r"[0-9a-f]{64}")
 
@@ -99,6 +111,7 @@ class Transport(DirectSDKTransport):
         self._behavior, self._http = behavior, http_transports
         self._local = threading.local()
         self._conversations: dict[str, float] = {}
+        self._soft_clocks: dict[str, Clock] = {}
         self._outcomes: dict[str, dict] = {}
         self._commits: dict[str, dict] = {}
         self._terminal = False
@@ -106,14 +119,39 @@ class Transport(DirectSDKTransport):
         self._active: dict | None = None
         self.select: Callable[[str, str], None] = lambda role, slot: None
 
-    def register_conversation(self, conversation_id: str, absolute_deadline: float) -> None:
+    def register_conversation(self, conversation_id: str, absolute_deadline: float, *, clock: dict | None = None) -> None:
+        limit = NATIVE_TIMEOUT if clock is not None else 600
         if (not isinstance(conversation_id, str) or not conversation_id or type(absolute_deadline) not in (int, float)
-                or not math.isfinite(absolute_deadline) or absolute_deadline > time.monotonic() + 600.1):
+                or not math.isfinite(absolute_deadline) or absolute_deadline > time.monotonic() + limit + .1):
             raise ContractError("invalid conversation deadline registration")
         prior = self._conversations.get(conversation_id)
         if prior is not None and prior != absolute_deadline:
             raise ContractError("logical conversation deadline cannot be renewed")
+        if clock is not None:
+            validate_clock(clock)
+            if (clock["conversation_id"] != conversation_id or clock["fixture"] is not self.fixture
+                    or clock["deadline_monotonic"] != absolute_deadline):
+                raise ContractError("conversation clock differs from its registration")
+            if prior is not None:
+                if conversation_id not in self._soft_clocks or self._soft_clocks[conversation_id].record != clock:
+                    raise ContractError("conversation timing profile cannot change")
+                return
+            owner = self.startup_attachment["request"]["controller_owner"] if self.startup_attachment else None
+            self._soft_clocks[conversation_id] = Clock(clock, owner=owner)
+        elif conversation_id in self._soft_clocks:
+            raise ContractError("soft conversation cannot revert to a legacy clock")
         self._conversations[conversation_id] = absolute_deadline
+
+    def review_before_intent(self, slot_id: str, role: str, meta: dict, bindings: dict, financial: dict) -> None:
+        """Wait only before an intent; the caller reruns source/readiness guards afterward."""
+        self._local.timing_gate = None
+        if self._closed or self._terminal:
+            raise KnownDeadlineStop("closed or terminal transport cannot review continuation")
+        conversation = meta.get("conversation")
+        clock = self._soft_clocks.get(conversation) if role in {"editor", "native_selector"} and isinstance(conversation, str) else None
+        if clock is not None:
+            self._local.timing_gate = {"clock": copy.deepcopy(clock.record),
+                "gate": clock.before_request(slot_id, bindings, financial)}
 
     def prepare(self, slot_id: str, role: str, meta: dict, bindings: dict) -> Budget:
         if self._closed:
@@ -126,14 +164,24 @@ class Transport(DirectSDKTransport):
                 or any(not isinstance(v, str) or _HASH.fullmatch(v) is None for v in bindings.values())):
             raise ContractError("deadline admission bindings differ")
         deadline = None
+        timing = None
         if role in {"editor", "native_selector"}:
             name = meta.get("conversation")
             if name not in self._conversations:
                 raise ContractError("editor lacks its absolute native conversation deadline")
             deadline = self._conversations[name]
+            if name in self._soft_clocks:
+                timing = getattr(self._local, "timing_gate", None)
+                if not timing or timing["clock"] != self._soft_clocks[name].record:
+                    raise ContractError("soft conversation lacks its pre-intent review gate")
+                validate_gate(timing["clock"], timing["gate"], slot_id=slot_id, bindings=bindings, fixture=self.fixture)
+                if time.monotonic() + self._policy.completion + self._policy.cleanup >= deadline:
+                    raise TimingStop("hard_lifetime", {"clock": timing["clock"], "observed_monotonic": time.monotonic()})
+                deadline = None
         allocation = budget(deadline, policy=self._policy)
         self._local.context = {"slot_id": slot_id, "role": role, "meta": copy.deepcopy(meta),
-            "bindings": copy.deepcopy(bindings), "budget": allocation, "intent": None, "attempted": False}
+            "bindings": copy.deepcopy(bindings), "budget": allocation, "intent": None, "attempted": False,
+            "conversation_timing": copy.deepcopy(timing)}
         return allocation
 
     def bind_intent(self, intent: dict, allocation: Budget) -> None:
@@ -336,6 +384,8 @@ class Transport(DirectSDKTransport):
             "timeout_subtype": subtype, "completion_category": "late-known" if late else "known" if not unknown else "unknown",
             "late_known": late, "deadline_expired": deadline_expired, "cleanup_failed": cleanup_failed, "worker_stopped": stopped,
             "owner_stop_required": owner_stop, "worker_pid": process.pid}
+        if ctx.get("conversation_timing") is not None:
+            audit.update(kind="phase3b-s2-transport-audit-v2", conversation_timing=ctx["conversation_timing"])
         self._outcomes[ctx["slot_id"]] = audit
         if stopped:
             process.close()
@@ -404,7 +454,10 @@ def validate_audit(record: dict, *, intent: dict, result: dict, bindings: dict) 
         "cleanup_elapsed_seconds", "sdk_invoked", "wire_egress", "timeout_subtype", "completion_category",
         "late_known", "deadline_expired", "cleanup_failed", "worker_stopped", "owner_stop_required", "worker_pid",
         "terminal_result_sha256", "terminal_status", "terminal_reserved_micro_usd", "sha256"} | set(bindings)
-    if (set(record) != expected or record.get("kind") != "phase3b-s2-transport-audit-v1"
+    soft = record.get("kind") == "phase3b-s2-transport-audit-v2"
+    if soft:
+        expected.add("conversation_timing")
+    if (set(record) != expected or record.get("kind") not in {"phase3b-s2-transport-audit-v1", "phase3b-s2-transport-audit-v2"}
             or record.get("sha256") != digest({k: v for k, v in record.items() if k != "sha256"})
             or record["slot_id"] != intent["slot_id"] or record["role"] != intent["role"]
             or record["study_sha256"] != intent["study_sha256"] or record["fixture"] is not intent["fixture"]
@@ -433,14 +486,23 @@ def validate_audit(record: dict, *, intent: dict, result: dict, bindings: dict) 
             and (record["wire_egress"] != "not-started" or record["sdk_invoked"] is False)
             and record["timeout_subtype"] in {None, "ConnectTimeout", "ReadTimeout", "WriteTimeout", "PoolTimeout"})
         if intent["role"] in {"editor", "native_selector"}:
-            valid = valid and allocation.conversation_deadline is not None
-            if allocation.conversation_deadline is not None:
+            if soft:
+                timing = record["conversation_timing"]
+                if not isinstance(timing, dict) or set(timing) != {"clock", "gate"}:
+                    raise ValueError("invalid conversation timing evidence")
+                validate_gate(timing["clock"], timing["gate"], slot_id=intent["slot_id"], bindings=bindings, fixture=intent["fixture"])
+                valid = valid and allocation.conversation_deadline is None and allocation.effective_seconds == policy.completion
+                valid = valid and timing["gate"]["checked_monotonic"] <= allocation.started_monotonic
+                valid = valid and allocation.cleanup_deadline < timing["clock"]["deadline_monotonic"]
+            elif allocation.conversation_deadline is not None:
                 available = min(policy.completion, allocation.conversation_deadline
                                 - allocation.started_monotonic - policy.editor_margin)
                 valid = valid and available >= policy.editor_minimum and math.isclose(
                     allocation.effective_seconds, available, abs_tol=1e-6)
+            else:
+                valid = False
         else:
-            valid = valid and allocation.conversation_deadline is None
+            valid = valid and not soft and allocation.conversation_deadline is None
         valid = valid and record["completion_category"] in {"known", "late-known", "unknown"}
         valid = valid and record["capture_point"] == "parent after complete receipt normalization and frozen core model/usage validation"
         captured = record["parent_capture_monotonic"]

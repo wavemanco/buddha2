@@ -77,8 +77,12 @@ def main(argv: list[str] | None = None) -> int:
         commands.add_parser("launch", help="use the existing inspected, source-bound launcher")
         view = commands.add_parser("inspect", help="read sealed study metadata without model calls")
         view.add_argument("--study", type=Path, required=True)
+        timing = commands.add_parser("timing", help="continue or stop a pending timing review without model calls")
+        timing.add_argument("--request", type=Path, required=True)
+        timing.add_argument("--decision", choices=("continue", "stop"), required=True)
         parsed = parser.parse_args(args)
-        result = inspect_study(parsed.study)
+        result = (_backend("deadline").decide(parsed.request, parsed.decision)
+                  if parsed.command == "timing" else inspect_study(parsed.study))
         print(json.dumps(result, ensure_ascii=False, allow_nan=False, indent=2))
         return 0
     except (ContractError, ValueError, OSError, ImportError, KeyError, TypeError):

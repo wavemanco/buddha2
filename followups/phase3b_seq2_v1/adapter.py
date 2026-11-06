@@ -17,6 +17,7 @@ from buddha2.phase2_dispatch import _publish
 from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES, PRIVATE, opencode_profile_sources
 
 from . import contract, editor, strategy
+from .deadline import clock_record
 from .support import DECLARED_DEFINITION_SHA256
 
 
@@ -68,16 +69,10 @@ class CompatibleProposer(editor.AccountedProposer):
                 raise ProposerError("editor lacks its owned absolute deadline registration")
             if label not in self._conversation_deadlines:
                 started = time.monotonic()
-                identity = f"{self.pilot}:adaptive:{label}"
-                record = {"kind": "phase3a-rp2-conversation-admission-clock-v1", "study_sha256": self.study_sha256,
-                    "source_sha256": self._c1_source, "pilot": self.pilot, "label": label,
-                    "conversation_id": identity, "started_monotonic": started, "deadline_monotonic": started + 600,
-                    "seconds": 600, "native_subprocess_cap_seconds": 600, "OpenCode_fetch_cap_seconds": 590,
-                    "anchor": "inside editor._SERIAL before native _opencode boundary setup and CLI invocation",
-                    "scope_limit": "Native context preparation/copy precede this hook; relay setup/subprocess/drain are distinct from the subprocess cap.",
-                    "renewable": False, "fixture": self.fixture, "editor_profile_sha256": digest(editor.profile())}
-                self._register_deadline(identity, record["deadline_monotonic"])
-                record["sha256"] = digest(record)
+                record = clock_record(study_sha256=self.study_sha256, source_sha256=self._c1_source,
+                    pilot=self.pilot, label=label, fixture=self.fixture,
+                    editor_profile_sha256=digest(editor.profile()), started=started)
+                self._register_deadline(record["conversation_id"], record["deadline_monotonic"], clock=record)
                 _publish(Path(self.audit_dir) / "conversation-deadlines" / (label + ".json"), record)
                 self._conversation_deadlines[label] = record
             return super()._opencode(cwd, mission, system, wall)

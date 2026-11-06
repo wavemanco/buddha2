@@ -23,7 +23,7 @@ from followups.phase3a_c1_completion_v3.deadline import Budget as Budget
 
 from . import ledger_core as core
 from . import transport as bounded
-from .deadline import KnownDeadlineStop
+from .deadline import CONVERSATION_POLICY, KnownDeadlineStop, TimingStop, validate_stop
 from .support import IMAGE_ID as IMAGE_ID
 from .support import NATIVE, checked, read, runtime_guard, safe
 
@@ -78,7 +78,25 @@ RETIRED_SOURCES = frozenset(
         "64b839d569e3ddefa3d56e06fc5b431760aef15cdfb3fd38256e04f8565f519a",
     }
 )
-_require, _bindings, _stop = core._require, parent._bindings, parent._stop
+_require, _bindings = core._require, parent._bindings
+
+
+def _stop(journal: Path, manifest: dict, state: dict, records: list) -> dict | None:
+    target = journal / "deadline-stop.json"
+    if target.exists():
+        value = core.read_json(target)
+        if isinstance(value, dict) and value.get("kind") == "phase3b-timing-stop-v1":
+            _require(value.get("sha256") == digest({k: v for k, v in value.items() if k != "sha256"})
+                and value.get("bindings") == _bindings(manifest)
+                and value.get("fixture") is manifest["inputs"]["fixture"]
+                and value.get("slot_id") in manifest["inputs"]["slots"]
+                and value.get("intent_sha256") is None and value.get("candidate_result_sha256") is None
+                and value.get("automatic_release_or_resume") is False,
+                "invalid durable timing stop")
+            validate_stop(value.get("disposition"), value.get("reason"), slot_id=value["slot_id"],
+                bindings=_bindings(manifest), fixture=manifest["inputs"]["fixture"])
+            return value
+    return parent._stop(journal, manifest, state, records)
 
 
 def canonical_journal(study_sha256: str, fixture: bool) -> Path:
@@ -425,7 +443,7 @@ def _audit(journal: Path, manifest: dict, state: dict, *, strict: bool) -> dict:
             failures.append(slot)
     if strict:
         _require(not failures, "missing/invalid committed transport audit blocks continuation")
-    return {
+    summary = {
         "validated_audits": len(rows),
         "missing_or_invalid_slots": sorted(failures),
         "SDK_invoked": sum(r["sdk_invoked"] is True for r in rows.values())
@@ -440,6 +458,14 @@ def _audit(journal: Path, manifest: dict, state: dict, *, strict: bool) -> dict:
         else None,
         "audit_sha256": {slot: digest(row) for slot, row in sorted(rows.items())},
     }
+    timed = [row["conversation_timing"] for row in rows.values() if "conversation_timing" in row]
+    if timed:
+        summary["conversation_timing"] = {"policy": copy.deepcopy(CONVERSATION_POLICY),
+            "clocks": {t["clock"]["conversation_id"]: t["clock"]["sha256"] for t in timed},
+            "reviews": {ack["request"]["sha256"]: {"decision": ack["decision"]["decision"],
+                "paused_seconds": ack["paused_seconds"], "slot_id": ack["request"]["slot_id"]}
+                for t in timed for ack in t["gate"]["reviews"]}}
+    return summary
 
 
 def replay(journal: Path) -> dict:
@@ -456,7 +482,8 @@ def replay(journal: Path) -> dict:
         state["results"][s]["status"] != "response" for s in durable
     )
     if stop is not None and state["status"] != "blocked-unknown":
-        state["status"] = "stopped-known-deadline"
+        state["status"] = ("stopped-by-operator" if stop.get("reason") == "operator_stop"
+            else "stopped-timing-review" if stop.get("reason") == "review_timeout" else "stopped-known-deadline")
     elif audit["missing_or_invalid_slots"] and state["status"] == "ready":
         state["status"] = "halted-transport-audit"
     target = safe(
@@ -953,6 +980,28 @@ class Ledger:
     def before_intent(
         self, state: dict, events: list, manifest: dict, slot: str, role: str, meta: dict
     ) -> Budget:
+        try:
+            self.transport.review_before_intent(slot, role, meta, _bindings(manifest), {
+                "spent_micro_usd": state["spent_micro_usd"], "reserved_micro_usd": state["reserved_micro_usd"],
+                "admitted_requests": state["attempts"], "cap_micro_usd": POLICY["phase_micro_usd"],
+                "maximum_requests": WORKLIST_PROFILE["maximum_admitted_attempts"],
+                "next_reservation_micro_usd": core._reservation(role)["micro_usd"]})
+            # The lock-protected ledger is unchanged while waiting; recheck its admission anyway.
+            _admit(state, meta, core._reservation(role))
+        except TimingStop as exc:
+            self.latch(manifest, slot, exc.reason, disposition=exc.evidence, timing=True)
+            core._append_event(self.journal, "halt", {"state_sha256": digest(state),
+                "reason": "known_timing_stop:" + exc.reason}, events)
+            raise
+        except KnownDeadlineStop:
+            self.latch(manifest, slot, "pre_intent_deadline")
+            core._append_event(self.journal, "halt", {"state_sha256": digest(state),
+                "reason": "known_deadline_stop:pre_intent_deadline"}, events)
+            raise
+        except Exception as exc:
+            core._append_event(self.journal, "halt", {"state_sha256": digest(state),
+                "reason": "timing_review_integrity_failure"}, events)
+            raise IntegrityStop("timing review rejected before admission") from exc
         for validator in (self.readiness_validator, self.admission_guard):
             if validator is None:
                 continue
@@ -976,6 +1025,11 @@ class Ledger:
                 raise IntegrityStop("completion admission evidence failed validation") from exc
         try:
             return self.transport.prepare(slot, role, meta, _bindings(manifest))
+        except TimingStop as exc:
+            self.latch(manifest, slot, exc.reason, disposition=exc.evidence, timing=True)
+            core._append_event(self.journal, "halt", {"state_sha256": digest(state),
+                "reason": "known_timing_stop:" + exc.reason}, events)
+            raise
         except KnownDeadlineStop:
             self.latch(manifest, slot, "pre_intent_deadline")
             core._append_event(
@@ -998,10 +1052,10 @@ class Ledger:
             raise IntegrityStop("post-lock deadline admission rejected") from exc
 
     def latch(
-        self, manifest: dict, slot: str, reason: str, *, intent=None, result=None, disposition=None
+        self, manifest: dict, slot: str, reason: str, *, intent=None, result=None, disposition=None, timing=False
     ) -> None:
         record = {
-            "kind": "phase3a-r2-deadline-stop-v1",
+            "kind": "phase3b-timing-stop-v1" if timing else "phase3a-r2-deadline-stop-v1",
             "reason": reason,
             "bindings": _bindings(manifest),
             "fixture": manifest["inputs"]["fixture"],

@@ -12,6 +12,7 @@ from harness2.core.proposer import ProposerError
 from buddha2.artifacts import ContractError, digest, file_hash, read_json, write_bytes_once
 
 from . import adapter, contract, editor, ledger_core, native, strategy
+from .deadline import NATIVE_TIMEOUT
 from .mocks import SDKMock
 from .support import NATIVE, PARENT_STUDY_SHA, ROOT, path, publish, require, safe, seal
 
@@ -81,7 +82,7 @@ def _assemble(output: Path) -> dict:
                 _copy(original / "harness" / relative, copied / "harness" / relative, inventory)
             require(strategy.validate_harness(copied / "harness") == checked_harness, "capacity copy changed a strategy")
             runs[label] = copied
-        channel = ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=600)
+        channel = ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=NATIVE_TIMEOUT)
         cap_adapter = native.PortfolioAdapter(task, runs["base1"] / "harness", study_sha256=digest({"capacity": pilot}),
             run_root=output / "assembly" / pilot, tag="capacity-fixture",
             dispatch=lambda *args: (_ for _ in ()).throw(ContractError("capacity assembly cannot dispatch")),
@@ -258,7 +259,7 @@ def _probe(output: Path, assembly: dict) -> dict:
         prop = adapter.CompatibleProposer(pilot="p3b-01", study_sha256=study, dispatch=sdk.dispatch,
             audit_dir=output / "editor-audit", fixture=True,
             halt=lambda *args, **kwargs: None, register_contract=sdk.mock.register_contract,
-            register_deadline=lambda identity, deadline: clocks.setdefault(identity, deadline))
+            register_deadline=lambda identity, deadline, *, clock=None: clocks.setdefault(identity, deadline))
         sdk.proposer = prop
         observed_stages = [largest, *[row for row in assembly["contexts"]
             if row["pilot"] == largest["pilot"] and row["label"] != largest["label"]]]
@@ -267,7 +268,7 @@ def _probe(output: Path, assembly: dict) -> dict:
             reply = prop.call(observed["mission"], Path(observed["root"]), observed["label"] + ".a1",
                               max_attempts=1, harvest="context/harness")
             require(reply.ok and reply.text.strip(), "full-context author did not complete")
-        channel = ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=600)
+        channel = ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=NATIVE_TIMEOUT)
         cap_adapter = native.PortfolioAdapter(source["task"], Path(source["runs"]["base1"]) / "harness",
             study_sha256=study, run_root=output / "selector-adapter", tag="capacity-only", dispatch=sdk.dispatch,
             fixture=True, channel=channel, known_results={})

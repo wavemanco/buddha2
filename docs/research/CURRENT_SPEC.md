@@ -1,4 +1,12 @@
-# Current status - continuation closed incomplete - 5 November 2026
+# Current work - focused offline timing correction - 5 November 2026
+
+The user approved the focused correction to conversation timing: a warning after eight minutes, a ten-minute soft allowance plus five minutes of grace, then a pause before another provider request. Each explicit continue decision grants ten minutes from the controller's acknowledgement; time waiting for the user is excluded. The existing 30-minute operator-response window remains finite. Provider-request completion/cleanup bounds and all money/token/request caps remain hard. The native subprocess and local HTTP ceilings cover these waits, so another clock cannot silently expire during a valid pause. See the concrete [scope and acceptance](../ENGINEERING_AUDIT.md#conversation-time-controls).
+
+The focused correction is implemented and independently reviewed: 67 pinned-runtime tests pass with zero failures, errors or skips; scoped Ruff, Mypy and Bandit checks pass. The same 163-input source was verified before and after testing. See the [offline receipt](../../evidence/phase3b-seq2-v1/timing-correction-offline-v1.json). No live human continuation or full acceptance campaign is claimed.
+
+The closed 161-call study remains unchanged. No keys, provider requests, live study, changed financial authority or paid repetition are authorized by this correction. Next is approval for one fresh four-prompt Phase 3B comparison with this timing policy, followed by the existing source-bound acceptance and fresh keys. Carry forward all historical charges and holds; unused funding alone does not authorize a repetition. No new framework or engineering block is proposed.
+
+# Preserved outcome - continuation closed incomplete - 5 November 2026
 
 The approved single fresh four-prompt comparison is **closed incomplete after 161 calls/$5.877824**, with zero pending requests, unknown results or new held liability. Final reports contain **zero of eight primary scores, zero of twelve assessment scores, zero normal native selectors and zero completed fixed pools**. The fixed arm and judges did not start. There is no benchmark result or adaptation-gain claim. Read the [attempt report](../phases/phase-3b/PHASE3B_CONTINUATION_LIVE_ATTEMPT_REPORT.md) and [machine-readable outcome](../../evidence/phase3b-seq2-v1/continuation-live-outcome-v1.json).
 

@@ -12,7 +12,7 @@ from harness2.core.spec import ChannelSpec
 from followups.phase3a_readiness_recovery_v1.test_rank_io import Dispatch
 from followups.phase3a_v1.tests.test_strategy import STUDY, TASK
 
-from . import accounting, native, strategy
+from . import accounting, deadline, native, strategy
 from .support import BASE
 from .test_fixed_pool_s2 import FailedPlanMock
 from .test_native_s2 import SyntheticProposer
@@ -79,7 +79,7 @@ class RequiredCheckpointCases(unittest.TestCase):
     def _adapter(self, name, observer):
         return native.PortfolioAdapter(TASK, self.seed, study_sha256=STUDY, run_root=self.root / name,
             tag="observer-" + name, dispatch=lambda *args: self.fail("unexpected provider request"),
-            fixture=True, channel=ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=600),
+            fixture=True, channel=ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24, timeout=deadline.NATIVE_TIMEOUT),
             known_results={}, on_required_failure=observer)
 
     def test_required_preintent_budget_stop_notifies_once(self):

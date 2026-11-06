@@ -10,7 +10,7 @@ import threading
 import time
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from buddha2.artifacts import ContractError, digest
 
@@ -186,12 +186,15 @@ class SupervisionTests(unittest.TestCase):
 
 
 class SelectorRuntimeTests(unittest.TestCase):
-    def transport_shell(self):
+    @staticmethod
+    def transport_shell():
         from .transport import Transport
         value = Transport.__new__(Transport)
         value._closed = value._terminal = False
         value._local = threading.local()
         value._conversations = {}
+        value._soft_clocks = {}
+        value.fixture, value.startup_attachment = True, None
         from .deadline import POLICY
         value._policy = POLICY
         return value
@@ -237,6 +240,266 @@ class SelectorRuntimeTests(unittest.TestCase):
                 Transport(anthropic_api_key="fixture-not-a-secret", openai_api_key="fixture-not-a-secret")
 
 
+class SoftConversationTimingTests(unittest.TestCase):
+    def setUp(self):
+        from . import deadline
+
+        self.timing = deadline
+        parent = ROOT / "runs/phase3b-seq2-v1/unit-timing" if os.name == "nt" else supervision.BASE
+        parent.mkdir(parents=True, exist_ok=True)
+        temporary = tempfile.TemporaryDirectory(prefix="soft-time-", dir=parent)
+        self.addCleanup(temporary.cleanup)
+        self.base = Path(temporary.name)
+        self.now, self.sequence = 0.0, 0
+        clock = patch.object(deadline.time, "monotonic", side_effect=lambda: self.now)
+        clock.start()
+        self.addCleanup(clock.stop)
+        self.bindings = {"study_sha256": "1" * 64, "source_sha256": "2" * 64,
+                         "policy_sha256": "3" * 64, "launcher_sha256": "4" * 64}
+        self.slot = "p3b-01.adaptive.editor.select.seq2.t11"
+        self.financial = {"spent_micro_usd": 7, "reserved_micro_usd": 0, "attempts": 10}
+
+    def new_clock(self):
+        self.sequence += 1
+        record = self.timing.clock_record(study_sha256=self.bindings["study_sha256"],
+            source_sha256=self.bindings["source_sha256"], pilot="p3b-01", label="select.seq2",
+            fixture=True, editor_profile_sha256="5" * 64, started=0.0)
+        directory = self.base / str(self.sequence) / "timing-controls" / digest(
+            {"conversation_id": record["conversation_id"]})
+        return self.timing.Clock(record, directory)
+
+    def gate(self, clock):
+        return clock.before_request(self.slot, self.bindings, self.financial)
+
+    @staticmethod
+    def read(path):
+        return json.loads(path.read_text(encoding="utf-8"))
+
+    @staticmethod
+    def sealed(value):
+        return {**value, "sha256": digest(value)}
+
+    def answer(self, clock, decision="continue", wait=0.0):
+        def publish(_):
+            self.now += wait
+            request = clock.directory / f"review-{len(clock.reviews) + 1:02}.request.json"
+            self.last_decision = self.timing.decide(request, decision)
+        return patch.object(self.timing.time, "sleep", side_effect=publish)
+
+    def test_saved_543_second_shortfall_keeps_full_request_budget_in_new_mode(self):
+        from . import transport
+
+        clock = self.new_clock()
+        self.now = 543.052
+        with self.assertRaises(self.timing.KnownDeadlineStop):
+            self.timing.budget(600, now=self.now)
+        value = SelectorRuntimeTests.transport_shell()
+        with patch.object(transport, "Clock", return_value=clock):
+            value.register_conversation(clock.record["conversation_id"],
+                                        clock.record["deadline_monotonic"], clock=clock.record)
+        meta = {"role": "native_selector", "conversation": clock.record["conversation_id"]}
+        with self.assertRaisesRegex(ContractError, "pre-intent review gate"):
+            value.prepare(self.slot, "native_selector", meta, self.bindings)
+        value.review_before_intent(self.slot, "native_selector", meta, self.bindings, self.financial)
+        allocation = value.prepare(self.slot, "native_selector", meta, self.bindings)
+        self.assertEqual((allocation.effective_seconds, allocation.conversation_deadline,
+                          allocation.policy.cleanup), (240, None, 60))
+        self.assertFalse((clock.directory / "review-01.request.json").exists())
+
+    def test_warning_and_grace_are_recorded_once_without_a_review_or_call(self):
+        clock = self.new_clock()
+        for instant in (479.0, 480.0, 600.0, 899.999):
+            self.now = instant
+            gate = self.gate(clock)
+            self.assertEqual(gate["reviews"], [])
+            self.assertEqual((clock.directory / "warning.json").exists(), instant >= 480)
+            self.assertEqual((clock.directory / "grace.json").exists(), instant >= 600)
+        self.assertFalse(any(clock.directory.glob("review-*.request.json")))
+        self.assertFalse(self.read(clock.directory / "warning.json")["automatic_provider_call"])
+
+    def test_review_pauses_before_admission_and_continue_excludes_waiting_time(self):
+        clock = self.new_clock()
+        original = (clock.directory / "clock.json").read_bytes()
+        self.now = 900.0
+        with self.answer(clock, wait=120):
+            gate = self.gate(clock)
+        request = self.read(clock.directory / "review-01.request.json")
+        ack = self.read(clock.directory / "review-01.ack.json")
+        self.assertTrue(request["controller_paused"])
+        self.assertEqual(request["slot_id"], self.slot)
+        self.assertEqual(request["financial"], self.financial)
+        self.assertEqual((self.now, gate["soft_deadline_monotonic"], ack["paused_seconds"]),
+                         (1020, 1620, 120))
+        self.assertEqual((self.last_decision["provider_calls"],
+                          self.last_decision["financial_authority_changed"]), (0, False))
+        self.assertEqual((clock.directory / "clock.json").read_bytes(), original)
+        self.now = 1619.99
+        self.assertEqual(len(self.gate(clock)["reviews"]), 1)
+        with self.assertRaisesRegex(ContractError, "already closed"):
+            self.timing.decide(clock.directory / "review-01.request.json", "continue")
+
+    def test_operator_stop_and_no_answer_timeout_are_terminal_before_a_new_intent(self):
+        for decision, reason in (("stop", "operator_stop"), (None, "review_timeout")):
+            with self.subTest(decision=decision):
+                clock = self.new_clock()
+                self.now = 900.0
+                pause = (self.answer(clock, "stop") if decision else patch.object(
+                    self.timing.time, "sleep", side_effect=lambda _: setattr(self, "now", 2700.0)))
+                with pause, self.assertRaises(self.timing.TimingStop) as stopped:
+                    self.gate(clock)
+                self.assertEqual(stopped.exception.reason, reason)
+                self.assertEqual(self.read(clock.directory / "review-01.ack.json")["outcome"], reason)
+                self.assertEqual(clock.reviews, [])
+
+    def test_late_local_admission_pause_still_grants_full_time_from_resume(self):
+        clock = self.new_clock()
+        self.now = 2000.0
+        with self.answer(clock, wait=120):
+            gate = self.gate(clock)
+        self.assertEqual((self.now, gate["soft_deadline_monotonic"]), (2120, 2720))
+        self.now = 2719.999
+        self.assertEqual(len(self.gate(clock)["reviews"]), 1)
+
+    def test_local_notice_write_rechecks_soft_and_hard_deadlines_before_admission(self):
+        for initial, after_write in ((899.0, 901.0), (65399.0, 65401.0)):
+            with self.subTest(initial=initial):
+                clock = self.new_clock()
+                self.now = initial
+                original_write = self.timing.write_once
+
+                def delayed(path, value):
+                    original_write(path, value)
+                    if path.name == "warning.json":
+                        self.now = after_write
+
+                with patch.object(self.timing, "write_once", side_effect=delayed), self.answer(clock):
+                    if after_write < 65400:
+                        gate = self.gate(clock)
+                        self.assertEqual(gate["soft_deadline_monotonic"], after_write + 600)
+                        self.assertEqual(len(gate["reviews"]), 1)
+                    else:
+                        with self.assertRaises(self.timing.TimingStop) as stopped:
+                            self.gate(clock)
+                        self.assertEqual(stopped.exception.reason, "hard_lifetime")
+                        self.assertFalse((clock.directory / "review-01.request.json").exists())
+
+    def test_slow_ack_persistence_keeps_only_the_slot_permission_just_granted(self):
+        clock = self.new_clock()
+        self.now = 900.0
+        original_write = self.timing.write_once
+
+        def delayed(path, value):
+            original_write(path, value)
+            if path.name == "review-01.ack.json":
+                self.now = 1601.0
+
+        with patch.object(self.timing, "write_once", side_effect=delayed), self.answer(clock):
+            gate = self.gate(clock)
+        self.assertEqual((gate["checked_monotonic"], gate["soft_deadline_monotonic"]), (900, 1500))
+        self.assertEqual(self.now, 1601)
+        self.assertEqual(gate["slot_id"], self.slot)
+        with self.assertRaises(ContractError):
+            self.timing.validate_gate(clock.record, gate,
+                slot_id="p3b-01.adaptive.editor.select.seq2.t12", bindings=self.bindings, fixture=True)
+
+    def test_original_hard_lifetime_cannot_be_extended_by_a_timing_review(self):
+        clock = self.new_clock()
+        self.now = clock.record["deadline_monotonic"] - 300
+        with self.assertRaises(self.timing.TimingStop) as stopped:
+            self.gate(clock)
+        self.assertEqual(stopped.exception.reason, "hard_lifetime")
+        self.assertFalse(any(clock.directory.glob("review-*.request.json")))
+
+    def test_wrong_request_and_stale_decisions_are_rejected_without_ack_or_allowance(self):
+        for change in ("request", "early", "expired", "action"):
+            with self.subTest(change=change):
+                clock = self.new_clock()
+                self.now = 900.0
+
+                def forged(_):
+                    request = self.read(clock.directory / "review-01.request.json")
+                    created = dt.datetime.fromisoformat(request["created_at_utc"])
+                    if change == "early":
+                        created -= dt.timedelta(seconds=1)
+                    elif change == "expired":
+                        created = dt.datetime.fromisoformat(request["expires_at_utc"])
+                    decision = self.sealed({"kind": "phase3b-time-review-decision-v1",
+                        "request_sha256": "0" * 64 if change == "request" else request["sha256"],
+                        "decision": "retry" if change == "action" else "continue",
+                        "created_at_utc": created.isoformat()})
+                    (clock.directory / "review-01.decision.json").write_text(
+                        json.dumps(decision), encoding="utf-8")
+
+                with patch.object(self.timing.time, "sleep", side_effect=forged), self.assertRaises(ContractError):
+                    self.gate(clock)
+                self.assertEqual(clock.deadline, 900)
+                self.assertFalse((clock.directory / "review-01.ack.json").exists())
+
+    def test_decision_file_cannot_be_replayed_for_a_later_review(self):
+        clock = self.new_clock()
+        self.now = 900.0
+        with self.answer(clock):
+            self.gate(clock)
+        prior = (clock.directory / "review-01.decision.json").read_bytes()
+        self.now = 1500.0
+        with patch.object(self.timing.time, "sleep", side_effect=lambda _: (
+            clock.directory / "review-02.decision.json").write_bytes(prior)), self.assertRaises(ContractError):
+            self.gate(clock)
+        self.assertEqual(len(clock.reviews), 1)
+        self.assertFalse((clock.directory / "review-02.ack.json").exists())
+
+    def test_resealed_gate_cannot_change_its_allowance_source_or_session(self):
+        clock = self.new_clock()
+        self.now = 543.052
+        gate = self.gate(clock)
+        for change in ("allowance", "source", "session"):
+            with self.subTest(change=change):
+                altered, bindings, slot = copy.deepcopy(gate), dict(self.bindings), self.slot
+                if change == "allowance":
+                    altered["soft_deadline_monotonic"] += 1
+                    altered = self.sealed({k: v for k, v in altered.items() if k != "sha256"})
+                elif change == "source":
+                    bindings["source_sha256"] = "0" * 64
+                else:
+                    slot = "p3b-02.adaptive.editor.select.seq2.t11"
+                with self.assertRaises(ContractError):
+                    self.timing.validate_gate(clock.record, altered, slot_id=slot,
+                                              bindings=bindings, fixture=True)
+
+    def test_hard_money_token_and_request_caps_precede_any_timing_pause(self):
+        from . import accounting, workflow
+        from .test_workflow_s2 import minimal_study
+
+        study = minimal_study()
+        slot = next(name for name, row in study["slots"].items()
+                    if row["role"] == "native_selector" and row["turn"] == 1)
+        meta = study["slots"][slot]
+        for limit in ("money", "tokens", "requests"):
+            with self.subTest(limit=limit):
+                state = workflow._empty_state(study, True)
+                if limit == "money":
+                    state["spent_micro_usd"] = accounting.POLICY["phase_micro_usd"]
+                elif limit == "tokens":
+                    state["cells"][meta["cell"]]["input_tokens"] = accounting.POLICY["cell_input"]
+                else:
+                    state["attempts"] = accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]
+                ledger = accounting._DeadlineCore.__new__(accounting._DeadlineCore)
+                ledger._lock, ledger.journal = threading.RLock(), self.base / "journal"
+                ledger.hooks = Mock()
+                ledger.hooks.before_intent.side_effect = AssertionError("timing pause bypassed hard limit")
+                manifest = {"inputs": {"slots": study["slots"], "fixture": True,
+                    "study_sha256": study["study_sha256"], "editor_tools": {}}}
+                with patch.object(accounting, "NATIVE", self.base), patch.object(
+                    accounting.core, "writer_lock", return_value=threading.RLock()), patch.object(
+                    accounting, "_replay", return_value=(state, [], manifest)), patch.object(
+                    accounting, "_stop", return_value=None), patch.object(
+                    accounting, "validate_request"), patch.object(accounting.core, "_append_event") as appended:
+                    with self.assertRaises((accounting.PhaseBudgetStop, accounting.CellBudgetStop)):
+                        ledger.dispatch(slot, "native_selector", {"synthetic": True})
+                ledger.hooks.before_intent.assert_not_called()
+                self.assertEqual(appended.call_args.args[1], "budget_stop")
+
+
 class SelectorOwnedWorkerTests(unittest.TestCase):
     def fixture_transport(self, behavior=None):
         import httpx
@@ -264,7 +527,7 @@ class SelectorOwnedWorkerTests(unittest.TestCase):
         self.addCleanup(value.close)
         return value
 
-    def bind(self, value):
+    def bind(self, value, *, soft_timing=False):
         from . import ledger_core
         bindings = {key: "1" * 64 for key in ("study_sha256", "source_sha256", "policy_sha256", "launcher_sha256")}
         body = {"model": "claude-opus-5", "max_tokens": 16000, "thinking": {"type": "adaptive"},
@@ -273,7 +536,23 @@ class SelectorOwnedWorkerTests(unittest.TestCase):
         slot = "p3b-01.adaptive.editor.select.seq2.t01"
         meta = {"role": "native_selector", "pair": "p3b-01", "cell": "p3b-01:adaptive",
                 "conversation": "p3b-01:adaptive:select.seq2"}
-        value.register_conversation(meta["conversation"], time.monotonic() + 600)
+        if soft_timing:
+            from . import deadline, transport
+            from .support import NATIVE
+
+            NATIVE.mkdir(parents=True, exist_ok=True)
+            temporary = tempfile.TemporaryDirectory(prefix="soft-worker-", dir=NATIVE)
+            self.addCleanup(temporary.cleanup)
+            record = deadline.clock_record(study_sha256=bindings["study_sha256"],
+                source_sha256=bindings["source_sha256"], pilot="p3b-01", label="select.seq2",
+                fixture=True, editor_profile_sha256="5" * 64, started=time.monotonic() - 543.052)
+            clock = deadline.Clock(record, Path(temporary.name))
+            with patch.object(transport, "Clock", return_value=clock):
+                value.register_conversation(meta["conversation"], record["deadline_monotonic"], clock=record)
+            value.review_before_intent(slot, "native_selector", meta, bindings,
+                                       {"spent_micro_usd": 0, "reserved_micro_usd": 0})
+        else:
+            value.register_conversation(meta["conversation"], time.monotonic() + 600)
         allocation = value.prepare(slot, "native_selector", meta, bindings)
         intent = {"slot_id": slot, "role": "native_selector", "pair": "p3b-01", "cell": meta["cell"],
             "study_sha256": bindings["study_sha256"], "fixture": True, "dispatch_id": "fixture:0001",
@@ -290,10 +569,134 @@ class SelectorOwnedWorkerTests(unittest.TestCase):
         result = ledger_core._result(intent, response)
         audit = value.commit(intent["slot_id"], result)
         validate_audit(audit, intent=intent, result=result, bindings=bindings)
+        self.assertEqual(audit["kind"], "phase3b-s2-transport-audit-v1")
+        self.assertNotIn("conversation_timing", audit)
         self.assertEqual((result["status"], result["reserved_micro_usd"]), ("response", 0))
         self.assertEqual(audit["role"], "native_selector")
         self.assertTrue(audit["worker_stopped"] and audit["sdk_invoked"])
         self.assertEqual(len(self.http_calls), 1)
+
+    def test_actual_pinned_soft_timing_sdk_audit_binds_clock_and_rejects_resealed_grace(self):
+        from . import ledger_core
+        from .transport import validate_audit
+
+        value = self.fixture_transport()
+        bindings, body, intent = self.bind(value, soft_timing=True)
+        result = ledger_core._result(intent, value.create("native_selector", body))
+        audit = value.commit(intent["slot_id"], result)
+        validate_audit(audit, intent=intent, result=result, bindings=bindings)
+        self.assertEqual(audit["kind"], "phase3b-s2-transport-audit-v2")
+        self.assertIsNone(audit["budget"]["conversation_deadline"])
+        self.assertEqual(audit["budget"]["effective_seconds"], 10)
+        self.assertEqual(len(self.http_calls), 1)
+        altered = copy.deepcopy(audit)
+        gate = altered["conversation_timing"]["gate"]
+        gate["soft_deadline_monotonic"] += 1
+        gate["sha256"] = digest({k: v for k, v in gate.items() if k != "sha256"})
+        altered["sha256"] = digest({k: v for k, v in altered.items() if k != "sha256"})
+        with self.assertRaises(ContractError):
+            validate_audit(altered, intent=intent, result=result, bindings=bindings)
+
+    def paused_ledger(self):
+        from . import accounting, deadline, ledger_core
+        from .support import ROOT
+        from .test_workflow_s2 import minimal_study
+
+        value = self.fixture_transport()
+        study = minimal_study()
+        study_id = digest(["synthetic-soft-ledger", time.time_ns()])
+        bindings = {"source_sha256": "1" * 64, "policy_sha256": digest(accounting.POLICY),
+                    "launcher_sha256": "2" * 64}
+        authority = {"study_sha256": study_id, "authorization_id": "synthetic-timing-fixture",
+            "authorized": False, "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
+            "canary_cap_micro_usd": accounting.POLICY["first_micro_usd"], "expansion_authorized": False,
+            "control_policy_sha256": ledger_core.am1.CONTROL_SHA256,
+            "billing_profile": ledger_core.am1.BILLING_PROFILE}
+        slot = "p3b-01.adaptive.editor.select.seq2.t01"
+        record = deadline.clock_record(study_sha256=study_id, source_sha256=bindings["source_sha256"],
+            pilot="p3b-01", label="select.seq2", fixture=True,
+            editor_profile_sha256="5" * 64, started=time.monotonic() - 900.001)
+        value.register_conversation(record["conversation_id"], record["deadline_monotonic"], clock=record)
+        clock = value._soft_clocks[record["conversation_id"]]
+        guard_observations = []
+
+        def guard(state):
+            guard_observations.append(((clock.directory / "review-01.ack.json").exists(),
+                                       len(self.http_calls), state["attempts"]))
+
+        journal = accounting.canonical_journal(study_id, True)
+        tools = json.loads((ROOT / "followups/phase3a_v1/editor-tools.json").read_text(encoding="utf-8"))
+        ledger = accounting.Ledger(journal, study_sha256=study_id, slots=study["slots"],
+            authority=authority, transport=value, bindings=bindings, editor_tools=tools, admission_guard=guard)
+        body = {"model": "claude-opus-5", "max_tokens": 16000, "thinking": {"type": "adaptive"},
+            "output_config": {"effort": "high"}, "inference_geo": "global", "service_tier": "standard_only",
+            "messages": [{"role": "user", "content": "SYNTHETIC paused selector fixture"}]}
+        return ledger, clock, slot, body, guard_observations
+
+    def dispatch_paused(self, ledger, clock, slot, body, decision):
+        from . import deadline, ledger_core
+
+        returned, failures = [], []
+
+        def dispatch():
+            try:
+                returned.append(ledger.dispatch(slot, "native_selector", body))
+            except Exception as error:
+                failures.append(error)
+
+        thread = threading.Thread(target=dispatch, daemon=True)
+        thread.start()
+        target = clock.directory / "review-01.request.json"
+        try:
+            wait_until = time.monotonic() + 10
+            while not target.exists() and thread.is_alive() and time.monotonic() < wait_until:
+                time.sleep(.005)
+            self.assertTrue(target.exists(), "controller never reached its existing pre-intent review")
+            self.assertEqual(ledger_core._read_events(ledger.journal), ([], b""))
+            self.assertEqual(self.http_calls, [])
+            deadline.decide(target, decision)
+        finally:
+            if thread.is_alive() and target.exists() and not (
+                    clock.directory / "review-01.decision.json").exists():
+                deadline.decide(target, "stop")
+            thread.join(timeout=20)
+        self.assertFalse(thread.is_alive(), "fixture controller did not finish after the timing answer")
+        return returned, failures
+
+    def test_actual_ledger_pause_has_zero_intents_then_same_slot_and_post_wait_guard(self):
+        from . import ledger_core
+
+        ledger, clock, slot, body, guarded = self.paused_ledger()
+        returned, failures = self.dispatch_paused(ledger, clock, slot, body, "continue")
+        self.assertEqual(failures, [])
+        self.assertEqual(guarded, [(True, 0, 0)])
+        self.assertEqual(len(returned), 1)
+        self.assertEqual(returned[0]["slot_id"], slot)
+        self.assertEqual(len(self.http_calls), 1)
+        events, tail = ledger_core._read_events(ledger.journal)
+        self.assertEqual([event["kind"] for event in events], ["intent", "result"])
+        self.assertFalse(tail)
+        self.assertEqual(events[0]["record"]["slot_id"], slot)
+        state = ledger.state()
+        self.assertEqual((state["status"], state["attempts"], state["reserved_micro_usd"]), ("ready", 1, 0))
+        self.assertEqual(state["transport_audit_summary"]["validated_audits"], 1)
+
+    def test_actual_ledger_operator_stop_replays_as_operator_stop_without_sdk_or_intent(self):
+        from . import deadline, ledger_core
+
+        ledger, clock, slot, body, guarded = self.paused_ledger()
+        returned, failures = self.dispatch_paused(ledger, clock, slot, body, "stop")
+        self.assertEqual(returned, [])
+        self.assertEqual(len(failures), 1)
+        self.assertIsInstance(failures[0], deadline.TimingStop)
+        self.assertEqual(failures[0].reason, "operator_stop")
+        self.assertEqual(guarded, [])
+        events, _ = ledger_core._read_events(ledger.journal)
+        self.assertEqual([event["kind"] for event in events], ["halt"])
+        state = ledger.state()
+        self.assertEqual((state["status"], state["attempts"], state["spent_micro_usd"],
+                          state["reserved_micro_usd"]), ("stopped-by-operator", 0, 0, 0))
+        self.assertEqual(state["deadline_stop"]["kind"], "phase3b-timing-stop-v1")
 
     def test_uncooperative_selector_worker_holds_full_liability_and_cannot_resend(self):
         from . import ledger_core
