@@ -22,6 +22,8 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 ## Current evidence
 
+**Assessment-only reuse is prepared offline.** The existing CLI can prepare and verify an immutable packet for the saved first prompt: 25 existing judgments are reusable and eight c2 quality judgments remain. Both complete cached assessments replay exactly; generation and the closed run stay unchanged. All 30 selected offline checks pass. The packet has no execution authority or live executor. See the [reuse preparation](docs/ENGINEERING_AUDIT.md#assessment-only-reuse-preparation).
+
 **Preflight now requires regression coverage and checks the current producer/evaluator size contract.** Shared limits drive validation and maximum-size requests through the real benchmark builders. All 75 selected offline checks pass, including changed-limit and missing-regression tests; financial guards and saved generation are preserved. See the [preflight update](docs/ENGINEERING_AUDIT.md#mandatory-preflight-regressions-and-contract-checks). No new paid run has started.
 
 Status snapshot: **6 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.

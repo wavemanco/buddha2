@@ -69,12 +69,15 @@ def main(argv: list[str] | None = None) -> int:
             return _backend("workflow").main(args)
         if args and args[0] == "launch":
             return _backend("launch").main(args[1:])
+        if args and args[0] == "assess-saved":
+            return _backend("assessment_reuse").main(args[1:])
         parser = argparse.ArgumentParser(description=__doc__)
         commands = parser.add_subparsers(dest="command", required=True)
         commands.add_parser("prepare", help="freeze a new comparison in the contained runtime")
         commands.add_parser("grant", help="write an explicit fixture or approved live grant")
         commands.add_parser("report", help="reconstruct a report from saved accounted evidence")
         commands.add_parser("launch", help="use the existing inspected, source-bound launcher")
+        commands.add_parser("assess-saved", help="prepare or verify an assessment-only packet without model calls")
         view = commands.add_parser("inspect", help="read sealed study metadata without model calls")
         view.add_argument("--study", type=Path, required=True)
         timing = commands.add_parser("timing", help="continue or stop a pending timing review without model calls")

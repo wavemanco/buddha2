@@ -1,0 +1,113 @@
+{
+  "api_spend_usd": 0,
+  "authorization": "User authorized compatible assessment-only reuse preparation, offline verification, preservation of the closed run and reviewed push; no paid calls or engineering detours.",
+  "canonical_source_sha256": "ca24efc3cdc1416ffeb70242b0fc34066d91d103b96794e17cc5c56cb7ee047e",
+  "changed_source_file_sha256": {
+    "followups/phase3b_seq2_v1/assessment_reuse.py": "887d178ac0b1f72f4b4f469b99575a035781374b34e5d4ae781665bd74cf242c",
+    "followups/phase3b_seq2_v1/source-inputs.json": "7c15f495254de795c149550e5d7cc745c5364665cde2fa8e4993a6d5715cb432",
+    "followups/phase3b_seq2_v1/test_assessment_reuse_s2.py": "ad282d90a9c6453825e99e6a4c99ef8e0fbea1d7e3852cc8d2feacaf8d542547",
+    "src/buddha2/experiment.py": "06f0fa9bb609740da146354e1d1d44819915016d7bb3b6868788a3b59429cae2",
+    "tests/test_experiment_cli.py": "0685d7262e04f4b4a44c24aaa715838a940db24de7be70d0151e3a507cc9a27d"
+  },
+  "compatibility": {
+    "all_25_saved_results_match_original_requests_native_response_checks_and_accounting": true,
+    "all_33_current_requests_validated": true,
+    "approved_outcome_and_data_certificate_hash_anchored": true,
+    "cached_quality_json_and_score_ranges_strict": true,
+    "cached_responses_not_copied_to_packet": true,
+    "generation_sealed_before_judging": true,
+    "native_evaluator_base_and_wrapper_bytes_equal_parent": true,
+    "no_saved_judgments_relabelled_or_replaced": true,
+    "original_journal_hashes_and_event_chain_verified": true,
+    "original_study_portfolio_assessment_slot_request_and_result_ids_unchanged": true,
+    "pair_seal_and_original_readiness_verified": true,
+    "pending_request_bodies_present_only_in_private_prepared_packet": true,
+    "two_complete_native_assessments_exactly_replay": true
+  },
+  "effective_source_inputs": 167,
+  "evidence_receipt_sha256": {
+    "cli-native-source-tests.json": "7e591fdd8c60e855afa85ffa3a6dd81a63955c69533f0821e60c261223a03b97",
+    "final-file-verification.json": "1a6b1289643561a17d8f0302e353777f8b88a1a070225d8b69f6ef1bb5b7ed50",
+    "owned-absence-review.json": "c053d47948e4459f6c686ba0f3c954f5ec4e35842b4c92a52367726e62a14c96",
+    "owned-cleanup.json": "3fb00220c575e974cdb5eb89572025ba1dfaae31c8ff236c2272f8cf94371079",
+    "owned-containment.json": "3885cb21e9cd0753057e652c164eea358bdb9876119834e57aa0c354c56395b3",
+    "prepared-packet-verification.json": "c7957a92b13b78c4ea0dac521ce53830e71e2519a9be2e4b5ca26877e0be7bfc",
+    "preservation-before.json": "c2221b182da0f0f7973553d378c17baf7ca7bb590e31ccea4cb5e4fe1774c3cb",
+    "reuse-tests-v1.json": "f43c77372d400c18750062daa9b7343a0982bef7fdbf416a4996c77615feec6f"
+  },
+  "external_provider_calls": 0,
+  "fresh_provider_keys_requested": false,
+  "independent_review": {
+    "cleanup_reviewer": "pause_rehearsal_review",
+    "code_data_source_and_packet_reviewer": "timing_publication",
+    "reviewers_reran_tests": false,
+    "status": "pass"
+  },
+  "kind": "phase3b-assessment-only-reuse-preparation-v1",
+  "ledger_created_or_reopened": false,
+  "limitations": [
+    "Preparation is scoped to the approved closed first-prompt generation, not arbitrary failed studies.",
+    "The packet verifies reuse eligibility; it is not a live grant or an implemented assessment executor.",
+    "Future provider results need explicit assessment-packet versus original-generation binding and current financial authority.",
+    "The old held closure and four-prompt scientific incompleteness remain unchanged.",
+    "Original referenced data must remain available and hash-identical for verification."
+  ],
+  "live_executor_created": false,
+  "new_scientific_score_publication": false,
+  "next_step": "Prepare separately controlled execution and result accounting for the eight pending judgments under the packet identity while retaining the original generation provenance; no generation or re-selection.",
+  "packet": {
+    "bound_original_input_files": 11,
+    "complete_cached_assessments_strictly_replayed": 2,
+    "file_sha256": "d45fccbd2a21987e3bc31826d0f1bb3b32e4dcfc9b64b2ab5a17b35397cbbd1e",
+    "generation_calls_required": 0,
+    "kind": "buddha2-assessment-reuse-plan-v1",
+    "live_execution_allowed": false,
+    "original_generation_study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+    "original_selected_checkpoint": "c1",
+    "parent_status_unchanged": "incomplete",
+    "pending_quality_requests": 8,
+    "relative_path": "runs/phase3b-seq2-v1/assessment-reuse-preparation-v1/phase3b-seq2-v1/assessment-reuse/first-prompt-v1/assessment-reuse.json",
+    "reusable_observations": 25,
+    "sha256": "2611139c34dc5c1c73b540631dabe4fc0b85611728ae9e5cbc661561c0d1e217",
+    "targets": {
+      "c1": {
+        "pending": 0,
+        "reusable": 11
+      },
+      "c2": {
+        "pending": 8,
+        "reusable": 3
+      },
+      "fixed": {
+        "pending": 0,
+        "reusable": 11
+      }
+    }
+  },
+  "preservation": {
+    "closed_journal_reports_and_generation_untouched": true,
+    "historical_ordinary_files_verified_unchanged": 44,
+    "no_archived_source_or_private_credential_files_read": true,
+    "old_run_not_reopened_or_requalified": true,
+    "owned_worker_independently_absent": true,
+    "prior_authority_and_held_liability_unchanged": true
+  },
+  "public_source_sha256": "8a326105633eb1e5cee72fe1c5438068bff366f00a366d58a99d9ceb4593fa9a",
+  "status": "prepared-and-verified-offline",
+  "verification": {
+    "actual_public_cli_prepare_and_verify_passed": true,
+    "all_nine_blocked_sdk_socket_subprocess_attempt_counts_zero": true,
+    "bandit_production_files": 2,
+    "cli_native_source_methods": 24,
+    "errors": 0,
+    "failures": 0,
+    "mypy_production_files": 2,
+    "new_actual_parent_methods": 6,
+    "resealed_tampering_changed_parent_stale_source_and_protected_output_tests_passed": true,
+    "ruff_python_files": 4,
+    "skips": 0,
+    "source_unchanged_during_checks": true,
+    "static_checks_passed": true,
+    "unique_selected_test_methods": 30
+  }
+}
