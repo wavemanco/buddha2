@@ -1,0 +1,75 @@
+{
+  "accelerated_elapsed_time_fixture_seconds": 900.01,
+  "accounting": {
+    "SDK_mock_calls_after_ack": 5,
+    "SDK_mock_calls_while_paused": 0,
+    "all_allocations_after_ack": true,
+    "api_spend_usd": 0,
+    "external_provider_calls": 0,
+    "history_audits_passed": 5,
+    "intents_while_paused": 0,
+    "journal_intent_result_pairs": 5,
+    "real_credentials_used": false,
+    "reserved_micro_usd": 0,
+    "validated_physical_transport_audits": 5
+  },
+  "actual_native_subprocess": true,
+  "canonical_source_sha256": "26898c3788418aa17dc21a3e6b269abdf61348ac0feeaf57c846a2353fa18178",
+  "conclusion": "The previously missing actual-native human continuation demonstration passed without a production repair or API spend.",
+  "continuation_ack_file_sha256": "f8c3e16f7244ac87b2d7786603e30bff4416f8ec2a3fa524bdffd0f890899bf6",
+  "continuity": {
+    "continuous_controller_observations_while_paused": 384,
+    "initial_pending_slot_request_and_history_unchanged": true,
+    "normal_native_completion": true,
+    "same_child_at_all_five_mock_requests": true,
+    "same_native_child_pid": 15,
+    "same_native_child_start_ticks": 54915643
+  },
+  "created_at_utc": "2026-11-06T00:21:44.822449+00:00",
+  "effective_source_inputs": 163,
+  "human_decision": {
+    "acknowledged_outcome": "continued",
+    "actual_user_answer_in_chat": "Continue the rehearsal",
+    "applied_via_existing_host_experiment_timing_cli": true,
+    "decision_at_utc": "2026-11-06T00:17:47.158229+00:00",
+    "paused_seconds": 78.42478143994231,
+    "seconds_granted_from_ack": 600
+  },
+  "independent_review": {
+    "five_physical_transport_audits_validated_with_production_validator": true,
+    "independent_pre_decision_native_pid_or_journal_capture": false,
+    "intent_result_ack_and_pending_hashes_verified": true,
+    "passed": true,
+    "reviewer": "/root/pause_rehearsal_review"
+  },
+  "kind": "phase3b-actual-native-human-timing-rehearsal-v1",
+  "limits": [
+    "The fixture accelerates the timing input; it does not wait fifteen real minutes.",
+    "The pause precedes the first model response; it proves initial pending-history survival and subsequent five-turn history handling, not a mid-conversation pause.",
+    "Provider responses are mocked. Actual external provider behavior and full current-study acceptance are not established.",
+    "The controller observed pre-decision continuity; independent review validates the saved evidence and post-decision audits, not an independent pre-decision observation."
+  ],
+  "native_subprocess_simulated": false,
+  "new_live_study_grant_or_paid_repetition_created": false,
+  "old_study_reopened_or_requalified": false,
+  "passed": true,
+  "post_wait_source_guard_checked": true,
+  "production_source_changed": false,
+  "provider_responses_mocked": true,
+  "public_source_sha256": "671b5f7cfaf9e03968eedfaf32f19ad4516df471f479da0b9f802f550a116a97",
+  "raw_local_artifacts_sha256": {
+    "finished.json": "3819b168c9797390af3bd15d33187585b69aab7b31cc60fac5dcd23182e03605",
+    "pause-independent.json": "acab7d9074003877a8d57bb3c84ed0bd249c215ddbc27497acacc3fe14cd12a9",
+    "paused.json": "1c1cccfb2a39113e78c5144c1f0bfb25151b04df6fffbc4e5e3596540ff3adcd",
+    "rehearsal.py": "422a2baef5bdae5e3e7a7717c1a83ca19fc1ba2fe6d2c93d9fa77343cc6f5709"
+  },
+  "review_request_sha256": "f43016fce2f2e9b3a49b84b13d9ddc64b14efea60517319fe17601d41794dda0",
+  "runtime": {
+    "exact_test_owner_removed_and_independently_absent": true,
+    "existing_viewer_untouched": true,
+    "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+    "network": "none",
+    "root_and_project_read_only": true
+  },
+  "timing_policy_changed_for_fixture": false
+}
