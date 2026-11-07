@@ -1,6 +1,6 @@
 # Phase 3B continuation — the three remaining prompt pairs
 
-Definition 1.0 — 6 November 2026, America/Los_Angeles.
+Definition 1.1 — 6 November 2026, America/Los_Angeles. Adds focused false-stop acceptance requirements; scientific scope, proposed funding and planning estimates are unchanged.
 
 **PROPOSED / DEFINITION ONLY.** This request authorizes documentation. It creates no code, execution kit, grant, key request or experiment. A future whole-continuation instruction would cover the bounded offline integration and acceptance, the three remaining paired observations, reviews, visibility and closure below, under a **fresh prospective authorization up to $350**.
 
@@ -69,6 +69,29 @@ Before keys, verify scientific compatibility across the source versions: exact s
 4. **Usable visibility:** current-pair progress in chat and passive SDK-free Inspect snapshots after the first newly completed pair and at closure, including the reused first pair with explicit provenance. Retain actual dates, model settings, missingness and limitations. Reuse existing 600-second export windows; a failed/late display remains recorded as such and does not trigger new model work or erase valid science.
 5. **Closure:** a complete or honestly incomplete machine-readable outcome and readable report, reconciliation of every admitted request/unused slot and liability, one keyless saved-data replay, exact-owner cleanup, independent scientific/accounting review and reviewed publication. Keep raw provider/grader bodies and credentials out of public artifacts.
 
+### False-stop prevention before keys
+
+These are required future acceptance evidence, **not an implementation or acceptance claim today**. Extend the existing six receipt groups and 16 named regressions only at the changed continuation boundaries; do not add another framework, phase, exhaustive test matrix or paid canary.
+
+1. **Replay the failures and their valid counterparts.** Through the real consumers, accept supported read formatting, permitted cache-annotation movement, authoritative saved answers despite different final-chat prose, and diagnostic read gaps. Verify that these do not prevent completion. Paired negative cases must still reject changed authoritative content/choices, altered signed history or tool payloads, missing evidence required by the existing consumed-file/stdout completion contract, and foreign ownership/provenance. Do not require a write for valid stdout or KEEP paths. A harmless representation must not be promoted into a new integrity rule.
+2. **Check contracts using the actual prepared kit.** Derive worklist/token consistency bounds from current role contracts. Exercise native request builders at their full permitted text envelope, including worst-case JSON escaping and exact boundaries. Retain the producer-only changed-limit test: an incompatible consumer must be detected before accounting opens or a request is sent. Validate actual descriptor/grant identities, required fields, receipt names and multi-origin inputs, rather than a separately reconstructed test dictionary.
+3. **Exercise the real host handshake.** A credential-free rehearsal must run the same pre-credential PowerShell parsing, property reads, banner/formatting and path handling as provider launch, stopping before key access or client construction. Configuration validation that skips that branch is insufficient. Verify current signed host/runtime identity before freezing, then consume the exact prepared kit before requesting keys. Any provider-only authorization/admission branch omitted by SDK mocks needs a focused test with outbound dispatch blocked; do not report skipped branches as covered.
+4. **Rehearse the changed route once.** Use the pinned native engine/OpenCode and existing SDK mocks for one completed adaptive/fixed pair, including review, assessment, aggregate, Inspect export and keyless replay. Use focused fixtures for the other frozen task/arm orders and four-pair/multiple-origin join, and independently verify the genuine first-pair certificate read-only. Mock aggregates must be visibly synthetic; never relabel actual first-pair records as fixtures or present mixed fixture/live results as science. Check coordinated grace and the existing explicit Continue/no-answer behavior. Record executed test IDs and coverage gaps, not only a passing count.
+5. **Preserve work and prevent duplicate spending.** Before each intent, use existing state to check the exact eligible slot, target, role, request digest and next reservation; do not rerun the acceptance campaign per call. Replaying a settled identical slot returns its saved result with zero new calls. Changed/foreign requests are rejected; unresolved delivery keeps its liability and is never resent. Inject one local failure after a known response and verify that available usage/accounting and completed artifacts survive, with no automatic retry or regeneration. Display/report failures cannot alter scientific records or create replacement work.
+
+Apply these consequences through the existing controls:
+
+| Evidence | Required consequence |
+|---|---|
+| Exhausted funding, unresolved delivery, unauthorized request, changed source/model/authoritative artifact/history, or containment failure | Block further dispatch; preserve evidence and accounting. |
+| Timing soft allowance | Use coordinated grace and the actual continuation decision; never exceed hard financial or outer safety bounds. |
+| Supported representation, exhaustive read gap, soft forecast or passive display failure | Record a diagnostic; do not invalidate otherwise valid science or trigger model calls. |
+| Unexplained checker exception | Pause new spending for diagnosis; it does not itself prove tampering or invalidate unrelated completed pairs. If safe continuation cannot be established within existing ownership/wait bounds, close incomplete and preserve work. |
+
+An actionable sanitized stop record must identify the predicate/stage, affected pair/slot, expected versus observed contract value, whether an intent/dispatch occurred, known cost versus held liability, and preserved artifact references. Keep keys and provider/grader bodies private. Independent acceptance must verify both legitimate completion and genuine-negative rejection before another external call. No silent source patch, reopened closed journal, automatic paid restart or additional repetition follows a failure.
+
+This finite coverage reduces known and related contract/host-drift risks. It cannot prove that every future provider response or software failure is anticipated. Any additional implementation needed remains inside the existing bounded integration and its four-hour review point; unresolved gaps are reported rather than hidden behind more passing tests.
+
 ## 4. Exclusions
 
 No p3b-01 regeneration, reselection or rejudging; no other historical rescue. No new prompt, repeat, model or strategy; no base-model tournament, deeper/parallel recursion, shared memory, model training, MuCE/CrPO, surprise measures, required human ratings or held-out evaluation. No prompt/settings tuning based on observed scores. No upstream/dependency update, generic plugin/recovery infrastructure or Inspect provider bridge. No automatic replacement of failed or completed work.
@@ -79,6 +102,7 @@ This definition makes no code changes and starts no experiment. Later phases ret
 
 The scientific continuation is complete only when:
 
+- The exact continuation kit has the focused false-stop evidence above and independent acceptance before keys; a historical pass for another execution profile is insufficient.
 - The first pair/certificate and scientific compatibility pass without modifying original artifacts or identities.
 - All three new pairs follow the frozen task/arm/candidate order and independent seed policy. Each has required c1/c2 and fixed outputs and an eligible normal native selection; existing authentic-normal evidence and failure classifications remain explicit. No forced write, strategy change or c2 adoption is required.
 - All nine new targets and three reused targets are valid and scored, with eight primary aliases and every planned contrast. No missing checkpoint is dropped to manufacture completion. All four paired units have equal weight; there is no significance, population or efficiency-parity claim.
