@@ -1,0 +1,199 @@
+{
+  "kind": "phase3b-remaining-pairs-live-outcome-v1",
+  "client_date": "2026-11-07",
+  "status": "complete",
+  "scientific_complete": true,
+  "definition_version": "1.1",
+  "accepted_code_commit": "b5a56b6802e9f49ca4c97aed6059a3617af868a1",
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "public_source_sha256": "c14f427c5e579a4772400b1138c7c701a4204c80936c728af215fb776c90c093",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "grant_sha256": "bc8d8421318a47375244d0a7f7351f0e0f9630535909ae8fac4d12b662cdf6cb",
+  "execution_pilots": [
+    "p3b-02",
+    "p3b-03",
+    "p3b-04"
+  ],
+  "cap_micro_usd": 350000000,
+  "maximum_new_admissions": 1758,
+  "new_requests": 1026,
+  "new_known_micro_usd": 19981693,
+  "new_reserved_micro_usd": 0,
+  "new_unknown_results": 0,
+  "unused_new_slots": 732,
+  "new_breakdown": {
+    "adaptive_inference": {
+      "requests": 501,
+      "micro_usd": 16512431
+    },
+    "fixed_inference": {
+      "requests": 435,
+      "micro_usd": 2622912
+    },
+    "grouping": {
+      "requests": 9
+    },
+    "quality": {
+      "requests": 81
+    },
+    "all_assessment": {
+      "requests": 90,
+      "micro_usd": 846350
+    }
+  },
+  "new_pair_costs": [
+    {
+      "pilot": "p3b-02",
+      "requests": 347,
+      "micro_usd": 7349185
+    },
+    {
+      "pilot": "p3b-03",
+      "requests": 331,
+      "micro_usd": 6211727
+    },
+    {
+      "pilot": "p3b-04",
+      "requests": 348,
+      "micro_usd": 6420781
+    }
+  ],
+  "preserved_first_pair": {
+    "requests": 361,
+    "micro_usd": 11239856,
+    "new_calls": 0,
+    "inputs_preserved": 376,
+    "generation_study": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+    "assessment_study": "cac569074f96ac1cd016ab9428f45722ad6818913f255d50408729686bb6a265",
+    "certificate_sha256": "72fa6e95d1b8019adea997f1b84c2664a2ffb55cd9a264d91a12695db271a872"
+  },
+  "whole_pilot": {
+    "pairs": 4,
+    "primary_aliases_scored": 8,
+    "assessment_targets_scored": 12,
+    "requests": 1387,
+    "known_micro_usd": 31221549
+  },
+  "tracked_lineage": {
+    "known_micro_usd": 110830672,
+    "historical_held_micro_usd": 22880000,
+    "new_hold_micro_usd": 0,
+    "invoice_reconciled": false,
+    "scope": "Tracked execution lineage; excludes unrelated project and subscription accounting."
+  },
+  "primary_mean_selected_minus_fixed": 1.3043398918601927,
+  "mean_c2_minus_c1": 0.01805590974652027,
+  "mean_selected_minus_c1": -0.019091208504162793,
+  "paired_wins": 2,
+  "paired_losses": 2,
+  "interpretation": {
+    "primary_result_preserved": true,
+    "p03_grouping_driven": true,
+    "p03_distinct_strings_grouped_once": true,
+    "p03_later_stage_keep_decisions": 3,
+    "p03_c1_c2_same_strategy": true,
+    "realized_inference_cost_ratio": 6.2954574915208745,
+    "equal_realized_cost_claim": false,
+    "held_out": false,
+    "population_benefit_established": false,
+    "human_preference_established": false
+  },
+  "new_method_changes": [
+    {
+      "pilot": "p3b-02",
+      "changed_from_input": 6,
+      "keep": 0,
+      "distinct_outputs_within_pair": 4
+    },
+    {
+      "pilot": "p3b-03",
+      "changed_from_input": 3,
+      "keep": 3,
+      "distinct_outputs_within_pair": 3
+    },
+    {
+      "pilot": "p3b-04",
+      "changed_from_input": 6,
+      "keep": 0,
+      "distinct_outputs_within_pair": 4
+    }
+  ],
+  "exhaustive_read_audit": {
+    "policy": "read-consumption-diagnostic-v1",
+    "sessions": 28,
+    "complete_sessions": 0,
+    "passed": false,
+    "completion_requires_pass": false,
+    "new_selector_parse_errors": [
+      3,
+      1,
+      2
+    ],
+    "new_read_or_range_conflict_errors": 0
+  },
+  "verification": {
+    "source_inputs_unchanged": 177,
+    "preserved_first_pair_inputs_unchanged": 376,
+    "source_changes_during_live": 0,
+    "automatic_paid_repeats": 0,
+    "live_launcher_exit_code": 0,
+    "all_pair_reviews_passed": true,
+    "first_and_closure_inspect_roundtrip": true,
+    "inspect_model_or_external_socket_attempts": 0,
+    "combined_native_api_intervals": 1387,
+    "actual_interval_dates_verified_2026": true,
+    "saved_renderer_replays": 1,
+    "replay_provider_calls": 0,
+    "replay_files_byte_identical": 8,
+    "journal_unchanged": true,
+    "owned_live_export_replay_containers_independently_absent": true
+  },
+  "launcher_finished_at_utc": "2026-11-07T13:48:24.721647119Z",
+  "canonical_evidence_sha256": "3fb65fe42da552af33169fcc6ad92fc2510a1ba40635114457368ac7bea6972d",
+  "canonical_report_file_sha256": {
+    "PHASE3B_REPORT.md": "2abc97b60fb5268ddc02bbd58dee2bb8f11482f78723e986fef48ccae4d93b06",
+    "accounting.json": "1938217ffe2cad7a16c0df8f3700cd728df13e597dee4851fe8c07f3ad967947",
+    "analysis.json": "ee8af78a6c63325ce692506baaf005936c9c783076ed658dda8a8bf22cd20f0e",
+    "coverage.json": "133cac2430a532dbcd9adda93718f16f49dd74a0c409f42c6f7169311cdf1fec",
+    "protocol.json": "8086451061b9c9c590b0ec8910a44e38fd8c7de283cce46704abe9f4e3a3382c",
+    "readiness.json": "2bca940c8a2c9d554231d1e77cde322bd08faafe0b86dc8a6a12551f3ab42a36",
+    "rows.json": "9cb8b48e28668e53e0f75221210a92cc9468ca6c5240a2a110e604cb01e66369",
+    "summary.json": "2603baefc2a29c40a6d07fc68d39e365901920db1108a70e75c0bca020bae498"
+  },
+  "human_report_path": "docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md",
+  "human_report_sha256": "1981505da5c209681c054a4a825dacb0dbd8826157f53b653551587bbddac313",
+  "evidence_directory": "remaining-pairs-live",
+  "supporting_file_sha256": {
+    "inspection-readiness.json": "0de3954d3912094891e964713a2fd53e894c5542fd9ef526b3a726af65276111",
+    "readiness-review.json": "2bca940c8a2c9d554231d1e77cde322bd08faafe0b86dc8a6a12551f3ab42a36",
+    "inspection-first.json": "584c281bd9ddd680b8f7b61cc7eed6befced5064c0b59135d922256989e26743",
+    "first-review.json": "918a94f8b6aa14ee0bdee56fc510df21b6fb36cb16b2320ef5354ba6084da555",
+    "inspection-pair-p3b-03.json": "c155e67e2cdebcbbc0e8e8b7392c7abb88611c414849e02e64972776a8f93ea7",
+    "pair-p3b-03-review.json": "df82c80692ef2e26cc1dcfdf18763c3a538152055ac5d73e4f3dfca9b9ea06c5",
+    "inspection-pair-p3b-04.json": "830ec3e50b30b32a05e823b66e5c5e7083e891264bbb4b5604a288101116515c",
+    "pair-p3b-04-review.json": "aa8fab0fac657ee452dfb81a479cde175b410320164b4e4ec0693920e07fd7c9",
+    "first-pair-status.json": "709ef8001c23ac68203473e6aa50458b6f0ad1b191207193d1674cfdcb1f79cd",
+    "closure-status.json": "f1e0e4331bdd1ef7c54597abe8ec0e670095c8056fa682db8b7ac01f3d152fca",
+    "saved-report-replay.json": "acebb0ad25c5e0851b4e88112069e988c85e616601cc3a41b45c58d451c9f5b6",
+    "first-new-pair-review.json": "2f4864a890d223469d589bb72dddb7b89d389c8700a20f805fdcd3dd5fa8040f",
+    "launcher-outcome.json": "d95c97d7692e8d43cf9c436c26ae1acf0efbc40af5e90f3c79ea72e63cb7120d",
+    "inspect-first.json": "fb6c4fca78f313e1d7dbc6b615f703b8163f80cb588167163260ef9eb5736cf8",
+    "inspect-first-cleanup.json": "da16a18b0e61925fb9a50204b91eee87217fe0ab7686324775458faa8f944a1a",
+    "inspect-closure.json": "5710bee998604eefe0ebc6b022c87283d191024ab7421c76f063125615ecc079",
+    "inspect-closure-cleanup.json": "2eddc9bc59964bc9b31d4eb484bae0853c1175a18052483e14e49ffd269368d0"
+  },
+  "independent_review_path": "remaining-pairs-live/independent-review.json",
+  "ui_limitation": {
+    "action": "Starting a loopback-only static Inspect viewer server",
+    "automatic_approval_review": "rejected",
+    "stated_reason": "blocked by policy",
+    "server_started": false,
+    "alternative_bypass_attempted": false,
+    "saved_exports_complete": true
+  },
+  "publication_boundary": "Sanitized text evidence only; raw logs, response bodies and provenance packets remain local.",
+  "next_step": "Define a cost-matched held-out confirmation and grouping-sensitivity plan before any new code or paid work. Unused funding does not authorize another experiment."
+}

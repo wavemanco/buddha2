@@ -1,0 +1,129 @@
+{
+  "combined_checkpoint": {
+    "assessment_scheduled": 12,
+    "assessment_scored": 6,
+    "completed_prompt_pairs": 2,
+    "known_spent_micro_usd": 18589041,
+    "planned_prompt_pairs": 4,
+    "primary_scheduled": 8,
+    "primary_scored": 4,
+    "provider_calls": 708,
+    "scientific_complete": false
+  },
+  "continuation_or_barrier_ack_published": false,
+  "controller_authority": false,
+  "effective_source_inputs_unchanged": 177,
+  "findings": [],
+  "independent": true,
+  "inspect": {
+    "cleanup_verified": true,
+    "exporter_stopped": true,
+    "external_socket_attempts": 0,
+    "model_constructor_attempts": 0,
+    "observed_interval_finish": "2026-11-07T11:25:55.614306+00:00",
+    "observed_interval_start": "2026-11-06T01:54:40.619931+00:00",
+    "request_intervals": 708,
+    "roundtrip_equal": true,
+    "samples": 12
+  },
+  "kind": "phase3b-remaining-pairs-first-outcome-independent-advisory-v1",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "limitations": [
+    "Advisory saved-record review only; it does not publish inspection or continuation authority.",
+    "Only two of four exposed development prompts are assessed; the whole pilot remains scientifically incomplete.",
+    "c2/c1 changes include fresh sampling; recorded edits and native selection do not establish a causal adaptation benefit.",
+    "Canonical native folding and physical request audits remain the existing production evidence; no new evaluator or provider call was introduced by this review."
+  ],
+  "new_p3b02_accounting": {
+    "adaptive_micro_usd": 6016759,
+    "assessment_micro_usd": 352555,
+    "fixed_micro_usd": 979871,
+    "known_spent_micro_usd": 7349185,
+    "provider_calls": 347,
+    "reserved_micro_usd": 0
+  },
+  "new_tests_or_experiments": 0,
+  "p3b02_metrics": {
+    "c1": {
+      "distinct": 10,
+      "utility": 7.30861648248163
+    },
+    "c2": {
+      "distinct": 10,
+      "utility": 7.573050008093335
+    },
+    "fixed": {
+      "distinct": 10,
+      "utility": 7.676649632232192
+    }
+  },
+  "p3b02_selection": {
+    "fixed_original_candidate": "candidate-08",
+    "fixed_presented_candidate": "candidate-03",
+    "native_checkpoint": "c2",
+    "original_permutation_preserved": true
+  },
+  "passed": true,
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "preserved_p3b01": {
+    "assessment_execution_study_sha256": "cac569074f96ac1cd016ab9428f45722ad6818913f255d50408729686bb6a265",
+    "bound_inputs_unchanged": 376,
+    "certificate_sha256": "72fa6e95d1b8019adea997f1b84c2664a2ffb55cd9a264d91a12695db271a872",
+    "counted_once": true,
+    "generation_study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+    "known_spent_micro_usd": 11239856,
+    "new_calls_authorized": false,
+    "provider_calls": 361
+  },
+  "provider_calls": 0,
+  "read_consumption": {
+    "blocking": false,
+    "combined_complete_sessions": 0,
+    "combined_recorded_sessions": 14,
+    "first_new_pair_incomplete_sessions": 7,
+    "first_new_pair_recorded_sessions": 7,
+    "policy_id": "read-consumption-diagnostic-v1"
+  },
+  "real_credentials_used": false,
+  "recorded_strategy_activity": {
+    "composition_adopts_existing_variants": {
+      "c1": "inv1",
+      "c2": "inv2"
+    },
+    "effective_changed_stages": 6,
+    "fallback_or_terminal_stages": 0,
+    "keep_base_stages": 0,
+    "model_backed_author_stages": 6,
+    "performance_effect_not_established": true,
+    "unique_effective_outputs": 4
+  },
+  "report_file_sha256": {
+    "PHASE3B_REPORT.md": "48fca741aec0c416df196dc5b03534fdea32fa805327abe46bb525ef481b0565",
+    "accounting.json": "51169ae73b6350d8805911d3e3f60e69c37238c21ae16f0e3f86a264d1af20ea",
+    "analysis.json": "64998ed885aaf59f7d7ec8877f9934102c470a68d759b9b8fc91d299e36a1dc7",
+    "coverage.json": "0f7ec76192314c048478d1d6f622ac6f15f3c2ba1a73fe3dfacd217a3a10f3f5",
+    "protocol.json": "84b775ba35905fbf6278642f23240c0dc17bbb90c5d3a45bfc7783617e6eaafc",
+    "readiness.json": "2bca940c8a2c9d554231d1e77cde322bd08faafe0b86dc8a6a12551f3ab42a36",
+    "rows.json": "34bdf26c814cba246861d88255d0e88cd38d1583d317f87834b1e0ac6d457488",
+    "summary.json": "1e21e50a7546afdadfde2000e456b52b35d4a55274db5ca2d10772814a3a1e70"
+  },
+  "reviewed_journal_prefix": {
+    "events": 694,
+    "last_event_sha256": "11a271fdc97c825b40a4d602dd824f86e11d3623079b9a2f112dfbdde455d445",
+    "request_result_usage_price_chain_reviewed": true,
+    "requests": 347
+  },
+  "reviewer": "/root/remaining_acceptance",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "ab097411b92b2bf2c7d824f907c59a0a48e8a376d794172fdbda14035f58295c",
+  "snapshot_sha256": "3e194c279e8f0d818b0d063ed8855fbb78160d53e94eaf73b5725a5e00701023",
+  "source_edits": 0,
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supporting_file_sha256": {
+    "runs/phase3b-seq2-v1/native/1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe/live/visibility/first-pair/snapshot/manifest.json": "8a3f60b9a5dcd90a0c4d974447a67989a005aa149b59f9638df9c8d2d9e5f43e",
+    "runs/phase3b-seq2-v1/native/1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe/live/visibility/first-pair/snapshot/payload.json": "3e194c279e8f0d818b0d063ed8855fbb78160d53e94eaf73b5725a5e00701023",
+    "runs/phase3b-seq2-v1/visibility-exports/remaining-pairs-live-first-v1/export/result.json": "fb6c4fca78f313e1d7dbc6b615f703b8163f80cb588167163260ef9eb5736cf8",
+    "runs/phase3b-seq2-v1/visibility-exports/remaining-pairs-live-first-v1/visibility-result.json": "da16a18b0e61925fb9a50204b91eee87217fe0ab7686324775458faa8f944a1a"
+  }
+}

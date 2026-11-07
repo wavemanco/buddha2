@@ -1,0 +1,31 @@
+{
+  "kind": "phase3b-remaining-saved-report-replay-v1",
+  "passed": true,
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "network": "none",
+  "read_only_code": true,
+  "existing_renderer_only": true,
+  "new_admissions": 0,
+  "report_files": 8,
+  "all_eight_byte_identical": true,
+  "journal_events_sha256": "16f870684d58cbfc9fa8a3ebeccc5465bfe95bccd5d31da311b8149e1cffc388",
+  "journal_manifest_sha256": "af11053d2dc9ee335f639d3e646a9e992870883d6ad708fce444bb6d15b4357b",
+  "journal_unchanged": true,
+  "canonical_report_sha256": {
+    "PHASE3B_REPORT.md": "2abc97b60fb5268ddc02bbd58dee2bb8f11482f78723e986fef48ccae4d93b06",
+    "accounting.json": "1938217ffe2cad7a16c0df8f3700cd728df13e597dee4851fe8c07f3ad967947",
+    "analysis.json": "ee8af78a6c63325ce692506baaf005936c9c783076ed658dda8a8bf22cd20f0e",
+    "coverage.json": "133cac2430a532dbcd9adda93718f16f49dd74a0c409f42c6f7169311cdf1fec",
+    "protocol.json": "8086451061b9c9c590b0ec8910a44e38fd8c7de283cce46704abe9f4e3a3382c",
+    "readiness.json": "2bca940c8a2c9d554231d1e77cde322bd08faafe0b86dc8a6a12551f3ab42a36",
+    "rows.json": "9cb8b48e28668e53e0f75221210a92cc9468ca6c5240a2a110e604cb01e66369",
+    "summary.json": "2603baefc2a29c40a6d07fc68d39e365901920db1108a70e75c0bca020bae498"
+  },
+  "replay_container": "43a0da5478c123773467ccde6e6db14de5cd0d1bf989f92d504dcb555f1e2e30",
+  "exit_code": 0,
+  "owner_removed": true,
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "method": "Existing workflow report CLI in inspected pinned H1 image; no provider configuration or credentials supplied."
+}

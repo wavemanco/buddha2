@@ -1,6 +1,6 @@
 # Buddha2
 
-One Phase 3B development prompt has complete native assessments; the four-prompt pilot remains incomplete. The approved three-pair continuation now has an [independently accepted offline kit](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_KIT_REPORT.md), preserving the completed pair. Next is fresh masked-key entry and execution of the remaining three pairs within the approved $350 cap. Offline acceptance establishes engineering readiness, not an adaptation benefit. See the [current results and next step](docs/research/CURRENT_SPEC.md).
+Phase 3B's four-prompt development pilot is complete. Native two-round adaptation and fixed best-of-twelve now have fully scored saved outputs. The positive average adaptive gap is driven by one prompt's semantic grouping result. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md).
 
 [Explore the system architecture](docs/architecture/README.md), including Harness², the current agent runner and model roles, our surrounding code, NoveltyBench and passive Inspect.
 
@@ -25,6 +25,22 @@ Our current solver produces a portfolio of ten answers. Adaptation is restricted
 The software we build to make experiments reliable—accounting, isolation, history checks, launchers and reports—is outside the experimental adaptation loop. Its engineering improvements are not reported as learned strategy improvements.
 
 ## Current evidence
+
+**Completed 7 November 2026:** actual Harness2 `seq,k=2` versus fixed best-of-twelve on four exposed development prompts. All eight primary aliases and twelve assessment targets are scored.
+
+| Arm | Mean utility, four prompts | Inference cost, three new prompts |
+|---|---:|---:|
+| Fixed best-of-twelve | 6.112825 | $2.622912 |
+| Selected native two-round adaptation | 7.417165 | $16.512431 |
+
+The mean paired difference is +1.304340, with two wins and two losses. One password prompt's semantic-grouping result drives the positive mean. Mean c2-minus-c1 is +0.018056, including fresh sampling with an unchanged strategy on that prompt. Adaptive inference cost about 6.30 times fixed inference over the new three pairs. This is a descriptive development result, with no held-out, population or cost-efficiency claim.
+
+The continuation used 1,026 settled calls/$19.981693 under its $350 cap, preserving the original assessed pair. The complete four-prompt comparison totals 1,387 calls/$31.221549. Zero-call replay matched all eight reports; both passive Inspect exports passed. See the [full result](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md) and [closure evidence](evidence/phase3b-seq2-v1/remaining-pairs-live-outcome-v1.json).
+
+<details>
+<summary>Earlier execution and engineering history</summary>
+
+The records below are earlier snapshots, retained with their original statements and links. The completed comparison above is the current outcome.
 
 **Assessment-only reuse is prepared offline.** The existing CLI can prepare and verify an immutable packet for the saved first prompt: 25 existing judgments are reusable and eight c2 quality judgments remain. Both complete cached assessments replay exactly; generation and the closed run stay unchanged. All 30 selected offline checks pass. The packet has no execution authority or live executor. See the [reuse preparation](docs/ENGINEERING_AUDIT.md#assessment-only-reuse-preparation).
 
@@ -65,6 +81,8 @@ The subsequent offline review identified a valid OpenCode size-limit footer that
 
 A [completed engineering audit and cleanup](docs/ENGINEERING_AUDIT.md) removed 194 obsolete first-party files (42,847 lines), detached current execution from historical release archives, and corrected report attribution and tie handling. Both canonical and public source profiles passed the same 101 offline component tests and independent readiness review. The cleanup verification itself made zero provider calls; the subsequent live attempt is reported above. Upstream code and the experimental comparison are unchanged; additional evaluators and human review are deferred.
 
+</details>
+
 ## How the pieces fit
 
 - **Harness² runs adaptation.** We keep the upstream engine pinned and unchanged.
@@ -88,6 +106,7 @@ Inspection shows sealed study metadata without model calls or opening historical
 
 ## Start here
 
+- [Completed Phase 3B result and limitations](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md)
 - [Engineering audit, cuts and practical delivery schedule](docs/ENGINEERING_AUDIT.md)
 - [Current status and decisions](docs/research/CURRENT_SPEC.md)
 - [Research method and interpretation](docs/RESEARCH_METHOD.md)

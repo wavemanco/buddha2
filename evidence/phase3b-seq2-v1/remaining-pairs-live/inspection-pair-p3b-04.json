@@ -1,0 +1,9 @@
+{
+  "engineering_checks_passed": true,
+  "evidence_sha256": "2545c3486372e9d4bd61af37974fe3f056831008931e8a0a38ce6addcde6e5c3",
+  "fixture": false,
+  "no_quality_continuation_gate": true,
+  "notes": "Independently verified the actual saved pair04 seal and ready accounting prefix, accepted source, twelve fixed candidates and frozen selector order, full normal native source/artifact/history/clock/transport proof (170 native requests and eight solver portfolios), and all three mandatory native target assessments. Cumulative 1026 settled requests cost 19981693 microUSD with zero reserved. Native selection c2 is valid. All seven exhaustive read audits are incomplete; selector parse errors 2, read errors and mismatched/conflicting ranges 0. These are retained diagnostics, with no favorable-score continuation requirement. Review made zero provider calls.",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supervisor_agent": "/root/pause_proof_gap"
+}

@@ -1,0 +1,9 @@
+{
+  "engineering_checks_passed": true,
+  "evidence_sha256": "8ef328f1dcbd233e989d7f186ce194262f18ab480aeac6cd71cfea34d2725047",
+  "fixture": false,
+  "no_quality_continuation_gate": true,
+  "notes": "Independent keyless review verified the sealed p3b-03 pair, exact fixed ordinal selector replay with twelve candidates, full normal native path with eight solver portfolios and 162 accounted native requests, selection of an existing checkpoint, and all three mandatory strictly folded native assessments. All 678 new requests/$13.560912 are settled with zero reservation. Seven incomplete read audits and one selector parse error remain diagnostics; no read/mismatch/conflict errors were observed. No score threshold or favorable contrast gated continuation.",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supervisor_agent": "/root/pause_proof_gap"
+}

@@ -1,0 +1,9 @@
+{
+  "engineering_checks_passed": true,
+  "evidence_sha256": "365f5b6aaf75d7a70d6f67f70307b697506ecde6c47b93caa32eb15a17a2a5b8",
+  "fixture": false,
+  "no_quality_continuation_gate": true,
+  "notes": "Independent keyless review verified the sealed p3b-02 pair, twelve fixed candidates with original ordinal selector mapping and exact replay, eight native solver portfolios and normal selection of an existing checkpoint, unchanged full native readiness proof, three mandatory strictly folded native assessments, and all 347 settled requests/$7.349185 with no new reservation. Exhaustive-read limitations remain separately recorded diagnostics. No score threshold or favorable contrast gated continuation.",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supervisor_agent": "/root/pause_proof_gap"
+}

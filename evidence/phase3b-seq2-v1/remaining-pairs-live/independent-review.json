@@ -1,0 +1,325 @@
+{
+  "assessment_scheduled": 12,
+  "assessment_scored": 12,
+  "canonical_and_inspect": {
+    "actual_passive_closure_roundtrip_equal": true,
+    "all_eight_replayed_byte_identically": true,
+    "browser_server_launch_not_validated": "The documented local static viewer launch was rejected by automatic approval review; saved exports and file artifacts are the verified visibility evidence.",
+    "closure_snapshot_sha256": "7da560d52f8ccb509c3dddbf91fc42f179e636527132d2b0d6ab6b9e2a201826",
+    "exporter_cleanup_verified": true,
+    "exporter_stopped": true,
+    "external_socket_attempts": 0,
+    "model_constructor_attempts": 0,
+    "native_request_intervals": 1387,
+    "observed_api_dates_year": 2026,
+    "report_file_sha256": {
+      "PHASE3B_REPORT.md": "2abc97b60fb5268ddc02bbd58dee2bb8f11482f78723e986fef48ccae4d93b06",
+      "accounting.json": "1938217ffe2cad7a16c0df8f3700cd728df13e597dee4851fe8c07f3ad967947",
+      "analysis.json": "ee8af78a6c63325ce692506baaf005936c9c783076ed658dda8a8bf22cd20f0e",
+      "coverage.json": "133cac2430a532dbcd9adda93718f16f49dd74a0c409f42c6f7169311cdf1fec",
+      "protocol.json": "8086451061b9c9c590b0ec8910a44e38fd8c7de283cce46704abe9f4e3a3382c",
+      "readiness.json": "2bca940c8a2c9d554231d1e77cde322bd08faafe0b86dc8a6a12551f3ab42a36",
+      "rows.json": "9cb8b48e28668e53e0f75221210a92cc9468ca6c5240a2a110e604cb01e66369",
+      "summary.json": "2603baefc2a29c40a6d07fc68d39e365901920db1108a70e75c0bca020bae498"
+    },
+    "samples": 12,
+    "source_attachment_bytes_preserved": true
+  },
+  "continuation_or_barrier_ack_published": false,
+  "controller_authority": false,
+  "created_at_utc": "2026-11-07T14:04:56.445376+00:00",
+  "effective_source_inputs_unchanged_after_replay": 177,
+  "general_adaptation_benefit_established": false,
+  "human_report_claim_review": {
+    "file": "docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md",
+    "file_sha256": "1981505da5c209681c054a4a825dacb0dbd8826157f53b653551587bbddac313",
+    "grouping_vs_quality_call_wording_corrected": true,
+    "material_overstatement_found": false
+  },
+  "independent": true,
+  "independently_verified_prefix_landmarks": [
+    {
+      "event_sha256": "11a271fdc97c825b40a4d602dd824f86e11d3623079b9a2f112dfbdde455d445",
+      "last_event_index": 694
+    },
+    {
+      "event_sha256": "6d5840192dd0b6d03e6ba2bee2221c857a3300d11604684f7a1668d4eeb93445",
+      "last_event_index": 1357
+    },
+    {
+      "event_sha256": "4166b42c3b4a19a189e8ef786f388fe4ec11eaa1759cc29b25a2b95f9da78191",
+      "last_event_index": 1697
+    },
+    {
+      "event_sha256": "989a8ff3aa810c101f4dda081b445e919a6ba40b02f25fb9f6ab99a80611d9d3",
+      "last_event_index": 1987
+    },
+    {
+      "event_sha256": "21057b9366145c1c74a4ac4b4651ab50aae7cbe9d7547d0e869f3d03067d11d4",
+      "last_event_index": 2053
+    }
+  ],
+  "kind": "phase3b-remaining-pairs-consolidated-independent-outcome-review-v1",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "limitations": [
+    "Completion means the frozen four-prompt development pilot completed; it is not completion of the wider research roadmap.",
+    "Four exposed prompt pairs provide no held-out, population, human-preference or general adaptation-benefit conclusion.",
+    "The positive primary mean is driven by one native grouping result; two pairs favor each method and the median paired difference is near zero. The official partition is retained.",
+    "c1/c2 portfolios include fresh sampling. In p03 their strategies are identical, so their score difference is not an additional strategy-edit effect.",
+    "Common resource ceilings do not imply equal realized computation or cost. The original first pair had its original allowance; the three fresh pairs had the approved new allowance.",
+    "All 28 exhaustive read-consumption audits are incomplete and remain diagnostic under the approved policy; normal-path proofs and strict benchmark assessments are separate.",
+    "Recorded costs are usage-based public-price upper bounds, not invoice reconciliation; the historical $22.88 hold remains unresolved.",
+    "Inspect is a passive saved-record exporter. No live browser-viewer or provider-bridge success is inferred from export round trips.",
+    "No new model calls, source edits, tests, judge overrides, score-based continuation controls or controller acknowledgments were performed by this reviewer."
+  ],
+  "material_findings": [],
+  "new_continuation_accounting": {
+    "adaptive_inference_micro_usd": 16512431,
+    "adaptive_inference_requests": 501,
+    "adaptive_to_fixed_inference_cost_ratio": 6.2954574915208745,
+    "approved_each_inference_cell_micro_usd": 50000000,
+    "approved_shared_assessment_micro_usd": 100000000,
+    "approved_total_micro_usd": 350000000,
+    "assessment_micro_usd": 846350,
+    "assessment_requests": 90,
+    "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+    "efficiency_parity_established": false,
+    "fixed_inference_micro_usd": 2622912,
+    "fixed_inference_requests": 435,
+    "group_requests": 9,
+    "known_spent_micro_usd": 19981693,
+    "maximum_admissions": 1758,
+    "pending_intents": 0,
+    "quality_requests": 81,
+    "requests": 1026,
+    "reserved_micro_usd": 0,
+    "unknown_results": 0,
+    "unused_possible_admissions": 732
+  },
+  "new_pair_accounting": {
+    "p3b-02": {
+      "adaptive_micro_usd": 6016759,
+      "assessment_micro_usd": 352555,
+      "fixed_micro_usd": 979871,
+      "requests": 347,
+      "total_micro_usd": 7349185
+    },
+    "p3b-03": {
+      "adaptive_micro_usd": 5093151,
+      "assessment_micro_usd": 186444,
+      "fixed_micro_usd": 932132,
+      "requests": 331,
+      "total_micro_usd": 6211727
+    },
+    "p3b-04": {
+      "adaptive_micro_usd": 5402521,
+      "assessment_micro_usd": 307351,
+      "fixed_micro_usd": 710909,
+      "requests": 348,
+      "total_micro_usd": 6420781
+    }
+  },
+  "new_tests_or_experiments": 0,
+  "next_step": "Define a held-out confirmation with explicit cost matching and grouping-sensitivity treatment before new execution; unused budget supplies no fresh repetition authority.",
+  "original_pair_inputs_unchanged_after_replay": 376,
+  "pairs": [
+    {
+      "c1_metrics": {
+        "distinct": 10,
+        "utility": 7.896478728064968
+      },
+      "c2_metrics": {
+        "distinct": 10,
+        "utility": 7.603188647901371
+      },
+      "fixed_metrics": {
+        "distinct": 10,
+        "utility": 7.753090294662793
+      },
+      "pilot": "p3b-01",
+      "selected_checkpoint": "c1",
+      "selected_minus_fixed": 0.14338843340217533
+    },
+    {
+      "c1_metrics": {
+        "distinct": 10,
+        "utility": 7.30861648248163
+      },
+      "c2_metrics": {
+        "distinct": 10,
+        "utility": 7.573050008093335
+      },
+      "fixed_metrics": {
+        "distinct": 10,
+        "utility": 7.676649632232192
+      },
+      "pilot": "p3b-02",
+      "selected_checkpoint": "c2",
+      "selected_minus_fixed": -0.10359962413885704
+    },
+    {
+      "c1_metrics": {
+        "distinct": 10,
+        "utility": 7.497976322032835
+      },
+      "c2_metrics": {
+        "distinct": 10,
+        "utility": 7.939854875199164
+      },
+      "fixed_metrics": {
+        "distinct": 1,
+        "utility": 1.792464399362674
+      },
+      "pilot": "p3b-03",
+      "selected_checkpoint": "c1",
+      "selected_minus_fixed": 5.70551192267016
+    },
+    {
+      "c1_metrics": {
+        "distinct": 10,
+        "utility": 7.041953647386863
+      },
+      "c2_metrics": {
+        "distinct": 10,
+        "utility": 6.701155287758507
+      },
+      "fixed_metrics": {
+        "distinct": 10,
+        "utility": 7.2290964522512144
+      },
+      "pilot": "p3b-04",
+      "selected_checkpoint": "c2",
+      "selected_minus_fixed": -0.5279411644927077
+    }
+  ],
+  "passed": true,
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "posthoc_sensitivity": {
+    "four_character_inline_examples_are_not_a_validated_compliance_rating": true,
+    "label": "Descriptive sensitivity only; does not replace frozen primary endpoint",
+    "mean_selected_minus_fixed_excluding_p03": -0.1627174517431298,
+    "no_rejudging_or_score_favorable_reselection": true,
+    "official_grouping_preserved": true,
+    "p03_fixed_exact_unique_strings": 10,
+    "p03_fixed_normalized_unique_strings": 10,
+    "p03_fixed_only_quality_head_score": 8,
+    "p03_native_adaptive_groups_each": 10,
+    "p03_native_fixed_groups": 1
+  },
+  "preserved_first_pair": {
+    "assessment_execution_study_sha256": "cac569074f96ac1cd016ab9428f45722ad6818913f255d50408729686bb6a265",
+    "certificate_sha256": "72fa6e95d1b8019adea997f1b84c2664a2ffb55cd9a264d91a12695db271a872",
+    "counted_once": true,
+    "generation_study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+    "input_files_unchanged": 376,
+    "known_spent_micro_usd": 11239856,
+    "new_calls_authorized": false,
+    "original_records_rebound": false,
+    "requests": 361
+  },
+  "primary": {
+    "fixed_mean_utility": 6.112825194627218,
+    "frozen_endpoint_unchanged": true,
+    "losses": 2,
+    "mean_paired_selected_minus_fixed": 1.3043398918601927,
+    "median_paired_selected_minus_fixed": 0.019894404631659146,
+    "selected_adaptive_mean_utility": 7.417165086487412,
+    "wins": 2
+  },
+  "primary_scheduled": 8,
+  "primary_scored": 8,
+  "prior_p02_advisory_unchanged": true,
+  "provider_calls_by_reviewer": 0,
+  "read_consumption_diagnostics": {
+    "blocking": false,
+    "complete_sessions": 0,
+    "incomplete_coverage_preserved": true,
+    "new_pair_conflicting_ranges": 0,
+    "new_pair_mismatched_ranges": 0,
+    "new_pair_read_errors": 0,
+    "new_pair_selector_parse_errors": {
+      "p3b-02": 3,
+      "p3b-03": 1,
+      "p3b-04": 2
+    },
+    "policy_id": "read-consumption-diagnostic-v1",
+    "recorded_sessions": 28
+  },
+  "real_credentials_used": false,
+  "review_scope": "Approved definition 1.1: three new pairs, preserved original first pair, complete four-prompt development comparison, canonical closure, passive Inspect export and one saved-report replay.",
+  "reviewer": "/root/remaining_acceptance",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "saved_report_replay": {
+    "absence_check": {
+      "exit_code": 1,
+      "method": "docker container inspect --format {{.Id}} EXACT_OWNER",
+      "result": "No such container: 43a0da5478c123773467ccde6e6db14de5cd0d1bf989f92d504dcb555f1e2e30",
+      "reviewer_removed_no_owner": true
+    },
+    "exactly_one_root_owned_replay_reviewed": true,
+    "exit_code": 0,
+    "journal_events_sha256": "16f870684d58cbfc9fa8a3ebeccc5465bfe95bccd5d31da311b8149e1cffc388",
+    "journal_manifest_sha256": "af11053d2dc9ee335f639d3e646a9e992870883d6ad708fce444bb6d15b4357b",
+    "journal_unchanged": true,
+    "network": "none",
+    "new_admissions": 0,
+    "provider_calls": 0,
+    "read_only_code": true,
+    "reviewer_did_not_execute_replay": true,
+    "worker_absence_independently_observed": true,
+    "worker_owner": "43a0da5478c123773467ccde6e6db14de5cd0d1bf989f92d504dcb555f1e2e30"
+  },
+  "scientific_complete_for_frozen_pilot": true,
+  "secondary": {
+    "fresh_sampling_is_not_an_edit_effect": true,
+    "mean_c2_minus_c1": 0.01805590974652027,
+    "mean_selected_minus_c1": -0.019091208504162793,
+    "p03_c1_c2_strategy_identical": true
+  },
+  "sha256": "f479cb659d68e02d434a1b971c55d73681c058920ceed1864677aebb711418f4",
+  "source_edits": 0,
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "strategy_activity": {
+    "classification_basis": "Per-session effective_changed_from_input, input/output strategy hashes and kept_base; broad seed-relative effective_changed is not counted as a new edit. Composition can reuse an existing variant.",
+    "each_new_task_starts_from_frozen_seed": true,
+    "model_training": false,
+    "p3b-02": {
+      "KEEP": 0,
+      "changed_from_input": 6,
+      "distinct_effective_outputs": 4
+    },
+    "p3b-03": {
+      "KEEP": 3,
+      "changed_from_input": 3,
+      "distinct_effective_outputs": 3
+    },
+    "p3b-04": {
+      "KEEP": 0,
+      "changed_from_input": 6,
+      "distinct_effective_outputs": 4
+    }
+  },
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supporting_file_sha256": {
+    "docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md": "1981505da5c209681c054a4a825dacb0dbd8826157f53b653551587bbddac313",
+    "runs/phase3b-seq2-v1/native/1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe/live/visibility/closure/result.json": "2eddc9bc59964bc9b31d4eb484bae0853c1175a18052483e14e49ffd269368d0",
+    "runs/phase3b-seq2-v1/native/1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe/live/visibility/closure/snapshot/manifest.json": "49fb8a399961ff1200c19512b828fe1f28a99d3237d308e1b512cacd837fd28b",
+    "runs/phase3b-seq2-v1/native/1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe/live/visibility/closure/snapshot/payload.json": "7da560d52f8ccb509c3dddbf91fc42f179e636527132d2b0d6ab6b9e2a201826",
+    "runs/phase3b-seq2-v1/remaining-pairs-v1/closure-saved-replay-proof-v1.json": "acebb0ad25c5e0851b4e88112069e988c85e616601cc3a41b45c58d451c9f5b6",
+    "runs/phase3b-seq2-v1/remaining-pairs-v1/first-new-pair-outcome-review-v1.json": "2f4864a890d223469d589bb72dddb7b89d389c8700a20f805fdcd3dd5fa8040f",
+    "runs/phase3b-seq2-v1/visibility-exports/remaining-pairs-live-closure-v1/export/result.json": "5710bee998604eefe0ebc6b022c87283d191024ab7421c76f063125615ecc079",
+    "runs/phase3b-seq2-v1/visibility-exports/remaining-pairs-live-closure-v1/visibility-result.json": "2eddc9bc59964bc9b31d4eb484bae0853c1175a18052483e14e49ffd269368d0"
+  },
+  "tracked_lineage_accounting": {
+    "historical_hold_released": false,
+    "known_spent_micro_usd": 110830672,
+    "maximum_exposure_micro_usd": 133710672,
+    "not_whole_project_or_subscription_cost": true,
+    "requests": 4215,
+    "unresolved_historical_hold_micro_usd": 22880000
+  },
+  "whole_pilot_accounting": {
+    "known_spent_micro_usd": 31221549,
+    "requests": 1387
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "evidence_sha256": "6329e48ac0dc06d52ce5306d88e220d16120babbba0d0512d9146c7e66abb9b5",
+  "fixture": false,
+  "hard_engineering_checks_passed": true,
+  "no_quality_continuation_gate": true,
+  "notes": "Independent keyless saved-proof review verified all 169 requests, six normal native authors, eight solver portfolios, selector, source/artifact/history/clock/accounting contracts. Exhaustive read diagnostics remain incomplete across seven sessions; selector has three parse errors, with zero read errors or mismatched/conflicting ranges. These retained diagnostics do not gate science; no score or favorable outcome was used.",
+  "read_diagnostics_reviewed": true,
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "supervisor_agent": "/root/pause_proof_gap"
+}
