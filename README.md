@@ -2,6 +2,8 @@
 
 One Phase 3B development prompt has complete native assessments; the four-prompt pilot remains incomplete. The approved three-pair continuation now has an [independently accepted offline kit](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_KIT_REPORT.md), preserving the completed pair. Next is fresh masked-key entry and execution of the remaining three pairs within the approved $350 cap. Offline acceptance establishes engineering readiness, not an adaptation benefit. See the [current results and next step](docs/research/CURRENT_SPEC.md).
 
+[Explore the system architecture](docs/architecture/README.md), including Harness², the current agent runner and model roles, our surrounding code, NoveltyBench and passive Inspect.
+
 **A research project testing whether AI can improve its working method—not just produce more answers.**
 
 Buddha2 compares ordinary model generation, fixed strategies and genuine recursive adaptation. It uses Google's actual [Harness²](https://github.com/google-research/harness2) engine through external adapters. It does not train model weights.

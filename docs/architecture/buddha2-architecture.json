@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Buddha2: the actual experiment setup",
+    "locale": "en",
+    "output": ".archify/architecture-buddha2-20261107-015333/buddha2-architecture.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/wavemanco/buddha2.git",
+      "revision": "b5a56b6802e9f49ca4c97aed6059a3617af868a1",
+      "link_mode": "web"
+    }
+  },
+  "components": [
+    {
+      "id": "operator",
+      "type": "external",
+      "label": "Operator / Codex",
+      "sublabel": "CLI + Windows launcher",
+      "pos": [
+        40,
+        280
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/experiment.py",
+          "line": 65,
+          "end_line": 95
+        },
+        {
+          "path": "phase3b-seq2-core.ps1",
+          "line": 172,
+          "end_line": 215
+        }
+      ],
+      "tag": "Human keys / review"
+    },
+    {
+      "id": "workflow",
+      "type": "backend",
+      "label": "Paired workflow",
+      "sublabel": "Prepare, run, review, close",
+      "pos": [
+        320,
+        280
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/workflow.py",
+          "line": 1186,
+          "end_line": 1227
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/workflow.py",
+          "line": 1675,
+          "end_line": 1709
+        }
+      ],
+      "tag": "Our control code"
+    },
+    {
+      "id": "harness",
+      "type": "backend",
+      "label": "Harness²",
+      "sublabel": "Native seq, k = 2 recursion",
+      "pos": [
+        320,
+        40
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3a_v1/native.py",
+          "line": 31,
+          "end_line": 38
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/native.py",
+          "line": 384,
+          "end_line": 440
+        }
+      ],
+      "tag": "Pinned upstream library"
+    },
+    {
+      "id": "agent",
+      "type": "backend",
+      "label": "Agent runner",
+      "sublabel": "Currently OpenCode",
+      "pos": [
+        650,
+        40
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/editor.py",
+          "line": 374,
+          "end_line": 390
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/editor.py",
+          "line": 455,
+          "end_line": 476
+        },
+        {
+          "path": "followups/phase3a_v1/editor.py",
+          "line": 88,
+          "end_line": 105
+        }
+      ],
+      "tag": "Bounded local process"
+    },
+    {
+      "id": "proxy",
+      "type": "backend",
+      "label": "Local model proxy",
+      "sublabel": "History / tool compatibility",
+      "pos": [
+        650,
+        280
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/editor.py",
+          "line": 145,
+          "end_line": 208
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/editor.py",
+          "line": 240,
+          "end_line": 250
+        }
+      ],
+      "tag": "No provider key in runner"
+    },
+    {
+      "id": "gateway",
+      "type": "security",
+      "label": "Accounted call boundary",
+      "sublabel": "Validate, reserve, settle",
+      "pos": [
+        980,
+        280
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/accounting.py",
+          "line": 674,
+          "end_line": 747
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/transport.py",
+          "line": 187,
+          "end_line": 213
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/workflow.py",
+          "line": 1186,
+          "end_line": 1215
+        }
+      ],
+      "tag": "Every provider request"
+    },
+    {
+      "id": "strategy",
+      "type": "backend",
+      "label": "Portfolio strategy runtime",
+      "sublabel": "Plan 10, answer, reorder",
+      "pos": [
+        320,
+        550
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/strategy.py",
+          "line": 184,
+          "end_line": 245
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/strategy.py",
+          "line": 344,
+          "end_line": 438
+        }
+      ],
+      "tag": "Fixed 12 or adapted harness"
+    },
+    {
+      "id": "evaluation",
+      "type": "backend",
+      "label": "Native evaluation adapter",
+      "sublabel": "Group, score, summarize",
+      "pos": [
+        650,
+        550
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 83,
+          "end_line": 120
+        },
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 285,
+          "end_line": 302
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/workflow.py",
+          "line": 1347,
+          "end_line": 1363
+        }
+      ],
+      "tag": "After both finals are sealed"
+    },
+    {
+      "id": "export",
+      "type": "backend",
+      "label": "Passive Inspect adapter",
+      "sublabel": "Read snapshot; write .eval",
+      "pos": [
+        980,
+        550
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/inspect_adapter.py",
+          "line": 73,
+          "end_line": 90
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/inspect_adapter.py",
+          "line": 198,
+          "end_line": 218
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/inspect_adapter.py",
+          "line": 329,
+          "end_line": 339
+        }
+      ],
+      "tag": "Keyless / network none"
+    },
+    {
+      "id": "authorModel",
+      "type": "cloud",
+      "label": "Author / selector model",
+      "sublabel": "Currently Opus 5",
+      "pos": [
+        1400,
+        40
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/editor.py",
+          "line": 374,
+          "end_line": 390
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/strategy.py",
+          "line": 404,
+          "end_line": 426
+        }
+      ],
+      "tag": "Edit harness / choose blindly"
+    },
+    {
+      "id": "generatorModel",
+      "type": "cloud",
+      "label": "Generation model",
+      "sublabel": "Currently Sonnet 5.5",
+      "pos": [
+        1400,
+        280
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/phase2_dispatch.py",
+          "line": 22,
+          "end_line": 28
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/strategy.py",
+          "line": 226,
+          "end_line": 245
+        }
+      ],
+      "tag": "Plan / answer / rank"
+    },
+    {
+      "id": "groupModel",
+      "type": "cloud",
+      "label": "Grouping judge",
+      "sublabel": "Currently GPT-5.6-luna",
+      "pos": [
+        1400,
+        550
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 35,
+          "end_line": 40
+        },
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 135,
+          "end_line": 148
+        }
+      ],
+      "tag": "Evaluator role only"
+    },
+    {
+      "id": "qualityModel",
+      "type": "cloud",
+      "label": "Quality judge",
+      "sublabel": "Currently Opus 5",
+      "pos": [
+        1400,
+        800
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 35,
+          "end_line": 40
+        },
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 158,
+          "end_line": 163
+        },
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 285,
+          "end_line": 302
+        }
+      ],
+      "tag": "Evaluator role only"
+    },
+    {
+      "id": "records",
+      "type": "database",
+      "label": "Saved experiment files",
+      "sublabel": "Harnesses, outputs, journals",
+      "pos": [
+        320,
+        800
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/accounting.py",
+          "line": 779,
+          "end_line": 844
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/native.py",
+          "line": 423,
+          "end_line": 439
+        },
+        {
+          "path": "followups/phase3b_seq2_v1/snapshot.py",
+          "line": 388,
+          "end_line": 405
+        }
+      ],
+      "tag": "Immutable identity / replay"
+    },
+    {
+      "id": "benchmark",
+      "type": "backend",
+      "label": "NoveltyBench v1.1",
+      "sublabel": "Pinned tasks + native protocol",
+      "pos": [
+        650,
+        800
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 21,
+          "end_line": 40
+        },
+        {
+          "path": "src/buddha2/phase2_native.py",
+          "line": 83,
+          "end_line": 120
+        }
+      ],
+      "tag": "Upstream calls / folds"
+    },
+    {
+      "id": "viewer",
+      "type": "frontend",
+      "label": "Inspect viewer",
+      "sublabel": "Browse saved .eval records",
+      "pos": [
+        980,
+        800
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "followups/phase3b_seq2_v1/inspect_adapter.py",
+          "line": 198,
+          "end_line": 218
+        }
+      ],
+      "tag": "Passive observation only"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "One coupled Buddha2 Python package — internal roles, not separate services",
+      "wraps": [
+        "workflow",
+        "proxy",
+        "gateway",
+        "strategy",
+        "evaluation",
+        "export"
+      ],
+      "pad": 22
+    }
+  ],
+  "connections": [
+    {
+      "id": "operate",
+      "from": "operator",
+      "to": "workflow",
+      "label": "CLI / reviews",
+      "variant": "emphasis"
+    },
+    {
+      "id": "invoke-native",
+      "from": "workflow",
+      "to": "harness",
+      "label": "invoke native loop",
+      "variant": "emphasis"
+    },
+    {
+      "id": "native-runner",
+      "from": "harness",
+      "to": "agent",
+      "label": "authors / selector",
+      "variant": "emphasis"
+    },
+    {
+      "id": "local-http",
+      "from": "agent",
+      "to": "proxy",
+      "label": "local HTTP",
+      "variant": "emphasis"
+    },
+    {
+      "id": "proxy-account",
+      "from": "proxy",
+      "to": "gateway",
+      "label": "guarded requests",
+      "variant": "security"
+    },
+    {
+      "id": "native-rollouts",
+      "from": "harness",
+      "to": "strategy",
+      "label": "run adapted harness",
+      "variant": "default"
+    },
+    {
+      "id": "fixed-control",
+      "from": "workflow",
+      "to": "strategy",
+      "label": "fixed baseline",
+      "variant": "default"
+    },
+    {
+      "id": "solver-account",
+      "from": "strategy",
+      "to": "gateway",
+      "label": "generator requests",
+      "variant": "security"
+    },
+    {
+      "id": "blind-model",
+      "from": "gateway",
+      "to": "authorModel",
+      "label": "edit / choose",
+      "variant": "security"
+    },
+    {
+      "id": "generate-model",
+      "from": "gateway",
+      "to": "generatorModel",
+      "label": "plan / answer / rank",
+      "variant": "security"
+    },
+    {
+      "id": "sealed-evaluate",
+      "from": "workflow",
+      "to": "evaluation",
+      "label": "sealed finals only",
+      "variant": "default"
+    },
+    {
+      "id": "native-builders",
+      "from": "evaluation",
+      "to": "benchmark",
+      "label": "native library API",
+      "variant": "default"
+    },
+    {
+      "id": "judge-account",
+      "from": "evaluation",
+      "to": "gateway",
+      "label": "judge requests",
+      "variant": "security"
+    },
+    {
+      "id": "group-model",
+      "from": "gateway",
+      "to": "groupModel",
+      "label": "native grouping",
+      "variant": "security"
+    },
+    {
+      "id": "quality-model",
+      "from": "gateway",
+      "to": "qualityModel",
+      "label": "native quality",
+      "variant": "security"
+    },
+    {
+      "id": "saved-output",
+      "from": "strategy",
+      "to": "records",
+      "label": "save outputs",
+      "variant": "default"
+    },
+    {
+      "id": "ledger-output",
+      "from": "gateway",
+      "to": "records",
+      "label": "intent / result journal",
+      "variant": "default"
+    },
+    {
+      "id": "snapshot-export",
+      "from": "records",
+      "to": "export",
+      "label": "read-only snapshot",
+      "variant": "default"
+    },
+    {
+      "id": "inspect-output",
+      "from": "export",
+      "to": "viewer",
+      "label": "saved .eval / HTML",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Who owns the experiment?",
+      "items": [
+        "Harness² owns the native seq,k=2 recursion. Our adapters supply a restricted portfolio substrate and accounted proposer.",
+        "Our workflow owns paired fixed-versus-adaptive execution, frozen inputs, reviews, accounting and reports.",
+        "The fixed arm generates twelve complete portfolios and chooses one blindly; the adaptive arm retains both checkpoints and its selected alias."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Models are different jobs",
+      "items": [
+        "The agent runner is currently OpenCode; the author and blind selector model is currently Opus 5. These are separate roles and components.",
+        "Sonnet 5.5 plans, generates ten answers and reorders them inside each portfolio rollout.",
+        "GPT-5.6-luna groups answers; Opus 5 judges quality. Evaluation roles are separate from the Opus author/selector role."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "The score-blind boundary",
+      "items": [
+        "Grouping, quality judgments and grader text do not enter solver, author, reflector or selector context.",
+        "The workflow seals both arms before evaluator calls. No evaluation feedback edge returns to the recursive loop.",
+        "Every actual provider call passes the same owned admission/accounting and transport boundary; the runner only sees its local proxy."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Evidence and visibility",
+      "items": [
+        "Source/runtime/study identities, immutable harness/output artifacts and intent/result journals support saved replay and explicit unknown liabilities.",
+        "Inspect imports a read-only projection in a separate keyless, network-none image. It displays evidence; it does not execute this experiment or manage provider spending.",
+        "The static viewer is a visibility surface. No Inspect provider bridge feeds the running loop."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Modularity today",
+      "items": [
+        "Harness² is pinned at 1cfe254e…; NoveltyBench v1.1 is pinned at 64a23be6…. Replacements require compatibility checks.",
+        "The diagram names generic runner and model roles with current choices. It does not imply every replacement already works.",
+        "Current operator access is the CLI plus Windows launcher. An MCP server and universal plugin runtime are not implemented."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Scope of this map",
+      "items": [
+        "This describes offline-accepted continuation source 029657ee… / 177 inputs. Fresh masked keys are pending; the three-pair continuation has not started.",
+        "Citations resolve published source b5a56b68…. Offline acceptance establishes engineering readiness, not scientific completion or a positive experiment result.",
+        "The completed first pair is imported through a verified certificate with its original generation and assessment identities. The new accounting state covers the three remaining pairs only.",
+        "This is an architecture map, not a claim of general scientific improvement or held-out success."
+      ]
+    }
+  ]
+}

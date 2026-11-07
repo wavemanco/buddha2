@@ -18,6 +18,10 @@ The OpenCode baseline retains the declared Harness² compatibility patch and its
 
 The [current two-round definition](phases/phase-3b/PHASE3B_DEFINITION.md) binds H1 image `sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800` and the separate SDK-free Inspect image `sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d`. Inspect's exact wheel SHA256 is `f11c2afed84026507d902bbcc68e7a8ee95e8070786ba2914c880761e97a220f`, matching [official release metadata](https://pypi.org/pypi/inspect-ai/0.3.286/json) and the [retained wheel manifest](../evidence/inspect-visibility-i1/environment/wheel-manifest.json). Its embedded MIT notice was also checked, rather than inferred from a current branch.
 
+## Documentation artifact
+
+The [interactive system diagram](architecture/README.md) was generated with Archify 3.2.0 by tt-a1i. The generated viewer retains the installed package's [MIT notice](architecture/ARCHIFY_LICENSE), including its Archify and Cocoon AI copyrights. Archify is used to author documentation; it is not added to the study runtime or provider path. Reviewed 7 November 2026.
+
 ## Direct Python dependencies
 
 These are the exact native-benchmark subset declared in [requirements.in](../requirements.in), resolved with its transitive dependencies in [requirements.lock](../requirements.lock). The license column describes project source unless a broader distribution expression is stated; binary wheels retain additional notices.

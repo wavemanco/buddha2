@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\arvik\\code\\research\\Buddha2\\.archify\\architecture-buddha2-20261107-015333\\candidate.json",
+    "sha256": "e3b393190a376dd912ee8447f7a49a6faddf8cd3e1899446fe0013c6fa1d968c",
+    "bytes": 16579
+  },
+  "artifact": {
+    "path": "C:\\Users\\arvik\\code\\research\\Buddha2\\.archify\\architecture-buddha2-20261107-015333\\buddha2-architecture.html",
+    "sha256": "b0c0d2db619908e3b18474ec39835a5fcc7a5aaff1e1739be910412a13d41ad4",
+    "bytes": 862902
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\arvik\\code\\research\\Buddha2\\.archify\\architecture-buddha2-20261107-015333\\review-4\\buddha2-architecture.finalize.json",
+    "summaryReceipt": "C:\\Users\\arvik\\code\\research\\Buddha2\\.archify\\architecture-buddha2-20261107-015333\\review-4\\buddha2-architecture.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\arvik\\code\\research\\Buddha2\\.archify\\architecture-buddha2-20261107-015333\\review-4\\buddha2-architecture.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-07T09:53:42.097Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2780,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 7,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "native-rollouts",
+            "from": "harness",
+            "to": "strategy",
+            "label": "run adapted harness",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "solver-account",
+            "from": "strategy",
+            "to": "gateway",
+            "label": "generator requests",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            524,
+            380
+          ],
+          "sharedNode": "strategy"
+        },
+        {
+          "left": {
+            "id": "native-rollouts",
+            "from": "harness",
+            "to": "strategy",
+            "label": "run adapted harness",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "sealed-evaluate",
+            "from": "workflow",
+            "to": "evaluation",
+            "label": "sealed finals only",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            524,
+            318
+          ]
+        },
+        {
+          "left": {
+            "id": "solver-account",
+            "from": "strategy",
+            "to": "gateway",
+            "label": "generator requests",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "sealed-evaluate",
+            "from": "workflow",
+            "to": "evaluation",
+            "label": "sealed finals only",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            626,
+            380
+          ]
+        },
+        {
+          "left": {
+            "id": "solver-account",
+            "from": "strategy",
+            "to": "gateway",
+            "label": "generator requests",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "judge-account",
+            "from": "evaluation",
+            "to": "gateway",
+            "label": "judge requests",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "point": [
+            905,
+            380
+          ],
+          "sharedNode": "gateway"
+        },
+        {
+          "left": {
+            "id": "solver-account",
+            "from": "strategy",
+            "to": "gateway",
+            "label": "generator requests",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "ledger-output",
+            "from": "gateway",
+            "to": "records",
+            "label": "intent / result journal",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "point": [
+            1056,
+            380
+          ],
+          "sharedNode": "gateway"
+        },
+        {
+          "left": {
+            "id": "sealed-evaluate",
+            "from": "workflow",
+            "to": "evaluation",
+            "label": "sealed finals only",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "right": {
+            "id": "ledger-output",
+            "from": "gateway",
+            "to": "records",
+            "label": "intent / result journal",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "point": [
+            628.2000000000002,
+            586.1555555555556
+          ]
+        },
+        {
+          "left": {
+            "id": "judge-account",
+            "from": "evaluation",
+            "to": "gateway",
+            "label": "judge requests",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "right": {
+            "id": "ledger-output",
+            "from": "gateway",
+            "to": "records",
+            "label": "intent / result journal",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "point": [
+            905,
+            439.5
+          ],
+          "sharedNode": "gateway"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "quality-model",
+            "from": "gateway",
+            "to": "qualityModel",
+            "label": "native quality",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "ledger-output",
+            "from": "gateway",
+            "to": "records",
+            "label": "intent / result journal",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "snapshot-export",
+            "from": "records",
+            "to": "export",
+            "label": "read-only snapshot",
+            "collectionIndex": 17,
+            "artifactIndex": 18
+          },
+          "bends": 3,
+          "stretch": 1.056
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "harness → strategy and strategy → gateway cross next to strategy: move node harness or gateway so the two reach strategy from different sides (for example one level with it, one directly above or below it).",
+      "harness → strategy crosses workflow → evaluation: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "strategy → gateway crosses workflow → evaluation: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "strategy → gateway and evaluation → gateway cross next to gateway: move node strategy or evaluation so the two reach gateway from different sides (for example one level with it, one directly above or below it).",
+      "strategy → gateway and gateway → records cross next to gateway: move node strategy or records so the two reach gateway from different sides (for example one level with it, one directly above or below it).",
+      "workflow → evaluation crosses gateway → records: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "evaluation → gateway and gateway → records cross next to gateway: move node evaluation or records so the two reach gateway from different sides (for example one level with it, one directly above or below it).",
+      "gateway → qualityModel needs 4 bends: move node gateway or qualityModel so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}
