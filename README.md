@@ -1,6 +1,6 @@
 # Buddha2
 
-One Phase 3B development prompt now has complete native assessments, using saved generation and eight additional quality judgments. The selected adaptive checkpoint leads the fixed control on this prompt; the four-prompt pilot remains incomplete. See the [current results and next step](docs/research/CURRENT_SPEC.md) and [assessment-only completion notes](docs/ENGINEERING_AUDIT.md#eight-judgment-live-completion) for accounting, verification and limits.
+One Phase 3B development prompt now has complete native assessments, using saved generation and eight additional quality judgments. The selected adaptive checkpoint leads the fixed control on this prompt; the four-prompt pilot remains incomplete. The [proposed three-pair continuation](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_CONTINUATION.md) preserves that completed pair and defines the remaining work; implementation and execution have not started. See the [current results and next step](docs/research/CURRENT_SPEC.md) and [assessment-only completion notes](docs/ENGINEERING_AUDIT.md#eight-judgment-live-completion) for accounting, verification and limits.
 
 **A research project testing whether AI can improve its working method—not just produce more answers.**
 
@@ -30,7 +30,7 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 Status snapshot: **6 November 2026**. [CURRENT_SPEC.md](docs/research/CURRENT_SPEC.md) tracks subsequent execution and decisions.
 
-**Latest Phase 3B attempt closed incomplete: 353 calls/$11.082350, with zero new held liability.** The first prompt's native two-round path completed normally and fixed best-of-twelve also returned. Final evidence is globally held: zero of eight primary outputs and zero of twelve assessment targets are scored. There is no completed comparison or gain claim.
+**Historical generation attempt closed incomplete: 353 calls/$11.082350, with zero new held liability.** The first prompt's native two-round path completed normally and fixed best-of-twelve also returned. That closed attempt's final evidence remains globally held: zero of eight primary outputs and zero of twelve assessment targets are scored in its historical projection. The separately completed first-pair assessment supplement is reported above; the four-pair comparison remains incomplete.
 
 Local validation stopped the next quality judgment. A saved-input reconstruction measures **6,206 UTF-8 bytes against an outdated 5,952-byte quality-request cap**, 254 bytes over. The rejected body was not logged, so this is a reconstruction. No timing stop or provider failure caused the halt. Closure, the passive Inspect export and one zero-call replay are complete; all eight report files matched byte for byte. See the [attempt report](docs/phases/phase-3b/PHASE3B_TIMING_CONTINUATION_LIVE_ATTEMPT_REPORT.md) and [outcome receipt](evidence/phase3b-seq2-v1/timing-continuation-live-outcome-v1.json). The subsequent [focused evaluator-admission fix](docs/ENGINEERING_AUDIT.md#evaluator-admission-correction) is verified offline: 45 focused checks pass, including the real saved requests and allowed output-size envelope. Financial guards and completed generation are preserved. No paid continuation or new live kit was created.
 
