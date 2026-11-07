@@ -1,0 +1,257 @@
+{
+  "baseline_public_commit": "5ca734636af48534ddcf4739b2e433e44e6b670d",
+  "budget_disclosure": {
+    "claim_of_unchanged_budget_parity": false,
+    "historical_first_pair_ceiling_was_nonbinding": true,
+    "historical_first_pair_inference_cell_ceiling_micro_usd": 35000000,
+    "interpretation": "Historical first-pair allowances and charges retain their original identities. Administrative caps differ; unchanged effective prompts and algorithms do not establish equal-budget efficiency.",
+    "prospective_remaining_pair_inference_cell_ceiling_micro_usd": 50000000,
+    "prospective_shared_assessment_micro_usd": 100000000,
+    "prospective_total_micro_usd": 350000000
+  },
+  "byte_equal_file_count": 17,
+  "change_explanations": {
+    "followups/phase3b_seq2_v1/native.py": "Adds imports and a no-dispatch validate_evaluator_capacity helper using declared maximum text sizes, an explicitly synthetic portfolio, actual native evaluator builders and existing shared request admission. Existing adaptive execution implementation is unchanged; this file is not byte-equal.",
+    "followups/phase3b_seq2_v1/strategy.py": "Adds optional candidate_order and validation/replay plumbing. None retains prior digest order. Explicit order must name the exact twelve existing candidates, preserving original candidate ordinal order after run-ID translation. Prompt text, model settings, whole-portfolio selection and answer content are unchanged.",
+    "src/buddha2/phase2_contracts.py": "Extracts the same 100000-character prompt and response limits into shared constants and passes those explicit limits through existing validators/importer. The accepted envelope and validation semantics are unchanged."
+  },
+  "changed_file_count": 3,
+  "compared_file_count": 20,
+  "comparison_method": "Public mirror Git object bytes compared with named current ordinary source files; no captured source or source checkout was used.",
+  "connected_aggregate_review": {
+    "assessment_target_count": 12,
+    "first_pair_added_once_to_whole_pilot": {
+      "known_micro_usd": 11239856,
+      "requests": 361
+    },
+    "held_snapshot_behavior": "Verified first-pair evidence is retained when new work is held. Invalid first-pair certificate fails closed.",
+    "historical_lineage_start": {
+      "held_micro_usd": 22880000,
+      "known_micro_usd": 90848979,
+      "requests": 3189
+    },
+    "later_pair_reviews": "Remaining p3b-03 and p3b-04 use their own pair seal, separate barrier/inspection/review files and existing 1800-second review window; they do not reopen first-review accounting.",
+    "logical_task_count": 4,
+    "material_blocker_found": false,
+    "new_accounting_state_excludes_imported_first_pair": true,
+    "new_execution_task_count": 3,
+    "origins_preserved": "Original generation and supplement assessment identities remain separate; imported first-pair fixture flags remain false. Mixed offline aggregates are explicitly marked and not scientific completion.",
+    "primary_alias_count": 8,
+    "quality_is_not_continuation_gate": true,
+    "reviewed_paths": [
+      "followups/phase3b_seq2_v1/completed_pair.py",
+      "followups/phase3b_seq2_v1/report.py",
+      "followups/phase3b_seq2_v1/snapshot.py",
+      "followups/phase3b_seq2_v1/workflow.py"
+    ]
+  },
+  "effective_source_manifest_lists_receipt": false,
+  "file_comparisons": [
+    {
+      "baseline_sha256": "fa6cfd90724eb74b29dcae932082f68aa871f9201e551b900e51efdaa4a7af1b",
+      "byte_equal": true,
+      "current_sha256": "fa6cfd90724eb74b29dcae932082f68aa871f9201e551b900e51efdaa4a7af1b",
+      "path": "followups/phase3b_seq2_v1/contract.py"
+    },
+    {
+      "baseline_sha256": "024bea6486da7e85a9af7cd07592961dfac54ce849029e3c8ac74d858a645dc8",
+      "byte_equal": true,
+      "current_sha256": "024bea6486da7e85a9af7cd07592961dfac54ce849029e3c8ac74d858a645dc8",
+      "path": "followups/phase3b_seq2_v1/editor.py"
+    },
+    {
+      "baseline_sha256": "05e6baa7c23865b1fe9e7361b25708a66cb7fad807cc1d48ba26855381ca90dd",
+      "byte_equal": false,
+      "current_sha256": "4fa8aa97067184b4866e5cf1f1def2938a8f30d1c0eaf6ac2db7e10eefa9980d",
+      "path": "followups/phase3b_seq2_v1/native.py"
+    },
+    {
+      "baseline_sha256": "f3b91715aa981a27a6c6c495faba7a566a9604125823e4a1f21e7c065f9ef14c",
+      "byte_equal": true,
+      "current_sha256": "f3b91715aa981a27a6c6c495faba7a566a9604125823e4a1f21e7c065f9ef14c",
+      "path": "followups/phase3b_seq2_v1/adapter.py"
+    },
+    {
+      "baseline_sha256": "666336198106eb83e22e967112896dc39814f97d90cce637af7009eb4ae57597",
+      "byte_equal": true,
+      "current_sha256": "666336198106eb83e22e967112896dc39814f97d90cce637af7009eb4ae57597",
+      "path": "followups/phase3b_seq2_v1/rank_io.py"
+    },
+    {
+      "baseline_sha256": "dac46fb06ed72f738268005ae0bf6390f944246ca9f99ebb4687f93af67cce41",
+      "byte_equal": false,
+      "current_sha256": "97f6b325ee8e614bff840d68cb0af0506c8859336df5f94db4081b03bc3f9cb5",
+      "path": "followups/phase3b_seq2_v1/strategy.py"
+    },
+    {
+      "baseline_sha256": "427529f0533553bfeaa899464ef6806825c4c694db7a6639b1814cfcd336d3f9",
+      "byte_equal": true,
+      "current_sha256": "427529f0533553bfeaa899464ef6806825c4c694db7a6639b1814cfcd336d3f9",
+      "path": "followups/phase3a_v1/strategy.py"
+    },
+    {
+      "baseline_sha256": "e4c4a92393acbbe5a3e62b43381d726130c260826e4cc8b583676e61e82928d8",
+      "byte_equal": true,
+      "current_sha256": "e4c4a92393acbbe5a3e62b43381d726130c260826e4cc8b583676e61e82928d8",
+      "path": "followups/phase3a_v1/native.py"
+    },
+    {
+      "baseline_sha256": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "byte_equal": true,
+      "current_sha256": "be7088f564acafe49387f10fbf1cbc5f1171960dd54bd3eceb0762c9a79d911d",
+      "path": "followups/phase3a_rank_contract_v1/adapter.py"
+    },
+    {
+      "baseline_sha256": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+      "byte_equal": true,
+      "current_sha256": "a40dd9605d57b3ebb267d65b8cfc7571d6636746823bb73e2acf3a7a197e9e41",
+      "path": "followups/rank_format_v1/normalizer.py"
+    },
+    {
+      "baseline_sha256": "5de49c3e5f76f9970eb9498bf5946b3a7d14083de7dbb8265b759445faa4c49a",
+      "byte_equal": true,
+      "current_sha256": "5de49c3e5f76f9970eb9498bf5946b3a7d14083de7dbb8265b759445faa4c49a",
+      "path": "followups/phase3a_c1_completion_v2/contract.py"
+    },
+    {
+      "baseline_sha256": "d45e16bc6ad94c92f7864682ff3e7d8550409d1b90540fde331b9a514174137d",
+      "byte_equal": true,
+      "current_sha256": "d45e16bc6ad94c92f7864682ff3e7d8550409d1b90540fde331b9a514174137d",
+      "path": "followups/phase3a_compat_c1_v1/contract.py"
+    },
+    {
+      "baseline_sha256": "45d5aaa98457bd913f87417fe71cdcae4de5da32c6b14d14402cc49ece345858",
+      "byte_equal": true,
+      "current_sha256": "45d5aaa98457bd913f87417fe71cdcae4de5da32c6b14d14402cc49ece345858",
+      "path": "followups/phase3a_compat_c1_v1/support.py"
+    },
+    {
+      "baseline_sha256": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+      "byte_equal": true,
+      "current_sha256": "658fc6a52770aba306c5b940eee0d367ac105c469f48dc63d228d4e471e78593",
+      "path": "src/buddha2/phase2_dispatch.py"
+    },
+    {
+      "baseline_sha256": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+      "byte_equal": true,
+      "current_sha256": "9d6b2202f7521ab52fbe7860543b43980903aca134a2d0f76673c7fe57071a97",
+      "path": "src/buddha2/phase2.py"
+    },
+    {
+      "baseline_sha256": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+      "byte_equal": true,
+      "current_sha256": "64a5de576f0f2716c52f6b35f1f687f18065c0aed27f3e1344ec3ff1019b9c5d",
+      "path": "src/buddha2/phase2_native.py"
+    },
+    {
+      "baseline_sha256": "6713c3417850aceb8dff543df329863fd354eca1ae90d0544dc31789eaff3fcd",
+      "byte_equal": false,
+      "current_sha256": "4d09c4996822f6176070936daaa37f80ebfe02be43378e9485307edebaad8b06",
+      "path": "src/buddha2/phase2_contracts.py"
+    },
+    {
+      "baseline_sha256": "a845a38d445033489c0f2aefba32288c21e07f99bd192bc42cfd17a75c543f3c",
+      "byte_equal": true,
+      "current_sha256": "a845a38d445033489c0f2aefba32288c21e07f99bd192bc42cfd17a75c543f3c",
+      "path": "strategies/fixed/phase2.json"
+    },
+    {
+      "baseline_sha256": "c91633d691cec31524cddc10da1493d8d01d63247a07b4d7b19d71adeed1d28c",
+      "byte_equal": true,
+      "current_sha256": "c91633d691cec31524cddc10da1493d8d01d63247a07b4d7b19d71adeed1d28c",
+      "path": "configs/phase3b-development.json"
+    },
+    {
+      "baseline_sha256": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1",
+      "byte_equal": true,
+      "current_sha256": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1",
+      "path": "upstreams.lock.json"
+    }
+  ],
+  "fixed_candidate_order_review": {
+    "candidate_set_must_match_exactly": true,
+    "content_rewritten": false,
+    "original_order_is_certificate_bound": true,
+    "source": "workflow._fixed_order maps each original candidate-NN suffix into the new fixed run ID without sorting; _run_stage, partial validation and final validation pass that same order to the fixed selector and saved replay."
+  },
+  "kind": "phase3b-remaining-pairs-scientific-compatibility-v1",
+  "observed_at_utc": "2026-11-07T09:00:45.839640+00:00",
+  "reviewer": "/root/timing_publication",
+  "reviewer_containers_started": 0,
+  "reviewer_model_calls": 0,
+  "reviewer_tests_run": 0,
+  "runtime_input": false,
+  "scope_and_limitations": [
+    "This is a scoped source comparison and connected read-only review, not whole-kit acceptance or authorization to enter credentials.",
+    "No tests, providers, credentials, containers or new model calls were invoked by this reviewer for this receipt.",
+    "Unchanged effective settings and algorithm source do not imply identical future stochastic outputs.",
+    "Upstream pins and lock bytes were compared; this review did not independently rehash complete upstream vendor trees.",
+    "Actual collector, mocked native journey and final prepared-kit host acceptance require their own observed evidence.",
+    "These four prompts are development evidence; no held-out evaluation result or general improvement is claimed."
+  ],
+  "status": "scoped-source-comparison-and-connected-review-complete",
+  "unchanged_scientific_settings": {
+    "adaptive_topology": {
+      "authors": 6,
+      "bases": 2,
+      "evidence": "cumulative",
+      "k": 2,
+      "mode": "seq",
+      "second_round_source": "c1",
+      "solver_rollouts": 8
+    },
+    "answer_order": "delivered order",
+    "answers_per_portfolio": 10,
+    "editor_and_blind_selectors": {
+      "effort": "high",
+      "inference_geo": "global",
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "service_tier": "standard_only",
+      "thinking": "adaptive"
+    },
+    "evaluation_seed": null,
+    "fallbacks": "no model substitution or permissive score folding introduced",
+    "fixed_topology": "twelve complete portfolios followed by blind whole-portfolio selection",
+    "harness2_commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+    "native_grouping": {
+      "effort": "omitted as in pinned native builder",
+      "inference_geo": "omitted as in pinned native builder",
+      "interface": "native Chat/schema",
+      "max_output_tokens": "omitted as in pinned native builder",
+      "model": "gpt-5.6-luna",
+      "service_tier": "omitted as in pinned native builder"
+    },
+    "native_quality": {
+      "effort": "high",
+      "inference_geo": "omitted as in pinned native builder",
+      "max_tokens": 16000,
+      "model": "claude-opus-5",
+      "service_tier": "omitted as in pinned native builder",
+      "thinking": "adaptive"
+    },
+    "noveltybench_commit": "64a23be6b18ec1dacc298830aab276061b6e143c",
+    "noveltybench_protocol": "1.1",
+    "patience": 0.8,
+    "plan_answer_rank": {
+      "effort": "low",
+      "inference_geo": "global",
+      "max_tokens": 4096,
+      "model": "claude-sonnet-5-5",
+      "service_tier": "standard_only",
+      "thinking": "adaptive"
+    },
+    "seed_procedure_sha256": "16cd0c8b829c7147b51ff76bd38a350686ca1b3bf53e308cc4b76acbf0747de0",
+    "seed_template_file": "strategies/fixed/phase2.json",
+    "seed_template_file_sha256": "a845a38d445033489c0f2aefba32288c21e07f99bd192bc42cfd17a75c543f3c",
+    "task_config_file": "configs/phase3b-development.json",
+    "task_count": 4,
+    "task_prompt_hashes": [
+      "2ca707c11edcc78a0fe0e87ea58a86b9263e0329993b06361f52cd04b5cbfa47",
+      "964cd57c6de5fe8dff445606d5e4ec799ba0c67905246bf81e0f34d2b53b76c1",
+      "4e430205a08004e06c5ef48179d294fa61668de4181f49c8b9a2223b33a665ad",
+      "85cf52442cf412f046759306a3cf68e33a5780a3b55aadbb2191a75fdad826a1"
+    ]
+  },
+  "whole_kit_accepted": false
+}

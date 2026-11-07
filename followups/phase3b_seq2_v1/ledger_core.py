@@ -318,6 +318,7 @@ def _counter() -> dict:
 
 def _start(manifest: dict) -> dict:
     return {
+        **({"execution_pairs": list(manifest["inputs"]["policy"]["execution_pairs"])} if "execution_pairs" in manifest["inputs"].get("policy", {}) else {}),
         **_counter(),
         "run_id": manifest["run_id"],
         "fixture": manifest["inputs"]["fixture"],
@@ -325,7 +326,7 @@ def _start(manifest: dict) -> dict:
         "status": "ready",
         "results": {},
         "intents": {},
-        "cells": {p + ":" + a: _counter() for p in PAIRS for a in ("fixed", "adaptive")},
+        "cells": {p + ":" + a: _counter() for p in manifest["inputs"].get("policy", {}).get("execution_pairs", PAIRS) for a in ("fixed", "adaptive")},
         "assessment": _counter(),
         "first_pair": _counter(),
         "first_assessment": _counter(),
@@ -344,58 +345,61 @@ def _buckets(state: dict, meta: dict) -> list[dict]:
         state,
         state["assessment"] if meta["cell"] == "assessment" else state["cells"][meta["cell"]],
     ]
-    if meta["pair"] == PAIRS[0]:
+    if meta["pair"] == state.get("execution_pairs", PAIRS)[0]:
         values.append(state["first_pair"])
         if meta["cell"] == "assessment":
             values.append(state["first_assessment"])
     return values
 
 
-def _admit(state: dict, meta: dict, reservation: dict) -> None:
+def _admit(state: dict, meta: dict, reservation: dict, *, policy: dict | None = None) -> None:
+    policy = POLICY if policy is None else policy
+    first = state.get("execution_pairs", PAIRS)[0]
     if state["status"] == "blocked-unknown":
         raise LiabilityStop("unresolved delivery/usage prohibits all later outbound calls")
     if state["status"] != "ready":
         raise IntegrityStop("the phase is durably halted")
-    if not state["engineering_review"] and meta["pair"] != PAIRS[0]:
+    if not state["engineering_review"] and meta["pair"] != first:
         raise AuthorityError("the first pair needs engineering review before remaining work")
     if (
         meta["cell"] == "assessment"
-        and meta["pair"] != PAIRS[0]
+        and meta["pair"] != first
         and not state["first_assessments_closed"]
     ):
         raise AuthorityError(
             "finish/classify original first-pair assessment slots before later assessments"
         )
     amount = reservation["micro_usd"]
-    if state["spent_micro_usd"] + state["reserved_micro_usd"] + amount > POLICY["phase_micro_usd"]:
+    if state["spent_micro_usd"] + state["reserved_micro_usd"] + amount > policy["phase_micro_usd"]:
         raise PhaseBudgetStop("cumulative phase reservation ceiling reached")
     if (
-        meta["pair"] == PAIRS[0]
-        and state["first_pair"]["spent_micro_usd"] + amount > POLICY["first_micro_usd"]
+        meta["pair"] == first
+        and state["first_pair"]["spent_micro_usd"] + amount > policy["first_micro_usd"]
     ):
         raise CheckpointStop("included first-pair reservation ceiling reached")
     if meta["cell"] == "assessment":
         bucket = state["assessment"]
         if (
             state["assessment_stopped"]
-            or bucket["spent_micro_usd"] + amount > POLICY["assessment_micro_usd"]
+            or bucket["spent_micro_usd"] + amount > policy["assessment_micro_usd"]
         ):
             raise AssessmentBudgetStop("assessment reservation ceiling reached")
-        if meta["pair"] == PAIRS[0] and (
+        if meta["pair"] == first and (
             state["checkpoint_stopped"]
             or state["first_assessment"]["spent_micro_usd"] + amount
-            > POLICY["first_assessment_micro_usd"]
+            > policy["first_assessment_micro_usd"]
         ):
             raise CheckpointStop("included first-pair assessment checkpoint reached")
     else:
         bucket = state["cells"][meta["cell"]]
+        limits = policy.get("cell_bounds", {}).get(meta["cell"].split(":")[1], {})
         if (
             meta["cell"] in state["stopped_cells"]
-            or bucket["spent_micro_usd"] + amount > POLICY["cell_micro_usd"]
+            or bucket["spent_micro_usd"] + amount > policy["cell_micro_usd"]
             or (
-                bucket["attempts"] + 1 > POLICY["cell_http"]
-                or bucket["input_tokens"] + reservation["input"] > POLICY["cell_input"]
-                or bucket["output_tokens"] + reservation["output"] > POLICY["cell_output"]
+                bucket["attempts"] + 1 > limits.get("http", policy["cell_http"])
+                or bucket["input_tokens"] + reservation["input"] > limits.get("input", policy["cell_input"])
+                or bucket["output_tokens"] + reservation["output"] > limits.get("output", policy["cell_output"])
             )
         ):
             raise CellBudgetStop(

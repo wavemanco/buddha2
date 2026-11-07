@@ -1,0 +1,13 @@
+{
+  "kind": "remaining-final-offline-owner-cleanup-v1",
+  "removed": [
+    "3e294950e2d10ddf321ef022dfc3c91f14c93ac1b7913ff112a052374bbad2d2",
+    "5ce3ab107bb8a747aba6d76ffb6cc9d7e688f2fe02d7545bfbb143491fb09873"
+  ],
+  "prior_exit_codes": [
+    0,
+    0
+  ],
+  "provider_calls": 0,
+  "artifacts_removed": false
+}

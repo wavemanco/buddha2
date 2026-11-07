@@ -52,12 +52,27 @@ def _live_study_claim(checked: dict, *, publish: bool = False) -> dict:
             or Path(checked.get("run", "")) != NATIVE / checked["study_sha256"] / "live"
             or Path(checked.get("journal", "")) != accounting.canonical_journal(checked["study_sha256"], False)):
         raise ContractError("completion claim requires the exact fresh provider scope")
+    continuation = "execution_pilots" in checked
+    policy = accounting.POLICY
+    if continuation:
+        from . import remaining
+
+        policy = remaining.POLICY
+        if (checked["execution_pilots"] != list(remaining.PILOTS)
+                or checked["policy_sha256"] != digest(policy)
+                or checked.get("cap_micro_usd") != policy["phase_micro_usd"]
+                or checked.get("first_pair_cap_micro_usd") != policy["first_micro_usd"]
+                or checked.get("readiness_included_micro_usd") != policy["cell_micro_usd"]):
+            raise ContractError("remaining-pairs claim differs from its validated scope or caps")
     record = {"kind": "phase3b-s2-live-study-claim-v1", **{k: checked[k] for k in _BINDINGS},
         "run": checked["run"], "journal": checked["journal"],
-        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
-        "first_cap_micro_usd": accounting.POLICY["first_micro_usd"],
-        "readiness_included_micro_usd": accounting.POLICY["cell_micro_usd"]}
-    path = _completion_path(BASE / "live-study-timing-continuation-v1.json")
+        "cap_micro_usd": policy["phase_micro_usd"],
+        "first_cap_micro_usd": policy["first_micro_usd"],
+        "readiness_included_micro_usd": policy["cell_micro_usd"]}
+    if continuation:
+        record["execution_pilots"] = checked["execution_pilots"]
+    path = _completion_path(BASE / ("live-study-remaining-pairs-v1.json" if continuation
+                                    else "live-study-timing-continuation-v1.json"))
     if publish:
         write_once(path, record)
     elif path.exists():
@@ -123,6 +138,8 @@ def preflight(study: Path, grant: Path, stage: str, mode: str, *, supervisor_age
             or journal != accounting.canonical_journal(value["study_sha256"], fixture)):
         raise ContractError("completion returned a foreign physical root or journal")
     prepared = read_json(study)
+    policy = accounting.policy_for(prepared["slots"])
+    continuation = "execution_pilots" in prepared
     rehearsal = prepared.get("fixture_supervision_rehearsal", False)
     if type(rehearsal) is not bool or (rehearsal and mode in {"provider", "provider-config"}):
         raise ContractError("supervision rehearsal is strictly mock-only")
@@ -137,13 +154,16 @@ def preflight(study: Path, grant: Path, stage: str, mode: str, *, supervisor_age
         "study_path": str(study), "grant_path": str(grant), "run": str(run), "journal": str(journal),
         "mode": mode, "stage": stage, "journal_id": journal_id, "control_policy_sha256": CONTROL_SHA256,
         "billing_profile": BILLING_PROFILE,
-        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
-        "first_pair_cap_micro_usd": accounting.POLICY["first_micro_usd"],
-        "readiness_included_micro_usd": accounting.POLICY["cell_micro_usd"],
-        "slot_count": accounting.WORKLIST_PROFILE["potential_request_slots"],
-        "maximum_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        "cap_micro_usd": policy["phase_micro_usd"],
+        "first_pair_cap_micro_usd": policy["first_micro_usd"],
+        "readiness_included_micro_usd": prepared["readiness_max_micro_usd"] if continuation else policy["cell_micro_usd"],
+        "slot_count": len(prepared["slots"]) if continuation else accounting.WORKLIST_PROFILE["potential_request_slots"],
+        "maximum_admitted_attempts": prepared["maximum_admitted_attempts"] if continuation
+                                     else accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         "configuration_only": mode == "provider-config", "credential_access": False, "provider_requests": 0,
         "supervisor_agent": supervisor_agent, "fixture_supervision_rehearsal": rehearsal}
+    if continuation:
+        checked["execution_pilots"] = prepared["execution_pilots"]
     if mode == "provider":
         checked["offline_readiness"] = offline_readiness(study, {key: checked[key] for key in READINESS_BINDINGS})
         _live_study_claim(checked)

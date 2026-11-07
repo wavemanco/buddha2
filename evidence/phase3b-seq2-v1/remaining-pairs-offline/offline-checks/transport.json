@@ -1,0 +1,37 @@
+{
+  "check": "transport",
+  "command": [
+    "python",
+    "-B",
+    "/workspace/runs/phase3b-seq2-v1/remaining-pairs-v1/offline_checks.py",
+    "--output",
+    "/results/phase3b-seq2-v1/remaining-pairs-v1/offline-unit-v3"
+  ],
+  "errors": 0,
+  "exit_code": 0,
+  "failures": 0,
+  "kind": "buddha2-offline-check-v2",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "passed": true,
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "9782cdc8021f4b0d2dc83ddabe1ccb004a8b5000fd96b9fec42303353c7b6cbc",
+  "skipped": 0,
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "test_ids": [
+    "followups.phase3b_seq2_v1.test_remaining_launch_s2.RemainingLaunchTests.test_foreign_pilots_or_changed_caps_cannot_claim_remaining_allowance",
+    "followups.phase3b_seq2_v1.test_remaining_launch_s2.RemainingLaunchTests.test_new_profile_claim_preserves_closed_claim_and_cannot_reset_identity",
+    "followups.phase3b_seq2_v1.test_remaining_launch_s2.RemainingLaunchTests.test_preflight_metadata_uses_the_validated_profile_and_preserves_legacy_defaults",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SelectorOwnedWorkerTests.test_actual_pinned_selector_sdk_response_has_bound_native_role_audit",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SelectorOwnedWorkerTests.test_snapshot_intervals_keep_study_binding_for_actual_soft_timing_sdk_audit",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_hard_money_token_and_request_caps_precede_any_timing_pause",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_operator_stop_and_no_answer_timeout_are_terminal_before_a_new_intent",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_original_hard_lifetime_cannot_be_extended_by_a_timing_review",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_review_pauses_before_admission_and_continue_excludes_waiting_time",
+    "followups.phase3b_seq2_v1.test_runtime_s2.SoftConversationTimingTests.test_saved_543_second_shortfall_keeps_full_request_budget_in_new_mode"
+  ],
+  "tests_run": 10
+}

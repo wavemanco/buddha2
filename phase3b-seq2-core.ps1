@@ -90,6 +90,27 @@ function Assert-PublicCompletionInput([string] $Relative) {
     }
 }
 
+function Get-ProviderHandshake($Checked, [string] $InspectionPath) {
+    # Configuration and provider launch consume the same fields before any key access.
+    if ($Checked -isnot [Collections.IDictionary]) { throw 'Provider preflight is not a record' }
+    foreach ($field in @('cap_micro_usd', 'first_pair_cap_micro_usd', 'readiness_included_micro_usd')) {
+        if (-not $Checked.Contains($field) -or
+                ($Checked[$field] -isnot [int] -and $Checked[$field] -isnot [long]) -or
+                $Checked[$field] -lt 0) { throw "Provider preflight field is missing or invalid: $field" }
+    }
+    Assert-NoReparse $InspectionPath
+    $bound = Get-Content -LiteralPath $InspectionPath -Raw -Encoding utf8 | ConvertFrom-Json -AsHashtable
+    if ($bound -isnot [Collections.IDictionary] -or -not $bound.Contains('inspection_sha256') -or
+            $bound.inspection_sha256 -isnot [string] -or $bound.inspection_sha256 -cnotmatch '^[0-9a-f]{64}$') {
+        throw 'Provider inspection identity is missing or invalid'
+    }
+    Write-Host 'Key entry requires the same declared Anthropic/OpenAI accounts and public-PAYG billing profile; stop if those accounts or terms have changed.'
+    Write-Host ('This controller retains keys only in RAM through approved work and review pauses. Declared cap: ${0} total, included ${1} first checkpoint and ${2} readiness cell.' -f ($Checked.cap_micro_usd / 1000000), ($Checked.first_pair_cap_micro_usd / 1000000), ($Checked.readiness_included_micro_usd / 1000000))
+    Write-Host 'After key entry, paid work waits for the named keyless supervisor to attach (at most 30 minutes). No extra key prompt is required.'
+    Write-Host 'Validating the frozen release before hidden key entry; this may take a few minutes. Wait for the masked prompts during provider launch.'
+    return $bound.inspection_sha256
+}
+
 $expectedRoot = 'C:\Users\arvik\code\research\Buddha2'
 $expectedImage = 'sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800'
 $containerIds = [Collections.Generic.List[string]]::new()
@@ -162,19 +183,19 @@ try {
         $sealCode = 'import hashlib,json,pathlib,sys; v=json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")); v["inspection_sha256"]=hashlib.sha256(json.dumps(v,sort_keys=True,ensure_ascii=False,separators=(",",":"),allow_nan=False).encode("utf-8")).hexdigest(); p=pathlib.Path(sys.argv[2]); p.open("x",encoding="utf-8").write(json.dumps(v,ensure_ascii=False,sort_keys=True,indent=2)+"\n")'
         $sealed = Invoke-Tool 'python' @('-I', '-B', '-c', $sealCode, ($prefix + '.inspection-draft.json'), ($prefix + '.inspection.json'))
         if ($sealed.ExitCode -ne 0) { throw 'Could not seal the actual inspected configuration' }
+        $inspectionHash = $null
+        if ($Action -in @('config', 'provider')) {
+            $step = 'provider pre-credential handshake'
+            $inspectionHash = Get-ProviderHandshake $checked ($prefix + '.inspection.json')
+        }
         if ($Action -eq 'config') {
-            Write-Host 'P3B-S2 provider configuration inspected without startup or credential entry.'
+            Write-Host 'P3B-S2 provider configuration and shared pre-credential handshake checked without startup or credential entry.'
             $exitCode = 0
         }
         else {
             $step = 'validated execution and credential handshake'
             if ($Action -eq 'provider') {
-                $bound = Get-Content -LiteralPath ($prefix + '.inspection.json') -Raw -Encoding utf8 | ConvertFrom-Json -AsHashtable
-                Write-Host 'Entering keys confirms the same previously declared Anthropic/OpenAI accounts and public-PAYG billing profile; stop if those accounts or terms have changed.'
-                Write-Host ('This one controller retains keys only in RAM through supervised startup, readiness, first-pair review and remaining work. Remaining cap: ${0} total, included ${1} first checkpoint and ${2} readiness cell.' -f ($checked.cap_micro_usd / 1000000), ($checked.first_pair_cap_micro_usd / 1000000), ($checked.readiness_included_micro_usd / 1000000))
-                Write-Host 'After key entry, paid work waits for the named keyless supervisor to attach (at most 30 minutes). No extra key prompt is required.'
-                Write-Host 'Validating the frozen release before hidden key entry; this may take a few minutes. Wait for the masked prompts.'
-                $result = Invoke-ProviderExecution $executionId $checked $bound.inspection_sha256
+                $result = Invoke-ProviderExecution $executionId $checked $inspectionHash
             }
             else {
                 $dummy = '{"anthropic_api_key":"fixture-not-a-secret","openai_api_key":"fixture-not-a-secret"}' + "`n"

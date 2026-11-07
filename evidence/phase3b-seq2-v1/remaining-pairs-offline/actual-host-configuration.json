@@ -1,0 +1,17 @@
+{
+  "kind": "phase3b-remaining-actual-host-configuration-v1",
+  "passed": true,
+  "inspection_relative_path": "runs/phase3b-seq2-v1/launcher/55df5a4bddcf4b7ea72408a443314b77.inspection.json",
+  "inspection_sha256": "4dde27e12fd1a6afe9ea2108317deded5fcf35d701c9ee9f7d8af1d50f9d56c5",
+  "inspection_file_sha256": "fcaf89800e966ff34ac77199cc6a0c57a915495a35e99963370bffa205fcf83c",
+  "shared_precredential_handshake_completed": true,
+  "actual_provider_ready_consumer_component_test_separate": true,
+  "provider_execution_started": false,
+  "real_credentials_read": false,
+  "external_provider_calls": 0,
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16"
+}

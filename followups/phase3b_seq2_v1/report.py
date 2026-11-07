@@ -9,7 +9,7 @@ from pathlib import Path
 
 from buddha2.artifacts import ContractError, digest, write_bytes_once, write_once
 
-from . import accounting
+from . import accounting, completed_pair, remaining
 from .support import ROOT, safe
 
 ARMS = ("fixed", "adaptive")
@@ -23,6 +23,26 @@ def _require(value: bool, message: str) -> None:
 
 
 def _historical_resources(study: dict, state: dict) -> dict:
+    if "imported_first_pair" in study:
+        imported = study["imported_first_pair"]
+        prior = imported["historical_accounting"]
+        fixture = state["fixture"]
+        known = prior["known_spent_micro_usd"] + state["spent_micro_usd"]
+        held = prior["reserved_micro_usd"] + state["reserved_micro_usd"]
+        return {
+            "lineage_spent_micro_usd": None if fixture else known,
+            "lineage_reserved_micro_usd": None if fixture else held,
+            "lineage_max_exposure_micro_usd": None if fixture else known + held,
+            "lineage_provider_calls": None if fixture else prior["provider_calls"] + state["provider_calls"],
+            "historical_accounting_settled": prior["reserved_micro_usd"] == 0,
+            "historical_unknown_released": False,
+            "imported_first_pair_accounting": copy.deepcopy(imported["accounting"]),
+            "whole_pilot_known_spent_micro_usd": None if fixture else
+                imported["accounting"]["known_spent_micro_usd"] + state["spent_micro_usd"],
+            "whole_pilot_provider_calls": None if fixture else
+                imported["accounting"]["provider_calls"] + state["provider_calls"],
+            "legacy_cumulative_field_scope": "All retained history plus this new three-pair ledger; first pair counted once",
+        }
     prior = study["prior_live_episode"]
     closed = study.get("prior_closed_attempt", {})
     repeat = study.get("prior_closed_repeat", {})
@@ -124,20 +144,22 @@ def _resources(study: dict, state: dict) -> dict:
             row["reasoning_usage_reported_calls"] += 1
     utilization = {}
     for cell, values in state["cells"].items():
+        policy = study["policy"]
+        bounds = policy.get("cell_bounds", {}).get(cell.rsplit(":", 1)[1], {})
         utilization[cell] = {
-            "spent_fraction": values["spent_micro_usd"] / accounting.POLICY["cell_micro_usd"],
-            "http_fraction": values["attempts"] / accounting.POLICY["cell_http"],
-            "input_fraction": values["input_tokens"] / accounting.POLICY["cell_input"],
-            "output_fraction": values["output_tokens"] / accounting.POLICY["cell_output"],
+            "spent_fraction": values["spent_micro_usd"] / policy["cell_micro_usd"],
+            "http_fraction": values["attempts"] / bounds.get("http", policy["cell_http"]),
+            "input_fraction": values["input_tokens"] / bounds.get("input", policy["cell_input"]),
+            "output_fraction": values["output_tokens"] / bounds.get("output", policy["cell_output"]),
         }
     return {
         "profiles": [profiles[key] for key in sorted(profiles)],
         "inference_allowance_utilization": utilization,
         **_historical_resources(study, state),
         "original_phase3a_cap_micro_usd": 220000000,
-        "current_study_cap_micro_usd": accounting.POLICY["phase_micro_usd"],
-        "assessment_allowance_micro_usd": accounting.POLICY["assessment_micro_usd"],
-        "inference_allowance_micro_usd_per_cell": accounting.POLICY["cell_micro_usd"],
+        "current_study_cap_micro_usd": study["policy"]["phase_micro_usd"],
+        "assessment_allowance_micro_usd": study["policy"]["assessment_micro_usd"],
+        "inference_allowance_micro_usd_per_cell": study["policy"]["cell_micro_usd"],
         "wall_time_seconds": None,
         "wall_time_basis": "Retain actual host launch/runtime records separately; not measured by the request journal.",
         "thinking_usage_note": "Reported reasoning is a subset of output, not an extra charge. Unreported thinking is not inferred as zero.",
@@ -292,7 +314,7 @@ def _read_consumption_audit(branches: dict) -> dict:
 
 def _coverage(study: dict, state: dict, saved: dict, ready: bool) -> dict:
     slots = dict.fromkeys(study["slots"], "not_attempted")
-    first = accounting.PAIRS[0]
+    first = study.get("execution_pilots", accounting.PAIRS)[0]
     for slot, meta in study["slots"].items():
         if meta["cell"] in state.get("stopped_cells", []):
             slots[slot] = "not_attempted_cell_budget"
@@ -328,6 +350,8 @@ def _coverage(study: dict, state: dict, saved: dict, ready: bool) -> dict:
     from .native import Phase3NativeAssessment
 
     for planned in study["assessment_plan"]:
+        if planned["pilot"] not in study.get("execution_pilots", accounting.PAIRS):
+            continue
         assessment = saved["assessments"].get(planned["id"])
         prefix = Phase3NativeAssessment.slot_prefix(planned["id"])
         fields = (assessment.get("native") or {}).get("partition_fields") if assessment else None
@@ -364,13 +388,19 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         type(fixture) is bool and state["fixture"] is fixture, "report mode differs from ledger"
     )
     _require(
-        study["policy"] == accounting.POLICY and len(study["slots"]) == 2344,
+        study["policy"] == (remaining.POLICY if remaining.enabled(study) else accounting.POLICY)
+        and len(study["slots"]) == (1758 if "imported_first_pair" in study else 2344),
         "S2 report policy or worklist differs",
     )
     plans = _plan(study)
+    saved = completed_pair.join(study, saved)
+    imported = saved.get("completed_first_pair")
+    old_results = imported["results"] if imported else {}
+    _require(not set(old_results).intersection(state["results"]), "new ledger replaces completed requests")
+    evidence_results = {**old_results, **state["results"]}
     validation = copy.deepcopy(saved.get("validation_failure"))
-    branches = saved["branches"] if validation is None else {}
-    assessments = saved["assessments"] if validation is None else {}
+    branches = saved["branches"] if validation is None else (imported["branches"] if imported else {})
+    assessments = saved["assessments"] if validation is None else (imported["assessments"] if imported else {})
     read_audit = _read_consumption_audit(branches)
     readiness = copy.deepcopy(saved.get("readiness"))
     ready = isinstance(readiness, dict) and readiness.get("passed") is True
@@ -439,7 +469,14 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
                 if arm == "fixed"
                 else None,
             }
-            if validation is not None:
+            if imported:
+                row.update(imported=pilot == "p3b-01", origin_fixture=False if pilot == "p3b-01" else fixture,
+                    generation_study_sha256=completed_pair.GENERATION if pilot == "p3b-01" else study["study_sha256"],
+                    assessment_execution_study_sha256=completed_pair.EXECUTION if pilot == "p3b-01" else study["study_sha256"])
+                if pilot == "p3b-01":
+                    row["origin_authentic"] = bool(arm == "adaptive" and result.get("authentic"))
+                    row["inference_accounting"] = copy.deepcopy(imported["accounting"].get("cells", {}).get(pilot + ":" + arm))
+            if validation is not None and not (imported and pilot == "p3b-01"):
                 row.update(
                     status="unvalidated_integrity_hold", branch_status="unvalidated_integrity_hold"
                 )
@@ -496,9 +533,9 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         and not pending
     )
     authentic = any(row["authentic"] for row in rows)
-    fixed_pools = {pilot: fixed_pool_complete((branches.get((pilot, "fixed")) or {}).get("result") or {}, state["results"])
+    fixed_pools = {pilot: fixed_pool_complete((branches.get((pilot, "fixed")) or {}).get("result") or {}, evidence_results)
         for pilot in accounting.PAIRS}
-    native_selectors = {pilot: native_selection_normal((branches.get((pilot, "adaptive")) or {}).get("result") or {}, state["results"])
+    native_selectors = {pilot: native_selection_normal((branches.get((pilot, "adaptive")) or {}).get("result") or {}, evidence_results)
         for pilot in accounting.PAIRS}
     complete_method_execution = all(fixed_pools.values()) and all(native_selectors.values())
     primary_scored = sum(row["status"] == "scored" for row in primaries)
@@ -608,18 +645,18 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
             {**row, "status": assessments.get(row["id"], {}).get("status", "not_attempted")}
             for row in study["assessment_plan"]
         ],
-        potential_request_slots=2344,
-        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        potential_request_slots=len(study["slots"]),
+        maximum_new_admitted_attempts=study.get("maximum_admitted_attempts", accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]),
         editor_max_requests=24,
         editor_max_ordinary_requests=23,
         inventory_is_authorization=False,
     )
     resources = _resources(study, state)
     resources.update(
-        current_goal_cap_micro_usd=250_000_000,
-        defined_max_cumulative_exposure_micro_usd=248_924_365,
-        potential_request_slots=2344,
-        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        current_goal_cap_micro_usd=study["policy"]["phase_micro_usd"],
+        defined_max_cumulative_exposure_micro_usd=(463_728_979 if imported else 248_924_365),
+        potential_request_slots=len(study["slots"]),
+        maximum_new_admitted_attempts=study.get("maximum_admitted_attempts", accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]),
     )
     account = {
         key: copy.deepcopy(value)
@@ -676,8 +713,8 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         "held_evidence_failure": validation,
         "diagnostic_scored": 0,
         "diagnostic_classified": True,
-        "potential_request_slots": 2344,
-        "maximum_new_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        "potential_request_slots": len(study["slots"]),
+        "maximum_new_admitted_attempts": study.get("maximum_admitted_attempts", accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]),
         "transport_audit_summary": copy.deepcopy(state.get("transport_audit_summary")),
         "deadline_stop": copy.deepcopy(state.get("deadline_stop")),
         "provider_calls_semantics": "Admitted live attempts; actual SDK invocations require physical audits.",
@@ -695,8 +732,9 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         "inference_geo",
     )
     requests = []
-    for slot, intent in state["intents"].items():
-        result = state["results"].get(slot)
+    all_intents = {**(imported["intents"] if imported else {}), **state["intents"]}
+    for slot, intent in all_intents.items():
+        result = evidence_results.get(slot)
         request = intent["request"]
         requests.append(
             {
@@ -720,6 +758,11 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
                 else intent["reservation"]["micro_usd"],
             }
         )
+        if imported:
+            requests[-1].update(imported=slot in old_results,
+                generation_study_sha256=completed_pair.GENERATION if slot in old_results else study["study_sha256"],
+                execution_study_sha256=(completed_pair.EXECUTION if slot in imported["supplement_slots"] else completed_pair.GENERATION)
+                    if slot in old_results else study["study_sha256"])
     protocol = {
         key: copy.deepcopy(study[key])
         for key in (
@@ -759,9 +802,18 @@ def build(study: dict, state: dict, saved: dict, fixture: bool) -> dict:
         historical_unknown_released=False,
         selected_final_assessment_is_alias=True,
         diagnostic_assessments=0,
-        maximum_new_admitted_attempts=accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
+        maximum_new_admitted_attempts=study.get("maximum_admitted_attempts", accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]),
         transport_audit_summary=copy.deepcopy(state.get("transport_audit_summary")),
     )
+    if imported:
+        protocol.update(imported_first_pair=copy.deepcopy(study["imported_first_pair"]),
+            execution_pilots=copy.deepcopy(study["execution_pilots"]),
+            imported_evidence_scope="Original records retain both old identities; new journal counters exclude them",
+            first_pair_original_inference_allowance_micro_usd=35_000_000)
+        coverage["imported_first_pair"] = {"certificate_sha256": study["imported_first_pair"]["sha256"],
+            "known_requests": len(old_results), "scheduled_targets": 3, "scored_targets": 3,
+            "new_request_slots": 0}
+        analysis["limits"].append("First pair used its original unbound35USD cell ceilings; the three new pairs use50USD. No unchanged-budget or efficiency claim.")
     data = {
         "rows": rows,
         "coverage": coverage,
@@ -816,7 +868,7 @@ def write_report(data: dict, output: Path) -> dict:
         + "Full per-file coverage, missing ranges and parse errors are retained in analysis.json under read_consumption_audit.\n\n"
         + f"Admitted requests: {summary['attempts']}/{summary['maximum_new_admitted_attempts']} maximum; known micro-USD: {summary['spent_micro_usd']}; "
         + f"new held micro-USD: {summary['reserved_micro_usd']}. Old held liabilities remain22880000micro-USD.\n\n"
-        + f"Equal35USD fresh inference-cell allowances and{data['protocol']['policy']['phase_micro_usd'] / 1_000_000:.6f}USD remaining global exposure cap do not imply equal realized cost. "
+        + f"Equal{data['protocol']['policy']['cell_micro_usd'] / 1_000_000:g}USD fresh inference-cell allowances and{data['protocol']['policy']['phase_micro_usd'] / 1_000_000:.6f}USD global exposure cap do not imply equal realized cost. "
         + "The earlier stopped Phase3B attempt is accounted for separately and remains charged to the original allowance. "
         + "Failed/discarded authoring/selector/solver work remains fully counted. No automatic repetition.\n"
     )

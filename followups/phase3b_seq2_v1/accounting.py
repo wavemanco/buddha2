@@ -141,9 +141,11 @@ def validate_authority(
         core._hash(study_sha256) and type(fixture) is bool, "exact study/mode binding required"
     )
     core._validate_auth(authority, study_sha256, core.am1.CONTROL_POLICY)
+    from .remaining import policy_by_hash
+    policy = policy_by_hash(bindings.get("policy_sha256")) or POLICY
     _require(
-        authority["cap_micro_usd"] == POLICY["phase_micro_usd"]
-        and authority["canary_cap_micro_usd"] == POLICY["first_micro_usd"]
+        authority["cap_micro_usd"] == policy["phase_micro_usd"]
+        and authority["canary_cap_micro_usd"] == policy["first_micro_usd"]
         and authority["expansion_authorized"] is False
         and (fixture or authority["authorized"] is True),
         "S2 authority differs; a legacy ceiling is not this grant",
@@ -153,13 +155,16 @@ def validate_authority(
         and all(core._hash(v) for v in bindings.values()),
         "S2 source bindings are incomplete",
     )
-    _require(bindings["policy_sha256"] == digest(POLICY), "HI policy identity differs")
+    _require(bindings["policy_sha256"] == digest(policy), "HI policy identity differs")
     _require(bindings["source_sha256"] not in RETIRED_SOURCES, "retired source cannot authorize HI")
 
 
 def _slot_scope(slots: Any) -> None:
+    from .remaining import PILOTS, policy_for
+    remaining = isinstance(slots, dict) and policy_for(slots) is not None
+    pairs = PILOTS if remaining else PAIRS
     _require(
-        isinstance(slots, dict) and len(slots) == 2344, "complete2344-slot S2 worklist required"
+        isinstance(slots, dict) and len(slots) == (1758 if remaining else 2344), "complete2344-slot S2 worklist required"
     )
     counts: Counter = Counter()
     conversations: dict[str, set[int]] = {}
@@ -173,14 +178,14 @@ def _slot_scope(slots: Any) -> None:
         role, cell, pair = row.get("role"), row.get("cell"), row.get("pair")
         _require(
             role in ROLES
-            and pair in PAIRS
+            and pair in pairs
             and cell in (pair + ":fixed", pair + ":adaptive", "assessment"),
             "invalid role/cell/pair",
         )
         extras = {"checkpoint"} if "checkpoint" in row else set()
         if extras:
             _require(
-                row["checkpoint"] == ("canary" if pair == PAIRS[0] else "expansion"),
+                row["checkpoint"] == ("canary" if pair == pairs[0] else "expansion"),
                 "checkpoint differs",
             )
         _require(
@@ -210,7 +215,7 @@ def _slot_scope(slots: Any) -> None:
             _require(set(row) == {"role", "cell", "pair"} | extras, "unexpected slot metadata")
         counts[cell, pair, role] += 1
     expected: Counter = Counter()
-    for pair in PAIRS:
+    for pair in pairs:
         for arm, population in (
             (
                 "adaptive",
@@ -224,7 +229,7 @@ def _slot_scope(slots: Any) -> None:
         expected["assessment", pair, "quality"] = 30
     _require(
         counts == expected
-        and len(conversations) == 52
+        and len(conversations) == 13 * len(pairs)
         and all(turns == set(range(1, 25)) for turns in conversations.values()),
         "S2 frozen scope differs",
     )
@@ -242,6 +247,11 @@ def _editor_tools(value: Any) -> None:
     )
 
 
+def policy_for(slots: dict) -> dict:
+    from .remaining import policy_for as remaining_policy
+    return remaining_policy(slots) or copy.deepcopy(POLICY)
+
+
 def journal_identity(
     *,
     study_sha256: str,
@@ -253,6 +263,8 @@ def journal_identity(
 ) -> str:
     validate_authority(study_sha256, authority, fixture, bindings)
     _slot_scope(slots)
+    _require(bindings["policy_sha256"] == digest(policy_for(slots)),
+        "worklist policy differs from its exact grant binding")
     _editor_tools(editor_tools or {})
     return digest(
         {
@@ -261,7 +273,7 @@ def journal_identity(
             "authority": authority,
             "fixture": fixture,
             "bindings": bindings,
-            "policy": POLICY,
+            "policy": policy_for(slots),
             "editor_tools": editor_tools or {},
         }
     )
@@ -286,9 +298,11 @@ def _manifest(path: Path) -> dict:
         "HI ledger inputs differ",
     )
     _require(
-        inputs["policy"] == POLICY and digest(inputs["policy"]) == digest(POLICY),
+        inputs["policy"] == policy_for(inputs["slots"]),
         "HI ledger policy differs",
     )
+    _require(inputs["bindings"]["policy_sha256"] == digest(inputs["policy"]),
+        "ledger worklist policy differs from its exact grant binding")
     _slot_scope(inputs["slots"])
     _editor_tools(inputs["editor_tools"])
     validate_authority(
@@ -303,18 +317,20 @@ def _manifest(path: Path) -> dict:
     return value
 
 
-def _admit(state: dict, meta: dict, reservation: dict) -> None:
+def _admit(state: dict, meta: dict, reservation: dict, *, policy: dict | None = None) -> None:
+    policy = POLICY if policy is None else policy
+    first = state.get("execution_pairs", PAIRS)[0]
     if state["status"] == "ready" and (
         state["spent_micro_usd"] + state["reserved_micro_usd"] + reservation["micro_usd"]
-        > POLICY["phase_micro_usd"]
+        > policy["phase_micro_usd"]
     ):
         raise PhaseBudgetStop("remaining S2 exposure ceiling reached")
-    if (state["status"] == "ready" and meta["pair"] == PAIRS[0]
+    if (state["status"] == "ready" and meta["pair"] == first
             and state["first_pair"]["spent_micro_usd"] + reservation["micro_usd"]
-            > POLICY["first_micro_usd"]):
+            > policy["first_micro_usd"]):
         raise CheckpointStop("remaining included first-pair exposure ceiling reached")
-    core._admit(state, meta, reservation)
-    if state["attempts"] + 1 > WORKLIST_PROFILE["maximum_admitted_attempts"]:
+    core._admit(state, meta, reservation, policy=policy)
+    if state["attempts"] + 1 > policy.get("maximum_admitted_attempts", WORKLIST_PROFILE["maximum_admitted_attempts"]):
         raise PhaseBudgetStop("remaining S2 admitted-attempt ceiling reached")
 
 
@@ -340,7 +356,7 @@ def _replay(path: Path) -> tuple[dict, list[dict], dict]:
                 record == core._intent(manifest, slot, request, state["attempts"] + 1),
                 "request intent differs",
             )
-            _admit(state, meta, record["reservation"])
+            _admit(state, meta, record["reservation"], policy=manifest["inputs"]["policy"])
             if meta["role"] in {"editor", "native_selector"} and meta["turn"] > 1:
                 previous = next(
                     name
@@ -595,7 +611,7 @@ class _DeadlineCore:
             "authority": copy.deepcopy(authority),
             "fixture": transport.fixture,
             "bindings": copy.deepcopy(bindings),
-            "policy": copy.deepcopy(POLICY),
+            "policy": policy_for(slots),
             "editor_tools": copy.deepcopy(editor_tools or {}),
         }
         _editor_tools(inputs["editor_tools"])
@@ -686,7 +702,7 @@ class _DeadlineCore:
                     and meta["role"] == role
                     and (
                         checkpoint is None
-                        or checkpoint == ("canary" if meta["pair"] == PAIRS[0] else "expansion")
+                        or checkpoint == ("canary" if meta["pair"] == state.get("execution_pairs", PAIRS)[0] else "expansion")
                     ),
                     "undeclared request slot/role/checkpoint",
                 )
@@ -728,7 +744,7 @@ class _DeadlineCore:
                 )
                 raise IntegrityStop(str(exc)) from exc
             try:
-                _admit(state, meta, core._reservation(role))
+                _admit(state, meta, core._reservation(role), policy=manifest["inputs"]["policy"])
             except (CellBudgetStop, AssessmentBudgetStop, CheckpointStop, PhaseBudgetStop) as exc:
                 scope = (
                     "cell"
@@ -963,8 +979,8 @@ class Ledger:
         return self._core.dispatch(slot_id, role, request, checkpoint=checkpoint)
 
     def check_scope(self, state: dict, events: list, meta: dict) -> None:
-        if (self.stage == "readiness" and meta["cell"] != "p3b-01:adaptive") or (
-            self.stage == "first" and meta["pair"] != "p3b-01"
+        if (self.stage == "readiness" and meta["cell"] != state.get("execution_pairs", PAIRS)[0] + ":adaptive") or (
+            self.stage == "first" and meta["pair"] != state.get("execution_pairs", PAIRS)[0]
         ):
             core._append_event(
                 self.journal,
@@ -984,11 +1000,11 @@ class Ledger:
         try:
             self.transport.review_before_intent(slot, role, meta, _bindings(manifest), {
                 "spent_micro_usd": state["spent_micro_usd"], "reserved_micro_usd": state["reserved_micro_usd"],
-                "admitted_requests": state["attempts"], "cap_micro_usd": POLICY["phase_micro_usd"],
-                "maximum_requests": WORKLIST_PROFILE["maximum_admitted_attempts"],
+                "admitted_requests": state["attempts"], "cap_micro_usd": manifest["inputs"]["policy"]["phase_micro_usd"],
+                "maximum_requests": manifest["inputs"]["policy"].get("maximum_admitted_attempts", WORKLIST_PROFILE["maximum_admitted_attempts"]),
                 "next_reservation_micro_usd": core._reservation(role)["micro_usd"]})
             # The lock-protected ledger is unchanged while waiting; recheck its admission anyway.
-            _admit(state, meta, core._reservation(role))
+            _admit(state, meta, core._reservation(role), policy=manifest["inputs"]["policy"])
         except TimingStop as exc:
             self.latch(manifest, slot, exc.reason, disposition=exc.evidence, timing=True)
             core._append_event(self.journal, "halt", {"state_sha256": digest(state),

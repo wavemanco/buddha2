@@ -1,6 +1,6 @@
 # Buddha2
 
-One Phase 3B development prompt now has complete native assessments, using saved generation and eight additional quality judgments. The selected adaptive checkpoint leads the fixed control on this prompt; the four-prompt pilot remains incomplete. The [proposed three-pair continuation](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_CONTINUATION.md) preserves that completed pair and defines the remaining work; implementation and execution have not started. See the [current results and next step](docs/research/CURRENT_SPEC.md) and [assessment-only completion notes](docs/ENGINEERING_AUDIT.md#eight-judgment-live-completion) for accounting, verification and limits.
+One Phase 3B development prompt has complete native assessments; the four-prompt pilot remains incomplete. The approved three-pair continuation now has an [independently accepted offline kit](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_KIT_REPORT.md), preserving the completed pair. Next is fresh masked-key entry and execution of the remaining three pairs within the approved $350 cap. Offline acceptance establishes engineering readiness, not an adaptation benefit. See the [current results and next step](docs/research/CURRENT_SPEC.md).
 
 **A research project testing whether AI can improve its working method—not just produce more answers.**
 

@@ -1,0 +1,12 @@
+{
+  "kind": "phase3b-completed-pair-data-check-v1",
+  "external_provider_calls": 0,
+  "network": "none",
+  "real_credentials_used": false,
+  "passed": true,
+  "certificate_sha256": "72fa6e95d1b8019adea997f1b84c2664a2ffb55cd9a264d91a12695db271a872",
+  "bound_inputs": 376,
+  "preserved_calls": 361,
+  "assessments": 3,
+  "blocked_activity_attempts": 0
+}

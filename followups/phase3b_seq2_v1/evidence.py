@@ -100,7 +100,8 @@ def _sources(search: Path, prefix: str, manifest: dict, hashes: dict[str, str], 
 def verify_readiness(study: dict, run: Path, state: dict, branch: dict, fixture: bool) -> dict:
     """Verify saved delivery/normal completion, never model quality or efficacy."""
     try:
-        return _verify(study, run, state, branch, fixture, _live_profile())
+        return _verify(study, run, state, branch, fixture, _live_profile(),
+            pilot=study.get("execution_pilots", ["p3b-01"])[0])
     except (OSError, UnicodeError, KeyError, TypeError, ValueError, RecursionError) as error:
         if isinstance(error, ContractError):
             raise

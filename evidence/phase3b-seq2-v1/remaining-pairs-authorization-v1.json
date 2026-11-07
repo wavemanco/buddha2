@@ -1,0 +1,43 @@
+{
+  "kind": "phase3b-remaining-pairs-authority-v1",
+  "authorized": true,
+  "client_date": "2026-11-07",
+  "user_instruction": "Go ahead with the full three-pair continuation as defined, including the false-stop checks, within the $350 cap. Preserve the completed pair, request fresh keys only after acceptance, and keep me updated. No engineering detours.",
+  "definition_version": "1.1",
+  "definition_sha256": "cff2c3447c4bf761bc8d5f9c86f4ba083bd742a1423e3858aa73f891fc1d17b5",
+  "definition_proposal_commit": "728f4673e30cdbf334edb75d01b34a511971a8bd",
+  "execution_pilots": [
+    "p3b-02",
+    "p3b-03",
+    "p3b-04"
+  ],
+  "new_cap_micro_usd": 350000000,
+  "inference_cell_micro_usd": 50000000,
+  "assessment_pool_micro_usd": 100000000,
+  "potential_request_slots": 1758,
+  "maximum_admitted_attempts": 1758,
+  "historical_attempts": 3189,
+  "historical_known_micro_usd": 90848979,
+  "historical_reserved_micro_usd": 22880000,
+  "completed_generation_study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+  "completed_assessment_execution_sha256": "cac569074f96ac1cd016ab9428f45722ad6818913f255d50408729686bb6a265",
+  "completed_pair_new_calls": 0,
+  "fresh_keys_only_after_independent_acceptance": true,
+  "whole_block_includes_reviews_exports_and_closure": true,
+  "automatic_paid_repeat_authorized": false,
+  "historical_hold_release_authorized": false,
+  "engineering_tracking_started_utc": "2026-11-07T08:27:00Z",
+  "tracking_time_is_approval_timestamp": false,
+  "engineering_planning_hours": [
+    2,
+    4
+  ],
+  "live_elapsed_planning_hours": [
+    5,
+    8
+  ],
+  "closure_planning_minutes": [
+    30,
+    60
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "phase3b-remaining-preparation-v2",
+  "passed": true,
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "network": "none",
+  "study_path": "/results/phase3b-seq2-v1/remaining-pairs-v1/preparation-v2/release/study.json",
+  "mock_grant_path": "/results/phase3b-seq2-v1/remaining-pairs-v1/preparation-v2/release/mock-grant.json",
+  "live_grant_path": "/results/phase3b-seq2-v1/remaining-pairs-v1/preparation-v2/release/live-grant.json",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "execution_pilots": [
+    "p3b-02",
+    "p3b-03",
+    "p3b-04"
+  ],
+  "slots": 1758,
+  "assessment_targets": 12,
+  "imported_certificate_sha256": "72fa6e95d1b8019adea997f1b84c2664a2ffb55cd9a264d91a12695db271a872",
+  "source_inputs": 177,
+  "blocked_activity_attempts": 0
+}

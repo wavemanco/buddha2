@@ -488,7 +488,8 @@ class SoftConversationTimingTests(unittest.TestCase):
                 ledger.hooks = Mock()
                 ledger.hooks.before_intent.side_effect = AssertionError("timing pause bypassed hard limit")
                 manifest = {"inputs": {"slots": study["slots"], "fixture": True,
-                    "study_sha256": study["study_sha256"], "editor_tools": {}}}
+                    "study_sha256": study["study_sha256"], "editor_tools": {},
+                    "policy": study["policy"]}}
                 with patch.object(accounting, "NATIVE", self.base), patch.object(
                     accounting.core, "writer_lock", return_value=threading.RLock()), patch.object(
                     accounting, "_replay", return_value=(state, [], manifest)), patch.object(
@@ -596,6 +597,45 @@ class SelectorOwnedWorkerTests(unittest.TestCase):
         altered["sha256"] = digest({k: v for k, v in altered.items() if k != "sha256"})
         with self.assertRaises(ContractError):
             validate_audit(altered, intent=intent, result=result, bindings=bindings)
+
+    def test_snapshot_intervals_keep_study_binding_for_actual_soft_timing_sdk_audit(self):
+        from buddha2.artifacts import file_hash
+
+        from . import ledger_core, transport, workflow
+        from .support import NATIVE
+
+        value = self.fixture_transport()
+        bindings, body, intent = self.bind(value, soft_timing=True)
+        result = ledger_core._result(intent, value.create("native_selector", body))
+        audit = value.commit(intent["slot_id"], result)
+        NATIVE.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="snapshot-soft-audit-", dir=NATIVE) as raw:
+            run = Path(raw)
+            audit_file = run / "audit.json"
+            audit_file.write_text(json.dumps(audit), encoding="utf-8")
+            slot = intent["slot_id"]
+            state = {"status": "ready", "results": {slot: result}, "intents": {slot: intent}}
+            saved = {"branches": {}, "seals": {}, "assessments": {}, "readiness": None}
+            actual_read = transport.read_audit
+
+            def omit_study(*args, **kwargs):
+                kwargs["bindings"] = {key: entry for key, entry in kwargs["bindings"].items()
+                                      if key != "study_sha256"}
+                return actual_read(*args, **kwargs)
+
+            with patch.object(workflow, "paths", return_value=(run, run / "journal")), \
+                    patch.object(workflow, "saved", return_value=saved), \
+                    patch.object(transport, "audit_path", return_value=audit_file):
+                records = workflow._snapshot_records(run / "study.json", bindings, state, True)
+                interval = records["audit_intervals"][slot]
+                self.assertEqual(interval["audit_file_sha256"], file_hash(audit_file))
+                self.assertEqual(interval["started_at_utc"], audit["budget"]["started_utc"])
+                self.assertEqual(interval["finished_at_utc"], audit["finished_utc"])
+                self.assertNotIn("validation_failure", records)
+                with patch.object(transport, "read_audit", side_effect=omit_study), \
+                        self.assertRaises(ContractError):
+                    workflow._snapshot_records(run / "study.json", bindings, state, True)
+        self.assertEqual(len(self.http_calls), 1)
 
     def paused_ledger(self):
         from . import accounting, deadline, ledger_core

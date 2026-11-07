@@ -334,16 +334,16 @@ def validate_partial(task: dict, harness_dir: Path, *, study_sha256: str, run_id
 
 def fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                 dispatch: Dispatch, fixture: bool, checkpoint: str = "canary",
-                known_results: dict | None = None) -> dict:
+                known_results: dict | None = None, candidate_order: list[str] | None = None) -> dict:
     with validation_scope():
         return _fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
                             dispatch=dispatch, fixture=fixture, checkpoint=checkpoint,
-                            known_results=known_results)
+                            known_results=known_results, candidate_order=candidate_order)
 
 
 def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                  dispatch: Dispatch, fixture: bool, checkpoint: str,
-                 known_results: dict | None = None) -> dict:
+                 known_results: dict | None = None, candidate_order: list[str] | None = None) -> dict:
     from .accounting import CellBudgetStop, LiabilityStop
 
     if known_results is not None:
@@ -393,6 +393,13 @@ def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: s
     # Hash order is frozen before outcomes; the pool is never shrunk after a failure.
     ordered = sorted(candidates, key=lambda r: digest({"task_id": task["id"], "run_id": run_id,
                                                   "candidate_run_id": r["run_id"]}))
+    if candidate_order is not None:
+        _require(isinstance(candidate_order, list) and len(candidate_order) == 12
+            and all(isinstance(name, str) for name in candidate_order)
+            and set(candidate_order) == {row["run_id"] for row in candidates},
+            "fixed candidate order is not the declared twelve-candidate permutation")
+        indexed = {row["run_id"]: row for row in candidates}
+        ordered = [indexed[name] for name in candidate_order]
     mapping = {f"candidate-{i:02d}": row for i, row in enumerate(ordered, 1)}
     body = {"task": task["prompt"], "candidates": [{"id": key, "answers": [
         r["text"] for r in row["portfolio"]["responses"]]} for key, row in mapping.items()]}
@@ -439,7 +446,8 @@ def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: s
 
 
 def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
-                           run_id: str, fixture: bool, results: dict) -> dict:
+                           run_id: str, fixture: bool, results: dict,
+                           candidate_order: list[str] | None = None) -> dict:
     """Validate even a settled/unresolved selector whose branch publication was interrupted."""
     dispositions = [validate_partial(task, harness_dir, study_sha256=study_sha256,
         run_id=f"{run_id}/candidate-{i:02d}", fixture=fixture, arm="fixed", results=results)
@@ -465,7 +473,7 @@ def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
 
     try:
         expected = fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
-                              dispatch=replay, fixture=fixture)
+                              dispatch=replay, fixture=fixture, candidate_order=candidate_order)
         _require(expected["selection"] is not None and expected["selection"]["result"] == results[selector],
                  "saved selector was not a reachable request")
         status = expected["status"]
@@ -475,7 +483,8 @@ def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
 
 
 def validate_fixed(record: dict, task: dict, harness_dir: Path, *, study_sha256: str,
-                   run_id: str, fixture: bool, results: dict, stopped: bool = False) -> dict:
+                   run_id: str, fixture: bool, results: dict, stopped: bool = False,
+                   candidate_order: list[str] | None = None) -> dict:
     """Rebuild the entire frozen control, including its packet and choice, without sending."""
     def replay(slot: str, role: str, request: dict) -> dict:
         if slot not in results and stopped:
@@ -486,6 +495,6 @@ def validate_fixed(record: dict, task: dict, harness_dir: Path, *, study_sha256:
         return results[slot]
 
     expected = fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
-                          dispatch=replay, fixture=fixture, known_results=results)
+                          dispatch=replay, fixture=fixture, known_results=results, candidate_order=candidate_order)
     _require(digest(record) == digest(expected), "fixed control differs from exact journal replay")
     return expected

@@ -52,7 +52,7 @@ try {
     Assert-OrdinaryHIPath $runtime
     Assert-OrdinaryHIPath $core
     if ((Get-HISHA256 $runtime) -cne '2a6769a3330dc1084d0154bfde7d164ab750ca7f700f313f9d417c1be78b2233' -or
-        (Get-HISHA256 $core) -cne '7cf557133b9360b7d7d6f596c82b29a3b2edafaf0a0e6d0fb1c7b5011a46b912') { throw 'Pinned bootstrap executable or core source differs' }
+        (Get-HISHA256 $core) -cne '21c6e1ce64e96ced7e086ff347994dd5a6e812ebe7b79538436cbe52c97b6408') { throw 'Pinned bootstrap executable or core source differs' }
     $arguments = @('-NoProfile', '-File', $core, '-Action', $Action.ToLowerInvariant(), '-Study', $Study, '-Grant', $Grant, '-Stage', $Stage.ToLowerInvariant())
     if ($SupervisorAgent) { $arguments += @('-SupervisorAgent', $SupervisorAgent) }
     if ($Live.IsPresent) { $arguments += '-Live' }

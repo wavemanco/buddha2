@@ -213,11 +213,12 @@ def _audit(study: dict, requests: list[dict], saved: dict) -> dict:
         raise ProjectionError("missing audit interval inventory")
     _require(set(intervals) <= {r["slot_id"] for r in requests}, "foreign audit interval inventory")
     rows = []
+    declarations = {**saved.get("completed_first_pair", {}).get("slots", {}), **study["slots"]}
     for request in requests:
         slot = request["slot_id"]
-        declaration = study["slots"].get(slot)
-        _require(isinstance(declaration, dict) and declaration.get("role") == request["role"],
-                 "request lacks its declared worklist association")
+        declaration = declarations.get(slot)
+        if not isinstance(declaration, dict) or declaration.get("role") != request["role"]:
+            raise ProjectionError("request lacks its declared worklist association")
         pair, cell = declaration["pair"], declaration["cell"]
         assessment = None
         if cell == "assessment":
@@ -271,19 +272,31 @@ def build_snapshot(study: dict, report_data: dict, saved_records: dict, checkpoi
     _require(all(r.get("status") in ROW_STATUSES for r in rows), "unsupported native primary status")
     _require(isinstance(saved_records.get("branches"), dict)
              and isinstance(saved_records.get("assessments"), dict), "invalid validated saved records")
+    from .completed_pair import join
+    saved_records = join(study, saved_records)
+    imported: dict = saved_records.get("completed_first_pair") or {}
     branches: dict = saved_records["branches"]
     assessments: dict = saved_records["assessments"]
     finals = []
     held = report_data["analysis"].get("held_evidence_failure") is not None
     for row in rows:
-        branch = branches.get((row["pilot"], row["arm"])) if not held else None
+        retained = bool(imported and row["pilot"] == "p3b-01")
+        branch = branches.get((row["pilot"], row["arm"])) if not held or retained else None
         result = (branch.get("result") or {}) if branch else {}
         portfolio = result.get("portfolio") if row["target"] == "fixed" else result.get("checkpoints", {}).get(row["target"])
         _require((sha(portfolio) if portfolio is not None else None) == row.get("final_sha256"),
                  "canonical selected portfolio hash disagrees with report", canonical_error=True)
         if branch:
-            _require(branch.get("study_sha256") == study_sha and branch.get("pilot") == row["pilot"]
-                     and branch.get("arm") == row["arm"] and branch.get("fixture") is fixture
+            origin_study = imported["origin"]["generation_study_sha256"] if retained else study_sha
+            origin_fixture = False if retained else fixture
+            if imported:
+                _require(row.get("imported") is retained and row.get("origin_fixture") is origin_fixture
+                         and row.get("generation_study_sha256") == origin_study
+                         and row.get("assessment_execution_study_sha256") == (
+                             imported["origin"]["assessment_execution_study_sha256"] if retained else study_sha),
+                         "canonical row origin differs", canonical_error=True)
+            _require(branch.get("study_sha256") == origin_study and branch.get("pilot") == row["pilot"]
+                     and branch.get("arm") == row["arm"] and branch.get("fixture") is origin_fixture
                      and (row["target"] != "fixed" or branch.get("portfolio_sha256") == row.get("final_sha256")),
                      "canonical selected branch identity differs", canonical_error=True)
         if portfolio is not None:
@@ -294,18 +307,21 @@ def build_snapshot(study: dict, report_data: dict, saved_records: dict, checkpoi
                              and isinstance(r.get("text"), str) for r in responses)
                      and len({r["id"] for r in responses}) == 10,
                      "unsupported ordered ten-response portfolio")
-            _require(portfolio.get("fixture") is fixture, "canonical portfolio mode differs", canonical_error=True)
+            _require(portfolio.get("fixture") is (False if retained else fixture),
+                     "canonical portfolio mode differs", canonical_error=True)
         finals.append({"pilot": row["pilot"], "arm": row["arm"], "target": row["target"],
                        "portfolio": copy.deepcopy(portfolio)})
     declared = {entry["id"] for entry in study.get("assessment_plan", [])}
     native_assessments = {}
-    if not held:
+    if not held or imported:
         for aid, assessment in assessments.items():
+            if held and aid not in imported["assessments"]:
+                continue
             _require(aid in declared and isinstance(assessment, dict), "undeclared canonical assessment",
                      canonical_error=True)
             native_assessments[aid] = _copy_fields(assessment, ASSESSMENT)
         for row in rows:
-            assessment = assessments.get(row["assessment_id"])
+            assessment = assessments.get(row["assessment_id"]) if not held or row.get("imported") else None
             _require((sha(assessment) if assessment is not None else None) == row.get("assessment_sha256"),
                      "canonical assessment hash disagrees with report", canonical_error=True)
             if row["status"] == "scored":
@@ -343,8 +359,13 @@ def build_snapshot(study: dict, report_data: dict, saved_records: dict, checkpoi
     }
     if "role_profiles" in protocol:
         payload["role_profiles"] = copy.deepcopy(protocol["role_profiles"])
+    if imported:
+        payload["source_identities"]["imported_first_pair"] = {
+            "certificate_sha256": imported["record"]["sha256"], **copy.deepcopy(imported["origin"]),
+            "fixture": False, "original_records_rebound": False,
+            "mixed_fixture_aggregate": fixture}
     for alias in payload["selected_aliases"]:
-        branch = branches.get((alias["pilot"], alias["arm"])) if not held else None
+        branch = branches.get((alias["pilot"], alias["arm"])) if not held or alias.get("imported") else None
         result = (branch.get("result") or {}) if branch else {}
         portfolio = result.get("portfolio")
         _require((sha(portfolio) if portfolio is not None else None) == alias.get("final_sha256"),

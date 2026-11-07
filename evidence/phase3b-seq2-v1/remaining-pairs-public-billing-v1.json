@@ -1,0 +1,245 @@
+{
+  "kind": "phase3b-remaining-pairs-public-billing-v1",
+  "reviewer": "/root/pause_rehearsal_review",
+  "client_date": "2026-11-07",
+  "created_at_utc": "2026-11-07T09:01:03.1126291Z",
+  "scope": "Fresh public official documentation and decimal arithmetic for the approved three-pair continuation; no account or provider execution.",
+  "status": "public-terms-confirmed-subject-to-final-kit-acceptance",
+  "changed_material_rates_or_limits_found": false,
+  "frozen_model_ids": [
+    "claude-sonnet-5-5",
+    "claude-opus-5",
+    "gpt-5.6-luna"
+  ],
+  "model_facts": {
+    "claude-sonnet-5-5": {
+      "context_tokens": 1000000,
+      "ordinary_max_output_tokens": 128000,
+      "long_context_surcharge": false,
+      "usd_per_million": {
+        "input": 2,
+        "output": 10,
+        "cache_write_5m": 2.5,
+        "cache_write_1h": 4,
+        "cache_read": 0.1
+      },
+      "frozen_requested_output": 4096,
+      "reservation_expression": "(1000000 * 2.50 + 4096 * 10) / 1000000",
+      "reservation_usd": "2.540960",
+      "reservation_micro_usd": 2540960,
+      "assumptions": "Global standard requests; at most the existing five-minute write category. No one-hour or Fast opt-in.",
+      "sources": [
+        "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+        "https://platform.claude.com/docs/en/about-claude/pricing"
+      ]
+    },
+    "claude-opus-5": {
+      "context_tokens": 1000000,
+      "ordinary_max_output_tokens": 128000,
+      "long_context_surcharge": false,
+      "usd_per_million": {
+        "input": 5,
+        "output": 25,
+        "cache_write_5m": 6.25,
+        "cache_write_1h": 10,
+        "cache_read": 0.5
+      },
+      "frozen_requested_output": 16000,
+      "reservation_expression": "((1000000 * 10 + 16000 * 25) / 1000000) * 1.1",
+      "reservation_usd": "11.440000",
+      "reservation_micro_usd": 11440000,
+      "assumptions": "Full context at the maximum one-hour write category, plus output and one US-geography uplift; no speed=fast opt-in.",
+      "sources": [
+        "https://platform.claude.com/docs/en/models/opus-5/overview",
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://platform.claude.com/docs/en/manage-claude/data-residency",
+        "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+      ]
+    },
+    "gpt-5.6-luna": {
+      "context_tokens": 1050000,
+      "ordinary_max_output_tokens": 128000,
+      "usd_per_million": {
+        "standard_short_input": 0.2,
+        "standard_short_output": 1.2,
+        "standard_short_cache_read": 0.02,
+        "standard_short_cache_write_30m": 0.25,
+        "standard_short_cache_write_12h": 0.5,
+        "standard_long_input": 0.4,
+        "standard_long_output": 1.8,
+        "fast_long_input": 0.8,
+        "fast_long_output": 3.6,
+        "fast_long_cache_write_30m": 1
+      },
+      "long_context_threshold_input_tokens": 272000,
+      "long_context_comparison": ">",
+      "long_context_input_multiplier": 2,
+      "long_context_output_multiplier": 1.5,
+      "fast_multiplier": 2,
+      "geography_allowance_multiplier": 1.1,
+      "reservation_expression": "(1050000 * 0.20 * 1.25 * 2 * 2 * 1.1 + 128000 * 1.20 * 1.5 * 2 * 1.1) / 1000000",
+      "reservation_input_usd": "1.155000",
+      "reservation_output_usd": "0.506880",
+      "reservation_usd": "1.661880",
+      "reservation_micro_usd": 1661880,
+      "assumptions": "Native Chat default thirty-minute cache writes, maximum context/output, long-context and Fast rates, and one regional allowance. No Responses twelve-hour TTL opt-in.",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "https://developers.openai.com/api/docs/guides/fast-mode"
+      ]
+    }
+  },
+  "modifiers": [
+    {
+      "fact": "Claude global routing uses ordinary prices; US-only routing multiplies all token categories by1.1. An omitted geography follows workspace defaults.",
+      "sources": [
+        "https://platform.claude.com/docs/en/manage-claude/data-residency"
+      ]
+    },
+    {
+      "fact": "Claude standard_only excludes Priority capacity. Legacy commitments do not support these frozen Claude models. Fast requires a separate explicit speed opt-in.",
+      "sources": [
+        "https://platform.claude.com/docs/en/api/service-tiers",
+        "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+      ]
+    },
+    {
+      "fact": "Luna Fast rows are exactly twice Standard, including long-context rates. An omitted tier can inherit a project Fast default; GPT5.6 returns priority as its Fast usage tier.",
+      "sources": [
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/fast-mode"
+      ]
+    },
+    {
+      "fact": "Luna cache writes use total category prices: default30m costs1.25 times input. The optional12h category costs2.5 times and requires Responses controls.",
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ]
+    },
+    {
+      "fact": "OpenAI lists separate10% regional-processing and FedRAMP endpoint uplifts. The retained1.1 envelope covers one uplift, not their hypothetical combination; this plan remains standard public PAYG, without a FedRAMP endpoint.",
+      "sources": [
+        "https://developers.openai.com/api/docs/pricing"
+      ]
+    }
+  ],
+  "arithmetic_verified_with": "System.Decimal in Windows PowerShell; no imported project execution, SDK or token-count service.",
+  "preserved_reservations_confirmed": true,
+  "reservations_are_guaranteed_spend": false,
+  "new_approved_global_cap_usd": 350,
+  "request_controls_review_boundary": {
+    "current_effective_request_construction_reverified_by_this_refresh": false,
+    "explanation": "The source/runtime-bound final kit must separately retain the frozen models, token limits, cache/tier/geography controls and public-PAYG endpoint assumptions."
+  },
+  "public_document_fetches": [
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.3005997Z",
+      "utf8_decoded_bytes": 4045,
+      "utf8_decoded_sha256": "8e4c2cc03c86804b4f5a0bf73ebb9508666ab712db32b6e2b4723a67d053ede4"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "final_url": "https://developers.openai.com/api/docs/pricing.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.3730550Z",
+      "utf8_decoded_bytes": 22062,
+      "utf8_decoded_sha256": "f1ade44afc62fd8a12dd6e199bcecaa989a94c9b691aa620a34e1504ff62ff57"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching.md",
+      "final_url": "https://developers.openai.com/api/docs/guides/prompt-caching.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.4381082Z",
+      "utf8_decoded_bytes": 56584,
+      "utf8_decoded_sha256": "8c672dafd6a332d4b9ad7464aefa3ca4f6b0fffa8bf66bb5ee087e1b39152711"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode.md",
+      "final_url": "https://developers.openai.com/api/docs/guides/fast-mode.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.5298062Z",
+      "utf8_decoded_bytes": 8788,
+      "utf8_decoded_sha256": "673f3f882070c3245b18d578d4f94cbb2d603c01d4227698bdf67acffb423e80"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "final_url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.7521992Z",
+      "utf8_decoded_bytes": 15037,
+      "utf8_decoded_sha256": "e5f81605991b4580b67dbc17fe6cc4eb1df5f45494ce5acae9ec0a46e68d3311"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "final_url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:15.9547646Z",
+      "utf8_decoded_bytes": 14215,
+      "utf8_decoded_sha256": "50f1680eb95585d596e101ee9528e7e5c8ea5feea14efe097f9e9c6dcfb8b4b0"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "final_url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:16.2311408Z",
+      "utf8_decoded_bytes": 52659,
+      "utf8_decoded_sha256": "5864b14c0eb020db52f96b3f42787810ad65d3f28823e317c03b7e9ca345aa49"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md",
+      "final_url": "https://platform.claude.com/docs/en/manage-claude/data-residency.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:16.5336644Z",
+      "utf8_decoded_bytes": 29831,
+      "utf8_decoded_sha256": "543b0ad2a2f7d1cd996e4738befadf34488d1856d63f8a867e436d729891e872"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/api/service-tiers.md",
+      "final_url": "https://platform.claude.com/docs/en/api/service-tiers.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:16.7503622Z",
+      "utf8_decoded_bytes": 10024,
+      "utf8_decoded_sha256": "98b72918a849482f62cb8610a21a6d40e67d2b190fe96d958933bdb8052c6f80"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md",
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode.md",
+      "status": 200,
+      "accessed_utc": "2026-11-07T09:00:17.0214620Z",
+      "utf8_decoded_bytes": 29520,
+      "utf8_decoded_sha256": "d3ca3ba76f2a9d0124d8ee28b6a77bc2aac74928606bb433a26a457acfcfdd31"
+    }
+  ],
+  "source_checks": {
+    "all_ten_official_documents_fetched_http_200": true,
+    "frozen_ids_context_and_output": true,
+    "anthropic_base_and_cache_categories": true,
+    "anthropic_long_context_standard_rates": true,
+    "anthropic_geo_and_standard_only": true,
+    "anthropic_fast_requires_opt_in": true,
+    "luna_standard_and_fast_rate_rows": true,
+    "luna_long_context_threshold": true,
+    "luna_default_30m_cache_and_responses_12h_opt_in": true,
+    "existing_reservation_arithmetic": true
+  },
+  "limits": [
+    "Conservative context-wide per-attempt caps, not expected charges or invoice reconciliation. Input and output maxima are independently overreserved.",
+    "No private contract, account access, balance, project default, key, model availability or provider billing behavior was inspected.",
+    "No account/API-key probe, token-count request, model call, SDK constructor, install, experiment or production/configuration change.",
+    "Public page contents changed since November3; the frozen prices and relevant modifiers above remain compatible. Opus5 is labelled legacy, without a model substitution.",
+    "This append-only receipt supplies no extra calls, budget, retry authority or historical liability release."
+  ],
+  "provider_calls": 0,
+  "provider_requests": 0,
+  "account_or_key_probes": 0,
+  "real_credentials_used": false,
+  "experiment_spend_usd": "0",
+  "protected_original_accessed": false,
+  "production_source_changed": false,
+  "historical_receipts_changed": false
+}

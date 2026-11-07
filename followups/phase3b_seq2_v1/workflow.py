@@ -19,7 +19,7 @@ from buddha2 import phase2_am1_controls as am1
 from buddha2.artifacts import ContractError, digest, file_hash, write_bytes_once
 from buddha2.phase2_dispatch import writer_lock
 
-from . import accounting, editor, native, rank_io, strategy, supervision
+from . import accounting, editor, native, rank_io, remaining, strategy, supervision
 from .adapter import CompatibleProposer
 from .deadline import CONVERSATION_POLICY
 from .deadline import POLICY as DEADLINE_POLICY
@@ -134,6 +134,11 @@ def _assessment_id(study: dict, pilot: str, target: str) -> str:
 
 
 def _fixed_order(study: dict) -> dict:
+    if remaining.enabled(study):
+        original = study["imported_first_pair"]["frozen_original_fixed_candidate_order"]
+        return {entry["pilot_id"]: [
+            _fixed_id(study, entry["pilot_id"]) + "/" + name.rsplit("/", 1)[-1]
+            for name in original[entry["pilot_id"]]] for entry in study["tasks"]}
     return {
         entry["pilot_id"]: sorted(
             [f"{_fixed_id(study, entry['pilot_id'])}/candidate-{i:02}" for i in range(1, 13)],
@@ -175,7 +180,7 @@ def _pair_seal(study: dict, pilot: str, branches: dict, prefix: dict) -> dict:
 
 
 def _first_done(study: dict, saved: dict, state: dict) -> bool:
-    first = study["tasks"][0]["pilot_id"]
+    first = remaining.first(study)
     rows = [row for row in study["assessment_plan"] if row["pilot"] == first]
     return (
         first in saved["seals"]
@@ -186,7 +191,7 @@ def _first_done(study: dict, saved: dict, state: dict) -> bool:
 
 def _empty_state(study: dict, fixture: bool) -> dict:
     return accounting.core._start(
-        {"run_id": None, "inputs": {"study_sha256": study["study_sha256"], "fixture": fixture}}
+        {"run_id": None, "inputs": {"study_sha256": study["study_sha256"], "fixture": fixture, "policy": study.get("policy", {})}}
     )
 
 
@@ -198,7 +203,7 @@ def paths(study: dict, fixture: bool) -> tuple[Path, Path]:
 
 def _plan_slots(study: dict) -> tuple[dict, list[dict]]:
     slots, assessments = {}, []
-    for entry in study["tasks"]:
+    for entry in remaining.execution_tasks(study):
         pilot, task = entry["pilot_id"], _task(entry)
         for arm in ARMS:
             cell = pilot + ":" + arm
@@ -297,12 +302,17 @@ def prepare(
     runtime: dict | None = None,
     supervised_fixture: bool = False,
     boundary_fixture: bool = False,
+    remaining_pairs: bool = False,
 ) -> dict:
     output = path(output)
     require(type(supervised_fixture) is bool, "supervised fixture flag must be boolean")
     require(type(boundary_fixture) is bool and (not boundary_fixture or supervised_fixture),
             "boundary-only fixture requires the supervised, generation-free route")
-    authority = validate_authority()
+    require(type(remaining_pairs) is bool, "remaining profile selector must be boolean")
+    authority = remaining.authority() if remaining_pairs else validate_authority()
+    definition_sha = remaining.DEFINITION_SHA256 if remaining_pairs else DECLARED_DEFINITION_SHA256
+    authority_path = remaining.AUTHORITY if remaining_pairs else AUTHORITY
+    policy = remaining.POLICY if remaining_pairs else accounting.POLICY
     sources, environment = source or source_identity(), runtime or runtime_identity()
     snapshot_policy = source_snapshot_policy(sources["files"])
     old = _scientific_inputs()
@@ -314,12 +324,12 @@ def prepare(
         "source_snapshot_policy": snapshot_policy,
         "runtime": environment,
         "runtime_sha256": digest(environment),
-        "definition_sha256": DECLARED_DEFINITION_SHA256,
-        "authorization_sha256": file_hash(AUTHORITY),
-        "specification_sha256": DECLARED_DEFINITION_SHA256,
+        "definition_sha256": definition_sha,
+        "authorization_sha256": file_hash(authority_path),
+        "specification_sha256": definition_sha,
         "launcher_sha256": file_hash(LAUNCHER),
-        "policy": accounting.POLICY,
-        "policy_sha256": digest(accounting.POLICY),
+        "policy": policy,
+        "policy_sha256": digest(policy),
         "tasks": tasks,
         "execution_tag": "phase3b-seq2-"
         + digest({"source": sources["sha256"], "tasks": tasks})[:20],
@@ -352,7 +362,14 @@ def prepare(
         "maximum_admitted_attempts": accounting.WORKLIST_PROFILE["maximum_admitted_attempts"],
         "editor_steps": 24,
     }
+    if remaining_pairs:
+        from . import completed_pair
+        body.update(execution_pilots=list(remaining.PILOTS), imported_first_pair=completed_pair.certificate(),
+            readiness_is_primary="p3b-02:adaptive", readiness_max_micro_usd=50_000_000,
+            potential_slot_count=1758, maximum_admitted_attempts=1758)
     body["slots"], body["assessment_plan"] = _plan_slots(body)
+    if remaining_pairs:
+        body["assessment_plan"] = body["imported_first_pair"]["assessment_plan"] + body["assessment_plan"]
     body["fixed_candidate_order"] = _fixed_order(body)
     study = {**body, "study_sha256": digest(body)}
     publish(output / "study.json", study)
@@ -377,6 +394,14 @@ def load_study(study_path: Path) -> dict:
         == digest({k: v for k, v in study.items() if k != "study_sha256"}),
         "completion study seal differs",
     )
+    continuation = remaining.enabled(study)
+    definition_sha = remaining.DEFINITION_SHA256 if continuation else DECLARED_DEFINITION_SHA256
+    authority_path = remaining.AUTHORITY if continuation else AUTHORITY
+    policy = remaining.POLICY if continuation else accounting.POLICY
+    if continuation:
+        from . import completed_pair
+        completed_pair.verify_certificate(study["imported_first_pair"])
+        remaining.execution_tasks(study)
     require(study.get("source_snapshot_policy") == source_snapshot_policy(study["source"]["files"]),
             "completion source snapshot policy differs")
     require(
@@ -384,10 +409,10 @@ def load_study(study_path: Path) -> dict:
         and study["source_sha256"] == study["source"]["sha256"]
         and study["runtime"] == runtime_identity()
         and study["runtime_sha256"] == digest(study["runtime"])
-        and study["definition_sha256"] == DECLARED_DEFINITION_SHA256
-        and study["specification_sha256"] == DECLARED_DEFINITION_SHA256
-        and study["authorization_sha256"] == file_hash(AUTHORITY)
-        and study["authority"] == validate_authority(),
+        and study["definition_sha256"] == definition_sha
+        and study["specification_sha256"] == definition_sha
+        and study["authorization_sha256"] == file_hash(authority_path)
+        and study["authority"] == (remaining.authority() if continuation else validate_authority()),
         "completion source/runtime/authority changed",
     )
     old = _scientific_inputs()
@@ -421,18 +446,21 @@ def load_study(study_path: Path) -> dict:
         and study["prior_closed_continuation"] == PRIOR_CLOSED_CONTINUATION
         and study["transport_deadline_policy"] == asdict(DEADLINE_POLICY)
         and study["conversation_timing_policy"] == CONVERSATION_POLICY
-        and study["readiness_is_primary"] == "p3b-01:adaptive"
-        and study["readiness_max_micro_usd"] == 35000000
-        and study["potential_slot_count"] == accounting.WORKLIST_PROFILE["potential_request_slots"]
-        and study["maximum_admitted_attempts"] == accounting.WORKLIST_PROFILE["maximum_admitted_attempts"]
+        and study["readiness_is_primary"] == remaining.first(study) + ":adaptive"
+        and study["readiness_max_micro_usd"] == (50_000_000 if continuation else 35_000_000)
+        and study["potential_slot_count"] == (1758 if continuation else accounting.WORKLIST_PROFILE["potential_request_slots"])
+        and study["maximum_admitted_attempts"] == (1758 if continuation else accounting.WORKLIST_PROFILE["maximum_admitted_attempts"])
         and study["editor_steps"] == 24,
         "completion method/tasks/history differ from the frozen definition",
     )
+    expected_slots, expected_assessments = _plan_slots(study)
+    if continuation:
+        expected_assessments = study["imported_first_pair"]["assessment_plan"] + expected_assessments
     require(
-        (study["slots"], study["assessment_plan"]) == _plan_slots(study)
+        (study["slots"], study["assessment_plan"]) == (expected_slots, expected_assessments)
         and study["fixed_candidate_order"] == _fixed_order(study)
-        and study["policy"] == accounting.POLICY
-        and study["policy_sha256"] == digest(accounting.POLICY),
+        and study["policy"] == policy
+        and study["policy_sha256"] == digest(policy),
         "completion worklist/policy changed",
     )
     require(
@@ -459,10 +487,10 @@ def make_grant(study_path: Path, fixture: bool) -> dict:
     )
     authority = {
         "study_sha256": study["study_sha256"],
-        "authorization_id": "phase3b-continuation-user-approval",
+        "authorization_id": "phase3b-remaining-pairs-user-approval" if remaining.enabled(study) else "phase3b-continuation-user-approval",
         "authorized": not fixture,
-        "cap_micro_usd": accounting.POLICY["phase_micro_usd"],
-        "canary_cap_micro_usd": accounting.POLICY["first_micro_usd"],
+        "cap_micro_usd": study["policy"]["phase_micro_usd"],
+        "canary_cap_micro_usd": study["policy"]["first_micro_usd"],
         "expansion_authorized": False,
         "control_policy_sha256": am1.CONTROL_SHA256,
         "billing_profile": am1.BILLING_PROFILE,
@@ -529,7 +557,7 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
     seed = study_path.parent / "seed"
     branches, seals, assessments = {}, {}, {}
     with strategy.validation_scope(readonly=True):
-        for entry in study["tasks"]:
+        for entry in remaining.execution_tasks(study):
             pilot, task = entry["pilot_id"], _task(entry)
             for arm in ARMS:
                 search = _search(run, pilot, arm)
@@ -541,6 +569,7 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                         run_id=_fixed_id(study, pilot),
                         fixture=fixture,
                         results=state["results"],
+                        candidate_order=study["fixed_candidate_order"][pilot] if remaining.enabled(study) else None,
                     )
                 else:
                     editor.validate_persisted_sessions(
@@ -583,6 +612,7 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                             fixture=fixture,
                             results=state["results"],
                             stopped=pilot + ":fixed" in state.get("stopped_cells", []),
+                            candidate_order=study["fixed_candidate_order"][pilot] if remaining.enabled(study) else None,
                         )
                     else:
                         native.validate_adaptation(
@@ -613,10 +643,12 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                 _validate_seal_prefix(study, journal, seal_record)
                 seals[pilot] = seal_record
     evaluator = native.Phase3NativeAssessment(ROOT / ".upstream/novelty-bench")
-    remaining = {
+    pending_judge_slots = {
         slot for slot, result in state["results"].items() if result["role"] in {"group", "quality"}
     }
     for row in study["assessment_plan"]:
+        if row["pilot"] not in {entry["pilot_id"] for entry in remaining.execution_tasks(study)}:
+            continue
         branch = branches.get((row["pilot"], row["arm"]))
         portfolio = _target_portfolio(branch, row["target"])
         prefix = evaluator.slot_prefix(row["id"])
@@ -628,7 +660,7 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                 group["request_sha256"] == digest(evaluator.group_request(portfolio)),
                 "saved group body changed",
             )
-            remaining.remove(prefix + ".group")
+            pending_judge_slots.remove(prefix + ".group")
             try:
                 partition = evaluator.fold_group(portfolio, group, assessment_id=row["id"])[
                     "partition"
@@ -646,7 +678,7 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                             state["results"][slot]["request_sha256"] == digest(request),
                             "saved quality body changed",
                         )
-                        remaining.remove(slot)
+                        pending_judge_slots.remove(slot)
         target = run / "assessments" / (prefix + ".json")
         if target.exists():
             assessment = read(target)
@@ -670,13 +702,18 @@ def saved(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
                 "assessment does not exactly replay",
             )
             assessments[row["id"]] = assessment
-    require(not remaining, "undeclared/foreign judge results")
+    require(not pending_judge_slots, "undeclared/foreign judge results")
     readiness = (
         checked(read(run / "readiness-review.json"))
         if (run / "readiness-review.json").exists()
         else None
     )
+    imported = {}
+    if remaining.enabled(study):
+        from . import completed_pair
+        imported = {"completed_first_pair": completed_pair.verify_certificate(study["imported_first_pair"])}
     return {
+        **imported,
         "branches": branches,
         "seals": seals,
         "assessments": assessments,
@@ -757,7 +794,7 @@ def preflight(
 def _readiness_check(study: dict, run: Path, state: dict, records: dict, fixture: bool) -> dict:
     from .evidence import verify_readiness
 
-    branch = records["branches"].get(("p3b-01", "adaptive"))
+    branch = records["branches"].get((remaining.first(study), "adaptive"))
     require(branch is not None, "counted native readiness branch missing")
     return verify_readiness(study, run, state, branch, fixture)
 
@@ -781,7 +818,7 @@ def validate_readiness_review(
         and record["inspection"]["evidence_sha256"] == digest(proof)
         and record["inspection"]["hard_engineering_checks_passed"] is True
         and record["inspection"]["read_diagnostics_reviewed"] is True
-        and record["branch_sha256"] == records["branches"]["p3b-01", "adaptive"]["sha256"],
+        and record["branch_sha256"] == records["branches"][remaining.first(study), "adaptive"]["sha256"],
         "readiness review is unsupported by actual native evidence",
     )
     return record
@@ -812,7 +849,7 @@ def _review_readiness(
             "proof": proof,
             "inspection": audit,
             "fixture": fixture,
-            "branch_sha256": records["branches"]["p3b-01", "adaptive"]["sha256"],
+            "branch_sha256": records["branches"][remaining.first(study), "adaptive"]["sha256"],
         }
     )
     publish(run / "readiness-review.json", record)
@@ -824,14 +861,14 @@ def _first_review(
 ) -> None:
     run, journal = paths(study, fixture)
     require(
-        "p3b-01" in records["seals"]
+        remaining.first(study) in records["seals"]
         and state["status"] == "ready"
         and not state["reserved_micro_usd"],
         "first pair not reviewable",
     )
     files = [
-        run / "seals/p3b-01.json",
-        *[_branch_path(run, "p3b-01", arm) for arm in ARMS],
+        run / "seals" / (remaining.first(study) + ".json"),
+        *[_branch_path(run, remaining.first(study), arm) for arm in ARMS],
         journal / "manifest.json",
     ]
     record = {
@@ -852,7 +889,7 @@ def _first_review(
         )
         current = saved(study_path, study, prefix, fixture)
         require(
-            "p3b-01" in current["seals"]
+            remaining.first(study) in current["seals"]
             and value["first_assessments_closed"] == _first_done(study, current, prefix),
             "unsupported first-assessment closure",
         )
@@ -866,6 +903,10 @@ def _first_review(
 def _snapshot_records(study_path: Path, study: dict, state: dict, fixture: bool) -> dict:
     """Keep report and visibility views on the same validated/held evidence rule."""
     run, _ = paths(study, fixture)
+    imported = {}
+    if remaining.enabled(study):
+        from . import completed_pair
+        imported["completed_first_pair"] = completed_pair.verify_certificate(study["imported_first_pair"])
     stop_path = path(run / "canonical-stop.json")
     if stop_path.exists():
         stop = checked(read(stop_path))
@@ -876,6 +917,7 @@ def _snapshot_records(study_path: Path, study: dict, state: dict, fixture: bool)
             "foreign canonical stop marker",
         )
         return {
+            **imported,
             "branches": {},
             "seals": {},
             "assessments": {},
@@ -898,6 +940,7 @@ def _snapshot_records(study_path: Path, study: dict, state: dict, fixture: bool)
         if state["status"] == "ready" and not (run / "readiness-failure.json").exists():
             raise
         records = {
+            **imported,
             "branches": {},
             "seals": {},
             "assessments": {},
@@ -924,7 +967,7 @@ def _snapshot_records(study_path: Path, study: dict, state: dict, fixture: bool)
                 intent=state["intents"][slot],
                 result=result,
                 bindings={
-                    key: study[key] for key in ("source_sha256", "policy_sha256", "launcher_sha256")
+                    key: study[key] for key in ("study_sha256", "source_sha256", "policy_sha256", "launcher_sha256")
                 },
             )
             records["audit_intervals"][slot] = {
@@ -983,8 +1026,12 @@ def snapshot(study_path: Path, grant_path: Path, fixture: bool) -> dict:
     return _fold_view(study, state, records, fixture)
 
 
-def _barrier(study_path: Path, study: dict, grant_path: Path, fixture: bool, name: str) -> None:
+def _barrier(study_path: Path, study: dict, grant_path: Path, fixture: bool, name: str,
+             *, pilot: str | None = None) -> None:
     run, _ = paths(study, fixture)
+    require(pilot is None or remaining.enabled(study) and pilot in remaining.PILOTS[1:]
+        and name == "pair-" + pilot, "undeclared paired review boundary")
+    reviewed_pair = pilot or remaining.first(study)
     state = _state(study, fixture)
     records = saved(study_path, study, state, fixture)
     proof = (
@@ -992,7 +1039,7 @@ def _barrier(study_path: Path, study: dict, grant_path: Path, fixture: bool, nam
         if name == "readiness"
         else {
             "study_sha256": study["study_sha256"],
-            "pair_seal": records["seals"]["p3b-01"],
+            "pair_seal": records["seals"][reviewed_pair],
             "state_sha256": digest(state),
         }
     )
@@ -1038,6 +1085,11 @@ def _barrier(study_path: Path, study: dict, grant_path: Path, fixture: bool, nam
     )
     if name == "readiness":
         _review_readiness(study_path, study, state, records, fixture, audit)
+    elif pilot is not None:
+        require(audit.get("engineering_checks_passed") is True and bool(audit.get("notes")),
+            "paired engineering review incomplete")
+        publish(run / (name + "-review.json"), seal({"kind": "phase3b-pair-review-v1",
+            "study_sha256": study["study_sha256"], "pilot": pilot, "inspection": audit}))
     else:
         require(
             audit.get("engineering_checks_passed") is True and bool(audit.get("notes")),
@@ -1127,7 +1179,7 @@ def _run_stage(
             require(
                 review["passed"] is True
                 and review["study_sha256"] == study["study_sha256"]
-                and review["branch_sha256"] == records["branches"]["p3b-01", "adaptive"]["sha256"],
+                and review["branch_sha256"] == records["branches"][remaining.first(study), "adaptive"]["sha256"],
                 "readiness review changed",
             )
 
@@ -1179,11 +1231,11 @@ def _run_stage(
         return dispatch
 
     evaluator = native.Phase3NativeAssessment(ROOT / ".upstream/novelty-bench")
-    for entry in study["tasks"]:
+    for entry in remaining.execution_tasks(study):
         pilot, task = entry["pilot_id"], _task(entry)
-        if stage in {"readiness", "first"} and pilot != "p3b-01":
+        if stage in {"readiness", "first"} and pilot != remaining.first(study):
             break
-        if pilot != "p3b-01" and not ledger.state()["first_assessments_closed"]:
+        if pilot != remaining.first(study) and not ledger.state()["first_assessments_closed"]:
             break
         for arm in ["adaptive"] if stage == "readiness" else entry["arm_order"]:
             if (pilot, arm) in records["branches"]:
@@ -1199,6 +1251,7 @@ def _run_stage(
                         fixture=fixture,
                         dispatch=dispatch_for(pilot, arm),
                         known_results=ledger.state()["results"],
+                        candidate_order=study["fixed_candidate_order"][pilot] if remaining.enabled(study) else None,
                     )
                 else:
                     callback = getattr(transport, "register_contract", None)
@@ -1315,7 +1368,7 @@ def _run_stage(
             except (accounting.LiabilityStop, accounting.IntegrityStop):
                 return snapshot(study_path, grant_path, fixture)["summary"] if _summary else None
         if (
-            pilot == "p3b-01"
+            pilot == remaining.first(study)
             and ledger.state()["engineering_review"]
             and not ledger.state()["first_assessments_closed"]
         ):
@@ -1328,6 +1381,10 @@ def _run_stage(
                 fixture,
                 closure=True,
             )
+        if remaining.enabled(study) and stage == "remaining" and pilot in remaining.PILOTS[1:]:
+            if all(records["assessments"].get(row["id"], {}).get("status") == "scored"
+                   for row in study["assessment_plan"] if row["pilot"] == pilot):
+                _barrier(study_path, study, grant_path, fixture, "pair-" + pilot, pilot=pilot)
     return snapshot(study_path, grant_path, fixture)["summary"] if _summary else None
 
 
@@ -1684,10 +1741,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--study", type=Path)
     parser.add_argument("--grant", type=Path)
     parser.add_argument("--fixture", action="store_true")
+    parser.add_argument("--remaining-pairs", action="store_true")
     args = parser.parse_args(argv)
     if args.command == "prepare":
         require(args.output is not None, "prepare requires output")
-        result = prepare(args.output)
+        result = prepare(args.output, remaining_pairs=args.remaining_pairs)
     elif args.command == "grant":
         require(args.study is not None and args.output is not None, "grant requires study/output")
         result = make_grant(args.study, args.fixture)

@@ -46,7 +46,11 @@ def _perform(spec: dict, notify=None) -> dict:
         "visibility_status": "failed", "summary": None, "snapshot_sha256": None,
         "financial_state_validated": False, "reports_published": False}
     def held_records(error):
-        return {"branches": {}, "seals": {}, "assessments": {}, "readiness": None,
+        imported: dict = {}
+        if study is not None and "imported_first_pair" in study:
+            from .completed_pair import verify_certificate
+            imported["completed_first_pair"] = verify_certificate(study["imported_first_pair"])
+        return {**imported, "branches": {}, "seals": {}, "assessments": {}, "readiness": None,
             "snapshot_observed_at_utc": datetime.now(timezone.utc).isoformat(), "audit_intervals": {},
             "validation_failure": {"exception_type": type(error).__name__,
                 "scientific_use": "disqualified", "classification": "integrity_hold"},

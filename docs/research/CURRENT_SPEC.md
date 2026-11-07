@@ -1,3 +1,9 @@
+# Three-pair continuation: offline accepted — 7 November 2026
+
+The approved definition 1.1 execution kit has passed 57 selected methods/all 16 mandatory regressions, scoped static checks, actual Windows pre-credential checks, a complete native Harness²/OpenCode mocked pair, zero-resend/report-failure replay, both actual passive Inspect exports, independent non-author review and the production provider preflight. All 177 source inputs and 376 completed-first-pair inputs remain unchanged. See [the kit report](../phases/phase-3b/PHASE3B_REMAINING_PAIRS_KIT_REPORT.md) and [acceptance receipt](../../evidence/phase3b-seq2-v1/remaining-pairs-offline-acceptance-v1.json).
+
+Source 029657ee…/177 and study 1846b365… authorize only the remaining three pairs under the approved $350 total/$50 each inference cell/$100 shared assessment ceiling and 1,758 admissions. Dollar ceilings overlap. The original first pair and its 361 calls/$11.239856 remain read-only; do not reopen or regenerate it. No paid calls or keys were used at acceptance. Next: one fresh masked-key launch with the dedicated supervisor, three-pair execution/reviews, passive Inspect exports, saved replay and closure. No new budget decision is needed. The ordinal-template and public-source projection caveats are disclosed in the kit report; older proposal-only paragraphs below are preserved chronology.
+
 # Next continuation defined — three remaining pairs — 6 November 2026
 
 The [three-pair continuation definition](../phases/phase-3b/PHASE3B_REMAINING_PAIRS_CONTINUATION.md) now specifies objective, exact work, deliverables, exclusions, completion, cost and stops. **Definition only: no implementation, new study/grant, key request, tests, mocks or paid calls are started by this update.** Historical definitions and evidence remain unchanged.

@@ -2,8 +2,10 @@
   "kind": "buddha2-effective-source-inputs-v2",
   "files": [
     "configs/phase3b-development.json",
+    "docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_CONTINUATION.md",
     "evidence/phase3b-seq2-v1/provider-documentation.json",
     "evidence/phase3b-seq2-v1/public-billing-review-v1.json",
+    "evidence/phase3b-seq2-v1/remaining-pairs-authorization-v1.json",
     "evidence/phase3b-seq2-v1/timing-continuation-authorization-v1.json",
     "followups/inspect_visibility_i1/__init__.py",
     "followups/inspect_visibility_i1/importer.py",
@@ -83,6 +85,7 @@
     "followups/phase3b_seq2_v1/assessment_reuse.py",
     "followups/phase3b_seq2_v1/boundary_contract.py",
     "followups/phase3b_seq2_v1/capacity.py",
+    "followups/phase3b_seq2_v1/completed_pair.py",
     "followups/phase3b_seq2_v1/contract.py",
     "followups/phase3b_seq2_v1/core_view.py",
     "followups/phase3b_seq2_v1/deadline.py",
@@ -101,6 +104,7 @@
     "followups/phase3b_seq2_v1/native_fixture.py",
     "followups/phase3b_seq2_v1/rank_io.py",
     "followups/phase3b_seq2_v1/regression.py",
+    "followups/phase3b_seq2_v1/remaining.py",
     "followups/phase3b_seq2_v1/report.py",
     "followups/phase3b_seq2_v1/snapshot.py",
     "followups/phase3b_seq2_v1/strategy.py",
@@ -111,6 +115,7 @@
     "followups/phase3b_seq2_v1/test_bootstrap.py",
     "followups/phase3b_seq2_v1/test_boundary_compatibility_s2.py",
     "followups/phase3b_seq2_v1/test_capacity_s2.py",
+    "followups/phase3b_seq2_v1/test_completed_pair_s2.py",
     "followups/phase3b_seq2_v1/test_delivery_s2.py",
     "followups/phase3b_seq2_v1/test_fixed_pool_s2.py",
     "followups/phase3b_seq2_v1/test_information_s2.py",
@@ -123,6 +128,8 @@
     "followups/phase3b_seq2_v1/test_ra1_release_s2.py",
     "followups/phase3b_seq2_v1/test_read_audit_reporting_s2.py",
     "followups/phase3b_seq2_v1/test_readme_provenance_s2.py",
+    "followups/phase3b_seq2_v1/test_remaining_launch_s2.py",
+    "followups/phase3b_seq2_v1/test_remaining_s2.py",
     "followups/phase3b_seq2_v1/test_required_checkpoint_s2.py",
     "followups/phase3b_seq2_v1/test_runtime_s2.py",
     "followups/phase3b_seq2_v1/test_selector_s2.py",
@@ -168,6 +175,7 @@
     "tests/__init__.py",
     "tests/test_experiment_cli.py",
     "tests/test_phase2_native.py",
+    "tests/test_phase3b_provider_handshake.ps1",
     "upstreams.lock.json"
   ]
 }

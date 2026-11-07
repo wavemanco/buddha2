@@ -1,0 +1,39 @@
+{
+  "check": "source_coverage",
+  "command": [
+    "python",
+    "-B",
+    "/workspace/runs/phase3b-seq2-v1/remaining-pairs-v1/offline_checks.py",
+    "--output",
+    "/results/phase3b-seq2-v1/remaining-pairs-v1/offline-unit-v3"
+  ],
+  "errors": 0,
+  "exit_code": 0,
+  "failures": 0,
+  "kind": "buddha2-offline-check-v2",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "passed": true,
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "088970faed0fad8b5e4254e2c1bbb9478cf98891b4b4bc9335ac93c6f111c470",
+  "skipped": 0,
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe",
+  "test_ids": [
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_assessment_only_preflight_delegates_without_comparison_authority",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_assessment_only_workflow_helpers_preserve_arguments_and_fixture_mode",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_current_six_receipts_and_separate_review_pass_without_archive",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_execution_uses_only_the_matching_claim_and_preserves_key_cleanup",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_failed_skipped_empty_or_foreign_checks_cannot_pass_even_when_resealed",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_live_workflow_preflight_requires_current_readiness_before_accounting",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_missing_named_regression_cannot_pass_with_resealed_green_receipts_and_review",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_missing_or_changed_receipts_and_private_paths_fail_closed",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_missing_stale_or_same_actor_review_cannot_supply_independence",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_old_gate_cannot_substitute_for_current_profile",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_provider_launcher_requires_current_readiness_before_live_claim",
+    "followups.phase3b_seq2_v1.test_launch_s2.CurrentOfflineReadinessTests.test_required_regressions_allow_additional_tests_without_changing_review_rules"
+  ],
+  "tests_run": 12
+}

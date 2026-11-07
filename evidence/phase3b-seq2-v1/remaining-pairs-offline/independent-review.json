@@ -1,0 +1,17 @@
+{
+  "independent": true,
+  "kind": "buddha2-offline-independent-review-v2",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "manifest_file_sha256": "42f2cb29559ec9ede57b0a3e9fd48d8c4e18f7f9d7a409c323ec741fc77c77f5",
+  "manifest_sha256": "15eb66b4b3afaa12724aefb39e1023a828c4d3d4add5cccefae2193d57bfc224",
+  "notes": "Independent non-author review accepted the approved definition 1.1 three-pair offline execution kit. Verified all six exact-schema receipts, 57 unique selected methods including all 16 mandatory regressions, their command/exit records, frozen descriptor and grants, and all supporting file hashes against supporting seal b71f86e116f58fa1c7b1e5b2d7f9117886d776b36e8d2699a92159bbab91d603. Reviewed the actual pinned Harness2/Bun/OpenCode one-pair journey: 341 mocked SDK requests, zero external provider calls, zero-resend replay, retained work after local reporting failure, and exact eight-report saved replay. Separate actual first-pair and closure Inspect exports round-trip successfully and preserve provenance; the real Windows shared pre-credential handshake and inspection consumer pass. Separate READY-parser component tests use a substituted process-start boundary and are not represented as live credential execution. All 177 effective source inputs and 376 saved-first-pair inputs remain unchanged; the original 361 calls/$11.239856 are preserved without new calls or relabeling. The unused p3b-01 new-tag ordinal template is non-operative: frozen_original_fixed_candidate_order and untouched original selection remain authoritative. Acceptance is limited to offline readiness for the already-approved $350 continuation; it is not a live-provider, scientific-effectiveness, held-out, equal-efficiency, or general no-failure claim. Fresh masked keys and existing ownership, source, startup, reservation, review and stop controls remain required before live admission.",
+  "passed": true,
+  "policy_sha256": "e3cb54dcd99d7cce61ff31cb2c52a33ee70dbf79751a6a426cbe7df8cc1bbecd",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "reviewer": "/root/remaining_acceptance",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "9b4d6f264fd79c00f7237fc789f6542b487920ccdacc5707472ec6529096a918",
+  "source_sha256": "029657ee94a17d06235c6ec6524995bb8894ade3ca628c551d14e6e97048c2ff",
+  "study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe"
+}
