@@ -1,5 +1,7 @@
 # Buddha2
 
+The current follow-up reuses saved generation and 25 compatible judgments, with a separate execution path for eight missing quality judgments. It preserves the closed run and original selection. See the [current scope](docs/research/CURRENT_SPEC.md) and [assessment-only execution notes](docs/ENGINEERING_AUDIT.md#eight-judgment-assessment-only-execution) for budgets, verification and limitations.
+
 **A research project testing whether AI can improve its working method—not just produce more answers.**
 
 Buddha2 compares ordinary model generation, fixed strategies and genuine recursive adaptation. It uses Google's actual [Harness²](https://github.com/google-research/harness2) engine through external adapters. It does not train model weights.

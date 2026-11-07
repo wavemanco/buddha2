@@ -1,13 +1,16 @@
 """Real Windows bootstrap denials and frozen S2 authority boundaries."""
 from __future__ import annotations
 
+import contextlib
+import io
 import json
 import os
 import subprocess
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
 from buddha2.artifacts import ContractError
 
@@ -156,6 +159,74 @@ class CurrentOfflineReadinessTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, "current gate required"):
                 launch.preflight(self.study, grant, "all", "provider", supervisor_agent="/root/test_reviewer")
             gate.assert_called_once_with(self.study, self.bindings)
+
+    def test_assessment_only_preflight_delegates_without_comparison_authority(self):
+        from . import assessment_execution
+        expected = {"assessment_only": True, "fixture": False}
+        grant = self.directory / "grant.json"
+        with patch.object(launch.accounting, "runtime_guard"), \
+                patch.object(launch, "_completion_path", side_effect=lambda target: target), \
+                patch.object(launch, "read_json", return_value={"kind": assessment_execution.KIND}), \
+                patch.object(launch, "_workflow_preflight", side_effect=AssertionError("comparison preflight")), \
+                patch.object(launch, "_live_study_claim", side_effect=AssertionError("comparison claim")), \
+                patch.object(assessment_execution, "preflight", return_value=expected) as delegated:
+            self.assertEqual(launch.preflight(self.study, grant, "all", "provider-config"), expected)
+        delegated.assert_called_once_with(self.study, grant, "all", "provider-config", supervisor_agent=None)
+
+    def test_assessment_only_workflow_helpers_preserve_arguments_and_fixture_mode(self):
+        from . import assessment_execution
+        grant = self.directory / "grant.json"
+        transport = object()
+        with patch.object(launch, "_completion_path", side_effect=lambda target: target), \
+                patch.object(launch, "read_json", return_value={"kind": assessment_execution.KIND}), \
+                patch.object(workflow, "preflight", side_effect=AssertionError("comparison preflight")), \
+                patch.object(workflow, "run", side_effect=AssertionError("comparison execution")), \
+                patch.object(assessment_execution, "preflight", return_value={"fixture": False}) as check, \
+                patch.object(assessment_execution, "run", return_value={"provider_calls": 0}) as run:
+            self.assertEqual(launch._workflow_preflight(self.study, grant, False, "all", configuration_only=True),
+                             {"fixture": False})
+            check.assert_called_once_with(self.study, grant, "all", "provider-config", supervisor_agent=None)
+            self.assertEqual(launch._workflow_run(self.study, grant, "all", transport), {"provider_calls": 0})
+            run.assert_called_once_with(self.study, grant, stage="all", transport=transport)
+            with self.assertRaisesRegex(ContractError, "fixture differs"):
+                launch._workflow_preflight(self.study, grant, True, "all")
+
+    def test_execution_uses_only_the_matching_claim_and_preserves_key_cleanup(self):
+        from . import assessment_execution
+        from . import transport as provider_transport
+        for assessment_only in (False, True):
+            checked = {"run": str(self.directory / "run"), "configuration_only": False,
+                "study_sha256": "a" * 64, "grant_sha256": "b" * 64,
+                "assessment_only": assessment_only}
+            keys = {"anthropic_api_key": "fixture-not-a-secret", "openai_api_key": "fixture-not-a-secret"}
+            client = SimpleNamespace(close=Mock())
+            inspection = self.directory / "inspection.json"
+            with self.subTest(assessment_only=assessment_only), \
+                    patch.object(launch, "preflight", return_value=checked), \
+                    patch.object(launch, "writer_lock", return_value=contextlib.nullcontext()), \
+                    patch.object(launch, "_completion_path", side_effect=lambda target: target), \
+                    patch.object(launch, "read_json", return_value={"inspection_sha256": "c" * 64}), \
+                    patch.object(launch, "validate_inspection"), \
+                    patch.object(Path, "iterdir", return_value=iter([Path("lo"), Path("eth0")])), \
+                    patch.dict(os.environ, {"BUDDHA2_RELEASE_LAUNCH_MODE": "provider", "BUDDHA2_OFFLINE": "0"}), \
+                    patch.object(launch, "_credentials", return_value=keys), \
+                    patch.object(launch.supervision, "wait_for_attachment", return_value={}), \
+                    patch.object(launch, "_live_study_claim") as comparison_claim, \
+                    patch.object(assessment_execution, "claim") as assessment_claim, \
+                    patch.object(launch, "_bind_credentials"), \
+                    patch.object(provider_transport, "Transport", return_value=client), \
+                    patch.object(launch, "_workflow_run", return_value={"provider_calls": 0}), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(launch.execute(self.study, self.directory / "grant.json", "all", "provider",
+                                                inspection), {"provider_calls": 0})
+            if assessment_only:
+                assessment_claim.assert_called_once_with(checked)
+                comparison_claim.assert_not_called()
+            else:
+                comparison_claim.assert_called_once_with(checked, publish=True)
+                assessment_claim.assert_not_called()
+            client.close.assert_called_once_with()
+            self.assertEqual(set(keys.values()), {""})
 
 
 class LaunchBoundaryTests(unittest.TestCase):

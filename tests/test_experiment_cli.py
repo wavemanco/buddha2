@@ -69,6 +69,17 @@ class ExperimentCLI(unittest.TestCase):
             imported.assert_called_once_with("assessment_reuse")
             backend.main.assert_called_once_with(forwarded)
 
+    def test_pending_assessment_routes_only_to_its_execution_backend(self):
+        for forwarded in (["prepare", "--packet", "saved/assessment-reuse.json", "--output", "new-execution"],
+                          ["report", "--study", "new-execution/study.json"]):
+            backend = SimpleNamespace(main=Mock(return_value=7))
+            with self.subTest(arguments=forwarded), \
+                    patch.object(experiment, "_backend", return_value=backend) as imported:
+                code, output, error = self.invoke(["assess-pending", *forwarded])
+            self.assertEqual((code, output, error), (7, "", ""))
+            imported.assert_called_once_with("assessment_execution")
+            backend.main.assert_called_once_with(forwarded)
+
     def test_inspection_is_compact_and_never_launch_approval(self):
         study = self.study()
         support = self.support(study)
