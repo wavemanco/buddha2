@@ -1,0 +1,101 @@
+{
+  "kind": "phase3b-eight-judgments-live-outcome-v1",
+  "client_date": "2026-11-06",
+  "status": "assessed",
+  "accepted_execution_commit": "54773ab6d5e7595d88bf0aade0dbcfb387b9a318",
+  "canonical_source_sha256": "12398cd7cd4e40863a58c85141a9d2e6a5a7e5dcfb620066d8afdcf9649f6016",
+  "public_source_sha256": "f5290651190560a32c127ca4438e46ebb555b270120699cbd1ca3869f17f061f",
+  "effective_source_inputs": 169,
+  "generation_study_sha256": "237db1d3b85408696a945ede1220c99c61ae80ae4e3e32b23065089a13596623",
+  "assessment_execution_sha256": "cac569074f96ac1cd016ab9428f45722ad6818913f255d50408729686bb6a265",
+  "assessment_packet_sha256": "2611139c34dc5c1c73b540631dabe4fc0b85611728ae9e5cbc661561c0d1e217",
+  "outcome_sha256": "c701a1d084bb4bce5c225b1c082c0dc812f303829635db0a4489a95735ce17d7",
+  "outcome_file_sha256": "49917df0e725df1ebcfee52d6417aea450816d72be9d49aa42a5ecee369d8118",
+  "journal_manifest_file_sha256": "01fb888fc419917cd06286bd738f104b968a26573fdb865c409b41d5e4af898c",
+  "journal_events_file_sha256": "034f9c1807d28671645eea6135b4dd220eca5ef3134eea29939acc96d7abea88",
+  "offline_acceptance_file_sha256": "91d11de2b50c70f1e4076ae4ebfac7db485abb425ab292f5bbd52ab0f4e82b6d",
+  "new_calls": 8,
+  "roles": [
+    "quality"
+  ],
+  "judge_model": "claude-opus-5",
+  "effort": "high",
+  "thinking": "adaptive",
+  "max_tokens": 16000,
+  "generation_calls": 0,
+  "grouping_calls": 0,
+  "openai_calls": 0,
+  "retries": 0,
+  "reused_judgments": 25,
+  "new_known_spent_micro_usd": 157506,
+  "new_reserved_micro_usd": 0,
+  "new_unknown_results": 0,
+  "new_input_tokens": 15532,
+  "new_output_tokens": 2621,
+  "output_includes_thinking_once": true,
+  "cost_basis": "usage-based-public-price-upper-bound-not-invoice",
+  "supplement_cap_micro_usd": 15011727,
+  "lineage_known_micro_usd": 90848979,
+  "unchanged_historical_hold_micro_usd": 22880000,
+  "lineage_current_exposure_micro_usd": 113728979,
+  "lineage_admitted_attempts": 3189,
+  "unused_phase_funding_micro_usd": 135195386,
+  "selection_unchanged": "c1",
+  "metrics": {
+    "fixed": {
+      "status": "scored",
+      "distinct": 10,
+      "utility": 7.753090294662793,
+      "portfolio_sha256": "b867699d2ae74669887790a582b63fb94e4648795fcd62fcc1674925890a3219"
+    },
+    "c1": {
+      "status": "scored",
+      "distinct": 10,
+      "utility": 7.896478728064968,
+      "portfolio_sha256": "6e8723f7fe989e8aa165bb2dd908ed55abdd79bdaec5c18d0edf0508467b6dbf"
+    },
+    "c2": {
+      "status": "scored",
+      "distinct": 10,
+      "utility": 7.603188647901371,
+      "portfolio_sha256": "cdf6f223898e7ca1e8de3823597740ca2238c2f17393a711649ae09d01004fd0"
+    }
+  },
+  "comparison": {
+    "assessed_development_prompt_pairs": 1,
+    "planned_prompt_pairs": 4,
+    "unstarted_prompt_pairs": 3,
+    "four_prompt_comparison_complete": false,
+    "selected_c1_minus_fixed_utility": 0.14338843340217533,
+    "held_out_conclusion": false,
+    "generalized_adaptation_gain_claim": false
+  },
+  "verification": {
+    "independent_request_usage_and_native_fold_review": true,
+    "all_eight_audits_valid": true,
+    "full_fixed_and_c1_cached_assessment_hashes_unchanged": true,
+    "original_closed_outcome_unchanged": true,
+    "historical_ordinary_files_unchanged": 46,
+    "exact_readonly_native_report_replay": true,
+    "replay_additional_provider_calls": 0,
+    "replay_blocked_activity_seams": 9,
+    "fresh_outcome_journal_audit_files_unchanged_by_replay": 11,
+    "source_unchanged": true,
+    "live_owner_independently_absent": true,
+    "replay_owner_independently_absent": true
+  },
+  "evidence_receipt_sha256": {
+    "independent-live-review.json": "89936a22538c15f1e380aa0907f80356e3f007ac4ba97e70360374d692069d75",
+    "independent-live-review-final.json": "2800ae0f5c0898a6b0d418a44fbbc6eacb1845b5a751fa1c8a45186bf8ba6dd3",
+    "live-verification-v1/read-only-replay.json": "5ae31e85cba4343b7fb7da3cb1e4934046a6acff65333141a0495ad36e7d431b",
+    "live-verification-v1/owner.json": "8de811425dac78ee383d0efcabdf5bad27acecb4953543f34cc6e3b868815dea",
+    "live-verification-v1/cleanup.json": "fde94a76f866882edf70b6842f902df29e0b663b8d7b4340644cb7fd568dbda5"
+  },
+  "preserved_history": "The original closed run, global held outcome, selected checkpoint, cached judgments, $22.88 historical liability and all prior failed attempts remain unchanged.",
+  "limitations": [
+    "This is one development prompt; it does not complete the four-prompt comparison or establish a general or held-out adaptation gain.",
+    "Usage-priced accounting is not provider invoice reconciliation.",
+    "Raw grading requests, outputs, rationale, credentials and journals remain local."
+  ],
+  "next_step": "Define continuation of the three unstarted prompt pairs while preserving this completed first pair; no automatic new calls, regeneration or repetition."
+}

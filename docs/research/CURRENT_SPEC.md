@@ -1,3 +1,19 @@
+# Current status — first Phase 3B prompt assessed — 6 November 2026
+
+The approved assessment-only supplement is **complete**: eight new quality judgments, **$0.157506 usage-priced accounting**, zero new held liability, 25 compatible judgments reused, and zero generation/grouping calls or retries. The selected checkpoint remains c1. The original closed study and its global held outcome remain unchanged; these are separately accounted supplemental assessments. See the [safe completion receipt](../../evidence/phase3b-seq2-v1/assessment-only-execution-live-outcome-v1.json).
+
+| First-prompt portfolio | Native distinctness | Native utility |
+|---|---:|---:|
+| Fixed budget-matched control | 10 | 7.7531 |
+| Adaptive c1, selected before judging | 10 | 7.8965 |
+| Adaptive c2, unselected checkpoint | 10 | 7.6032 |
+
+On this prompt, selected c1 exceeds the fixed control by 0.1434 utility points; the second checkpoint is lower than both. These descriptive results do not establish a general adaptation benefit. **One of four development prompt pairs is now assessed; the other three remain unstarted.** No held-out conclusion or completed four-prompt comparison is claimed.
+
+Independent review verified all eight unique quality requests/results and owned-worker audits, known accounting, native folds and unchanged cached fixed/c1 assessment hashes. One keyless, network-disabled read-only report replay reproduced the complete outcome exactly with all nine external-activity seams blocked. All 46 retained historical files and 11 new outcome/journal/audit files were unchanged by replay; the 169-input source remains unchanged. Exact live and replay owners are independently absent. Known cumulative lineage accounting is $90.848979 plus the unchanged $22.88 historical hold; this is usage-based public-price accounting, not invoice reconciliation.
+
+Next is a narrow continuation definition for the three unstarted prompt pairs, reusing this completed first pair without regeneration. The eight-only allowance is exhausted by its eight completed slots; no further paid request, fresh repetition or implementation starts automatically.
+
 # Active follow-up — eight saved-generation judgments — 6 November 2026
 
 **Offline preparation is accepted.** Final source `12398cd7…9f6016` binds 169 effective inputs; execution study `cac56907…6a265` is separate from the closed generation study. All 57 selected methods, the two actual Windows path denials, eight saved-request SDK mocks/zero-resend replay, scoped static checks and actual host configuration/Python inspection validation passed. The six current receipts include all 16 mandatory regressions and a separately written independent review. All 46 specified historical files are unchanged. The [safe acceptance receipt](../../evidence/phase3b-seq2-v1/assessment-only-execution-offline-v1.json) records the full identities and scope. No fresh keys or paid calls have occurred at this checkpoint; next is the approved eight-only execution with fresh masked keys after the reviewed push.

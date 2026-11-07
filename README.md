@@ -1,6 +1,6 @@
 # Buddha2
 
-The current follow-up reuses saved generation and 25 compatible judgments, with a separate execution path for eight missing quality judgments. It preserves the closed run and original selection. See the [current scope](docs/research/CURRENT_SPEC.md) and [assessment-only execution notes](docs/ENGINEERING_AUDIT.md#eight-judgment-assessment-only-execution) for budgets, verification and limitations.
+One Phase 3B development prompt now has complete native assessments, using saved generation and eight additional quality judgments. The selected adaptive checkpoint leads the fixed control on this prompt; the four-prompt pilot remains incomplete. See the [current results and next step](docs/research/CURRENT_SPEC.md) and [assessment-only completion notes](docs/ENGINEERING_AUDIT.md#eight-judgment-live-completion) for accounting, verification and limits.
 
 **A research project testing whether AI can improve its working method—not just produce more answers.**
 
