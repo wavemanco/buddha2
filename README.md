@@ -2,6 +2,8 @@
 
 Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 
+**Next, proposed only:** a [24-prompt held-out comparison at approximately matched inference cost](docs/phases/phase-4/PHASE4_COST_MATCHED_CONFIRMATION_DEFINITION.md), including grouping sensitivity and both distinctness and utility. The definition includes a stronger fixed search control, exposure checks, a fresh budget proposal and explicit stop rules. No implementation or new experiment has started.
+
 [Explore the system architecture](docs/architecture/README.md), including Harness², the current agent runner and model roles, our surrounding code, NoveltyBench and passive Inspect.
 
 **A research project testing whether AI can improve its working method—not just produce more answers.**

@@ -1,3 +1,11 @@
+# Phase 4 confirmation is proposed only - 7 November 2026
+
+Read [P4-CM1 definition 1.0](docs/phases/phase-4/PHASE4_COST_MATCHED_CONFIRMATION_DEFINITION.md) and CURRENT_SPEC.md before further work. Current authority is documentation only: no implementation, tests, credential request, new kit, holdout opening or provider calls. The proposed $1,200 cap and 40,914 admissions are not approved funding/work. The completed Phase 3B study and its scientific/artifact identities remain closed and unchanged.
+
+The proposal is one bounded block: existing-path offline acceptance, exactly two exposed fixed-only cost qualifications, then one frozen 24-prompt eligible WildChat comparison with native seq,k=2 versus budget-yoked hierarchical fixed search, official assessment, prespecified grouping sensitivity and closure. All curated prompts are exposed; do not label remaining curated rows held out. Certify the new frame before opening selected tasks. Cost-band misses, unfavorable scores, valid KEEP, grouping disagreement and diagnostic representation/read gaps do not authorize paid repeats or rejection of valid artifacts. Keep primary partitions, judge isolation, all costs and every sampled case; follow the reporting contract. Existing hard financial/provenance/unknown-delivery guards and coordinated grace/real Continue decisions remain. No new framework, model sweep, upstream change or automatic follow-on phase.
+
+Earlier instructions below are historical where superseded by this definition-only status.
+
 # Reporting revision 2 and next planning decision - 7 November 2026
 
 Use the [current Phase 3B live report, revision 2](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md). It adds distinctness alongside utility, explicit four-pair versus three-new-pair scopes, and the saved grocery/birthday loss analysis (quality means, descriptive positional residuals, checkpoint selection, unchanged ranking instructions, longer responses and causal limits). The hash-bound original report, closed receipts, scored artifacts, study/source identities and old holds remain unchanged. This is a reporting update with no new model calls, source edits or experiment.
