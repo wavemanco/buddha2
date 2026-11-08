@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current research status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). [RA1 stopped before candidate admission](phases/phase-3b/PHASE3B_RA1_REPORT.md) after a required unit test failed; the complete offline kit remains unaccepted. [RA1-AM1](phases/phase-3b/PHASE3B_RELEASE_ACCEPTANCE_AM1.md) is proposed, not approved or implemented. API spend was $0; no new run or paid work follows automatically.
+Start with [the project overview](../README.md), [current status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). The [P4 execution kit](phases/phase-4/PHASE4_CM1_KIT_REPORT.md) is accepted offline; [controlled intake](../evidence/phase4-cm1-v1/controlled-intake-v1.json) certified 737 eligible units and 24 selections. Production preflight passed; fresh masked keys and the authorized cost qualifications are next. No P4 live/scientific result is claimed. See [acceptance evidence](../evidence/phase4-cm1-v1/offline-acceptance-v1.json).
 
 ## Research and specifications
 

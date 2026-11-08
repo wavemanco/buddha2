@@ -27,7 +27,7 @@ from followups.phase3a_v1 import editor as frozen
 
 from .deadline import CONVERSATION_POLICY, FETCH_TIMEOUT, NATIVE_TIMEOUT
 from .delivery import normalized_output
-from .history import HistoryGuard
+from .history import HistoryGuard, KnownProviderTerminalStop
 from .support import read as read_public
 from .support import safe
 
@@ -45,7 +45,8 @@ TERMINAL_NOTE_SHA256 = frozen.TERMINAL_NOTE_SHA256
 TERMINAL_POLICY = "opencode-max-steps-twenty-four-user-role-v1"
 
 
-def selector_snapshot(context: Path, *, owned_workspace: Path | None = None) -> dict:
+def selector_snapshot(context: Path, *, owned_workspace: Path | None = None,
+                      request_policy: dict | None = None) -> dict:
     """Bind the anonymous native originals, without manufacturing a strategy harvest."""
     roots = None
     if owned_workspace is not None:
@@ -54,7 +55,12 @@ def selector_snapshot(context: Path, *, owned_workspace: Path | None = None) -> 
                  and context == owned_workspace / "context", "selector snapshot is not its owned native context")
         roots = (owned_workspace,)
     context = safe(context, roots=roots)
-    manifest = read_json(safe(context / "C1_MANIFEST.json", roots=roots))
+    options = {}
+    if request_policy is not None:
+        from followups.phase4_cm1_v1.policy import context_limits
+
+        options["max_bytes"] = context_limits(request_policy)["saved_artifact_bytes"]
+    manifest = read_json(safe(context / "C1_MANIFEST.json", roots=roots), **options)
     files = manifest.get("context_inventory", {})
     _require(manifest.get("role") == "SELECT" and manifest.get("label") == "select.seq2"
              and isinstance(files, dict) and "task.md" in files
@@ -141,8 +147,23 @@ def effective_request(raw: dict, *, turn: int | None = None) -> dict:
     return frozen.effective_request(value, turn=turn)
 
 
+def _relay_body(stream, length: int, *, request_policy: dict | None = None) -> dict:
+    limit = 2_097_152
+    if request_policy is not None:
+        from followups.phase4_cm1_v1.policy import request_limits
+
+        limit = request_limits(request_policy)["editor"]
+    _require(type(length) is int and 0 < length <= limit, "editor payload is outside its byte bound")
+    raw = stream.read(length)
+    _require(len(raw) == length, "editor request body is incomplete")
+    value = json.loads(raw.decode("utf-8"))
+    _require(isinstance(value, dict), "editor request must be an object")
+    return value
+
+
 @contextmanager
-def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callable, *, prepared: dict):
+def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callable, *, prepared: dict,
+          request_policy: dict | None = None):
     exchanges = threading.RLock()
     completion: dict = {}
     def observed_dispatch(slot, role, request):
@@ -152,7 +173,7 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
             previous=record.get("mutation_witnesses", []))
         return dispatch(slot, role, request)
 
-    guarded_dispatch = HistoryGuard(observed_dispatch, prefix)
+    guarded_dispatch = HistoryGuard(observed_dispatch, prefix, known_terminal=request_policy is not None)
     record["history_guard_profile"] = "p3a-hi-ordinary-and-terminal-v1"
     settled: dict[str, bytes] = {}
 
@@ -169,8 +190,9 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                 _require(self.path == "/v1/messages" and self.headers.get("x-api-key") == _FALSE,
                          "unknown relay route or local credential")
                 length = int(self.headers.get("Content-Length", "0"))
-                _require(0 < length <= 2097152, "editor payload is outside its byte bound")
-                raw = json.loads(self.rfile.read(length).decode("utf-8"))
+                raw = _relay_body(self.rfile, length, request_policy=request_policy)
+                if record.get("known_provider_terminal") is not None:
+                    raise KnownProviderTerminalStop(record["known_provider_terminal"])
                 if record.get("fixture"):
                     record.setdefault("offline_wire", []).append(raw)
                 _require(not record.get("error"), "editor conversation has a boundary hold")
@@ -210,8 +232,15 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                 settled[raw_sha] = payload
                 self._send(payload)
             except Exception as exc:
-                record["error"] = type(exc).__name__
-                if record.get("fixture"):
+                if isinstance(exc, KnownProviderTerminalStop):
+                    record["known_provider_terminal"] = exc.evidence
+                    if not any(row["slot_id"] == exc.evidence["slot_id"] for row in record["requests"]):
+                        record["requests"].append({"slot_id": exc.evidence["slot_id"],
+                            "raw_sha256": digest(raw), "effective_sha256": digest(request),
+                            "result_sha256": exc.evidence["result_sha256"], "role_translation": translation})
+                else:
+                    record["error"] = type(exc).__name__
+                if record.get("fixture") and not isinstance(exc, KnownProviderTerminalStop):
                     record["offline_error_detail"] = str(exc)
                 from followups.phase3a_v1.accounting import (
                     AssessmentBudgetStop,
@@ -219,7 +248,8 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
                     CheckpointStop,
                     PhaseBudgetStop,
                 )
-                if not isinstance(exc, (AssessmentBudgetStop, CellBudgetStop, CheckpointStop, PhaseBudgetStop)):
+                if not isinstance(exc, (AssessmentBudgetStop, CellBudgetStop, CheckpointStop, PhaseBudgetStop,
+                                        KnownProviderTerminalStop)):
                     halt("editor_boundary_violation", evidence_sha256=digest({
                         "prefix": prefix, "error_type": type(exc).__name__, "requests": record["requests"]}))
                 # Provider details and exception strings never cross into editor logs.
@@ -252,7 +282,8 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
 
 
 def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: str,
-                                fixture: bool, results: dict | None = None, intents: dict | None = None) -> dict:
+                                fixture: bool, results: dict | None = None, intents: dict | None = None,
+                                request_policy: dict | None = None) -> dict:
     """Read-only proof replay, including unfinished logical conversations."""
     from followups.phase3a_v1.accounting import IntegrityStop
 
@@ -288,7 +319,12 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
             # Session metadata can include many complete fixture wire requests.
             # Reuse the strict bounded public-artifact reader; every individual
             # provider request remains limited to 2 MiB before its SDK intent.
-            value = read_public(path)
+            options = {}
+            if request_policy is not None:
+                from followups.phase4_cm1_v1.policy import context_limits
+
+                options["max_bytes"] = context_limits(request_policy)["saved_artifact_bytes"]
+            value = read_public(path, **options)
             _require(path.read_bytes() == (json.dumps(value, sort_keys=True, ensure_ascii=False,
                      allow_nan=False, indent=2) + "\n").encode("utf-8"), "editor proof bytes are not canonical")
             _require(isinstance(value, dict) and value.get("binding") == binding
@@ -304,8 +340,11 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
                      and value["sha256"] == digest({k: v for k, v in value.items() if k != "sha256"}),
                      "editor settled proof seal differs")
             session = value["session"]
+            dispositions = {"valid", "empty", "invalid_harvest", "invalid_inventory"}
+            if request_policy is not None:
+                dispositions.add("known_provider_terminal")
             _require(isinstance(session, dict) and session.get("fixture") is fixture
-                     and session.get("status") in {"valid", "empty", "invalid_harvest", "invalid_inventory"},
+                     and session.get("status") in dispositions,
                      "editor settled proof disposition differs")
             requests, slots = session.get("requests"), session.get("result_slots")
             _require(isinstance(requests, list) and all(isinstance(row, dict) for row in requests)
@@ -335,6 +374,20 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
                     terminal = bool(messages and row["slot_id"].endswith(f".t{MAX_STEPS:02}")
                                     and messages[-1].get("role") == "user" and _terminal_shape(messages[-1]))
                     _require(terminal == (translation is not None), "terminal translation differs from authoritative intent")
+            if session["status"] == "known_provider_terminal":
+                terminal = session.get("known_provider_terminal", {})
+                _require(bool(slots) and set(terminal) == {"slot_id", "role", "stop_reason", "result_sha256"}
+                    and terminal["slot_id"] == slots[-1]
+                    and terminal["role"] == ("native_selector" if label == "select.seq2" else "editor")
+                    and terminal["stop_reason"] in {"refusal", "max_tokens"}
+                    and terminal["result_sha256"] == requests[-1]["result_sha256"],
+                    "known terminal session lacks its exact settled final slot")
+                if results is not None:
+                    last = results[slots[-1]]
+                    _require(type(last.get("spent_micro_usd")) is int and last["spent_micro_usd"] >= 0
+                        and type(last.get("reserved_micro_usd")) is int and last["reserved_micro_usd"] == 0
+                        and last["response"]["provider_response"].get("stop_reason") == terminal["stop_reason"],
+                        "known terminal session does not bind a settled provider terminal result")
             _require(type(session.get("terminal_note_used")) is bool and session["terminal_note_used"]
                      == any(row.get("role_translation") is not None for row in requests), "terminal session flag differs")
             _require(session.get("input_snapshot") == _validated_snapshot(session["input_snapshot"], label)
@@ -374,7 +427,7 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
 class AccountedProposer(frozen.AccountedProposer):
     """Native execution with a separately bound twenty-four-request trusted relay."""
     def __init__(self, *, pilot: str, study_sha256: str, dispatch: Callable,
-                 audit_dir: Path, fixture: bool, halt: Callable):
+                 audit_dir: Path, fixture: bool, halt: Callable, request_policy: dict | None = None):
         audit_dir = Path(audit_dir)
         roots = (Path(__file__).resolve().parents[2] / "runs/phase3b-seq2-v1/native",
                  Path("/results/phase3b-seq2-v1/native"))
@@ -388,6 +441,13 @@ class AccountedProposer(frozen.AccountedProposer):
                                      effort="high", steps=MAX_STEPS, timeout=NATIVE_TIMEOUT), audit_dir=audit_dir, attempts=1)
         self.pilot, self.study_sha256 = pilot, study_sha256
         self.dispatch, self.fixture = dispatch, fixture
+        self.request_policy = request_policy
+        self._installed_limits = {"installed_context_files": 1000, "installed_context_bytes": 8_000_000}
+        if request_policy is not None:
+            from followups.phase4_cm1_v1.policy import context_limits
+
+            limits = context_limits(request_policy)
+            self._installed_limits = {key: limits[key] for key in self._installed_limits}
         self.halt = halt
         self._local = threading.local()
         self._proof_dir = Path(audit_dir) / "phase3a-sessions"
@@ -399,7 +459,9 @@ class AccountedProposer(frozen.AccountedProposer):
                                "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                                "editor_profile_sha256": digest(profile())}
         self._sessions = validate_persisted_sessions(Path(audit_dir), study_sha256=study_sha256,
-                                                    pilot=pilot, fixture=fixture)
+                                                    pilot=pilot, fixture=fixture, request_policy=request_policy)
+        self._known_provider_terminal = next((row["known_provider_terminal"] for row in self._sessions.values()
+            if row.get("status") == "known_provider_terminal"), None)
         # Supported native runtime configuration, unchanged from the accepted seam.
         # Live admission runtime_guard requires these exact pinned image paths.
         config.BUN = Path(os.environ.get("PHASE3A_BUN", "/usr/local/bin/bun"))
@@ -414,6 +476,8 @@ class AccountedProposer(frozen.AccountedProposer):
         return value
 
     def call(self, mission, context_dir=None, label="", **kwargs):
+        if getattr(self, "_known_provider_terminal", None) is not None:
+            raise KnownProviderTerminalStop(self._known_provider_terminal)
         if not isinstance(label, str) or not _LABEL.fullmatch(label):
             self.halt("unexpected_native_editor_stage")
             raise ProposerError("unexpected native editor stage")
@@ -436,7 +500,9 @@ class AccountedProposer(frozen.AccountedProposer):
                     else:
                         count += 1
                         total += info.st_size
-                        _require(count <= 1000 and total <= 8_000_000, "editor context exceeds bounded profile")
+                        _require(count <= self._installed_limits["installed_context_files"]
+                            and total <= self._installed_limits["installed_context_bytes"],
+                            "editor context exceeds bounded profile")
         except (ContractError, OSError, TypeError):
             self.halt("editor_context_boundary_violation")
             raise ProposerError("editor context failed input boundary") from None
@@ -446,13 +512,16 @@ class AccountedProposer(frozen.AccountedProposer):
     def _opencode(self, cwd, mission, system, wall):
         from .strategy import native_workspace, validate_harness, validate_harness_inventory
         with native_workspace(cwd), _SERIAL:
+            if self._known_provider_terminal is not None:
+                raise KnownProviderTerminalStop(self._known_provider_terminal)
             label = self._local.label
             started_path = self._proof_dir / (label + ".started.json")
             if label in self._sessions or started_path.exists():
                 # Native transport retries may spawn again; they never authorize another paid conversation.
                 raise ProposerError("this logical conversation has already been attempted")
             try:
-                captured_input = (selector_snapshot(cwd / "context", owned_workspace=cwd) if label == "select.seq2"
+                captured_input = (selector_snapshot(cwd / "context", owned_workspace=cwd,
+                    request_policy=self.request_policy) if label == "select.seq2"
                     else input_snapshot(validate_harness_inventory(cwd / "context/harness")))
             except ContractError:
                 self.halt("editor_input_inventory_violation")
@@ -467,9 +536,19 @@ class AccountedProposer(frozen.AccountedProposer):
             Path(self._local.home).mkdir()
             prefix = f"{self.pilot}.adaptive.editor.{label}"
             prepared = self._c1_contracts[label]
-            with relay(cwd, self.dispatch, prefix, record, self.halt, prepared=prepared) as (url, completion):
-                self._local.url = url
-                answer, cost, error = Proposer._opencode(self, cwd, mission, system, wall)
+            try:
+                with relay(cwd, self.dispatch, prefix, record, self.halt, prepared=prepared,
+                           request_policy=self.request_policy) as (url, completion):
+                    self._local.url = url
+                    answer, cost, error = Proposer._opencode(self, cwd, mission, system, wall)
+            finally:
+                if record.get("known_provider_terminal") is not None:
+                    self._known_provider_terminal = record["known_provider_terminal"]
+                    record.update(status="known_provider_terminal", model_backed=True,
+                        result_slots=[row["slot_id"] for row in record["requests"]], authentic_eligible=False,
+                        input_effective_strategy_sha256=captured_input.get("effective_strategy_sha256"))
+                    self._save_session(label, record)
+                    raise KnownProviderTerminalStop(self._known_provider_terminal)
             record["result_slots"] = [row["slot_id"] for row in record["requests"]]
             if record.get("error"):
                 record["status"] = "boundary_stopped"
@@ -492,7 +571,8 @@ class AccountedProposer(frozen.AccountedProposer):
                     self.halt("native_output_binding_violation")
                     raise ProposerError("native consumed output failed its completion binding") from None
             if label == "select.seq2":
-                _require(selector_snapshot(cwd / "context", owned_workspace=cwd) == captured_input,
+                _require(selector_snapshot(cwd / "context", owned_workspace=cwd,
+                    request_policy=self.request_policy) == captured_input,
                          "selector modified its immutable candidate evidence")
                 record.update(status="valid" if answer.strip() and not error else "empty",
                     model_backed=bool(record["result_slots"]),

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+import json
 import os
 import re
 import stat
@@ -28,6 +29,17 @@ _modules = frozen._modules
 BENCHMARK, SUBSTRATE = "noveltybench-phase3b", frozen.SUBSTRATE
 LABELS = ("base1", "base2", "inv1", "dom1", "c1", "inv2", "dom2", "c2")
 STAGES = ("inv1", "dom1", "c1", "inv2", "dom2", "c2")
+
+
+def read_artifact(path: Path, *, request_policy: dict | None = None) -> dict:
+    """Keep legacy reads unchanged; a P4 grant binds its larger saved-artifact envelope."""
+    if request_policy is None:
+        return read_json(path)
+    from followups.phase4_cm1_v1.policy import context_limits
+
+    limits = context_limits(request_policy)
+    limit = limits["rollout_bytes" if Path(path).name in {"rollout.json", "failure.json"} else "saved_artifact_bytes"]
+    return read_json(path, max_bytes=limit)
 
 
 def validate_evaluator_capacity(task: dict) -> dict[str, int]:
@@ -75,7 +87,7 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
     def __init__(self, task: dict, harness_dir: Path, *, study_sha256: str, run_root: Path,
                  tag: str, dispatch: strategy.Dispatch, fixture: bool, channel: Any,
                  known_results: dict | None = None, halt: Any = None,
-                 on_required_failure: Any = None):
+                 on_required_failure: Any = None, request_policy: dict | None = None):
         strategy._task(task)
         strategy._require(on_required_failure is None or callable(on_required_failure),
             "required-checkpoint observer must be callable")
@@ -88,6 +100,7 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
         self.task, self.harness_dir = copy.deepcopy(task), strategy._path(harness_dir)
         self.study_sha256, self.run_root, self.tag = study_sha256, strategy._path(run_root, existing=False), tag
         self.dispatch, self.fixture, self.halt = dispatch, fixture, halt
+        self.request_policy = request_policy
         self.on_required_failure = on_required_failure
         self.required_failure: dict | None = None
         self.known_results = copy.deepcopy(known_results or {})
@@ -107,6 +120,29 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
         write_once(self.run_root / "identity.json", identity)
         self._validate_existing(known_results)
 
+    def _read(self, path: Path) -> dict:
+        return read_artifact(path, request_policy=self.request_policy)
+
+    def delivered(self, run_dir: Path) -> bool:
+        if self.request_policy is None:
+            return super().delivered(run_dir)
+        try:
+            record = self._read(Path(run_dir) / "rollout.json")
+            portfolio_contract.validate_portfolio(record["portfolio"])
+            return record["status"] == "complete"
+        except (ContractError, KeyError, OSError):
+            return False
+
+    def deliverable_text(self, run_dir: Path) -> str:
+        if self.request_policy is None:
+            return super().deliverable_text(run_dir)
+        record = self._read(Path(run_dir) / "rollout.json")
+        portfolio_contract.validate_portfolio(record["portfolio"])
+        return json.dumps([row["text"] for row in record["portfolio"]["responses"]], ensure_ascii=False)
+
+    def deliverable_files(self, run_dir: Path) -> dict[str, str]:
+        return {"answers.json": self.deliverable_text(run_dir)}
+
     def _validate_existing(self, known_results: dict | None) -> None:
         from .accounting import LiabilityStop
 
@@ -114,12 +150,13 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
         strategy._require(known_results is not None or not root.exists() or not any(root.iterdir()),
                           "resume requires authoritative journal results")
         checked = validate_adaptive_partial(self.task, self.harness_dir, study_sha256=self.study_sha256,
-            run_root=self.run_root, tag=self.tag, fixture=self.fixture, results=self.known_results)
+            run_root=self.run_root, tag=self.tag, fixture=self.fixture, results=self.known_results,
+            request_policy=self.request_policy)
         if any(row["status"] == "unresolved" for row in checked.values()):
             raise LiabilityStop("unresolved native request blocks further execution")
         for label in ("c1", "c2"):
             halt_path = root / label / "halt.json"
-            budget_stopped = halt_path.exists() and read_json(halt_path).get("category") == "known_checkpoint_budget"
+            budget_stopped = halt_path.exists() and self._read(halt_path).get("category") == "known_checkpoint_budget"
             if checked[label]["status"] == "failed" or budget_stopped:
                 self._required_failure(label, "saved_known_failure" if not budget_stopped else "saved_known_budget_stop")
                 raise RequiredCheckpointStop("saved mandatory checkpoint cannot produce complete coverage")
@@ -145,9 +182,9 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
             write_bytes_once(path / "harness" / relative, (source / relative).read_bytes())
         strategy.validate_harness(path / "harness")
         if (path / "rollout.json").exists():
-            saved = strategy.validate_rollout(read_json(path / "rollout.json"), self.task, path / "harness",
+            saved = strategy.validate_rollout(self._read(path / "rollout.json"), self.task, path / "harness",
                 study_sha256=self.study_sha256, fixture=self.fixture, run_id=run_id,
-                arm="adaptive", results=self.known_results)
+                arm="adaptive", results=self.known_results, request_policy=self.request_policy)
             if label in {"c1", "c2"} and (saved.get("status") != "complete" or saved.get("portfolio") is None):
                 self._required_failure(label, "saved_missing_portfolio")
                 raise RequiredCheckpointStop("saved mandatory checkpoint lacks its required portfolio")
@@ -162,7 +199,10 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
 
         try:
             record = strategy.execute_cn(self.task, path / "harness", study_sha256=self.study_sha256,
-                run_id=run_id, dispatch=dispatch, fixture=self.fixture, arm="adaptive")
+                run_id=run_id, dispatch=dispatch, fixture=self.fixture, arm="adaptive",
+                request_policy=self.request_policy)
+        except editor.KnownProviderTerminalStop:
+            raise
         except strategy.KnownOutcomeError as exc:
             try:
                 self._required_failure(label, "known_solver_failure")
@@ -199,7 +239,7 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
         path = Path(run_dir)
         if not (path / "rollout.json").exists():
             return "[ERROR] This execution produced no completed portfolio."
-        record = read_json(path / "rollout.json")
+        record = self._read(path / "rollout.json")
         blocks = []
         for result in record["requests"]:
             block = "[ACTION] " + result["role"]
@@ -216,8 +256,12 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
 
 @strategy.scoped
 def validate_adaptive_partial(task: dict, harness_dir: Path, *, study_sha256: str,
-                              run_root: Path, tag: str, fixture: bool, results: dict) -> dict:
+                              run_root: Path, tag: str, fixture: bool, results: dict,
+                              request_policy: dict | None = None) -> dict:
     """Verify all saved native inputs before any other missing arm may make a call."""
+    def read(path):
+        return read_artifact(path, request_policy=request_policy)
+
     run_root = strategy._path(run_root, existing=False)
     ids = adaptive_run_ids(task["id"], tag)
     root = run_root / "rollouts"
@@ -227,7 +271,7 @@ def validate_adaptive_partial(task: dict, harness_dir: Path, *, study_sha256: st
         strategy._require(all(safe(root / name).is_dir() for name in names), "nonordinary native rollout directory")
     identity_path = run_root / "identity.json"
     if identity_path.exists():
-        identity = read_json(identity_path)
+        identity = read(identity_path)
         strategy._require(identity.get("task") == task and identity.get("study_sha256") == study_sha256
             and identity.get("fixture") is fixture and identity.get("tag") == tag
             and identity.get("run_ids") == ids and identity.get("seed") == strategy.validate_harness(harness_dir),
@@ -246,13 +290,15 @@ def validate_adaptive_partial(task: dict, harness_dir: Path, *, study_sha256: st
         harness = path / "harness"
         strategy.validate_harness(harness)
         checked[label] = strategy.validate_partial(task, harness, study_sha256=study_sha256,
-            run_id=run_id, fixture=fixture, arm="adaptive", results=results)
+            run_id=run_id, fixture=fixture, arm="adaptive", results=results,
+            request_policy=request_policy)
         for name in ("rollout.json", "failure.json"):
             if (path / name).exists():
-                strategy.validate_rollout(read_json(path / name), task, harness,
-                    study_sha256=study_sha256, fixture=fixture, arm="adaptive", run_id=run_id, results=results)
+                strategy.validate_rollout(read(path / name), task, harness,
+                    study_sha256=study_sha256, fixture=fixture, arm="adaptive", run_id=run_id, results=results,
+                    request_policy=request_policy)
         if (path / "halt.json").exists():
-            halt = read_json(path / "halt.json")
+            halt = read(path / "halt.json")
             strategy._require(halt.get("kind") == "phase3a-execution-halt-v1"
                 and halt.get("study_sha256") == study_sha256 and halt.get("run_id") == run_id,
                 "saved execution halt has foreign identity")
@@ -375,16 +421,20 @@ def _selector_normal(evidence: dict, selection: dict, results: dict) -> bool:
 def run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_root: Path,
                    tag: str, dispatch: strategy.Dispatch, fixture: bool, prop: Any,
                    known_results: dict | None = None, result_snapshot: Any = None, halt: Any = None,
-                   on_required_failure: Any = None) -> dict:
+                   on_required_failure: Any = None, request_policy: dict | None = None) -> dict:
     with strategy.validation_scope():
         return _run_adaptation(task, harness_dir, study_sha256=study_sha256, run_root=run_root,
             tag=tag, dispatch=dispatch, fixture=fixture, prop=prop, known_results=known_results,
-            result_snapshot=result_snapshot, halt=halt, on_required_failure=on_required_failure)
+            result_snapshot=result_snapshot, halt=halt, on_required_failure=on_required_failure,
+            request_policy=request_policy)
 
 def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_root: Path,
                     tag: str, dispatch: strategy.Dispatch, fixture: bool, prop: Any,
                     known_results: dict | None = None, result_snapshot: Any = None, halt: Any = None,
-                    on_required_failure: Any = None) -> dict:
+                    on_required_failure: Any = None, request_policy: dict | None = None) -> dict:
+    def read(path):
+        return read_artifact(path, request_policy=request_policy)
+
     modules = _modules()
     strategy._integrity(isinstance(prop, modules["proposer"].Proposer), "actual native Proposer required")
     strategy._integrity(fixture or callable(halt), "live native execution requires durable global halt")
@@ -392,18 +442,30 @@ def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_roo
                                          steps=editor.MAX_STEPS, timeout=NATIVE_TIMEOUT)
     strategy._integrity(prop.spec == channel, "native editor profile differs")
     strategy._integrity(prop.attempts == 1, "native selector outer retry is not disabled")
+    def cell_dispatch(slot, role, request):
+        terminal = getattr(prop, "_known_provider_terminal", None)
+        if terminal is not None:
+            raise editor.KnownProviderTerminalStop(terminal)
+        return dispatch(slot, role, request)
+
+    if request_policy is not None and getattr(prop, "_known_provider_terminal", None) is not None:
+        raise editor.KnownProviderTerminalStop(prop._known_provider_terminal)
     run_root = strategy._path(run_root, existing=False)
     if (run_root / "adaptation.json").exists():
         if known_results is None:
             raise ContractError("resume requires authoritative results")
-        return validate_adaptation(read_json(run_root / "adaptation.json"), task, harness_dir,
-            study_sha256=study_sha256, run_root=run_root, tag=tag, fixture=fixture, results=known_results)
+        return validate_adaptation(read(run_root / "adaptation.json"), task, harness_dir,
+            study_sha256=study_sha256, run_root=run_root, tag=tag, fixture=fixture, results=known_results,
+            request_policy=request_policy)
     adapter = PortfolioAdapter(task, harness_dir, study_sha256=study_sha256, run_root=run_root,
-        tag=tag, dispatch=dispatch, fixture=fixture, channel=channel, known_results=known_results, halt=halt,
-        on_required_failure=on_required_failure)
+        tag=tag, dispatch=cell_dispatch if request_policy is not None else dispatch,
+        fixture=fixture, channel=channel, known_results=known_results, halt=halt,
+        on_required_failure=on_required_failure, request_policy=request_policy)
     result = modules["schedule"].run_task(task["id"], 2, adapter=adapter, prop=prop,
         selector_prop=prop, runs_root=adapter.spec.runs_root, modes=("seq",), seed=None,
         tag=tag, library=None, libraries=None, pool_policy="finals")
+    if request_policy is not None and getattr(prop, "_known_provider_terminal", None) is not None:
+        raise editor.KnownProviderTerminalStop(prop._known_provider_terminal)
     if adapter.required_failure is not None:
         raise RequiredCheckpointStop("known mandatory checkpoint failure stopped further paid coverage")
     native_result = result.to_dict()
@@ -420,7 +482,7 @@ def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_roo
     strategy._integrity(prop.attempts == 1, "native selector outer retry is not disabled")
     strategy._integrity(not selection.get("ok") or not selection.get("trivial")
         and selection.get("chosen_label") in {"c1", "c2"}, "native seq2 selection changed")
-    rollouts = {label: read_json(run_root / "rollouts" / label / "rollout.json")
+    rollouts = {label: read(run_root / "rollouts" / label / "rollout.json")
                 for label in LABELS if (run_root / "rollouts" / label / "rollout.json").exists()}
     # Both checkpoint portfolios are preserved; the selected final is an alias, not another judgment.
     checkpoints = {label: rollouts.get(label, {}).get("portfolio") for label in ("c1", "c2")}
@@ -441,7 +503,8 @@ def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_roo
 
 
 def validate_adaptation(record: dict, task: dict, harness_dir: Path, *, study_sha256: str,
-                        run_root: Path, tag: str, fixture: bool, results: dict) -> dict:
+                        run_root: Path, tag: str, fixture: bool, results: dict,
+                        request_policy: dict | None = None) -> dict:
     """Require the HI profile before the unchanged full native/report replay."""
     strategy._require(record.get("editor_profile_sha256") == digest(editor.profile())
         and record.get("editor_boundary_sha256") == file_hash(Path(editor.__file__))
@@ -449,12 +512,17 @@ def validate_adaptation(record: dict, task: dict, harness_dir: Path, *, study_sh
         "native HI editor profile/source differs")
     with strategy.validation_scope():
         return _validate_adaptation(record, task, harness_dir, study_sha256=study_sha256,
-            run_root=run_root, tag=tag, fixture=fixture, results=results)
+            run_root=run_root, tag=tag, fixture=fixture, results=results,
+            request_policy=request_policy)
 
 
 def _validate_adaptation(record: dict, task: dict, harness_dir: Path, *, study_sha256: str,
-                        run_root: Path, tag: str, fixture: bool, results: dict) -> dict:
+                        run_root: Path, tag: str, fixture: bool, results: dict,
+                        request_policy: dict | None = None) -> dict:
     """Inspect native files and reconstruct saved portfolios without a Proposer or SDK."""
+    def read(path):
+        return read_artifact(path, request_policy=request_policy)
+
     run_root = strategy._path(run_root)
     strategy._require(record.get("kind") == "phase3b-native-adaptation-v1"
         and record.get("fixture") is fixture and record.get("study_sha256") == study_sha256
@@ -462,27 +530,29 @@ def _validate_adaptation(record: dict, task: dict, harness_dir: Path, *, study_s
         "native branch belongs to a different execution")
     strategy._require(record.get("artifact_hashes") == _artifacts(run_root), "native artifacts changed")
     validate_adaptive_partial(task, harness_dir, study_sha256=study_sha256, run_root=run_root,
-                              tag=tag, fixture=fixture, results=results)
+                              tag=tag, fixture=fixture, results=results, request_policy=request_policy)
     ids = adaptive_run_ids(task["id"], tag)
-    actual_rollouts = {label: read_json(run_root / "rollouts" / label / "rollout.json")
+    actual_rollouts = {label: read(run_root / "rollouts" / label / "rollout.json")
                        for label in LABELS if (run_root / "rollouts" / label / "rollout.json").exists()}
     strategy._require(record.get("rollouts") == actual_rollouts, "native rollout inventory differs")
     for label, run_id in ids.items():
         path = run_root / "rollouts" / label
         if path.exists():
             strategy.validate_partial(task, path / "harness", study_sha256=study_sha256,
-                                      run_id=run_id, fixture=fixture, arm="adaptive", results=results)
+                                      run_id=run_id, fixture=fixture, arm="adaptive", results=results,
+                                      request_policy=request_policy)
         if label in record["rollouts"]:
             expected = strategy.validate_rollout(record["rollouts"][label], task, path / "harness",
-                study_sha256=study_sha256, fixture=fixture, run_id=run_id, arm="adaptive", results=results)
-            strategy._require(expected == read_json(path / "rollout.json"), "native rollout artifact differs")
-    identity = read_json(run_root / "identity.json")
+                study_sha256=study_sha256, fixture=fixture, run_id=run_id, arm="adaptive", results=results,
+                request_policy=request_policy)
+            strategy._require(expected == read(path / "rollout.json"), "native rollout artifact differs")
+    identity = read(run_root / "identity.json")
     strategy._require(identity["task"] == task and identity["seed"] == strategy.validate_harness(harness_dir)
                       and identity["study_sha256"] == study_sha256, "native seed identity differs")
     modules = _modules()
     namespace = modules["schedule"].Namespace(BENCHMARK, SUBSTRATE, "agg", 2, None, tag)
     work = namespace.task_dir(run_root / "native", task["id"])
-    strategy._require(read_json(work / "summary.json") == record["native"], "native summary differs")
+    strategy._require(read(work / "summary.json") == record["native"], "native summary differs")
     dispositions, authentic = _stage_proof(record["native"], record["editor_evidence"], task,
         run_root, tag, fixture, study_sha256, results)
     strategy._require(record["stage_dispositions"] == dispositions and record["authentic"] is (authentic and _selector_normal(record["editor_evidence"], record["native"].get("selections", {}).get("seq", {}), results)),

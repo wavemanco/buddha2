@@ -1,0 +1,66 @@
+{
+  "bindings": {
+    "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+    "policy_sha256": "fabee289a2f30fc0f7af434e5e76666a397cf3d4c1db559092283da00ca46d84",
+    "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2"
+  },
+  "blocking_code_findings": [],
+  "code_review_passed": true,
+  "created_at_utc": "2026-11-08T10:33:29.511349+00:00",
+  "evidence_reviewed": [
+    {
+      "path": "runs/phase3b-seq2-v1/phase4-cm1-v1/release-r02/release/study.json",
+      "sha256": "f02b84709097a6e719bb01e4a47eed3e9cfbe9a073992e92348ff5bb98a9eb6f"
+    },
+    {
+      "path": "runs/phase4-cm1-v1/offline-static-r04/receipt.json",
+      "scope": "Saved Ruff, Mypy and Bandit receipt; not rerun by this reviewer.",
+      "sha256": "15b421673ae2531bce121a26608073dd472cc9e9632b1bff3d216545e5438cb8"
+    },
+    {
+      "path": "runs/phase4-cm1-v1/publication-preparation-v1/type-only-resync-v1.json",
+      "sha256": "230fe183efc4ada503450fd2fa148d7b8d0ef869b1c4ffcf9f4338f8d257492d"
+    }
+  ],
+  "independent": true,
+  "kind": "phase4-cm1-independent-code-review-v1",
+  "observations": {
+    "historical_holds_or_records_released": false,
+    "known_terminal_eligible_for_selected_native_or_fixed_target": false,
+    "legacy_history_default_preserved": true,
+    "new_paid_retry_or_repeat_authority": false,
+    "public_resync_verified": true,
+    "type_casts_change_runtime_values": false,
+    "unknown_delivery_reclassified_as_known_terminal": false
+  },
+  "review_scope": [
+    "Final typing casts and annotations in P4 workflow and assessment; preceding runtime validation and arithmetic are preserved.",
+    "P4-only settled refusal/max_tokens classification, immutable session evidence, native/proposer no-resend backstops and retained valid checkpoints.",
+    "P4 profile propagation through native readers, both selector snapshot checks, installed contexts, relay bodies and bounded fixture HTTP framing.",
+    "Existing parent/allocation/cell reservations, unknown-delivery guards, source admission checks, generation seal and judge isolation remain binding.",
+    "Public two-file type-only resync is byte-exact and linked by separate append-only evidence; original projection manifest remains historical."
+  ],
+  "reviewer": "/root/p4_cold_review",
+  "reviewer_activity": {
+    "api_spend_micro_usd": 0,
+    "confirmation_corpus_opened": false,
+    "only_written_artifact": "evidence/phase4-cm1-v1/code-review-v1.json",
+    "protected_original_accessed": false,
+    "provider_calls": 0,
+    "real_credentials_used": false,
+    "source_files_modified": false,
+    "tests_run": 0
+  },
+  "runtime_acceptance": {
+    "final_native_journey_and_saved_replay": "pending independent outcome review",
+    "final_passive_inspect_and_host_evidence": "pending",
+    "full_collector": "pending",
+    "live_launch_or_credentials_approved_by_this_receipt": false,
+    "offline_readiness_independent_review": false
+  },
+  "sha256": "a84abf80c94bcbca2ece740c51524aef1bd65e337181ce42c8a5cd7e6fcd0d5d",
+  "source_inputs_verified": 207,
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "status": "CODE REVIEW ONLY - full runtime acceptance pending",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421"
+}

@@ -1,3 +1,11 @@
+# P4-CM1 offline accepted; frame certified — 8 November 2026
+
+The [kit report](../phases/phase-4/PHASE4_CM1_KIT_REPORT.md) and [acceptance summary](../../evidence/phase4-cm1-v1/offline-acceptance-v1.json) record completed acceptance: 106 unique passing tests/all 16 mandatory regressions, green scoped static checks, actual native mocked journey, passive exports, Windows handshake and independent review. The public projection separately passed 89 local tests/static checks with its own identity; no remote-CI-green result is claimed.
+
+[Controlled intake](../../evidence/phase4-cm1-v1/controlled-intake-v1.json) verified 1,000 unique units, 263 exclusions, 737 eligible units and 24 frozen selections, without printing task text. [Production provider preflight](../../evidence/phase4-cm1-v1/provider-preflight-v1.json) passed without keys/calls. No cost-qualification or scientific result exists. Next is fresh masked keys under the dedicated supervisor, then the approved two exposed fixed-only qualifications and the frozen comparison if they pass. Do not rebuild accepted preparation or reopen sampling.
+
+Authority remains $1,200 ($100 development/$850 inference/$250 assessment), $75 per inference cell and 40,914 admissions. Preserve all closed evidence and historical held liability; no hidden repetition or method change follows a failed gate. Earlier proposal/preparation paragraphs below retain history and are superseded by this current accepted state.
+
 # Phase 4 confirmation defined; no execution authorized - 7 November 2026
 
 The next proposal is [P4-CM1: cost-matched held-out confirmation](../phases/phase-4/PHASE4_COST_MATCHED_CONFIRMATION_DEFINITION.md), definition 1.0. It specifies objective, scope, deliverables, exclusions, completion/claim criteria, fresh proposed funding and stop rules as one contained block. This update is documentation only: no code, tests, keys, holdout opening or model calls.

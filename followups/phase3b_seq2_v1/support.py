@@ -81,9 +81,10 @@ def safe(value: Path, *, roots: tuple[Path, ...] | None = None) -> Path:
     return value
 
 
-def read(value: Path) -> dict:
+def read(value: Path, *, max_bytes: int = 32_000_000) -> dict:
     target = safe(value)
-    require(target.is_file() and target.stat().st_size <= 32_000_000, "missing/oversized S2 artifact")
+    require(type(max_bytes) is int and 0 < max_bytes <= 1_500_000_000, "invalid S2 artifact byte capacity")
+    require(target.is_file() and target.stat().st_size <= max_bytes, "missing/oversized S2 artifact")
 
     def pairs(items):
         result = {}
@@ -95,7 +96,9 @@ def read(value: Path) -> dict:
     def nonfinite(_):
         raise ContractError("nonfinite S2 JSON")
 
-    result = json.loads(target.read_text(encoding="utf-8"), object_pairs_hook=pairs, parse_constant=nonfinite)
+    raw = target.read_bytes()
+    require(len(raw) <= max_bytes, "missing/oversized S2 artifact")
+    result = json.loads(raw.decode("utf-8"), object_pairs_hook=pairs, parse_constant=nonfinite)
     require(isinstance(result, dict), "S2 artifact must be an object")
     return result
 

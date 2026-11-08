@@ -1,0 +1,36 @@
+{
+  "allocations_micro_usd": {
+    "assessment": 250000000,
+    "development": 100000000,
+    "inference": 850000000
+  },
+  "api_calls": 0,
+  "api_spend_micro_usd": 0,
+  "approval_timestamp_supplied": false,
+  "authorized": true,
+  "client_date": "2026-11-08",
+  "definition_sha256": "835ecae90d089c90c73b0b98ed4086deea13c9e83304fe9070c26f3892b05579",
+  "definition_version": "1.0",
+  "historical_hold_micro_usd": 22880000,
+  "inference_cell_cap_micro_usd": 75000000,
+  "keys_after_offline_acceptance": true,
+  "kind": "phase4-cm1-authorization-v1",
+  "maximum_admissions": 40914,
+  "protected_inputs": {
+    "DECISIONS.md": "a7ab0957c6b423239421ed7ff759cbdd3c1c36e324644ce78e5e306946f72412",
+    "PHASE_DEFINITIONS.md": "82b819dfde3585012e8e44b5ec45bc76c4b7e45a9347c6ccb32a3c0c04cfb13d",
+    "docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md": "1981505da5c209681c054a4a825dacb0dbd8826157f53b653551587bbddac313",
+    "evidence/phase3b-seq2-v1/remaining-pairs-live-outcome-v1.json": "53983f6dac4e8b7751355face056b6ef1bbf54b0b88a1d08fd3c87a13ff6a599",
+    "evidence/phase3b-seq2-v1/remaining-pairs-live/independent-review.json": "48860868e177812725374a34a11f4552c1a0692a9e2cc7f32a802b897b5d81a4",
+    "upstreams.lock.json": "f895bae327a8878864647c936cdd5333e39f012f51a9bfeeb9a9ae1e6ed84da1"
+  },
+  "public_projection": {
+    "canonical_approval_file_sha256": "88fae7a699da3776b6d50e0385ed5e1382b0854d62b8cb47cc0c726cdb013e59",
+    "kind": "phase4-cm1-public-authorization-projection-v1",
+    "omitted_fields": [
+      "user_instruction"
+    ],
+    "scope": "Funding, method, protections and approval fields are preserved; verbatim conversation text is omitted."
+  },
+  "total_cap_micro_usd": 1200000000
+}

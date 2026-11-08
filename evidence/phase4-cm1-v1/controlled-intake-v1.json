@@ -1,0 +1,22 @@
+{
+  "container_absent": true,
+  "container_id": "f24c4c19e7817a2e3c9fb18665ee4d949864500506a34817bfb678877dfc24f7",
+  "eligible_prompt_units": 737,
+  "excluded_prompt_units": 263,
+  "exit_code": 0,
+  "image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "kind": "phase4-cm1-controlled-intake-v1",
+  "manifest_file_sha256": "95cafe840aa3261d24862d5c76f39b559cbf8b5eac89676f49755707a32adbfc",
+  "manifest_sha256": "944e429e9bed89bce08cf542d3ad7d0578deba22cd9c4b41f714a553b2c792da",
+  "network": "none",
+  "passed": true,
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "selected_count": 24,
+  "sha256": "a751e474ebdf256be4b932d2895f9c3f5b3ed274494aa82618b56e188ba6b31d",
+  "source_rows": 1000,
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421",
+  "task_content_printed": false,
+  "unique_prompt_units": 1000
+}

@@ -37,12 +37,17 @@ def file_hash(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def read_json(path: Path) -> Any:
+def read_json(path: Path, *, max_bytes: int = 2_000_000) -> Any:
+    if type(max_bytes) is not int or not 0 < max_bytes <= 1_500_000_000:
+        raise ContractError("invalid JSON artifact byte capacity")
     try:
-        if path.stat().st_size > 2_000_000:
+        if path.stat().st_size > max_bytes:
+            raise ContractError("JSON artifact exceeds the offline profile limit")
+        raw = path.read_bytes()
+        if len(raw) > max_bytes:
             raise ContractError("JSON artifact exceeds the offline profile limit")
         return json.loads(
-            path.read_text(encoding="utf-8"),
+            raw.decode("utf-8"),
             parse_constant=lambda value: _refuse(f"nonfinite JSON value: {value}"),
         )
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:

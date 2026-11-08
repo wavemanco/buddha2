@@ -14,7 +14,21 @@ from typing import Any
 MAX_FRAME = 16_777_216
 
 
-def main(connection: Connection, fixture_behavior: dict | None = None) -> None:
+def fixture_http_frame_limit(request: dict) -> int:
+    """Only fixture HTTP RPCs echo the whole SDK request as base64 to the parent."""
+    size = len(json.dumps(request, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode())
+    if size > 128_000_000:
+        raise ValueError("fixture request exceeds the provider wire ceiling")
+    # Match the initial-frame SDK/envelope allowance; base64 requires four
+    # bytes for each three source bytes, plus the small HTTP RPC metadata.
+    return max(MAX_FRAME, 4 * ((size + 1_048_576 + 2) // 3) + 65_536)
+
+
+def main(connection: Connection, fixture_behavior: dict | None = None,
+         request_frame_limit: int = MAX_FRAME) -> None:
+    if type(request_frame_limit) is not int or not MAX_FRAME <= request_frame_limit <= 130_000_000:
+        connection.close()
+        return
     behavior = fixture_behavior or {}
     if behavior.get("ipc") == "never_read":
         while True:
@@ -24,7 +38,7 @@ def main(connection: Connection, fixture_behavior: dict | None = None) -> None:
         while True:
             time.sleep(1)
     try:
-        init = json.loads(connection.recv_bytes(MAX_FRAME).decode("utf-8"))
+        init = json.loads(connection.recv_bytes(request_frame_limit).decode("utf-8"))
         asyncio.run(_operation(connection, init, behavior))
     except BaseException:
         return  # Parent treats absent complete receipt as unknown; no raw exception crosses IPC.
@@ -39,6 +53,7 @@ async def _operation(connection: Connection, init: dict, behavior: dict) -> None
     import openai
 
     fixture = init["fixture"]
+    fixture_frame = fixture_http_frame_limit(init["request"]) if fixture else MAX_FRAME
     if behavior and not fixture:
         raise ValueError("fixture behavior in live worker")
     if fixture and set(init["keys"].values()) != {"fixture-not-a-secret"}:
@@ -51,7 +66,8 @@ async def _operation(connection: Connection, init: dict, behavior: dict) -> None
 
     def send(value: dict) -> None:
         encoded = json.dumps(value, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode()
-        if len(encoded) > MAX_FRAME:
+        limit = fixture_frame if fixture and value.get("type") == "http" else MAX_FRAME
+        if len(encoded) > limit:
             raise ValueError("oversized worker frame")
         with send_lock:
             connection.send_bytes(encoded)

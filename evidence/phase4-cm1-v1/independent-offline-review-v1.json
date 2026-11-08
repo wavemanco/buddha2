@@ -1,0 +1,17 @@
+{
+  "independent": true,
+  "kind": "buddha2-offline-independent-review-v2",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "manifest_file_sha256": "50023f96b99229ebc39e6ccd7af35a427d7677c1248534508c71a85c87db6fa9",
+  "manifest_sha256": "b343c77dcdd9867c3d2b70eacc57d18cb686bb74d5e3a5a09056b02cdc95f026",
+  "notes": "Independent final offline kit acceptance at 2026-11-08T11:07:12.175046+00:00. Reviewed all 207 frozen source hashes and exact collector before/after identities. Six standard receipts cover 106 unique passing tests and all 16 required regressions, without failures, errors or skips. Final-source Ruff/Mypy/Bandit pass. Actual pinned Bun/OpenCode seq,k=2 fixture completed eight rollouts, six author stages, 347 mocked SDK requests and 39 judgments, with separate generation/assessment child identities, zero held liability and zero-resend saved replay. Both final-source passive Inspect exports pass: native journey preserves 347 actual fixture events; missing-case v2 preserves null native dates, empty usage/events and actual 2026 export observation times. Both roundtrips have zero model/network attempts; earlier missing-case v1 stays historical. Final-source Windows provider-config handshake passes without keys. Public compatibility has its own 207-input source identity, exactly three disclosed source projections, 89 passing tests and all three static checks passing. Nested $1200 total, $100 development, $850 inference, $250 assessment, $75 per cell and 40914-admission guards remain binding. Source guards, full generation barrier, official protocol, judge isolation and P4-only settled-terminal/no-resend behavior were reviewed. No confirmation corpus intake, selected manifest, live parent start or allowance claim exists. Exact Docker owners independently absent: 844598cd6d2f83a875b60e29610949ea2295760f102aa35803f42b15730ffaa6, a7f812b85c54c9d616f2b7d653a73a1bb100612aa4c4ea2abe74666729abeaf1, 225d931c730b64ee33ed21e5e8fb345686de3e1d678aeb381456c0aeface2a87, 7b7f9f0153bb97d320648ae0ccc1772ab87a0b1ddd666efd334ebeda7ed4f2b4, 69478bd211b663ed75099920bdeed3b48965acbe68b067b2b2bafff42103b0a6, c03d475c2b446cffc794ce509dcbd01958941d845c44a55aedc3037708e880d0. Acceptance covers this bounded offline kit only. Eligibility, live provider access, actual cost qualification and scientific outcomes are not established. Reviewer ran no tests or model calls and accessed no keys, corpus or protected original; only review artifacts written.",
+  "passed": true,
+  "policy_sha256": "fabee289a2f30fc0f7af434e5e76666a397cf3d4c1db559092283da00ca46d84",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "reviewer": "/root/p4_cold_review",
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "sha256": "6afc2fe6dadb89b0c5372e6de99b8350156268f46980095da09e34bf0bfe7d05",
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421"
+}

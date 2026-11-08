@@ -34,7 +34,8 @@ NATIVE_TIMEOUT = int(CONVERSATION_POLICY["soft_seconds"] + CONVERSATION_POLICY["
         + CONVERSATION_POLICY["extension_seconds"] + POLICY.completion + POLICY.cleanup))
 FETCH_TIMEOUT = NATIVE_TIMEOUT - 10
 _HASH = re.compile(r"[a-f0-9]{64}\Z")
-_SLOT = re.compile(r"p3b-0[1-4]\.adaptive\.editor\.(?:inv[12]\.a[12]|dom[12]\.a[12]|c[12]\.a[12]|select\.seq2)\.t(?:0[1-9]|1[0-9]|2[0-4])\Z")
+_PAIR = r"(?:p3b-0[1-4]|p4-(?:0[1-9]|1[0-9]|2[0-4]))"
+_SLOT = re.compile(_PAIR + r"\.adaptive\.editor\.(?:inv[12]\.a[12]|dom[12]\.a[12]|c[12]\.a[12]|select\.seq2)\.t(?:0[1-9]|1[0-9]|2[0-4])\Z")
 
 
 def _require(condition: object, message: str) -> None:
@@ -79,7 +80,7 @@ def validate_clock(value: Any) -> dict:
         and all(isinstance(value.get(k), str) and _HASH.fullmatch(value[k]) for k in
                 ("study_sha256", "source_sha256", "editor_profile_sha256"))
         and type(value.get("fixture")) is bool and _number(value.get("started_monotonic"))
-        and isinstance(value.get("pilot"), str) and re.fullmatch(r"p3b-0[1-4]", value["pilot"])
+        and isinstance(value.get("pilot"), str) and re.fullmatch(_PAIR, value["pilot"])
         and isinstance(value.get("label"), str)
         and _SLOT.fullmatch(value["pilot"] + ".adaptive.editor." + value.get("label", "") + ".t01")
         and value.get("conversation_id") == value["pilot"] + ":adaptive:" + value["label"]

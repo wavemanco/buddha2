@@ -133,7 +133,7 @@ def _text(value: Any) -> bool:
     )
 
 
-def _editor_request(role: str, request: Any, tools: dict) -> None:
+def _editor_request(role: str, request: Any, tools: dict, *, payload_limit: int | None = None) -> None:
     required = {
         "model": "claude-opus-5",
         "max_tokens": 16000,
@@ -267,15 +267,21 @@ def _editor_request(role: str, request: Any, tools: dict) -> None:
         "fixed selector cannot use tools",
     )
     _require(
-        len(_wire(request)) <= POLICY["editor_payload_bytes"],
+        len(_wire(request)) <= (POLICY["editor_payload_bytes"] if payload_limit is None else payload_limit),
         "editor/selector exact request exceeds payload limit",
     )
 
 
-def validate_request(role: str, request: dict, *, editor_tools: dict | None = None) -> None:
+def validate_request(role: str, request: dict, *, editor_tools: dict | None = None,
+                     policy: dict | None = None) -> None:
     _require(role in ROLES, "unknown phase role")
+    overrides = {}
+    if policy is not None:
+        from followups.phase4_cm1_v1.policy import request_limits
+
+        overrides = request_limits(policy)
     if role in EDITOR_ROLES:
-        _editor_request(role, request, editor_tools or {})
+        _editor_request(role, request, editor_tools or {}, payload_limit=overrides.get(role))
     else:
         _validate_request(role, request)
         _require(
@@ -284,6 +290,7 @@ def validate_request(role: str, request: dict, *, editor_tools: dict | None = No
         )
         evaluator_limit = POLICY["evaluator_payload_bytes"].get(role)
         _require(
+            len(_wire(request)) <= overrides[role] if role in overrides else
             am1.admitted(role, request) if evaluator_limit is None
             else len(_wire(request)) <= evaluator_limit,
             "strategy/native request exceeds phase payload admission",
@@ -409,12 +416,17 @@ def _admit(state: dict, meta: dict, reservation: dict, *, policy: dict | None = 
 
 def _intent(manifest: dict, slot: str, request: dict, index: int) -> dict:
     meta = manifest["inputs"]["slots"][slot]
+    study = manifest["inputs"]["study_sha256"]
+    policy = manifest["inputs"].get("policy", {})
+    if policy.get("id") == "phase4-cm1-child-accounting-v1" and policy["phase4_child"]["kind"] == "assessment":
+        study = policy["phase4_child"]["generation_study_sha256"]
+        _require(_hash(study), "P4 assessment lacks its original generation identity")
     return {
         "slot_id": slot,
         "role": meta["role"],
         "cell": meta["cell"],
         "pair": meta["pair"],
-        "study_sha256": manifest["inputs"]["study_sha256"],
+        "study_sha256": study,
         "fixture": manifest["inputs"]["fixture"],
         "dispatch_id": f"{manifest['run_id']}:{index:04}",
         "request": request,

@@ -1,0 +1,57 @@
+{
+  "kind": "phase4-cm1-public-billing-v1",
+  "client_date": "2026-11-08",
+  "status": "official-public-terms-checked-account-access-unmeasured",
+  "model_substitution": false,
+  "model_ids": [
+    "claude-sonnet-5-5",
+    "claude-opus-5",
+    "gpt-5.6-luna"
+  ],
+  "public_rates_per_million": {
+    "claude-sonnet-5-5": {
+      "input": 2,
+      "output": 10,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4,
+      "cache_read": 0.1
+    },
+    "claude-opus-5": {
+      "input": 5,
+      "output": 25,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10,
+      "cache_read": 0.5
+    },
+    "gpt-5.6-luna": {
+      "input": 0.2,
+      "output": 1.2,
+      "cache_read": 0.02,
+      "cache_write_input_multiplier": 1.25,
+      "long_input_threshold": 272000,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    }
+  },
+  "context_tokens": {
+    "claude-sonnet-5-5": 1000000,
+    "claude-opus-5": 1000000,
+    "gpt-5.6-luna": 1050000
+  },
+  "retained_next_request_reservation_micro_usd": {
+    "sonnet": 2540960,
+    "opus": 11440000,
+    "group": 1661880
+  },
+  "anthropic_messages_max_request_bytes_conservative": 128000000,
+  "sources": [
+    "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+    "https://platform.claude.com/docs/en/models/opus-5/overview",
+    "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "https://platform.claude.com/docs/en/api/overview"
+  ],
+  "prior_billing_basis": "evidence/phase3b-seq2-v1/remaining-pairs-public-billing-v1.json",
+  "scope": "Public documentation only. No credential, account, token-count or model API request. Frozen model IDs and accounting basis retained; actual access/usage observed only within approved counted work.",
+  "provider_calls": 0,
+  "api_spend_micro_usd": 0
+}

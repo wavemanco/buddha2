@@ -151,10 +151,20 @@ def authoring_system(effective: str, index: str) -> str:
     return SYSTEM_ID + "\n" + _COMMON + PAGING_RULE + effective + "\n\n# Frozen factual evidence index\n" + index + "\n\n" + FINAL_RULE
 
 
-def _inventory(context: Path, allowed: set[str]) -> dict[str, bytes]:
+def _inventory(context: Path, allowed: set[str], *, context_limits: dict | None = None) -> dict[str, bytes]:
+    file_limit, total_limit = 1_000_000, 8_000_000
+    if context_limits is not None:
+        if (not isinstance(context_limits, dict)
+                or set(context_limits) != {"context_file_bytes", "context_total_bytes"}
+                or any(type(value) is not int or not 0 < value <= 1_500_000_000
+                       for value in context_limits.values())
+                or context_limits["context_file_bytes"] > context_limits["context_total_bytes"]):
+            raise ContractError("invalid native context byte capacity")
+        file_limit, total_limit = context_limits["context_file_bytes"], context_limits["context_total_bytes"]
     context = safe(context)
     allowed_dirs = {parent.as_posix() for name in allowed for parent in Path(name).parents if str(parent) != "."}
     result: dict[str, bytes] = {}
+    total = 0
     pending = [context]
     while pending:
         directory = pending.pop()
@@ -172,12 +182,17 @@ def _inventory(context: Path, allowed: set[str]) -> dict[str, bytes]:
                     raise ContractError("unexpected context directory")
                 pending.append(target)
             else:
-                if not stat.S_ISREG(info.st_mode) or relative not in allowed or info.st_size > 1_000_000:
+                if not stat.S_ISREG(info.st_mode) or relative not in allowed or info.st_size > file_limit:
                     raise ContractError("unsupported context file")
+                if total + info.st_size > total_limit:
+                    raise ContractError("native context inventory/byte limit differs")
                 data = target.read_bytes()
+                total += len(data)
+                if len(data) > file_limit or total > total_limit:
+                    raise ContractError("unsupported context file")
                 data.decode("utf-8", errors="strict")
                 result[relative] = data
-    if set(result) != allowed or sum(map(len, result.values())) > 8_000_000:
+    if set(result) != allowed or sum(map(len, result.values())) > total_limit:
         raise ContractError("native context inventory/byte limit differs")
     for name in result:
         if name.endswith("/systemprompt.md") and (name == "harness/systemprompt.md" or name.startswith("pool/")):
@@ -189,8 +204,9 @@ def _inventory(context: Path, allowed: set[str]) -> dict[str, bytes]:
 
 
 def _prepare(mission: str, context: Path, label: str, role: str, repair: str | None,
-             allowed: set[str], required: list[tuple[str, str]], effective: str) -> dict:
-    original = _inventory(context, allowed)
+             allowed: set[str], required: list[tuple[str, str]], effective: str,
+             *, context_limits: dict | None = None) -> dict:
+    original = _inventory(context, allowed, context_limits=context_limits)
     strategy_valid, strategy_sha = True, None
     if role != "SELECT":
         try:
@@ -227,20 +243,21 @@ def _prepare(mission: str, context: Path, label: str, role: str, repair: str | N
     for entry in entries:
         index_text += f"- {entry['kind']}: context/{entry['path']} ({entry['bytes']} UTF-8 bytes).\n"
         index_text += "".join(f"  - context/{chunk['path']} (read offset=1, limit={chunk['limit']}).\n" for chunk in entry["chunks"])
-    if _inventory(context, allowed) != original:
+    if _inventory(context, allowed, context_limits=context_limits) != original:
         raise ContractError("native context changed while preparing contract")
     system = selector_system(effective, index_text) if role == "SELECT" else authoring_system(effective, index_text)
     return {"effective_mission": effective, "authoring_system_text": system,
             "index_text": index_text, "manifest": manifest, "evidence_files": auxiliary}
 
 
-def prepare_contract(mission: str, context_dir: Path, label: str) -> dict:
+def prepare_contract(mission: str, context_dir: Path, label: str, *, context_limits: dict | None = None) -> dict:
     role, repair = _mission(mission, label)
     allowed, required = _layout(role, label)
-    return _prepare(mission, Path(context_dir), label, role, repair, allowed, required, _render(role, label, repair))
+    return _prepare(mission, Path(context_dir), label, role, repair, allowed, required, _render(role, label, repair),
+                    context_limits=context_limits)
 
 
-def prepare_selector_contract(mission: str, context_dir: Path, label: str) -> dict:
+def prepare_selector_contract(mission: str, context_dir: Path, label: str, *, context_limits: dict | None = None) -> dict:
     if label != "select.seq2" or type(mission) is not str or not 0 < len(mission.encode()) <= 200_000:
         raise ContractError("unexpected native selector mission")
     context = safe(context_dir)
@@ -253,7 +270,8 @@ def prepare_selector_contract(mission: str, context_dir: Path, label: str) -> di
     if mission != selector_mission(ids):
         raise ContractError("native selector mission differs from pinned full-artifact contract")
     required = [("task.md", "task_contract"), *[("candidates/" + name, "selection_candidate") for name in names]]
-    return _prepare(mission, context, label, "SELECT", None, {name for name, _ in required}, required, mission)
+    return _prepare(mission, context, label, "SELECT", None, {name for name, _ in required}, required, mission,
+                    context_limits=context_limits)
 
 
 def selector_system(effective: str, index: str) -> str:

@@ -12,10 +12,18 @@ from followups.phase3a_c1_completion_v3.evidence import _body, _without_cache
 from followups.phase3a_v1.editor import _terminal_shape
 
 
+class KnownProviderTerminalStop(ContractError):
+    """A settled P4 refusal/truncation makes this cell missing, without an unknown bill."""
+
+    def __init__(self, evidence: dict):
+        self.evidence = copy.deepcopy(evidence)
+        super().__init__("settled provider terminal response cannot supply a completed native cell")
+
+
 class HistoryGuard:
     """Owned ordinary1-23 history plus an explicit exact terminal24 branch."""
 
-    def __init__(self, delegate: Callable, prefix: str):
+    def __init__(self, delegate: Callable, prefix: str, *, known_terminal: bool = False):
         if not re.fullmatch(r"[A-Za-z0-9_.-]{1,140}", prefix):
             raise ContractError("invalid history conversation identity")
         self.delegate, self.prefix = delegate, prefix
@@ -24,6 +32,7 @@ class HistoryGuard:
         self.audits: list[dict] = []
         self.controls: dict | None = None
         self.stopped = False
+        self.known_terminal = known_terminal
 
     def __call__(self, slot: str, role: str, request: dict) -> dict:
         if self.stopped:
@@ -88,6 +97,13 @@ class HistoryGuard:
         if result.get("status") != "response":
             raise ContractError("history cannot advance after an unresolved provider result")
         response = result["response"]["provider_response"]
+        if self.known_terminal and response.get("stop_reason") in {"refusal", "max_tokens"}:
+            if (result.get("slot_id") != slot or result.get("role") != role
+                    or type(result.get("spent_micro_usd")) is not int or result["spent_micro_usd"] < 0
+                    or type(result.get("reserved_micro_usd")) is not int or result["reserved_micro_usd"] != 0):
+                raise ContractError("terminal response lacks settled accounting")
+            raise KnownProviderTerminalStop({"slot_id": slot, "role": role,
+                "stop_reason": response["stop_reason"], "result_sha256": digest(result)})
         if response.get("stop_reason") not in {"tool_use", "end_turn"}:
             raise ContractError("history cannot advance after an incomplete provider response")
         content = response["content"]

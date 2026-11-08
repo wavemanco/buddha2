@@ -1,0 +1,79 @@
+{
+  "accepted_at_utc": "2026-11-08T11:13:04.592806+00:00",
+  "actual_native_seq_k": 2,
+  "api_spent_micro_usd": 0,
+  "author_stages": 6,
+  "canonical_tests_passed": 106,
+  "current_source_inspect_exports_passed": 2,
+  "definition_sha256": "835ecae90d089c90c73b0b98ed4086deea13c9e83304fe9070c26f3892b05579",
+  "eligibility": {
+    "eligible_prompt_units": 737,
+    "excluded_prompt_units": 263,
+    "manifest_file_sha256": "95cafe840aa3261d24862d5c76f39b559cbf8b5eac89676f49755707a32adbfc",
+    "selected_count": 24,
+    "source_rows": 1000,
+    "unique_prompt_units": 1000
+  },
+  "external_provider_calls": 0,
+  "fixture_assessment_requests": 39,
+  "fresh_keys_requested_at_acceptance": false,
+  "historical_held_micro_usd": 22880000,
+  "kind": "phase4-cm1-offline-acceptance-v1",
+  "launcher_sha256": "88f74a9774c23150901b8066681b726291dc6ac2d5cab3b65aba826354f21f16",
+  "limitations": [
+    "Offline/native mock acceptance does not validate live provider access or establish adaptation benefit.",
+    "Actual cost qualification and the 24-prompt confirmation remain unstarted.",
+    "No remote CI workflow exists; public compatibility was verified locally."
+  ],
+  "mandatory_regressions_passed": 16,
+  "method_sha256": "d111c406b276ab3d575feef5042d7b71d1032a30489e72332d6b10406ebb62b5",
+  "mock_sdk_requests_in_native_journey": 347,
+  "native_rollouts": 8,
+  "policy": {
+    "allocations_micro_usd": {
+      "assessment": 250000000,
+      "development": 100000000,
+      "inference": 850000000
+    },
+    "cell_micro_usd": 75000000,
+    "first_micro_usd": 1200000000,
+    "id": "phase4-cm1-parent-budget-v1",
+    "maximum_admitted_attempts": 40914,
+    "phase_micro_usd": 1200000000
+  },
+  "policy_sha256": "fabee289a2f30fc0f7af434e5e76666a397cf3d4c1db559092283da00ca46d84",
+  "production_provider_preflight_passed": true,
+  "public_projection_source_sha256": "4cfc3f4f8d1c6070bed7845303cc5c6bc278171f9da9c22b05d2da63ee354291",
+  "public_projection_tests_passed": 89,
+  "public_source_projections": 3,
+  "real_credentials_used": false,
+  "reference_file_sha256": {
+    "acceptance-collection-v1.json": "bd3ed5a5ec6debf05010b7f9104993da8de30a900a19868b350ce02041d52926",
+    "controlled-intake-v1.json": "52d7ea8a24ef955461a4162e549207c56f843d7e87b0d22d0850abb7ceaa690c",
+    "eligibility-manifest-v1.json": "95cafe840aa3261d24862d5c76f39b559cbf8b5eac89676f49755707a32adbfc",
+    "independent-offline-review-v1.json": "ff73e90425741995c39e9bff5d7b4a6ad3876d077aefa94f0f0d6af9ae0572a0",
+    "inspect-missing-case-v2.json": "1ddfd84bb9219bf6895ad0d8c9907de9258949c3c7b64c7fec8a244457ea94c7",
+    "inspect-native-journey-v1.json": "cdaffd3bb3814be2a4e1503ff710894ced8eb3f8a11e9f955fe947d569fddab2",
+    "native-journey-v1.json": "175aaf6beef2fbd77c0d72fc899064a74eccd2de35d09428c3a4099a87f0dcd9",
+    "provider-preflight-v1.json": "e61cfc326525d78d94161016d1a41fe85881424b8be19625bca6861d57cc7192",
+    "public-compatibility-v1.json": "db8c1a1165529b9f71357c8f8f032fbb705705686aa6c0bbe1c0963e9aef9cd7",
+    "static-checks-v1.json": "15b421673ae2531bce121a26608073dd472cc9e9632b1bff3d216545e5438cb8",
+    "windows-precredential-v1.json": "c7cf306c9f0c62c4ff389af110a633d795d667e4b3451dc83a0fe7baa9cb2950"
+  },
+  "repository_ci_workflow_present": false,
+  "runtime_sha256": "7326091ad5226fe701f4e7c8fe7801125673497221269fffdfc291c7ce492ed2",
+  "saved_replay_new_dispatches": 0,
+  "scientific_complete": false,
+  "scientific_confirmation_started": false,
+  "sha256": "9608765bc2d5251f400ddc46b062320054ababdfa9851199d32f6e303475097f",
+  "source_files": 207,
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "static_checks": {
+    "bandit": 0,
+    "mypy": 0,
+    "ruff": 0
+  },
+  "status": "accepted-ready-for-fresh-keys",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421",
+  "windows_precredential_passed": true
+}

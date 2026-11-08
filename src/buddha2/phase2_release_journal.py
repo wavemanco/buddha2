@@ -243,12 +243,15 @@ def _events(run: Path) -> tuple[list[dict], bytes]:
     return events, tail
 
 
-def _append_event(run: Path, kind: str, record: dict, events: list[dict]) -> None:
+def _append_event(run: Path, kind: str, record: dict, events: list[dict], *,
+                  max_bytes: int = 2_000_000) -> None:
+    if type(max_bytes) is not int or not 2_000_000 <= max_bytes <= 130_000_000:
+        raise ContractError("invalid release event byte ceiling")
     event = _seal({"index": len(events) + 1, "kind": kind, "record": record,
                    "previous_event_sha256": events[-1]["event_sha256"] if events else None}, "event_sha256")
     raw = (json.dumps(event, sort_keys=True, ensure_ascii=False, allow_nan=False,
                       separators=(",", ":")) + "\n").encode("utf-8")
-    if len(raw) > 2_000_000:
+    if len(raw) > max_bytes:
         raise ContractError("single release event exceeds the artifact profile")
     path = run / "events.jsonl"
     if path.is_symlink():

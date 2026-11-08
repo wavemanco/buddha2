@@ -232,7 +232,16 @@ class Transport(DirectSDKTransport):
         stop = threading.Event()
         context = multiprocessing.get_context("spawn")
         parent, child = context.Pipe(duplex=True)
-        process = context.Process(target=worker.main, args=(child, self._behavior if self.fixture else None), daemon=True)
+        request_bytes = len(json.dumps(request, ensure_ascii=False, allow_nan=False,
+                                       separators=(",", ":")).encode("utf-8"))
+        if request_bytes > 128_000_000:
+            raise ContractError("request exceeds the published provider wire ceiling")
+        frame_limit = max(worker.MAX_FRAME, request_bytes + 1_048_576)
+        reply_frame_limit = worker.fixture_http_frame_limit(request) if self.fixture else worker.MAX_FRAME
+        worker_args = (child, self._behavior if self.fixture else None)
+        if frame_limit > worker.MAX_FRAME:
+            worker_args += (frame_limit,)
+        process = context.Process(target=worker.main, args=worker_args, daemon=True)
         helpers: list[threading.Thread] = []
         state: dict[str, Any] = {"process": process, "parent": parent, "child": child, "helpers": helpers,
                  "stop": stop, "outgoing": outgoing, "cleanup_deadline": allocation.cleanup_deadline}
@@ -259,7 +268,11 @@ class Transport(DirectSDKTransport):
         def reader() -> None:
             try:
                 while not stop.is_set():
-                    incoming.put(json.loads(parent.recv_bytes(worker.MAX_FRAME).decode("utf-8")))
+                    raw = parent.recv_bytes(reply_frame_limit)
+                    value = json.loads(raw.decode("utf-8"))
+                    if len(raw) > worker.MAX_FRAME and not (self.fixture and value.get("type") == "http"):
+                        raise ContractError("oversized non-fixture-response frame")
+                    incoming.put(value)
             except BaseException:
                 incoming.put({"type": "ipc_closed"})
         for target in (starter, writer, reader):

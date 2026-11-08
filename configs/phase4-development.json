@@ -1,0 +1,39 @@
+{
+  "development": [
+    {
+      "pilot_id": "dev02",
+      "source_pilot_id": "p3b-02",
+      "target_micro_usd": 6016759,
+      "task": {
+        "domain": "phase3b-development",
+        "id": "nb-curated-055c45e37c6c14cca664",
+        "prompt": "What is the top item you would add to a grocery list for a memorable shopping experience?",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-17"
+        }
+      }
+    },
+    {
+      "pilot_id": "dev04",
+      "source_pilot_id": "p3b-04",
+      "target_micro_usd": 5402521,
+      "task": {
+        "domain": "phase3b-development",
+        "id": "nb-curated-af7dc61fe1eeaa81cd93",
+        "prompt": "Suggest a birthday gift for a friend's 25th birthday. Just one",
+        "source_context": {
+          "dataset": "NoveltyBench/curated",
+          "revision": "64a23be6b18ec1dacc298830aab276061b6e143c",
+          "source_sha256": "ca9b6f470e5d7f7e34a281e2fdaa6f6e51c38bdae075ea580d184139ec391fa7",
+          "source_task_id": "curated-29"
+        }
+      }
+    }
+  ],
+  "kind": "phase4-cm1-development-inputs-v1",
+  "source_study_file_sha256": "38a6413ba02200c22e26025865c0133535679fc07df64f9d75eff964bae77a0d",
+  "source_study_sha256": "1846b3656b125866f02b88cc1cd6a2a9e9624d5c7189512c3f37abfec2f09ebe"
+}

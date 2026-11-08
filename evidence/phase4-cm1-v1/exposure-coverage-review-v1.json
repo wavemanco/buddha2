@@ -1,0 +1,41 @@
+{
+  "canonical_corpus_opened": false,
+  "checks": {
+    "all_116_canonical_metadata_file_sizes_and_hashes_match": true,
+    "audit_and_report_file_hashes_match": true,
+    "curated_aliases_equal_both_phase2_source_inventories": true,
+    "historical_hash_and_relative_path_fields_valid": true,
+    "historical_ids_unique_and_sorted_id_set_seal_matches": true,
+    "other_descriptor_count": 17,
+    "prior_aliases_equal_both_phase2_exclusion_lists": true,
+    "recorded_four_namespace_counts_and_259_plus_four_presence_counts_consistent": true,
+    "report_keeps_frame_intake_and_freshness_unresolved": true,
+    "target_revision_and_source_hash_match_retained_lock": true,
+    "task_bearing_descriptor_count": 99
+  },
+  "confirmation_freshness_certified": false,
+  "created_at_utc": "2026-11-08T08:34:44.362489+00:00",
+  "eligible_fresh_units": null,
+  "exposure_inventory_sha256": "05b3c3af082ac212e35e9089f21c046bed23d50cf6e5430f638629df9fbee527",
+  "independent": true,
+  "kind": "phase4-cm1-exposure-coverage-review-v1",
+  "known_exclusion_counts": {
+    "curated": 100,
+    "historical_wildchat": 263,
+    "prior_synthetic_and_muce": 50
+  },
+  "limitations": [
+    "Coverage approval is for the recorded known-exposure exclusion inventory; it does not certify a fresh eligible count or open holdout selection.",
+    "Historical task identities and input hashes were captured by the separately authorized auditor; this reviewer inspected only the saved canonical audit and metadata, without reaccessing the original checkout.",
+    "Four namespace equality and input metadata coverage are auditor evidence, not an independent rescan of historical files; file presence alone does not establish scientific success or the cause of four missing summaries.",
+    "Historical benchmark source revision remains unknown. ID and normalized-input aliases must be applied conservatively by the future accepted machine intake.",
+    "The bounded canonical metadata/name scan cannot prove absence of unrecorded exposures. Accepted method/source/price freeze and hash-verified intake remain required before eligible selection."
+  ],
+  "passed": true,
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "report_sha256": "1525c877fe57a68c6532d3ec19fa1d23a3379ed16691c2e6ba13c16321370899",
+  "reviewer": "remaining_acceptance",
+  "reviewer_original_checkout_read": false,
+  "sha256": "e381a0cc412649962f522bef1711ff5b50a15c772e481be03882a2c0338e3b71"
+}

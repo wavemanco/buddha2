@@ -79,7 +79,15 @@ RETIRED_SOURCES = frozenset(
         "64b839d569e3ddefa3d56e06fc5b431760aef15cdfb3fd38256e04f8565f519a",
     }
 )
-_require, _bindings = core._require, parent._bindings
+_require = core._require
+
+
+def _bindings(manifest: dict) -> dict:
+    value = parent._bindings(manifest)
+    policy = manifest["inputs"].get("policy", {})
+    if policy.get("id") == "phase4-cm1-child-accounting-v1" and policy["phase4_child"]["kind"] == "assessment":
+        value["study_sha256"] = policy["phase4_child"]["generation_study_sha256"]
+    return value
 
 
 def _stop(journal: Path, manifest: dict, state: dict, records: list) -> dict | None:
@@ -132,7 +140,8 @@ def _journal(path: Path) -> Path:
 
 
 def validate_authority(
-    study_sha256: str, authority: dict, fixture: bool = False, bindings: dict | None = None
+    study_sha256: str, authority: dict, fixture: bool = False, bindings: dict | None = None,
+    *, profile: dict | None = None,
 ) -> None:
     canonical_journal(study_sha256, fixture)
     if not isinstance(bindings, dict):
@@ -142,7 +151,12 @@ def validate_authority(
     )
     core._validate_auth(authority, study_sha256, core.am1.CONTROL_POLICY)
     from .remaining import policy_by_hash
-    policy = policy_by_hash(bindings.get("policy_sha256")) or POLICY
+    if profile is not None:
+        from followups.phase4_cm1_v1.policy import validate
+
+        policy = validate(profile)
+    else:
+        policy = policy_by_hash(bindings.get("policy_sha256")) or POLICY
     _require(
         authority["cap_micro_usd"] == policy["phase_micro_usd"]
         and authority["canary_cap_micro_usd"] == policy["first_micro_usd"]
@@ -159,7 +173,12 @@ def validate_authority(
     _require(bindings["source_sha256"] not in RETIRED_SOURCES, "retired source cannot authorize HI")
 
 
-def _slot_scope(slots: Any) -> None:
+def _slot_scope(slots: Any, *, profile: dict | None = None) -> None:
+    if profile is not None:
+        from followups.phase4_cm1_v1.policy import validate
+
+        validate(profile, slots)
+        return
     from .remaining import PILOTS, policy_for
     remaining = isinstance(slots, dict) and policy_for(slots) is not None
     pairs = PILOTS if remaining else PAIRS
@@ -247,7 +266,15 @@ def _editor_tools(value: Any) -> None:
     )
 
 
-def policy_for(slots: dict) -> dict:
+def _child_profile(policy: dict) -> dict | None:
+    return policy if isinstance(policy, dict) and policy.get("id") == "phase4-cm1-child-accounting-v1" else None
+
+
+def policy_for(slots: dict, profile: dict | None = None) -> dict:
+    if profile is not None:
+        from followups.phase4_cm1_v1.policy import validate
+
+        return validate(profile, slots)
     from .remaining import policy_for as remaining_policy
     return remaining_policy(slots) or copy.deepcopy(POLICY)
 
@@ -260,10 +287,12 @@ def journal_identity(
     fixture: bool,
     bindings: dict,
     editor_tools: dict | None = None,
+    profile: dict | None = None,
 ) -> str:
-    validate_authority(study_sha256, authority, fixture, bindings)
-    _slot_scope(slots)
-    _require(bindings["policy_sha256"] == digest(policy_for(slots)),
+    policy = policy_for(slots, profile)
+    validate_authority(study_sha256, authority, fixture, bindings, profile=profile)
+    _slot_scope(slots, profile=profile)
+    _require(bindings["policy_sha256"] == digest(policy),
         "worklist policy differs from its exact grant binding")
     _editor_tools(editor_tools or {})
     return digest(
@@ -273,7 +302,7 @@ def journal_identity(
             "authority": authority,
             "fixture": fixture,
             "bindings": bindings,
-            "policy": policy_for(slots),
+            "policy": policy,
             "editor_tools": editor_tools or {},
         }
     )
@@ -298,15 +327,16 @@ def _manifest(path: Path) -> dict:
         "HI ledger inputs differ",
     )
     _require(
-        inputs["policy"] == policy_for(inputs["slots"]),
+        inputs["policy"] == policy_for(inputs["slots"], _child_profile(inputs["policy"])),
         "HI ledger policy differs",
     )
     _require(inputs["bindings"]["policy_sha256"] == digest(inputs["policy"]),
         "ledger worklist policy differs from its exact grant binding")
-    _slot_scope(inputs["slots"])
+    _slot_scope(inputs["slots"], profile=_child_profile(inputs["policy"]))
     _editor_tools(inputs["editor_tools"])
     validate_authority(
-        inputs["study_sha256"], inputs["authority"], inputs["fixture"], inputs["bindings"]
+        inputs["study_sha256"], inputs["authority"], inputs["fixture"], inputs["bindings"],
+        profile=_child_profile(inputs["policy"]),
     )
     _require(
         path == canonical_journal(inputs["study_sha256"], inputs["fixture"]),
@@ -334,6 +364,17 @@ def _admit(state: dict, meta: dict, reservation: dict, *, policy: dict | None = 
         raise PhaseBudgetStop("remaining S2 admitted-attempt ceiling reached")
 
 
+def _intent_capacity(journal: Path, intent: dict, policy: dict) -> None:
+    if _child_profile(policy) is None:
+        return
+    stream = journal / "events.jsonl"
+    used = stream.stat().st_size if stream.exists() else 0
+    # Reserve framing and the unchanged maximum result event before any dispatch.
+    if used + len(core._wire(intent)) + 65_536 + 2_000_000 > 1_500_000_000:
+        failure = AssessmentBudgetStop if intent["cell"] == "assessment" else CellBudgetStop
+        raise failure("journal_byte_capacity")
+
+
 def _replay(path: Path) -> tuple[dict, list[dict], dict]:
     manifest = _manifest(path)
     state, pending = core._start(manifest), None
@@ -350,7 +391,8 @@ def _replay(path: Path) -> tuple[dict, list[dict], dict]:
             slot, request = record["slot_id"], record["request"]
             meta = manifest["inputs"]["slots"][slot]
             core.validate_request(
-                meta["role"], request, editor_tools=manifest["inputs"]["editor_tools"]
+                meta["role"], request, editor_tools=manifest["inputs"]["editor_tools"],
+                policy=_child_profile(manifest["inputs"]["policy"]),
             )
             _require(
                 record == core._intent(manifest, slot, request, state["attempts"] + 1),
@@ -589,10 +631,11 @@ class _DeadlineCore:
         transport: Any,
         bindings: dict,
         editor_tools: dict | None = None,
+        profile: dict | None = None,
     ):
         self.hooks = hooks
-        validate_authority(study_sha256, authority, transport.fixture, bindings)
-        _slot_scope(slots)
+        validate_authority(study_sha256, authority, transport.fixture, bindings, profile=profile)
+        _slot_scope(slots, profile=profile)
         if not transport.fixture:
             runtime_guard()
             _require(
@@ -611,7 +654,7 @@ class _DeadlineCore:
             "authority": copy.deepcopy(authority),
             "fixture": transport.fixture,
             "bindings": copy.deepcopy(bindings),
-            "policy": policy_for(slots),
+            "policy": policy_for(slots, profile),
             "editor_tools": copy.deepcopy(editor_tools or {}),
         }
         _editor_tools(inputs["editor_tools"])
@@ -625,6 +668,7 @@ class _DeadlineCore:
                 fixture=transport.fixture,
                 bindings=bindings,
                 editor_tools=editor_tools,
+                profile=profile,
             ),
         }
         with core.writer_lock(self.journal):
@@ -706,7 +750,8 @@ class _DeadlineCore:
                     ),
                     "undeclared request slot/role/checkpoint",
                 )
-                validate_request(role, request, editor_tools=manifest["inputs"]["editor_tools"])
+                validate_request(role, request, editor_tools=manifest["inputs"]["editor_tools"],
+                    policy=_child_profile(manifest["inputs"]["policy"]))
                 self.hooks.check_scope(state, events, meta)
                 if slot_id in state["results"]:
                     _require(
@@ -745,6 +790,8 @@ class _DeadlineCore:
                 raise IntegrityStop(str(exc)) from exc
             try:
                 _admit(state, meta, core._reservation(role), policy=manifest["inputs"]["policy"])
+                intent = core._intent(manifest, slot_id, request, state["attempts"] + 1)
+                _intent_capacity(self.journal, intent, manifest["inputs"]["policy"])
             except (CellBudgetStop, AssessmentBudgetStop, CheckpointStop, PhaseBudgetStop) as exc:
                 scope = (
                     "cell"
@@ -778,8 +825,12 @@ class _DeadlineCore:
                 raise
             # Both serialization locks are held. No earlier queue-time estimate is used.
             allocation = self.hooks.before_intent(state, events, manifest, slot_id, role, meta)
-            intent = core._intent(manifest, slot_id, request, state["attempts"] + 1)
-            core._append_event(self.journal, "intent", intent, events)
+            profile = _child_profile(manifest["inputs"]["policy"])
+            if profile is None:
+                core._append_event(self.journal, "intent", intent, events)
+            else:
+                core._append_event(self.journal, "intent", intent, events,
+                    max_bytes=max(2_000_000, profile["role_payload_bytes"][role] + 65_536))
             returned = response = None
             stage = "transport_select"
             try:
@@ -919,18 +970,21 @@ class Ledger:
         readiness_validator: Validator | None = None,
         admission_guard: Validator | None = None,
         fixture_owner_exit: Callable | None = None,
+        profile: dict | None = None,
     ):
-        _require(stage in {"readiness", "first", "remaining"}, "unknown completion stage")
+        _require(stage in {"readiness", "first", "remaining", "p4"}
+            and (stage == "p4") == (profile is not None), "unknown completion stage/profile")
         _require(
             readiness_validator is None or callable(readiness_validator),
             "invalid readiness validator",
         )
         _require(admission_guard is None or callable(admission_guard), "invalid admission guard")
         _require(
-            stage == "readiness" or readiness_validator is not None,
+            stage == "readiness" or stage == "p4" or readiness_validator is not None,
             "comparison admission requires the bound readiness-review validator",
         )
-        validate_authority(study_sha256, authority, transport.fixture, bindings)
+        _require(stage != "p4" or callable(admission_guard), "P4 requires its bound parent admission guard")
+        validate_authority(study_sha256, authority, transport.fixture, bindings, profile=profile)
         _require(
             Path(journal) == canonical_journal(study_sha256, transport.fixture),
             "completion must use its single new canonical journal",
@@ -959,6 +1013,7 @@ class Ledger:
             transport=transport,
             bindings=bindings,
             editor_tools=editor_tools,
+            profile=profile,
         )
         self.journal, self.transport, self.manifest = (
             self._core.journal,
@@ -979,6 +1034,9 @@ class Ledger:
         return self._core.dispatch(slot_id, role, request, checkpoint=checkpoint)
 
     def check_scope(self, state: dict, events: list, meta: dict) -> None:
+        if self.stage == "p4":
+            _require(meta["pair"] in state["execution_pairs"], "P4 child prompt scope differs")
+            return
         if (self.stage == "readiness" and meta["cell"] != state.get("execution_pairs", PAIRS)[0] + ":adaptive") or (
             self.stage == "first" and meta["pair"] != state.get("execution_pairs", PAIRS)[0]
         ):

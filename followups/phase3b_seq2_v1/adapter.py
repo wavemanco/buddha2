@@ -27,7 +27,7 @@ class CompatibleProposer(editor.AccountedProposer):
     def __init__(self, *, pilot: str, study_sha256: str, dispatch: Callable,
                  audit_dir: Path, fixture: bool, halt: Callable,
                  register_contract: Callable | None = None, source_sha256: str | None = None,
-                 register_deadline: Callable | None = None):
+                 register_deadline: Callable | None = None, request_policy: dict | None = None):
         try:
             audit_dir = Path(audit_dir)
             roots = (strategy.ROOT / "runs/phase3b-seq2-v1/native", Path("/results/phase3b-seq2-v1/native"))
@@ -44,8 +44,14 @@ class CompatibleProposer(editor.AccountedProposer):
             halt("c1_audit_boundary_violation")
             raise ProposerError("C1 audit must be below its own checkpoint output root")
         super().__init__(pilot=pilot, study_sha256=study_sha256, dispatch=dispatch,
-                         audit_dir=audit_dir, fixture=fixture, halt=halt)
+                         audit_dir=audit_dir, fixture=fixture, halt=halt, request_policy=request_policy)
         self._register_contract = register_contract
+        self._context_limits = None
+        if request_policy is not None:
+            from followups.phase4_cm1_v1.policy import context_limits
+
+            limits = context_limits(request_policy)
+            self._context_limits = {key: limits[key] for key in ("context_file_bytes", "context_total_bytes")}
         self._register_deadline = register_deadline
         self._conversation_deadlines: dict[str, dict] = {}
         self._c1_sessions: dict[str, dict] = {}
@@ -62,6 +68,8 @@ class CompatibleProposer(editor.AccountedProposer):
     def _opencode(self, cwd, mission, system, wall):
         # Waiting for the other native editor never consumes this conversation's clock.
         with editor._SERIAL:
+            if self._known_provider_terminal is not None:
+                raise editor.KnownProviderTerminalStop(self._known_provider_terminal)
             self._local.cwd = Path(cwd)
             label = self._local.label
             if not callable(self._register_deadline):
@@ -79,6 +87,8 @@ class CompatibleProposer(editor.AccountedProposer):
 
     @strategy.scoped
     def call(self, mission, context_dir=None, label="", **kwargs):
+        if getattr(self, "_known_provider_terminal", None) is not None:
+            raise editor.KnownProviderTerminalStop(self._known_provider_terminal)
         try:
             context = Path(context_dir)
             root = Path(self.audit_dir).parent.resolve(strict=True)
@@ -98,8 +108,9 @@ class CompatibleProposer(editor.AccountedProposer):
         if label in self._c1_sessions:
             raise ProposerError("C1 logical authoring session has already been attempted")
         try:
-            prepared = (contract.prepare_selector_contract(mission, context, label) if label == "select.seq2"
-                        else contract.prepare_contract(mission, context, label))
+            prepared = (contract.prepare_selector_contract(mission, context, label, context_limits=self._context_limits)
+                        if label == "select.seq2" else contract.prepare_contract(mission, context, label,
+                            context_limits=self._context_limits))
         except (contract.ContractError, OSError, TypeError, ValueError) as exc:
             self.halt("c1_contract_input_violation")
             raise ProposerError("C1 contract rejected its native input") from exc
@@ -143,7 +154,12 @@ class CompatibleProposer(editor.AccountedProposer):
                 write_bytes_once(audit / "context-view" / name, data)
             if self._register_contract is not None:
                 self._register_contract(label, copy.deepcopy(prepared))
-            reply = super().call(prepared["effective_mission"], context, label, **kwargs)
+            try:
+                reply = super().call(prepared["effective_mission"], context, label, **kwargs)
+            except ProposerError:
+                if self._known_provider_terminal is not None:
+                    raise editor.KnownProviderTerminalStop(self._known_provider_terminal) from None
+                raise
             record.update(status="returned", native_reply_ok=reply.ok)
             return reply
         except Exception:

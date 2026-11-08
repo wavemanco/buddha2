@@ -1,3 +1,11 @@
+# P4-CM1 offline accepted; ready for fresh keys — 8 November 2026
+
+The [accepted kit](docs/phases/phase-4/PHASE4_CM1_KIT_REPORT.md) passed 106 unique collector tests, all 16 mandatory regressions, scoped static checks, actual native mocked execution, passive exports, Windows pre-credential checks and independent review. [Controlled intake](evidence/phase4-cm1-v1/controlled-intake-v1.json) certified 737 eligible units and 24 frozen selections; production provider preflight passed. No real keys or P4 paid calls have yet been used, and no scientific outcome is claimed.
+
+Next is fresh masked keys under the dedicated supervisor, then the already-approved two exposed fixed-only cost qualifications and the frozen comparison if qualification passes. Do not restart accepted offline preparation or resample. Limits remain $1,200 total/$100 development/$850 inference/$250 assessment/$75 per inference cell and 40,914 admissions; preserve closed studies and historical held liability. See [acceptance](evidence/phase4-cm1-v1/offline-acceptance-v1.json).
+
+The public projection separately passed 89 local tests and scoped static checks under its own source identity. No repository CI workflow or remote-CI-green result is claimed. Copied evidence identifies the frozen accepted study; public preparation must compute its own identity rather than relabel that study. Earlier status paragraphs below are historical and superseded by this current direction; stable working rules still apply.
+
 # Phase 4 confirmation is proposed only - 7 November 2026
 
 Read [P4-CM1 definition 1.0](docs/phases/phase-4/PHASE4_COST_MATCHED_CONFIRMATION_DEFINITION.md) and CURRENT_SPEC.md before further work. Current authority is documentation only: no implementation, tests, credential request, new kit, holdout opening or provider calls. The proposed $1,200 cap and 40,914 admissions are not approved funding/work. The completed Phase 3B study and its scientific/artifact identities remain closed and unchanged.

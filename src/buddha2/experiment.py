@@ -65,6 +65,10 @@ def inspect_study(target: Path) -> dict:
 def main(argv: list[str] | None = None) -> int:
     args = list(sys.argv[1:] if argv is None else argv)
     try:
+        if args and args[0] == "phase4":
+            if str(ROOT) not in sys.path:
+                sys.path.insert(0, str(ROOT))
+            return importlib.import_module("followups.phase4_cm1_v1.workflow").main(args[1:])
         if args and args[0] in {"prepare", "grant", "report"}:
             return _backend("workflow").main(args)
         if args and args[0] == "launch":
@@ -78,6 +82,7 @@ def main(argv: list[str] | None = None) -> int:
         commands.add_parser("prepare", help="freeze a new comparison in the contained runtime")
         commands.add_parser("grant", help="write an explicit fixture or approved live grant")
         commands.add_parser("report", help="reconstruct a report from saved accounted evidence")
+        commands.add_parser("phase4", help="prepare, grant, intake or report the bounded P4-CM1 study")
         commands.add_parser("launch", help="use the existing inspected, source-bound launcher")
         commands.add_parser("assess-saved", help="prepare or verify an assessment-only packet without model calls")
         commands.add_parser("assess-pending", help="prepare or report controlled execution of pending judgments")

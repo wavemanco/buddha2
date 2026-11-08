@@ -44,6 +44,24 @@ def _assessment_only(study: Path) -> bool:
     return descriptor.get("kind") == "buddha2-assessment-only-execution-v1"
 
 
+def _phase4_cm1(study: Path) -> bool:
+    descriptor = read_json(_completion_path(study))
+    if not isinstance(descriptor, dict):
+        raise ContractError("completion study must be an object")
+    return descriptor.get("kind") == "buddha2-phase4-cm1-v1"
+
+
+def _claim_study(study: Path, checked: dict) -> None:
+    if checked.get("assessment_only") is True:
+        from . import assessment_execution
+        assessment_execution.claim(checked)
+    elif _phase4_cm1(study):
+        from followups.phase4_cm1_v1 import workflow
+        workflow.claim(checked)
+    else:
+        _live_study_claim(checked, publish=True)
+
+
 def _live_study_claim(checked: dict, *, publish: bool = False) -> dict:
     """One new immutable allowance claim; never open an old R2 global claim."""
     if (checked.get("mode") != "provider" or checked.get("fixture") is not False
@@ -90,6 +108,13 @@ def _workflow_preflight(study: Path, grant: Path, fixture: bool, stage: str, *, 
         if result.get("fixture") is not fixture:
             raise ContractError("assessment execution fixture differs")
         return result
+    if _phase4_cm1(study):
+        from followups.phase4_cm1_v1 import workflow
+        result = workflow.preflight(study, grant, stage,
+            "provider-config" if configuration_only else "preflight")
+        if result.get("fixture") is not fixture:
+            raise ContractError("Phase4 execution fixture differs")
+        return result
     from .workflow import preflight as check
     return check(study, grant, fixture, stage, require_offline_gate=not configuration_only)
 
@@ -98,6 +123,9 @@ def _workflow_run(study: Path, grant: Path, stage: str, transport: Any) -> dict:
     if _assessment_only(study):
         from . import assessment_execution
         return assessment_execution.run(study, grant, stage=stage, transport=transport)
+    if _phase4_cm1(study):
+        from followups.phase4_cm1_v1 import workflow
+        return workflow.run(study, grant, stage=stage, transport=transport)
     from .workflow import run
     return run(study, grant, stage=stage, transport=transport)
 
@@ -120,6 +148,9 @@ def preflight(study: Path, grant: Path, stage: str, mode: str, *, supervisor_age
     if _assessment_only(study):
         from . import assessment_execution
         return assessment_execution.preflight(study, grant, stage, mode, supervisor_agent=supervisor_agent)
+    if _phase4_cm1(study):
+        from followups.phase4_cm1_v1 import workflow
+        return workflow.preflight(study, grant, stage, mode, supervisor_agent=supervisor_agent)
     proposed = read_json(grant)
     if not isinstance(proposed, dict):
         raise ContractError("explicit completion authority is required")
@@ -245,11 +276,7 @@ def execute(study: Path, grant: Path, stage: str, mode: str, inspection: Path, *
                     for row in mock.records:
                         write_once(Path(checked["run"]) / "wire" / f"{row['slot_id']}.json", row)
                     return {**result, "new_mock_http_calls": mock.http_calls}
-            if checked.get("assessment_only") is True:
-                from . import assessment_execution
-                assessment_execution.claim(checked)
-            else:
-                _live_study_claim(checked, publish=True)
+            _claim_study(study, checked)
             _bind_credentials(checked, keys)
             from .transport import Transport
             transport = Transport(anthropic_api_key=keys["anthropic_api_key"], openai_api_key=keys["openai_api_key"],
