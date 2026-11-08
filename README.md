@@ -1,6 +1,6 @@
 # Buddha2
 
-Phase 3B's four-prompt development pilot is complete. Native two-round adaptation and fixed best-of-twelve now have fully scored saved outputs. The positive average adaptive gap is driven by one prompt's semantic grouping result. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md).
+Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 
 [Explore the system architecture](docs/architecture/README.md), including Harness², the current agent runner and model roles, our surrounding code, NoveltyBench and passive Inspect.
 
@@ -28,14 +28,14 @@ The software we build to make experiments reliable—accounting, isolation, hist
 
 **Completed 7 November 2026:** actual Harness2 `seq,k=2` versus fixed best-of-twelve on four exposed development prompts. All eight primary aliases and twelve assessment targets are scored.
 
-| Arm | Mean utility, four prompts | Inference cost, three new prompts |
-|---|---:|---:|
-| Fixed best-of-twelve | 6.112825 | $2.622912 |
-| Selected native two-round adaptation | 7.417165 | $16.512431 |
+| Arm | Mean distinct@10, four prompts | Mean utility, four prompts | Inference cost, three new prompts |
+|---|---:|---:|---:|
+| Fixed best-of-twelve | 7.75 | 6.112825 | $2.622912 |
+| Selected native two-round adaptation | 10 | 7.417165 | $16.512431 |
 
 The mean paired difference is +1.304340, with two wins and two losses. One password prompt's semantic-grouping result drives the positive mean. Mean c2-minus-c1 is +0.018056, including fresh sampling with an unchanged strategy on that prompt. Adaptive inference cost about 6.30 times fixed inference over the new three pairs. This is a descriptive development result, with no held-out, population or cost-efficiency claim.
 
-The continuation used 1,026 settled calls/$19.981693 under its $350 cap, preserving the original assessed pair. The complete four-prompt comparison totals 1,387 calls/$31.221549. Zero-call replay matched all eight reports; both passive Inspect exports passed. See the [full result](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md) and [closure evidence](evidence/phase3b-seq2-v1/remaining-pairs-live-outcome-v1.json).
+The continuation used 1,026 settled calls/$19.981693 under its $350 cap, preserving the original assessed pair. The complete four-prompt comparison totals 1,387 calls/$31.221549. Zero-call replay matched all eight reports; both passive Inspect exports passed. See the [full result](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md) and [closure evidence](evidence/phase3b-seq2-v1/remaining-pairs-live-outcome-v1.json).
 
 <details>
 <summary>Earlier execution and engineering history</summary>
@@ -106,7 +106,7 @@ Inspection shows sealed study metadata without model calls or opening historical
 
 ## Start here
 
-- [Completed Phase 3B result and limitations](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT.md)
+- [Current Phase 3B result and loss analysis](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md)
 - [Engineering audit, cuts and practical delivery schedule](docs/ENGINEERING_AUDIT.md)
 - [Current status and decisions](docs/research/CURRENT_SPEC.md)
 - [Research method and interpretation](docs/RESEARCH_METHOD.md)
