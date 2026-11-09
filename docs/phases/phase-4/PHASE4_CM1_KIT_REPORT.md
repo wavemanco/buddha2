@@ -1,3 +1,7 @@
+# Current P4-CM1 outcome — closed incomplete
+
+The paid attempt closed on 9 November 2026 UTC after 2,651 known requests/$44.975462, zero new held liability and no assessment. Three confirmation units started; one generation pair completed, 21 units remained unopened. Our adapter falsely escalated a supported optional-probe failure to a global integrity halt. See the [live report](PHASE4_CM1_LIVE_REPORT.md) and [reviewed outcome](../../../evidence/phase4-cm1-v1/live-outcome-v1.json). Source remains unchanged. No repair or restart followed; full saved-report replay v3 passed without new calls. The preparation record below retains its prelaunch wording and does not authorize resumption.
+
 # P4-CM1 execution kit — offline accepted, frame certified
 
 8 November 2026. **Offline acceptance, controlled eligibility intake and production provider preflight are complete. The accepted study is ready for fresh masked keys.** P4-CM1 has made zero paid provider calls and used no real provider credentials. Development cost qualification, confirmation generation and scientific assessment have not started. The [acceptance summary](../../../evidence/phase4-cm1-v1/offline-acceptance-v1.json) is the primary preparation record.

@@ -1,10 +1,10 @@
-# P4-CM1 offline accepted; ready for fresh keys — 8 November 2026
+# P4-CM1 closed incomplete — 9 November 2026 UTC
 
-The [accepted kit](docs/phases/phase-4/PHASE4_CM1_KIT_REPORT.md) passed 106 unique collector tests, all 16 mandatory regressions, scoped static checks, actual native mocked execution, passive exports, Windows pre-credential checks and independent review. [Controlled intake](evidence/phase4-cm1-v1/controlled-intake-v1.json) certified 737 eligible units and 24 frozen selections; production provider preflight passed. No real keys or P4 paid calls have yet been used, and no scientific outcome is claimed.
+Read the [live report](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) and [reviewed outcome](evidence/phase4-cm1-v1/live-outcome-v1.json). Both cost qualifications passed; three of 24 confirmation units started, one generation pair completed and 21 remained unopened. Accounting reconciles 2,651 requests/$44.975462, assessment zero and new held liability zero; historical $22.88 held remains separate. All official metrics are UNEVALUATED.
 
-Next is fresh masked keys under the dedicated supervisor, then the already-approved two exposed fixed-only cost qualifications and the frozen comparison if qualification passes. Do not restart accepted offline preparation or resample. Limits remain $1,200 total/$100 development/$850 inference/$250 assessment/$75 per inference cell and 40,914 admissions; preserve closed studies and historical held liability. See [acceptance](evidence/phase4-cm1-v1/offline-acceptance-v1.json).
+Our adapter required produced.md for a supported failed optional inv1 probe and escalated a 38/39-file inventory mismatch to a durable global halt. The halt was correctly obeyed. No repair, restart, new call or source change followed. All 207 frozen inputs remain unchanged; passive exports, full saved replay v3 and runtime cleanup are verified. No remote-CI-green or efficacy claim is made.
 
-The public projection separately passed 89 local tests and scoped static checks under its own source identity. No repository CI workflow or remote-CI-green result is claimed. Copied evidence identifies the frozen accepted study; public preparation must compute its own identity rather than relabel that study. Earlier status paragraphs below are historical and superseded by this current direction; stable working rules still apply.
+Do not relaunch, request keys, repeat preparation/sampling or edit frozen source under this closure instruction. The proposed next action is a focused offline compatibility repair plus saved failure/success replay; it has not been implemented and no new block is authorized here. Preserve original run records and earlier $0 wrapper failures. Earlier live/prelaunch paragraphs below are historical where superseded; stable working rules still apply.
 
 # Phase 4 confirmation is proposed only - 7 November 2026
 

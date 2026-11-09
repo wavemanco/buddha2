@@ -1,6 +1,6 @@
 # Buddha2 documentation
 
-Start with [the project overview](../README.md), [current status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). The [P4 execution kit](phases/phase-4/PHASE4_CM1_KIT_REPORT.md) is accepted offline; [controlled intake](../evidence/phase4-cm1-v1/controlled-intake-v1.json) certified 737 eligible units and 24 selections. Production preflight passed; fresh masked keys and the authorized cost qualifications are next. No P4 live/scientific result is claimed. See [acceptance evidence](../evidence/phase4-cm1-v1/offline-acceptance-v1.json).
+Start with [the project overview](../README.md), [current status](research/CURRENT_SPEC.md) and [research method](RESEARCH_METHOD.md). P4-CM1 is [closed incomplete](phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) after an adapter compatibility error, with no grading or efficacy result. See the [reviewed outcome](../evidence/phase4-cm1-v1/live-outcome-v1.json), [saved replay](../evidence/phase4-cm1-v1/saved-closure-replay-v3.json) and [runtime closure](../evidence/phase4-cm1-v1/root-closure-verification-v1.json). No repair or restart is claimed.
 
 ## Research and specifications
 

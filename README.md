@@ -1,6 +1,6 @@
 # Buddha2
 
-**P4-CM1 is accepted offline and ready for fresh masked keys.** Controlled intake certified 737 eligible WildChat units and froze 24 selections. The $1,200 block is approved; production preflight passed without keys or provider calls. Cost qualification and scientific execution have not started. See the [kit report](docs/phases/phase-4/PHASE4_CM1_KIT_REPORT.md), [acceptance evidence](evidence/phase4-cm1-v1/offline-acceptance-v1.json), [eligible frame](docs/phases/phase-4/PHASE4_CM1_ELIGIBILITY_REPORT.md) and [frozen definition](docs/phases/phase-4/PHASE4_COST_MATCHED_CONFIRMATION_DEFINITION.md).
+**P4-CM1 closed incomplete after 2,651 known requests/$44.975462, with zero new held liability.** Three of 24 confirmation units started; one generation pair completed and 21 remained unopened. An adapter compatibility error escalated a supported optional-probe failure. No grading ran: quality, distinctness and utility remain unevaluated. Saved replay and passive exports passed; no repair or restart followed. See the [live report](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) and [reviewed outcome](evidence/phase4-cm1-v1/live-outcome-v1.json).
 
 Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 
@@ -110,7 +110,8 @@ Inspection shows sealed study metadata without model calls or opening historical
 
 ## Start here
 
-- [Accepted P4 kit and next execution step](docs/phases/phase-4/PHASE4_CM1_KIT_REPORT.md)
+- [P4 closed outcome, costs and confirmed stop cause](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md)
+- [P4 offline preparation evidence](docs/phases/phase-4/PHASE4_CM1_KIT_REPORT.md)
 - [Current Phase 3B result and loss analysis](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md)
 - [Engineering audit, cuts and practical delivery schedule](docs/ENGINEERING_AUDIT.md)
 - [Current status and decisions](docs/research/CURRENT_SPEC.md)

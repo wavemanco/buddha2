@@ -1,0 +1,33 @@
+{
+  "kind": "phase4-cm1-root-closure-verification-v1",
+  "observed_at_utc": "2026-11-09T02:19:15.5295114Z",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421",
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "outcome_file_sha256": "f3a9b6133e674889c2e65023bf535aa9e2456b1194962573454b3c74a82cca9e",
+  "outcome_sha256": "58573d94477390f886da006c2ff15f85c271d932072e67840f6e12521866ad4c",
+  "paid_calls": 2651,
+  "known_spent_micro_usd": 44975462,
+  "new_reserved_micro_usd": 0,
+  "historical_held_micro_usd": 22880000,
+  "source_inputs_checked_unchanged": 207,
+  "saved_replay_v3": "runs/phase4-cm1-v1/saved-closure-replay-v3/result.json",
+  "saved_replay_passed": true,
+  "replay_network": "none",
+  "replay_new_provider_calls": 0,
+  "replay_terminal_exit_code": 0,
+  "owned_actors_absent": [
+    "09dc4f93c9992d553127d64f293a050f5f92ff5177421c2caf1fdf994f371e23",
+    "838383d8365c1e67821f1ca886d8ebb2259029464bfafd81247ffe1a52e050ef",
+    "4ac138e04a63c596c998797c3797ec5ec150ae2ecc00f2f6df167d2046d53820",
+    "eeb2d17cd775645f3fc72ef69f3322b52b5f66bf83c587d0941f9c5bf628131c",
+    "3e9ae8a22aa241ac470f3a2f2b176cce81a0f5a82d65f0bc765c9272e24bb710"
+  ],
+  "launcher_result": "runs/phase3b-seq2-v1/launcher/b594c9dce8654c9ead05cee236fc0925.result.json",
+  "launcher_state": "exited",
+  "launcher_exit_code": 0,
+  "provider_stream_content_retained": false,
+  "credential_cleanup_basis": "Exact provider container absent; key-input helper clears payload/key variables and disposes input process in finally; inner launch completed. Outer visible PowerShell may remain open.",
+  "new_paid_continuation_started": false,
+  "source_fix_performed": false,
+  "scientific_complete": false
+}

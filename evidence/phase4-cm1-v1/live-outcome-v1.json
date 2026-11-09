@@ -1,0 +1,150 @@
+{
+  "accounted_spent_micro_usd": 44975462,
+  "accounting_basis": "Usage-based public PAYG accounting, not an invoice; historical held liability is not current spending.",
+  "automatic_repeat": false,
+  "cause": {
+    "actual_context_files": 38,
+    "global_halt_obeyed": true,
+    "known_failure": "ranker_not_finished",
+    "optional_probe": "inv1",
+    "our_error": "C1 layout unconditionally required produced.md, escalated the inventory mismatch to c1_contract_input_violation and durable global halt.",
+    "probe_settled_requests": 12,
+    "repair_performed": false,
+    "required_context_files": 39,
+    "restart_performed": false,
+    "saved_validator_input_sha256": "bcd51c8e51a9ab8f507b72a32a5a13c28cd464a3067acd62146445f598fa7970",
+    "saved_validator_input_unchanged": true,
+    "size_or_path_anomaly_found": false,
+    "sole_missing_file": "pool/inv1/produced.md",
+    "type": "adapter_false_escalation_of_supported_optional_probe_failure",
+    "upstream_representation": "Failed optional probe has rollout.md and intentionally no produced.md."
+  },
+  "closed_at_pacific": "2026-11-08T18:01:31.294283-08:00",
+  "closed_at_utc": "2026-11-09T02:01:31.294283+00:00",
+  "complete_generation_pairs": 1,
+  "confirmation_units_planned": 24,
+  "confirmation_units_started": 3,
+  "confirmation_units_unopened": 21,
+  "created_at_utc": "2026-11-09T02:19:35.528651+00:00",
+  "development_qualifications_passed": 2,
+  "efficacy_claim": false,
+  "grouping_sensitivity": "UNEVALUATED",
+  "historical_held_micro_usd_separate": 22880000,
+  "independent_closure_audit": {
+    "closed_children_reconciled": 5,
+    "file_sha256": "be0ea523d6d3bb983e6b87330f7ec3bb7da35cee785692db56862967a20f2dab",
+    "review_status": "completed",
+    "reviewer": "p4_cold_review-independent-reviewer",
+    "seal": "fbd7fbf867937d08c7062005c55abe1119b63c488e3727b1e1b6b052c25d3e05",
+    "source_inputs_verified": 207
+  },
+  "kind": "phase4-cm1-reviewed-live-outcome-v1",
+  "known_requests": 2651,
+  "native_outcome_file_sha256": "f3a9b6133e674889c2e65023bf535aa9e2456b1194962573454b3c74a82cca9e",
+  "native_outcome_sha256": "58573d94477390f886da006c2ff15f85c271d932072e67840f6e12521866ad4c",
+  "new_exposure_records": [
+    {
+      "normalized_prompt_sha256": "450b634e47c3fd0ea7d9107bd44934b9a5f9634be92fc197d13db45aa5c917c2",
+      "pilot_id": "p4-01",
+      "prompt_sha256": "5c559489ac2cbb51f52f78e9ec9804f474603296997ad2f3b1d6b7b0c58bbe6e",
+      "source_task_id": "WildChat-d696b983c39b805d279290e1e500eab8"
+    },
+    {
+      "normalized_prompt_sha256": "bf8ac2356281a799250c3dc00f81bf3514db5e62567b51f5fe2d7ba14279c284",
+      "pilot_id": "p4-02",
+      "prompt_sha256": "5ff5841e831c535f34d508a0997f975747fad53dbbf0d1b63b1fed2dac8d749c",
+      "source_task_id": "WildChat-9b5601805189865180e53e094455a6b2"
+    },
+    {
+      "normalized_prompt_sha256": "fff6273add95f33489f5df7dde708217d24d2feb121de808c84daee1e827e260",
+      "pilot_id": "p4-03",
+      "prompt_sha256": "c8d9bf1203b4b69807dce8ff996a9cac67cf0e4814fcd6f03546f28f10b2bed8",
+      "source_task_id": "WildChat-3a017c528b491f0377023991dc83cb69"
+    }
+  ],
+  "new_reserved_micro_usd": 0,
+  "next_action": "Proposed focused offline compatibility repair and saved failure/success replay before any paid continuation; no implementation or new block is authorized by this report.",
+  "official_assessment_requests": 0,
+  "official_distinctness": "UNEVALUATED",
+  "official_quality": "UNEVALUATED",
+  "official_utility": "UNEVALUATED",
+  "p4_02_fixed_native_cost_ratio": 1.2734429638969118,
+  "passive_exports": {
+    "closure": {
+      "file_sha256": "3ad27e08423bb3bf910a67757a236a0386c591d226c1c19dc6fb5a5331b5e5a7",
+      "receipt": "evidence/phase4-cm1-v1/inspect-closure-live-v1.json"
+    },
+    "first-pair": {
+      "file_sha256": "649410edf2c67134227020b2484c47ed49efb7082f61d503184ee0ddb1ed9ca3",
+      "receipt": "evidence/phase4-cm1-v1/inspect-first-pair-live-v1.json"
+    }
+  },
+  "quality_order_selection_effects": "UNEVALUATED; accepted selections are saved for first two units but no score-based gain or decomposition is available.",
+  "remote_ci_green_claimed": false,
+  "review_content_disclosure": "One already-exposed dev02 prompt was accidentally displayed once during early review; no held-out/provider content was displayed in that incident.",
+  "runtime_cleanup": {
+    "controller_absence_confirmed_by_root_supervisor": true,
+    "credential_cleanup_reported": "Runtime credential function finally clears in-memory key variables; no key material was read for this report.",
+    "launcher_exit_code_reported": 0,
+    "launcher_result_id": "b594c9dce8654c9ead05cee236fc0925",
+    "launcher_state_reported": "exited",
+    "retained_launcher_streams_reported": false,
+    "verification_file_sha256": "15bf291de17cb1b7702483c9b12d5d7e23e9a494ae0229dfa8fae9e6b5ee3b02",
+    "verification_receipt": "evidence/phase4-cm1-v1/root-closure-verification-v1.json",
+    "visible_parent_powershell_may_remain_open": true
+  },
+  "saved_full_report_replay": {
+    "new_provider_calls": 0,
+    "passed_claimed": true,
+    "receipt": "evidence/phase4-cm1-v1/saved-closure-replay-v3.json",
+    "receipt_file_sha256": "1f8024df30a33051d31843936887e065d4d9cf73a184cff6a34cb756560febf1",
+    "status": "passed-v3",
+    "v1": "wrapper import/configuration failure, zero calls, retained",
+    "v2": "runtime-environment configuration failure, zero calls, retained",
+    "v3": "Passed keyless/network-none/read-only saved reconstruction; native stopped outcome unchanged."
+  },
+  "scientific_complete": false,
+  "scopes": [
+    {
+      "known_requests": 1887,
+      "micro_usd": 11295625,
+      "scope": "development qualifications",
+      "status": "both passed"
+    },
+    {
+      "fixed_micro_usd": 630482,
+      "known_requests": 229,
+      "micro_usd": 8250463,
+      "native_micro_usd": 7619981,
+      "scope": "p4-01",
+      "status": "native complete; fixed failed candidate5 invalid_plan"
+    },
+    {
+      "fixed_micro_usd": 13590601,
+      "known_requests": 472,
+      "micro_usd": 24262929,
+      "native_micro_usd": 10672328,
+      "scope": "p4-02",
+      "status": "both generation arms complete; fixed/native cost ratio exceeds pair band"
+    },
+    {
+      "fixed_micro_usd": 0,
+      "known_requests": 63,
+      "micro_usd": 1166445,
+      "native_micro_usd": 1166445,
+      "scope": "p4-03",
+      "status": "native incomplete; no accepted c1/c2 or fixed output"
+    }
+  ],
+  "sha256": "851cac3c8edf873ffe4b4b6c98d2d8501959b1b208f75d849a5adc3b62ac69ea",
+  "source_inputs": 207,
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "source_unchanged": true,
+  "spent_by_allocation_micro_usd": {
+    "assessment": 0,
+    "development": 11295625,
+    "inference": 33679837
+  },
+  "status": "paused-integrity-or-liability",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421"
+}

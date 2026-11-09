@@ -1,0 +1,63 @@
+{
+  "activity_graph_available": false,
+  "all_observed_dates_year": 2026,
+  "container_exit_code": 0,
+  "dated_events_verified": 229,
+  "diagnostic_only_not_live_gate": true,
+  "embedded_native_snapshot_equal": true,
+  "eval_file_sha256": "d63a093e7e15717359542026c0cf3b1b8c9a9459a4150190779becc012292ea1",
+  "export_observation_at_utc": "2026-11-08T22:44:49.830536+00:00",
+  "export_paths": [
+    "export/logs/phase4.eval",
+    "export/viewer/index.html",
+    "export/native-audit.csv",
+    "export/result.json",
+    "export/semantic.json"
+  ],
+  "exporter_model_network_attempts": {
+    "external_socket_attempts": [],
+    "model_constructor_attempts": []
+  },
+  "external_provider_calls": 0,
+  "fixture": false,
+  "image": "sha256:25b07e51ef9ae948e7f3de5314b91b1ec4c120219ceebfde4b4064525c40a03d",
+  "imported_usage_models": [
+    "claude-opus-5",
+    "claude-sonnet-5-5"
+  ],
+  "inspect_results_absent": true,
+  "kind": "phase4-cm1-passive-first-pair-export-v1",
+  "live_controller_touched": false,
+  "missing_output_cases": 23,
+  "model_tool_events_fabricated": false,
+  "model_usage_preserved": true,
+  "native_audit_file_sha256": "f79f0dd8680f4c03eae068cbaf843467639c1bf57b2575616ed83991c58ad7cc",
+  "native_files_writable": false,
+  "native_status": "running",
+  "network": "none",
+  "non_null_native_sample_dates_verified": 2,
+  "non_null_output_cases_by_alias": {
+    "c1": 1,
+    "c2": 1,
+    "fixed": 0,
+    "selected_checkpoint": 1
+  },
+  "output_semantics_preserved": true,
+  "owned_container": "25675c82469b60afbe641253f8a9bde1b805db211815067b48a23cbdcf2539c3",
+  "owned_container_absent": true,
+  "partially_missing_output_cases": 1,
+  "passed": true,
+  "real_credentials_used": false,
+  "result_file_sha256": "1924c1d3d10bd22114ab0babe84e4b70f316475ab1b908ae605d7f28cf76789c",
+  "roundtrip_equal": true,
+  "samples": 24,
+  "sdk_free_image": true,
+  "semantic_file_sha256": "664bab50a3f6bf7bd4ab0381925a64342f7f7ddf9f676b61e4551c5aba0d4890",
+  "server_started": false,
+  "sha256": "c82352200a899a7e375e50fd5279e3e5bbdd0b80f29eba8d7e2a79922461d58e",
+  "snapshot_preserved": true,
+  "snapshot_sha256": "dec7f194985d6879c48bb6a0ed9ac9ad9f0e3babb8361d779cb895cd4bf09804",
+  "source_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "study_sha256": "13b9273ca9e0f7bd79d98cb8013429753cebe6341919c006a32e2fd67236f421",
+  "viewer_opened": false
+}
