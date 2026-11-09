@@ -1,0 +1,62 @@
+{
+  "kind": "phase4-optional-probe-compatibility-fix-v1",
+  "recorded_at_utc": "2026-11-09T08:48:23.6231929Z",
+  "status": "implemented-and-offline-verified",
+  "source_files": {
+    "followups/phase3b_seq2_v1/contract.py": "3fb83a5462639d8eee481aa77174f226ef1eb5e23ad3b110ce95b75ea11ee464",
+    "followups/phase3b_seq2_v1/evidence.py": "e3bb96387fa7b1d4a4252d1bf15787cab6aa90af283fc865ce1cedad57c4b501",
+    "followups/phase3b_seq2_v1/native.py": "817acc37df8905ea6e185d72a426b9f0ee90ee7069777c32b5eb18b614100b46",
+    "followups/phase3b_seq2_v1/adapter.py": "cdc1eec99e84160eef9e8ad14444bac31bce8ba4706b946c00bd2a53aa73ca8c",
+    "followups/phase3b_seq2_v1/test_information_s2.py": "584e2ab5c7ba5cdacb20c69a867b77900535fad3fd000a3ea30375c26377b668",
+    "followups/phase3b_seq2_v1/test_native_s2.py": "f55f08caf1a88f1c011ec588ccc43f55b8158a8b65772f3c55481e88e5d5f9b8",
+    "tests/test_phase4_terminal.py": "a792b984ea21ab7dc3df47592848e8ccf1ae3ac063d75ac771846cb244018364"
+  },
+  "scope": "Accept only the absent produced.md of a history-eligible optional probe with adapter-validated saved failure and result hashes; preserve mandatory evidence and the normal evidence reader.",
+  "schema_validation_is_journal_validation": false,
+  "journal_binding": "PortfolioAdapter.optional_probe_failures validates exact saved failure by validate_partial and validate_rollout against authoritative known_results.",
+  "tests": 129,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "ruff_exit": 0,
+  "mypy_exit": 0,
+  "bandit_exit": 0,
+  "test_input_files_unchanged": true,
+  "test_scope": "Phase4 unit modules excluding the explicit native journey plus seq2 native/information modules; includes actual pinned native two-round synthetic optional-failure case.",
+  "saved_author_replays": [
+    {
+      "known_omissions": 1,
+      "bound_failure_results": 12,
+      "input_files": 38,
+      "stage": "c1",
+      "passed": true,
+      "pair": "p4-03"
+    },
+    {
+      "passed": true,
+      "input_files": 39,
+      "pair": "p4-02",
+      "stage": "c1",
+      "known_omissions": 0
+    },
+    {
+      "passed": true,
+      "input_files": 75,
+      "pair": "p4-02",
+      "stage": "c2",
+      "known_omissions": 0
+    }
+  ],
+  "saved_replay_receipt_sha256": "d09645e704c28b73b8daa8043ebc6c010ff09d676a0fc0f8a95c9d17973b77a6",
+  "saved_inputs_and_closed_records_unchanged": true,
+  "old_207_source_snapshot_sha256": "618834cb1d4c0ce9bfd3edbe71aa0225c7a949b0a2b6fd1a4b00dbef529155e7",
+  "new_paid_calls": 0,
+  "old_run_restarted": false,
+  "api_spend": 0,
+  "generic_resumability_status": "being implemented separately in the existing runner; not yet accepted",
+  "limitations": [
+    "An optional selector replay correctly rejected post-run selection.json as extra input; it is not counted as a passing author replay.",
+    "These checks do not establish live scientific performance or complete continuation acceptance."
+  ],
+  "remote_ci_green_claimed": false
+}

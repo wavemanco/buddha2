@@ -1,3 +1,9 @@
+# Offline correction and reusable execution — 9 November 2026
+
+The optional-probe correction passes 129 unit checks, Ruff/Mypy/Bandit and actual saved failing/successful author contexts; see [evidence](../../evidence/phase4-cm1-v1/optional-probe-fix-v1.json). Closed study records and original source identities remain preserved.
+
+The current authorized work is to land general reuse in the existing runner, with actual offline interruption/resumption, zero redispatch of committed work, explicit old/new provenance, cumulative accounting and native stage/rollout reuse. This capability is not yet accepted. No new framework, upstream edits, keys, paid calls or automatic restart. The proposed combined 24-case continuation needs one declared bounded recovery policy, all costs/failures retained and compatibility proof before paid authorization.
+
 # P4-CM1 closed incomplete — 9 November 2026 UTC
 
 The [live report](../phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) records the confirmed adapter false escalation and [reviewed accounting](../../evidence/phase4-cm1-v1/live-outcome-v1.json): 2,651 known requests/$44.975462, development $11.295625, inference $33.679837, assessment $0, new held liability zero. Historical $22.88 held is separate. Both qualifications passed; three of 24 units started, one generation pair completed and 21 remained unopened. Official quality, distinctness, utility and grouping sensitivity are UNEVALUATED.

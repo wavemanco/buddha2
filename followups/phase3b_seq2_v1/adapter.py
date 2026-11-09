@@ -46,6 +46,7 @@ class CompatibleProposer(editor.AccountedProposer):
         super().__init__(pilot=pilot, study_sha256=study_sha256, dispatch=dispatch,
                          audit_dir=audit_dir, fixture=fixture, halt=halt, request_policy=request_policy)
         self._register_contract = register_contract
+        self._optional_probe_failures: Callable | None = None
         self._context_limits = None
         if request_policy is not None:
             from followups.phase4_cm1_v1.policy import context_limits
@@ -87,8 +88,9 @@ class CompatibleProposer(editor.AccountedProposer):
 
     @strategy.scoped
     def call(self, mission, context_dir=None, label="", **kwargs):
-        if getattr(self, "_known_provider_terminal", None) is not None:
-            raise editor.KnownProviderTerminalStop(self._known_provider_terminal)
+        terminal = getattr(self, "_known_provider_terminal", None)
+        if terminal is not None:
+            raise editor.KnownProviderTerminalStop(terminal)
         try:
             context = Path(context_dir)
             root = Path(self.audit_dir).parent.resolve(strict=True)
@@ -110,7 +112,8 @@ class CompatibleProposer(editor.AccountedProposer):
         try:
             prepared = (contract.prepare_selector_contract(mission, context, label, context_limits=self._context_limits)
                         if label == "select.seq2" else contract.prepare_contract(mission, context, label,
-                            context_limits=self._context_limits))
+                            context_limits=self._context_limits,
+                            failed_probes=self._optional_probe_failures(label) if self._optional_probe_failures else {}))
         except (contract.ContractError, OSError, TypeError, ValueError) as exc:
             self.halt("c1_contract_input_violation")
             raise ProposerError("C1 contract rejected its native input") from exc

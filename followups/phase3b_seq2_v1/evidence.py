@@ -92,7 +92,14 @@ def _sources(search: Path, prefix: str, manifest: dict, hashes: dict[str, str], 
                  "native selector source set contains noncandidate evidence")
         expected = [("task.md", "task_contract"), *[(name, "selection_candidate") for name in candidates]]
     else:
-        expected = contract._layout(manifest["role"], manifest["label"])[1]
+        failures = manifest.get("failed_probes", {})
+        try:
+            allowed, expected = contract._layout(manifest["role"], manifest["label"], failed_probes=failures)
+            contract._failure_strategies(failures, original)
+        except contract.ContractError as exc:
+            raise ContractError("optional probe evidence differs from its context") from exc
+        _require(set(manifest["context_inventory"]) == allowed,
+                 "round-specific context inventory differs from its failure evidence")
     _require([(entry["path"], entry["kind"]) for entry in manifest["required_evidence"]] == expected,
              "round-specific required evidence was omitted or reordered")
     return original, views

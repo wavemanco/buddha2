@@ -37,6 +37,22 @@ class ComponentMock(SDKMock):
         self.transport._openai.close()
 
 
+class FailedRankMock(ComponentMock):
+    """A known rank truncation through the existing in-memory SDK transport."""
+    def __init__(self, *, failed_slot):
+        self.failed_slot = failed_slot
+        super().__init__()
+
+    def _handle(self, request, *, http_module):
+        response = super()._handle(request, http_module=http_module)
+        if self._selected == ("rank", self.failed_slot):
+            body = json.loads(response.content)
+            body["stop_reason"] = "max_tokens"
+            self.records[-1]["response"] = copy.deepcopy(body)
+            return http_module.Response(200, json=body, headers=response.headers)
+        return response
+
+
 class SyntheticProposer(Proposer):
     """A fixture direct return proves native control flow, never model authenticity."""
     def __init__(self):
@@ -53,7 +69,9 @@ class SyntheticProposer(Proposer):
             ids = assign_ids(["c1", "c2"], task_id=TASK["id"], k=2, mode="seq")
             chosen = next(anon for anon, target in ids.items() if target == self.selector_label)
             return Reply(label=label, text="<why>Synthetic only</why>\n```choice\n" + chosen + "\n```", ok=True)
-        prepared = contract.prepare_contract(mission, context, label)
+        failures = getattr(self, "_optional_probe_failures", None)
+        prepared = contract.prepare_contract(mission, context, label,
+            failed_probes=failures(label) if failures else None)
         self.contexts[label] = prepared["manifest"]
         harness = context / "harness"
         current = json.loads((harness / "systemprompt.md").read_text(encoding="utf-8"))
@@ -88,6 +106,93 @@ class NativeS2Tests(unittest.TestCase):
         self.assertNotIn("pool/c2/harness/systemprompt.md", allowed)
         with self.assertRaises(contract.ContractError):
             contract._layout("AGG")
+
+    def optional_failed_adapter(self):
+        root = self.fresh()
+        seed = root / "seed"
+        strategy.materialize_seed(seed)
+        tag = "synthetic-known-optional-failure"
+        ids = native.adaptive_run_ids(TASK["id"], tag)
+        rank_slot = strategy.slot_ids(ids["inv1"])["rank"]
+        with FailedRankMock(failed_slot=rank_slot) as mock:
+            dispatch = Dispatch(mock)
+            adapter = native.PortfolioAdapter(TASK, seed, study_sha256=STUDY, run_root=root / "run",
+                tag=tag, dispatch=dispatch, fixture=True,
+                channel=ChannelSpec("opencode", "anthropic/claude-opus-5", effort="high", steps=24,
+                    timeout=deadline.NATIVE_TIMEOUT), known_results=dispatch.results)
+            with strategy.validation_scope(), self.assertRaises(strategy.KnownOutcomeError) as stopped:
+                adapter._execute(TASK["id"], seed, ids["inv1"])
+            self.assertEqual(str(stopped.exception), "ranker_not_finished")
+            self.assertEqual(mock.http_calls, 12)
+        self.assertIsNone(adapter.required_failure)
+        return adapter
+
+    def test_optional_probe_allowance_binds_exact_settled_failure_and_strategy(self):
+        adapter = self.optional_failed_adapter()
+        proof = adapter.optional_probe_failures("c1.a1")
+        failure = native.read_artifact(adapter.run_root / "rollouts/inv1/failure.json")
+        self.assertEqual(set(proof), {"inv1"})
+        self.assertEqual(proof["inv1"], {"run_id": adapter.ids["inv1"],
+            "failure_sha256": digest(failure), "effective_strategy_sha256": failure["effective_strategy_sha256"],
+            "result_sha256": {slot: digest(row) for slot, row in adapter.known_results.items()},
+            "reason": "ranker_not_finished"})
+        self.assertEqual(len(proof["inv1"]["result_sha256"]), 12)
+        self.assertEqual(adapter.optional_probe_failures("inv1.a1"), {})
+
+    def test_optional_probe_allowance_rejects_forged_unresolved_foreign_and_conflicting_evidence(self):
+        from .accounting import IntegrityStop
+
+        adapter = self.optional_failed_adapter()
+        path = adapter.run_root / "rollouts/inv1"
+        original = (path / "failure.json").read_bytes()
+        results = copy.deepcopy(adapter.known_results)
+        rank = strategy.slot_ids(adapter.ids["inv1"])["rank"]
+        for corruption in ("failure", "unresolved", "foreign", "rollout", "halt"):
+            adapter.known_results = copy.deepcopy(results)
+            (path / "failure.json").write_bytes(original)
+            if corruption == "failure":
+                changed = json.loads(original)
+                changed["reason"] = "synthetic forged failure"
+                (path / "failure.json").write_text(json.dumps(changed), encoding="utf-8")
+            elif corruption == "unresolved":
+                adapter.known_results[rank]["status"] = "unknown"
+            elif corruption == "foreign":
+                adapter.known_results[rank]["study_sha256"] = "0" * 64
+            else:
+                (path / (corruption + ".json")).write_text("{}", encoding="utf-8")
+            try:
+                with self.subTest(corruption=corruption), self.assertRaises(IntegrityStop):
+                    adapter.optional_probe_failures("c1.a1")
+            finally:
+                if corruption in {"rollout", "halt"}:
+                    (path / (corruption + ".json")).unlink()
+        adapter.known_results = results
+        (path / "failure.json").write_bytes(original)
+        self.assertEqual(set(adapter.optional_probe_failures("c1.a1")), {"inv1"})
+
+    def test_actual_native_optional_probe_failure_preserves_both_required_checkpoints(self):
+        root = self.fresh()
+        seed = root / "seed"
+        strategy.materialize_seed(seed)
+        tag = "synthetic-native-optional-rank-failure"
+        failed_slot = strategy.slot_ids(native.adaptive_run_ids(TASK["id"], tag)["inv1"])["rank"]
+        prop, events = SyntheticProposer(), []
+        with FailedRankMock(failed_slot=failed_slot) as mock:
+            dispatch = Dispatch(mock)
+            result = native.run_adaptation(TASK, seed, study_sha256=STUDY, run_root=root / "run", tag=tag,
+                dispatch=dispatch, fixture=True, prop=prop, known_results=dispatch.results,
+                result_snapshot=lambda: dispatch.results, on_required_failure=events.append)
+            self.assertEqual(result["status"], "complete")
+            self.assertFalse(result["authentic"])
+            self.assertEqual(set(result["checkpoints"]), {"c1", "c2"})
+            self.assertTrue(all(result["checkpoints"].values()))
+            self.assertNotIn("inv1", result["rollouts"])
+            self.assertEqual(result["portfolio"], result["checkpoints"][result["selected_checkpoint"]])
+            self.assertEqual(prop.contexts["c1.a1"]["failed_probes"]["inv1"]["reason"], "ranker_not_finished")
+            self.assertNotIn("pool/inv1/produced.md", prop.contexts["c1.a1"]["context_inventory"])
+            self.assertIn("pool/inv1/rollout.md", prop.contexts["c1.a1"]["context_inventory"])
+            self.assertEqual(len(dispatch.results), 96)
+            self.assertFalse(events)
 
     def test_round_contract_names_current_c1_and_twenty_four(self):
         rendered = contract._render("AGG", "c2.a1", None)

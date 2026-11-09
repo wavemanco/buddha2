@@ -1,3 +1,9 @@
+# Offline correction and reusable execution — authorized 9 November 2026
+
+The user authorized the optional-probe correction and working general reuse in the existing runner. The correction passes 129 unit checks, Ruff/Mypy/Bandit and three actual saved author-context replays; see [evidence](evidence/phase4-cm1-v1/optional-probe-fix-v1.json). Earlier source-repair prohibitions are superseded only for this offline work. Original closed records and source identities remain historical and immutable.
+
+Reusability is being implemented, not yet accepted. Completion requires actual offline interruption/resumption with zero redispatch of committed work, explicit old/new provenance, cumulative costs/holds and native stage/rollout reuse. Reuse the existing ledger and native cache; no framework or upstream edits. No keys, paid calls or automatic restart. A concrete amended 24-case continuation and bounded recovery policy must precede paid authorization.
+
 # P4-CM1 closed incomplete — 9 November 2026 UTC
 
 Read the [live report](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) and [reviewed outcome](evidence/phase4-cm1-v1/live-outcome-v1.json). Both cost qualifications passed; three of 24 confirmation units started, one generation pair completed and 21 remained unopened. Accounting reconciles 2,651 requests/$44.975462, assessment zero and new held liability zero; historical $22.88 held remains separate. All official metrics are UNEVALUATED.

@@ -123,6 +123,41 @@ class PortfolioAdapter(frozen.PortfolioAdapter):
     def _read(self, path: Path) -> dict:
         return read_artifact(path, request_policy=self.request_policy)
 
+    @strategy.scoped
+    def optional_probe_failures(self, label: str) -> dict:
+        """Bind optional missing deliverables to their exact settled solver failures."""
+        strategy._integrity(isinstance(label, str) and re.fullmatch(
+            r"(?:inv[12]|dom[12]|c[12])\.a[12]", label), "unknown optional-probe context stage")
+        failures = {}
+        for candidate in contract._HISTORY[label.split(".", 1)[0]]:
+            if candidate not in {"inv1", "dom1", "inv2", "dom2"}:
+                continue
+            path = self.run_root / "rollouts" / candidate
+            try:
+                failure_path = safe(path / "failure.json")
+                if not failure_path.exists():
+                    continue
+                strategy._integrity(not safe(path / "rollout.json").exists() and not safe(path / "halt.json").exists(),
+                                    "optional probe failure conflicts with saved completion/halt")
+                checked = strategy.validate_partial(self.task, path / "harness", study_sha256=self.study_sha256,
+                    run_id=self.ids[candidate], fixture=self.fixture, arm="adaptive", results=self.known_results,
+                    request_policy=self.request_policy)
+                strategy._integrity(checked["status"] == "failed", "optional probe lacks a settled known failure")
+                failed = strategy.validate_rollout(self._read(failure_path), self.task, path / "harness",
+                    study_sha256=self.study_sha256, run_id=self.ids[candidate], fixture=self.fixture,
+                    arm="adaptive", results=self.known_results, request_policy=self.request_policy)
+                result_hashes = {slot: digest(self.known_results[slot]) for slot in checked["validated_slots"]}
+                strategy._integrity(failed["status"] == "failed" and result_hashes
+                    and re.fullmatch(r"[0-9a-f]{64}", failed["effective_strategy_sha256"])
+                    and isinstance(failed["reason"], str) and bool(failed["reason"].strip()),
+                    "optional probe failure proof is incomplete")
+                failures[candidate] = {"run_id": self.ids[candidate], "failure_sha256": digest(failed),
+                    "effective_strategy_sha256": failed["effective_strategy_sha256"],
+                    "result_sha256": result_hashes, "reason": failed["reason"]}
+            except (ContractError, OSError, TypeError, ValueError, KeyError) as exc:
+                raise ledger_core.IntegrityStop("optional probe failure evidence differs from its journal") from exc
+        return failures
+
     def delivered(self, run_dir: Path) -> bool:
         if self.request_policy is None:
             return super().delivered(run_dir)
@@ -461,6 +496,7 @@ def _run_adaptation(task: dict, harness_dir: Path, *, study_sha256: str, run_roo
         tag=tag, dispatch=cell_dispatch if request_policy is not None else dispatch,
         fixture=fixture, channel=channel, known_results=known_results, halt=halt,
         on_required_failure=on_required_failure, request_policy=request_policy)
+    prop._optional_probe_failures = adapter.optional_probe_failures
     result = modules["schedule"].run_task(task["id"], 2, adapter=adapter, prop=prop,
         selector_prop=prop, runs_root=adapter.spec.runs_root, modes=("seq",), seed=None,
         tag=tag, library=None, libraries=None, pool_policy="finals")

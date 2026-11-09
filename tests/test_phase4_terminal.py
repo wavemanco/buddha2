@@ -118,7 +118,8 @@ class Phase4TerminalTests(unittest.TestCase):
 
         def make_adapter(*a, **kwargs):
             captured.update(kwargs)
-            return SimpleNamespace(spec=SimpleNamespace(runs_root=Path("/results/synthetic")))
+            return SimpleNamespace(spec=SimpleNamespace(runs_root=Path("/results/synthetic")),
+                                   optional_probe_failures=lambda label: {})
 
         def swallowed(*a, **kwargs):
             prop._known_provider_terminal = copy.deepcopy(terminal)

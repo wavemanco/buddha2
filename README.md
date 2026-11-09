@@ -1,6 +1,6 @@
 # Buddha2
 
-**P4-CM1 closed incomplete after 2,651 known requests/$44.975462, with zero new held liability.** Three of 24 confirmation units started; one generation pair completed and 21 remained unopened. An adapter compatibility error escalated a supported optional-probe failure. No grading ran: quality, distinctness and utility remain unevaluated. Saved replay and passive exports passed; no repair or restart followed. See the [live report](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) and [reviewed outcome](evidence/phase4-cm1-v1/live-outcome-v1.json).
+**P4-CM1 closed incomplete after 2,651 known requests/$44.975462, with zero new held liability.** Three of 24 confirmation units started; one generation pair completed and 21 remained unopened. An adapter compatibility error escalated a supported optional-probe failure. No grading ran: quality, distinctness and utility remain unevaluated. The optional-probe correction now passes 129 offline checks and actual saved-context replay; reusable execution is being implemented. No paid restart has occurred. See the [live report](docs/phases/phase-4/PHASE4_CM1_LIVE_REPORT.md) and [fix evidence](evidence/phase4-cm1-v1/optional-probe-fix-v1.json).
 
 Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 

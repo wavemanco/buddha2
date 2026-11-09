@@ -58,12 +58,55 @@ def benchmark_prompts():
             "stubs unchanged. No scripts, plugins, skills or subagents are available.")
 
 
-def _layout(role: str, label: str | None = None) -> tuple[set[str], list[tuple[str, str]]]:
+def _probe_failures(label: str, value: dict | None) -> dict:
+    """Validate the compact evidence supplied by the authoritative native adapter."""
+    if value is None:
+        return {}
+    from .strategy import slot_ids
+    stage = label.split(".", 1)[0]
+    permitted = set(_HISTORY.get(stage, ())) & {"inv1", "dom1", "inv2", "dom2"}
+    fields = {"run_id", "failure_sha256", "effective_strategy_sha256", "result_sha256", "reason"}
+    if type(value) is not dict or not set(value) <= permitted:
+        raise ContractError("optional probe failure is outside this stage's history")
+    copied = {}
+    for candidate, proof in value.items():
+        if (type(proof) is not dict or set(proof) != fields
+                or type(proof["run_id"]) is not str or not proof["run_id"]
+                or type(proof["reason"]) is not str or not proof["reason"].strip()
+                or len(proof["reason"]) > 1000 or "\x00" in proof["reason"]
+                or any(type(proof[key]) is not str or re.fullmatch(r"[0-9a-f]{64}", proof[key]) is None
+                       for key in ("failure_sha256", "effective_strategy_sha256"))):
+            raise ContractError("invalid optional probe failure evidence")
+        slots = slot_ids(proof["run_id"])
+        hashes = proof["result_sha256"]
+        if (type(hashes) is not dict or slots["plan"] not in hashes
+                or not set(hashes) <= {slots["plan"], slots["rank"], *slots["answers"]}
+                or any(type(value) is not str or re.fullmatch(r"[0-9a-f]{64}", value) is None
+                       for value in hashes.values())):
+            raise ContractError("optional probe results are not bound to their execution")
+        copied[candidate] = {**proof, "result_sha256": dict(hashes)}
+    return copied
+
+
+def _failure_strategies(failures: dict, original: dict) -> None:
+    for candidate, proof in failures.items():
+        data = original.get(f"pool/{candidate}/harness/systemprompt.md")
+        if not isinstance(data, (str, bytes)):
+            raise ContractError("optional probe candidate strategy is absent")
+        if isinstance(data, str):
+            data = data.encode("utf-8")
+        if digest(_strategy(data)) != proof["effective_strategy_sha256"]:
+            raise ContractError("optional probe failure belongs to a different candidate strategy")
+
+
+def _layout(role: str, label: str | None = None, *, failed_probes: dict | None = None
+            ) -> tuple[set[str], list[tuple[str, str]]]:
     if label is None:
         raise ContractError("seq2 evidence layout requires the exact round label")
     stage = label.split(".", 1)[0]
     if stage not in STAGES:
         raise ContractError("unknown seq2 authoring stage")
+    failures = _probe_failures(label, failed_probes)
     required = [("task.md", "task_contract"), ("harness/systemprompt.md", "current_strategy")]
     for base in ("base1", "base2"):
         required.extend([(f"rollouts/{base}.md", "base_trajectory"),
@@ -75,8 +118,9 @@ def _layout(role: str, label: str | None = None) -> tuple[set[str], list[tuple[s
         required.extend([(f"pool/{candidate}/harness/systemprompt.md", "candidate_strategy"),
             (f"pool/{candidate}/harness.diff", "candidate_diff"),
             (f"decisions/{candidate}.md", "editor_decision"),
-            (f"pool/{candidate}/rollout.md", "probe_trajectory"),
-            (f"pool/{candidate}/produced.md", "probe_answers")])
+            (f"pool/{candidate}/rollout.md", "probe_trajectory")])
+        if candidate not in failures:
+            required.append((f"pool/{candidate}/produced.md", "probe_answers"))
         allowed.update(f"pool/{candidate}/harness/" + name for name in frozen._COMPATIBILITY)
     allowed.update(name for name, _ in required)
     return allowed, required
@@ -205,8 +249,9 @@ def _inventory(context: Path, allowed: set[str], *, context_limits: dict | None 
 
 def _prepare(mission: str, context: Path, label: str, role: str, repair: str | None,
              allowed: set[str], required: list[tuple[str, str]], effective: str,
-             *, context_limits: dict | None = None) -> dict:
+             *, context_limits: dict | None = None, failed_probes: dict | None = None) -> dict:
     original = _inventory(context, allowed, context_limits=context_limits)
+    _failure_strategies(failed_probes or {}, original)
     strategy_valid, strategy_sha = True, None
     if role != "SELECT":
         try:
@@ -236,6 +281,8 @@ def _prepare(mission: str, context: Path, label: str, role: str, repair: str | N
         "input_strategy_valid": strategy_valid, "input_effective_strategy_sha256": strategy_sha,
         "native_repair_diagnostic": repair, "required_evidence": entries,
         "editor_profile_sha256": digest(editor.profile()), "final_response_rule_sha256": _sha(FINAL_RULE.encode())}
+    if failed_probes:
+        manifest["failed_probes"] = failed_probes
     manifest["sha256"] = digest(manifest)
     index_text = (f"# {role} evidence index — {POLICY_ID}\n\nStage: {label}; manifest identity: {manifest['sha256']}.\n"
         "Lossless views below are available for inspection; exhaustive coverage is audited separately.\n"
@@ -250,11 +297,17 @@ def _prepare(mission: str, context: Path, label: str, role: str, repair: str | N
             "index_text": index_text, "manifest": manifest, "evidence_files": auxiliary}
 
 
-def prepare_contract(mission: str, context_dir: Path, label: str, *, context_limits: dict | None = None) -> dict:
+def prepare_contract(mission: str, context_dir: Path, label: str, *, context_limits: dict | None = None,
+                     failed_probes: dict | None = None) -> dict:
     role, repair = _mission(mission, label)
-    allowed, required = _layout(role, label)
-    return _prepare(mission, Path(context_dir), label, role, repair, allowed, required, _render(role, label, repair),
-                    context_limits=context_limits)
+    context = safe(Path(context_dir))
+    failures = _probe_failures(label, failed_probes)
+    # Upstream omits this file only when a pool probe cannot provide a deliverable.
+    omitted = {candidate: proof for candidate, proof in failures.items()
+               if not safe(context / f"pool/{candidate}/produced.md").exists()}
+    allowed, required = _layout(role, label, failed_probes=omitted)
+    return _prepare(mission, context, label, role, repair, allowed, required, _render(role, label, repair),
+                    context_limits=context_limits, failed_probes=omitted)
 
 
 def prepare_selector_contract(mission: str, context_dir: Path, label: str, *, context_limits: dict | None = None) -> dict:

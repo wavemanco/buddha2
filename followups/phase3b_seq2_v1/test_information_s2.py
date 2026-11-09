@@ -52,6 +52,101 @@ class InformationGuardTests(unittest.TestCase):
         self.assertTrue(any(name.startswith("pool/c1/") for name, _ in required))
         return contract.prepare_contract(context.mission(tree, job=job), target, label)
 
+    def optional_context(self, label="c1.a1", *, omitted=()):
+        """Synthetic trusted proof; native journal validation is tested separately."""
+        stage = label.split(".", 1)[0]
+        target = self.root / stage
+        allowed, _ = contract._layout("AGG", label)
+        strategy.materialize_seed(target / "harness")
+        for prior in contract._HISTORY[stage]:
+            strategy.materialize_seed(target / "pool" / prior / "harness")
+        for name in allowed:
+            path = target / name
+            if name not in omitted and not path.exists():
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("SYNTHETIC complete source " + name, encoding="utf-8")
+        tree = context.ContextTree(root=target, task_id="p3b-02", rollouts=["base1", "base2"],
+            deliverables=["base1", "base2"], harness_files=1 + len(contract.frozen._COMPATIBILITY),
+            library=False, pool=list(contract._HISTORY[stage]), decisions=len(contract._HISTORY[stage]))
+        job = prompts.compose_round(contract.benchmark_prompts(), strategy._public_surface(), t=int(stage[-1]), k=2)
+        run_id = "synthetic-known-inv1-failure"
+        slots = strategy.slot_ids(run_id)
+        proof = {"run_id": run_id, "failure_sha256": digest({"synthetic": "known failure"}),
+            "effective_strategy_sha256": strategy.validate_harness(target / "pool/inv1/harness")["effective_strategy_sha256"],
+            "result_sha256": {slot: digest({"synthetic_result": slot})
+                for slot in (slots["plan"], *slots["answers"], slots["rank"])},
+            "reason": "ranker_not_finished"}
+        return target, context.mission(tree, job=job), {"inv1": proof}
+
+    def test_known_optional_absence_keeps_all_remaining_contract_evidence(self):
+        missing = "pool/inv1/produced.md"
+        target, mission, failures = self.optional_context(omitted=(missing,))
+        prepared = contract.prepare_contract(mission, target, "c1.a1", failed_probes=failures)
+        manifest = prepared["manifest"]
+        self.assertEqual(manifest["failed_probes"], failures)
+        self.assertNotIn(missing, manifest["context_inventory"])
+        self.assertIn("pool/inv1/rollout.md", manifest["context_inventory"])
+        self.assertIn("pool/dom1/produced.md", manifest["context_inventory"])
+        original, _ = evidence._sources(target, "unused", manifest, {}, supplied=prepared["evidence_files"])
+        self.assertEqual(set(original), {row["path"] for row in manifest["required_evidence"]})
+        self.assertNotIn(missing, original)
+        self.assertFalse((target / missing).exists())
+
+    def test_known_failure_with_present_output_keeps_original_contract(self):
+        target, mission, failures = self.optional_context()
+        original = contract.prepare_contract(mission, target, "c1.a1")
+        supplied = contract.prepare_contract(mission, target, "c1.a1", failed_probes=failures)
+        self.assertEqual(original, supplied)
+        self.assertNotIn("failed_probes", supplied["manifest"])
+        self.assertIn("pool/inv1/produced.md", supplied["manifest"]["context_inventory"])
+
+    def test_missing_produced_without_trusted_proof_is_rejected_even_with_failure_prose(self):
+        target, mission, _ = self.optional_context(omitted=("pool/inv1/produced.md",))
+        (target / "pool/inv1/rollout.md").write_text("(unavailable: synthetic known failure)", encoding="utf-8")
+        for proof in (None, {}):
+            with self.subTest(proof=proof), self.assertRaises(contract.ContractError):
+                contract.prepare_contract(mission, target, "c1.a1", failed_probes=proof)
+
+    def test_optional_proof_cannot_waive_required_checkpoint_or_other_source(self):
+        target, mission, failures = self.optional_context("c2.a1", omitted=("pool/c1/produced.md",))
+        for proof in (failures, {"c1": failures["inv1"]}):
+            with self.subTest(proof_stage=tuple(proof)), self.assertRaises(contract.ContractError):
+                contract.prepare_contract(mission, target, "c2.a1", failed_probes=proof)
+        target, mission, failures = self.optional_context(omitted=("pool/inv1/produced.md", "pool/inv1/rollout.md"))
+        with self.assertRaises(contract.ContractError):
+            contract.prepare_contract(mission, target, "c1.a1", failed_probes=failures)
+
+    def test_optional_proof_strategy_must_match_candidate_and_saved_evidence(self):
+        target, mission, failures = self.optional_context(omitted=("pool/inv1/produced.md",))
+        changed = copy.deepcopy(failures)
+        changed["inv1"]["effective_strategy_sha256"] = "0" * 64
+        with self.assertRaises(contract.ContractError):
+            contract.prepare_contract(mission, target, "c1.a1", failed_probes=changed)
+        prepared = contract.prepare_contract(mission, target, "c1.a1", failed_probes=failures)
+        for corruption in ("drop", "strategy"):
+            manifest = copy.deepcopy(prepared["manifest"])
+            if corruption == "drop":
+                del manifest["failed_probes"]
+            else:
+                manifest["failed_probes"]["inv1"]["effective_strategy_sha256"] = "0" * 64
+            with self.subTest(corruption=corruption), self.assertRaises(ContractError):
+                evidence._sources(target, "unused", manifest, {}, supplied=prepared["evidence_files"])
+
+    def test_optional_proof_rejects_missing_extra_or_foreign_result_binding(self):
+        target, mission, failures = self.optional_context(omitted=("pool/inv1/produced.md",))
+        for corruption in ("missing", "extra", "run_id", "result_slot"):
+            proof = copy.deepcopy(failures)
+            if corruption == "missing":
+                del proof["inv1"]["failure_sha256"]
+            elif corruption == "extra":
+                proof["inv1"]["synthetic_untrusted_field"] = True
+            elif corruption == "run_id":
+                proof["inv1"]["run_id"] = "synthetic-other-candidate"
+            else:
+                proof["inv1"]["result_sha256"] = {"synthetic.foreign.slot": "1" * 64}
+            with self.subTest(corruption=corruption), self.assertRaises(contract.ContractError):
+                contract.prepare_contract(mission, target, "c1.a1", failed_probes=proof)
+
     def request(self, prepared, *, omitted_view=None):
         system = prepared["authoring_system_text"] + (
             "\nYou are powered by the model named claude-opus-5. The exact model ID is anthropic/claude-opus-5\n"
