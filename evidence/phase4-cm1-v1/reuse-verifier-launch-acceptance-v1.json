@@ -1,0 +1,94 @@
+{
+  "accepted": true,
+  "accepted_prior_source_files_archived": 208,
+  "actual_saved_prefix": {
+    "all_old_files_unchanged": true,
+    "compatibility_sha256": "522676834c527a7370c2b06551afe2304ee6515cc1bd3fccd2b9c0f60a4f8eb4",
+    "exact_owner_absent": true,
+    "immutable_files_checked": 19,
+    "passed": true,
+    "proof_file_sha256": "26ef3037073c4b62fee3b683a199ab4d25601ec415de31641128296527e48a5f",
+    "quarantined_units": 1,
+    "source_files_checked": 208,
+    "validated_segments": 62
+  },
+  "approval_reference": "request_user_input_async/call_58d12c67152c4a779a8d1bf3ecd1871e/0",
+  "changed_source_inputs": {
+    "followups/phase3b_seq2_v1/native.py": "cd92f4ad9f46a90b6639ee631ce1b177ef653de50249955095c20eb38d6a0f97",
+    "tests/test_phase4_native_resume.py": "f31d68f11558e0e8a07d0934d5a116258340502ce389eb9e33806369dacbf4db"
+  },
+  "correction": "Validate each physical search using both requests and responses from its own manifest-declared ancestry; exclude later execution rows.",
+  "cumulative_cap_micro_usd": 1200000000,
+  "focused_final_public_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "result_file_sha256": "c7cad753008a03444643bb5c4cb2046d1a33650da9b4021d5463a49fe5fd1cd4",
+    "skips": 0,
+    "source_sha256": "e6e89b2b47cc5892cefd737d14d33a1ebb5127b9b82a57b6b32ca8eac34af361",
+    "tests": 17
+  },
+  "grant_sha256": "ec44a38a09040bfbf6d48b743ac02641a2d815a0883e4b10c5e4c2adb6a924cd",
+  "independent_code_review": "PASS; final variable rename and test annotation rechecked",
+  "independent_review_file_sha256": "12c6c34e99b31de768e40d3a9f3c7c47b90086596f1ad89ebe3a2d49ad96a696",
+  "independent_review_sha256": "2e34a4362793dcc87c689789ea8fe1981a76f255925f87e97b11b86e5481755c",
+  "kind": "phase4-cm1-reuse-verifier-launch-acceptance-v1",
+  "known_spent_micro_usd": 60070065,
+  "launch_checks": {
+    "errors": 0,
+    "failures": 0,
+    "independent_exact_windows_owner_and_pid_absence_observed": true,
+    "mandatory_regressions_passed": 16,
+    "prior_immutable_inputs_unchanged": 19,
+    "skips": 0,
+    "source_inputs_unchanged": 208,
+    "unique_tests_passed": 113
+  },
+  "limitations": [
+    "Offline acceptance does not establish a new live or scientific result.",
+    "Known failed and uncertain cases prevent full-24 positive confirmation; available-case findings remain descriptive.",
+    "Actual continuation assessments, passive Inspect payload/.eval and closure remain to be completed."
+  ],
+  "method_sha256": "23767ebf3793a89bcdd07fef81981de970b11d424212aee510c624289dd44035",
+  "new_unknown_delivery_hold_micro_usd": 2540960,
+  "offline_manifest_file_sha256": "1bd37ed3728e5ec27049c6cdf2abf7d8cf13ba2acd9e34d0737ac2a4534be148",
+  "offline_manifest_sha256": "e6f6218ea7ca22e13f0d3801293490c0edb05ce08323b4f8afb7f1289795475c",
+  "previous_source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "recorded_at_utc": "2026-11-10T17:50:45.049381+00:00",
+  "remaining_admissions": 36838,
+  "remaining_total_micro_usd": 1137388975,
+  "request_hash_check_preserved": true,
+  "retained_offline_failures": "Initial fixture TypeErrors, Mypy invocation/capture setup and introduced type findings remain retained; final checks supersede them without weakening validation.",
+  "same_24_cases_and_order": true,
+  "sample_or_retry_allowance_changed": false,
+  "scientific_settings_changed": false,
+  "scope_sha256": "33df23aa1690a6fbbfa234a2fb2b91dc360fa70220514dce28e13b361c728fd4",
+  "scoped_static_checks": {
+    "checks": [
+      {
+        "check": "ruff",
+        "exit_code": 0
+      },
+      {
+        "check": "mypy",
+        "exit_code": 0
+      },
+      {
+        "check": "bandit",
+        "exit_code": 0
+      }
+    ],
+    "passed": true,
+    "provider_calls": 0
+  },
+  "separate_historical_hold_micro_usd": 22880000,
+  "sha256": "b2056797f724ad0ab97e6aa5159811994320d3c9491aec8ab6880e1f20a72116",
+  "source_code_commit": "6a802d1373c53ce651fb0b38ab7485c517b1903c",
+  "source_sha256": "35d61de6c6e2f7a50181c15904394aa01cc8aa33874c781686b63f5db9f0c211",
+  "status": "accepted-awaiting-fresh-keys",
+  "study_sha256": "0590c5d9e7aa54c1380c23de665c47cca3e8e20401406ec36fd96440eee162f8",
+  "windows_handshake_file_sha256": "d182e5937a16e81534e6cce4500a3ac1f4480351cae6cd280cd541461b4d90f2",
+  "windows_handshake_sha256": "b9ce2583463947a7bccd4b5e7b39766986832ce001e177f30dfa896fffbb0519"
+}

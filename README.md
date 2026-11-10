@@ -2,7 +2,7 @@
 
 **Buddha2 retains verified paid work across execution segments.** See [resumption and its limits](docs/RESUMPTION.md) and [the earlier implementation evidence](evidence/phase4-cm1-v1/resumability-v1.json).
 
-P4 remains stopped after an unknown-delivery timeout: $60.070065 known spending, $2.540960 newly held, two generation pairs complete, one failed, one interrupted and twenty unopened. No benchmark grading has run. The focused reuse-verifier correction passes 17 tests, static checks and actual saved-work replay (62 segments); full launch acceptance is next. See [the reviewed correction](evidence/phase4-cm1-v1/reuse-verifier-fix-v1.json) and [retained stop](evidence/phase4-cm1-v1/continuation-r01-stop-v1.json). Missing required cases prevent full-24 positive confirmation; available-case findings remain descriptive.
+P4’s corrected continuation is accepted and awaiting fresh keys: 113 current-source tests, all 16 mandatory regressions, static checks, actual saved-work replay and the Windows launch handshake passed. No new paid calls or benchmark grading have begun. It retains $60.070065 known spending and $2.540960 newly held within the original cumulative cap. Two generation pairs are complete, one failed, one interrupted and twenty unopened; missing cases prevent full-24 positive confirmation. See [acceptance and limits](evidence/phase4-cm1-v1/reuse-verifier-launch-acceptance-v1.json).
 
 Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 

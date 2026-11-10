@@ -1,3 +1,9 @@
+# P4 continuation accepted — awaiting fresh keys — 10 November 2026
+
+The authorized reuse-verifier correction and new continuation packet are independently accepted: 113 current-source tests, all 16 mandatory regressions, static checks, actual saved-prefix replay and the actual Windows pre-credential handshake passed with zero provider calls or real credentials. See [acceptance evidence](../../evidence/phase4-cm1-v1/reuse-verifier-launch-acceptance-v1.json). Source `35d61de6…9f0c211`, study `0590c5d9…ee162f8`; the local packet is `continuation-r02/release`.
+
+Next is fresh masked keys through the existing launcher, then the approved continuation through assessment, passive Inspect delivery and closure. Keep the source frozen. Preserve completed work, every failure/charge/hold, the same 24 cases, scientific controls and recovery allowance. The $1,200 cumulative cap leaves $1,137.388975 and 36,838 admissions; historical $22.88 remains separately held. The uncertain unit stays quarantined without resend. Known missing cases prevent full-24 positive confirmation; available-case findings remain descriptive. No new experiment or engineering workstream is authorized. Earlier status is historical where superseded.
+
 # Reuse-verifier correction verified offline — 10 November 2026
 
 The user approved the focused source correction and existing continuation through closure within the original $1,200/40,914-admission ceilings. The corrected verifier binds inherited responses to their original requests and excludes later executions' rows. Final focused tests (17), scoped Ruff/Mypy/Bandit and the actual saved-prefix replay pass: 62 segments verified, one uncertain unit quarantined, zero provider calls. See [scope and remaining acceptance](../RESUMPTION.md#reuse-verifier-correction--authorized-10-november-2026).
