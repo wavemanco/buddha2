@@ -54,6 +54,7 @@ class Phase4PartialTests(unittest.TestCase):
             write_once(directory / ("rollout.json" if record["status"] == "complete" else "failure.json"), record)
             setattr(self, label, record)
         self.state = {"study_sha256": self.child, "fixture": True, "results": self.fake.results,
+            "reserved_micro_usd": 0,
             "cells": {self.pair + ":adaptive": {"spent_micro_usd": 13},
                       self.pair + ":fixed": {"spent_micro_usd": 0}}}
 

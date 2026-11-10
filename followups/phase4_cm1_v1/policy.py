@@ -102,9 +102,11 @@ def _scope(kind: str, pair: str) -> None:
         "P4 child kind or prompt identity differs")
 
 
-def _slot_scope(slots: dict, kind: str, pair: str) -> None:
+def _slot_scope(slots: dict, kind: str, pair: str, *, recovery_policy: str | None = None) -> None:
     _scope(kind, pair)
-    _require(isinstance(slots, dict) and len(slots) == COUNTS[kind], "P4 child worklist size differs")
+    _require(recovery_policy in (None, "required-plan-rank-once-v1"), "invalid recovery worklist policy")
+    extra = {"dev": 192, "inference": 200, "assessment": 0}[kind] if recovery_policy else 0
+    _require(isinstance(slots, dict) and len(slots) == COUNTS[kind] + extra, "P4 child worklist size differs")
     counts: Counter = Counter()
     conversations: dict[str, set[int]] = {}
     for name, row in slots.items():
@@ -127,6 +129,10 @@ def _slot_scope(slots: dict, kind: str, pair: str) -> None:
             conversations.setdefault(conversation, set()).add(turn)
         else:
             _require(set(row) == {"role", "cell", "pair"}, "P4 slot metadata differs")
+        if name.endswith(".recovery1"):
+            original = slots.get(name.removesuffix(".recovery1"))
+            _require(recovery_policy is not None and role in {"plan", "rank"} and original == row,
+                     "recovery lacks its original required producer slot")
         counts[cell, role] += 1
     expected: Counter = Counter()
     if kind == "inference":
@@ -137,6 +143,10 @@ def _slot_scope(slots: dict, kind: str, pair: str) -> None:
             {"plan": 96, "answer": 960, "rank": 96, "fixed_selector": 9}.items()})
     else:
         expected.update({("assessment", "group"): 9, ("assessment", "quality"): 30})
+    if recovery_policy and kind in {"dev", "inference"}:
+        expected.update({(pair + ":fixed", "plan"): 96, (pair + ":fixed", "rank"): 96})
+        if kind == "inference":
+            expected.update({(pair + ":adaptive", "plan"): 4, (pair + ":adaptive", "rank"): 4})
     _require(counts == expected and len(conversations) == (13 if kind == "inference" else 0)
         and all(turns == set(range(1, 25)) for turns in conversations.values()),
         "P4 frozen role population differs")
@@ -145,13 +155,32 @@ def _slot_scope(slots: dict, kind: str, pair: str) -> None:
 def _build(kind: str, pair: str, *, parent_sha256: str, authorization_sha256: str,
            allocation_sha256: str, remaining_total_micro_usd: int,
            remaining_allocation_micro_usd: int, slots_sha256: str,
-           generation_study_sha256: str | None = None) -> dict:
+           generation_study_sha256: str | None = None, continuation: dict | None = None,
+           recovery_policy: str | None = None, remaining_admissions: int | None = None) -> dict:
     _scope(kind, pair)
+    _require(recovery_policy in (None, "required-plan-rank-once-v1"), "invalid required-artifact policy")
     _authority(authorization_sha256)
     _require(all(core._hash(value) for value in (parent_sha256, allocation_sha256, slots_sha256)),
              "P4 parent/allocation/worklist binding differs")
     _require(core._hash(generation_study_sha256) if kind == "assessment"
         else generation_study_sha256 is None, "P4 assessment generation identity differs")
+    if continuation is not None:
+        from followups.phase3b_seq2_v1 import accounting
+        _require(isinstance(continuation, dict) and set(continuation) == {
+            "logical_study_sha256", "origins", "carried_cells"}, "invalid continuation profile")
+        _require(continuation == accounting.continuation_binding(continuation["origins"],
+            logical_study_sha256=continuation["logical_study_sha256"]), "origin cell counters differ")
+        _require(all(cell in {pair + ":fixed", pair + ":adaptive", "assessment"}
+            for cell in continuation["carried_cells"]), "continuation imports another prompt")
+        for reference in continuation["origins"]:
+            origin_state, origin_manifest = accounting._read_reference_cached(reference)
+            if (origin_state["active_unsettled_intents"] or origin_state["durable_unknown_results"]
+                    or origin_state["reserved_micro_usd"]
+                    or origin_state["transport_audit_summary"]["missing_or_invalid_slots"]):
+                raise core.LiabilityStop("origin unit quarantined before successor ledger admission")
+            scope = origin_manifest["inputs"]["policy"].get("phase4_child", {})
+            _require(scope.get("kind") == kind and scope.get("pair") == pair,
+                     "continuation imports another phase or prompt scope")
     _require(type(remaining_total_micro_usd) is int and 0 < remaining_total_micro_usd <= 1_200_000_000
         and type(remaining_allocation_micro_usd) is int
         and 0 < remaining_allocation_micro_usd <= ALLOCATIONS[kind],
@@ -160,6 +189,9 @@ def _build(kind: str, pair: str, *, parent_sha256: str, authorization_sha256: st
               {"dev": 75_000_000, "inference": 150_000_000, "assessment": 250_000_000}[kind])
     fixed_roles = {"plan": 96, "answer": 960, "rank": 96, "fixed_selector": 9}
     native_roles = {"plan": 8, "answer": 80, "rank": 8, "editor": 288, "native_selector": 24}
+    if recovery_policy:
+        fixed_roles.update(plan=192, rank=192)
+        native_roles.update(plan=12, rank=12)
     bounds = {}
     for arm, roles in (("fixed", fixed_roles), ("adaptive", native_roles)):
         bounds[arm] = {"http": sum(roles.values()),
@@ -176,12 +208,25 @@ def _build(kind: str, pair: str, *, parent_sha256: str, authorization_sha256: st
             "remaining_total_micro_usd": remaining_total_micro_usd,
             "remaining_allocation_micro_usd": remaining_allocation_micro_usd,
             "slots_sha256": slots_sha256, "generation_study_sha256": generation_study_sha256})
+    if recovery_policy:
+        value["phase4_child"]["recovery_policy"] = recovery_policy
+        value["maximum_admitted_attempts"] += {"dev": 192, "inference": 200, "assessment": 0}[kind]
+    if continuation is not None:
+        value["phase4_child"]["continuation"] = copy.deepcopy(continuation)
+        used = sum(row["attempts"] for row in continuation["carried_cells"].values())
+        _require(used <= value["maximum_admitted_attempts"], "origin consumed its finite request envelope")
+        value["maximum_admitted_attempts"] -= used
+    if remaining_admissions is not None:
+        _require(type(remaining_admissions) is int and 0 <= remaining_admissions <= 40914,
+                 "invalid remaining parent admissions")
+        value["phase4_child"]["remaining_admissions"] = remaining_admissions
+        value["maximum_admitted_attempts"] = min(value["maximum_admitted_attempts"], remaining_admissions)
     return value
 
 
 def make(kind: str, pair: str, *, slots: dict, **allocation) -> dict:
     """The parent coordinator owns serial allocation and supplies the actual frozen slots."""
-    _slot_scope(slots, kind, pair)
+    _slot_scope(slots, kind, pair, recovery_policy=allocation.get("recovery_policy"))
     return _build(kind, pair, slots_sha256=digest(slots), **allocation)
 
 
@@ -189,13 +234,13 @@ def validate(profile: dict, slots: dict | None = None) -> dict:
     _require(isinstance(profile, dict) and profile.get("id") == ID
         and isinstance(profile.get("phase4_child"), dict), "P4 child profile missing")
     allocation = profile["phase4_child"]
-    _require(set(allocation) == {"kind", "pair", "parent_sha256", "authorization_sha256",
+    _require(set(allocation) - {"continuation", "recovery_policy", "remaining_admissions"} == {"kind", "pair", "parent_sha256", "authorization_sha256",
         "allocation_sha256", "remaining_total_micro_usd", "remaining_allocation_micro_usd", "slots_sha256",
         "generation_study_sha256"},
         "P4 allocation fields differ")
     expected = _build(**allocation)
     _require(profile == expected, "P4 child policy or reservation contract differs")
     if slots is not None:
-        _slot_scope(slots, allocation["kind"], allocation["pair"])
+        _slot_scope(slots, allocation["kind"], allocation["pair"], recovery_policy=allocation.get("recovery_policy"))
         _require(digest(slots) == allocation["slots_sha256"], "P4 actual worklist differs")
     return copy.deepcopy(profile)

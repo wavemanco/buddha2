@@ -21,7 +21,7 @@ from harness2 import config
 from harness2.core.proposer import Proposer, ProposerError
 from harness2.core.spec import ChannelSpec
 
-from buddha2.artifacts import ContractError, digest, read_json, write_once
+from buddha2.artifacts import ContractError, digest, file_hash, read_json, write_once
 from followups.phase3a_compat_c1_v1.support import PRIVATE
 from followups.phase3a_v1 import editor as frozen
 
@@ -283,11 +283,13 @@ def relay(cwd: Path, dispatch: Callable, prefix: str, record: dict, halt: Callab
 
 def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: str,
                                 fixture: bool, results: dict | None = None, intents: dict | None = None,
-                                request_policy: dict | None = None) -> dict:
+                                request_policy: dict | None = None, binding_source_sha256: str | None = None,
+                                _origin: bool = False, _visited: tuple[Path, ...] = ()) -> dict:
     """Read-only proof replay, including unfinished logical conversations."""
     from followups.phase3a_v1.accounting import IntegrityStop
 
     audit_dir = Path(audit_dir)
+    _require(audit_dir not in _visited, "cyclic author-stage reuse")
     roots = (Path(__file__).resolve().parents[2] / "runs/phase3b-seq2-v1/native",
              Path("/results/phase3b-seq2-v1/native"))
     if (not audit_dir.is_absolute() or ".." in audit_dir.parts
@@ -297,12 +299,38 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
         raise IntegrityStop("persisted editor proof is outside its HI boundary")
     directory = audit_dir / "phase3a-sessions"
     binding = {"fixture": fixture, "study_sha256": study_sha256, "pilot": pilot,
-               "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+               "source_sha256": binding_source_sha256 or file_hash(Path(__file__)),
                "editor_profile_sha256": digest(profile())}
     sessions: dict[str, dict] = {}
     started: set[str] = set()
     inputs: dict[str, dict] = {}
     try:
+        reused = audit_dir / "reused-author-stages"
+        if reused.exists():
+            for reference in sorted(safe(reused).iterdir()):
+                value = read_public(safe(reference))
+                label = value.get("label")
+                if not isinstance(label, str):
+                    raise ContractError("reused author-stage label differs")
+                _require(reference.name == label + ".json" and value.get("binding") == binding
+                    and value.get("sha256") == digest({k: v for k, v in value.items() if k != "sha256"}),
+                    "reused author-stage reference differs")
+                compatibility = continuation_compatibility(value["compatibility"])
+                segment = value["segment"]
+                _require(segment in compatibility["validated_segments"], "unapproved author-stage reuse")
+                origin = safe(Path(segment["origin_audit"]))
+                origin_sessions = validate_persisted_sessions(origin, study_sha256=study_sha256,
+                    pilot=pilot, fixture=fixture, results=results, intents=intents, request_policy=request_policy,
+                    binding_source_sha256=continuation_source(compatibility, segment["source_sha256"])
+                        ["files"]["followups/phase3b_seq2_v1/editor.py"],
+                    _origin=True, _visited=(*_visited, audit_dir))
+                session = origin_sessions[label]
+                _require(segment["kind"] == "native-author-stage-v1" and segment["session_sha256"] == digest(session),
+                         "reused author session changed")
+                check_segment_files(segment)
+                sessions[label] = session
+                started.add(label)
+                inputs[label] = session["input_snapshot"]
         _require(not any(p.is_symlink() or (hasattr(p, "is_junction") and p.is_junction())
                          for p in (directory, *directory.parents)), "linked editor proof path")
         if not directory.exists():
@@ -412,7 +440,7 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
         _require(set(sessions).issubset(started), "settled editor proof lacks its logical intent")
         _require(all(session["input_snapshot"] == inputs[label] for label, session in sessions.items()),
                  "settled session changed its input snapshot")
-        if results is not None:
+        if results is not None and not _origin:
             prefix = pilot + ".adaptive.editor."
             for slot in results:
                 if slot.startswith(prefix):
@@ -422,6 +450,125 @@ def validate_persisted_sessions(audit_dir: Path, *, study_sha256: str, pilot: st
         return sessions
     except (ContractError, OSError, KeyError, TypeError, ValueError) as exc:
         raise IntegrityStop("persisted editor proof failed its read-only boundary") from exc
+
+
+def continuation_compatibility(value: dict | None) -> dict:
+    if not isinstance(value, dict):
+        raise ContractError("continuation compatibility certificate is absent")
+    _require(value.get("kind") == "phase4-cm1-continuation-compatibility-v1"
+        and value.get("passed") is True and value.get("provider_calls") == 0
+        and value.get("sha256") == digest({k: v for k, v in value.items() if k != "sha256"}),
+        "continuation compatibility certificate differs")
+    source = value.get("origin_source", {})
+    _require(source.get("sha256") == value.get("previous_source_sha256")
+        and source.get("sha256") == digest({k: v for k, v in source.items() if k != "sha256"})
+        and isinstance(source.get("files"), dict) and isinstance(value.get("validated_segments"), list),
+        "continuation origin source differs")
+    return value
+
+
+def check_segment_files(segment: dict) -> None:
+    _require(segment.get("sha256") == digest({k: v for k, v in segment.items() if k != "sha256"}),
+             "continuation segment seal differs")
+    root = safe(Path(segment["origin_search"]))
+    for name, expected in segment["files_sha256"].items():
+        relative = Path(name)
+        _require(not relative.is_absolute() and ".." not in relative.parts
+            and file_hash(safe(root / relative)) == expected, "continuation segment artifact changed")
+
+
+def continuation_source(compatibility: dict, source_sha256: str) -> dict:
+    primary = compatibility["origin_source"]
+    source = (primary if primary["sha256"] == source_sha256
+              else compatibility.get("origin_sources", {}).get(source_sha256, {}))
+    _require(source.get("sha256") == source_sha256
+        and source_sha256 == digest({k: v for k, v in source.items() if k != "sha256"}),
+        "inherited continuation source is unbound")
+    return source
+
+
+def completed_author_segments(audit_dir: Path, *, study_sha256: str, pilot: str, fixture: bool,
+                              results: dict, intents: dict, request_policy: dict | None,
+                              origin_source: dict) -> list[dict]:
+    """Validate existing normal author completions without invoking a proposer."""
+    from . import contract, evidence, strategy
+
+    audit_dir = safe(audit_dir)
+    sessions = validate_persisted_sessions(audit_dir, study_sha256=study_sha256, pilot=pilot,
+        fixture=fixture, results=results, intents=intents, request_policy=request_policy,
+        binding_source_sha256=origin_source["files"]["followups/phase3b_seq2_v1/editor.py"], _origin=True)
+    segments = []
+    proof_dir = audit_dir / "phase3a-sessions"
+    reused = audit_dir / "reused-author-stages"
+    labels = sorted({p.name.removesuffix(".started.json") for p in proof_dir.glob("*.started.json")}
+                    | {p.stem for p in reused.glob("*.json")})
+    for label in labels:
+        if (reused / (label + ".json")).exists():
+            reference = read_public(safe(reused / (label + ".json")))
+            segment = reference["segment"]
+            check_segment_files(segment)
+            _require(segment["session_sha256"] == digest(sessions[label]), "inherited author stage changed")
+            segments.append(segment)
+            continue
+        session = sessions.get(label)
+        paid = {slot: digest(row) for slot, row in results.items()
+                if slot.startswith(pilot + ".adaptive.editor." + label + ".t")}
+        row: dict = {"label": label, "origin_audit": str(audit_dir), "origin_search": str(audit_dir.parent),
+            "logical_study_sha256": study_sha256, "source_sha256": origin_source["sha256"],
+            "files_sha256": {"editor-audit/phase3a-sessions/" + label + ".started.json":
+                file_hash(safe(proof_dir / (label + ".started.json")))}, "result_sha256": paid}
+        if not session or session.get("status") != "valid" or not session.get("authentic_eligible") or session.get("terminal_note_used"):
+            row["kind"] = "native-author-quarantine-v1" if paid else "native-author-unstarted-v1"
+        else:
+            replay = evidence.verify_recorded_information(search=audit_dir.parent, label=label,
+                session=session, results=results, intents=intents)
+            row["files_sha256"].update(replay["artifact_sha256"])
+            settled = proof_dir / (label + ".settled.json")
+            row["files_sha256"][settled.relative_to(audit_dir.parent).as_posix()] = file_hash(safe(settled))
+            call_root = audit_dir / "c1-contracts" / label
+            call = read_public(safe(call_root / "result.json"))
+            manifest = read_public(safe(call_root / "manifest.json"))
+            raw_mission = (call_root / "native-mission.md").read_text(encoding="utf-8")
+            if label != "select.seq2":
+                contract._mission(raw_mission, label)
+            _require(hashlib.sha256(raw_mission.encode()).hexdigest() == manifest["raw_mission_sha256"],
+                     "origin native mission differs from current pinned instructions")
+            _require(call.get("status") == "returned" and call.get("native_reply_ok") is True
+                and call.get("auxiliary_removed") is True and call.get("source_sha256") == origin_source["sha256"]
+                and call.get("sha256") == digest({k: v for k, v in call.items() if k != "sha256"})
+                and manifest.get("sha256") == call.get("manifest_sha256"), "origin native author completion differs")
+            matches = []
+            for meta in audit_dir.glob(label + ".*.meta.json"):
+                stem = meta.name.removesuffix(".meta.json")
+                response, workspace = audit_dir / (stem + ".response.md"), audit_dir / (stem + ".workspace")
+                info = read_public(safe(meta))
+                if (info.get("ok") is not True or info.get("model") != "anthropic/claude-opus-5"
+                        or info.get("effort") != "high" or info.get("channel") != "opencode"
+                        or not response.is_file() or label != "select.seq2" and not workspace.is_dir()):
+                    continue
+                tree = None if label == "select.seq2" else strategy.validate_harness(safe(workspace))
+                if ((tree is None or tree["raw_tree_sha256"] == session["harvest_raw_tree_sha256"])
+                        and normalized_output(response.read_text(encoding="utf-8"))
+                        == normalized_output(session["normal_session_proof"]["native_output"])):
+                    matches.append((meta, response, workspace, tree))
+            _require(len(matches) == 1, "origin completed Reply/harvest is absent or ambiguous")
+            meta, response, workspace, tree = matches[0]
+            paths = [meta, response, call_root / "result.json", call_root / "native-mission.md",
+                     call_root / "effective-mission.md", call_root / "configured-agent-prompt.md"]
+            if tree is not None:
+                paths += [workspace / name for name in tree["raw_files_sha256"]]
+            row["files_sha256"].update({p.relative_to(audit_dir.parent).as_posix(): file_hash(safe(p)) for p in paths})
+            row.update(kind="native-author-stage-v1", session_sha256=digest(session),
+                input_manifest_sha256=manifest["sha256"], context_inventory=manifest["context_inventory"],
+                raw_mission_sha256=manifest["raw_mission_sha256"],
+                effective_mission_sha256=manifest["effective_mission_sha256"],
+                authoring_system_sha256=call["authoring_system_sha256"],
+                harvest_raw_tree_sha256=None if tree is None else tree["raw_tree_sha256"],
+                reply_path=response.relative_to(audit_dir.parent).as_posix(),
+                workspace_path=None if tree is None else workspace.relative_to(audit_dir.parent).as_posix())
+        row["sha256"] = digest(row)
+        segments.append(row)
+    return segments
 
 
 class AccountedProposer(frozen.AccountedProposer):
@@ -476,8 +623,9 @@ class AccountedProposer(frozen.AccountedProposer):
         return value
 
     def call(self, mission, context_dir=None, label="", **kwargs):
-        if getattr(self, "_known_provider_terminal", None) is not None:
-            raise KnownProviderTerminalStop(self._known_provider_terminal)
+        terminal = getattr(self, "_known_provider_terminal", None)
+        if terminal is not None:
+            raise KnownProviderTerminalStop(terminal)
         if not isinstance(label, str) or not _LABEL.fullmatch(label):
             self.halt("unexpected_native_editor_stage")
             raise ProposerError("unexpected native editor stage")
@@ -620,6 +768,8 @@ class AccountedProposer(frozen.AccountedProposer):
         return copy.deepcopy({"fixture": self.fixture, "study_sha256": self.study_sha256,
                               "backend": "opencode", "model": "claude-opus-5",
                               "sessions": self._sessions,
+                              **({"reused_sessions": self._reused_sessions}
+                                 if getattr(self, "_reused_sessions", None) else {}),
                               "attestation": {"boundary_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                                               "editor_profile_sha256": digest(profile())}})
 

@@ -399,6 +399,8 @@ def _admit(state: dict, meta: dict, reservation: dict, *, policy: dict | None = 
             raise CheckpointStop("included first-pair assessment checkpoint reached")
     else:
         bucket = state["cells"][meta["cell"]]
+        carried = policy.get("phase4_child", {}).get("continuation", {}).get("carried_cells", {}).get(meta["cell"], {})
+        bucket = {key: value + carried.get(key, 0) for key, value in bucket.items()}
         limits = policy.get("cell_bounds", {}).get(meta["cell"].split(":")[1], {})
         if (
             meta["cell"] in state["stopped_cells"]
@@ -418,9 +420,13 @@ def _intent(manifest: dict, slot: str, request: dict, index: int) -> dict:
     meta = manifest["inputs"]["slots"][slot]
     study = manifest["inputs"]["study_sha256"]
     policy = manifest["inputs"].get("policy", {})
-    if policy.get("id") == "phase4-cm1-child-accounting-v1" and policy["phase4_child"]["kind"] == "assessment":
-        study = policy["phase4_child"]["generation_study_sha256"]
-        _require(_hash(study), "P4 assessment lacks its original generation identity")
+    if policy.get("id") == "phase4-cm1-child-accounting-v1":
+        child = policy["phase4_child"]
+        if child.get("continuation") is not None:
+            study = child["continuation"]["logical_study_sha256"]
+        elif child["kind"] == "assessment":
+            study = child["generation_study_sha256"]
+        _require(_hash(study), "P4 request lacks its logical generation identity")
     return {
         "slot_id": slot,
         "role": meta["role"],

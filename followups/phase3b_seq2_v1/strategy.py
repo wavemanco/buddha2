@@ -175,18 +175,19 @@ def _task(task: dict) -> None:
 
 def execute_cn(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                dispatch: Dispatch, fixture: bool, arm: str = "fixed",
-               checkpoint: str = "canary", request_policy: dict | None = None) -> dict:
+               checkpoint: str = "canary", request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     with validation_scope():
         return _execute_cn(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
                            dispatch=dispatch, fixture=fixture, arm=arm, checkpoint=checkpoint,
-                           request_policy=request_policy)
+                           request_policy=request_policy, recovery_policy=recovery_policy)
 
 
 def _execute_cn(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                 dispatch: Dispatch, fixture: bool, arm: str, checkpoint: str,
-                request_policy: dict | None = None) -> dict:
+                request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     """One fresh twelve-call C-N topology; the caller owns the authoritative journal."""
     _task(task)
+    _require(recovery_policy in (None, "required-plan-rank-once-v1"), "unknown required-artifact recovery policy")
     _require(re.fullmatch(r"[0-9a-f]{64}", study_sha256) is not None and type(fixture) is bool
              and arm in ("fixed", "adaptive") and checkpoint in ("canary", "expansion"),
              "invalid C-N execution binding")
@@ -230,13 +231,20 @@ def _execute_cn(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str
                                        "requests": copy.deepcopy(requests), "portfolio": None})
 
     plan_request = render_strategy_request("plan", task, strategy)
-    plan = call(slots["plan"], "plan", plan_request)
-    if plan["stop_reason"] != "end_turn":
-        fail("planner_not_finished")
-    try:
-        angles = parse_angles(strict_object(plan["text"]))
-    except ContractError:
-        fail("invalid_plan")
+    for attempt in range(2 if recovery_policy else 1):
+        plan_slot = slots["plan"] + (".recovery1" if attempt else "")
+        plan = call(plan_slot, "plan", plan_request)
+        reason = "planner_not_finished"
+        if plan["stop_reason"] == "end_turn":
+            try:
+                angles = parse_angles(strict_object(plan["text"]))
+                break
+            except ContractError:
+                reason = "invalid_plan"
+        if recovery_policy:
+            base.setdefault("required_artifact_failures", []).append({"slot_id": plan_slot, "reason": reason})
+        if not recovery_policy or attempt or plan["stop_reason"] not in {"end_turn", "max_tokens"}:
+            fail(reason)
     responses = []
     returned = plan["model"]
     for i, angle in enumerate(angles):
@@ -254,17 +262,24 @@ def _execute_cn(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str
              "returned": "fixture-no-model" if fixture else returned}
     parent = make_portfolio(task, responses, method="B", repeat=1, model=model,
         settings_sha256=settings, procedure_sha256=digest({"kind": "phase3a-plan-answers-v1",
-            "strategy": strategy}), request_ids=[slots["plan"], *slots["answers"]],
+            "strategy": strategy}), request_ids=[plan_slot, *slots["answers"]],
         study_sha256=study_sha256, fixture=fixture)
-    context = {"study_sha256": study_sha256, "run_id": run_id, "slot_id": slots["rank"], "arm": arm, "fixture": fixture}
-    prepared = rank_io.prepare(parent, task, strategy, context)
-    rank = call(slots["rank"], "rank", prepared["request"])
-    _integrity(rank["model"] == returned, "ranker model changed within rollout")
-    derived = rank_io.derive(parent, task, strategy, context, prepared, requests[-1])
-    if derived["status"] != "accepted":
+    for attempt in range(2 if recovery_policy else 1):
+        rank_slot = slots["rank"] + (".recovery1" if attempt else "")
+        context = {"study_sha256": study_sha256, "run_id": run_id, "slot_id": rank_slot, "arm": arm, "fixture": fixture}
+        prepared = rank_io.prepare(parent, task, strategy, context)
+        rank = call(rank_slot, "rank", prepared["request"])
+        _integrity(rank["model"] == returned, "ranker model changed within rollout")
+        derived = rank_io.derive(parent, task, strategy, context, prepared, requests[-1])
+        if derived["status"] == "accepted":
+            break
         reason = "ranker_not_finished" if derived["reason"] == "ranker_not_finished" else "invalid_rank:" + derived["reason"]
-        raise KnownOutcomeError(reason, {**base, "status": "failed", "reason": reason,
-            "requests": copy.deepcopy(requests), "portfolio": None, "rank_io": derived})
+        if recovery_policy:
+            base.setdefault("required_artifact_failures", []).append({"slot_id": rank_slot,
+                "reason": reason, "rank_io": copy.deepcopy(derived)})
+        if not recovery_policy or attempt or rank["stop_reason"] not in {"end_turn", "max_tokens"}:
+            raise KnownOutcomeError(reason, {**base, "status": "failed", "reason": reason,
+                "requests": copy.deepcopy(requests), "portfolio": None, "rank_io": derived})
     return {**base, "status": "complete", "parent_B": parent, "portfolio": derived["portfolio"],
             "plan": angles, "normalization": derived["normalization"], "rank_io": derived, "requests": requests}
 
@@ -272,7 +287,7 @@ def _execute_cn(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str
 def validate_rollout(record: dict, task: dict, harness_dir: Path, *, study_sha256: str,
                      fixture: bool, results: dict | None = None,
                      run_id: str | None = None, arm: str | None = None,
-                     request_policy: dict | None = None) -> dict:
+                     request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     """Reconstruct from saved requests, never dispatch, optionally bind every result to a journal."""
     _require(type(record) is dict and type(record.get("requests")) is list, "invalid rollout record")
     indexed = {r.get("slot_id"): r for r in record["requests"] if isinstance(r, dict)}
@@ -290,7 +305,7 @@ def validate_rollout(record: dict, task: dict, harness_dir: Path, *, study_sha25
                               run_id=cast(str, run_id if run_id is not None else record.get("run_id")),
                               dispatch=replay, fixture=fixture,
                               arm=cast(str, arm if arm is not None else record.get("arm")),
-                              request_policy=request_policy)
+                              request_policy=request_policy, recovery_policy=recovery_policy)
     except KnownOutcomeError as exc:
         expected = exc.evidence
     _require(digest(record) == digest(expected), "saved rollout differs from exact C-N replay")
@@ -307,10 +322,12 @@ class _UnresolvedResult(Exception):
 
 def validate_partial(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                      fixture: bool, arm: str, results: dict,
-                     request_policy: dict | None = None) -> dict:
+                     request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     """Verify every settled partial request before any other rollout may send a request."""
     slots = slot_ids(run_id)
     allowed = {slots["plan"], slots["rank"], *slots["answers"]}
+    if recovery_policy:
+        allowed.update({slots[role] + ".recovery1" for role in ("plan", "rank")})
     present = allowed & set(results)
     visited: set[str] = set()
 
@@ -330,7 +347,7 @@ def validate_partial(task: dict, harness_dir: Path, *, study_sha256: str, run_id
     status = "complete"
     try:
         execute_cn(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
-                   dispatch=replay, fixture=fixture, arm=arm, request_policy=request_policy)
+                   dispatch=replay, fixture=fixture, arm=arm, request_policy=request_policy, recovery_policy=recovery_policy)
     except _MissingResult:
         status = "partial" if visited else "not_started"
     except _UnresolvedResult:
@@ -366,18 +383,18 @@ def fixed_selection_request(task: dict, mapping: dict) -> dict:
 def fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                 dispatch: Dispatch, fixture: bool, checkpoint: str = "canary",
                 known_results: dict | None = None, candidate_order: list[str] | None = None,
-                request_policy: dict | None = None) -> dict:
+                request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     with validation_scope():
         return _fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
                             dispatch=dispatch, fixture=fixture, checkpoint=checkpoint,
                             known_results=known_results, candidate_order=candidate_order,
-                            request_policy=request_policy)
+                            request_policy=request_policy, recovery_policy=recovery_policy)
 
 
 def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                  dispatch: Dispatch, fixture: bool, checkpoint: str,
                  known_results: dict | None = None, candidate_order: list[str] | None = None,
-                 request_policy: dict | None = None) -> dict:
+                 request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     from .accounting import CellBudgetStop, LiabilityStop
 
     if known_results is not None:
@@ -385,7 +402,7 @@ def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: s
         for i in range(1, 13):
             checked = validate_partial(task, harness_dir, study_sha256=study_sha256,
                 run_id=f"{run_id}/candidate-{i:02d}", fixture=fixture, arm="fixed", results=known_results,
-                request_policy=request_policy)
+                request_policy=request_policy, recovery_policy=recovery_policy)
             _require(not blocked or not checked["validated_slots"],
                 "incomplete fixed candidate cannot be followed by later candidate requests")
             if checked["status"] == "unresolved":
@@ -398,7 +415,7 @@ def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: s
         try:
             candidate = execute_cn(task, harness_dir, study_sha256=study_sha256,
                 run_id=f"{run_id}/candidate-{i:02d}", dispatch=dispatch,
-                fixture=fixture, arm="fixed", checkpoint=checkpoint, request_policy=request_policy)
+                fixture=fixture, arm="fixed", checkpoint=checkpoint, request_policy=request_policy, recovery_policy=recovery_policy)
         except KnownOutcomeError as exc:
             candidate = exc.evidence
         except CellBudgetStop as exc:
@@ -474,11 +491,11 @@ def _fixed_best12(task: dict, harness_dir: Path, *, study_sha256: str, run_id: s
 def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
                            run_id: str, fixture: bool, results: dict,
                            candidate_order: list[str] | None = None,
-                           request_policy: dict | None = None) -> dict:
+                           request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     """Validate even a settled/unresolved selector whose branch publication was interrupted."""
     dispositions = [validate_partial(task, harness_dir, study_sha256=study_sha256,
         run_id=f"{run_id}/candidate-{i:02d}", fixture=fixture, arm="fixed", results=results,
-        request_policy=request_policy)
+        request_policy=request_policy, recovery_policy=recovery_policy)
         for i in range(1, 13)]
     selector = slot_ids(run_id)["selector"]
     blocked = next((index for index, row in enumerate(dispositions) if row["status"] != "complete"), None)
@@ -502,7 +519,7 @@ def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
     try:
         expected = fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
                               dispatch=replay, fixture=fixture, candidate_order=candidate_order,
-                              request_policy=request_policy)
+                              request_policy=request_policy, recovery_policy=recovery_policy)
         _require(expected["selection"] is not None and expected["selection"]["result"] == results[selector],
                  "saved selector was not a reachable request")
         status = expected["status"]
@@ -514,7 +531,7 @@ def validate_fixed_partial(task: dict, harness_dir: Path, *, study_sha256: str,
 def validate_fixed(record: dict, task: dict, harness_dir: Path, *, study_sha256: str,
                    run_id: str, fixture: bool, results: dict, stopped: bool = False,
                    candidate_order: list[str] | None = None,
-                   request_policy: dict | None = None) -> dict:
+                   request_policy: dict | None = None, recovery_policy: str | None = None) -> dict:
     """Rebuild the entire frozen control, including its packet and choice, without sending."""
     def replay(slot: str, role: str, request: dict) -> dict:
         if slot not in results and stopped:
@@ -526,6 +543,6 @@ def validate_fixed(record: dict, task: dict, harness_dir: Path, *, study_sha256:
 
     expected = fixed_best12(task, harness_dir, study_sha256=study_sha256, run_id=run_id,
                           dispatch=replay, fixture=fixture, known_results=results, candidate_order=candidate_order,
-                          request_policy=request_policy)
+                          request_policy=request_policy, recovery_policy=recovery_policy)
     _require(digest(record) == digest(expected), "fixed control differs from exact journal replay")
     return expected

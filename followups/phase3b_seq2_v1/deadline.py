@@ -66,7 +66,7 @@ def clock_record(*, study_sha256: str, source_sha256: str, pilot: str, label: st
         "conversation_id": pilot + ":adaptive:" + label, "fixture": fixture,
         "started_monotonic": started, "deadline_monotonic": started + NATIVE_TIMEOUT,
         "soft_deadline_monotonic": started + CONVERSATION_POLICY["soft_seconds"],
-        "grace_deadline_monotonic": started + CONVERSATION_POLICY["soft_seconds"] + CONVERSATION_POLICY["grace_seconds"],
+        "grace_deadline_monotonic": started + (CONVERSATION_POLICY["soft_seconds"] + CONVERSATION_POLICY["grace_seconds"]),
         "seconds": CONVERSATION_POLICY["soft_seconds"], "timing_policy": copy.deepcopy(CONVERSATION_POLICY),
         "native_subprocess_cap_seconds": NATIVE_TIMEOUT, "OpenCode_fetch_cap_seconds": FETCH_TIMEOUT,
         "renewable": False, "editor_profile_sha256": editor_profile_sha256,

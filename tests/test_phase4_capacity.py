@@ -139,6 +139,7 @@ class Phase4CapacityTests(unittest.TestCase):
         adapter.study_sha256, adapter.run_root, adapter.tag = "a" * 64, Path("/unused-root"), "p4-24"
         adapter.fixture, adapter.known_results = True, {}
         adapter.request_policy = {"synthetic": "policy"}
+        adapter.recovery_policy = None
         checked = {label: {"status": "not_started"} for label in native.LABELS}
         with patch.object(native, "validate_adaptive_partial", return_value=checked) as validate:
             adapter._validate_existing({})

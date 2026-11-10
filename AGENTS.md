@@ -1,8 +1,10 @@
-# Offline correction and reusable execution — authorized 9 November 2026
+# Reusable execution accepted offline — 9 November 2026
 
-The user authorized the optional-probe correction and working general reuse in the existing runner. The correction passes 129 unit checks, Ruff/Mypy/Bandit and three actual saved author-context replays; see [evidence](evidence/phase4-cm1-v1/optional-probe-fix-v1.json). Earlier source-repair prohibitions are superseded only for this offline work. Original closed records and source identities remain historical and immutable.
+The existing runner now reuses verified provider results, completed native author stages and solver rollouts across separately identified executions. All 166 selected checks passed across retained verification and targeted completion, with Ruff/Mypy/Bandit green. Actual saved-study validation reconciles 2,651 calls/$44.975462 and 38 native segments with zero new calls and the original files unchanged. See [resumption and its limits](docs/RESUMPTION.md) and [acceptance evidence](evidence/phase4-cm1-v1/resumability-v1.json).
 
-Reusability is being implemented, not yet accepted. Completion requires actual offline interruption/resumption with zero redispatch of committed work, explicit old/new provenance, cumulative costs/holds and native stage/rollout reuse. Reuse the existing ledger and native cache; no framework or upstream edits. No keys, paid calls or automatic restart. A concrete amended 24-case continuation and bounded recovery policy must precede paid authorization.
+The same 24-case continuation is prepared under source `8c32d27d…c6de200`, study `4b18a63c…5188ca5`, with `required-plan-rank-once-v1`. Both qualifications and the completed pair remain closed; retain every prior charge, failure, valid stage and candidate prefix. The existing $1,200 total leaves $1,155.024538 and 38,263 admissions; per-allocation/cell limits and historical $22.88 liability remain. Potential conditional slots are not an allowance to exceed those ceilings.
+
+**No paid continuation is authorized or running.** The original definition prohibits automatic retries, so the amended method needs its execution decision before a source-bound grant. Fresh masked keys follow current launch acceptance. No new framework, upstream edits, resampling, scoring-guided change or engineering block is proposed. The code is frozen; preserve all closed records and do not restart the old execution. The scientific comparison remains incomplete and its quality/distinctness/utility results remain UNEVALUATED. Earlier chronological status below is historical where superseded by this paragraph.
 
 # P4-CM1 closed incomplete — 9 November 2026 UTC
 

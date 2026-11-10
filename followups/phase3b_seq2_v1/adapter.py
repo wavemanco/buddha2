@@ -10,7 +10,7 @@ import time
 from pathlib import Path, PurePosixPath
 from typing import Callable
 
-from harness2.core.proposer import ProposerError
+from harness2.core.proposer import ProposerError, Reply
 
 from buddha2.artifacts import digest, file_hash, write_bytes_once, write_once
 from buddha2.phase2_dispatch import _publish
@@ -19,6 +19,7 @@ from followups.phase3a_compat_c1_v1.support import OPENCODE_FILES, PRIVATE, open
 from . import contract, editor, strategy
 from .deadline import clock_record
 from .support import DECLARED_DEFINITION_SHA256
+from .support import read as read_public
 
 
 class CompatibleProposer(editor.AccountedProposer):
@@ -27,7 +28,8 @@ class CompatibleProposer(editor.AccountedProposer):
     def __init__(self, *, pilot: str, study_sha256: str, dispatch: Callable,
                  audit_dir: Path, fixture: bool, halt: Callable,
                  register_contract: Callable | None = None, source_sha256: str | None = None,
-                 register_deadline: Callable | None = None, request_policy: dict | None = None):
+                 register_deadline: Callable | None = None, request_policy: dict | None = None,
+                 resume_from_audit: Path | None = None, compatibility: dict | None = None):
         try:
             audit_dir = Path(audit_dir)
             roots = (strategy.ROOT / "runs/phase3b-seq2-v1/native", Path("/results/phase3b-seq2-v1/native"))
@@ -65,6 +67,73 @@ class CompatibleProposer(editor.AccountedProposer):
             "editor_sha256": file_hash(Path(editor.__file__)),
         }
         self._c1_source = source_sha256 or digest(self._c1_binding)
+        self._resume_from_audit = None if resume_from_audit is None else strategy._path(resume_from_audit)
+        self._resume_compatibility = None if compatibility is None else editor.continuation_compatibility(compatibility)
+        self._resume_segments: dict = {}
+        self._resume_known_results: dict = {}
+        self._reused_sessions: dict = {}
+        self._reuse_quarantine: str | None = None
+        strategy._integrity((self._resume_from_audit is None) == (self._resume_compatibility is None)
+            and (self._resume_compatibility is None or
+                 self._resume_compatibility["current_source_sha256"] == self._c1_source),
+            "author reuse lacks its current source compatibility")
+
+    def _reuse_author(self, mission: str, context: Path, label: str, prepared: dict) -> Reply | None:
+        if self._resume_from_audit is None:
+            return None
+        compatibility = editor.continuation_compatibility(self._resume_compatibility)
+        segment = self._resume_segments.get(label)
+        if segment is None:
+            strategy._integrity(not (self._resume_from_audit / "phase3a-sessions" / (label + ".started.json")).exists(),
+                                "started origin author lacks an approved disposition")
+            return None
+        editor.check_segment_files(segment)
+        if segment["kind"] == "native-author-unstarted-v1":
+            return None
+        if segment["kind"] != "native-author-stage-v1":
+            self._reuse_quarantine = label
+            raise ProposerError("unfinished origin author conversation is quarantined")
+        strategy._integrity(segment["logical_study_sha256"] == self.study_sha256
+            and segment["context_inventory"] == prepared["manifest"]["context_inventory"]
+            and segment["raw_mission_sha256"] == hashlib.sha256(mission.encode()).hexdigest()
+            and segment["effective_mission_sha256"] == prepared["manifest"]["effective_mission_sha256"],
+            "completed author dependencies differ from the approved origin")
+        from . import accounting
+
+        root = strategy._path(Path(segment["origin_search"]))
+        audit = strategy._path(Path(segment["origin_audit"]))
+        source = editor.continuation_source(compatibility, segment["source_sha256"])
+        old = accounting.replay(Path(segment["origin_journal"]))
+        strategy._integrity(all(self._resume_known_results.get(slot) == result for slot, result in old["results"].items()),
+                            "author reuse results differ from the continuation ledger")
+        sessions = editor.validate_persisted_sessions(audit, study_sha256=self.study_sha256,
+            pilot=self.pilot, fixture=self.fixture, results=old["results"], intents=old["intents"],
+            request_policy=self.request_policy,
+            binding_source_sha256=source["files"]["followups/phase3b_seq2_v1/editor.py"])
+        session = sessions[label]
+        strategy._integrity(digest(session) == segment["session_sha256"], "origin author proof changed")
+        old_index = (audit / "c1-contracts" / label / "context-view/C1_INDEX.md").read_text(encoding="utf-8")
+        old_system = (audit / "c1-contracts" / label / "configured-agent-prompt.md").read_text(encoding="utf-8")
+        expected_system = (contract.selector_system(prepared["effective_mission"], old_index) if label == "select.seq2"
+                           else contract.authoring_system(prepared["effective_mission"], old_index))
+        strategy._integrity(expected_system == old_system, "author reuse changed consumed instructions")
+        reference = {"binding": self._proof_binding, "label": label, "segment": segment,
+            "compatibility": compatibility,
+            "origin_context": segment["origin_context"], "new_context": str(context),
+            "origin_context_inventory_sha256": digest(segment["context_inventory"]),
+            "new_context_inventory_sha256": prepared["manifest"]["context_inventory_sha256"],
+            "executed_prompt": "origin", "new_provider_calls": 0}
+        reference["sha256"] = digest(reference)
+        write_once(Path(self.audit_dir) / "reused-author-stages" / (label + ".json"), reference)
+        self._reused_sessions[label] = reference
+        self._sessions[label] = copy.deepcopy(session)
+        self._c1_sessions[label] = read_public(strategy._path(audit / "c1-contracts" / label / "result.json"))
+        reply = Reply(label=label, text=(root / segment["reply_path"]).read_text(encoding="utf-8"),
+            ok=True, cached=True, channel="opencode", cost_usd=0.0, attempts=0,
+            audit=root / segment["reply_path"],
+            workspace=None if segment["workspace_path"] is None else root / segment["workspace_path"])
+        self._calls.append(reply)
+        return reply
 
     def _opencode(self, cwd, mission, system, wall):
         # Waiting for the other native editor never consumes this conversation's clock.
@@ -88,6 +157,8 @@ class CompatibleProposer(editor.AccountedProposer):
 
     @strategy.scoped
     def call(self, mission, context_dir=None, label="", **kwargs):
+        if getattr(self, "_reuse_quarantine", None) is not None:
+            raise ProposerError("unfinished origin author conversation is quarantined")
         terminal = getattr(self, "_known_provider_terminal", None)
         if terminal is not None:
             raise editor.KnownProviderTerminalStop(terminal)
@@ -114,6 +185,9 @@ class CompatibleProposer(editor.AccountedProposer):
                         if label == "select.seq2" else contract.prepare_contract(mission, context, label,
                             context_limits=self._context_limits,
                             failed_probes=self._optional_probe_failures(label) if self._optional_probe_failures else {}))
+            reused = self._reuse_author(mission, context, label, prepared)
+            if reused is not None:
+                return reused
         except (contract.ContractError, OSError, TypeError, ValueError) as exc:
             self.halt("c1_contract_input_violation")
             raise ProposerError("C1 contract rejected its native input") from exc

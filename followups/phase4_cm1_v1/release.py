@@ -4,7 +4,7 @@ from __future__ import annotations
 import copy
 from pathlib import Path
 
-from buddha2.artifacts import digest, file_hash, read_json, write_once
+from buddha2.artifacts import digest, file_hash, read_json, write_bytes_once, write_once
 from buddha2.phase2_dispatch import FROZEN_PROFILES
 from followups.phase3b_seq2_v1 import accounting, editor, ledger_core, strategy, supervision
 from followups.phase3b_seq2_v1.support import (
@@ -15,6 +15,7 @@ from followups.phase3b_seq2_v1.support import (
     ROOT,
     _source_inputs,
     _source_name,
+    checked,
     offline_readiness,
     require,
     runtime_guard,
@@ -128,13 +129,16 @@ def _method(source: dict, pricing: dict) -> dict:
     }
 
 
-def prepare(output: Path) -> dict:
+def prepare(output: Path, *, continuation: dict | None = None) -> dict:
     runtime_guard()
     output = path(output)
     require(not output.exists(), "P4 preparation requires a fresh output directory")
     review, pricing = _records()
     source, runtime = source_identity(), runtime_identity()
     method = _method(source, pricing)
+    if continuation is not None:
+        _validate_continuation(continuation, source)
+        method = _amended_method(method, continuation)
     body = {"kind": KIND, "source": source, "source_sha256": source["sha256"],
         "runtime": runtime, "runtime_sha256": digest(runtime),
         "policy": copy.deepcopy(PARENT_POLICY), "policy_sha256": digest(PARENT_POLICY),
@@ -151,6 +155,11 @@ def prepare(output: Path) -> dict:
         "eligibility_proof": review, "eligibility_proof_sha256": digest(review),
         "confirmation_source_sha256": eligibility.SOURCE_SHA256,
         "confirmation_tasks_opened": False, "fixture_supervision_rehearsal": False}
+    if continuation is not None:
+        body["continuation"] = continuation
+        body["execution_tag"] = continuation["logical_execution_tag"]
+        if continuation.get("required_artifact_recovery"):
+            body["potential_slot_count"] = 46098
     value = {**body, "study_sha256": digest(body)}
     require(source_identity() == source, "P4 source changed during preparation")
     output.mkdir(parents=True)
@@ -169,6 +178,12 @@ def load_study(study_path: Path) -> dict:
     review, pricing = _records()
     source, runtime = source_identity(), runtime_identity()
     method = _method(source, pricing)
+    continuation = value.get("continuation")
+    if continuation is not None:
+        _validate_continuation(continuation, source)
+        method = _amended_method(method, continuation)
+    expected_tag = (continuation["logical_execution_tag"] if continuation is not None
+                    else "p4-cm1-" + digest(str(study_path.parent.relative_to(BASE)))[:16])
     require(value["source"] == source and value["source_sha256"] == source["sha256"]
         and value["runtime"] == runtime and value["runtime_sha256"] == digest(runtime)
         and value["launcher_sha256"] == file_hash(LAUNCHER)
@@ -176,7 +191,7 @@ def load_study(study_path: Path) -> dict:
         and value["authorization_sha256"] == file_hash(ROOT / RECORDS["authorization"])
         and value["pricing_sha256"] == file_hash(ROOT / RECORDS["pricing"])
         and value["method"] == method and value["method_sha256"] == digest(method)
-        and value["execution_tag"] == "p4-cm1-" + digest(str(study_path.parent.relative_to(BASE)))[:16]
+        and value["execution_tag"] == expected_tag
         and value["development"] == _development() and value["seed_tree"] == strategy.seed_tree()
         and value["development_study_sha256"] == OLD_STUDY_SHA
         and value["editor_tools"] == read_json(ROOT / "followups/phase3a_v1/editor-tools.json")
@@ -184,7 +199,8 @@ def load_study(study_path: Path) -> dict:
         and value["eligibility_proof"] == review and value["eligibility_proof_sha256"] == digest(review)
         and value["confirmation_source_sha256"] == eligibility.SOURCE_SHA256
         and value["confirmation_tasks_opened"] is False
-        and value["maximum_admitted_attempts"] == value["potential_slot_count"] == 40914
+        and value["maximum_admitted_attempts"] == 40914
+        and value["potential_slot_count"] == (46098 if continuation and continuation.get("required_artifact_recovery") else 40914)
         and value["fixture_supervision_rehearsal"] is False,
         "P4 current method/source/runtime/authority changed")
     require(strategy.validate_harness(study_path.parent / "seed")["tree"] == value["seed_tree"],
@@ -192,9 +208,244 @@ def load_study(study_path: Path) -> dict:
     return value
 
 
-def make_grant(study_path: Path, fixture: bool) -> dict:
+
+
+def _amended_method(method: dict, continuation: dict) -> dict:
+    # Spending approval is a separate receipt; excluding it avoids circular seals.
+    plan = {key: value for key, value in continuation.items() if key not in {"sha256", "spending_authorization"}}
+    return {**method, "id": "phase4-cm1-amended-resumed-method-v1",
+        "original_method_sha256": continuation["original_method_sha256"],
+        "continuation_plan_sha256": digest(plan),
+        "required_artifact_recovery": continuation.get("required_artifact_recovery")}
+
+
+def continuation_scope(study: dict) -> dict:
+    """Exact metadata-only review scope; no unopened prompt content is needed."""
+    from .workflow import worklist
+
+    value = study["continuation"]
+    manifest = read_json(_referenced(value["confirmation_manifest"])) if value.get("confirmation_manifest") else None
+    require(manifest is not None or value["fixture"], "live continuation requires the original 24-task manifest")
+    ids = [row["source_task_id"] for row in manifest["selected"]] if manifest else [f"synthetic-p4-{i:02d}" for i in range(1, 25)]
+    require(len(ids) == 24 and len(set(ids)) == 24, "continuation must retain the exact 24 original task IDs")
+    spent, held = dict.fromkeys(policy.ALLOCATIONS, 0), dict.fromkeys(policy.ALLOCATIONS, 0)
+    attempts = 0
+    known: dict[tuple[str, str], set[str]] = {}
+    latest: dict[tuple[str, str], dict] = {}
+    for entry in value["children"]:
+        unit = (entry["kind"], entry["pair"])
+        state, _ = accounting.read_reference(entry["journal"])
+        spent[unit[0]] += state["spent_micro_usd"]
+        held[unit[0]] += state["reserved_micro_usd"]
+        attempts += state["attempts"]
+        known.setdefault(unit, set()).update(state["intents"])
+        if entry.get("result"):
+            latest[unit] = read_json(_referenced(entry["result"]), max_bytes=policy.artifact_limits()["saved_artifact_bytes"])
+    future = {}
+    for entry in study["development"]:
+        pair = entry["pilot_id"]
+        if (latest.get(("dev", pair)) or {}).get("status") != "complete":
+            future["dev/" + pair] = {slot: meta for slot, meta in worklist(study, "dev", pair, entry["task"]).items()
+                                      if slot not in known.get(("dev", pair), set())}
+    for index, task_id in enumerate(ids, 1):
+        pair = f"p4-{index:02d}"
+        generation = latest.get(("inference", pair), {})
+        adaptive_complete = (generation.get("adaptive") or {}).get("status") == "complete"
+        fixed_complete = (generation.get("fixed") or {}).get("status") == "complete"
+        if not (adaptive_complete and fixed_complete):
+            slots = worklist(study, "inference", pair, {"id": task_id})
+            future["inference/" + pair] = {slot: meta for slot, meta in slots.items()
+                if slot not in known.get(("inference", pair), set())
+                and not (adaptive_complete and meta["cell"] == pair + ":adaptive")
+                and not (fixed_complete and meta["cell"] == pair + ":fixed")}
+        future["assessment/" + pair] = {slot: meta for slot, meta in worklist(study, "assessment", pair, {"id": task_id}).items()
+            if slot not in known.get(("assessment", pair), set())}
+    return {"kind": "phase4-cm1-continuation-spending-scope-v1", "method_sha256": study["method_sha256"],
+        "source_sha256": study["source_sha256"], "original_prompt_ids": ids,
+        "confirmation_manifest_sha256": value["confirmation_manifest"]["file_sha256"] if manifest else None,
+        "required_artifact_recovery": value.get("required_artifact_recovery"),
+        "future_worklist_sha256": digest(future), "future_potential_slots": sum(len(slots) for slots in future.values()),
+        "remaining_admissions": 40914 - attempts, "maximum_cumulative_admissions": 40914,
+        "known_spent_micro_usd": sum(spent.values()), "held_micro_usd": sum(held.values()),
+        "remaining_total_micro_usd": 1_200_000_000 - sum(spent.values()) - sum(held.values()),
+        "remaining_allocations_micro_usd": {key: policy.ALLOCATIONS[key] - spent[key] - held[key] for key in spent},
+        "historical_held_micro_usd": 22_880_000, "historical_hold_available_for_spending": False}
+
+
+def _sealed_reference(target: Path) -> dict:
+    target = safe(target)
+    return {"path": str(target), "file_sha256": file_hash(target)}
+
+
+def _referenced(value: dict) -> Path:
+    require(isinstance(value, dict) and set(value) == {"path", "file_sha256"}
+        and ledger_core._hash(value["file_sha256"]), "invalid artifact origin reference")
+    target = safe(Path(value["path"]))
+    require(file_hash(target) == value["file_sha256"], "immutable continuation origin changed")
+    return target
+
+
+
+def validate_origin_entry(entry: dict) -> None:
+    opened = checked(read_json(_referenced(entry["open"])))
+    require(opened["child_sha256"] == entry["journal"]["execution_study_sha256"]
+        and opened["allocation"]["child_kind"] == entry["kind"]
+        and opened["allocation"]["pair"] == entry["pair"], "origin open identity differs")
+    if entry.get("result") is not None:
+        require(entry.get("closure") is not None, "published origin result lacks its committed closure")
+        result = read_json(_referenced(entry["result"]), max_bytes=policy.artifact_limits()["saved_artifact_bytes"])
+        closure = checked(read_json(_referenced(entry["closure"])))
+        require(closure["open_sha256"] == opened["sha256"]
+            and closure["child_sha256"] == entry["journal"]["execution_study_sha256"]
+            and closure["result_sha256"] == digest(result), "origin result differs from its committed closure")
+
+def _validate_continuation(value: dict, current_source: dict) -> None:
+    require(isinstance(value, dict) and value.get("kind") == "phase4-cm1-continuation-v1"
+        and value.get("sha256") == digest({k: v for k, v in value.items() if k != "sha256"}),
+        "continuation seal differs")
+    original = read_json(_referenced(value["original_study"]))
+    require(original.get("study_sha256") == digest({k: v for k, v in original.items() if k != "study_sha256"})
+        and value["logical_execution_tag"] == original["execution_tag"]
+        and value["original_method_sha256"] == original["method_sha256"]
+        and type(value["fixture"]) is bool
+        and value.get("required_artifact_recovery") in (None, "required-plan-rank-once-v1"),
+        "continuation logical lineage differs")
+    previous_path = _referenced(value["previous_study"])
+    previous = read_json(previous_path)
+    require(value["children"] == continuation_children(previous_path, value["fixture"]),
+            "continuation omitted or changed a physical origin execution")
+    require(previous.get("study_sha256") == value["previous_study_sha256"], "previous study identity differs")
+    if value.get("previous_outcome") is not None:
+        outcome = read_json(_referenced(value["previous_outcome"]))
+        require(outcome.get("study_sha256") == value["previous_study_sha256"]
+            and outcome.get("fixture") is value["fixture"], "closed predecessor outcome differs")
+    else:
+        require(value.get("owner_closure") is not None, "crashed predecessor needs verified owner closure")
+    if value.get("owner_closure") is not None:
+        closure = read_json(_referenced(value["owner_closure"]))
+        require(closure.get("kind") == "phase4-cm1-owner-closure-v1"
+            and closure.get("sha256") == digest({k: v for k, v in closure.items() if k != "sha256"})
+            and closure.get("study_sha256") == value["previous_study_sha256"]
+            and closure.get("owner_stopped") is True, "predecessor owner is not verified stopped")
+    for child in value["children"]:
+        require(child["journal"].get("fixture") is value["fixture"], "continuation mixes live and fixture origins")
+        accounting.read_reference(child["journal"])
+        validate_origin_entry(child)
+    proof = read_json(_referenced(value["compatibility"]), max_bytes=policy.artifact_limits()["saved_artifact_bytes"])
+    require(proof.get("kind") == "phase4-cm1-continuation-compatibility-v1"
+        and proof.get("sha256") == digest({k: v for k, v in proof.items() if k != "sha256"})
+        and proof.get("passed") is True and proof.get("provider_calls") == 0
+        and proof.get("previous_source_sha256") == previous["source_sha256"]
+        and proof.get("current_source_sha256") == current_source["sha256"]
+        and proof.get("origins_sha256") == digest([child["journal"] for child in value["children"]])
+        and isinstance(proof.get("validated_segments"), list)
+        and proof.get("origin_source") == previous["source"],
+        "offline source/prefix compatibility proof required before continuation")
+    for entry in value["children"]:
+        if entry["kind"] != "inference" or entry.get("result") is None:
+            continue
+        generation = read_json(_referenced(entry["result"]), max_bytes=policy.artifact_limits()["saved_artifact_bytes"])
+        adaptive = generation.get("adaptive") or {}
+        if adaptive.get("status") == "complete":
+            require(any(segment.get("kind") == "native-adaptation-v1"
+                and segment.get("record_sha256") == digest(adaptive)
+                for segment in proof["validated_segments"]),
+                "published native selection lacks its fully verified origin aggregate")
+    if value.get("confirmation_manifest") is not None:
+        _referenced(value["confirmation_manifest"])
+
+
+def _continuation_authority(study: dict, reference: dict | None = None) -> None:
+    value, source_sha256 = study["continuation"], study["source_sha256"]
+    reference = reference or value.get("spending_authorization")
+    require(reference is not None, "continuation needs explicit amended spending authorization")
+    authority = read_json(_referenced(reference))
+    require(authority.get("kind") == "phase4-cm1-continuation-authorization-v1"
+        and authority.get("sha256") == digest({k: v for k, v in authority.items() if k != "sha256"})
+        and authority.get("authorized") is True and authority.get("previous_owner_stopped") is True
+        and authority.get("previous_study_sha256") == value["previous_study_sha256"]
+        and authority.get("source_sha256") == source_sha256
+        and authority.get("compatibility_sha256") == read_json(_referenced(value["compatibility"]),
+            max_bytes=policy.artifact_limits()["saved_artifact_bytes"])["sha256"]
+        and authority.get("total_cap_micro_usd") == 1_200_000_000
+        and authority.get("maximum_admissions") == 40914
+        and authority.get("required_artifact_recovery") == value.get("required_artifact_recovery")
+        and authority.get("scope") == continuation_scope(study),
+        "amended spending authority does not cover this exact continuation")
+
+
+
+def continuation_children(previous_study_path: Path, fixture: bool) -> list[dict]:
+    previous_study_path = path(previous_study_path)
+    previous = read_json(previous_study_path)
+    previous_run, _ = paths(previous, fixture)
+    children = []
+    for directory in sorted((previous_run / "children").glob("*")):
+        opened = read_json(directory / "open.json")
+        reference = accounting.journal_reference(accounting.canonical_journal(opened["child_sha256"], fixture))
+        entry = {"kind": opened["allocation"]["child_kind"], "pair": opened["allocation"]["pair"],
+            "journal": reference, "open": _sealed_reference(directory / "open.json"),
+            "result": _sealed_reference(directory / "result.json") if (directory / "result.json").is_file() else None,
+            "closure": _sealed_reference(directory / "closure.json") if (directory / "closure.json").is_file() else None}
+        children.append(entry)
+    prior = previous.get("continuation")
+    if prior is not None:
+        inherited = {row["journal"]["execution_study_sha256"]: row for row in prior["children"]}
+        inherited.update({row["journal"]["execution_study_sha256"]: row for row in children})
+        children = list(inherited.values())
+    return children
+
+
+def prepare_continuation(previous_study_path: Path, output: Path, *, fixture: bool,
+                         compatibility_path: Path, spending_authorization_path: Path | None = None,
+                         recovery_policy: str | None = None, owner_closure_path: Path | None = None) -> dict:
+    """A new execution of the same logical cases; original artifacts remain read-only."""
+    previous_study_path = path(previous_study_path)
+    previous = read_json(previous_study_path)
+    require(type(fixture) is bool and previous.get("study_sha256") == digest({k: v for k, v in previous.items()
+        if k != "study_sha256"}), "previous study is not sealed")
+    previous_run, _ = paths(previous, fixture)
+    if previous.get("continuation", {}).get("required_artifact_recovery") is not None:
+        inherited = previous["continuation"]["required_artifact_recovery"]
+        require(recovery_policy is None or recovery_policy == inherited, "required recovery policy changed after exposure")
+        recovery_policy = inherited
+    require((previous_run / "outcome.json").is_file() or owner_closure_path is not None,
+            "crashed predecessor requires explicit owner-closure evidence")
+    children = continuation_children(previous_study_path, fixture)
+    prior = previous.get("continuation")
+    manifest = (prior.get("confirmation_manifest") if prior else None)
+    if manifest is None and (previous_study_path.parent / "confirmation-manifest.json").is_file():
+        manifest = _sealed_reference(previous_study_path.parent / "confirmation-manifest.json")
+    original_reference = prior["original_study"] if prior else _sealed_reference(previous_study_path)
+    original = read_json(_referenced(original_reference))
+    body = {"kind": "phase4-cm1-continuation-v1", "fixture": fixture,
+        "previous_study": _sealed_reference(previous_study_path), "previous_study_sha256": previous["study_sha256"],
+        "previous_outcome": _sealed_reference(previous_run / "outcome.json") if (previous_run / "outcome.json").is_file() else None,
+        "owner_closure": _sealed_reference(owner_closure_path) if owner_closure_path else None,
+        "original_study": original_reference,
+        "funding_origin_study_sha256": prior["funding_origin_study_sha256"] if prior else previous["study_sha256"],
+        "original_method_sha256": original["method_sha256"], "logical_execution_tag": original["execution_tag"],
+        "children": children, "confirmation_manifest": manifest,
+        "compatibility": _sealed_reference(compatibility_path),
+        "spending_authorization": _sealed_reference(spending_authorization_path) if spending_authorization_path else None,
+        "required_artifact_recovery": recovery_policy}
+    body["sha256"] = digest(body)
+    result = prepare(output, continuation=body)
+    if manifest is not None:
+        write_bytes_once(path(output) / "confirmation-manifest.json", _referenced(manifest).read_bytes())
+    return result
+
+
+def make_grant(study_path: Path, fixture: bool, *, continuation_authorization_path: Path | None = None) -> dict:
     study = load_study(study_path)
     require(type(fixture) is bool, "P4 grant mode must be explicit")
+    if study.get("continuation") is not None:
+        require(study["continuation"].get("fixture") is fixture, "continuation grant mode differs from its origins")
+    authorization = _sealed_reference(continuation_authorization_path) if continuation_authorization_path else None
+    require(authorization is None or study.get("continuation") is not None,
+            "continuation authority cannot alter an original study")
+    if not fixture and study.get("continuation") is not None:
+        _continuation_authority(study, authorization)
     body = {"kind": "phase4-cm1-parent-grant-v1", "fixture": fixture,
         **{key: study[key] for key in READINESS_BINDINGS},
         "authority": {"study_sha256": study["study_sha256"], "authorization_id": "phase4-cm1-user-approval",
@@ -202,12 +453,17 @@ def make_grant(study_path: Path, fixture: bool) -> dict:
             "canary_cap_micro_usd": PARENT_POLICY["first_micro_usd"], "expansion_authorized": False,
             "control_policy_sha256": ledger_core.am1.CONTROL_SHA256,
             "billing_profile": ledger_core.am1.BILLING_PROFILE}}
+    if study.get("continuation") is not None:
+        body["continuation_scope"] = continuation_scope(study)
+        body["continuation_authorization"] = authorization or study["continuation"].get("spending_authorization")
     return {**body, "grant_sha256": digest(body)}
 
 
 def grant_for(study_path: Path, grant_path: Path, fixture: bool) -> dict:
     value = read_json(path(grant_path))
-    require(type(fixture) is bool and value == make_grant(study_path, fixture), "P4 parent grant differs")
+    authorization = _referenced(value["continuation_authorization"]) if value.get("continuation_authorization") else None
+    require(type(fixture) is bool and value == make_grant(study_path, fixture,
+        continuation_authorization_path=authorization), "P4 parent grant differs")
     return value
 
 
@@ -263,7 +519,11 @@ def preflight(study_path: Path, grant_path: Path, stage: str, mode: str, *, supe
     if mode == "provider":
         record = _claim_record(checked)
         target = path(BASE / "live-study-phase4-cm1-v1.json")
-        if target.exists():
+        if study.get("continuation") is not None:
+            previous = study["continuation"]["funding_origin_study_sha256"]
+            require(target.exists() and read_json(target).get("study_sha256") == previous,
+                    "continuation has no original allowance claim")
+        elif target.exists():
             require(read_json(target) == record, "another P4 parent already claims this allowance")
     return checked
 
@@ -273,5 +533,10 @@ def claim(checked: dict) -> dict:
         checked["mode"], supervisor_agent=checked.get("supervisor_agent")) == checked,
         "P4 claim no longer matches accepted preflight")
     record = _claim_record(checked)
-    write_once(path(BASE / "live-study-phase4-cm1-v1.json"), record)
+    study = load_study(Path(checked["study_path"]))
+    if study.get("continuation") is None:
+        write_once(path(BASE / "live-study-phase4-cm1-v1.json"), record)
+    else:
+        # The original allowance claim remains immutable. Each successor has one claim.
+        write_once(path(Path(checked["run"]) / "continuation-allowance-claim.json"), record)
     return record

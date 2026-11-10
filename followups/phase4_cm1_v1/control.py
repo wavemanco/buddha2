@@ -16,7 +16,7 @@ def fixed_run_ids(run_id: str) -> list[str]:
 
 def run_fixed(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
               target_micro_usd: int, dispatch: Callable, spent: Callable[[], int],
-              fixture: bool, request_policy: dict) -> dict:
+              fixture: bool, request_policy: dict, recovery_policy: str | None = None) -> dict:
     """Spend toward the native bill; only settled cost controls pool count."""
     require(type(target_micro_usd) is int and target_micro_usd > 0,
             "complete native inference with a positive settled bill is required")
@@ -57,7 +57,7 @@ def run_fixed(task: dict, harness_dir: Path, *, study_sha256: str, run_id: str,
                            "run_id": pool_id, "candidate_run_id": candidate}))
         record = strategy.fixed_best12(task, harness_dir, study_sha256=study_sha256,
             run_id=pool_id, dispatch=call, fixture=fixture, candidate_order=order,
-            request_policy=request_policy)
+            request_policy=request_policy, recovery_policy=recovery_policy)
         pools.append(record)
         # Replays see the original settled prefix, not the later full journal total.
         current = prefix_cost()

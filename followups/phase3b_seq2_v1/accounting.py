@@ -13,7 +13,7 @@ import json
 import os
 import re
 import threading
-from collections import Counter
+from collections import Counter, OrderedDict
 from pathlib import Path
 from typing import Any, Callable
 
@@ -85,8 +85,14 @@ _require = core._require
 def _bindings(manifest: dict) -> dict:
     value = parent._bindings(manifest)
     policy = manifest["inputs"].get("policy", {})
-    if policy.get("id") == "phase4-cm1-child-accounting-v1" and policy["phase4_child"]["kind"] == "assessment":
-        value["study_sha256"] = policy["phase4_child"]["generation_study_sha256"]
+    if policy.get("id") == "phase4-cm1-child-accounting-v1":
+        child = policy["phase4_child"]
+        if child.get("continuation") is not None:
+            # Match the existing assessment split: transport intent is logical;
+            # manifest, dispatch ID, audit path, source and grant remain physical.
+            value["study_sha256"] = child["continuation"]["logical_study_sha256"]
+        elif child["kind"] == "assessment":
+            value["study_sha256"] = child["generation_study_sha256"]
     return value
 
 
@@ -407,8 +413,8 @@ def _replay(path: Path) -> tuple[dict, list[dict], dict]:
                     and row.get("turn") == meta["turn"] - 1
                 )
                 _require(
-                    previous in state["results"]
-                    and state["results"][previous]["status"] == "response",
+                    previous in {**_origin_results(manifest["inputs"]["policy"]), **state["results"]}
+                    and {**_origin_results(manifest["inputs"]["policy"]), **state["results"]}[previous]["status"] == "response",
                     "editor continuation lacks its preceding settled turn",
                 )
             for bucket in core._buckets(state, meta):
@@ -527,9 +533,11 @@ def _audit(journal: Path, manifest: dict, state: dict, *, strict: bool) -> dict:
     return summary
 
 
-def replay(journal: Path) -> dict:
+def replay(journal: Path, *, _sidefiles: dict | None = None) -> dict:
     journal = _journal(journal)
     state, records, manifest = _replay(journal)
+    if _sidefiles is not None:
+        _sidefiles.update(_reference_provenance_pins(journal, manifest, state))
     stop = _stop(journal, manifest, state, records)
     audit = _audit(journal, manifest, state, strict=False)
     state["core_status"] = state["status"]
@@ -554,6 +562,8 @@ def replay(journal: Path) -> dict:
     if target.exists():
         state["canonical_checkpoint_stop"] = checked(read(target))
         state["admission_status"] = "blocked-canonical-checkpoint"
+    if _sidefiles is not None:
+        _check_reference_pins(_sidefiles)
     return state
 
 
@@ -775,7 +785,7 @@ class _DeadlineCore:
                         and row.get("turn") == meta["turn"] - 1
                     )
                     _require(
-                        previous in state["results"],
+                        previous in state["results"] or previous in _origin_results(manifest["inputs"]["policy"]),
                         "editor cannot skip or restart its provider-turn sequence",
                     )
             except AuthorityError:
@@ -1159,3 +1169,237 @@ class Ledger:
                 os.getpid() == 1, "owner stop requires the inspected contained PID1; hold remains"
             )
             os._exit(82)
+
+
+def journal_reference(journal: Path) -> dict:
+    """Pin an existing execution without copying or changing any accounted result."""
+    state, _, manifest = _replay(Path(journal))
+    execution = manifest["inputs"]["study_sha256"]
+    fixture = manifest["inputs"]["fixture"]
+    _require(Path(journal) == canonical_journal(execution, fixture), "origin journal is not canonical")
+    body = {"kind": "phase3b-journal-reference-v1", "execution_study_sha256": execution,
+            "fixture": fixture, "manifest_sha256": hashlib.sha256((Path(journal) / "manifest.json").read_bytes()).hexdigest(),
+            "events_sha256": hashlib.sha256((Path(journal) / "events.jsonl").read_bytes()
+                if (Path(journal) / "events.jsonl").exists() else b"").hexdigest()}
+    return {**body, "sha256": digest(body)}
+
+
+pin_origin = journal_reference
+
+
+def _reference_path(reference: dict) -> Path:
+    _require(isinstance(reference, dict) and set(reference) == {"kind", "execution_study_sha256",
+        "fixture", "manifest_sha256", "events_sha256", "sha256"}
+        and reference["kind"] == "phase3b-journal-reference-v1"
+        and type(reference["fixture"]) is bool
+        and all(core._hash(reference[k]) for k in ("execution_study_sha256", "manifest_sha256", "events_sha256", "sha256"))
+        and reference["sha256"] == digest({k: v for k, v in reference.items() if k != "sha256"}),
+        "invalid immutable journal reference")
+    journal = canonical_journal(reference["execution_study_sha256"], reference["fixture"])
+    _require(hashlib.sha256((journal / "manifest.json").read_bytes()).hexdigest() == reference["manifest_sha256"]
+        and hashlib.sha256((journal / "events.jsonl").read_bytes()
+            if (journal / "events.jsonl").exists() else b"").hexdigest() == reference["events_sha256"],
+        "immutable origin journal changed")
+    return journal
+
+
+def normalize_origins(origins: list[dict]) -> list[dict]:
+    """Flatten immutable execution ancestry, counting each physical journal once."""
+    _require(isinstance(origins, list) and 1 <= len(origins) <= 64, "invalid continuation origin count")
+    found: dict[str, dict] = {}
+    active: set[str] = set()
+    ordered: list[dict] = []
+    def visit(reference):
+        journal = _reference_path(reference)
+        identity = reference["execution_study_sha256"]
+        _require(identity not in active, "cyclic continuation origin")
+        if identity in found:
+            _require(found[identity] == reference, "conflicting pins for one origin execution")
+            return
+        _require(len(found) + len(active) < 64, "continuation origin envelope exceeded")
+        active.add(identity)
+        manifest = read(journal / "manifest.json")
+        for ancestor_ref in manifest["inputs"]["policy"].get("phase4_child", {}).get("continuation", {}).get("origins", []):
+            visit(ancestor_ref)
+        active.remove(identity)
+        found[identity] = copy.deepcopy(reference)
+        ordered.append(copy.deepcopy(reference))
+    for reference in origins:
+        visit(reference)
+    return ordered
+
+
+def _sidefile_hash(path: Path) -> str | None:
+    path = safe(path)
+    if not path.exists():
+        return None
+    _require(path.is_file() and path.stat().st_size <= 32_000_000,
+             "origin provenance sidefile is not an ordinary bounded file")
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _reference_provenance_pins(journal: Path, manifest: dict, state: dict) -> dict:
+    execution, fixture = manifest["inputs"]["study_sha256"], manifest["inputs"]["fixture"]
+    paths = [journal / "deadline-stop.json", journal / "transport-audit-failure.json",
+             NATIVE / execution / ("mock" if fixture else "live") / "canonical-stop.json"]
+    paths.extend(bounded.audit_path(execution, fixture, slot) for slot in state["results"])
+    return {path: _sidefile_hash(path) for path in paths}
+
+
+def _check_reference_pins(pins: dict) -> None:
+    _require(all(_sidefile_hash(path) == expected for path, expected in pins.items()),
+             "immutable origin transport/stop provenance changed")
+
+
+# A cache hit still verifies every immutable manifest/event pin. The size ceiling
+# bounds retained source bytes; it is not an extra execution or monetary allowance.
+_REFERENCE_CACHE: OrderedDict[str, tuple[dict, dict, int, dict]] = OrderedDict()
+_REFERENCE_CACHE_LOCK = threading.RLock()
+_REFERENCE_CACHE_BYTES = 128 * 1024 * 1024
+
+
+def _read_reference_cached(reference: dict, *, _pins: dict | None = None) -> tuple[dict, dict]:
+    ancestry = normalize_origins([reference])
+    journal = _reference_path(reference)
+    key = reference["sha256"]
+    with _REFERENCE_CACHE_LOCK:
+        if key in _REFERENCE_CACHE:
+            state, manifest, _, pins = _REFERENCE_CACHE[key]
+            _check_reference_pins(pins)
+            if _pins is not None:
+                _pins.update(pins)
+            _REFERENCE_CACHE.move_to_end(key)
+            return state, manifest
+        pins = {}
+        for ancestor in ancestry[:-1]:
+            _read_reference_cached(ancestor, _pins=pins)
+        owned_pins: dict = {}
+        state, manifest = replay(journal, _sidefiles=owned_pins), _manifest(journal)
+        _check_reference_pins(pins)
+        pins.update(owned_pins)
+        _reference_path(reference)
+        _require(manifest["inputs"]["study_sha256"] == reference["execution_study_sha256"]
+            and manifest["inputs"]["fixture"] is reference["fixture"], "origin execution identity differs")
+        size = sum(item.stat().st_size for item in (journal / "manifest.json", journal / "events.jsonl") if item.exists())
+        if size <= _REFERENCE_CACHE_BYTES:
+            while _REFERENCE_CACHE and sum(row[2] for row in _REFERENCE_CACHE.values()) + size > _REFERENCE_CACHE_BYTES:
+                _REFERENCE_CACHE.popitem(last=False)
+            _REFERENCE_CACHE[key] = (state, manifest, size, pins)
+        if _pins is not None:
+            _pins.update(pins)
+        return state, manifest
+
+
+def read_reference(reference: dict) -> tuple[dict, dict]:
+    """Public inspection cannot mutate the validated internal snapshot."""
+    return copy.deepcopy(_read_reference_cached(reference))
+
+
+def continuation_binding(origins: list[dict], *, logical_study_sha256: str) -> dict:
+    """Carry paid cell use into a new execution; no old monetary allowance is copied."""
+    _require(core._hash(logical_study_sha256), "invalid logical continuation identity")
+    origins = normalize_origins(origins)
+    cells: dict[str, dict] = {}
+    for reference in origins:
+        state, _ = _read_reference_cached(reference)
+        for cell, values in {**state["cells"], "assessment": state["assessment"]}.items():
+            counter = cells.setdefault(cell, core._counter())
+            for key in counter:
+                counter[key] += values[key]
+    return {"logical_study_sha256": logical_study_sha256,
+            "origins": copy.deepcopy(origins), "carried_cells": cells}
+
+
+def _origin_results(profile: dict) -> dict:
+    binding = profile.get("phase4_child", {}).get("continuation")
+    result: dict = {}
+    if binding is not None:
+        for reference in binding["origins"]:
+            state, _ = _read_reference_cached(reference)
+            for slot, value in state["results"].items():
+                _require(slot not in result or result[slot] == value, "conflicting origin results")
+                result[slot] = value
+    return result
+
+
+class ContinuationLedger:
+    """Read immutable known work by reference; only absent slots reach the new ledger."""
+    def __init__(self, ledger, *, origins: list[dict], logical_study_sha256: str):
+        self._ledger = ledger
+        self.journal, self.transport, self.manifest = ledger.journal, ledger.transport, ledger.manifest
+        self.logical_study_sha256 = logical_study_sha256
+        binding = continuation_binding(origins, logical_study_sha256=logical_study_sha256)
+        self.origins = copy.deepcopy(binding["origins"])
+        _require(self.manifest["inputs"]["policy"]["phase4_child"].get("continuation") == binding,
+                 "successor profile does not bind its exact origin use")
+        self._states = []
+        self._provenance_pins: dict = {}
+        self._saved: dict = {}
+        self._intents: dict = {}
+        for reference in self.origins:
+            state, manifest = _read_reference_cached(reference, _pins=self._provenance_pins)
+            _require(reference["fixture"] is self.transport.fixture, "mixed live/fixture continuation")
+            current_scope = self.manifest["inputs"]["policy"]["phase4_child"]
+            origin_scope = manifest["inputs"]["policy"].get("phase4_child", {})
+            _require(all(origin_scope.get(key) == current_scope.get(key) for key in ("kind", "pair")),
+                     "origin phase/prompt differs from successor")
+            _require(all(self.manifest["inputs"]["slots"].get(slot) == meta
+                         for slot, meta in manifest["inputs"]["slots"].items()),
+                     "origin worklist has a foreign task/run/role namespace")
+            if state["active_unsettled_intents"] or state["durable_unknown_results"] or state["reserved_micro_usd"]:
+                raise LiabilityStop("origin unit quarantined: uncertain delivery must never be resent")
+            _require(not state["transport_audit_summary"]["missing_or_invalid_slots"],
+                     "origin unit quarantined: incomplete transport evidence")
+            for slot, result in state["results"].items():
+                _require(result.get("study_sha256") == logical_study_sha256
+                    and (slot not in self._saved or self._saved[slot] == result),
+                    "origin result has another logical identity or conflicts")
+                self._saved[slot] = copy.deepcopy(result)
+            for slot, intent in state["intents"].items():
+                _require(slot not in self._intents or self._intents[slot] == intent, "conflicting origin intent")
+                self._intents[slot] = copy.deepcopy(intent)
+            self._states.append(state)
+
+    def execution_state(self) -> dict:
+        return self._ledger.state()
+
+    def state(self) -> dict:
+        for reference in self.origins:
+            _reference_path(reference)
+        _check_reference_pins(self._provenance_pins)
+        current = self.execution_state()
+        view = copy.deepcopy(current)
+        view["execution_study_sha256"] = current["study_sha256"]
+        view["study_sha256"] = self.logical_study_sha256
+        view["origin_references"] = copy.deepcopy(self.origins)
+        for name, saved in (("results", self._saved), ("intents", self._intents)):
+            _require(not set(saved).intersection(current[name]), "a saved origin slot was redispatched")
+            view[name] = {**copy.deepcopy(saved), **view[name]}
+        for old in self._states:
+            for key in core._counter():
+                view[key] += old[key]
+            for section in ("cells",):
+                for cell, counter in old[section].items():
+                    target = view[section].setdefault(cell, core._counter())
+                    for key in core._counter():
+                        target[key] += counter[key]
+            for section in ("assessment", "first_pair", "first_assessment"):
+                for key in core._counter():
+                    view[section][key] += old[section][key]
+        view["provider_calls"] = 0 if view["fixture"] else view["attempts"]
+        return view
+
+    def dispatch(self, slot_id: str, role: str, request: dict, *, checkpoint: str | None = None) -> dict:
+        for reference in self.origins:
+            _reference_path(reference)
+        _check_reference_pins(self._provenance_pins)
+        if slot_id in self._saved:
+            result = self._saved[slot_id]
+            _require(result["role"] == role and result["request_sha256"] == digest(request),
+                     "saved logical request changed; explicit invalidation required")
+            return copy.deepcopy(result)
+        _require(slot_id not in self._intents, "unresolved origin intent cannot be redispatched")
+        return self._ledger.dispatch(slot_id, role, request, checkpoint=checkpoint)
+
+    def halt(self, reason: str, evidence_sha256: str | None = None) -> dict:
+        return self._ledger.halt(reason, evidence_sha256)
