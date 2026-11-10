@@ -104,6 +104,31 @@ def continuation_segments(search: Path, *, known_results: dict, request_policy: 
         and all(known_results.get(slot) == result for slot, result in state["results"].items()),
         "continuation origin lacks exact known accounting/source")
     task, study, fixture, tag = identity["task"], identity["study_sha256"], identity["fixture"], identity["tag"]
+    scope = manifest["inputs"].get("policy", {}).get("phase4_child", {})
+    continuation = scope.get("continuation")
+    if continuation is not None:
+        strategy._integrity(continuation == accounting.continuation_binding(
+            continuation["origins"], logical_study_sha256=study), "origin continuation binding differs")
+        for origin_reference in accounting.normalize_origins(continuation["origins"]):
+            inherited, origin_manifest = accounting.read_reference(origin_reference)
+            origin_scope = origin_manifest["inputs"]["policy"].get("phase4_child", {})
+            strategy._integrity(origin_reference["fixture"] is fixture
+                and all(origin_scope.get(key) == scope.get(key) for key in ("kind", "pair"))
+                and all(manifest["inputs"]["slots"].get(slot) == meta
+                        for slot, meta in origin_manifest["inputs"]["slots"].items()),
+                "origin phase/prompt/worklist differs from physical search")
+            strategy._integrity(not inherited["reserved_micro_usd"]
+                and not inherited["active_unsettled_intents"] and not inherited["durable_unknown_results"]
+                and not inherited["transport_audit_summary"]["missing_or_invalid_slots"],
+                "origin search ancestry is quarantined")
+            for name in ("results", "intents"):
+                strategy._integrity(not set(state[name]).intersection(inherited[name]),
+                    "origin slot was dispatched more than once")
+                state[name].update(inherited[name])
+    strategy._integrity(all(result.get("study_sha256") == study and known_results.get(slot) == result
+        for slot, result in state["results"].items()), "search ancestry differs from known logical results")
+    # Proofs belong to this search's declared past, never a later execution's rows.
+    known_results = state["results"]
     ids = adaptive_run_ids(task["id"], tag)
     segments = editor.completed_author_segments(search / "editor-audit", study_sha256=study,
         pilot=search.parents[1].name, fixture=fixture, results=known_results, intents=state["intents"],

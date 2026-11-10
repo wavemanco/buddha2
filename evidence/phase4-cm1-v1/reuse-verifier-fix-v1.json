@@ -1,0 +1,70 @@
+{
+  "accepted_prior_source_files_archived": 208,
+  "actual_saved_prefix": {
+    "all_old_files_unchanged": true,
+    "compatibility_sha256": "522676834c527a7370c2b06551afe2304ee6515cc1bd3fccd2b9c0f60a4f8eb4",
+    "exact_owner_absent": true,
+    "immutable_files_checked": 19,
+    "passed": true,
+    "proof_file_sha256": "26ef3037073c4b62fee3b683a199ab4d25601ec415de31641128296527e48a5f",
+    "quarantined_units": 1,
+    "source_files_checked": 208,
+    "validated_segments": 62
+  },
+  "approval_reference": "request_user_input_async/call_58d12c67152c4a779a8d1bf3ecd1871e/0",
+  "changed_source_inputs": {
+    "followups/phase3b_seq2_v1/native.py": "cd92f4ad9f46a90b6639ee631ce1b177ef653de50249955095c20eb38d6a0f97",
+    "tests/test_phase4_native_resume.py": "f31d68f11558e0e8a07d0934d5a116258340502ce389eb9e33806369dacbf4db"
+  },
+  "correction": "Validate each physical search using both requests and responses from its own manifest-declared ancestry; exclude later execution rows.",
+  "cumulative_cap_micro_usd": 1200000000,
+  "focused_final_public_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "result_file_sha256": "c7cad753008a03444643bb5c4cb2046d1a33650da9b4021d5463a49fe5fd1cd4",
+    "skips": 0,
+    "source_sha256": "e6e89b2b47cc5892cefd737d14d33a1ebb5127b9b82a57b6b32ca8eac34af361",
+    "tests": 17
+  },
+  "independent_code_review": "PASS; final variable rename and test annotation rechecked",
+  "kind": "phase4-cm1-reuse-verifier-fix-v1",
+  "known_spent_micro_usd": 60070065,
+  "limitations": [
+    "Standard current-source launch acceptance remains pending; no keys or paid restart.",
+    "Known failed and uncertain cases remain disclosed; available-case findings are descriptive, not a full-24 positive confirmation."
+  ],
+  "new_unknown_delivery_hold_micro_usd": 2540960,
+  "previous_source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "recorded_at_utc": "2026-11-10T17:01:56.060123+00:00",
+  "remaining_admissions": 36838,
+  "remaining_total_micro_usd": 1137388975,
+  "request_hash_check_preserved": true,
+  "retained_offline_failures": "Initial fixture TypeErrors, Mypy invocation/capture setup and introduced type findings remain retained; final checks supersede them without weakening validation.",
+  "sample_or_retry_allowance_changed": false,
+  "scientific_settings_changed": false,
+  "scoped_static_checks": {
+    "checks": [
+      {
+        "check": "ruff",
+        "exit_code": 0
+      },
+      {
+        "check": "mypy",
+        "exit_code": 0
+      },
+      {
+        "check": "bandit",
+        "exit_code": 0
+      }
+    ],
+    "passed": true,
+    "provider_calls": 0
+  },
+  "separate_historical_hold_micro_usd": 22880000,
+  "sha256": "b4a3974e38b10dcbaf203cde749b853d4d0d91a7cfe7cb48dfe4acf143479b34",
+  "source_sha256": "35d61de6c6e2f7a50181c15904394aa01cc8aa33874c781686b63f5db9f0c211",
+  "status": "offline-source-correction-verified-launch-acceptance-pending"
+}

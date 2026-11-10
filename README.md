@@ -1,8 +1,8 @@
 # Buddha2
 
-**Saved-work continuation is implemented and verified offline.** The runner retains the stopped study's 2,651 calls/$44.975462, reuses verified completed work and carries old/new costs once. All 166 selected checks and scoped static checks pass. See [resumption and its limits](docs/RESUMPTION.md) and [acceptance evidence](evidence/phase4-cm1-v1/resumability-v1.json).
+**Buddha2 retains verified paid work across execution segments.** See [resumption and its limits](docs/RESUMPTION.md) and [the earlier implementation evidence](evidence/phase4-cm1-v1/resumability-v1.json).
 
-P4 is stopped after an unknown-delivery timeout. It retains $60.070065 known spending and $2.540960 newly held; two generation pairs are complete, one failed and one interrupted, with twenty unopened and no benchmark grading yet. Existing compatible missing-work preparation is underway within the approved cumulative caps. See [the reviewed stop and reuse boundaries](evidence/phase4-cm1-v1/continuation-r01-stop-v1.json). Required missing data prevents the planned full-24 positive confirmation; remaining results are descriptive.
+P4 remains stopped after an unknown-delivery timeout: $60.070065 known spending, $2.540960 newly held, two generation pairs complete, one failed, one interrupted and twenty unopened. No benchmark grading has run. The focused reuse-verifier correction passes 17 tests, static checks and actual saved-work replay (62 segments); full launch acceptance is next. See [the reviewed correction](evidence/phase4-cm1-v1/reuse-verifier-fix-v1.json) and [retained stop](evidence/phase4-cm1-v1/continuation-r01-stop-v1.json). Missing required cases prevent full-24 positive confirmation; available-case findings remain descriptive.
 
 Phase 3B's four-prompt development pilot is complete. Selected native adaptation averaged distinctness 10/10 and utility 7.417; fixed best-of-twelve averaged 7.75/10 and 6.113. One password prompt's semantic grouping result drives the positive average utility gap. See the [results and limits](docs/phases/phase-3b/PHASE3B_REMAINING_PAIRS_LIVE_REPORT_V2.md).
 

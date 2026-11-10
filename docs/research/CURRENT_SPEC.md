@@ -1,3 +1,9 @@
+# Reuse-verifier correction verified offline — 10 November 2026
+
+The user approved the focused source correction and existing continuation through closure within the original $1,200/40,914-admission ceilings. The corrected verifier binds inherited responses to their original requests and excludes later executions' rows. Final focused tests (17), scoped Ruff/Mypy/Bandit and the actual saved-prefix replay pass: 62 segments verified, one uncertain unit quarantined, zero provider calls. See [scope and remaining acceptance](../RESUMPTION.md#reuse-verifier-correction--authorized-10-november-2026).
+
+Complete the existing current-source launch gate and independent packet acceptance before fresh keys. Preserve the 24 cases, scientific settings, recovery allowance, completed work, every charge and all holds. The stopped controller stays closed; no uncertain request is resent. Known missing cases prevent full-24 positive confirmation. Earlier no-repair and LIVE paragraphs are historical where superseded.
+
 # P4 continuation stopped — compatible missing-work preparation — 10 November 2026
 
 Execution `4b18a63c…5188ca5` exited 82 after a stateless answer request exceeded its 240-second completion allowance without a validated captured response. Independent review confirms 4,076 admissions, 4,075 known settlements, $60.070065 known spending and a separate $2.540960 new unknown-delivery hold. The old $22.88 hold remains separate. Source 8c32d27d…c6de200 and prior journal pins are unchanged. See [the stop receipt](../../evidence/phase4-cm1-v1/continuation-r01-stop-v1.json).
