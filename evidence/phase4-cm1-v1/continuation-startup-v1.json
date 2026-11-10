@@ -1,0 +1,23 @@
+{
+  "attachment_accepted_at_utc": "2026-11-10T02:48:14.505817+00:00",
+  "attachment_durable_intents": 0,
+  "attachment_provider_calls": 0,
+  "cumulative_ceiling_micro_usd": 1200000000,
+  "grant_sha256": "ac473215cb37e2cc489b7ee941ed4da5d1081c6ce01da8e98b065e263498be23",
+  "keys_entered_by_user": true,
+  "kind": "buddha2-phase4-continuation-startup-v1",
+  "observed_at_utc": "2026-11-10T02:49:36.985569+00:00",
+  "point_in_time_presence_only": true,
+  "prior_calls_retained": 2651,
+  "prior_spent_micro_usd": 44975462,
+  "publication_commit": "e89e25c3a6536a566be48355b01293eb0b9226a3",
+  "real_keys_recorded": false,
+  "same_original_cases": 24,
+  "scientific_results": "UNEVALUATED",
+  "sha256": "a76fa3d9c7ad0ce1382ec2679f9a63f313fbde6b3c30e22a88cb1949fabe509e",
+  "source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "status": "approved-continuation-starting",
+  "study_sha256": "4b18a63c969d7838a8354d9fe8e06ddd3e06a732b1ec4f707d69cedbc5188ca5",
+  "supervision_consumed": true,
+  "supervision_receipt_sha256": "8ce392918d12d795e41f4214b7c68169ddb4a4c9e36c526bb4e80516326b1da4"
+}

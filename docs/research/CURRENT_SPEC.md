@@ -1,3 +1,9 @@
+# P4 continuation LIVE — 9 November 2026
+
+Fresh masked keys were entered and the actual controller consumed its trusted-host supervisor attachment at 02:48:14 UTC on 10 November. See [startup evidence](../../evidence/phase4-cm1-v1/continuation-startup-v1.json). Continue the accepted study `4b18a63c…5188ca5` under frozen source `8c32d27d…c6de200`; preserve the original closed execution, both passed qualifications, all original 24 cases, completed work and all prior charges. The $1,200 cumulative ceiling and nested allocations/admission limits remain binding.
+
+Do not relaunch, request keys again, rerun acceptance/intake or edit the experimental source. The dedicated supervisor is attached; monitor the existing controller through the approved missing-work continuation, reviews, official assessments, passive Inspect delivery and closure. Timing Continue/Stop requires the actual user decision. Startup is not a scientific result; current companion metrics and grouping sensitivity remain UNEVALUATED. Earlier accepted/awaiting-keys paragraphs are historical.
+
 # P4 continuation accepted — awaiting fresh keys — 9 November 2026
 
 The user approved the complete prepared continuation through closure, including existing launch acceptance, compatible missing-work execution segments, official assessment, passive Inspect delivery and reporting. See [the recorded decision](../../evidence/phase4-cm1-v1/continuation-authorization-v1.json) and [the prepared scope](../RESUMPTION.md#prepared-phase-4-continuation). This supersedes earlier pending-approval statements, without changing the frozen source or scientific controls.
