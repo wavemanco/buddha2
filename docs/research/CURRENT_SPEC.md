@@ -1,3 +1,11 @@
+# P4 continuation stopped — compatible missing-work preparation — 10 November 2026
+
+Execution `4b18a63c…5188ca5` exited 82 after a stateless answer request exceeded its 240-second completion allowance without a validated captured response. Independent review confirms 4,076 admissions, 4,075 known settlements, $60.070065 known spending and a separate $2.540960 new unknown-delivery hold. The old $22.88 hold remains separate. Source 8c32d27d…c6de200 and prior journal pins are unchanged. See [the stop receipt](../../evidence/phase4-cm1-v1/continuation-r01-stop-v1.json).
+
+Two generation pairs are complete (pair 2 adopted without new calls); pair 3 has a known C1 solver failure; pair 4 was interrupted; twenty remain unopened. No external benchmark assessment has run. The frozen missing-data rule permits independent safe work but prevents the planned full-24 positive confirmation; available-case summaries must remain descriptive. Preserve every failure, result, charge and hold.
+
+Current authority remains the user's complete same-method continuation through closure, including compatible missing-work segments. Use only existing offline compatibility/preparation/acceptance paths, retaining the same original 24 tasks, frozen source, one required-plan/rank recovery and cumulative $1,200/40,914-admission ceiling. After the hold, $1,137.388975 and 36,838 admissions remain. The unknown unit must be quarantined; no resend or hold release. Do not restart the stopped controller or grant. Fresh masked keys follow independent acceptance of a new append-only successor packet. No new source repair, method, retry scope, funding or engineering workstream is authorized. Earlier LIVE/awaiting-keys paragraphs are historical.
+
 # P4 continuation LIVE — 9 November 2026
 
 Fresh masked keys were entered and the actual controller consumed its trusted-host supervisor attachment at 02:48:14 UTC on 10 November. See [startup evidence](../../evidence/phase4-cm1-v1/continuation-startup-v1.json). Continue the accepted study `4b18a63c…5188ca5` under frozen source `8c32d27d…c6de200`; preserve the original closed execution, both passed qualifications, all original 24 cases, completed work and all prior charges. The $1,200 cumulative ceiling and nested allocations/admission limits remain binding.
