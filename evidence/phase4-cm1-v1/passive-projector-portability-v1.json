@@ -1,0 +1,116 @@
+{
+  "all_owned_test_containers_absent": true,
+  "canonical_source_inputs_unchanged": true,
+  "experimental_source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "kind": "buddha2-passive-continuation-projector-portability-v1",
+  "limitations": [
+    "Display tests inject saved-validator and ledger boundaries; this is portability and presentation evidence.",
+    "Actual final continuation payload, Inspect .eval roundtrip and viewer acceptance remain untested by these checks.",
+    "No collector110 or prefix regression rerun; scientific execution source and production projector unchanged.",
+    "Adapter supports closed outcomes and current zero-assessment ancestry; no inherited-assessment generalization."
+  ],
+  "network": "none",
+  "observed_utc": "2026-11-10T02:03:35.150573+00:00",
+  "previous_tests_sha256": "648fe8fe4bbcaf21192eaf63d4b0694e788a411adc0b2faef7d27082223fdd52",
+  "previous_validation": {
+    "file_sha256": "850303b8b4042d2021eb0368072642215a363d52d53e7d7bf99689dc944675e2",
+    "path": "evidence/phase4-cm1-v1/passive-projector-check-v1.json",
+    "record_sha256": "6627309b67590ff1d88325189b33306dc39aa671ba28ebaa1bbc367dee99c047"
+  },
+  "production_projector_unchanged": true,
+  "projector_sha256": "a4d69527af48c1610d595b6aff734c4b4b4cdcf5ec3d7be0d36b717000bfbf77",
+  "provider_calls": 0,
+  "public_projection_source_sha256": "1885372d0f5c2b828076e4f5a4604582f09eee8107697d1fdf19eebcd6477449",
+  "public_runtime_dependency": "Existing pinned research .upstream mounted read-only at /workspace/.upstream; public scientific inputs independently hashed before and after.",
+  "real_credentials_used": false,
+  "results": {
+    "canonical": {
+      "runtime_result": {
+        "check_exit_code": 0,
+        "owner_cid": "13afc10482eb94a2ccf0fca8bb2213b24cf2fbf6c7281226c8abff7ec95f0033",
+        "post_exit_owner_absent": true,
+        "post_exit_owner_inspect_exit_code": 1,
+        "post_exit_owner_lookup": "error: no such object: 13afc10482eb94a2ccf0fca8bb2213b24cf2fbf6c7281226c8abff7ec95f0033"
+      },
+      "sanitized_log_path": "runs/phase3b-seq2-v1/phase4-cm1-v1/continuation-r01/passive-view-portability-v1/canonical/checks.log",
+      "sanitized_log_sha256": "ae4f755961e540b72bd84e1c035dcc8c6e3911b1163116454ebf44a442842be2",
+      "scoped_checks": [
+        "four display tests",
+        "Ruff: projector and display test",
+        "mypy: projector with imports skipped",
+        "Bandit: projector"
+      ],
+      "source_proof": {
+        "check_exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "passive_files_excluded_from_scientific_source": true,
+        "projector_sha256": "a4d69527af48c1610d595b6aff734c4b4b4cdcf5ec3d7be0d36b717000bfbf77",
+        "source_file_count": 208,
+        "source_inputs_unchanged": true,
+        "source_sha256_after": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+        "source_sha256_before": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+        "tests_sha256": "363621a7bf9e5ada21726cdd45f059094a4cafebdfe7c63b8708254cb1299246"
+      },
+      "synthetic_tests_passed": 4
+    },
+    "public": {
+      "runtime_result": {
+        "check_exit_code": 0,
+        "owner_cid": "89a05b0b1cad2d995f03f3ad4f980bcb2b35d9364a2790fbc14cbe126e3c0314",
+        "post_exit_owner_absent": true,
+        "post_exit_owner_inspect_exit_code": 1,
+        "post_exit_owner_lookup": "error: no such object: 89a05b0b1cad2d995f03f3ad4f980bcb2b35d9364a2790fbc14cbe126e3c0314"
+      },
+      "sanitized_log_path": "runs/phase3b-seq2-v1/phase4-cm1-v1/continuation-r01/passive-view-portability-v1/public-r02/checks.log",
+      "sanitized_log_sha256": "3e7daa0c548f22a98cf1052b13733ca4b3c70efc770db3315fd4da1d93b813b6",
+      "scoped_checks": [
+        "four display tests",
+        "Ruff: projector and display test",
+        "mypy: projector with imports skipped",
+        "Bandit: projector"
+      ],
+      "source_proof": {
+        "check_exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "passive_files_excluded_from_scientific_source": true,
+        "projector_sha256": "a4d69527af48c1610d595b6aff734c4b4b4cdcf5ec3d7be0d36b717000bfbf77",
+        "source_file_count": 208,
+        "source_inputs_unchanged": true,
+        "source_sha256_after": "1885372d0f5c2b828076e4f5a4604582f09eee8107697d1fdf19eebcd6477449",
+        "source_sha256_before": "1885372d0f5c2b828076e4f5a4604582f09eee8107697d1fdf19eebcd6477449",
+        "tests_sha256": "363621a7bf9e5ada21726cdd45f059094a4cafebdfe7c63b8708254cb1299246"
+      },
+      "synthetic_tests_passed": 4
+    }
+  },
+  "runtime_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "setup_failures": [
+    {
+      "failure": "ModuleNotFoundError: No module named harness2; exported public tree omits runtime upstream source",
+      "remedy": "read-only mount of existing pinned runtime upstream; no source edits",
+      "runtime_result": {
+        "check_exit_code": 1,
+        "owner_cid": "a3d6a43a0a0e1e683d360dd173369b55dd2e36d8559375b8146f50eadd8740a0",
+        "post_exit_owner_absent": true,
+        "post_exit_owner_inspect_exit_code": 1,
+        "post_exit_owner_lookup": "error: no such object: a3d6a43a0a0e1e683d360dd173369b55dd2e36d8559375b8146f50eadd8740a0"
+      },
+      "sanitized_log_path": "runs/phase3b-seq2-v1/phase4-cm1-v1/continuation-r01/passive-view-portability-v1/public/checks.log",
+      "sanitized_log_sha256": "ac3f9203c3ac1fd78dee5aa12160543925c53340613927f930622589d6cfce18",
+      "scope": "public first attempt",
+      "stage": "import before tests"
+    }
+  ],
+  "sha256": "d7ea6a69bf3ff6fd2dbfd14fa723fa7f81875a049d1cfb3a9c180e14b4730d14",
+  "status": "passed",
+  "test_change": "Removed live-checkout-specific source-identity equality and renamed exclusion test; both passive-file exclusions and synthetic source-mismatch rejection remain.",
+  "tests_sha256": "363621a7bf9e5ada21726cdd45f059094a4cafebdfe7c63b8708254cb1299246"
+}

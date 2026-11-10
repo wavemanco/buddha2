@@ -57,7 +57,7 @@ Both passed qualifications stay closed. The completed pair, complete native arms
 
 The call quota can be reached before every conditional slot is exhausted. These ceilings bound execution; they are not a guarantee of completion or guaranteed spending. No quota or allocation is silently raised.
 
-Execution requires approval of the amended recovery method: the original definition specifies no automatic retries. One whole-study decision should cover the prepared missing-work continuation, existing launch acceptance, fresh keys after acceptance, official assessments, passive Inspect delivery and closure. Compatible later execution segments must retain the same logical cases, recovery allowance and cumulative caps; a new model, sampling rule, retry ceiling or scientific criterion needs a separately declared change. No spending authorization or live grant has been created for this packet.
+Execution requires approval of the amended recovery method: the original definition specifies no automatic retries. One whole-study decision should cover the prepared missing-work continuation, existing launch acceptance, fresh keys after acceptance, official assessments, passive Inspect delivery and closure. Compatible later execution segments must retain the same logical cases, recovery allowance and cumulative caps; a new model, sampling rule, retry ceiling or scientific criterion needs a separately declared change. The user approved this complete continuation on 9 November 2026; see the [decision receipt](../evidence/phase4-cm1-v1/continuation-authorization-v1.json). Launch acceptance is complete with 110 checks, all 16 mandatory regressions, independent review and the actual Windows handshake; see [acceptance](../evidence/phase4-cm1-v1/continuation-launch-acceptance-v1.json). Fresh masked keys are next. No new calls have begun.
 
 ## Existing commands
 
@@ -78,6 +78,21 @@ python -m followups.phase4_cm1_v1.workflow grant --study RELEASE/study.json --ou
 ```
 
 The original study approval cannot authorize the changed continuation automatically. Its separate receipt binds the exact source, method, frozen 24 tasks, future-worklist digest, recovery rule, cumulative spending and remaining admissions. Fresh masked keys follow acceptance through the existing Windows launcher. No paid execution follows from these examples.
+
+## Passive Inspect view for this continuation
+
+The original single-execution snapshot builder cannot represent adopted generations or the original frame under an amended method. Its display failure is recorded without stopping generation or assessment. The separately versioned [continuation projector](../tools/inspect_continuation.py) reads a stable closed run, first validates it with the existing saved-report path, then creates a standard snapshot for the unchanged Inspect exporter. It preserves logical/physical identities, counts each physical journal once, and separates qualification usage from confirmation cases. It is outside the frozen experimental inputs and does not participate in provider calls or adaptation.
+
+Four synthetic tests and scoped static checks pass; [evidence and limits](../evidence/phase4-cm1-v1/passive-projector-check-v1.json). The [portable-check supplement](../evidence/phase4-cm1-v1/passive-projector-portability-v1.json) validates the current test file in both the canonical and public checkouts, whose scientific source identities differ. Tests inject the saved-validator/ledger boundaries. Current ancestry has no assessment records; generalized inherited-assessment display is deferred. The actual continuation payload, Inspect roundtrip and viewer are checked at closure, not claimed from those tests. During execution, native progress and chat updates remain authoritative.
+
+After a stable closed outcome, run inside the pinned environment:
+
+```text
+python tools/inspect_continuation.py --study RELEASE/study.json --grant RELEASE/live-grant.json --output SNAPSHOT
+python -m followups.phase4_cm1_v1.inspect_export --help
+```
+
+The second command documents the existing passive export interface; neither example authorizes generation or judging.
 
 ## The stopped Phase 4 study
 

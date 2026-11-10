@@ -1,0 +1,23 @@
+{
+  "authorized": true,
+  "compatible_missing_work_segments_authorized": true,
+  "credentials_read": false,
+  "decision": "Approve full continuation within existing caps",
+  "decision_reference": "request_user_input_async/call_66de2af30a4247a89dd17e10aa05675b/0",
+  "keys_after_acceptance": true,
+  "kind": "buddha2-phase4-resumption-user-decision-v1",
+  "maximum_cumulative_admissions": 40914,
+  "method_sha256": "9b8f39e8b5df116706c28617fa833e0a9ae2d3266e8b594b4a46d8e849c0e64d",
+  "original_prompt_count": 24,
+  "private_authority_file_sha256": "ef55e9b96ea37144ee9a70be29787c3c6a00eb845a81831628ed79b0fc74bb96",
+  "private_authority_sha256": "7fd7c98932ef04ef19e5560380d245969d784a17467d20dc01b13463b7e1c37c",
+  "provider_calls": 0,
+  "recorded_at_utc": "2026-11-10T01:04:57.644574+00:00",
+  "remaining_admissions": 38263,
+  "remaining_total_micro_usd": 1155024538,
+  "required_artifact_recovery": "required-plan-rank-once-v1",
+  "scope_sha256": "25f4de9150cc03473922db0a6fdda0f1dcc5424ee530455aed2a20aeaf098e7c",
+  "sha256": "a6f1c2bdccb5ce9184fe439389275f5de62a12165822b7e983a61448ce95086e",
+  "source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "study_sha256": "4b18a63c969d7838a8354d9fe8e06ddd3e06a732b1ec4f707d69cedbc5188ca5"
+}

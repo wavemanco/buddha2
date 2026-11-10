@@ -1,0 +1,44 @@
+{
+  "bandit_exit_code": 0,
+  "boundary": "Separately versioned, post-run display-only projector; outside the frozen 208 experimental inputs.",
+  "canonical_source_changed": false,
+  "cold_review": {
+    "independently_reran_tests": false,
+    "result": "no remaining actionable findings after inherited-generation fix",
+    "reviewer": "/root/p4_cold_review",
+    "scope": "bounded display slice"
+  },
+  "experimental_source_sha256": "8c32d27ddfd4c81443c1dc3547845dd0fcfb79538988c75c819ae33d9c6de200",
+  "final_checks": {
+    "check_exit_code": 0,
+    "owner_cid": "cefb339488c64f84bb93cceb259b0d4453e17281c10cfc874e21fa9ce2ba1722",
+    "post_exit_owner_absent": true,
+    "post_exit_owner_inspect_exit_code": 1,
+    "post_exit_owner_lookup": "error: no such object: cefb339488c64f84bb93cceb259b0d4453e17281c10cfc874e21fa9ce2ba1722",
+    "sanitized_log": "checks-r02/checks.log",
+    "sanitized_log_sha256": "0271216abeadc36ff1f90148e1cac80cf4be2e03601b3b3269d55e9ed54e6b30"
+  },
+  "kind": "buddha2-passive-continuation-projector-check-v1",
+  "limitations": [
+    "saved-validator and ledger boundaries injected in synthetic tests",
+    "actual final continuation projection not yet checked",
+    "Inspect .eval roundtrip and viewer not yet checked",
+    "current prepared ancestry has zero assessment; inherited assessment generalization omitted"
+  ],
+  "mypy_exit_code": 0,
+  "network": "none",
+  "observed_utc": "2026-11-10T01:41:00.1231521Z",
+  "previous_validation_file_sha256": "0a014fd8b4469eeec45abd02ba19bca8adf0cb23d32cba00df0b1234350862db",
+  "projector_sha256": "a4d69527af48c1610d595b6aff734c4b4b4cdcf5ec3d7be0d36b717000bfbf77",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "reused": "workflow.report; snapshot._ledger/project_requests/_targets; inspect_export.aggregate_usage/validate_snapshot",
+  "reviewed": true,
+  "ruff_exit_code": 0,
+  "runtime_image": "sha256:ce1d4ab2241ce9d141a5447c3da15fb44f62e521c3e2bbe49b74611ff36e3800",
+  "scope": "closed saved continuation; unchanged official exporter remains external",
+  "sha256": "6627309b67590ff1d88325189b33306dc39aa671ba28ebaa1bbc367dee99c047",
+  "status": "cold-reviewed-staged-slice",
+  "synthetic_tests_passed": 4,
+  "tests_sha256": "648fe8fe4bbcaf21192eaf63d4b0694e788a411adc0b2faef7d27082223fdd52"
+}
