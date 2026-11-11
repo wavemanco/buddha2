@@ -1,3 +1,9 @@
+# Phase 4 continuation deferred
+
+The continuation was deferred on 10 November 2026 after offline acceptance. The replacement launcher closed before any observed supervisor attachment or new provider admission. Two generation pairs are complete, one failed, one was interrupted and twenty are unopened. Official grading is pending. The stopped run records $60.070065 in known spending and $2.540960 reserved for an uncertain delivery. [Stop record](../../evidence/phase4-cm1-v1/continuation-r01-stop-v1.json) · [Offline acceptance](../../evidence/phase4-cm1-v1/reuse-verifier-launch-acceptance-v1.json)
+
+An explicit instruction to resume is required before another launch. The 24-case design and the missing-data rule govern any continuation. Earlier launch directions describe the prior accepted state.
+
 # P4 continuation accepted — awaiting fresh keys — 10 November 2026
 
 The authorized reuse-verifier correction and new continuation packet are independently accepted: 113 current-source tests, all 16 mandatory regressions, static checks, actual saved-prefix replay and the actual Windows pre-credential handshake passed with zero provider calls or real credentials. See [acceptance evidence](../../evidence/phase4-cm1-v1/reuse-verifier-launch-acceptance-v1.json). Source `35d61de6…9f0c211`, study `0590c5d9…ee162f8`; the local packet is `continuation-r02/release`.

@@ -1,3 +1,7 @@
+# Phase 4 continuation deferred
+
+The study is deferred pending an explicit instruction to resume. The [current specification](docs/research/CURRENT_SPEC.md#phase-4-continuation-deferred) supersedes the earlier launch directions below.
+
 # P4 continuation accepted — awaiting fresh keys — 10 November 2026
 
 The authorized reuse-verifier correction and new continuation packet are independently accepted: 113 current-source tests, all 16 mandatory regressions, static checks, actual saved-prefix replay and the actual Windows pre-credential handshake passed with zero provider calls or real credentials. See [acceptance evidence](evidence/phase4-cm1-v1/reuse-verifier-launch-acceptance-v1.json). Source `35d61de6…9f0c211`, study `0590c5d9…ee162f8`; the local packet is `continuation-r02/release`.
